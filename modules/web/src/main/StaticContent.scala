@@ -27,34 +27,19 @@ Allow: /game/export/gif/thumbnail/
 """
 
   val manifest = Json.obj(
-    "name" -> net.domain,
-    "short_name" -> "Lichess",
+    "name" -> net.siteName,
+    "short_name" -> net.siteName,
     "start_url" -> "/",
     "display" -> "standalone",
     "background_color" -> "#161512",
     "theme_color" -> "#161512",
-    "description" -> "The (really) free, no-ads, open source chess server.",
+    "description" -> "Шахматный клуб «Логик», Калуга",
     "icons" -> List(32, 64, 128, 192, 256, 512, 1024).map: size =>
       Json.obj(
         "src" -> s"//${net.assetDomain}/assets/logo/lichess-favicon-$size.png",
         "sizes" -> s"${size}x$size",
         "type" -> "image/png"
-      ),
-    "related_applications" -> Json.arr(
-      Json.obj(
-        "platform" -> "play",
-        "url" -> mobileAndroidUrl,
-        "id" -> mobileAndroidId
-      ),
-      Json.obj(
-        "platform" -> "itunes",
-        "url" -> mobileIosUrl
-      ),
-      Json.obj(
-        "platform" -> "ios",
-        "url" -> mobileIosUrl
       )
-    )
   )
 
   def appStoreUrl(using req: RequestHeader): Url =

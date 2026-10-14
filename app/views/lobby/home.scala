@@ -10,22 +10,6 @@ object home:
 
   def apply(homepage: Homepage)(using ctx: Context) =
     import homepage.*
-    val donateLink =
-      a(cls := "lobby__support-link", href := routes.Plan.index())(
-        iconTag(patronIconChar),
-        span(cls := "lobby__support-link__text")(
-          strong(trans.patron.donate()),
-          span(trans.patron.becomePatron())
-        )
-      )
-    val swagLink =
-      a(cls := "lobby__support-link", href := "/swag")(
-        iconTag(Icon.Tshirt),
-        span(cls := "lobby__support-link__text")(
-          strong("Swag Store"),
-          span(trans.site.playChessInStyle())
-        )
-      )
     Page("")
       .copy(fullTitle = s"$siteName • ${trans.site.freeOnlineChess.txt()}".some)
       .i18n(_.variant)
@@ -46,7 +30,7 @@ object home:
       .graph(
         OpenGraph(
           image = staticAssetUrl("logo/lichess-tile-wide.png").some,
-          title = "The best free, adless Chess server",
+          title = siteName,
           url = netBaseUrl.into(Url),
           description = trans.site.siteDescription.txt()
         )
@@ -61,15 +45,12 @@ object home:
         )(
           div(cls := "lobby__side")(
             ctx.blind.option(h2(trans.nvui.featuredEvents())),
-            ctx.kid.no.option(views.streamer.bits.liveStreams(streams)),
             div(cls := "lobby__spotlights"):
               val eventTags = events.map(bits.spotlight)
-              val relayTags = views.relay.ui.spotlight(relays)
               frag(
                 eventTags,
-                relayTags,
                 ctx.noBot.option {
-                  val nbManual = eventTags.size + relayTags.size
+                  val nbManual = eventTags.size
                   val simulBBB = simuls.find(isFeaturable(_) && nbManual < 4)
                   val nbForced = nbManual + simulBBB.size.toInt
                   val tourBBBs = if nbForced > 3 then 0 else if nbForced == 3 then 1 else 3 - nbForced
@@ -97,11 +78,11 @@ object home:
               div(cls := "about-side")(
                 ctx.blind.option(h2(trans.site.about())),
                 trans.site.xIsAFreeYLibreOpenSourceChessServer(
-                  "Lichess",
+                  siteName,
                   a(cls := "blue", href := routes.Plan.features)(trans.site.really.txt())
                 ),
                 " ",
-                a(href := "/about")(trans.site.aboutX("Lichess"), "...")
+                a(href := "/about")(trans.site.aboutX(siteName), "...")
               )
           ),
           currentGame
@@ -126,30 +107,23 @@ object home:
               )
             )
           ),
-          div(cls := "lobby__support")(donateLink, swagLink),
           div(cls := "lobby__tv")(
-            donateLink,
             featured.map(g => views.game.mini(Pov.naturalOrientation(g), tv = true))
           ),
           div(cls := "lobby__puzzle")(
-            swagLink,
             puzzle.map(p => views.puzzle.bits.dailyLink(p)())
           ),
-          views.ublog.ui.homeCarousel(ublogPosts),
           div(cls := "lobby__feed"):
             views.feed.lobbyUpdates(lastUpdates)
           ,
           ctx.noBot.option(bits.underboards(tours, simuls)),
           div(cls := "lobby__about")(
             ctx.blind.option(h2(trans.site.about())),
-            a(href := "/about")(trans.site.aboutX("Lichess")),
+            a(href := "/about")(trans.site.aboutX(siteName)),
             a(href := "/faq")(trans.faq.faqAbbreviation()),
             a(href := "/contact")(trans.contact.contact()),
-            a(href := "/app")(trans.site.mobileApp()),
             a(href := routes.Cms.tos)(trans.site.termsOfService()),
             a(href := "/privacy")(trans.site.privacy()),
-            a(href := "/source")(trans.site.sourceCode()),
-            a(href := "/ads")(trans.site.blockAds()),
-            views.bits.connectLinks
+            a(href := "/source")(trans.site.sourceCode())
           )
         )

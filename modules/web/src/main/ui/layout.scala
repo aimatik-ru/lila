@@ -315,17 +315,16 @@ final class layout(helpers: Helpers, assetHelper: lila.web.ui.AssetFullHelper)(
           a(cls := "site-title", href := langHref("/"), testId("site-title"))(
             if ctx.kid.yes then span(title := trans.site.kidMode.txt(), cls := "kiddo")(":)")
             else ctx.isBot.option(botImage),
-            div(cls := "site-icon", dataIcon := Icon.Logo),
+            div(cls := "site-icon")(
+              img(
+                src := staticAssetUrl("logo/lichess-favicon.svg"),
+                alt := siteName,
+                style := "display:block;width:1em;height:1em"
+              )
+            ),
             div(cls := "site-name")(siteNameFrag)
           ),
-          (!isAppealUser).option(
-            frag(
-              topnav,
-              (ctx.kid.no && !ctx.me.exists(_.isPatron) && !zenable).option(
-                a(cls := "site-title-nav__donate")(href := routes.Plan.index())(trans.patron.donate())
-              )
-            )
-          ),
+          (!isAppealUser).option(topnav),
           ctx.blind.option(h2("Navigation"))
         ),
         div(cls := "site-buttons")(
