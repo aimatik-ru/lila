@@ -20,7 +20,7 @@ case class UblogPost(
     live: Boolean,
     discuss: Option[Boolean],
     sticky: Option[Boolean],
-    ads: Option[Boolean],
+    ads: Option[Boolean], // boo!
     created: UblogPost.Recorded,
     updated: Option[UblogPost.Recorded],
     lived: Option[UblogPost.Recorded],
@@ -37,9 +37,10 @@ case class UblogPost(
   def isBy[U: UserIdOf](u: U) = created.by.is(u)
   def isUserBlog[U: UserIdOf](u: U) = blog == UblogBlog.Id.User(u.id)
 
-  def crawlable = live && (
+  def indexable = live && (
     topics.exists(UblogTopic.chessExists) || featured.isDefined || isBy(UserId.lichess)
-  ) && quality != Quality.spam
+  )
+  def visibleByCrawlers = indexable && automod.exists(_.quality != Quality.spam)
   def allText = s"$title $intro $markdown"
   def isEmpty = title.isEmpty && intro.isEmpty && markdown.value.isEmpty && image.isEmpty
 
