@@ -170,7 +170,7 @@ final class TournamentShow(helpers: Helpers, gathering: GatheringUi)(
             ).flatten.nonEmptyOption.map(st.section(_)),
             tour.startingPosition
               .map: pos =>
-                st.section(a(href := pos.url)(pos.name))
+                st.section(a(href := s"/analysis/${pos.fen.value.replace(' ', '_')}")(pos.name))
               .orElse(tour.position.map { fen =>
                 st.section(
                   trans.site.customPosition(),

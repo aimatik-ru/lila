@@ -14,7 +14,7 @@ object GatheringJson:
             "eco" -> pos.eco,
             "name" -> pos.name,
             "fen" -> pos.fen,
-            "url" -> pos.url
+            "url" -> s"/analysis/${pos.fen.value.replace(' ', '_')}"
           )
       case None =>
         Json

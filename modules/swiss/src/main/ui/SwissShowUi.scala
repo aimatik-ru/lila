@@ -148,7 +148,7 @@ final class SwissShowUi(helpers: Helpers, ui: SwissBitsUi, gathering: GatheringU
         s.settings.position
           .flatMap(p => lila.gathering.Thematic.byFen(p.opening))
           .map: pos =>
-            div(a(targetBlank, href := pos.url)(pos.name))
+            div(a(targetBlank, href := s"/analysis/${pos.fen.value.replace(' ', '_')}")(pos.name))
           .orElse(s.settings.position.map: fen =>
             div(
               trans.site.customPosition(),
