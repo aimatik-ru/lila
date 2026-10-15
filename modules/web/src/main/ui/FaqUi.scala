@@ -72,7 +72,7 @@ final class FaqUi(helpers: Helpers, sitePages: SitePages)(
               trf.yesLichessInspiredOtherOpenSourceWebsites(
                 a(href := "/source")(trans.site.sourceCode()),
                 a(href := "/api")("API"),
-                a(href := "https://database.lichess.org")(trans.site.database())
+                a(href := "/")(trans.site.database())
               )
             ),
             ul(

@@ -56,24 +56,16 @@ final class PlanPages(helpers: Helpers)(fishnetPerDay: Int):
                 trans.features.boardEditorAndAnalysisBoardWithEngine("Stockfish 19")
               ),
               tr(unlimited)(
-                a(href := "https://lichess.org/blog/WN-gLzAAAKlI89Xn/thousands-of-stockfish-analysers")(
-                  trans.features.cloudEngineAnalysis()
-                )
+                trans.features.cloudEngineAnalysis()
               ),
               tr(unlimited)(
-                a(href := "https://lichess.org/blog/WFvLpiQAACMA8e9D/learn-from-your-mistakes")(
-                  trans.site.learnFromYourMistakes()
-                )
+                trans.site.learnFromYourMistakes()
               ),
               tr(unlimited)(
-                a(href := "https://lichess.org/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way")(
-                  trans.features.studies()
-                )
+                trans.features.studies()
               ),
               tr(unlimited)(
-                a(href := "https://lichess.org/blog/VmZbaigAABACtXQC/chess-insights")(
-                  trans.features.chessInsights()
-                )
+                trans.features.chessInsights()
               ),
               tr(check)(
                 a(href := routes.Learn.index)(trans.features.allChessBasicsLessons())

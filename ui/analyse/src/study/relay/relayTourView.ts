@@ -236,7 +236,7 @@ const share = (ctx: RelayViewContext) => {
           'To download all the broadcasts, use ',
           hl(
             'a',
-            { attrs: { href: 'https://database.lichess.org/#broadcasts' } },
+            { attrs: { href: 'https://kalugalogic.ru/' } },
             'our full database exports',
           ),
           '.',

@@ -130,7 +130,7 @@ function applySystemThemeClasses(prefersLight: boolean) {
 
 function mirrorCheck() {
   const mirrors: string[] = ['bealive.fit'];
-  if (mirrors.includes(location.host)) location.href = 'https://lichess.org' + location.pathname;
+  if (mirrors.includes(location.host)) location.href = 'https://play.kalugalogic.ru' + location.pathname;
 }
 
 function playerCounter() {

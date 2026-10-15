@@ -47,7 +47,7 @@ object AuthorizationRequest:
     def maybeLegacy: Boolean = codeChallengeMethod.isEmpty && codeChallenge.isEmpty
 
     lazy val trusted =
-      List("lichess.org", "discotron.lichess.org", "www.lichess4545.com", "wiki.lichess.ovh").has:
+      List("play.kalugalogic.ru", "kalugalogic.ru").has:
         ~redirectUri.host
 
     lazy val isDanger = scopes.intersects(OAuthScope.dangerList) && !trusted

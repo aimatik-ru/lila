@@ -18,7 +18,7 @@ const surveyLangs: Set<string> = new Set([
   'vi',
 ]);
 
-const SURVEY_BASE = 'https://survey.lichess.org/index.php/';
+const SURVEY_BASE = 'https://play.kalugalogic.ru/';
 
 function toLimeSurveyLang(code: string): string {
   const c = code.trim().replaceAll('_', '-');

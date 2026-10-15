@@ -29,7 +29,7 @@ final class ClasSignup(
         clas: Clas,
         data: ClasForm.CreateStudent
     )(using teacher: Me): Fu[Student.WithPassword] =
-      val email = EmailAddress(s"noreply.class.${clas.id}.${data.username}@lichess.org")
+      val email = EmailAddress(s"noreply.class.${clas.id}.${data.username}@play.kalugalogic.ru")
       val password = Student.password.generate()
       lila.mon.clas.student.create(teacher.userId).increment()
       for
