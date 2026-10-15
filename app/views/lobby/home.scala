@@ -113,9 +113,6 @@ object home:
           div(cls := "lobby__puzzle")(
             puzzle.map(p => views.puzzle.bits.dailyLink(p)())
           ),
-          div(cls := "lobby__feed"):
-            views.feed.lobbyUpdates(lastUpdates)
-          ,
           ctx.noBot.option(bits.underboards(tours, simuls)),
           div(cls := "lobby__about")(
             ctx.blind.option(h2(trans.site.about())),
