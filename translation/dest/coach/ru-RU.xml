@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="lichessCoaches">Тренеры Lichess</string>
-  <string name="lichessCoach">Тренер Lichess</string>
+  <string name="lichessCoaches">Тренеры Логик</string>
+  <string name="lichessCoach">Тренер Логик</string>
   <string name="areYouCoach">Вы отличный тренер по шахматам и у вас есть %s?</string>
   <string name="nmOrFideTitle" comment="nmOrFideTitle&#10;&#10;Part of sentence &quot;Are you a great chess coach with a NM or FIDE title?&quot;&#10;&#10;The text links to our title verification page: https://lichess.org/help/master">звание FIDE или национального мастера</string>
   <string name="confirmTitle">Подтвердите ваше звание, и мы рассмотрим вашу заявку.</string>
@@ -14,7 +14,7 @@
   <string name="accepting">Принимаю учеников</string>
   <string name="notAccepting">Временно не принимаю учеников</string>
   <string name="xCoachesStudents">%s обучает шахматам</string>
-  <string name="viewXProfile">Посмотреть Lichess профиль %s</string>
+  <string name="viewXProfile">Посмотреть Логик профиль %s</string>
   <string name="sendPM">Отправить личное сообщение</string>
   <string name="aboutMe">Обо мне</string>
   <string name="playingExperience">Игровой стаж</string>
@@ -26,5 +26,5 @@
   <string name="youtubeVideos">Видео на YouTube</string>
   <string name="allCountries">Все страны</string>
   <string name="lastLogin">Последний вход</string>
-  <string name="lichessRating">Рейтинг Lichess</string>
+  <string name="lichessRating">Рейтинг Логик</string>
 </resources>

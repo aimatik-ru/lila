@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="lichessCoaches">Lichess 教练</string>
-  <string name="lichessCoach">Lichess 教练</string>
+  <string name="lichessCoaches">Logik 教练</string>
+  <string name="lichessCoach">Logik 教练</string>
   <string name="areYouCoach">您是持有 %s 的国际象棋教练吗？</string>
   <string name="nmOrFideTitle" comment="nmOrFideTitle&#10;&#10;Part of sentence &quot;Are you a great chess coach with a NM or FIDE title?&quot;&#10;&#10;The text links to our title verification page: https://lichess.org/help/master">NM 或 FIDE 头衔</string>
   <string name="confirmTitle">请在此证明您的头衔，我们将审核您的申请。</string>
@@ -14,7 +14,7 @@
   <string name="accepting">接收学生</string>
   <string name="notAccepting">目前不接收学生</string>
   <string name="xCoachesStudents">%s 指导国象学生</string>
-  <string name="viewXProfile">查看 %s 的 Lichess 个人资料</string>
+  <string name="viewXProfile">查看 %s 的 Logik 个人资料</string>
   <string name="sendPM">发送私信</string>
   <string name="aboutMe">自我介绍</string>
   <string name="playingExperience">对弈经验</string>
@@ -26,5 +26,5 @@
   <string name="youtubeVideos">YouTube 视频</string>
   <string name="allCountries">所有国家/地区</string>
   <string name="lastLogin">最后登录</string>
-  <string name="lichessRating">Lichess 等级分</string>
+  <string name="lichessRating">Logik 等级分</string>
 </resources>

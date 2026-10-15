@@ -41,9 +41,9 @@ final class TopNav(helpers: Helpers):
             a(href := puzzleUrl)(trans.site.puzzles()),
             a(href := langHref(routes.Puzzle.themes))(trans.puzzle.puzzleThemes()),
             a(href := routes.Puzzle.dashboard(Days(30), "home", none))(trans.puzzle.puzzleDashboard()),
-            a(href := langHref(routes.Puzzle.streak))("Puzzle Streak"),
-            a(href := langHref(routes.Storm.home))("Puzzle Storm"),
-            a(href := langHref(routes.Racer.home))("Puzzle Racer")
+            a(href := langHref(routes.Puzzle.streak))("Серия задач"),
+            a(href := langHref(routes.Storm.home))("Штурм задач"),
+            a(href := langHref(routes.Racer.home))("Гонка задач")
           )
         )
       ,

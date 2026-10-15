@@ -169,7 +169,7 @@ final private class PovToEntry(
       case Some(board) =>
         Color.all.forall(color => !board.contains(color, chess.Queen))
       case _ =>
-        logger.warn(s"https://lichess.org/${from.pov.gameId} missing endgame board")
+        logger.warn(s"https://play.kalugalogic.ru/${from.pov.gameId} missing endgame board")
         false
 
   private def convert(from: RichPov): Option[InsightEntry] =

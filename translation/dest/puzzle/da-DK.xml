@@ -75,7 +75,7 @@
   <string name="fromMyGames">Fra mine partier</string>
   <string name="lookupOfPlayer">Søg taktikopgaver fra en spillers partier</string>
   <string name="searchPuzzles">Søg taktikopgaver</string>
-  <string name="fromMyGamesNone">Du har ingen taktikopgaver i databasen, men Lichess elsker dig alligevel.
+  <string name="fromMyGamesNone">Du har ingen taktikopgaver i databasen, men Logik elsker dig alligevel.
 Spil hurtige (rapid) og klassiske (classical) partier for at forøge chancerne for at en af dine taktikopgave tilføjes!</string>
   <plurals name="puzzlesFoundInUserGames">
     <item quantity="one">En opgave fundet i parti af %2$s</item>

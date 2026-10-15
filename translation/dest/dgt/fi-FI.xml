@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="dgtBoard">DGT-lauta</string>
-  <string name="lichessAndDgt">Lichess &amp; DGT</string>
+  <string name="lichessAndDgt">Logik &amp; DGT</string>
   <string name="dgtBoardRequirements">DGT-laudan vaatimukset</string>
   <string name="dgtBoardLimitations">DGT-laudan rajoitukset</string>
   <string name="thisPageAllowsConnectingDgtBoard">Tältä sivulta voit yhdistää DGT-lautasi Lichessiin ja käyttää sitä pelien pelaamiseen.</string>

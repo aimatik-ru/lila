@@ -45,7 +45,7 @@ OʻyinchiC OʻyinchiD
 Raqib tanlash oʻrniga oʻyinchiga \"bye\" (1 ochko) berish uchun quyidagicha qator qoʻshing:
 OʻyinchiE 1
 Roʻyxatda boʻlmagan oʻyinchilar qatnashmayotgan deb hisoblanadi va ularga nol ochko beriladi.
-Lichess juftliklarni avtomatik tarzda yaratishi uchun bu maydonni boʻsh qoldiring.</string>
+Logik juftliklarni avtomatik tarzda yaratishi uchun bu maydonni boʻsh qoldiring.</string>
   <string name="mustHavePlayedTheirLastSwissGame">Oxirgi shveysarcha turnirda oʻynagan boʻlishi kerak</string>
   <string name="mustHavePlayedTheirLastSwissGameHelp">Faqat oxirgi shveysarcha oʻyinda qatnashgan oʻyinchilarga qoʻshilishga ruxsat berish. Agar oʻyinchi yaqindagi shveytsarcha turnirlardan birida qatnashmagan boʻlsa, u sizning turniringizga kira olmaydi. Bu turnirga chin dildan qatnashadigan o‘yinchilar uchun sifatliroq turnir muhitini yaratadi.</string>
   <string name="newSwiss">Yangi shveysarcha turnir</string>
@@ -78,7 +78,7 @@ Shundan soʻng, boshqa oʻyinlarda ham magʻlub boʻlmasligi uchun tizim oʻyinc
 Oʻyinchi istalgan vaqtda turnirga qaytadan qoʻshilishi mumkin.</string>
   <string name="protectionAgainstNoShowQ">Turnirda qatnashmaydiganlar boʻyicha qanday choralar koʻriladi?</string>
   <string name="protectionAgainstNoShowA">Shveysarcha turnirlarga roʻyxatdan oʻtib, oʻyinlarda qatnashmaydigan oʻyinchilar muammo tugʻdirishi mumkin.
-Ushbu muammoning oldini olish uchun, Lichess oʻyinda qatnashmagan oʻyinchilarni maʻlum vaqt davomida yangi shveysarcha turnirlarga kirishini cheklaydi.
+Ushbu muammoning oldini olish uchun, Logik oʻyinda qatnashmagan oʻyinchilarni maʻlum vaqt davomida yangi shveysarcha turnirlarga kirishini cheklaydi.
 Shunga qaramay, turnir tashkilotchisi bunday oʻyinchilarga oʻz musobaqasiga kirishga ruxsat berish-bermaslikni oʻzi hal qilishi ham mumkin.</string>
   <string name="lateJoinQ">Oʻyinchilar turnirga kechikib qoʻshila oladilarmi?</string>
   <string name="lateJoinA">Ha, turlarning yarimi yakunlanmagan boʻlsa qoʻshilish mumkin. Masalan, 11 turdan iborat shveysarcha turnirda oʻyinchilar 6‑tur boshlanguncha, 12 turdan iborat turnirda esa 7‑tur boshlanguncha qoʻshila oladilar.

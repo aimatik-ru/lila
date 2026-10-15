@@ -15,7 +15,7 @@
   <string name="newBroadcast">Nueva emisión en directu</string>
   <string name="subscribedBroadcasts">Tresmisiones suscrites</string>
   <string name="aboutBroadcasts">Sobre les tresmisiones</string>
-  <string name="howToUseLichessBroadcasts">Como utilizar les tresmisiones de Lichess.</string>
+  <string name="howToUseLichessBroadcasts">Como utilizar les tresmisiones de Logik.</string>
   <string name="theNewRoundHelp">La nueva ronda va tener los mesmos miembros y contribuyentes que l\'anterior.</string>
   <string name="addRound">Añedir una ronda</string>
   <string name="ongoing">En cursu</string>
@@ -26,8 +26,8 @@
   <string name="fullDescription">Descripción completa del eventu</string>
   <string name="fullDescriptionHelp">Descripción llarga opcional de la emisión. %1$s ta disponible. El llargor tien de ser inferior a %2$s calteres.</string>
   <string name="sourceSingleUrl">Enllaz d\'orixe del archivu PGN</string>
-  <string name="sourceUrlHelp">URL que Lichess va comprobar pa llograr actualizaciones PGN. Tien de ser públicamente accesible dende Internet.</string>
-  <string name="sourceGameIds">Hasta 64 identificadores de partíes de Lichess, separaos per espacios.</string>
+  <string name="sourceUrlHelp">URL que Logik va comprobar pa llograr actualizaciones PGN. Tien de ser públicamente accesible dende Internet.</string>
+  <string name="sourceGameIds">Hasta 64 identificadores de partíes de Logik, separaos per espacios.</string>
   <string name="startDateTimeZone">Fecha d\'entamu na zona horaria local del tornéu: %s</string>
   <string name="startDateHelp">Opcional, si sabes cuando entama l\'eventu</string>
   <string name="currentGameUrl">Enllaz de la partida actual</string>
@@ -48,7 +48,7 @@
   <string name="age">Edá</string>
   <string name="unrated">Ensin puntuación</string>
   <string name="recentTournaments">Torneos recientes</string>
-  <string name="openLichess">Abrir en Lichess</string>
+  <string name="openLichess">Abrir en Logik</string>
   <string name="teams">Equipos</string>
   <string name="boards">Tableros</string>
   <string name="overview">Resume</string>

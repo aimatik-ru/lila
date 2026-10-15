@@ -167,7 +167,7 @@
   <string name="youCompletedThisLesson">מזל טוב! סיימתם את השיעור.</string>
   <string name="perPage">%s לכל עמוד</string>
   <string name="getTheTour">זקוקים לעזרה? קבלו הדרכה!</string>
-  <string name="welcomeToLichessStudyTitle">ברוכים הבאים ללוחות הלמידה של Lichess!</string>
+  <string name="welcomeToLichessStudyTitle">ברוכים הבאים ללוחות הלמידה של Logik!</string>
   <string name="doubleDefeat">תבוסה כפולה</string>
   <string name="blackDefeatWhiteCanNotWin">השחור הובס, אבל הלבן אינו יכול לנצח</string>
   <string name="whiteDefeatBlackCanNotWin">הלבן הובס, אבל השחור אינו יכול לנצח</string>

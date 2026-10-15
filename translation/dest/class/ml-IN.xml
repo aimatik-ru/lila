@@ -14,9 +14,9 @@
   <string name="studentCredentials">വിദ്യാൎത്ഥി: %1$s
 ഉപയോക്തൃപ്പേരു്: %2$s
 രഹസ്യവാക്കു്: %3$s</string>
-  <string name="inviteALichessAccount">Lichess അക്കൌണ്ടിനെ ക്ഷണിക്കുക</string>
-  <string name="createANewLichessAccount">പുതിയ Lichess അക്കൌണ്ട് ഉണ്ടാക്കുക</string>
-  <string name="lichessUsername">Lichess ഉപയോക്തൃപേര്</string>
+  <string name="inviteALichessAccount">Logik അക്കൌണ്ടിനെ ക്ഷണിക്കുക</string>
+  <string name="createANewLichessAccount">പുതിയ Logik അക്കൌണ്ട് ഉണ്ടാക്കുക</string>
+  <string name="lichessUsername">Logik ഉപയോക്തൃപേര്</string>
   <string name="generateANewUsername">പുതിയ ഉപയോക്തൃപേര് ഉണ്ടാക്കുക</string>
   <string name="pending">ശേഷിക്കുന്ന</string>
   <string name="declined">വേണ്ടവച്ചതു്</string>

@@ -213,9 +213,9 @@
   <string name="forgotPassword">ລືມລະຫັດຜ່ານບໍ?</string>
   <string name="error.weakPassword">ລະຫັດຜ່ານນີ້ຖືກໃຊ້ທົ່ວໄປເກີນໄປ ແລະ ເດົາໄດ້ງ່າຍຫຼາຍ.</string>
   <string name="error.namePassword">ກະລຸນາຢ່າໃຊ້ຊື່ຜູ້ໃຊ້ຂອງທ່ານເປັນລະຫັດຜ່ານ.</string>
-  <string name="blankedPassword">ທ່ານໄດ້ໃຊ້ລະຫັດຜ່ານດຽວກັນນີ້ໃນເວັບໄຊອື່ນ ແລະ ເວັບໄຊນັ້ນຖືກແຮັກ. ເພື່ອຄວາມປອດໄພຂອງບັນຊີ Lichess ຂອງທ່ານ, ທ່ານຈຳເປັນຕ້ອງຕັ້ງລະຫັດຜ່ານໃໝ່. ຂອບໃຈທີ່ເຂົ້າໃຈ.</string>
-  <string name="youAreLeavingLichess">ເຈົ້າກຳລັງຈະອອກຈາກ Lichess</string>
-  <string name="neverTypeYourPassword">ຫ້າມປ້ອນລະຫັດຜ່ານ Lichess ຂອງທ່ານໃນເວັບໄຊອື່ນເດັດຂາດ!</string>
+  <string name="blankedPassword">ທ່ານໄດ້ໃຊ້ລະຫັດຜ່ານດຽວກັນນີ້ໃນເວັບໄຊອື່ນ ແລະ ເວັບໄຊນັ້ນຖືກແຮັກ. ເພື່ອຄວາມປອດໄພຂອງບັນຊີ Logik ຂອງທ່ານ, ທ່ານຈຳເປັນຕ້ອງຕັ້ງລະຫັດຜ່ານໃໝ່. ຂອບໃຈທີ່ເຂົ້າໃຈ.</string>
+  <string name="youAreLeavingLichess">ເຈົ້າກຳລັງຈະອອກຈາກ Logik</string>
+  <string name="neverTypeYourPassword">ຫ້າມປ້ອນລະຫັດຜ່ານ Logik ຂອງທ່ານໃນເວັບໄຊອື່ນເດັດຂາດ!</string>
   <string name="proceedToX">ໄປທີ່ %s ຕໍ່</string>
   <string name="passwordSuggestion">ຢ່າຕັ້ງລະຫັດຜ່ານທີ່ຄົນອື່ນແນະນຳ. ເຂົາເຈົ້າຈະໃຊ້ມັນເພື່ອລັກບັນຊີຂອງທ່ານ.</string>
   <string name="emailSuggestion">ຢ່າຕັ້ງທີ່ຢູອີເມວທີ່ຄົນອື່ນແນະນຳ. ເຂົາເຈົ້າຈະໃຊ້ມັນເພື່ອລັກບັນຊີຂອງທ່ານ.</string>
@@ -308,7 +308,7 @@
   <plurals name="giveNbSeconds">
     <item quantity="other">ເພີ່ມເວລາໃຫ້ %s ວິນາທີ</item>
   </plurals>
-  <string name="thisAccountViolatedTos">ບັນຊີນີ້ລະເມີດເງື່ອນໄຂການໃຫ້ບໍລິການຂອງ Lichess</string>
+  <string name="thisAccountViolatedTos">ບັນຊີນີ້ລະເມີດເງື່ອນໄຂການໃຫ້ບໍລິການຂອງ Logik</string>
   <string name="openingExplorerAndTablebase">ຖານຂໍ້ມູນການເປີດເກມ ແລະ ປາຍເກມ</string>
   <string name="takeback">ຂໍຖອຍຕາເດີນ</string>
   <string name="proposeATakeback">ສະເໜີຂໍຖອຍຕາເດີນ</string>
@@ -476,7 +476,7 @@
   <string name="oneUrlPerLine">ໜຶ່ງ URL ຕໍ່ແຖວ.</string>
   <string name="inlineNotation">ສັນຍະລັກໃນແຖວ</string>
   <string name="makeAStudy">ເພື່ອການເກັບຮັກສາ ແລະ ແບ່ງປັນ, ລອງສ້າງບົດສຶກສາ (Study).</string>
-  <string name="previouslyOnLichessTV">ກ່ອນໜ້ານີ້ໃນ Lichess TV</string>
+  <string name="previouslyOnLichessTV">ກ່ອນໜ້ານີ້ໃນ Logik TV</string>
   <string name="onlinePlayers">ຜູ້ຫຼິ້ນທີ່ອອນລາຍ</string>
   <string name="activePlayers">ຜູ້ຫຼິ້ນທີ່ມີການເຄື່ອນໄຫວ</string>
   <string name="bewareTheGameIsRatedButHasNoClock">ລະວັງ, ເກມນີ້ມີການຄິດໄລ່ຄະແນນ (Rated) ແຕ່ບໍ່ມີໂມງຈັບເວລາ!</string>
@@ -636,7 +636,7 @@
   <string name="simulAddExtraTime">ທ່ານສາມາດເພີ່ມເວລາເລີ່ມຕົ້ນໃຫ້ກັບໂມງຂອງທ່ານເພື່ອຊ່ວຍໃນການຫຼິ້ນ Simul.</string>
   <string name="simulAddExtraTimePerPlayer">ເພີ່ມເວລາເລີ່ມຕົ້ນໃຫ້ກັບໂມງຂອງທ່ານສຳລັບຜູ້ຫຼິ້ນແຕ່ລະຄົນທີ່ເຂົ້າຮ່ວມ Simul.</string>
   <string name="simulHostExtraTimePerPlayer">ເວລາເພີ່ມເຕີມຂອງຜູ້ຈັດຕໍ່ຜູ້ຫຼິ້ນໜຶ່ງຄົນ</string>
-  <string name="lichessTournaments">ການແຂ່ງຂັນ Lichess</string>
+  <string name="lichessTournaments">ການແຂ່ງຂັນ Logik</string>
   <string name="tournamentFAQ">ຄຳຖາມທີ່ພົບເລື້ອຍ (FAQ) ກ່ຽວກັບການແຂ່ງຂັນແບບ Arena</string>
   <string name="timeBeforeTournamentStarts">ເວລາກ່ອນການແຂ່ງຂັນຈະເລີ່ມຕົ້ນ</string>
   <string name="averageCentipawnLoss">ຄ່າສະເລ່ຍຂອງການເສຍປຽບເປັນ Centipawn (ACPL)</string>
@@ -684,8 +684,8 @@
   <string name="weHaveSentYouAnEmailTo">ພວກເຮົາໄດ້ສົ່ງອີເມວໄປທີ່ %s ແລ້ວ. ຄລິກລິ້ງໃນອີເມວເພື່ອຕັ້ງຄ່າລະຫັດຜ່ານໃໝ່.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">ໃນການລົງທະບຽນ, ທ່ານຕົກລົງເຫັນດີກັບ %s.</string>
   <string name="readAboutOur">ອ່ານກ່ຽວກັບ %s ຂອງພວກເຮົາ.</string>
-  <string name="networkLagBetweenYouAndLichess">ຄວາມໜ່ວງຂອງເຄືອຂ່າຍ (Lag) ລະຫວ່າງທ່ານ ແລະ Lichess</string>
-  <string name="timeToProcessAMoveOnLichessServer">ເວລານຳໃຊ້ໃນການປະມວນຜົນຕາເດີນໃນເຊີເວີຂອງ Lichess</string>
+  <string name="networkLagBetweenYouAndLichess">ຄວາມໜ່ວງຂອງເຄືອຂ່າຍ (Lag) ລະຫວ່າງທ່ານ ແລະ Logik</string>
+  <string name="timeToProcessAMoveOnLichessServer">ເວລານຳໃຊ້ໃນການປະມວນຜົນຕາເດີນໃນເຊີເວີຂອງ Logik</string>
   <string name="downloadAnnotated">ດາວໂຫຼດພ້ອມຄຳອະທິບາຍ</string>
   <string name="downloadRaw">ດາວໂຫຼດໄຟລ໌ດິບ (Raw)</string>
   <string name="downloadImported">ດາວໂຫຼດໄຟລ໌ທີ່ນຳເຂົ້າ</string>
@@ -704,7 +704,7 @@
   <string name="kidMode">ໂໝດເດັກນ້ອຍ</string>
   <string name="kidModeIsEnabled">ເປີດໃຊ້ງານໂໝດເດັກນ້ອຍແລ້ວ.</string>
   <string name="kidModeExplanation">ນີ້ແມ່ນເພື່ອຄວາມປອດໄພ. ໃນໂໝດເດັກນ້ອຍ, ການຕິດຕໍ່ສື່ສານທັງໝົດໃນເວັບໄຊຈະຖືກປິດໃຊ້ງານ. ເປີດໃຊ້ສິ່ງນີ້ສຳລັບລູກຫຼານ ຫຼື ນັກຮຽນຂອງທ່ານ ເພື່ອປົກປ້ອງພວກເຂົາຈາກຜູ້ໃຊ້ຄົນອື່ນໃນອິນເຕີເນັດ.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">ໃນໂໝດເດັກນ້ອຍ, ໂລໂກ້ Lichess ຈະມີໄອຄອນ %s ເພື່ອໃຫ້ທ່ານໝັ້ນໃຈວ່າລູກຫຼານຂອງທ່ານປອດໄພ.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">ໃນໂໝດເດັກນ້ອຍ, ໂລໂກ້ Logik ຈະມີໄອຄອນ %s ເພື່ອໃຫ້ທ່ານໝັ້ນໃຈວ່າລູກຫຼານຂອງທ່ານປອດໄພ.</string>
   <string name="askYourChessTeacherAboutLiftingKidMode">ບັນຊີຂອງທ່ານຖືກກຳກັບດູແລ. ກະລຸນາສອບຖາມຄູສອນໝາກຮຸກຂອງທ່ານກ່ຽວກັບການປິດໂໝດເດັກນ້ອຍ.</string>
   <string name="enableKidMode">ເປີດໃຊ້ໂໝດເດັກນ້ອຍ</string>
   <string name="disableKidMode">ປິດໃຊ້ໂໝດເດັກນ້ອຍ</string>
@@ -807,7 +807,7 @@
   <plurals name="andSaveNbPremoveLines">
     <item quantity="other">ແລະ ບັນທຶກ %s ແຖວການເດີນໝາກລ່ວງໜ້າ</item>
   </plurals>
-  <string name="showUnreadLichessMessage">ທ່ານໄດ້ຮັບຂໍ້ຄວາມສ່ວນຕົວຈາກ Lichess.</string>
+  <string name="showUnreadLichessMessage">ທ່ານໄດ້ຮັບຂໍ້ຄວາມສ່ວນຕົວຈາກ Logik.</string>
   <string name="sorry">ຂໍໂທດເດີ :(</string>
   <string name="weHadToTimeYouOutForAWhile">ພວກເຮົາຈຳເປັນຕ້ອງລະງັບການຫຼິ້ນຂອງທ່ານຊົ່ວຄາວ.</string>
   <string name="why">ຍ້ອນຫຍັງ?</string>
@@ -819,7 +819,7 @@
   <string name="tryToWin">ພະຍາຍາມຊະນະ (ຫຼື ຢ່າງໜ້ອຍກໍໃຫ້ສະເໝີ) ໃນທຸກໆເກມທີ່ທ່ານຫຼິ້ນ.</string>
   <string name="resignLostGames">ຍອມແພ້ໃນເກມທີ່ເສຍປຽບແລ້ວ (ຢ່າປ່ອຍໃຫ້ເວລາໝົດໄປຊື່ໆ).</string>
   <string name="temporaryInconvenience">ພວກເຮົາຂໍອະໄພໃນຄວາມບໍ່ສະດວກຊົ່ວຄາວ,</string>
-  <string name="wishYouGreatGames">ແລະ ຂໍໃຫ້ທ່ານມີຄວາມສຸກກັບການຫຼິ້ນໃນ lichess.org.</string>
+  <string name="wishYouGreatGames">ແລະ ຂໍໃຫ້ທ່ານມີຄວາມສຸກກັບການຫຼິ້ນໃນ play.kalugalogic.ru.</string>
   <string name="thankYouForReading">ຂອບໃຈທີ່ອ່ານ!</string>
   <string name="lifetimeScore">ຄະແນນລວມຕະຫຼອດການ</string>
   <string name="currentMatchScore">ຄະແນນການແຂ່ງຂັນປັດຈຸບັນ</string>
@@ -864,7 +864,7 @@
   <string name="congratsYouWon">ຍິນດີດ້ວຍ, ທ່ານຊະນະແລ້ວ!</string>
   <string name="gameVsX">ເກມພົບກັບ %1$s</string>
   <string name="resVsX">%1$s ພົບກັບ %2$s</string>
-  <string name="lostAgainstTOSViolator">ທ່ານເສຍຄະແນນໃຫ້ກັບຜູ້ທີ່ລະເມີດເງື່ອນໄຂການໃຫ້ບໍລິການຂອງ Lichess</string>
+  <string name="lostAgainstTOSViolator">ທ່ານເສຍຄະແນນໃຫ້ກັບຜູ້ທີ່ລະເມີດເງື່ອນໄຂການໃຫ້ບໍລິການຂອງ Logik</string>
   <string name="refundXpointsTimeControlY">ຄືນຄະແນນ: %1$s ຄະແນນ %2$s.</string>
   <string name="timeAlmostUp">ເວລາເກືອບຈະໝົດແລ້ວ!</string>
   <string name="clickToRevealEmailAddress">[ຄລິກເພື່ອສະແດງອີເມວ]</string>
@@ -912,13 +912,13 @@
   <string name="resignTheGame">ຍອມແພ້</string>
   <string name="since">ຕັ້ງແຕ່</string>
   <string name="until">ຈົນເຖິງ</string>
-  <string name="lichessDbExplanation">ເກມທີ່ມີການຄິດໄລ່ຄະແນນທີ່ຫຼິ້ນໃນ Lichess</string>
+  <string name="lichessDbExplanation">ເກມທີ່ມີການຄິດໄລ່ຄະແນນທີ່ຫຼິ້ນໃນ Logik</string>
   <string name="switchSides">ສະຫຼັບຝ່າຍ</string>
   <string name="closingAccountWithdrawAppeal">ການປິດບັນຊີຂອງທ່ານຈະຖືວ່າທ່ານຖອນຄຳຮ້ອງຂໍອຸທອນ</string>
   <string name="ourEventTips">ຄຳແນະນຳຂອງພວກເຮົາໃນການຈັດກິດຈະກຳ</string>
   <string name="instructions">ຄຳແນະນຳ</string>
   <string name="showMeEverything">ສະແດງໃຫ້ຂ້ອຍເຫັນທັງໝົດ</string>
-  <string name="lichessPatronInfo">Lichess ແມ່ນອົງການການກຸສົນ ແລະ ເປັນຊອບແວໂອເພນຊອດ (Open Source) ທີ່ຟຣີຢ່າງສົມບູນ. ຄ່າໃຊ້ຈ່າຍໃນການດຳເນີນງານ, ການພັດທະນາ ແລະ ເນື້ອຫາທັງໝົດແມ່ນມາຈາກການບໍລິຈາກຂອງຜູ້ໃຊ້ເທົັ້ນັ້ນ.</string>
+  <string name="lichessPatronInfo">Logik ແມ່ນອົງການການກຸສົນ ແລະ ເປັນຊອບແວໂອເພນຊອດ (Open Source) ທີ່ຟຣີຢ່າງສົມບູນ. ຄ່າໃຊ້ຈ່າຍໃນການດຳເນີນງານ, ການພັດທະນາ ແລະ ເນື້ອຫາທັງໝົດແມ່ນມາຈາກການບໍລິຈາກຂອງຜູ້ໃຊ້ເທົັ້ນັ້ນ.</string>
   <string name="nothingToSeeHere">ຍັງບໍ່ມີຫຍັງສະແດງຢູ່ນີ້ໃນເວລານີ້.</string>
   <string name="stats">ສະຖິຕິ</string>
   <string name="accessibility">ການເຂົ້າເຖິງ (Accessibility)</string>

@@ -72,7 +72,7 @@
   <string name="fromMyGames">ຈາກເກມຂອງຂ້ອຍ</string>
   <string name="lookupOfPlayer">ຄົ້ນຫາປິດສະໜາຈາກເກມຂອງຜູ້ຫຼິ້ນ</string>
   <string name="searchPuzzles">ຄົ້ນຫາປິດສະໜາ</string>
-  <string name="fromMyGamesNone">ບໍ່ມີປິດສະໜາຂອງເຈົ້າໃນຖານຂໍ້ມູນ, ແຕ່ Lichess ຍັງຮັກເຈົ້າຫຼາຍຄືເກົ່າ.
+  <string name="fromMyGamesNone">ບໍ່ມີປິດສະໜາຂອງເຈົ້າໃນຖານຂໍ້ມູນ, ແຕ່ Logik ຍັງຮັກເຈົ້າຫຼາຍຄືເກົ່າ.
 
 ລອງຫຼິ້ນເກມແບບ Rapid ຫຼື Classical ເພື່ອເພີ່ມໂອກາດໃຫ້ປິດສະໜາຂອງເຈົ້າຖືກບັນທຶກໄວ້!</string>
   <plurals name="puzzlesFoundInUserGames">

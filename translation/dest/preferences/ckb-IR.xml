@@ -59,8 +59,8 @@
   <string name="notifyGameEvent">نوێکردنەوەی نامەناردن لە یاریدا</string>
   <string name="notifyChallenge">بەرەنگاریەکان</string>
   <string name="notifyTimeAlarm">کاتژمێری نامەنارد تەواو بووە</string>
-  <string name="notifyBell">زەنگی ئاگادارکردنەوەی لە ناو Lichess</string>
-  <string name="notifyPush">ئاگادارکردنەوەی ئامێرەکەت کاتێک لەسەر Lichess نیت</string>
+  <string name="notifyBell">زەنگی ئاگادارکردنەوەی لە ناو Logik</string>
+  <string name="notifyPush">ئاگادارکردنەوەی ئامێرەکەت کاتێک لەسەر Logik نیت</string>
   <string name="notifyWeb">وێبگەڕ</string>
   <string name="notifyDevice">ئامێر</string>
   <string name="bellNotificationSound">دەنگی زەنگی ئاگادارکردنەوە</string>

@@ -239,9 +239,9 @@
   <string name="forgotPassword">Passwuert vergiess?</string>
   <string name="error.weakPassword">Dëst Passwuert ass extrem heefeg an einfach ze roden.</string>
   <string name="error.namePassword">Benotz wgl. net däi Benotzernumm als Passwuert.</string>
-  <string name="blankedPassword">Du hues dat selwecht Passwuert ob enger anerer Säit benotzt déi kompromettéiert gouf. Fir d\'Secherheet vun dengem Lichess Kont ze assuréieren muss du en neit Passwuert wielen. Merci fir däi Versteesdemech.</string>
-  <string name="youAreLeavingLichess">Du verléiss Lichess</string>
-  <string name="neverTypeYourPassword">Gëff däin Lichess Passwuert nie ob enger anerer Säit an!</string>
+  <string name="blankedPassword">Du hues dat selwecht Passwuert ob enger anerer Säit benotzt déi kompromettéiert gouf. Fir d\'Secherheet vun dengem Logik Kont ze assuréieren muss du en neit Passwuert wielen. Merci fir däi Versteesdemech.</string>
+  <string name="youAreLeavingLichess">Du verléiss Logik</string>
+  <string name="neverTypeYourPassword">Gëff däin Logik Passwuert nie ob enger anerer Säit an!</string>
   <string name="proceedToX">Weider op %s</string>
   <string name="passwordSuggestion">Benotz kee Passwuert, dat en aneren dir virschléit. Et kéint probéiert ginn däi Kont ze klauen.</string>
   <string name="emailSuggestion">Benotz keng E-Mail-Adress, déi en aneren dir virschléit. Se kéinte probéieren däi Kont ze klauen.</string>
@@ -344,7 +344,7 @@
     <item quantity="one">Dem Géigner %s Sekonn bäiginn</item>
     <item quantity="other">Dem Géigner %s Sekonne bäiginn</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Dëse Kont huet géint d\'Lichess-Notzungsbedéngunge verstouss</string>
+  <string name="thisAccountViolatedTos">Dëse Kont huet géint d\'Logik-Notzungsbedéngunge verstouss</string>
   <string name="openingExplorerAndTablebase">Eröffnungsdatenbank &amp; Tablebase</string>
   <string name="takeback">Zuch zeréckhuelen</string>
   <string name="proposeATakeback">Zuch zeréckhuele virschloen</string>
@@ -527,7 +527,7 @@
   <string name="oneUrlPerLine">Eng URL pro Zeil.</string>
   <string name="inlineNotation">Inline-Notatioun</string>
   <string name="makeAStudy">Fir Varianten laangfristeg ze haalen an ze deelen, consideréier eng Etüd ze kreéieren.</string>
-  <string name="previouslyOnLichessTV">Virdrun op Lichess TV</string>
+  <string name="previouslyOnLichessTV">Virdrun op Logik TV</string>
   <string name="onlinePlayers">Online Spiller</string>
   <string name="activePlayers">Aktiv Spiller</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Pass op, d\'Partie ass gewäert mee huet keng Auer!</string>
@@ -693,7 +693,7 @@
   <string name="simulAddExtraTime">Du kanns dir extra Zäit ginn fir besser mat der Simul zurechtzekommen.</string>
   <string name="simulAddExtraTimePerPlayer">Gëff denger Auer zousätzlech Zäit fir all Spiller deen der Simultan bäitrëtt.</string>
   <string name="simulHostExtraTimePerPlayer">Gëff all Spiller zousätzlech Bedenkzäit</string>
-  <string name="lichessTournaments">Lichess-Turnéieren</string>
+  <string name="lichessTournaments">Logik-Turnéieren</string>
   <string name="tournamentFAQ">Arena-Turnéier-FAQ</string>
   <string name="timeBeforeTournamentStarts">Zäit bis den Turnéier ufänkt</string>
   <string name="averageCentipawnLoss">Ø-Verloscht vun 1/100-Bauer p. Zuch</string>
@@ -733,8 +733,8 @@
   <string name="weHaveSentYouAnEmailTo">Mir hunn eng E-Mail un %s geschéckt. Klick op de Link an der E-Mail fir däi Passwuert zeréckzesetzen.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Mam Registréieren akzeptéiers du %s.</string>
   <string name="readAboutOur">Lies iwwer eis %s.</string>
-  <string name="networkLagBetweenYouAndLichess">Netzwierk Lag zwëschen dir an Lichess</string>
-  <string name="timeToProcessAMoveOnLichessServer">Zäit fir en Zuch um Lichess Server ze veraarbechten</string>
+  <string name="networkLagBetweenYouAndLichess">Netzwierk Lag zwëschen dir an Logik</string>
+  <string name="timeToProcessAMoveOnLichessServer">Zäit fir en Zuch um Logik Server ze veraarbechten</string>
   <string name="downloadAnnotated">Download kommentéiert</string>
   <string name="downloadRaw">Download onkommentéiert</string>
   <string name="downloadImported">Importéiert Partie eroflueden</string>
@@ -752,7 +752,7 @@
   <string name="kidMode">Kannermodus</string>
   <string name="kidModeIsEnabled">De Kannermodus ass aktiv.</string>
   <string name="kidModeExplanation">Eng Sécherheetsastellung. Am Kannermodus sin all Kommunikatiounsweeër blockéiert. Aktivéier dës Optioun fir Kanner an Schüler virun Internetbenotzer ze schützen.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">Am Kannermodus huet den Lichess logo en %s Icon, sou weess du dass däin Kand sécher ass.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">Am Kannermodus huet den Logik logo en %s Icon, sou weess du dass däin Kand sécher ass.</string>
   <string name="askYourChessTeacherAboutLiftingKidMode">Däi Kont gëtt verwalt. Fro däi Schachtrainer fir de Kannermodus opzehiewen.</string>
   <string name="enableKidMode">Kannermodus aktivéieren</string>
   <string name="disableKidMode">Kannermodus desaktivéieren</string>
@@ -862,7 +862,7 @@
     <item quantity="one">an späicher %s bedingten Virauszuch</item>
     <item quantity="other">an späicher %s bedingt Virauszich</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Du krus eng privat Noriicht vu Lichess.</string>
+  <string name="showUnreadLichessMessage">Du krus eng privat Noriicht vu Logik.</string>
   <string name="sorry">Sorry :(</string>
   <string name="weHadToTimeYouOutForAWhile">Mir missten dir eng Auszeit ginn.</string>
   <string name="why">Firwat?</string>
@@ -874,7 +874,7 @@
   <string name="tryToWin">Probéier all Partie ze gewannen (oder op mannst Remis ze spillen).</string>
   <string name="resignLostGames">Gëff verlueren Partien op (looss net d\'Auer roflafen).</string>
   <string name="temporaryInconvenience">Mir entschëllege ons fir d\'temporär Onannehmlechkeeten,</string>
-  <string name="wishYouGreatGames">an wënschen dir flott Partien op lichess.org.</string>
+  <string name="wishYouGreatGames">an wënschen dir flott Partien op play.kalugalogic.ru.</string>
   <string name="thankYouForReading">Merci fir d\'Liesen!</string>
   <string name="lifetimeScore">Éiwegen Spillstand</string>
   <string name="currentMatchScore">Aktuellen Match Score</string>
@@ -920,7 +920,7 @@
   <string name="congratsYouWon">Felicitatioun, du hues gewonn!</string>
   <string name="gameVsX">Partie géint %1$s</string>
   <string name="resVsX">%1$s vs %2$s</string>
-  <string name="lostAgainstTOSViolator">Du hues géint een verluer deen géint Lichess-Richtlinnen vertouss huet</string>
+  <string name="lostAgainstTOSViolator">Du hues géint een verluer deen géint Logik-Richtlinnen vertouss huet</string>
   <string name="refundXpointsTimeControlY">Réckerstattung: %1$s %2$s Wäertungspunkten.</string>
   <string name="timeAlmostUp">Deng Zäit ass baal ofgelaf!</string>
   <string name="clickToRevealEmailAddress">[Klick fir d\'E-Mail-Adress ze weisen]</string>
@@ -972,13 +972,13 @@ Looss et eidel, fir Partie aus der normaler Ausgangspositioun ze starten.</strin
   <string name="resignTheGame">Partie opginn</string>
   <string name="since">Säit</string>
   <string name="until">Bis</string>
-  <string name="lichessDbExplanation">Gewäert Partien vun allen Lichess Spiller</string>
+  <string name="lichessDbExplanation">Gewäert Partien vun allen Logik Spiller</string>
   <string name="switchSides">Faarf wiesselen</string>
   <string name="closingAccountWithdrawAppeal">Däi Kont zouzemaache wäert och däin Asproch zeréckzéien</string>
   <string name="ourEventTips">Eis Tipps fir d\'Organiséieren vun Turnéier</string>
   <string name="instructions">Instruktiounen</string>
   <string name="showMeEverything">Alles weisen</string>
-  <string name="lichessPatronInfo">Lichess ass eng Wohltätegkeetsorganisatioun an eng komplett kostenfrei/open source Software.
+  <string name="lichessPatronInfo">Logik ass eng Wohltätegkeetsorganisatioun an eng komplett kostenfrei/open source Software.
 All Betriebskäschten, Entwécklung an Inhalter ginn ausschließlech vun Benotzerspenden finanzéiert.</string>
   <string name="nothingToSeeHere">Fir de Moment gëtt et hei näischt ze gesinn.</string>
   <string name="stats">Statistiken</string>

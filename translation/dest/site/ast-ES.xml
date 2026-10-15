@@ -225,8 +225,8 @@
   <string name="forgotPassword">¿Escaeciste la tu contraseña?</string>
   <string name="error.weakPassword">Esta contraseña ye mui simple.</string>
   <string name="error.namePassword">Por favor nun emplegues el to nome d\'usuariu como contraseña.</string>
-  <string name="blankedPassword">Emplegaste la mesma contraseña n\'otru sitiu y esti viose amenazáu. Pa garantizar la to seguridá en Lichess, ye necesario que camudes a una nueva. Gracies pola to comprensión.</string>
-  <string name="youAreLeavingLichess">Tas encaboxando Lichess</string>
+  <string name="blankedPassword">Emplegaste la mesma contraseña n\'otru sitiu y esti viose amenazáu. Pa garantizar la to seguridá en Logik, ye necesario que camudes a una nueva. Gracies pola to comprensión.</string>
+  <string name="youAreLeavingLichess">Tas encaboxando Logik</string>
   <string name="neverTypeYourPassword">¡Nunca emplegues la mesma contraseña n\'otru llugar!</string>
   <string name="proceedToX">Dir a %s</string>
   <string name="passwordSuggestion">Nun emplegues una contraseña afitada por dalguien. Podríen intentar robate la cuenta.</string>
@@ -329,7 +329,7 @@
     <item quantity="one">Dar %s segundu</item>
     <item quantity="other">Dar %s segundos</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Esti usuariu nun cumple los Términos de Serviciu de Lichess</string>
+  <string name="thisAccountViolatedTos">Esti usuariu nun cumple los Términos de Serviciu de Logik</string>
   <string name="openingExplorerAndTablebase">Esplorador d\'apertures y base de datos de finales</string>
   <string name="takeback">Desfacer xugada</string>
   <string name="proposeATakeback">Proponer desfacer xugada</string>
@@ -508,7 +508,7 @@
   <string name="oneUrlPerLine">Un enllaz URL per llínea.</string>
   <string name="inlineNotation">Notación compacta</string>
   <string name="makeAStudy">Para guardar y compartir, considera facer un estudiu.</string>
-  <string name="previouslyOnLichessTV">Enantes en Lichess TV</string>
+  <string name="previouslyOnLichessTV">Enantes en Logik TV</string>
   <string name="onlinePlayers">Xugadores conectaos</string>
   <string name="activePlayers">Xugadores activos</string>
   <string name="bewareTheGameIsRatedButHasNoClock">¡Cuidáu, el xuegu ye por puntos pero ensin límite de tiempu!</string>
@@ -663,7 +663,7 @@
   <string name="returnToSimulHomepage">Tornar a la páxina de simultánees</string>
   <string name="aboutSimul">Nes simultánees, un xugador enfréntase a dellos al mesmu tiempu.</string>
   <string name="aboutSimulImage">De 50 oponentes, Fischer ganó 47 partíes, empató 2 y perdió 1.</string>
-  <string name="aboutSimulRealLife">El conceptu de simultánees en Lichess tomase de la vida real, onde l\'anfitrión va de mesa en mesa faciendo xugadas.</string>
+  <string name="aboutSimulRealLife">El conceptu de simultánees en Logik tomase de la vida real, onde l\'anfitrión va de mesa en mesa faciendo xugadas.</string>
   <string name="aboutSimulRules">Cuando la simultánea empieza, cada xugador empieza una partida col agospiu, que xuega con blanques. La simultánea termina cuando s\'acaben toles partíes.</string>
   <string name="aboutSimulSettings">Les simultánees son partíes amistoses. Les opciones de pidimientu de revancha, desfacer xugada y añedir tiempu tán evacuaes.</string>
   <string name="create">Crear</string>
@@ -672,7 +672,7 @@
   <string name="simulAddExtraTime">Puedes añedir tiempu adicional al to reló para ayudar na simultánea.</string>
   <string name="simulAddExtraTimePerPlayer">Añedir tiempu inicial al to reló per cada xugador que s\'una a la simultánea.</string>
   <string name="simulHostExtraTimePerPlayer">Tiempu extra del agospiu per cada xugador</string>
-  <string name="lichessTournaments">Torneos de Lichess</string>
+  <string name="lichessTournaments">Torneos de Logik</string>
   <string name="tournamentFAQ">Entrugues frecuentes de los torneos</string>
   <string name="timeBeforeTournamentStarts">Tiempu  primero qu\'empiece el tornéu</string>
   <string name="averageCentipawnLoss">Pérdida permediu en centipeones</string>
@@ -721,8 +721,8 @@
   <string name="weHaveSentYouAnEmailTo">Te unviemos un corréu a %s. Restablez la to contraseña faciendo clic nel enllaz.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Al rexistrate, aceptes les %s.</string>
   <string name="readAboutOur">Llee sobre nuesa %s.</string>
-  <string name="networkLagBetweenYouAndLichess">Retardo de conexón ente tu y Lichess</string>
-  <string name="timeToProcessAMoveOnLichessServer">Tiempu pa procesar un movimientu nel servidor de Lichess</string>
+  <string name="networkLagBetweenYouAndLichess">Retardo de conexón ente tu y Logik</string>
+  <string name="timeToProcessAMoveOnLichessServer">Tiempu pa procesar un movimientu nel servidor de Logik</string>
   <string name="downloadAnnotated">Descargar la partida anotada</string>
   <string name="downloadRaw">Descargar la partida ensin anotar</string>
   <string name="downloadImported">Descargar la partida importada</string>
@@ -848,7 +848,7 @@
     <item quantity="one">y aforra %s llínea de premovimiento</item>
     <item quantity="other">y aforra %s llíneas de premovimientos</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Recibisti un mensaxe priváu de Lichess.</string>
+  <string name="showUnreadLichessMessage">Recibisti un mensaxe priváu de Logik.</string>
   <string name="sorry">Sentimoslo :(</string>
   <string name="weHadToTimeYouOutForAWhile">Tuvimos que suspendete temporalmente.</string>
   <string name="why">¿Por qué?</string>
@@ -860,7 +860,7 @@
   <string name="tryToWin">Intenta ganar (o, siquier, empatar) cada partida que xuegues.</string>
   <string name="resignLostGames">Abandona en posiciones perdíes (non dexes que\'l tiempu acabe ensin más).</string>
   <string name="temporaryInconvenience">Te pidimos disculpes poles molesties</string>
-  <string name="wishYouGreatGames">y esperamos que disfrutes de lichess.org.</string>
+  <string name="wishYouGreatGames">y esperamos que disfrutes de play.kalugalogic.ru.</string>
   <string name="thankYouForReading">¡Gracies por lleerlo!</string>
   <string name="lifetimeScore">Puntuación histórica</string>
   <string name="currentMatchScore">Resultaú d\'esti enfrentamientu</string>
@@ -906,7 +906,7 @@
   <string name="congratsYouWon">¡Felicidaes, ganasti!</string>
   <string name="gameVsX">Partida vs %1$s</string>
   <string name="resVsX">%1$s vs %2$s</string>
-  <string name="lostAgainstTOSViolator">Perdisti contra un usuariu qu\'incumplió les Condiciones del Serviciu de Lichess</string>
+  <string name="lostAgainstTOSViolator">Perdisti contra un usuariu qu\'incumplió les Condiciones del Serviciu de Logik</string>
   <string name="refundXpointsTimeControlY">Recuperasti %1$s puntos en %2$s.</string>
   <string name="timeAlmostUp">¡Quedate pocu tiempu!</string>
   <string name="clickToRevealEmailAddress">[Fai clic pa amosar el corréu electrónicu]</string>
@@ -958,13 +958,13 @@ Dexar vacíu de mano les partíes dende la posición inicial normal.</string>
   <string name="resignTheGame">Abandonar partida</string>
   <string name="since">Dende</string>
   <string name="until">Hasta</string>
-  <string name="lichessDbExplanation">Partíes por puntos de tolos xugadores de Lichess</string>
+  <string name="lichessDbExplanation">Partíes por puntos de tolos xugadores de Logik</string>
   <string name="switchSides">Camudar color</string>
   <string name="closingAccountWithdrawAppeal">Cerrar la to cuenta va retirar la to apelación</string>
   <string name="ourEventTips">Los nuesos conseyos pa entamar eventos</string>
   <string name="instructions">Instrucciones</string>
   <string name="showMeEverything">Amosame tou</string>
-  <string name="lichessPatronInfo">Lichess ye una organización benéfica y un software de códigu abiertu totalmente llibre.
+  <string name="lichessPatronInfo">Logik ye una organización benéfica y un software de códigu abiertu totalmente llibre.
 Tolos gastos de funcionamientu, desenvolvimientu y conteníos finánciense puramente con donaciones de los usuarios.</string>
   <string name="nothingToSeeHere">Na que ver equí por agora.</string>
   <string name="stats">Estadístiques</string>

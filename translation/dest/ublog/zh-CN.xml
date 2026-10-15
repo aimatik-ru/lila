@@ -6,7 +6,7 @@
   <string name="all">全部</string>
   <string name="byMonth">按月份</string>
   <string name="byTopic">按主题</string>
-  <string name="byLichess">Lichess 官方</string>
+  <string name="byLichess">Logik 官方</string>
   <string name="myFriends">我的好友</string>
   <string name="myLikes">我的点赞</string>
   <string name="myBlog">我的博客</string>
@@ -16,7 +16,7 @@
     <item quantity="other">%s 篇博客文章</item>
   </plurals>
   <string name="continueReadingPost">继续阅读此文章</string>
-  <string name="lichessBlogPostsFromXYear">%s 年的 Lichess 博客文章</string>
+  <string name="lichessBlogPostsFromXYear">%s 年的 Logik 博客文章</string>
   <string name="previousBlogPosts">之前的博客文章</string>
   <string name="xBlog">%s 的博客</string>
   <string name="newPost">新建文章</string>

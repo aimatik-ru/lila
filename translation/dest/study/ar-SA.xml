@@ -77,7 +77,7 @@
   <string name="downloadGame">حمل لعبة</string>
   <string name="studyUrl">رابط الدراسة</string>
   <string name="currentChapterUrl">رابط الفصل الحالي</string>
-  <string name="pasteToEmbedChapterInForumOrBlog" comment="youCanPasteThisInTheForumToEmbed&#10;&#10;The thing you are pasting is a link to a study. This will make it appear in the correct section as well.&#10;&#10;Please note this used to say &quot;in the forum to embed&quot;. It was then changed to include &quot;or a Lichess Blog&quot;. A further update was made to say &quot;or your Lichess blog&quot;, since you can only create blog posts as an individual.">يمكنك لصق هذا في المنتدى أو مدونتك على Lichess لإدراج الفصل.</string>
+  <string name="pasteToEmbedChapterInForumOrBlog" comment="youCanPasteThisInTheForumToEmbed&#10;&#10;The thing you are pasting is a link to a study. This will make it appear in the correct section as well.&#10;&#10;Please note this used to say &quot;in the forum to embed&quot;. It was then changed to include &quot;or a Lichess Blog&quot;. A further update was made to say &quot;or your Lichess blog&quot;, since you can only create blog posts as an individual.">يمكنك لصق هذا في المنتدى أو مدونتك على Logik لإدراج الفصل.</string>
   <string name="startAtInitialPosition">البدء من وضع البداية</string>
   <string name="startAtX">البدء من %s</string>
   <string name="embedInYourWebsite">ضمنه في موقع أو مدونة</string>
@@ -182,7 +182,7 @@
   <string name="youCompletedThisLesson">تهانينا! لقد أكملت هذا الدرس.</string>
   <string name="perPage">%s في كل صفحة</string>
   <string name="getTheTour">بحاجة للمساعدة؟ احصل على الجولة!</string>
-  <string name="welcomeToLichessStudyTitle">مرحبًا بك في Lichess study  !</string>
+  <string name="welcomeToLichessStudyTitle">مرحبًا بك في Logik study  !</string>
   <string name="welcomeToLichessStudyText">هذه لوحة تحليل مشتركة.&lt;br&gt;&lt;br&gt;استخدمها لتُحلل وتُعلق على المباريات،&lt;br&gt;ناقش المواقف المختلفة مع الأصدقاء،&lt;br&gt;وبالطبع لدروس الشطرنج!&lt;br&gt;&lt;br&gt;هي أداة قوية، دعنا نأخذ بعض من الوقت لنرى كيفية عملها.</string>
   <string name="sharedAndSaveTitle" comment="As in: shared with other members and saved to database">تم المشاركة والحفظ</string>
   <string name="sharedAndSavedText">يمكن للأعضاء الآخرين رؤية نقلاتك في الوقت الحقيقي!&lt;br&gt;زيادة على ذلك، يتم حفظ كل شيء إلى الأبد.</string>
@@ -196,7 +196,7 @@
   <string name="annotatePositionTitle">علق علي الموقف</string>
   <string name="annotatePositionText">اضغط على زر ?!, أو أضغط بزر الفأرة الأيمن علي قائمة النقلات علي اليمين.&lt;br&gt; رموز التعليق يتم مشاركتها وحفظها.</string>
   <string name="conclusionTitle">شكرًا على وقتك</string>
-  <string name="conclusionText">يمكنك إيجاد &lt;a href=\'/study/mine/hot\'&gt;الدراسات المسبقة&lt;/a&gt; من ملفك الشخصي. &lt;br&gt;هناك أيضاً &lt;a href=\'//lichess.org/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way\'&gt; منشور على المدونة عن الدراسات &lt;/a&gt;.&lt;br&gt; المستخدمين المتقدمين يمكنهم الضغط على \"؟\" لرؤية اختصارات لوحة المفاتيح. &lt;br&gt; استمتع!</string>
+  <string name="conclusionText">يمكنك إيجاد &lt;a href=\'/study/mine/hot\'&gt;الدراسات المسبقة&lt;/a&gt; من ملفك الشخصي. &lt;br&gt;هناك أيضاً &lt;a href=\'/\'&gt; منشور على المدونة عن الدراسات &lt;/a&gt;.&lt;br&gt; المستخدمين المتقدمين يمكنهم الضغط على \"؟\" لرؤية اختصارات لوحة المفاتيح. &lt;br&gt; استمتع!</string>
   <string name="createChapterTitle">دعنا ننشئ فصل جديد</string>
   <string name="createChapterText">يمكن للدراسة أن تحتوي على عدة فصول.&lt;br&gt;كل فصل لديه شجرة حركات مختلفة،&lt;br&gt; ويمكن إنشاؤها بطرق مختلفة.</string>
   <string name="fromInitialPositionTitle">البدء من وضع البداية</string>
@@ -204,13 +204,13 @@
   <string name="customPositionTitle">موضع مخصص</string>
   <string name="customPositionText">قم بتهيئة اللوحة بطريقتك.&lt;br&gt; لتكون مناسبة لاستكشاف نهاية الألعاب.</string>
   <string name="loadGameFromTheWebTitle">تحميل مباراة من الإنترنت</string>
-  <string name="loadGameFromTheWebText" comment="The special text tags must be retained in exact order, for example &amp;lt;br&amp;gt; must stay exactly as-is. You do not need to add spaces or new lines before or after them.&#10;&#10;Note that &quot;br&quot; in particular means &quot;line break&quot;. In other words, it will start a new line in the final text.">الصق رابط المباراة&lt;br&gt; (مثل lichess.org/7fHIU0XI)&lt;br&gt; لتحميل نقلات المباراة في الفصل.</string>
+  <string name="loadGameFromTheWebText" comment="The special text tags must be retained in exact order, for example &amp;lt;br&amp;gt; must stay exactly as-is. You do not need to add spaces or new lines before or after them.&#10;&#10;Note that &quot;br&quot; in particular means &quot;line break&quot;. In other words, it will start a new line in the final text.">الصق رابط المباراة&lt;br&gt; (مثل play.kalugalogic.ru/7fHIU0XI)&lt;br&gt; لتحميل نقلات المباراة في الفصل.</string>
   <string name="fromFenStringTitle">من نص FEN</string>
   <string name="fromFenStringText">الصق موقع لعبة بصيغة FEN&lt;br&gt;&lt;i&gt;4k3/4rb2/8/7p/8/5Q2/1PP5/1K6 w&lt;/i&gt;&lt;br&gt; لتبدأ الفصل من موقع محدد.</string>
   <string name="fromPgnGameTitle">من PGN لعبة</string>
   <string name="fromPgnGameText">الصق لعبة بصيغة PGN.&lt;br&gt; لتحميل الحركات، الأوامر، والتغييرات في الفصل.</string>
   <string name="variantsAreSupportedTitle">تدعم الدراسات أنماط الشطرنج المختلفة</string>
-  <string name="variantsAreSupportedText">نعم، يمكنك دراسة البيت المجنون&lt;br&gt;وجميع أنواع ألعاب Lichess!</string>
+  <string name="variantsAreSupportedText">نعم، يمكنك دراسة البيت المجنون&lt;br&gt;وجميع أنواع ألعاب Logik!</string>
   <string name="chapterConclusionText">يتم حفظ الفصول للأبد.&lt;br&gt; استمتعوا بتنظيم محتوى الشطرنج خاصتكم!</string>
   <string name="doubleDefeat">هزيمة مزدوجة</string>
   <string name="blackDefeatWhiteCanNotWin">الأسود مهزوم, لكن الأبيض لا يستطيع الفوز</string>

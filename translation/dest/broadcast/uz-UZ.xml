@@ -15,7 +15,7 @@
   <string name="newBroadcast">Yangi jonli translyatsiya</string>
   <string name="subscribedBroadcasts">Obuna boʻlgan translyatsiyalar</string>
   <string name="aboutBroadcasts">Translyatsiyalar haqida</string>
-  <string name="howToUseLichessBroadcasts">Lichess translyatsiyalaridan qanday foydalaniladi.</string>
+  <string name="howToUseLichessBroadcasts">Logik translyatsiyalaridan qanday foydalaniladi.</string>
   <string name="theNewRoundHelp">Yangi turda oldingi turdagi aʼzolar va redaktorlar qatnashadi.</string>
   <string name="addRound">Tur qoʻshish</string>
   <string name="ongoing">Davom etmoqda</string>
@@ -26,8 +26,8 @@
   <string name="fullDescription">Turnirning toʻliq tavsifi</string>
   <string name="fullDescriptionHelp">Turnir haqida ixtiyoriy uzun tavsif. %1$sʼdan foydalanish mumkin. Belgilar soni %2$s tadan oshmasligi kerak.</string>
   <string name="sourceSingleUrl">PGN manba URL manzili</string>
-  <string name="sourceUrlHelp">Lichess PGN yangilanishlarini olishi uchun tekshiradigan URL manzili. U Internet orqali hamma uchun ochiq boʻlishi shart.</string>
-  <string name="sourceGameIds">Boʻshliqlar bilan ajratilgan 64 tagacha Lichess oʻyin identifikatorlari.</string>
+  <string name="sourceUrlHelp">Logik PGN yangilanishlarini olishi uchun tekshiradigan URL manzili. U Internet orqali hamma uchun ochiq boʻlishi shart.</string>
+  <string name="sourceGameIds">Boʻshliqlar bilan ajratilgan 64 tagacha Logik oʻyin identifikatorlari.</string>
   <string name="startDateTimeZone">Turnirning mahalliy vaqt boʻyicha boshlanish sanasi: %s</string>
   <string name="startDateHelp">Majburiy emas, agar tadbir qachon boshlanishini bilsangiz</string>
   <string name="currentGameUrl">Joriy oʻyin havolasi</string>

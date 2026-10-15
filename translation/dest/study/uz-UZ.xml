@@ -65,7 +65,7 @@
   <string name="downloadGame">Oʻyinni yuklab olish</string>
   <string name="studyUrl">Saboq havolasi</string>
   <string name="currentChapterUrl">Joriy bob havolasi</string>
-  <string name="pasteToEmbedChapterInForumOrBlog" comment="youCanPasteThisInTheForumToEmbed&#10;&#10;The thing you are pasting is a link to a study. This will make it appear in the correct section as well.&#10;&#10;Please note this used to say &quot;in the forum to embed&quot;. It was then changed to include &quot;or a Lichess Blog&quot;. A further update was made to say &quot;or your Lichess blog&quot;, since you can only create blog posts as an individual.">Saboqni joylashtirish uchun ushbu havoladan forumda yoki Lichess blogingizda foydalanishingiz mumkin.</string>
+  <string name="pasteToEmbedChapterInForumOrBlog" comment="youCanPasteThisInTheForumToEmbed&#10;&#10;The thing you are pasting is a link to a study. This will make it appear in the correct section as well.&#10;&#10;Please note this used to say &quot;in the forum to embed&quot;. It was then changed to include &quot;or a Lichess Blog&quot;. A further update was made to say &quot;or your Lichess blog&quot;, since you can only create blog posts as an individual.">Saboqni joylashtirish uchun ushbu havoladan forumda yoki Logik blogingizda foydalanishingiz mumkin.</string>
   <string name="startAtInitialPosition">Boshlangʻich pozitsiyadan boshlash</string>
   <string name="startAtX">%s pozitsiyasidan boshlash</string>
   <string name="embedInYourWebsite">Veb‑saytingizda joylashtirish uchun havola</string>
@@ -166,7 +166,7 @@
   <string name="youCompletedThisLesson">Tabriklaymiz! Siz ushbu darsni yakunladingiz.</string>
   <string name="perPage">Har bir sahifada %s ta</string>
   <string name="getTheTour">Yordam kerakmi? Platforma bilan tanishing!</string>
-  <string name="welcomeToLichessStudyTitle">Lichess saboqlariga xush kelibsiz!</string>
+  <string name="welcomeToLichessStudyTitle">Logik saboqlariga xush kelibsiz!</string>
   <string name="welcomeToLichessStudyText">Bu birgalikda tahlil qilish taxtasi.&lt;br&gt;&lt;br&gt;Undan oʻyinlarni tahlil qilish va sharh berish,&lt;br&gt;doʻstlar bilan pozitsiyalarni muhokama qilish&lt;br&gt;va albatta, shaxmat darslari uchun foydalanishingiz mumkin!&lt;br&gt;&lt;br&gt;Bu juda keng imkoniyatli vosita, keling, uning qanday ishlashini koʻrib chiqamiz.</string>
   <string name="sharedAndSaveTitle" comment="As in: shared with other members and saved to database">Ulashilgan va saqlangan</string>
   <string name="sharedAndSavedText">Boshqa aʼzolar yurishlaringizni real vaqtda koʻrib turishadi!&lt;br&gt;Bundan tashqari, hamma narsa abadiy saqlab qolinadi.</string>
@@ -180,7 +180,7 @@
   <string name="annotatePositionTitle">Pozitsiyaga belgilar qoʻshish</string>
   <string name="annotatePositionText">!? tugmasini bosing yoki oʻng tarafdagi yurishlar roʻyxati ustiga sichqonchani oʻng tugmasini bosing.&lt;br&gt;Tahlil belgilari saqlanadi va hamma uchun koʻrinadi.</string>
   <string name="conclusionTitle">Vaqt ajratganingiz uchun rahmat</string>
-  <string name="conclusionText">&lt;a href=\'/study/mine/hot\'&gt;Oldingi saboqlaringizni&lt;/a&gt; profil sahifangizdan topishingiz mumkin.&lt;br&gt;Shuningdek, &lt;a href=\'//lichess.org/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way\'&gt;saboqlar haqidagi blog‑post&lt;/a&gt; bilan ham tanishib chiqing.&lt;br&gt;Tajribali foydalanuvchilar klaviatura yorliqlarini koʻrish uchun \"?\" belgisini bosishlari mumkin.&lt;br&gt;Omad tilaymiz!</string>
+  <string name="conclusionText">&lt;a href=\'/study/mine/hot\'&gt;Oldingi saboqlaringizni&lt;/a&gt; profil sahifangizdan topishingiz mumkin.&lt;br&gt;Shuningdek, &lt;a href=\'/\'&gt;saboqlar haqidagi blog‑post&lt;/a&gt; bilan ham tanishib chiqing.&lt;br&gt;Tajribali foydalanuvchilar klaviatura yorliqlarini koʻrish uchun \"?\" belgisini bosishlari mumkin.&lt;br&gt;Omad tilaymiz!</string>
   <string name="createChapterTitle">Saboq uchun bob yaratamiz</string>
   <string name="createChapterText">Saboq bir nechta bobdan iborat boʻlishi mumkin.&lt;br&gt;Har bir bobda alohida yurishlar varianti mavjud&lt;br&gt;va ularni turli usullar bilan yaratish mumkin.</string>
   <string name="fromInitialPositionTitle">Boshlangʻich pozitsiyadan</string>
@@ -188,13 +188,13 @@
   <string name="customPositionTitle">Maxsus pozitsiya</string>
   <string name="customPositionText">Pozitsiyani oʻzingiz xohlagancha tering.&lt;br&gt;Endshpillarni oʻrganish uchun qulay.</string>
   <string name="loadGameFromTheWebTitle">Vebdan oʻyinni yuklash</string>
-  <string name="loadGameFromTheWebText" comment="The special text tags must be retained in exact order, for example &amp;lt;br&amp;gt; must stay exactly as-is. You do not need to add spaces or new lines before or after them.&#10;&#10;Note that &quot;br&quot; in particular means &quot;line break&quot;. In other words, it will start a new line in the final text.">Bobga oʻyinni yuklash uchun&lt;br&gt;Lichess oʻyini havolasini (URL) kiriting&lt;br&gt;(masalan: lichess.org/7fHIU0XI).</string>
+  <string name="loadGameFromTheWebText" comment="The special text tags must be retained in exact order, for example &amp;lt;br&amp;gt; must stay exactly as-is. You do not need to add spaces or new lines before or after them.&#10;&#10;Note that &quot;br&quot; in particular means &quot;line break&quot;. In other words, it will start a new line in the final text.">Bobga oʻyinni yuklash uchun&lt;br&gt;Logik oʻyini havolasini (URL) kiriting&lt;br&gt;(masalan: play.kalugalogic.ru/7fHIU0XI).</string>
   <string name="fromFenStringTitle">FEN satridan</string>
   <string name="fromFenStringText">Bobni maʼlum bir pozitsiyadan boshlash uchun&lt;br&gt;FEN formatidagi pozitsiyani kiriting:&lt;br&gt;&lt;i&gt;4k3/4rb2/8/7p/8/5Q2/1PP5/1K6 w&lt;/i&gt;</string>
   <string name="fromPgnGameTitle">PGN oʻyinidan</string>
   <string name="fromPgnGameText">Bobga yurishlar, sharhlar va variantlarni yuklash uchun&lt;br&gt;PGN formatidagi oʻyinni kiriting.</string>
   <string name="variantsAreSupportedTitle">Saboqlarda shaxmat variantlari ham mavjud</string>
-  <string name="variantsAreSupportedText">Ha, siz Kreyzihaus va boshqa&lt;br&gt;Lichess variantlarini oʻrganishingiz mumkin!</string>
+  <string name="variantsAreSupportedText">Ha, siz Kreyzihaus va boshqa&lt;br&gt;Logik variantlarini oʻrganishingiz mumkin!</string>
   <string name="chapterConclusionText">Boblar abadiy saqlanadi.&lt;br&gt;Shaxmat materiallaringizni zavq bilan tartiblang!</string>
   <string name="doubleDefeat">Ikki tomonlama magʻlubiyat</string>
   <string name="blackDefeatWhiteCanNotWin">Qoralar magʻlubiyati, ammo oqlar gʻalaba qozona olmaydi</string>

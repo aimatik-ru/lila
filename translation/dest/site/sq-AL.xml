@@ -242,9 +242,9 @@
   <string name="forgotPassword">Harruat fjalëkalimin?</string>
   <string name="error.weakPassword">Ky fjalëkalim është tejet i rëndomtë dhe shumë i kollajtë të merret me mend.</string>
   <string name="error.namePassword">Ju lutemi, mos përdorni si fjalëkalim tuajin emrin tuaj të përdoruesit.</string>
-  <string name="blankedPassword">Keni përdorur të njëjtin fjalëkalim si në një sajt tjetër dhe ai sajt është komprometuar. Për të garantuar sigurinë e llogarisë tuaj Lichess, na duhet t’ju caktojmë një fjalëkalim të ri. Faleminderit për mirëkuptimin.</string>
-  <string name="youAreLeavingLichess">Po ikni nga Lichess</string>
-  <string name="neverTypeYourPassword">Mos shtypni kurrë fjalëkalimin tuaj për në Lichess te një sajt tjetër!</string>
+  <string name="blankedPassword">Keni përdorur të njëjtin fjalëkalim si në një sajt tjetër dhe ai sajt është komprometuar. Për të garantuar sigurinë e llogarisë tuaj Logik, na duhet t’ju caktojmë një fjalëkalim të ri. Faleminderit për mirëkuptimin.</string>
+  <string name="youAreLeavingLichess">Po ikni nga Logik</string>
+  <string name="neverTypeYourPassword">Mos shtypni kurrë fjalëkalimin tuaj për në Logik te një sajt tjetër!</string>
   <string name="proceedToX">Vazhdo te %s</string>
   <string name="passwordSuggestion">Mos caktoni si fjalëkalim diçka të sugjeruar nga dikush tjetër. Do ta përdorin për t’ju grabitur llogarinë tuaj.</string>
   <string name="emailSuggestion">Mos caktoni si adresë email diçka të sugjeruar nga dikush tjetër. Do ta përdorin për t’ju grabitur llogarinë tuaj.</string>
@@ -348,7 +348,7 @@
     <item quantity="one">Jep %s sekondë</item>
     <item quantity="other">Dhuro %s sekonda</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Kjo llogari ka shkelur Kushtet e Shërbimit të Lichess</string>
+  <string name="thisAccountViolatedTos">Kjo llogari ka shkelur Kushtet e Shërbimit të Logik</string>
   <string name="openingExplorerAndTablebase">Eksploruesi i hapjeve &amp; tabela e fundlojës</string>
   <string name="takeback">Kthim lëvizjeje mbrapsht</string>
   <string name="proposeATakeback">Propozoni një kthim lëvizjeje mbrapsht</string>
@@ -535,7 +535,7 @@ Shokë që po luajnë: %2$s</string>
   <string name="oneUrlPerLine">Një URL për rresht.</string>
   <string name="inlineNotation">Shënim brendazi</string>
   <string name="makeAStudy">Për ruajtje të sigurt dhe për ndarje me të tjerët, shihni mundësinë e krijimit të një studimi.</string>
-  <string name="previouslyOnLichessTV">Herën e fundit në Lichess TV</string>
+  <string name="previouslyOnLichessTV">Herën e fundit në Logik TV</string>
   <string name="onlinePlayers">Lojtarë në linjë</string>
   <string name="activePlayers">Lojëtarë aktivë</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Kujdes, loja është e vlerësuar, por s’ka sahat!</string>
@@ -705,7 +705,7 @@ Shokë që po luajnë: %2$s</string>
   <string name="simulAddExtraTime">Ju mund të shtoni kohë shtesë për t\'i bërë ballë simultanes.</string>
   <string name="simulAddExtraTimePerPlayer">Shtoni kohë fillestare te sahati juaj për çdo lojtar që hyn në simultane.</string>
   <string name="simulHostExtraTimePerPlayer">Kohë ekstra sahati organizatori për lojtar</string>
-  <string name="lichessTournaments">Turne Lichess</string>
+  <string name="lichessTournaments">Turne Logik</string>
   <string name="tournamentFAQ">PBR për turne Arenë</string>
   <string name="timeBeforeTournamentStarts">Koha deri sa të fillojë turneu</string>
   <string name="averageCentipawnLoss">Humbja mesatare në centiushtar</string>
@@ -749,8 +749,8 @@ Shokë që po luajnë: %2$s</string>
   <string name="weHaveSentYouAnEmailTo">Kemi dërguar një email te %s. Që të ricaktoni fjalëkalimin tuaj, klikoni mbi lidhjen te email-i.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Duke u regjistruar, pajtoheni me %s.</string>
   <string name="readAboutOur">Lexoni rreth %s tona.</string>
-  <string name="networkLagBetweenYouAndLichess">Vonesë rrjeti mes jush dhe Lichess</string>
-  <string name="timeToProcessAMoveOnLichessServer">Kohë për përpunimin e një lëvizje në shërbyesin e Lichess-it</string>
+  <string name="networkLagBetweenYouAndLichess">Vonesë rrjeti mes jush dhe Logik</string>
+  <string name="timeToProcessAMoveOnLichessServer">Kohë për përpunimin e një lëvizje në shërbyesin e Logik-it</string>
   <string name="downloadAnnotated">Shkarkoje me shënimet</string>
   <string name="downloadRaw">Shkarkoje shqeto</string>
   <string name="downloadImported">Shkarko të importuarën</string>
@@ -769,7 +769,7 @@ Shokë që po luajnë: %2$s</string>
   <string name="kidMode">Mënyra për fëmijë</string>
   <string name="kidModeIsEnabled">Mënyra për fëmijë është e aktivizuar.</string>
   <string name="kidModeExplanation">Kjo është për sigurinë. Nën mënyrën për fëmijë, krejt komunikimet në sajt janë të çaktivizuara. Aktivizojeni këtë për fëmijët dhe nxënësit tuaj të shkollave, për t’i mbrojtur ata nga të tjerë përdorues të internetit.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">Nën mënyrën për fëmijë, stemës së Lichess-it i vihet një ikonë %s, që ta dini se fëmijët tuaj janë të parrezik.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">Nën mënyrën për fëmijë, stemës së Logik-it i vihet një ikonë %s, që ta dini se fëmijët tuaj janë të parrezik.</string>
   <string name="askYourChessTeacherAboutLiftingKidMode">Llogaria juaj administrohet. Rreth heqjes së mënyrës “fëmijë” pyetni mëuesin tuaj të shahut.</string>
   <string name="enableKidMode">Aktivizo mënyrën për Fëmijë</string>
   <string name="disableKidMode">Çaktivizo mënyrën për Fëmijë</string>
@@ -880,7 +880,7 @@ Shokë që po luajnë: %2$s</string>
     <item quantity="one">edhe ruaj %s linja premove</item>
     <item quantity="other">edhe ruaj %s linja premove</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Morët një mesazh privat nga Lichess.</string>
+  <string name="showUnreadLichessMessage">Morët një mesazh privat nga Logik.</string>
   <string name="sorry">Na ndjeni :(</string>
   <string name="weHadToTimeYouOutForAWhile">Na u desh t’ju ndalnim për ca kohë.</string>
   <string name="why">Pse?</string>
@@ -892,7 +892,7 @@ Shokë që po luajnë: %2$s</string>
   <string name="tryToWin">Përpiquni të fitoni (ose të paktën të barazoni) çdo lojë që luani.</string>
   <string name="resignLostGames">Në lojëra të humbura, dorëzohuni (mos lini të përfundojë koha).</string>
   <string name="temporaryInconvenience">Kërkojmë ndjesë për bezdisjen e përkohshme,</string>
-  <string name="wishYouGreatGames">edhe ju urojmë lojëra të shkëlqyera në lichess.org.</string>
+  <string name="wishYouGreatGames">edhe ju urojmë lojëra të shkëlqyera në play.kalugalogic.ru.</string>
   <string name="thankYouForReading">Faleminderit për leximin!</string>
   <string name="lifetimeScore">Rezultati i jetës</string>
   <string name="currentMatchScore">Rezultati i ndeshjes së tanishme</string>
@@ -935,7 +935,7 @@ Shokë që po luajnë: %2$s</string>
   <string name="congratsYouWon">Urime, fituat!</string>
   <string name="gameVsX">Lojë kundër %1$s</string>
   <string name="resVsX">%1$s kundër %2$s</string>
-  <string name="lostAgainstTOSViolator">Humbët ndaj dikujt që shkeli Kushtet e Shërbimit të Lichess-it</string>
+  <string name="lostAgainstTOSViolator">Humbët ndaj dikujt që shkeli Kushtet e Shërbimit të Logik-it</string>
   <string name="refundXpointsTimeControlY">Kompensim: %1$s pikë %2$s.</string>
   <string name="timeAlmostUp">Koha gati mbaroi!</string>
   <string name="clickToRevealEmailAddress">[Klikoni që të zbulohet adresa email]</string>
@@ -988,13 +988,13 @@ Që lojërat të fillojnë nga pozicioni fillestar normal, lëreni të zbrazët.
   <string name="youCantStartNewGame">S’mund të nisni një lojë të re teksa është radha juaj për të luajtur.</string>
   <string name="since">Që nga</string>
   <string name="until">Deri më</string>
-  <string name="lichessDbExplanation">Lojëra me vlerësim, marrë nga krejt lojëtarët e Lichess-it</string>
+  <string name="lichessDbExplanation">Lojëra me vlerësim, marrë nga krejt lojëtarët e Logik-it</string>
   <string name="switchSides">Ndërroni palët</string>
   <string name="closingAccountWithdrawAppeal">Mbyllja e llogarisë tuaj do të sjellë tërheqjen e apelimit tuaj</string>
   <string name="ourEventTips">Këshillat tona për organizim veprimtarish</string>
   <string name="instructions">Udhëzime</string>
   <string name="showMeEverything">Shfaqmë gjithçka</string>
-  <string name="lichessPatronInfo">Lichess është një program bamirësie dhe krejtësisht falas/libre, me burim të hapët.
+  <string name="lichessPatronInfo">Logik është një program bamirësie dhe krejtësisht falas/libre, me burim të hapët.
 Krejt kostot operative, zhvillimi dhe lënda financohen vetëm me dhurime nga përdoruesit.</string>
   <string name="nothingToSeeHere">S’ka ç’shihet këtu tani.</string>
   <string name="stats">Statistika</string>

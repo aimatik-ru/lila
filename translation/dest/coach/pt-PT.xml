@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="lichessCoaches">Treinadores no Lichess</string>
-  <string name="lichessCoach">Treinador no Lichess</string>
+  <string name="lichessCoaches">Treinadores no Logik</string>
+  <string name="lichessCoach">Treinador no Logik</string>
   <string name="areYouCoach">É um bom treinador de xadrez com um %s?</string>
   <string name="nmOrFideTitle" comment="nmOrFideTitle&#10;&#10;Part of sentence &quot;Are you a great chess coach with a NM or FIDE title?&quot;&#10;&#10;The text links to our title verification page: https://lichess.org/help/master">título FIDE ou NM</string>
   <string name="confirmTitle">Confirme o seu título aqui e analisaremos a sua candidatura.</string>
@@ -14,7 +14,7 @@
   <string name="accepting">A aceitar alunos</string>
   <string name="notAccepting">Não está a aceitar alunos de momento</string>
   <string name="xCoachesStudents">%s treina alunos de xadrez</string>
-  <string name="viewXProfile">Ver perfil de %s no Lichess</string>
+  <string name="viewXProfile">Ver perfil de %s no Logik</string>
   <string name="sendPM">Enviar uma mensagem privada</string>
   <string name="aboutMe">Sobre mim</string>
   <string name="playingExperience">Experiência de jogo</string>
@@ -26,5 +26,5 @@
   <string name="youtubeVideos">Vídeos no YouTube</string>
   <string name="allCountries">Todos os países</string>
   <string name="lastLogin">Último acesso</string>
-  <string name="lichessRating">Rating Lichess</string>
+  <string name="lichessRating">Rating Logik</string>
 </resources>

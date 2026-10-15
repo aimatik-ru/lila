@@ -243,7 +243,7 @@ final class TopicUi(helpers: Helpers, bits: ForumBits, postUi: PostUi)(
           st.section(cls := "warning")(
             h2(dataIcon := Icon.CautionTriangle, cls := "text")(trans.site.important()),
             p("Describe your issue above the report. Unsolicited diagnostics will be ignored."),
-            p("Only you and the Lichess moderators can see this forum.")
+            p("Only you and the Логик moderators can see this forum.")
           ),
           postForm(cls := "form3", action := routes.ForumTopic.create(categ.id))(
             form3.group(form("post")("text"), trans.site.message())(f =>
@@ -279,7 +279,7 @@ final class TopicUi(helpers: Helpers, bits: ForumBits, postUi: PostUi)(
 
   private val relocateTo = List(
     "general-chess-discussion" -> "General Chess Discussion",
-    "lichess-feedback" -> "Lichess Feedback",
+    "lichess-feedback" -> "Логик Feedback",
     "game-analysis" -> "Game Analysis",
     "off-topic-discussion" -> "Off-Topic Discussion"
   )

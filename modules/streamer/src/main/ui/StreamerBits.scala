@@ -91,7 +91,7 @@ final class StreamerBits(helpers: Helpers)(picfitUrl: lila.memo.PicfitUrl):
         heightA := Streamer.imageDimensions.height,
         cls := "picture",
         src := url(s),
-        alt := s"${u.titleUsername} Lichess streamer picture"
+        alt := s"${u.titleUsername} Логик streamer picture"
       )
     def url(s: Streamer) =
       s.picture match

@@ -250,9 +250,9 @@
   <string name="forgotPassword">Esqueceu sua senha?</string>
   <string name="error.weakPassword">A senha é extremamente comum e fácil de adivinhar.</string>
   <string name="error.namePassword">Não utilize seu nome de usuário como senha.</string>
-  <string name="blankedPassword">Você usou a mesma senha em outro site, e esse site foi comprometido. Para garantir a segurança da sua conta no Lichess, você precisa criar uma nova senha. Agradecemos sua compreensão.</string>
-  <string name="youAreLeavingLichess">Você está saindo do Lichess</string>
-  <string name="neverTypeYourPassword">Nunca digite sua senha do Lichess em outro site!</string>
+  <string name="blankedPassword">Você usou a mesma senha em outro site, e esse site foi comprometido. Para garantir a segurança da sua conta no Logik, você precisa criar uma nova senha. Agradecemos sua compreensão.</string>
+  <string name="youAreLeavingLichess">Você está saindo do Logik</string>
+  <string name="neverTypeYourPassword">Nunca digite sua senha do Logik em outro site!</string>
   <string name="proceedToX">Ir para %s</string>
   <string name="passwordSuggestion">Não coloque uma senha sugerida por outra pessoa, porque ela poderá roubar sua conta.</string>
   <string name="emailSuggestion">Não coloque um endereço de email sugerido por outra pessoa, porque ela poderá roubar sua conta.</string>
@@ -264,7 +264,7 @@
   <string name="emailSent">Enviamos um e-mail para %s.</string>
   <string name="emailCanTakeSomeTime">Pode levar algum tempo para chegar.</string>
   <string name="refreshInboxAfterFiveMinutes">Aguarde 5 minutos e atualize sua caixa de entrada.</string>
-  <string name="checkSpamOrJunkFolder" comment="checkSpamFolder&#10;It = The confirmation email">Se você não receber um e-mail de confirmação, verifique sua pasta de Spam ou a Lixeira. Certifique-se de indicar os e-mails recebidos do lichess.org como seguro e \"não é spam\", para poder se manter informado sobre comunicados importantes.</string>
+  <string name="checkSpamOrJunkFolder" comment="checkSpamFolder&#10;It = The confirmation email">Se você não receber um e-mail de confirmação, verifique sua pasta de Spam ou a Lixeira. Certifique-se de indicar os e-mails recebidos do play.kalugalogic.ru como seguro e \"não é spam\", para poder se manter informado sobre comunicados importantes.</string>
   <string name="sendEmailForAccountVerification">Se você não encontrou seu email de confirmação, envie um email para %s e nós confirmaremos sua conta.</string>
   <string name="accountConfirmed">O usuário %s foi confirmado com sucesso.</string>
   <string name="accountCanLogin">Você pode acessar agora como %s.</string>
@@ -359,7 +359,7 @@
     <item quantity="one">Dar %s segundos</item>
     <item quantity="other">Dar %s segundos</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Esta conta violou os Termos de Serviço do Lichess</string>
+  <string name="thisAccountViolatedTos">Esta conta violou os Termos de Serviço do Logik</string>
   <string name="openingExplorerAndTablebase">Explorador de abertura &amp; tabela de finais</string>
   <string name="takeback">Voltar jogada</string>
   <string name="proposeATakeback">Propor voltar jogada</string>
@@ -547,7 +547,7 @@ Amigos jogando: %2$s</string>
   <string name="inlineNotation">Notação em linha</string>
   <string name="makeAStudy">Para salvar e compartilhar uma análise, crie um estudo.</string>
   <string name="clearLocalData">Limpar dados locais</string>
-  <string name="previouslyOnLichessTV">Anteriormente em Lichess TV</string>
+  <string name="previouslyOnLichessTV">Anteriormente em Logik TV</string>
   <string name="onlinePlayers">Jogadores online</string>
   <string name="activePlayers">Jogadores ativos</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Cuidado, o jogo vale rating, mas não há controle de tempo!</string>
@@ -560,11 +560,11 @@ Amigos jogando: %2$s</string>
   <string name="autoSwitch">Alternar automaticamente</string>
   <string name="puzzles">Problemas</string>
   <string name="onlineBots">Bots online</string>
-  <string name="aboutBotsOnLichess">Sobre bots em Lichess</string>
+  <string name="aboutBotsOnLichess">Sobre bots em Logik</string>
   <string name="featuredBots">Bots em destaque</string>
   <string name="tryPlayingTheseInnovativeChessEngines">Experimente jogar com estas engines inovadoras! São as nossas favoritas.</string>
   <string name="communityBots">Bots de comunidade</string>
-  <string name="moreChessEnginesCreatedByTheLichessCommunity">Mais engines criadas pela comunidade do Lichess. Elas são hospedadas por seus criadores e podem não estar sempre online.</string>
+  <string name="moreChessEnginesCreatedByTheLichessCommunity">Mais engines criadas pela comunidade do Logik. Elas são hospedadas por seus criadores e podem não estar sempre online.</string>
   <string name="name">Nome</string>
   <string name="description">Descrição</string>
   <string name="descPrivate">Descrição privada</string>
@@ -701,7 +701,7 @@ Amigos jogando: %2$s</string>
   <string name="aboutX">Sobre o %s</string>
   <string name="xIsAFreeYLibreOpenSourceChessServer">%1$s é um servidor de xadrez gratuito (%2$s), livre, sem anúncios e código aberto.</string>
   <string name="really">realmente</string>
-  <string name="lichessUpdates">Atualizações do Lichess</string>
+  <string name="lichessUpdates">Atualizações do Logik</string>
   <string name="contribute">Contribuir</string>
   <string name="changelog">Registro de alterações</string>
   <string name="termsOfService">Termos de serviço</string>
@@ -731,7 +731,7 @@ Amigos jogando: %2$s</string>
   <string name="extraClockTimeForHost" comment="Appears on: https://lichess.org/simul/new&#10;&#10;Allows a simul host to select extra time for the simul.&#10;&#10;Please note this string used to state &quot;Host extra clock time&quot;, without the word &quot;initial&quot;">Tempo extra no relógio do anfitrião:</string>
   <string name="simulAddExtraTimePerPlayer">Adicionar tempo inicial ao seu relógio por cada jogador adversário que entrar na simultânea.</string>
   <string name="simulHostExtraTimePerPlayer">Tempo adicional do simultanista por jogador</string>
-  <string name="lichessTournaments">Torneios do Lichess</string>
+  <string name="lichessTournaments">Torneios do Logik</string>
   <string name="tournamentFAQ">Perguntas Frequentes sobre torneios no estilo Arena</string>
   <string name="timeBeforeTournamentStarts">Contagem regressiva para início do torneio</string>
   <string name="averageCentipawnLoss">Perda média em centipeões</string>
@@ -783,7 +783,7 @@ Amigos jogando: %2$s</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Ao registrar, você concorda em se comprometer com nossa %s.</string>
   <string name="readAboutOur">Leia sobre a nossa %s.</string>
   <string name="networkLagBetweenYouAndLichess">Atraso na rede</string>
-  <string name="timeToProcessAMoveOnLichessServer">Tempo para processar um movimento no servidor do Lichess</string>
+  <string name="timeToProcessAMoveOnLichessServer">Tempo para processar um movimento no servidor do Logik</string>
   <string name="downloadAnnotated">Baixar anotação</string>
   <string name="downloadRaw">Baixar texto</string>
   <string name="downloadImported">Baixar partida importada</string>
@@ -922,7 +922,7 @@ Amigos jogando: %2$s</string>
     <item quantity="one">e salvar a linha de pré-lance de %s</item>
     <item quantity="other">e salvar as linhas de pré-lance de %s</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Você recebeu uma mensagem privada do Lichess.</string>
+  <string name="showUnreadLichessMessage">Você recebeu uma mensagem privada do Logik.</string>
   <string name="readTheMessage" comment="'It' refers to a private message. This text follows after a different string which advises players they have received a private message from Lichess. For users, this is appears as a regular private message from the Lichess account: https://lichess.org/@/Lichess">Ler a mensagem</string>
   <string name="sorry">Desculpa :(</string>
   <string name="weHadToTimeYouOutForAWhile">Tivemos de bloqueá-lo por um tempo.</string>
@@ -935,7 +935,7 @@ Amigos jogando: %2$s</string>
   <string name="tryToWin">Tente vencer (ou pelo menos empatar) todas as partidas que jogar.</string>
   <string name="resignLostGames">Conceda partidas perdidas (não deixe o relógio ir até ao fim).</string>
   <string name="temporaryInconvenience">Pedimos desculpa pelo incômodo temporário,</string>
-  <string name="wishYouGreatGames">e desejamos-lhe grandes jogos em lichess.org.</string>
+  <string name="wishYouGreatGames">e desejamos-lhe grandes jogos em play.kalugalogic.ru.</string>
   <string name="thankYouForReading">Obrigado pela leitura!</string>
   <string name="lifetimeScore">Pontuação de todo o período</string>
   <string name="currentMatchScore">Pontuação da partida atual</string>
@@ -981,7 +981,7 @@ Amigos jogando: %2$s</string>
   <string name="congratsYouWon">Parabéns, você venceu!</string>
   <string name="gameVsX">Jogo vs %1$s</string>
   <string name="resVsX">%1$s vs %2$s</string>
-  <string name="lostAgainstTOSViolator">Você perdeu rating para alguém que violou os termos de serviço do Lichess</string>
+  <string name="lostAgainstTOSViolator">Você perdeu rating para alguém que violou os termos de serviço do Logik</string>
   <string name="refundXpointsTimeControlY">Reembolso: %1$s %2$s pontos de rating.</string>
   <string name="timeAlmostUp">O tempo está quase acabando!</string>
   <string name="clickToRevealEmailAddress">[Clique para revelar o endereço de e-mail]</string>
@@ -1036,13 +1036,13 @@ Deixe em branco para começar as partidas na posição inicial padrão.</string>
   <string name="youCantStartNewGame">Você não pode começar uma nova partida enquanto for a sua vez.</string>
   <string name="since">Desde</string>
   <string name="until">Até</string>
-  <string name="lichessDbExplanation">Amostra de partidas rankeadas de todos os jogadores do Lichess</string>
+  <string name="lichessDbExplanation">Amostra de partidas rankeadas de todos os jogadores do Logik</string>
   <string name="switchSides">Trocar de lado</string>
   <string name="closingAccountWithdrawAppeal">Encerrar sua conta anulará seu apelo</string>
   <string name="ourEventTips">Nossas dicas para organização de eventos</string>
   <string name="instructions">Instruções</string>
   <string name="showMeEverything">Mostrar tudo</string>
-  <string name="lichessPatronInfo">O Lichess é uma organização beneficente e um software totalmente livre e de código aberto. Dependemos das doações dos usuários para cobrir nossos custos operacionais, desenvolvimento e conteúdo. Sem nossa generosa comunidade, não conseguiríamos manter o site funcionando. Obrigado por fazer parte da nossa comunidade!</string>
+  <string name="lichessPatronInfo">O Logik é uma organização beneficente e um software totalmente livre e de código aberto. Dependemos das doações dos usuários para cobrir nossos custos operacionais, desenvolvimento e conteúdo. Sem nossa generosa comunidade, não conseguiríamos manter o site funcionando. Obrigado por fazer parte da nossa comunidade!</string>
   <string name="nothingToSeeHere">Nada para ver aqui no momento.</string>
   <string name="stats">Estatísticas</string>
   <string name="accessibility">Acessibilidade</string>

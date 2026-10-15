@@ -52,7 +52,7 @@ The Lichess team"""
   If you already have an account linked to this email, you can try to log in with it, or reset your password if you forgot it."""
         Mailer.Message(
           to = email,
-          subject = "Could not verify your new Lichess account",
+          subject = "Could not verify your new Логик account",
           text = text,
           htmlBody = standardEmail(text).some
         )
@@ -62,7 +62,7 @@ The Lichess team"""
     mailer.canSend.so:
       mailer.sendOrSkip:
         val text =
-          """Your new Lichess account has already been verified, so you can log in and start playing right away."""
+          """Your new Логик account has already been verified, so you can log in and start playing right away."""
         Mailer.Message(
           to = email,
           subject = "Your account is verified and ready to use",
@@ -87,7 +87,7 @@ $regards
         mailer.sendOrSkip:
           Mailer.Message(
             to = email,
-            subject = s"$title title confirmed on lichess.org",
+            subject = s"$title title confirmed on play.kalugalogic.ru",
             text = Mailer.txt.addServiceNote(body),
             htmlBody = standardEmail(body).some
           )
@@ -99,7 +99,7 @@ $regards
 
   def onBecomeCoach(user: User): Funit =
     sendAsPrivateMessageAndEmail(user)(
-      subject = _ => "Coach profile unlocked on lichess.org",
+      subject = _ => "Coach profile unlocked on play.kalugalogic.ru",
       body = _ => s"""Hello,
 
 It is our pleasure to welcome you as a Lichess coach.
@@ -130,7 +130,7 @@ $regards
   def onAppealReply(user: User): Funit =
     val url = routeUrl(routes.Appeal.home)
     sendAsPrivateMessageAndEmail(user)(
-      subject = _ => "Appeal response on lichess.org",
+      subject = _ => "Appeal response on play.kalugalogic.ru",
       body = _ => s"""Hello,
 
 Your appeal has received a response from the moderation team, to see it click here: $url
@@ -152,7 +152,7 @@ $regards
       mailer.sendOrSkip:
         Mailer.Message(
           to = email,
-          subject = "lichess.org account deletion",
+          subject = "play.kalugalogic.ru account deletion",
           text = Mailer.txt.addServiceNote(body),
           htmlBody = standardEmail(body).some
         )
@@ -219,7 +219,7 @@ ${routeUrl(routes.Plan.index())}"""
           .so: email =>
             given Lang = userLang(userWithEmail.user)
             val hello =
-              "Hello and thank you for playing correspondence chess on Lichess!"
+              "Hello and thank you for playing correspondence chess on Логик!"
             val disableSettingNotice =
               "You are receiving this email because you have correspondence email notification turned on. You can turn it off in your settings:"
             val disableLink =

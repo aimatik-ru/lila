@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="lichessCoaches">Lichess 的教練們</string>
-  <string name="lichessCoach">Lichess 的教練</string>
+  <string name="lichessCoaches">Logik 的教練們</string>
+  <string name="lichessCoach">Logik 的教練</string>
   <string name="areYouCoach">你是一位擁有 %s 頭銜的西洋棋教練嗎？</string>
   <string name="nmOrFideTitle" comment="nmOrFideTitle&#10;&#10;Part of sentence &quot;Are you a great chess coach with a NM or FIDE title?&quot;&#10;&#10;The text links to our title verification page: https://lichess.org/help/master">NM或FIRD頭銜</string>
   <string name="confirmTitle">在這裡認證頭銜，之後我們會審核您的回覆</string>
@@ -25,5 +25,5 @@
   <string name="publicStudies">公開研究</string>
   <string name="youtubeVideos">在 Youtube 上的影片</string>
   <string name="allCountries">所有國家和地區</string>
-  <string name="lichessRating">Lichess 評分</string>
+  <string name="lichessRating">Logik 評分</string>
 </resources>

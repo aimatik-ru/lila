@@ -182,7 +182,7 @@ final class ReportUi(helpers: Helpers)(menu: Context ?=> Frag):
           ),
           br,
           br,
-          p(a(href := routes.Lobby.home)("Return to Lichess homepage"))
+          p(a(href := routes.Lobby.home)("Return to Логик homepage"))
         )
 
   object list:

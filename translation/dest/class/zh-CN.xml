@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="lichessClasses">班级</string>
-  <string name="teachClassesOfChessStudents">使用 Lichess 班级工具套装来教授国际象棋学生班级。</string>
+  <string name="teachClassesOfChessStudents">使用 Logik 班级工具套装来教授国际象棋学生班级。</string>
   <string name="features">功能特色</string>
   <string name="quicklyGenerateSafeUsernames">快速为学生生成安全的用户名和密码</string>
   <string name="trackStudentProgress">跟踪学生在对局和谜题中的进度</string>
   <string name="messageAllStudents">向所有学生发送关于新课程材料的消息</string>
   <string name="freeForAllForever">对所有人 100% 永久免费，无广告，无跟踪</string>
-  <string name="applyToBeLichessTeacher">申请成为 Lichess 教师</string>
+  <string name="applyToBeLichessTeacher">申请成为 Logik 教师</string>
   <string name="noClassesYet">暂无班级。</string>
   <string name="teachersX">教师：%s</string>
   <string name="newClass">新建班级</string>
@@ -23,7 +23,7 @@
   <string name="classDescription">班级描述</string>
   <string name="visibleByBothStudentsAndTeachers">班级的教师和学生均可看到</string>
   <string name="teachersOfTheClass">班级教师</string>
-  <string name="addLichessUsernames">添加 Lichess 用户名以邀请他们成为教师。每行一个。</string>
+  <string name="addLichessUsernames">添加 Logik 用户名以邀请他们成为教师。每行一个。</string>
   <string name="resetPassword">重置密码</string>
   <string name="makeSureToCopy">请务必现在复制或记下密码。之后将再也无法看到它！</string>
   <string name="passwordX">密码：%s</string>
@@ -32,22 +32,22 @@
   <string name="realName">真实姓名</string>
   <string name="privateWillNeverBeShown">私密信息。永远不会在班级外显示。帮助您记住学生是谁。</string>
   <string name="addStudent">添加学生</string>
-  <string name="lichessProfileXCreatedForY">已为 %2$s 创建 Lichess 资料 %1$s。</string>
+  <string name="lichessProfileXCreatedForY">已为 %2$s 创建 Logik 资料 %1$s。</string>
   <string name="studentCredentials">学生：%1$s
 用户名：%2$s
 密码：%3$s</string>
-  <string name="inviteALichessAccount">邀请现有 Lichess 账户</string>
-  <string name="inviteDesc1">如果学生已拥有 Lichess 账户，您可以邀请他们加入班级。</string>
-  <string name="inviteDesc2">他们将在 Lichess 上收到一条包含班级加入链接的消息。</string>
+  <string name="inviteALichessAccount">邀请现有 Logik 账户</string>
+  <string name="inviteDesc1">如果学生已拥有 Logik 账户，您可以邀请他们加入班级。</string>
+  <string name="inviteDesc2">他们将在 Logik 上收到一条包含班级加入链接的消息。</string>
   <string name="inviteDesc3">重要提示：仅邀请您认识且主动希望加入班级的学生。</string>
   <string name="inviteDesc4">切勿向任意玩家发送未经请求的邀请。</string>
-  <string name="createANewLichessAccount">创建新的 Lichess 账户</string>
-  <string name="createDesc1">如果学生尚未拥有 Lichess 账户，您可以在此处为他们创建一个。</string>
+  <string name="createANewLichessAccount">创建新的 Logik 账户</string>
+  <string name="createDesc1">如果学生尚未拥有 Logik 账户，您可以在此处为他们创建一个。</string>
   <string name="createDesc2">无需邮箱地址。系统将生成一个密码，您需要将其转交给学生以便他们登录。</string>
   <string name="createDesc3">重要提示：一名学生不得拥有多个账户。</string>
   <string name="createDesc4">如果他们已有一个账户，请改用邀请功能。</string>
   <string name="createStudentWarning">仅为真实学生创建账户。请勿使用此功能为您自己创建多个账户，否则您的账户将被封禁。</string>
-  <string name="lichessUsername">Lichess 用户名</string>
+  <string name="lichessUsername">Logik 用户名</string>
   <string name="generateANewUsername">生成新用户名</string>
   <string name="welcomeToClass">欢迎来到您的班级：%s。
 这是访问班级的链接。</string>
@@ -103,8 +103,8 @@
   <string name="youAcceptedThisInvitation">您已接受此邀请。</string>
   <string name="youDeclinedThisInvitation">您已拒绝此邀请。</string>
   <string name="orSeparator" comment="Used as separator between invite sections. Shown as large '~ or ~'.">或者</string>
-  <string name="createMultipleAccounts">批量创建 Lichess 账户</string>
-  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">您也可以 %s，以便根据学生姓名列表批量创建 Lichess 账户。</string>
+  <string name="createMultipleAccounts">批量创建 Logik 账户</string>
+  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">您也可以 %s，以便根据学生姓名列表批量创建 Logik 账户。</string>
   <string name="useThisForm" comment="Link text in multipleAccsFromDescription">使用此表单</string>
   <string name="maxStudentsNote" comment="%1$s will be replaced with a large number (currently 100).\n%2$s is a link and will be replaced with the translation of createMoreClasses. Make sure both strings fit together.">请注意，一个班级最多可有 %1$s 名学生。如需管理更多学生，请 %2$s。</string>
   <string name="createMoreClasses" comment="Link text in maxStudentsNote">创建更多班级</string>
@@ -119,7 +119,7 @@
   <string name="allowMessagingBetweenStudentsDesc">此设置仅适用于您为学生创建的账户。</string>
   <string name="quickLoginCode">快速登录代码</string>
   <string name="quickLoginCodes">快速登录代码</string>
-  <string name="quickLoginCodesDesc1" comment="String is a URL">在 %s 上使用这些代码，以便您的学生登录 Lichess。</string>
+  <string name="quickLoginCodesDesc1" comment="String is a URL">在 %s 上使用这些代码，以便您的学生登录 Logik。</string>
   <string name="quickLoginCodesDesc2">即使这些代码过期后，您的学生仍将保持登录状态，直至他们手动登出。</string>
   <string name="expirationInMomentFromNow" comment="String is the translation of, for example, 'in 2 hours'">过期时间：%s</string>
 </resources>

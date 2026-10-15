@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="lichessClasses">Mga Klase</string>
-  <string name="teachClassesOfChessStudents">Magturo sa mga klase ng mga mag-aaral ng chess gamit ang tool suite ng Lichess Klase.</string>
+  <string name="teachClassesOfChessStudents">Magturo sa mga klase ng mga mag-aaral ng chess gamit ang tool suite ng Logik Klase.</string>
   <string name="features">Mga tampok</string>
   <string name="quicklyGenerateSafeUsernames">Mabilis na gumawa ng mga ligtas na username at passwords para sa mga mag-aaral</string>
   <string name="trackStudentProgress">Subaybayan ang pag-unlad ng nag-aaral sa mga laro at palaisipan</string>
   <string name="messageAllStudents">Mensahe sa lahat ng mga mag-aaral tungkol sa bagong materyal sa klase</string>
   <string name="freeForAllForever">100% libre para sa lahat, magpakailanman, na walang mga ads o mga trackers</string>
-  <string name="applyToBeLichessTeacher">Mag-apply para maging Lichess na Guro</string>
+  <string name="applyToBeLichessTeacher">Mag-apply para maging Logik na Guro</string>
   <string name="noClassesYet">Wala pang klase.</string>
   <string name="teachersX">Mga Guro: %s</string>
   <string name="newClass">Bagong klase</string>
@@ -23,7 +23,7 @@
   <string name="classDescription">Paglalarawan ng Klase</string>
   <string name="visibleByBothStudentsAndTeachers">Makikita ng mga guro at ang mga mag-aaral ng klase</string>
   <string name="teachersOfTheClass">Mga guro ng klase</string>
-  <string name="addLichessUsernames">Magdagdag ng Lichess usernames upang imbitahin sila bilang mga guro. Isa sa bawat linya.</string>
+  <string name="addLichessUsernames">Magdagdag ng Logik usernames upang imbitahin sila bilang mga guro. Isa sa bawat linya.</string>
   <string name="resetPassword">I-reset ang password</string>
   <string name="makeSureToCopy">Siguraduhing kopyahin o isulat ang password ngayon. Hindi mo na ito maaring makita muli!</string>
   <string name="passwordX">Password: %s</string>
@@ -32,22 +32,22 @@
   <string name="realName">Totoong pangalan</string>
   <string name="privateWillNeverBeShown">Pribado. Hindi kailanman ipapakita sa labas ng klase. Tumutulong sa iyo na matandaan kung sino ang mag-aaral.</string>
   <string name="addStudent">Magdagdag ng mag-aaral</string>
-  <string name="lichessProfileXCreatedForY">Lichess profile %1$s gumawa para sa %2$s.</string>
+  <string name="lichessProfileXCreatedForY">Logik profile %1$s gumawa para sa %2$s.</string>
   <string name="studentCredentials">Mag-aaral: %1$s
 Username: %2$s
 Password: %3$s</string>
-  <string name="inviteALichessAccount">Imbitahin ang isang Lichess account</string>
-  <string name="inviteDesc1">Kapag mayroon nang Lichess account ang mag-aaral, maaari mo silang imbitahin sa klase.</string>
-  <string name="inviteDesc2">Makakatanggap sila ng mensahe sa Lichess na may link para makasali sa klase.</string>
+  <string name="inviteALichessAccount">Imbitahin ang isang Logik account</string>
+  <string name="inviteDesc1">Kapag mayroon nang Logik account ang mag-aaral, maaari mo silang imbitahin sa klase.</string>
+  <string name="inviteDesc2">Makakatanggap sila ng mensahe sa Logik na may link para makasali sa klase.</string>
   <string name="inviteDesc3">Importante: mag-imbita lamang ng mga mag-aaral na kilala mo, at sino ang aktibong gustong sumali sa klase.</string>
   <string name="inviteDesc4">Huwag magpadala ng mga hindi hinihinging imbitasyon sa mga arbitraryong manlalaro.</string>
-  <string name="createANewLichessAccount">Gumawa ng bagong Lichess account</string>
-  <string name="createDesc1">Kung ang mag-aaral ay wala pang Lichess account, maaari kang gumawa ng isa para sa kanila rito.</string>
+  <string name="createANewLichessAccount">Gumawa ng bagong Logik account</string>
+  <string name="createDesc1">Kung ang mag-aaral ay wala pang Logik account, maaari kang gumawa ng isa para sa kanila rito.</string>
   <string name="createDesc2">Hindi kailangang ng email address. Ang isang password ay magagawa at kailangang mong ibigay ito sa mag-aaral upang sila ay pwedeng mag-log in.</string>
   <string name="createDesc3">Importante: ang isang mag-aaral ay hindi dapat magkaroon ng maraming account.</string>
   <string name="createDesc4">Kung mayroon na sila, gamitin na lang ang porma na imbitasyon.</string>
   <string name="createStudentWarning">Gumawa lamang ng mga account para sa mga tunay na mag-aaral. Huwag gamitin ito para gumawa ng maraming account para sa iyong sarili. Magkakaroon ka ng ban.</string>
-  <string name="lichessUsername">Lichess username</string>
+  <string name="lichessUsername">Logik username</string>
   <string name="generateANewUsername">Gumawa ng bagong username</string>
   <string name="welcomeToClass">Maligayang pagdating sa iyong klase: %s.
 Dito ang link para ma-access ang klase.</string>
@@ -100,8 +100,8 @@ Magpapakita ito ng pahalang na linya.</string>
   <string name="youAcceptedThisInvitation">Tinanggap mo ang imbitasyong ito.</string>
   <string name="youDeclinedThisInvitation">Tinanggihan mo ang imbitasyong ito.</string>
   <string name="orSeparator" comment="Used as separator between invite sections. Shown as large '~ or ~'.">o</string>
-  <string name="createMultipleAccounts">Gumawa ng maraming Lichess accounts nang sabay-sabay</string>
-  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">Maaari mo rin %s upang magawa ng maraming mga Lichess account mula sa listahan ng mga pangalan ng mag-aaral.</string>
+  <string name="createMultipleAccounts">Gumawa ng maraming Logik accounts nang sabay-sabay</string>
+  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">Maaari mo rin %s upang magawa ng maraming mga Logik account mula sa listahan ng mga pangalan ng mag-aaral.</string>
   <string name="useThisForm" comment="Link text in multipleAccsFromDescription">gamitin ang porma na ito</string>
   <string name="maxStudentsNote" comment="%1$s will be replaced with a large number (currently 100).\n%2$s is a link and will be replaced with the translation of createMoreClasses. Make sure both strings fit together.">Tandaan na ang isang klase ay maaaring magkaroon ng hanggang %1$s mag-aaral. Upang pamahalaan ang higit pang mga mag-aaral, %2$s.</string>
   <string name="createMoreClasses" comment="Link text in maxStudentsNote">gumawa nang higit pang mga klase</string>

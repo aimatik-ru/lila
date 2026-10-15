@@ -15,7 +15,7 @@
   <string name="newBroadcast">નવું લાઇવ પ્રસારણ</string>
   <string name="subscribedBroadcasts">સબ્સ્ક્રાઇબ કરેલા પ્રસારણ </string>
   <string name="aboutBroadcasts">પ્રસારણ વિશે</string>
-  <string name="howToUseLichessBroadcasts">Lichess પ્રસારણ ઉપયોગ કેવી રીતે કરવો.</string>
+  <string name="howToUseLichessBroadcasts">Logik પ્રસારણ ઉપયોગ કેવી રીતે કરવો.</string>
   <string name="theNewRoundHelp">નવા રાઉન્ડમાં અગાઉના રાઉન્ડ જેટલા જ સભ્યો અને ફાળો આપનારાઓ હશે.</string>
   <string name="addRound">રાઉન્ડ ઉમેરો</string>
   <string name="ongoing">ચાલુ છે</string>
@@ -26,8 +26,8 @@
   <string name="fullDescription">સંપૂર્ણ ટુર્નામેન્ટ વર્ણન</string>
   <string name="fullDescriptionHelp">ટુર્નામેન્ટનું વૈકલ્પિક લાંબુ વર્ણન. %1$s ઉપલબ્ધ છે. લંબાઈ %2$s અક્ષરો કરતા ઓછી હોવી જોઈએ.</string>
   <string name="sourceSingleUrl">PGN સોર્સ URL</string>
-  <string name="sourceUrlHelp">PGN અપડેટ્સ મેળવવા માટે Lichess જે URL તપાસશે. તે ઇન્ટરનેટ પરથી સાર્વજનિક રીતે સુલભ હોવું જોઈએ.</string>
-  <string name="sourceGameIds">સ્પેસ દ્વારા અલગ કરાયેલા 64 Lichess ગેમ ID સુધી.</string>
+  <string name="sourceUrlHelp">PGN અપડેટ્સ મેળવવા માટે Logik જે URL તપાસશે. તે ઇન્ટરનેટ પરથી સાર્વજનિક રીતે સુલભ હોવું જોઈએ.</string>
+  <string name="sourceGameIds">સ્પેસ દ્વારા અલગ કરાયેલા 64 Logik ગેમ ID સુધી.</string>
   <string name="startDateTimeZone">સ્થાનિક સમય ઝોનમાં ટુર્નામેન્ટની શરૂઆત તારીખ: %s</string>
   <string name="startDateHelp">વૈકલ્પિક, જો તમને ખબર હોય કે ઇવેન્ટ ક્યારે શરૂ થશે</string>
   <string name="currentGameUrl">વર્તમાન રમત URL</string>
@@ -48,7 +48,7 @@
   <string name="age">વય</string>
   <string name="unrated">અનરેટેડ</string>
   <string name="recentTournaments">તાજેતરની ટુર્નામેન્ટ્સ</string>
-  <string name="openLichess">Lichess ખુલ્લું</string>
+  <string name="openLichess">Logik ખુલ્લું</string>
   <string name="teams">ટીમો</string>
   <string name="boards">બોર્ડ</string>
   <string name="overview">ઝાંખી</string>

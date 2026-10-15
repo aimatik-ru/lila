@@ -56,7 +56,7 @@ export const init = (user: LightUser): VNode =>
   slideTag('init')([
     confettiCanvas(),
     hi(user),
-    img(site.asset.url('logo/lichess-white.svg'), 'Lichess logo')('.recap__logo'),
+    img(site.asset.url('logo/lichess-white.svg'), 'Логик')('.recap__logo'),
     h2(i18n.recap.initTitle),
   ]);
 
@@ -273,7 +273,7 @@ export const lichessGames = ({ games, year }: Recap): VNode => {
 export const thanks = ({ year }: Recap): VNode =>
   slideTag('thanks')([
     div('.recap--massive', i18n.recap.thanksTitle),
-    img(site.asset.url('logo/lichess-white.svg'), 'Lichess logo')('.recap__logo'),
+    img(site.asset.url('logo/lichess-white.svg'), 'Логик')('.recap__logo'),
     div(i18n.recap.thanksHaveAGreat.asArray(year + 1)),
   ]);
 
@@ -318,7 +318,7 @@ const stati18n = (value: number, plural: I18nPlural): VNode => {
 export const shareable = ({ games, year, puzzles }: Recap): VNode =>
   slideTag('shareable')([
     div('.recap__shareable', [
-      img(site.asset.url('logo/logo-with-name-dark.png'), 'Lichess logo')('.logo'),
+      img(site.asset.url('logo/logo-with-name-dark.png'), 'Логик')('.logo'),
       h2(i18n.recap.shareableTitle.asArray(year)),
       div('.grid', [
         stati18n(games.nbs.total, i18n.site.nbGames),

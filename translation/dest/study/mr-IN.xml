@@ -65,7 +65,7 @@
   <string name="downloadGame">डाव डाउनलोड करा</string>
   <string name="studyUrl">अभ्यासाची URL</string>
   <string name="currentChapterUrl">चालू अध्यायाची URL</string>
-  <string name="pasteToEmbedChapterInForumOrBlog" comment="youCanPasteThisInTheForumToEmbed&#10;&#10;The thing you are pasting is a link to a study. This will make it appear in the correct section as well.&#10;&#10;Please note this used to say &quot;in the forum to embed&quot;. It was then changed to include &quot;or a Lichess Blog&quot;. A further update was made to say &quot;or your Lichess blog&quot;, since you can only create blog posts as an individual.">हे अध्याय जोडण्यासाठी तुम्ही ते सार्वजनिक मंचावर किंवा तुमच्या Lichess अनुदिनीवर टाकू शकता.</string>
+  <string name="pasteToEmbedChapterInForumOrBlog" comment="youCanPasteThisInTheForumToEmbed&#10;&#10;The thing you are pasting is a link to a study. This will make it appear in the correct section as well.&#10;&#10;Please note this used to say &quot;in the forum to embed&quot;. It was then changed to include &quot;or a Lichess Blog&quot;. A further update was made to say &quot;or your Lichess blog&quot;, since you can only create blog posts as an individual.">हे अध्याय जोडण्यासाठी तुम्ही ते सार्वजनिक मंचावर किंवा तुमच्या Logik अनुदिनीवर टाकू शकता.</string>
   <string name="startAtInitialPosition">प्रारंभिक स्थितीपासून सुरू करा</string>
   <string name="startAtX">%s पासून प्रारंभ</string>
   <string name="embedInYourWebsite">तुमच्या वेबसाइटवर टाका</string>
@@ -166,7 +166,7 @@
   <string name="youCompletedThisLesson">अभिनंदन! तुम्ही हा धडा पूर्ण केला.</string>
   <string name="perPage">%s प्रति पान</string>
   <string name="getTheTour">मदत हवी आहे का? दौरा करा!</string>
-  <string name="welcomeToLichessStudyTitle">Lichess अभ्यासिकेत तुमचे स्वागत आहे!</string>
+  <string name="welcomeToLichessStudyTitle">Logik अभ्यासिकेत तुमचे स्वागत आहे!</string>
   <string name="welcomeToLichessStudyText">हा एक एकत्रित विशलेषण पट आहे.&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;ह्याचा वापर खेळांचे विशलेषण व भाष्य करण्यासाठी वापरा,&amp;lt;br&amp;gt;मित्रांबरोर स्थितींची चर्चा करण्यासाठी,&amp;lt;br&amp;gt;आणि नक्कीच बुद्धिबळाच्या 
 अभ्य्सासाठी!&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;हे एक शक्तिशाली साधन आहे. ते कसे काम करते हे पाहण्यासाठी आपण थोडा वेळ घेऊया.</string>
   <string name="sharedAndSaveTitle" comment="As in: shared with other members and saved to database">पाठवलेले आणि जतन केलेले</string>
@@ -181,7 +181,7 @@
   <string name="annotatePositionTitle">एका स्थितीचे भाष्य करा</string>
   <string name="annotatePositionText">!? बटण दाबा, किंवा उजवं क्लिक करा डावांच्या सूचीवर.&amp;lt;br&amp;gt;भाष्य ग्लिफ्स शेअर आणि जतन केले जातात.</string>
   <string name="conclusionTitle">तुमच्या वेळेसाठी धन्यवाद</string>
-  <string name="conclusionText">तुम्ही तुमचे &lt;a href=\'/study/mine/hot\'&gt;मागील अभ्यासिके&lt;/a&gt;तुमच्या चरित्र पृष्ठावर.&lt;br&gt;तेथे देखील आहे एक &lt;a href=\'//lichess.org/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way\'&gt;नेमणी अभ्यासांबद्दल&lt;/a&gt;.&lt;br&gt;प्रगत वापरकर्त्यांना कळफलक शॉर्टकट पाहण्यासाठी \"?\" दाबावेसे वाटू शकते.&lt;br&gt;मजा करा!</string>
+  <string name="conclusionText">तुम्ही तुमचे &lt;a href=\'/study/mine/hot\'&gt;मागील अभ्यासिके&lt;/a&gt;तुमच्या चरित्र पृष्ठावर.&lt;br&gt;तेथे देखील आहे एक &lt;a href=\'/\'&gt;नेमणी अभ्यासांबद्दल&lt;/a&gt;.&lt;br&gt;प्रगत वापरकर्त्यांना कळफलक शॉर्टकट पाहण्यासाठी \"?\" दाबावेसे वाटू शकते.&lt;br&gt;मजा करा!</string>
   <string name="createChapterTitle">चला एक अभ्यास अध्याय तयार करूया</string>
   <string name="createChapterText">एका अभ्यासात अनेक अध्याय असू शकतात.&amp;lt;br&amp;gt;प्रत्येक अध्यायामध्ये एक वेगळी चालवृक्षी असते &amp;lt;br&amp;gt;आणि ती विविध प्रकारे तयार केली जाऊ शकते.</string>
   <string name="fromInitialPositionTitle">प्रारंभिक स्थितीपासून</string>
@@ -189,13 +189,13 @@
   <string name="customPositionTitle">सानुकूल स्थिती</string>
   <string name="customPositionText">तुमच्या प्रमाणे पट मांडा.&amp;lt;br&amp;gt;अंत्यखेळांना शोधण्यासाठी अनुकूल.</string>
   <string name="loadGameFromTheWebTitle">आंतरजालमधून एक खेळ आयात करा</string>
-  <string name="loadGameFromTheWebText" comment="The special text tags must be retained in exact order, for example &amp;lt;br&amp;gt; must stay exactly as-is. You do not need to add spaces or new lines before or after them.&#10;&#10;Note that &quot;br&quot; in particular means &quot;line break&quot;. In other words, it will start a new line in the final text.">एका खेळाची URL&lt;br&gt;(जशी lichess.org/7fHIU0XI)&lt;br&gt;अध्याय मध्ये डाव आयात करण्यासाठी.</string>
+  <string name="loadGameFromTheWebText" comment="The special text tags must be retained in exact order, for example &amp;lt;br&amp;gt; must stay exactly as-is. You do not need to add spaces or new lines before or after them.&#10;&#10;Note that &quot;br&quot; in particular means &quot;line break&quot;. In other words, it will start a new line in the final text.">एका खेळाची URL&lt;br&gt;(जशी play.kalugalogic.ru/7fHIU0XI)&lt;br&gt;अध्याय मध्ये डाव आयात करण्यासाठी.</string>
   <string name="fromFenStringTitle">एका FEN माळ मधून</string>
   <string name="fromFenStringText">एका स्थितीला FEN स्वरूपात&lt;i&gt;4k3/4rb2/8/7p/8/5Q2/1PP5/1K6 w&lt;/i&gt;&lt;br&gt;अध्याय एका स्थितीपासून चालू करण्यासाठी.</string>
   <string name="fromPgnGameTitle">एका PGN खेळातून</string>
   <string name="fromPgnGameText">एका खेळाला PGN स्वरूपात&amp;lt;br&amp;gt;टाका अध्याय मधील डाव, टिप्पण्या व भिन्नता आयात करण्यासाठी.</string>
   <string name="variantsAreSupportedTitle">अभ्यास भिन्न प्रकारांना पण समर्थन देतात</string>
-  <string name="variantsAreSupportedText">हो, तुम्ही वेडाघर&lt;br&gt;आणि बाकी Lichess प्रकारांचेही अभ्यास करू शकता!</string>
+  <string name="variantsAreSupportedText">हो, तुम्ही वेडाघर&lt;br&gt;आणि बाकी Logik प्रकारांचेही अभ्यास करू शकता!</string>
   <string name="chapterConclusionText">अध्याय कायमस्वरूपी जतन केले जातात.&lt;br&gt;तुमच्या बुद्धिबळाच्या सामग्रीची मांडणी करताना मजा करा!   </string>
   <string name="doubleDefeat">दुहेरी पराभव</string>
   <string name="blackDefeatWhiteCanNotWin">काळ्याचा पराभव, पण पांढरा जिंकू शकत नाही.</string>

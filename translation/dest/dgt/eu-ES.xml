@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="dgtBoard">DGT taula</string>
-  <string name="lichessAndDgt">Lichess &amp; DGT</string>
+  <string name="lichessAndDgt">Logik &amp; DGT</string>
   <string name="dgtBoardRequirements">DGT taularen beharrak</string>
   <string name="dgtBoardLimitations">DGT taularen mugak</string>
   <string name="thisPageAllowsConnectingDgtBoard">Orrialde honek zure DGT taula Lichessekin konektatzea eta berarekin partidak jokatzea ahalbidetzen du.</string>

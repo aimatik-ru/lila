@@ -45,7 +45,7 @@ XugadorC XugadorD
 Pa otorgar una llibranza de 1 puntu a un xugador en llugar d\'un empareyamientu, agrega xuna llínea como esta:
 XugadorE 1
 Los xugadores faltantes van considerase ausentes y van llograr cero puntos.
-Dexa esti campu vacío pa dexar que Lichess cree empareyamientos automáticamente.</string>
+Dexa esti campu vacío pa dexar que Logik cree empareyamientos automáticamente.</string>
   <string name="mustHavePlayedTheirLastSwissGame">Tien de xugar la so última partida de tornéu suizu</string>
   <string name="mustHavePlayedTheirLastSwissGameHelp">Namá dexa que los xugadores unanse si xugaron la so última partida suiza. Si nun se presentaron nun tornéu suizu recién, nun van poder entrar en el tuyu. Esto da como resultáu xuna meyor esperiencia suiza pa los xugadores que realmente se presenten.</string>
   <string name="newSwiss">Nuevu tornéu suizu</string>
@@ -78,7 +78,7 @@ De siguío, el sistema va retirar al xugador del tornéu pa que nun pierda más 
 Va poder volver xunise al tornéu en cualquier momentu.</string>
   <string name="protectionAgainstNoShowQ">¿Qué asocedi cuando un xugador nun se presenta?</string>
   <string name="protectionAgainstNoShowA">Los xugadores que se rexistren n\'eventos suizos pero que nun xueguen pueden suponer un problema.
-Pa solucionar esti inconveniente, Lichess evita que los xugadores que nun pudieron xugar una partida xunanse a un nuevu eventu suizu mientres un periodu de tiempu determináu.
+Pa solucionar esti inconveniente, Logik evita que los xugadores que nun pudieron xugar una partida xunanse a un nuevu eventu suizu mientres un periodu de tiempu determináu.
 El ceador d\'un eventu suizu puede decidir dexar que se xunan al eventu igualmente.</string>
   <string name="lateJoinQ">¿Pueden xunise xugadores a un tornéu empezáu?</string>
   <string name="lateJoinA">Sí, hasta que s\'entamen más de la metá de les rondes; por casu, nun tornéu suizu de 11 rondes, los xugadores pueden xunise antes qu\'empiece la ronda 6; nun tornéu de 12 rondes, van poder xunise primero qu\'empiece la ronda 7.
@@ -89,7 +89,7 @@ Los xugadores que xunanse a un tornéu empezáu van recibir un únicu bye, inclu
 El motivu ye que nun esiste xuna forma xusta de penalizar a los xugadores qu\'abandonen el tornéu de forma temprana. Nun podemos esperar que tolos participantes xueguen toles sos partíes nun eventu en llínea. Ye daqué qu\'a tan solo nun va asoceder y, como resultancia, la mayoría de los torneos de toos contra toos van ser imperfectos inxustos, lo que fai que la so principal finalidá sía inválida.
 El formatu más próximu a un tornéu en llínea de toos contra toos ye un tornéu suizu con un númberu de rondes bien eleváu. D\'esta forma, van xugase tolos posibles empareyamientos primero que remate el tornéu.</string>
   <string name="otherSystemsQ">¿Qué asocede con otros sistemes de torneos?</string>
-  <string name="otherSystemsA">Tovía, nun tenemos previstu añedir más sistemes de torneos a Lichess.</string>
+  <string name="otherSystemsA">Tovía, nun tenemos previstu añedir más sistemes de torneos a Logik.</string>
   <string name="swissDescription">Nun tornéu suizu %1$s, cada xugador nun tien qu\'enfrentase necesariamente a tolos participantes. Los xugadores enfréntense unu a unu en cada ronda y empareyar por aciu un conxuntu de riegles diseñáu pa garantizar que xueguen con oponentes d\'una puntuación similar; pero nun pueden enfrentase más d\'una vegada al mesmu oponente. El ganador ye el xugador que llogre el mayor númberu de puntos en toles rondes. Los participantes tienen de xugar toles rondes, esceuto si hai un númberu impar de xugadores.</string>
   <string name="teamOnly">Los torneos suizos solo pueden crealos los líderes del equipu, y solo pueden participar los miembros d\'un equipu.
 %1$s pa entamar a xugar en torneos suizos.</string>

@@ -64,8 +64,8 @@
   <string name="notifyTournamentStartReminders" comment="notifyTournamentSoon&#10;&#10;A notification setting - notifies players if a tournament is starting soon.">Påminnelser om turneringsstart</string>
   <string name="notifyBroadcasts">Direkteoverføringer</string>
   <string name="notifyTimeAlarm">Fjernsjakkur i ferd med å løpe ut</string>
-  <string name="notifyBell">Bjellevarsel innenfor Lichess</string>
-  <string name="notifyPush">Enhetsvarsel utenfor Lichess</string>
+  <string name="notifyBell">Bjellevarsel innenfor Logik</string>
+  <string name="notifyPush">Enhetsvarsel utenfor Logik</string>
   <string name="notifyWeb">Nettleser</string>
   <string name="notifyDevice">Enhet</string>
   <string name="bellNotificationSound">Bjellevarsel med lyd</string>

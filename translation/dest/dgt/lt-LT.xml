@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="lichessConnectivity">Lichess jungtys</string>
+  <string name="lichessConnectivity">Logik jungtys</string>
   <string name="dgtBoardConnectivity">DGT lentos jungtis</string>
   <string name="enableSpeechSynthesis">Įjungti kalbos sintezę</string>
   <string name="speechSynthesisVoice">Kalbos sintezės balsas</string>

@@ -169,7 +169,7 @@
   <string name="youCompletedThisLesson">Čestitamo! Kompletirali ste ovu lekciju.</string>
   <string name="perPage">%s po stranici</string>
   <string name="getTheTour">Trebate pomoć? Zakažite obilazak!</string>
-  <string name="welcomeToLichessStudyTitle">Dobrodošli u Lichess studiju!</string>
+  <string name="welcomeToLichessStudyTitle">Dobrodošli u Logik studiju!</string>
   <string name="welcomeToLichessStudyText">Ovo je dijeljena analitička ploča.&lt;br&gt;&lt;br&gt;Koristite je za analizu i komentiranje partija,&lt;br&gt;diskusiju o pozicijama s prijateljima&lt;br&gt;i naravno za časove šaha!&lt;br&gt;&lt;br&gt;To je moćan alat, hajde da odvojimo malo vremena da vidimo kako funkcioniše.</string>
   <string name="sharedAndSaveTitle" comment="As in: shared with other members and saved to database">Podijeljeno i sačuvano</string>
   <string name="sharedAndSavedText">Drugi članovi mogu vidjeti vaše poteze u stvarnom vremenu!&lt;br&gt;Osim toga, sve je zauvijek spremljeno.</string>
@@ -183,7 +183,7 @@
   <string name="annotatePositionTitle">Označi poziciju</string>
   <string name="annotatePositionText">Kliknite na dugme !? ili kliknite desnim tasterom miša na listu za premeštanje sa desne strane.&lt;br&gt;Glifovi anotacija se dele i čuvaju.</string>
   <string name="conclusionTitle">Hvala na vašem vremenu</string>
-  <string name="conclusionText">Svoje &lt;a href=\'/study/mine/hot\'&gt;prethodne studije&lt;/a&gt; možete pronaći na stranici svog profila.&lt;br&gt;Postoji i &lt;a href=\'//lichess.org/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way\'&gt;blog objava na blogu o studijama&lt;/a&gt;.&lt;br&gt;Napredni korisnici možda žele pritisnuti \"?\" da bi vidjeli prečice na tastaturi.&lt;br&gt;Zabavite se!</string>
+  <string name="conclusionText">Svoje &lt;a href=\'/study/mine/hot\'&gt;prethodne studije&lt;/a&gt; možete pronaći na stranici svog profila.&lt;br&gt;Postoji i &lt;a href=\'/\'&gt;blog objava na blogu o studijama&lt;/a&gt;.&lt;br&gt;Napredni korisnici možda žele pritisnuti \"?\" da bi vidjeli prečice na tastaturi.&lt;br&gt;Zabavite se!</string>
   <string name="createChapterTitle">Hajde da kreiramo poglavlje za učenje</string>
   <string name="createChapterText">Studija može imati nekoliko poglavlja.&lt;br&gt;Svako poglavlje ima zasebno stablo premještanja,&lt;br&gt;i može se kreirati na različite načine.</string>
   <string name="fromInitialPositionTitle">Iz početne pozicije</string>

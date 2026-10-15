@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="lichessCoaches">Þjálfarar Lichess</string>
-  <string name="lichessCoach">Lichess Þjálfari</string>
+  <string name="lichessCoaches">Þjálfarar Logik</string>
+  <string name="lichessCoach">Logik Þjálfari</string>
   <string name="areYouCoach">Ertu frábær þjálfari með %s?</string>
   <string name="nmOrFideTitle" comment="nmOrFideTitle&#10;&#10;Part of sentence &quot;Are you a great chess coach with a NM or FIDE title?&quot;&#10;&#10;The text links to our title verification page: https://lichess.org/help/master">NM eða FIDE titil</string>
   <string name="confirmTitle">Staðfestu titilinn þinn hér og við munum fara yfir umsóknina þína.</string>
@@ -14,7 +14,7 @@
   <string name="accepting">Tekur við nemendum</string>
   <string name="notAccepting">Tekur ekki við nemendum eins og er</string>
   <string name="xCoachesStudents">%s þjálfar nemendur í skák</string>
-  <string name="viewXProfile">Skoða Lichess-prófil %s</string>
+  <string name="viewXProfile">Skoða Logik-prófil %s</string>
   <string name="sendPM">Senda einkaskilaboð</string>
   <string name="aboutMe">Um mig</string>
   <string name="playingExperience">Skákreynsla</string>
@@ -26,5 +26,5 @@
   <string name="youtubeVideos">YouTube-myndbönd</string>
   <string name="allCountries">Öll lönd</string>
   <string name="lastLogin">Siðasta innskráning</string>
-  <string name="lichessRating">Skákstig á Lichess</string>
+  <string name="lichessRating">Skákstig á Logik</string>
 </resources>

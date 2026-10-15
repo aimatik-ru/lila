@@ -16,7 +16,7 @@
   <string name="zenMode" comment="zenMode&#10;&#10;This is not the religious meaning. Turning this option on takes away make elements of the user interface.&#10;&#10;Can also translate as 'Focus mode' as one example.">Modo zen</string>
   <string name="showPlayerRatings">Amosar a puntuación dos xogadores</string>
   <string name="showFlairs">Amosar as habelencias dos xogadores</string>
-  <string name="explainShowPlayerRatings">Oculta todas as puntuacións de Lichess para axudarte a centrarte no xadrez. Este axuste só afecta ó que ves. As partidas puntuadas seguirán modificando a túa puntuación.</string>
+  <string name="explainShowPlayerRatings">Oculta todas as puntuacións de Logik para axudarte a centrarte no xadrez. Este axuste só afecta ó que ves. As partidas puntuadas seguirán modificando a túa puntuación.</string>
   <string name="displayBoardResizeHandle">Mostrar o control de redimensionamento do taboleiro</string>
   <string name="onlyOnInitialPosition">Só na posición inicial</string>
   <string name="inGameOnly">Só durante a partida</string>
@@ -65,8 +65,8 @@
   <string name="notifyTournamentStartReminders" comment="notifyTournamentSoon&#10;&#10;A notification setting - notifies players if a tournament is starting soon.">Recordatorios de comezo de torneo</string>
   <string name="notifyBroadcasts">Emisións</string>
   <string name="notifyTimeAlarm">Pouco tempo restante na partida por correspondencia</string>
-  <string name="notifyBell">Notificación dentro de Lichess</string>
-  <string name="notifyPush">Notificación no dispositivo cando non esteas en Lichess</string>
+  <string name="notifyBell">Notificación dentro de Logik</string>
+  <string name="notifyPush">Notificación no dispositivo cando non esteas en Logik</string>
   <string name="notifyWeb">Navegador</string>
   <string name="notifyDevice">Dispositivo</string>
   <string name="bellNotificationSound">Son da notificación</string>

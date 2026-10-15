@@ -163,7 +163,7 @@
   <string name="youCompletedThisLesson">வாழ்த்துகள்! இந்தப் பாடத்தை முடித்துவிட்டீர்கள்.</string>
   <string name="perPage">ஒரு பக்கத்திற்கு %s</string>
   <string name="getTheTour">உதவி தேவையா? வழிகாட்டியைச் சரிபார்க்கவும்!</string>
-  <string name="welcomeToLichessStudyTitle">Lichess படிப்புக்கு வருக!</string>
+  <string name="welcomeToLichessStudyTitle">Logik படிப்புக்கு வருக!</string>
   <string name="welcomeToLichessStudyText">இது ஒரு பகிரப்பட்ட பகுப்பாய்வு பலகை.&lt;br&gt;&lt;br&gt;விளையாட்டுகளை பகுப்பாய்வு செய்யவும், குறிப்பு எழுதவும்,&lt;br&gt;நண்பர்களுடன் நிலைகளைப் பற்றி விவாதிக்கவும்,&lt;br&gt;மற்றும் நிச்சயமாக சதுரங்கப் பாடங்களுக்கும் இதைப் பயன்படுத்தவும்!&lt;br&gt;&lt;br&gt;இது ஒரு சக்திவாய்ந்த கருவி, இது எவ்வாறு செயல்படுகிறது என்பதைப் பார்க்க சிறிது நேரம் ஒதுக்குவோம்.</string>
   <string name="sharedAndSaveTitle" comment="As in: shared with other members and saved to database">பகிரப்பட்டு சேமிக்கப்பட்டது</string>
   <string name="sharedAndSavedText">மற்ற உறுப்பினர்கள் உங்கள் நகர்வுகளை நிகழ்நேரத்தில் பார்க்கலாம்!&lt;br&gt;மேலும், அனைத்தும் என்றென்றும் சேமிக்கப்படும்.</string>

@@ -218,9 +218,9 @@
   <string name="forgotPassword">Lupa kata kunci?</string>
   <string name="error.weakPassword">Kata laluan ini sangat biasa, dan terlalu mudah untuk diteka.</string>
   <string name="error.namePassword">Tolong jangan gunakan nama pengguna (Username) anda sebagai kata laluan anda.</string>
-  <string name="blankedPassword">Anda telah menggunakan kata laluan yang sama di laman sesawang lain, dan laman sesawang tersebut telah dicerobohi. Untuk memastikan keselamatan akaun Lichess anda, kami memerlukan anda menetapkan kata laluan baharu. Terima kasih kerana kerjasama anda.</string>
-  <string name="youAreLeavingLichess">Anda akan meninggalkan Lichess</string>
-  <string name="neverTypeYourPassword">Jangan sekali-kali taip kata laluan Lichess anda di laman sesawang lain!</string>
+  <string name="blankedPassword">Anda telah menggunakan kata laluan yang sama di laman sesawang lain, dan laman sesawang tersebut telah dicerobohi. Untuk memastikan keselamatan akaun Logik anda, kami memerlukan anda menetapkan kata laluan baharu. Terima kasih kerana kerjasama anda.</string>
+  <string name="youAreLeavingLichess">Anda akan meninggalkan Logik</string>
+  <string name="neverTypeYourPassword">Jangan sekali-kali taip kata laluan Logik anda di laman sesawang lain!</string>
   <string name="proceedToX">Teruskan ke %s</string>
   <string name="passwordSuggestion">Jangan tetapkan kata laluan yang dicadangkan oleh orang lain. Mereka akan menggunakannya untuk mencuri akaun anda.</string>
   <string name="emailSuggestion">Jangan tetapkan alamat e-mel yang dicadangkan oleh orang lain. Mereka akan menggunakannya untuk mencuri akaun anda.</string>
@@ -311,7 +311,7 @@
   <plurals name="giveNbSeconds">
     <item quantity="other">Beri %s saat</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Akaun ini melanggar Syarat Perkhidmatan Lichess</string>
+  <string name="thisAccountViolatedTos">Akaun ini melanggar Syarat Perkhidmatan Logik</string>
   <string name="openingExplorerAndTablebase">Peneroka bukaan &amp; senarai jadual</string>
   <string name="takeback">Ambil semula</string>
   <string name="proposeATakeback">Mencadang ambil semula</string>
@@ -474,7 +474,7 @@ analisis komputer, perbualan dalam permainan dan URL kongsi bersama.</string>
   <string name="oneUrlPerLine">Satu URL setiap baris.</string>
   <string name="inlineNotation">Notasi dalaman</string>
   <string name="makeAStudy">Untuk penyimpanan dan perkongsian, pertimbangkan untuk membuat kajian pembelajaran.</string>
-  <string name="previouslyOnLichessTV">Sebelum ini di Lichess TV</string>
+  <string name="previouslyOnLichessTV">Sebelum ini di Logik TV</string>
   <string name="activePlayers">Pemain aktif</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Hati-hati, perlawanan ini ditarafkan tetapi tiada pemasa!</string>
   <string name="success">Berjaya</string>
@@ -620,7 +620,7 @@ analisis komputer, perbualan dalam permainan dan URL kongsi bersama.</string>
   <string name="withEverybody">Dengan semua</string>
   <string name="kidMode">Mod kanak-kanak</string>
   <string name="kidModeExplanation">Hal ini adalah untuk keselamatan. Dalam mod kanak-kanak, semua komunikasi ditutup. Pasang tetapan ini untuk kanak-kanak dan pelajar sekolah untuk melindungi mereka daripada pengguna siber yang lain.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">Dalam mod kanak-kanak, logo Lichess akan mendapat %s icon, jadi anda tahu kanak-kanak anda selamat.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">Dalam mod kanak-kanak, logo Logik akan mendapat %s icon, jadi anda tahu kanak-kanak anda selamat.</string>
   <string name="enableKidMode">Pasang mod kanak-kanak</string>
   <string name="disableKidMode">Lumpuhkan mod kanak-kanak</string>
   <string name="security">Keselamatan</string>
@@ -717,7 +717,7 @@ analisis komputer, perbualan dalam permainan dan URL kongsi bersama.</string>
   <string name="tryToWin">Cuba menang (atau sekurang-kurangnya seri) setiap permainan yang anda mainkan.</string>
   <string name="resignLostGames">Menyerah setelah kalah (jangan dibiarkan masa habis).</string>
   <string name="temporaryInconvenience">Kami memohon maaf atas kesulitan yang dialami,</string>
-  <string name="wishYouGreatGames">kami berharap anda mempunyai permainan yang baik di lichess.org.</string>
+  <string name="wishYouGreatGames">kami berharap anda mempunyai permainan yang baik di play.kalugalogic.ru.</string>
   <string name="thankYouForReading">Terima kasih kerana membaca!</string>
   <string name="edit">Sunting</string>
   <string name="blitz" comment="Probably best left untranslated. Leave it as 'Blitz' unless your language has a better word for it.">Blitz</string>

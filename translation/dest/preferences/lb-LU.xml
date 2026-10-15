@@ -60,8 +60,8 @@
   <string name="notifyChallenge">Erausfuerderungen</string>
   <string name="notifyBroadcasts">Iwwerdroungen</string>
   <string name="notifyTimeAlarm">Zäit a Fernschachpartië leeft of</string>
-  <string name="notifyBell">Benoriichtegung ob Lichess</string>
-  <string name="notifyPush">Gerät Benoriichtegung wanns du net ob Lichess bass</string>
+  <string name="notifyBell">Benoriichtegung ob Logik</string>
+  <string name="notifyPush">Gerät Benoriichtegung wanns du net ob Logik bass</string>
   <string name="notifyWeb">Web-Browser</string>
   <string name="notifyDevice">Gerät</string>
   <string name="bellNotificationSound">Glacken-Notifikatiounstoun</string>

@@ -162,7 +162,7 @@
   <string name="youCompletedThisLesson">おめでとう ！　このレッスンを修了しました。</string>
   <string name="perPage">%s 件/ページ</string>
   <string name="getTheTour">お困りですか？　ツアーへどうぞ！</string>
-  <string name="welcomeToLichessStudyTitle">Lichess 「研究」機能にようこそ！</string>
+  <string name="welcomeToLichessStudyTitle">Logik 「研究」機能にようこそ！</string>
   <string name="welcomeToLichessStudyText">これは共有される検討用のボードです。&lt;br&gt;&lt;br&gt;棋譜の検討や注釈、&lt;br&gt;友達との相談、&lt;br&gt;レッスンなどに使えます。&lt;br&gt;&lt;br&gt;とても便利なツールなので、ちょっと仕組みを見てみましょう。</string>
   <string name="sharedAndSaveTitle" comment="As in: shared with other members and saved to database">共有と保存</string>
   <string name="sharedAndSavedText">他のメンバーはあなたの手をリアルタイムで見ることができ、&lt;br&gt;変更はすべて永久に保存されます。</string>
@@ -176,7 +176,7 @@
   <string name="annotatePositionTitle">局面への注釈</string>
   <string name="annotatePositionText">!? ボタンをクリックするか、右手の手順リスト内を右クリックします。&lt;br&gt;注釈の記号が共有され、保存されます。</string>
   <string name="conclusionTitle">読んでくれてありがとう</string>
-  <string name="conclusionText">自分で作った&lt;a href=\'/study/mine/hot\'&gt;研究&lt;/a&gt;はプロフィールページに表示されます。&lt;br&gt;また&lt;a href=\'//lichess.org/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way\'&gt;研究についてのブログ記事&lt;br&gt;があります。&lt;br&gt;さらに「?」を押すとショートカットキーが確認できます。&lt;br&gt;お楽しみください！</string>
+  <string name="conclusionText">自分で作った&lt;a href=\'/study/mine/hot\'&gt;研究&lt;/a&gt;はプロフィールページに表示されます。&lt;br&gt;また&lt;a href=\'/\'&gt;研究についてのブログ記事&lt;br&gt;があります。&lt;br&gt;さらに「?」を押すとショートカットキーが確認できます。&lt;br&gt;お楽しみください！</string>
   <string name="createChapterTitle">章の作り方</string>
   <string name="createChapterText">研究には複数の「章」を作れます。&lt;br&gt;章ごとに違った分岐手順が設定できます。&lt;br&gt;賞の作り方は何通りもあります。</string>
   <string name="fromInitialPositionTitle">開始局面から</string>
@@ -184,13 +184,13 @@
   <string name="customPositionTitle">自由配置局面</string>
   <string name="customPositionText">駒を好きなように配置します。&lt;br&gt;終盤の研究に最適です。</string>
   <string name="loadGameFromTheWebTitle">ウェブから棋譜を読み込み</string>
-  <string name="loadGameFromTheWebText" comment="The special text tags must be retained in exact order, for example &amp;lt;br&amp;gt; must stay exactly as-is. You do not need to add spaces or new lines before or after them.&#10;&#10;Note that &quot;br&quot; in particular means &quot;line break&quot;. In other words, it will start a new line in the final text.">Lichess の対局の URL&lt;br&gt;（例：lichess.org/7fHIU0XI）&lt;br&gt;をペーストすると章内にその手順が読み込めます。</string>
+  <string name="loadGameFromTheWebText" comment="The special text tags must be retained in exact order, for example &amp;lt;br&amp;gt; must stay exactly as-is. You do not need to add spaces or new lines before or after them.&#10;&#10;Note that &quot;br&quot; in particular means &quot;line break&quot;. In other words, it will start a new line in the final text.">Logik の対局の URL&lt;br&gt;（例：play.kalugalogic.ru/7fHIU0XI）&lt;br&gt;をペーストすると章内にその手順が読み込めます。</string>
   <string name="fromFenStringTitle">FEN の局面から</string>
   <string name="fromFenStringText">FEN 形式の局面&lt;br&gt;&lt;i&gt;4k3/4rb2/8/7p/8/5Q2/1PP5/1K6 w&lt;/i&gt;&lt;br&gt;をペーストするとその局面から章が始まります。</string>
   <string name="fromPgnGameTitle">PGN の棋譜から</string>
   <string name="fromPgnGameText">PGN形式の棋譜をペーストすれば&lt;br&gt;章内に手順、コメント、変化を入れられます。</string>
   <string name="variantsAreSupportedTitle">研究はバリアントにも対応</string>
-  <string name="variantsAreSupportedText">はい、クレージーハウスなど Lichess の&lt;br&gt;バリアントすべてを研究できます！</string>
+  <string name="variantsAreSupportedText">はい、クレージーハウスなど Logik の&lt;br&gt;バリアントすべてを研究できます！</string>
   <string name="chapterConclusionText">各章は永久に保存されます。&lt;br&gt;チェスコンテンツの整理は楽しい作業です！</string>
   <string name="doubleDefeat">両者負け</string>
   <string name="blackDefeatWhiteCanNotWin">黒負け白1/2ポイント</string>

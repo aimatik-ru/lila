@@ -225,9 +225,9 @@
   <string name="forgotPassword">Gleymdirðu lykilorðinu?</string>
   <string name="error.weakPassword">Þetta lykilorð er afar algengt, og ansi auðvelt að geta.</string>
   <string name="error.namePassword">Vinsamlegast ekki nota notandanafnið þitt sem lykilorðið.</string>
-  <string name="blankedPassword">Sökum þess að þú hefur notast við sama lykilorð á vefsvæði sem hefur orðið fyrir innbroti er okkur nauðsyn að biðja þig um að velja nýtt lykilorð til þess að tryggja öryggi Lichess-aðgangs þíns. Þökkum skilninginn.</string>
-  <string name="youAreLeavingLichess">Þú ert að yfirgefa Lichess</string>
-  <string name="neverTypeYourPassword">Þú skalt aldrei slá inn Lichess-lykilorðið þitt á annarri síðu!</string>
+  <string name="blankedPassword">Sökum þess að þú hefur notast við sama lykilorð á vefsvæði sem hefur orðið fyrir innbroti er okkur nauðsyn að biðja þig um að velja nýtt lykilorð til þess að tryggja öryggi Logik-aðgangs þíns. Þökkum skilninginn.</string>
+  <string name="youAreLeavingLichess">Þú ert að yfirgefa Logik</string>
+  <string name="neverTypeYourPassword">Þú skalt aldrei slá inn Logik-lykilorðið þitt á annarri síðu!</string>
   <string name="proceedToX">Fara samt sem áður á %s</string>
   <string name="passwordSuggestion">Ekki setja lykilorð sem einhver annar stingur upp á. Þeir munu nota það til þess að stela aðganginum þínum.</string>
   <string name="emailSuggestion">Ekki setja tölvupóstfang sem einhver annar stingur upp á. Þeir munu nota það til þess að stela aðganginum þínum.</string>
@@ -329,7 +329,7 @@
     <item quantity="one">Gefa %s sekúndu</item>
     <item quantity="other">Gefa %s sekúndur</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Þessi notandi braut í bága við þjónustuskilmála Lichess</string>
+  <string name="thisAccountViolatedTos">Þessi notandi braut í bága við þjónustuskilmála Logik</string>
   <string name="openingExplorerAndTablebase">Opnunarvafri &amp; endataflsútreikningar</string>
   <string name="takeback">Afturköllun</string>
   <string name="proposeATakeback">Biðja um afturköllun</string>
@@ -508,7 +508,7 @@
   <string name="oneUrlPerLine">Eitt URL í hverri línu.</string>
   <string name="inlineNotation">Stöðubundið ritunarkerfi</string>
   <string name="makeAStudy">Til þess að tryggja varðveislu og miðlun skaltu íhuga að útbúa stúderingu.</string>
-  <string name="previouslyOnLichessTV">Áður í Lichess-varpinu</string>
+  <string name="previouslyOnLichessTV">Áður í Logik-varpinu</string>
   <string name="onlinePlayers">Álínis notendur</string>
   <string name="activePlayers">Virkir notendur</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Varúð, leikurinn gildir til stiga, en er án klukku!</string>
@@ -672,7 +672,7 @@
   <string name="simulAddExtraTime">Þú getur bætt við tíma til að hjálpa þér að ráða við hópskákina.</string>
   <string name="simulAddExtraTimePerPlayer">Bæta viðbótartíma við klukkuna þína fyrir hvern skákmann sem tekur þátt í fjöltefli.</string>
   <string name="simulHostExtraTimePerPlayer">Viðbótartími á klukku gestgjafa á skákmann</string>
-  <string name="lichessTournaments">Lichess mót</string>
+  <string name="lichessTournaments">Logik mót</string>
   <string name="tournamentFAQ">Arena-mót - Algengar spurningar</string>
   <string name="timeBeforeTournamentStarts">Tími áður en mót hefst</string>
   <string name="averageCentipawnLoss">Meðaltap í hundruði peðs</string>
@@ -722,7 +722,7 @@
   <string name="byRegisteringYouAgreeToBeBoundByOur">Með því að skrá þig, þá samþykkir þú %s okkar.</string>
   <string name="readAboutOur">Lestu um %s okkar.</string>
   <string name="networkLagBetweenYouAndLichess">Hik í tengingu á milli þín og lichess</string>
-  <string name="timeToProcessAMoveOnLichessServer">Hve langan tíma það tekur netþjón Lichess að vinna úr leik</string>
+  <string name="timeToProcessAMoveOnLichessServer">Hve langan tíma það tekur netþjón Logik að vinna úr leik</string>
   <string name="downloadAnnotated">Hlaða niður með athugasemdum</string>
   <string name="downloadRaw">Hlaða niður óunnu eintaki</string>
   <string name="downloadImported">Niðurhali hlaðið inn</string>
@@ -741,7 +741,7 @@
   <string name="kidMode">Krakkahamur</string>
   <string name="kidModeIsEnabled">Krakkahamur er virkur.</string>
   <string name="kidModeExplanation">Þetta fjallar um öryggi. Í krakkaham er slökkt á öllum samskiptum á síðunni. Kveiktu á þessu fyrir börnin þín eða nemendur til að verja þau gegn öðrum netnotendum.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">Í krakkaham mun Lichess-merkið fá %s merki svo þú veist að börnin þín eru örugg.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">Í krakkaham mun Logik-merkið fá %s merki svo þú veist að börnin þín eru örugg.</string>
   <string name="askYourChessTeacherAboutLiftingKidMode">Aðgangur þinn er stýrður. Vinsamlegast leitaðu til skákkennara þíns varðandi að fjarlægja krakkaham.</string>
   <string name="enableKidMode">Kveikja á krakkaham</string>
   <string name="disableKidMode">Slökkva á krakkaham</string>
@@ -848,7 +848,7 @@
     <item quantity="one">og vista %s forleikfléttu</item>
     <item quantity="other">og vista %s forleikfléttur</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Þú hefur fengið einkaskilaboð frá Lichess.</string>
+  <string name="showUnreadLichessMessage">Þú hefur fengið einkaskilaboð frá Logik.</string>
   <string name="sorry">Afsakaðu :(</string>
   <string name="weHadToTimeYouOutForAWhile">Við þurftum að setja þig í stutt leikbann.</string>
   <string name="why">Afhverju?</string>
@@ -860,7 +860,7 @@
   <string name="tryToWin">Reyndu að vinna (eða amk. ná jafntefli) í öllum skákum sem þú teflir.</string>
   <string name="resignLostGames">Gefðu tapaðar skákir (ekki láta tímann renna út).</string>
   <string name="temporaryInconvenience">Við biðjumst velvirðingar á þeim skammvinnum óþægindum sem slíkt kann að valda,</string>
-  <string name="wishYouGreatGames">og óskum þér góðs gengis á lichess.org.</string>
+  <string name="wishYouGreatGames">og óskum þér góðs gengis á play.kalugalogic.ru.</string>
   <string name="thankYouForReading">Takk fyrir að lesa!</string>
   <string name="lifetimeScore">Heildarárangur</string>
   <string name="currentMatchScore">Núverandi skákaárangur</string>
@@ -905,7 +905,7 @@
   <string name="congratsYouWon">Til hamingju, þú vannst!</string>
   <string name="gameVsX">Skák á móti %1$s</string>
   <string name="resVsX">%1$s á móti %2$s</string>
-  <string name="lostAgainstTOSViolator">Þú misstir skákstig fyrir einhvern sem braut gegn notkunarskilmálum Lichess</string>
+  <string name="lostAgainstTOSViolator">Þú misstir skákstig fyrir einhvern sem braut gegn notkunarskilmálum Logik</string>
   <string name="refundXpointsTimeControlY">Endurheimt: %1$s %2$s skákstig.</string>
   <string name="timeAlmostUp">Tíminn er næstum því liðinn!</string>
   <string name="clickToRevealEmailAddress">[Smelltu til að sýna netfang]</string>
@@ -956,13 +956,13 @@ Skildu eftir autt til að tefla útfrá hefðbundinni upphafsstöðu.</string>
   <string name="resignTheGame">Gefa upp skák</string>
   <string name="since">Síðan</string>
   <string name="until">Uns</string>
-  <string name="lichessDbExplanation">Skákir sem gilda til stiga sem leiknar eru á Lichess</string>
+  <string name="lichessDbExplanation">Skákir sem gilda til stiga sem leiknar eru á Logik</string>
   <string name="switchSides">Skipta um lit</string>
   <string name="closingAccountWithdrawAppeal">Ef þú lokar aðganginum þínum fellur áfrýjunin niður</string>
   <string name="ourEventTips">Ráðleggingar okkar varðandi skipulagningu viðburða</string>
   <string name="instructions">Leiðbeiningar</string>
   <string name="showMeEverything">Sýndu mér allt</string>
-  <string name="lichessPatronInfo">Lichess er góðgerðarverkefni og eingöngu ókeypis og opinn hugbúnaður. 
+  <string name="lichessPatronInfo">Logik er góðgerðarverkefni og eingöngu ókeypis og opinn hugbúnaður. 
 Allur rekstrarkostnaður, þróun og efniviður er fjármagnaður eingöngu með fjárframlögum notenda.</string>
   <string name="nothingToSeeHere">Ekkert að sjá hér í bili.</string>
   <string name="stats">Tölfræði</string>

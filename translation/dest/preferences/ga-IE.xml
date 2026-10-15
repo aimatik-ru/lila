@@ -54,8 +54,8 @@
   <string name="notifyGameEvent">Nuashonruithe cluiche comhfhreagrais</string>
   <string name="notifyChallenge">Dúshláin</string>
   <string name="notifyTimeAlarm">Clog comhfhreagrais ag rith amach</string>
-  <string name="notifyBell">Fógra cloig laistigh de Lichess</string>
-  <string name="notifyPush">Fógra gléis nuair nach bhfuil tú ar Lichess</string>
+  <string name="notifyBell">Fógra cloig laistigh de Logik</string>
+  <string name="notifyPush">Fógra gléis nuair nach bhfuil tú ar Logik</string>
   <string name="notifyWeb">Brabhsálaí</string>
   <string name="notifyDevice">Gléas</string>
 </resources>

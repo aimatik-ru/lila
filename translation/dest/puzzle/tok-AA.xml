@@ -18,7 +18,7 @@
   <string name="yourPuzzleRatingWillNotChange">nanpa wawa sina li ante ala. o sona e ni: musi lili ni li utala ala. ilo li pana e musi lili pi pona mute tawa sina kepeken nanpa wawa sina.</string>
   <string name="findTheBestMoveForWhite">o pali e tawa pona #1 pi jan musi walo.</string>
   <string name="findTheBestMoveForBlack">o pali e tawa pona #1 pi jan musi pimeja.</string>
-  <string name="toGetPersonalizedPuzzles">sina wile e ni: ilo Lichess li lukin e musi lili tawa sina la:</string>
+  <string name="toGetPersonalizedPuzzles">sina wile e ni: ilo Logik li lukin e musi lili tawa sina la:</string>
   <string name="puzzleId">musi lili # %s</string>
   <string name="puzzleOfTheDay">musi lili pi tenpo suno ni</string>
   <string name="dailyPuzzle">tenpo suno musi lili</string>
@@ -67,7 +67,7 @@
   <string name="history">musi lili pi tenpo pini</string>
   <string name="solved">pini pona</string>
   <string name="failed">pini ike</string>
-  <string name="streakDescription">sina pini pona e musi lili la, ilo Lichess li pana e wan tawa nanpa sina pi pini pona. sina pini ike e musi lili la, nanpa li kama ala. ilo tenpo li lon ala. sina ken kepeken tenpo ale pi wile sina. sina tawa ike la, musi li pini! taso, sina ken toki e ni tawa ilo Lichess lon tenpo wan pi tenpo musi: \"mi sona ala e tawa pona. o toki e ona tawa mi\".</string>
+  <string name="streakDescription">sina pini pona e musi lili la, ilo Logik li pana e wan tawa nanpa sina pi pini pona. sina pini ike e musi lili la, nanpa li kama ala. ilo tenpo li lon ala. sina ken kepeken tenpo ale pi wile sina. sina tawa ike la, musi li pini! taso, sina ken toki e ni tawa ilo Logik lon tenpo wan pi tenpo musi: \"mi sona ala e tawa pona. o toki e ona tawa mi\".</string>
   <string name="yourStreakX">mute pona sina: %s</string>
   <string name="streakSkipExplanation">o pali ala e tawa ni la sina weka ala e mute pona sina! sina ken kepeken taso e ni lon pali wan.</string>
   <string name="continueTheStreak">o awen e nanpa</string>
@@ -75,7 +75,7 @@
   <string name="fromMyGames">tawa mi musi</string>
   <string name="lookupOfPlayer">alasa e musi lili pi musi jan</string>
   <string name="searchPuzzles">alasa e musi lili</string>
-  <string name="fromMyGamesNone">sina jo ala e musi lili lon ma ni. taso, lipu Lichess li olin sina a.
+  <string name="fromMyGamesNone">sina jo ala e musi lili lon ma ni. taso, lipu Logik li olin sina a.
 
 o musi e musi pi nasin Rapid e musi pi nasin Classical la sina ken jo e musi lili tan musi sina!</string>
   <plurals name="puzzlesFoundInUserGames">

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="lichessClasses">Sinflar</string>
-  <string name="teachClassesOfChessStudents">Lichess sinflari asboblar toʻplami yordamida oʻquvchilariga shaxmatdan dars bering.</string>
+  <string name="teachClassesOfChessStudents">Logik sinflari asboblar toʻplami yordamida oʻquvchilariga shaxmatdan dars bering.</string>
   <string name="features">Imkoniyatlar</string>
   <string name="quicklyGenerateSafeUsernames">Oʻquvchilar uchun xavfsiz foydalanuvchi nomlari va parollarini tez yaratish</string>
   <string name="trackStudentProgress">Oʻquvchilarning oʻyinlar va masalalardagi natijalarini kuzatib borish</string>
   <string name="messageAllStudents">Barcha oʻquvchilarga yangi dars materiallari haqida xabar yuborish</string>
   <string name="freeForAllForever">Hamma uchun abadiy 100% bepul, reklamasiz va kuzatuvlarsiz</string>
-  <string name="applyToBeLichessTeacher">Lichess oʻqituvchisi boʻlish uchun ariza berish</string>
+  <string name="applyToBeLichessTeacher">Logik oʻqituvchisi boʻlish uchun ariza berish</string>
   <string name="noClassesYet">Hozircha sinflar yoʻq.</string>
   <string name="teachersX">Oʻqituvchilar: %s</string>
   <string name="newClass">Yangi sinf</string>
@@ -23,7 +23,7 @@
   <string name="classDescription">Sinf haqida</string>
   <string name="visibleByBothStudentsAndTeachers">Sinfning barcha oʻqituvchilariga va oʻquvchilariga koʻrinadi</string>
   <string name="teachersOfTheClass">Sinf oʻqituvchilari</string>
-  <string name="addLichessUsernames">Murabbiy sifatida taklif qilish uchun Lichess foydalanuvchi nomlarini kiriting. Har bir qatorda bittadan nom yozing.</string>
+  <string name="addLichessUsernames">Murabbiy sifatida taklif qilish uchun Logik foydalanuvchi nomlarini kiriting. Har bir qatorda bittadan nom yozing.</string>
   <string name="resetPassword">Parolni tiklash</string>
   <string name="makeSureToCopy">Parolni hoziroq nusxalab oling yoki yozib qoʻying. Uni qayta hech qachon koʻra olmaysiz!</string>
   <string name="passwordX">Parol: %s</string>
@@ -32,22 +32,22 @@
   <string name="realName">Haqiqiy ismingiz</string>
   <string name="privateWillNeverBeShown">Maxfiy. Sinfdan tashqarida hech qachon koʻrsatilmaydi. Oʻquvchi kimligini eslab qolishingizga yordam beradi.</string>
   <string name="addStudent">Oʻquvchi qoʻshish</string>
-  <string name="lichessProfileXCreatedForY">%2$s uchun %1$s Lichess profili yaratildi.</string>
+  <string name="lichessProfileXCreatedForY">%2$s uchun %1$s Logik profili yaratildi.</string>
   <string name="studentCredentials">Oʻquvchi:  %1$s
 Foydalanuvchi nomi: %2$s
 Paroli: %3$s</string>
-  <string name="inviteALichessAccount">Lichess akkauntini taklif qilish</string>
-  <string name="inviteDesc1">Agar oʻquvchi Lichess akkauntiga ega boʻlsa uni sinfga taklif qilishingiz mumkin.</string>
+  <string name="inviteALichessAccount">Logik akkauntini taklif qilish</string>
+  <string name="inviteDesc1">Agar oʻquvchi Logik akkauntiga ega boʻlsa uni sinfga taklif qilishingiz mumkin.</string>
   <string name="inviteDesc2">Ular sinfga qoʻshilish haqidagi taklif xabarini olishadi.</string>
   <string name="inviteDesc3">Muhim: faqat oʻzingiz taniydigan va haqiqatan ham sinfga aʻzo boʻlish istagi boʻlgan oʻquvchilarni taklif qiling.</string>
   <string name="inviteDesc4">Hech qachon notanish oʻyinchilarga taklif yubormang.</string>
-  <string name="createANewLichessAccount">Yangi Lichess akkauntini yaratish</string>
-  <string name="createDesc1">Agar oʻquvchining hali Lichess akkaunti boʻlmasa, bu yerda u uchun yangi akkaunt yaratishingiz mumkin.</string>
+  <string name="createANewLichessAccount">Yangi Logik akkauntini yaratish</string>
+  <string name="createDesc1">Agar oʻquvchining hali Logik akkaunti boʻlmasa, bu yerda u uchun yangi akkaunt yaratishingiz mumkin.</string>
   <string name="createDesc2">Elektron pochta manzili talab qilinmaydi. Parol avtomatik ravishda yaratiladi va oʻquvchi tizimga kirishi uchun parolni unga yetkazishingiz kerak boʻladi.</string>
   <string name="createDesc3">Muhim: bitta oʻquvchida bir nechta akkaunt boʻlishi mumkin emas.</string>
   <string name="createDesc4">Agar unda akkaunt allaqachon mavjud boʻlsa, taklif qilish formasidan foydalaning.</string>
   <string name="createStudentWarning">Faqat haqiqiy oʻquvchilar uchun akkaunt yarating. Oʻzingiz uchun bir nechta akkaunt ochish maqsadida bu imkoniyatdan foydalanmang. Aks holda, bloklanishingiz mumkin.</string>
-  <string name="lichessUsername">Lichess foydalanuvchi nomi</string>
+  <string name="lichessUsername">Logik foydalanuvchi nomi</string>
   <string name="generateANewUsername">Yangi foydalanuvchi nomini yaratish</string>
   <string name="welcomeToClass">%s sinfiga xush kelibsiz!
 Sinfga kirish uchun havola quyidagicha.</string>
@@ -106,8 +106,8 @@ bilan ajrating, u gorizontal chiziqni tasvirlaydi.</string>
   <string name="youAcceptedThisInvitation">Siz ushbu taklifni qabul qilgansiz.</string>
   <string name="youDeclinedThisInvitation">Siz ushbu taklifni rad etgansiz.</string>
   <string name="orSeparator" comment="Used as separator between invite sections. Shown as large '~ or ~'.">yoki</string>
-  <string name="createMultipleAccounts">Bir vaqtni oʻzida bir nechta Lichess akkauntlarini yaratish</string>
-  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">Shuningdek, %s orqali oʻquvchilar ismlari roʻyxatidan foydalanib, bir nechta Lichess akkauntlarini yaratishingiz mumkin.</string>
+  <string name="createMultipleAccounts">Bir vaqtni oʻzida bir nechta Logik akkauntlarini yaratish</string>
+  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">Shuningdek, %s orqali oʻquvchilar ismlari roʻyxatidan foydalanib, bir nechta Logik akkauntlarini yaratishingiz mumkin.</string>
   <string name="useThisForm" comment="Link text in multipleAccsFromDescription">ushbu forma</string>
   <string name="maxStudentsNote" comment="%1$s will be replaced with a large number (currently 100).\n%2$s is a link and will be replaced with the translation of createMoreClasses. Make sure both strings fit together.">E‘tibor bering, sinfda koʻpi bilan %1$s tagacha oʻquvchi boʻlishi mumkin. Koʻproq oʻquvchini boshqarish uchun %2$s.</string>
   <string name="createMoreClasses" comment="Link text in maxStudentsNote">qoʻshimcha sinflar yarating</string>

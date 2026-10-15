@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="lichessClasses">Nastave</string>
-  <string name="teachClassesOfChessStudents">Predavaj nastavu razredima učenika šaha sa paketom alata Lichess Nastave.</string>
+  <string name="teachClassesOfChessStudents">Predavaj nastavu razredima učenika šaha sa paketom alata Logik Nastave.</string>
   <string name="features">Značajke</string>
   <string name="quicklyGenerateSafeUsernames">Brzo stvori sigurno korisničko ime i lozinku za studente</string>
   <string name="trackStudentProgress">Prati napredak studenata u njihovim partijama i šahovskim problematikama</string>
   <string name="messageAllStudents">Obavijesti sve studente o novim nastavnim materijalima</string>
   <string name="freeForAllForever">Potpuno besplatno za sve, zauvijek, i to bez oglasa ili tragača</string>
-  <string name="applyToBeLichessTeacher">Prijavi se da postaneš Lichess Nastavnik</string>
+  <string name="applyToBeLichessTeacher">Prijavi se da postaneš Logik Nastavnik</string>
   <string name="noClassesYet">Još nema predavanja.</string>
   <string name="teachersX">Nastavnici: %s</string>
   <string name="newClass">Nova nastava</string>
@@ -23,7 +23,7 @@
   <string name="classDescription">Opis nastave</string>
   <string name="visibleByBothStudentsAndTeachers">Vidljivo i nastavnicima i studentima razreda</string>
   <string name="teachersOfTheClass">Nastavnici razreda</string>
-  <string name="addLichessUsernames">Dodaj Lichess korisnička imena da bi ih pozvao/la kao nastavnike. Jedna po retku.</string>
+  <string name="addLichessUsernames">Dodaj Logik korisnička imena da bi ih pozvao/la kao nastavnike. Jedna po retku.</string>
   <string name="resetPassword">Resetiraj lozinku</string>
   <string name="makeSureToCopy">Obavezno sada kopiraj ili zapiši lozinku. Nećeš je više moći vidjeti!</string>
   <string name="passwordX">Lozinka: %s</string>
@@ -32,22 +32,22 @@
   <string name="realName">Pravo ime</string>
   <string name="privateWillNeverBeShown">Privatna. Nikad se neće prikazati izvan nastave. To pomaže da se upamti tko je student.</string>
   <string name="addStudent">Dodaj studenta</string>
-  <string name="lichessProfileXCreatedForY">Lichess profil %1$s je napravljen za %2$s.</string>
+  <string name="lichessProfileXCreatedForY">Logik profil %1$s je napravljen za %2$s.</string>
   <string name="studentCredentials">Student:  %1$s
 Korisničko ime: %2$s
 Lozinka: %3$s</string>
-  <string name="inviteALichessAccount">Pozovi Lichess račun</string>
-  <string name="inviteDesc1">Ako učenik već ima Lichess račun, možeš ga pozvati na predavanje.</string>
+  <string name="inviteALichessAccount">Pozovi Logik račun</string>
+  <string name="inviteDesc1">Ako učenik već ima Logik račun, možeš ga pozvati na predavanje.</string>
   <string name="inviteDesc2">Oni će na Lichessu dobiti poruku s linkom kako bi se pridružili predavanju.</string>
   <string name="inviteDesc3">Molimo da pozoveš ljude koje znaš i koji su voljni sudjelovati u ovoj nastavi.</string>
   <string name="inviteDesc4">Nikada nemoj slati neželjene pozive nasumičnim igračima.</string>
-  <string name="createANewLichessAccount">Kreiraj novi Lichess račun</string>
-  <string name="createDesc1">Ako učenik još nema Lichess račun, možeš ga stvoriti ovdje.</string>
+  <string name="createANewLichessAccount">Kreiraj novi Logik račun</string>
+  <string name="createDesc1">Ako učenik još nema Logik račun, možeš ga stvoriti ovdje.</string>
   <string name="createDesc2">Nije potrebna adresa e-pošte. Stvorit će se lozinka i morat ćete ju poslati studentu kako bi se mogao prijaviti.</string>
   <string name="createDesc3">Važno: student ne smije imati više računa.</string>
   <string name="createDesc4">Ako ih već ima, umjesto toga upotrijebi obrazac za poziv.</string>
   <string name="createStudentWarning">Kreiraj račune isključivo za prave učenike. Nemoj koristiti ovu funkcionalnost za izradu višestrukih vlastitih računa. Zabraniti ćemo ti pristup Lichessu.</string>
-  <string name="lichessUsername">Lichess korisničko ime</string>
+  <string name="lichessUsername">Logik korisničko ime</string>
   <string name="generateANewUsername">Stvori novo korisničko ime</string>
   <string name="welcomeToClass">Dobrodošao u tvoj razred: %s. Ovdje je link za pristup predavanju.</string>
   <string name="invitationToClass">Pozvan si pridružiti se razredu \"%s\" kao student.</string>
@@ -108,8 +108,8 @@ To će prikazati horizontalnu liniju.</string>
   <string name="youAcceptedThisInvitation">Prihvatili ste pozivnicu.</string>
   <string name="youDeclinedThisInvitation">Odbili ste pozivnicu.</string>
   <string name="orSeparator" comment="Used as separator between invite sections. Shown as large '~ or ~'.">ili</string>
-  <string name="createMultipleAccounts">Napravite više Lichess računa odjednom</string>
-  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">Također možete %s da bi kreirali više Lichess računa odjednom iz popisa imena studenata.</string>
+  <string name="createMultipleAccounts">Napravite više Logik računa odjednom</string>
+  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">Također možete %s da bi kreirali više Logik računa odjednom iz popisa imena studenata.</string>
   <string name="useThisForm" comment="Link text in multipleAccsFromDescription">koristiti ovaj obrazac</string>
   <string name="maxStudentsNote" comment="%1$s will be replaced with a large number (currently 100).\n%2$s is a link and will be replaced with the translation of createMoreClasses. Make sure both strings fit together.">Razred može imati do %1$s studenata. Za dodatne studente, %2$s.</string>
   <string name="createMoreClasses" comment="Link text in maxStudentsNote">kreirajte nove razrede</string>

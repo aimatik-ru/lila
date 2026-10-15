@@ -59,7 +59,7 @@
   <string name="notifyGameEvent">Koresponde ludaj novaĵoj</string>
   <string name="notifyChallenge">Defioj</string>
   <string name="notifyTimeAlarm">Koresponda horloĝo baldaŭ finiĝas</string>
-  <string name="notifyBell">Sonorilaj sciigoj en Lichess mem</string>
+  <string name="notifyBell">Sonorilaj sciigoj en Logik mem</string>
   <string name="notifyPush">Aparta sciigo kiam vi ne ĉe Licess</string>
   <string name="notifyWeb">Retumilo</string>
   <string name="notifyDevice">Aparato</string>

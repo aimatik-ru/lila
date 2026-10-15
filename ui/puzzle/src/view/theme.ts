@@ -6,7 +6,6 @@ import type { ThemeKey, RoundThemes } from '@/interfaces';
 
 import { renderColorForm } from './side';
 
-const STUDY_URL = 'https://lichess.org/study/viiWlKjv';
 
 export default function theme(ctrl: PuzzleCtrl): MaybeVNode {
   const { angle, replay } = ctrl.data;
@@ -31,15 +30,7 @@ export default function theme(ctrl: PuzzleCtrl): MaybeVNode {
           'Learn more about ',
           angle.opening.name,
         ])
-      : hl('p', [
-          angle.desc,
-          angle.chapter &&
-            hl(
-              'a.puzzle__side__theme__chapter.text',
-              { attrs: { href: `${STUDY_URL}/${angle.chapter}`, target: '_blank' } },
-              [' ', i18n.puzzle.example],
-            ),
-        ]),
+      : hl('p', [angle.desc]),
     showEditor
       ? hl('div.puzzle__themes', editor(ctrl))
       : !replay && !ctrl.streak && (angle.opening || angle.openingAbstract) && renderColorForm(ctrl),
@@ -125,11 +116,6 @@ const editor = (ctrl: PuzzleCtrl): VNode[] => {
                 hl('option', { attrs: { value: theme, title: descriptionTrans(theme) } }, themeTrans(theme)),
               ),
             ],
-          ),
-          hl(
-            'a.puzzle__themes__study.text',
-            { attrs: { 'data-icon': licon.InfoCircle, href: STUDY_URL, target: '_blank' } },
-            i18n.puzzle.puzzleThemes,
           ),
         ]
       : []),

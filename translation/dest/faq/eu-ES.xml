@@ -2,20 +2,20 @@
 <resources>
   <string name="faqAbbreviation">SEG / FAQ</string>
   <string name="frequentlyAskedQuestions">Maiz egiten diren galderak</string>
-  <string name="whyIsLichessCalledLichess">Zergatik da Lichess Lichessen izena?</string>
-  <string name="lichessCombinationLiveLightLibrePronounced">Lichess inglesezko live/light/libre eta chessen arteko konbinazioa da. Xakea zuzenean/arina/librea. %1$s ahoskatzen da.</string>
+  <string name="whyIsLichessCalledLichess">Zergatik da Logik Lichessen izena?</string>
+  <string name="lichessCombinationLiveLightLibrePronounced">Logik inglesezko live/light/libre eta chessen arteko konbinazioa da. Xakea zuzenean/arina/librea. %1$s ahoskatzen da.</string>
   <string name="leechess">li-txes</string>
   <string name="hearItPronouncedBySpecialist">Entzun espezialista batek nola ahoskatzen duen.</string>
-  <string name="whyLiveLightLibre">Zuzenean, partidak denbora errealean 24 orduz, astean 7 egunez jokatu eta ikusten direlako; arina eta librea, Lichess kode-irekikoa delako eta ez duelako programa jabedunik erabiltzen, beste webgune batzuek bezala.</string>
+  <string name="whyLiveLightLibre">Zuzenean, partidak denbora errealean 24 orduz, astean 7 egunez jokatu eta ikusten direlako; arina eta librea, Logik kode-irekikoa delako eta ez duelako programa jabedunik erabiltzen, beste webgune batzuek bezala.</string>
   <string name="whyIsLilaCalledLila">Antzera, Lichessen iturburuko kodeak, %1$s, li[chess in sca]la esan nahi du, %2$s izeneko programazio lengoaian idatzita dagoelako.</string>
-  <string name="howCanIContributeToLichess">Nola lagundu dezaket Lichess?</string>
+  <string name="howCanIContributeToLichess">Nola lagundu dezaket Logik?</string>
   <string name="lichessPoweredByDonationsAndVolunteers">Lichessek dohaintzen bidez eta bolondres taldearen lanarekin funtzionatzen du.</string>
   <string name="findMoreAndSeeHowHelp">%1$s buruzko informazio gehiago (%2$s barne). Lichessi laguntza eman nahi badiozu zure denbora edo laguntza emanez, hainbat %3$s.</string>
   <string name="beingAPatron">Babesletzari buruzko</string>
   <string name="breakdownOfOurCosts">gure gastuak</string>
   <string name="otherWaysToHelp">aukera dituzu</string>
   <string name="areThereWebsitesBasedOnLichess">Lichessen oinarritutako webgunerik badago?</string>
-  <string name="yesLichessInspiredOtherOpenSourceWebsites">Bai. Lichess inspirazio iturri erabili dituen eta bere %1$s, %2$s edo %3$s darabilten hainbat webgune ditu.</string>
+  <string name="yesLichessInspiredOtherOpenSourceWebsites">Bai. Logik inspirazio iturri erabili dituen eta bere %1$s, %2$s edo %3$s darabilten hainbat webgune ditu.</string>
   <string name="keyboardShortcuts">Zein lastertekla erabili daitezke?</string>
   <string name="keyboardShortcutsExplanation">Lichesseko orri batzuk lasterteklak dituzte. \'?\' tekla azterlan, analisi, ariketa eta partida baten pantailan sakatuz gero, zerrendatuta agertuko dira.</string>
   <string name="fairPlay">Joko Garbia</string>
@@ -74,7 +74,7 @@ Ikusi jokaldi honen inguruko %3$s eta praktikatu bertan.</string>
   <string name="repeatedPositionsThatMatters">Posizioa hiru aldiz errepikatzeak, errepikatu dena %1$s dela esan nahi du, ez jokaldiak. Errepikapenak, gainera, ez dute zertan jarraian gertatu behar.</string>
   <string name="positions">posizioak</string>
   <string name="weRepeatedthreeTimesPosButNoDraw">Posizioa hiru aldiz errepikatu genuen? Zergatik ez da berdinketarekin amaitu?</string>
-  <string name="threeFoldHasToBeClaimed">Errepikapenagatiko berdinketa jokalarietako batek eskatu behar du. Horretarako agertuko den botoia sakatu behar duzu edo errepikapena egiten duen azken jokaldia egin aurretik berdinketa eskaini behar duzu. Lichess %1$s dezakezu berdinketak zure ordez eskatzeko. Gainera, posizioa bost aldiz errepikatzen bada, partida berdinketarekin amaituko da edozein kasutan.</string>
+  <string name="threeFoldHasToBeClaimed">Errepikapenagatiko berdinketa jokalarietako batek eskatu behar du. Horretarako agertuko den botoia sakatu behar duzu edo errepikapena egiten duen azken jokaldia egin aurretik berdinketa eskaini behar duzu. Logik %1$s dezakezu berdinketak zure ordez eskatzeko. Gainera, posizioa bost aldiz errepikatzen bada, partida berdinketarekin amaituko da edozein kasutan.</string>
   <string name="configure">konfiguratu</string>
   <string name="accounts">Kontuak</string>
   <string name="titlesAvailableOnLichess">Zein titulo daude Lichessen?</string>
@@ -86,7 +86,7 @@ Ikusi jokaldi honen inguruko %3$s eta praktikatu bertan.</string>
   Azkenik ohorezko %2$s tituloa ere badago.</string>
   <string name="asWellAsManyNMtitles">hainbat titulo nazional ere</string>
   <string name="verificationForm">egiaztapen formularioa</string>
-  <string name="canIbecomeLM">Lortu dezaket Lichess Maisu (LM) tituloa?</string>
+  <string name="canIbecomeLM">Lortu dezaket Logik Maisu (LM) tituloa?</string>
   <string name="noUpperCaseDot">Ez.</string>
   <string name="lMtitleComesToYouDoNotRequestIt">Titulo hau ez da ofiziala eta Lichessen bakarrik agertzen da.
 
@@ -102,7 +102,7 @@ Ikusi jokaldi honen inguruko %3$s eta praktikatu bertan.</string>
   <string name="ownerUniqueTrophies">Garaikur hori Lichessen historian bakarra da eta %1$s ez den beste inork ez du izango.</string>
   <string name="aHourlyBulletTournament">ordueroko Bullet txapelketa</string>
   <string name="goldenZeeExplanation">ZugAddict 2 orduz ari zen zuzeneko bat egiten eta 8. mailako A.A. garaitu nahian 1+0 erako partidan, inolako arrakastarik gabe. Thibaultek hori lortuko balu eta zuzenean emate bazuen garaikurra emango ziola. Ordubete beranduago Stockfish garaitu zuen eta agindutako bete egin zuten.</string>
-  <string name="lichessRatings">Lichess puntuazioak</string>
+  <string name="lichessRatings">Logik puntuazioak</string>
   <string name="whichRatingSystemUsedByLichess">Zein puntuazio sistema erabiltzen du Lichessek?</string>
   <string name="ratingSystemUsedByLichess">Puntuazioak Mark Glickmanek garatutako Glicko-2 puntuazio sistema erabiliz kalkulatzen dira. Hainbat erakundek erabilitako puntuazio sistema arrunta da (FIDEk aldiz Elo izeneko sistema erabiltzen du).
 
@@ -133,44 +133,44 @@ Hobe da puntuazioak zenbaki \"erlatibo\" gisa ulertzea: jokalari multzo bat hart
   <string name="enableZenMode">Aktibatu Zen-modua %1$s, edo partidan zehar %2$s sakatuz.</string>
   <string name="displayPreferences">ezarpenetan</string>
   <string name="connexionLostCanIGetMyRatingBack">Partida atzerapenagatik edo konexioa galtzeagatik galdu dut. Berreskuratu ditzaket galdutako puntuak?</string>
-  <string name="weCannotDoThatEvenIfItIsServerSideButThatsRare">Zoritxarrez ezin ditugu arrazoi horiengatik galdutako puntuak itzuli, berdin delarik errua zurea ala gurea izan. Hala ere normalean ez da gure errua izango. Lichess berrabiarazten dugunean eta horregatik partida galtzen baduzu, partida bertan behera uzten dugu.</string>
+  <string name="weCannotDoThatEvenIfItIsServerSideButThatsRare">Zoritxarrez ezin ditugu arrazoi horiengatik galdutako puntuak itzuli, berdin delarik errua zurea ala gurea izan. Hala ere normalean ez da gure errua izango. Logik berrabiarazten dugunean eta horregatik partida galtzen baduzu, partida bertan behera uzten dugu.</string>
   <string name="howToThreeDots">Nola...</string>
   <string name="enableDisableNotificationPopUps">Aktibatu edo desaktibatu jakinarazpenak?</string>
   <string name="viewSiteInformationPopUp">Ikusi atariaren informazioaren inguruko leihoa</string>
   <string name="lichessCanOptionnalySendPopUps">Lichessek jakinarazpenak bidali ditzake, adibidez zure txanda denean edo mezu pribatu bat jasotzean.
 
-Egin klik zure nabigatzailean lichess.org dioen helbide barraren ondoan dagoen giltzarrapoan.
+Egin klik zure nabigatzailean play.kalugalogic.ru dioen helbide barraren ondoan dagoen giltzarrapoan.
 
 Ondoren aukeratu Lichessen jakinarazpenak blokeatu nahi dituzun ala ez.</string>
   <string name="enableAutoplayForSoundsQ">Aktibatu soinuak automatikoki hastea?</string>
   <string name="mostBrowsersPreventSoundAutoplay">Nabigatzaile gehienek, erabiltzaileak babesteko asmoarekin, kargatu berri diren orrialdeetan soinuak desaktibatu egiten dituzte. Imaginatu webgune guztiak soinua joten hasiko balira!
 
-Bozgorailu gorri bat agertzen da zure nabigatzaileak lichess.org-i horrelako soinu bat jotea galarazten dionean. Normalean debeku hau nonbaiten klik egin ostean desaktibatzen da. 
+Bozgorailu gorri bat agertzen da zure nabigatzaileak play.kalugalogic.ru-i horrelako soinu bat jotea galarazten dionean. Normalean debeku hau nonbaiten klik egin ostean desaktibatzen da. 
 
 Eskuko gailuetako nabigatzaile batzuetan, pieza mugitzeko keinuak ez dira klik gisa ulertzen. Horrelako kasuetan taula sakatu beharko duzu partida hasi bezain laster soinua baimentzeko.
 
-Ikono gorria zu ohartarazteko erakusten dugu. Sarri lichess.org baimendu dezakezu soinuak entzun ahal izateko. Hemen dituzu horretarako argibideak:</string>
+Ikono gorria zu ohartarazteko erakusten dugu. Sarri play.kalugalogic.ru baimendu dezakezu soinuak entzun ahal izateko. Hemen dituzu horretarako argibideak:</string>
   <string name="desktop">mahaigaina</string>
-  <string name="enableAutoplayForSoundsFirefox">1. Joan lichess.org webgunera
+  <string name="enableAutoplayForSoundsFirefox">1. Joan play.kalugalogic.ru webgunera
 2. Sakatu Ctrl-i Linux/Windowsesn edo cmd-i MacOSen
 3. Sakatu Baimenen fitxa
-4. Baimendu Audioa eta Bideoa lichess.org-en</string>
-  <string name="enableAutoplayForSoundsChromeSiteInformation" comment="Guidance for Google Chrome users on how to enable audio auto-play if they have sound issues.">1. Joan lichess.org-era
+4. Baimendu Audioa eta Bideoa play.kalugalogic.ru-en</string>
+  <string name="enableAutoplayForSoundsChromeSiteInformation" comment="Guidance for Google Chrome users on how to enable audio auto-play if they have sound issues.">1. Joan play.kalugalogic.ru-era
 2. Egin klik helbide barrako giltzarrapoan
 3. Egin klik Gunearen ezarpenetan
 4. Baimendu soinua</string>
-  <string name="enableAutoplayForSoundsSafari">1. Joan lichess.org-era
+  <string name="enableAutoplayForSoundsSafari">1. Joan play.kalugalogic.ru-era
 2. Egin klik Safari menuan
-3. Egin klik lichess.org-en ezarpenetan
+3. Egin klik play.kalugalogic.ru-en ezarpenetan
 4. Baimendu Auto-Play guztiak</string>
   <string name="enableAutoplayForSoundsMicrosoftEdge">1. Egin klik goiko eskumako hiru puntuetan
 2. Egin klik ezarpenetan
 3. Egin klik Cookieak eta Gunearen baimenetan
 4. Joan behera eta egin klik \"Media autoplay\" aukeran
-5. Gehitu lichess.org Baimenduen zerrendara</string>
+5. Gehitu play.kalugalogic.ru Baimenduen zerrendara</string>
   <string name="stopMyselfFromPlaying">Jokatzeari utzi?</string>
   <string name="mentalHealthCondition">osasun metaleko egoera</string>
-  <string name="lichessUserstyles">Lichess erabiltzaile motak</string>
+  <string name="lichessUserstyles">Logik erabiltzaile motak</string>
   <string name="fewerLobbyPools">egongela multzo txikiagoak</string>
   <string name="adviceOnMitigatingAddiction">Sarri hainbeste partida jokatzen uzteko laguntza eskatzen duten erabiltzaileen mezuak jasotzen ditugu.
 

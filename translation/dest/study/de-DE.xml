@@ -65,7 +65,7 @@
   <string name="downloadGame">Lade die Partie herunter</string>
   <string name="studyUrl">Studien URL</string>
   <string name="currentChapterUrl">URL des aktuellen Kapitels</string>
-  <string name="pasteToEmbedChapterInForumOrBlog" comment="youCanPasteThisInTheForumToEmbed&#10;&#10;The thing you are pasting is a link to a study. This will make it appear in the correct section as well.&#10;&#10;Please note this used to say &quot;in the forum to embed&quot;. It was then changed to include &quot;or a Lichess Blog&quot;. A further update was made to say &quot;or your Lichess blog&quot;, since you can only create blog posts as an individual.">Um dieses Kapitel im Forum oder auf deinem Lichess-Blog einzubetten, kannst du das im Forum oder in deinem Lichess-Blog einfügen.</string>
+  <string name="pasteToEmbedChapterInForumOrBlog" comment="youCanPasteThisInTheForumToEmbed&#10;&#10;The thing you are pasting is a link to a study. This will make it appear in the correct section as well.&#10;&#10;Please note this used to say &quot;in the forum to embed&quot;. It was then changed to include &quot;or a Lichess Blog&quot;. A further update was made to say &quot;or your Lichess blog&quot;, since you can only create blog posts as an individual.">Um dieses Kapitel im Forum oder auf deinem Logik-Blog einzubetten, kannst du das im Forum oder in deinem Logik-Blog einfügen.</string>
   <string name="startAtInitialPosition">Beginne mit der Anfangsstellung</string>
   <string name="startAtX">Beginne mit %s</string>
   <string name="embedInYourWebsite">In deine Webseite oder deinen Blog einbetten</string>
@@ -166,7 +166,7 @@
   <string name="youCompletedThisLesson">Gratulation! Du hast diese Lektion abgeschlossen.</string>
   <string name="perPage">%s pro Seite</string>
   <string name="getTheTour">Brauchst du Hilfe? Hol dir die Tour!</string>
-  <string name="welcomeToLichessStudyTitle">Willkommen bei den Lichess -Studien!</string>
+  <string name="welcomeToLichessStudyTitle">Willkommen bei den Logik -Studien!</string>
   <string name="welcomeToLichessStudyText">Dies ist ein geteiltes Analysebrett.&lt;br&gt;&lt;br&gt;Verwende es, um Spiele zu analysieren und zu kommentieren,&lt;br&gt;diskutiere Stellungen mit Freunden,&lt;br&gt;und verwende es natürlich für den Schachunterricht!&lt;br&gt;&lt;br&gt;Es ist ein mächtiges Werkzeug, nehmen wir uns etwas Zeit, um zu sehen, wie es funktioniert.</string>
   <string name="sharedAndSaveTitle" comment="As in: shared with other members and saved to database">Geteilt und gespeichert</string>
   <string name="sharedAndSavedText">Andere Mitglieder können deine Züge in Echtzeit sehen!&lt;br&gt; Zusätzlich wird alles für immer gespeichert.</string>
@@ -180,7 +180,7 @@
   <string name="annotatePositionTitle">Kommentiere die Stellung</string>
   <string name="annotatePositionText">Klicke auf den !? Knopf oder rechts-klicke auf die Zugliste auf der rechten Seite.&lt;br&gt; Kommentar-Symbole werden geteilt und gespeichert.</string>
   <string name="conclusionTitle">Danke für Deine Zeit</string>
-  <string name="conclusionText">Du findest deine &lt;a href=\'/study/mine/hot\'&gt;früheren Studien&lt;/a&gt; auf deiner Profilseite.&lt;br&gt;Es gibt auch einen &lt;a href=\'//lichess.org/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way\'&gt;Blogbeitrag über Studien&lt;/a&gt;.&lt;br&gt;Power-Benutzer möchten vielleicht \"?\" drücken, um Tastaturkürzel zu sehen.&lt;br&gt;Viel Spaß!</string>
+  <string name="conclusionText">Du findest deine &lt;a href=\'/study/mine/hot\'&gt;früheren Studien&lt;/a&gt; auf deiner Profilseite.&lt;br&gt;Es gibt auch einen &lt;a href=\'/\'&gt;Blogbeitrag über Studien&lt;/a&gt;.&lt;br&gt;Power-Benutzer möchten vielleicht \"?\" drücken, um Tastaturkürzel zu sehen.&lt;br&gt;Viel Spaß!</string>
   <string name="createChapterTitle">Lass uns ein Studienkapitel erstellen</string>
   <string name="createChapterText">Eine Studie kann mehrere Kapitel haben.&lt;br&gt;Jedes Kapitel hat einen eigenen Zugbaum,&lt;br&gt;und kann auf verschiedene Arten erstellt werden.</string>
   <string name="fromInitialPositionTitle">Von Ausgangsstellung beginnen</string>
@@ -188,13 +188,13 @@
   <string name="customPositionTitle">Benutzerdefinierte Stellung</string>
   <string name="customPositionText">Baue das Brett auf deine eigene Weise auf.&lt;br&gt;Geeignet, um Endspiele zu erkunden.</string>
   <string name="loadGameFromTheWebTitle">Lade eine Partie aus dem Internet</string>
-  <string name="loadGameFromTheWebText" comment="The special text tags must be retained in exact order, for example &amp;lt;br&amp;gt; must stay exactly as-is. You do not need to add spaces or new lines before or after them.&#10;&#10;Note that &quot;br&quot; in particular means &quot;line break&quot;. In other words, it will start a new line in the final text.">Füge eine Partie-URL&lt;br&gt;(wie z.B. lichess.org/7fHIU0XI)&lt;br&gt;ein, um die Züge der Partie in das Kapitel zu laden.</string>
+  <string name="loadGameFromTheWebText" comment="The special text tags must be retained in exact order, for example &amp;lt;br&amp;gt; must stay exactly as-is. You do not need to add spaces or new lines before or after them.&#10;&#10;Note that &quot;br&quot; in particular means &quot;line break&quot;. In other words, it will start a new line in the final text.">Füge eine Partie-URL&lt;br&gt;(wie z.B. play.kalugalogic.ru/7fHIU0XI)&lt;br&gt;ein, um die Züge der Partie in das Kapitel zu laden.</string>
   <string name="fromFenStringTitle">Aus einer FEN-Zeichenkette</string>
   <string name="fromFenStringText">Fügen eine Position im FEN-Format&lt;br&gt;&lt;i&gt;4k3/4rb2/8/7p/8/5Q2/1PP5/1K6 w&lt;/i&gt;&lt;br&gt;ein, um das Kapitel von dieser Stellung aus zu starten.</string>
   <string name="fromPgnGameTitle">Aus einer PGN</string>
   <string name="fromPgnGameText">Füge eine Partie im PGN-Format ein,&lt;br&gt;um Züge, Kommentare und Varianten in das Kapitel zu laden.</string>
   <string name="variantsAreSupportedTitle">Studien unterstützen Schachvarianten</string>
-  <string name="variantsAreSupportedText">Ja, du kannst Crazyhouse&lt;br&gt;und alle Lichess -Varianten studieren!</string>
+  <string name="variantsAreSupportedText">Ja, du kannst Crazyhouse&lt;br&gt;und alle Logik -Varianten studieren!</string>
   <string name="chapterConclusionText">Kapitel werden für immer gespeichert.&lt;br&gt; Viel Spaß beim Organisieren deines Schachinhalts!</string>
   <string name="doubleDefeat">Doppelte Niederlage</string>
   <string name="blackDefeatWhiteCanNotWin">Niederlage von Schwarz, aber Weiß kann nicht gewinnen</string>

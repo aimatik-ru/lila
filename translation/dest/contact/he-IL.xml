@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="contact">יצירת קשר</string>
-  <string name="contactLichess">יצירת קשר עם Lichess</string>
+  <string name="contactLichess">יצירת קשר עם Logik</string>
   <string name="whatCanWeHelpYouWith">במה נוכל לעזור?</string>
   <string name="visitThisPage">צפו בעמוד זה כדי לפתור את הבעיה</string>
   <string name="iCantLogIn">אני לא מצליח/ה להתחבר</string>
@@ -34,8 +34,8 @@
   <string name="onlyReports">רק דיווח על שחקנים באמצעות טופס הדיווח יזכה להתייחסות.</string>
   <string name="wantReportBug">אני רוצה לדווח על תקלה</string>
   <string name="reportBugInForum">במדור המשוב על לִיצֶ\'ס בפורום</string>
-  <string name="reportWebsiteIssue">כבעיה (issue) בעמוד של Lichess באתר GitHub</string>
-  <string name="reportMobileIssue">כבעיה (issue) בעמוד של אפליקציית Lichess ב-GitHub</string>
+  <string name="reportWebsiteIssue">כבעיה (issue) בעמוד של Logik באתר GitHub</string>
+  <string name="reportMobileIssue">כבעיה (issue) בעמוד של אפליקציית Logik ב-GitHub</string>
   <string name="reportBugInDiscord">בשרת הDiscord של ליצ\'ס</string>
   <string name="howToReportBug">אנא תארו כיצד נראית התקלה, מה ציפיתם שיקרה במקום זאת ואת הצעדים לשחזור התקלה.</string>
   <string name="illegalPawnCapture">הכאה לא חוקית של חייל רגלי</string>
@@ -53,7 +53,7 @@
   <string name="ratedGame">בדקו אם שיחקתם משחק מדורג. משחק לא מדורג לא משפיע על הדירוג (מד הכושר).</string>
   <string name="botRatingAbuse">בנסיבות מסויימות כאשר משחק הוא מול בוט, משחק מדורג עשוי לא להעניק נקודות אם ייקבע שהשחקן/ית מנצל/ת את הבוט לצבירת ניקוד.</string>
   <string name="errorPage">שגיאה בדף</string>
-  <string name="learnHowToMakeBroadcasts">למדו כיצד ליצור הקרנות חיות של טורנירים ב־Lichess</string>
+  <string name="learnHowToMakeBroadcasts">למדו כיצד ליצור הקרנות חיות של טורנירים ב־Logik</string>
   <string name="banAppeal">ערעור על איסור או על הגבלה בIP</string>
   <string name="engineAppeal">סימן שימוש במנוע או רמאות</string>
   <string name="sendAppealTo">אפשר לשלוח ערעור אל %s.</string>
@@ -67,7 +67,7 @@
   <string name="buyingLichess">קניית ליצ\'ס</string>
   <string name="authorizationToUse">הרשאה לשימוש בליצ\'ס</string>
   <string name="welcomeToUse">אתם מוזמנים להשתמש בליצ\'ס לצורך פעילותכם, גם מסחרית.</string>
-  <string name="videosAndBooks">אתם יכול להציג את Lichess בסרטונים שלכם, ואתם יכול להדפיס צילומי מסך מתוך לִיצֶ\'ס בספרים שלכם.</string>
+  <string name="videosAndBooks">אתם יכול להציג את Logik בסרטונים שלכם, ואתם יכול להדפיס צילומי מסך מתוך לִיצֶ\'ס בספרים שלכם.</string>
   <string name="creditAppreciated">מתן קרדיט מוערך אך אינו נדרש.</string>
   <string name="noneOfTheAbove">משהו אחר</string>
   <string name="sendEmailAt">שלחו לנו אימייל ל־%s.</string>

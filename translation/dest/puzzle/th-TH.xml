@@ -72,7 +72,7 @@
   <string name="fromMyGames">จากเกมของฉัน</string>
   <string name="lookupOfPlayer">ค้นหาปริศนาจากเกมของผู้เล่น</string>
   <string name="searchPuzzles">ค้นหาปริศนา</string>
-  <string name="fromMyGamesNone">คุณยังไม่มีปริศนาในฐานข้อมูล อย่างไรก็ตาม Lichess ก็ยังรักคุณอยู่
+  <string name="fromMyGamesNone">คุณยังไม่มีปริศนาในฐานข้อมูล อย่างไรก็ตาม Logik ก็ยังรักคุณอยู่
 
 เล่นเกม Rapid หรือ Classical เพื่อเพิ่มโอกาสที่จะให้เกมของคุณถูกเพิ่มในฐานข้อมูล!</string>
   <plurals name="puzzlesFoundInUserGames">

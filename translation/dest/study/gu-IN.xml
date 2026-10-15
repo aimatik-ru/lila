@@ -165,7 +165,7 @@
   <string name="youCompletedThisLesson">અભિનંદન! તમે આ પાઠ પૂર્ણ કર્યો.</string>
   <string name="perPage">પ્રતિ પૃષ્ઠ %s</string>
   <string name="getTheTour">મદદની જરૂર છે? ટૂર મેળવો!</string>
-  <string name="welcomeToLichessStudyTitle">Lichess સ્ટડીમાં આપનું સ્વાગત છે!</string>
+  <string name="welcomeToLichessStudyTitle">Logik સ્ટડીમાં આપનું સ્વાગત છે!</string>
   <string name="welcomeToLichessStudyText">આ એક શેર્ડ એનાલિસિસ બોર્ડ છે. &lt;br&gt;&lt;br&gt; તેનો ઉપયોગ રમતોનું વિશ્લેષણ અને ટીકા કરવા, &lt;br&gt; મિત્રો સાથે પોઝિશનની ચર્ચા કરવા, &lt;br&gt;અને અલબત્ત ચેસના પાઠ માટે કરો! &lt;br&gt;&lt;br&gt; તે એક શક્તિશાળી સાધન છે, ચાલો થોડો સમય કાઢીને જોઈએ કે તે કેવી રીતે કાર્ય કરે છે.</string>
   <string name="sharedAndSaveTitle" comment="As in: shared with other members and saved to database">શેર કરેલ અને સાચવેલ</string>
   <string name="sharedAndSavedText">અન્ય સભ્યો તમારી ચાલ વાસ્તવિક સમયમાં જોઈ શકે છે! &lt;br&gt;વધુમાં, બધું કાયમ માટે સાચવવામાં આવે છે.</string>
@@ -179,7 +179,7 @@
   <string name="annotatePositionTitle">સ્થિતિની ટીકા કરો</string>
   <string name="annotatePositionText">!? બટન પર ક્લિક કરો, અથવા જમણી બાજુની મૂવ લિસ્ટ પર રાઇટ ક્લિક કરો.&lt;br&gt;એનોટેશન ગ્લિફ્સ શેર અને સેવ કરવામાં આવે છે.</string>
   <string name="conclusionTitle">તમારા સમય બદલ આભાર.</string>
-  <string name="conclusionText">તમે તમારા પ્રોફાઇલ પેજ પરથી તમારા &lt;a href=\'/study/mine/hot\'&gt;પાછલા અભ્યાસો&lt;/a&gt; શોધી શકો છો.&lt;br&gt;અભ્યાસ વિશે &lt;a href=\'//lichess.org/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way\'&gt;બ્લોગ પોસ્ટ&lt;/a&gt; પણ છે.&lt;br&gt;પાવર વપરાશકર્તાઓ કીબોર્ડ શોર્ટકટ્સ જોવા માટે \"?\" દબાવવા માંગી શકે છે.&lt;br&gt;મજા કરો!</string>
+  <string name="conclusionText">તમે તમારા પ્રોફાઇલ પેજ પરથી તમારા &lt;a href=\'/study/mine/hot\'&gt;પાછલા અભ્યાસો&lt;/a&gt; શોધી શકો છો.&lt;br&gt;અભ્યાસ વિશે &lt;a href=\'/\'&gt;બ્લોગ પોસ્ટ&lt;/a&gt; પણ છે.&lt;br&gt;પાવર વપરાશકર્તાઓ કીબોર્ડ શોર્ટકટ્સ જોવા માટે \"?\" દબાવવા માંગી શકે છે.&lt;br&gt;મજા કરો!</string>
   <string name="createChapterTitle">ચાલો એક અભ્યાસ પ્રકરણ બનાવીએ</string>
   <string name="createChapterText">એક અભ્યાસમાં અનેક પ્રકરણો હોઈ શકે છે. &lt;br&gt;દરેક પ્રકરણમાં એક અલગ મૂવ ટ્રી હોય છે, &lt;br&gt;અને તેને વિવિધ રીતે બનાવી શકાય છે.</string>
   <string name="fromInitialPositionTitle">શરૂઆતની સ્થિતિથી</string>

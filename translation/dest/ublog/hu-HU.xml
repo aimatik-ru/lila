@@ -3,7 +3,7 @@
   <string name="community">Közösség</string>
   <string name="byMonth">Hónap szerint</string>
   <string name="byTopic">Téma szerint</string>
-  <string name="byLichess">Lichess szerint</string>
+  <string name="byLichess">Logik szerint</string>
   <string name="myFriends">Barátaim posztjai</string>
   <string name="myLikes">Általam kedvelt posztok</string>
   <string name="myBlog">Az én blogom</string>
@@ -13,7 +13,7 @@
     <item quantity="other">%s blog poszt</item>
   </plurals>
   <string name="continueReadingPost">Poszt olvasásának folytatása</string>
-  <string name="lichessBlogPostsFromXYear">Lichess blog posztok itt: %s</string>
+  <string name="lichessBlogPostsFromXYear">Logik blog posztok itt: %s</string>
   <string name="previousBlogPosts">Előző blog posztok</string>
   <string name="xBlog">%s blogja</string>
   <string name="newPost">Új poszt</string>

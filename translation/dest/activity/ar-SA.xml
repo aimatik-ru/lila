@@ -4,11 +4,11 @@
   <string name="hostedALiveStream">بدأ بث مباشر</string>
   <plurals name="supportedNbMonths">
     <item quantity="zero">دعم ليتشيس لمدة %1$s شهر ك%2$s</item>
-    <item quantity="one">دعم lichess.org لمدة %1$s شهر ك%2$s</item>
-    <item quantity="two">دعم lichess.org لمدة %1$s أشهر ك%2$s</item>
-    <item quantity="few">دعم lichess.org لمدة %1$s اشهر ك%2$s</item>
-    <item quantity="many">دعم lichess.org لمدة %1$s اشهر ك%2$s</item>
-    <item quantity="other">دعم lichess.org لمدة %1$s أشهر ك %2$s</item>
+    <item quantity="one">دعم play.kalugalogic.ru لمدة %1$s شهر ك%2$s</item>
+    <item quantity="two">دعم play.kalugalogic.ru لمدة %1$s أشهر ك%2$s</item>
+    <item quantity="few">دعم play.kalugalogic.ru لمدة %1$s اشهر ك%2$s</item>
+    <item quantity="many">دعم play.kalugalogic.ru لمدة %1$s اشهر ك%2$s</item>
+    <item quantity="other">دعم play.kalugalogic.ru لمدة %1$s أشهر ك %2$s</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="zero">لقد تدربت على %1$s موقف تكتيكي من %2$s</item>

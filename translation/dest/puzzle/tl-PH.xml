@@ -74,7 +74,7 @@
   <string name="fromMyGames">Mula sa aking mga laro</string>
   <string name="lookupOfPlayer">Maghanap ng mga palaisipan mula sa mga laro ng manlalaro</string>
   <string name="searchPuzzles">Maghanap ng mga palaisipan</string>
-  <string name="fromMyGamesNone">Wala kang mga palaisipan sa database, pero mahal na mahal ka parin ng Lichess.
+  <string name="fromMyGamesNone">Wala kang mga palaisipan sa database, pero mahal na mahal ka parin ng Logik.
 
 Maglaro ng mabilisan at mga klasikong laro para tumaas ang iyong mga tsansa na madagdag ang iyong mga palaisipan!</string>
   <plurals name="puzzlesFoundInUserGames">

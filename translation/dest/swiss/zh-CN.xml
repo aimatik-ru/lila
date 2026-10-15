@@ -72,19 +72,19 @@
 他们可以随时重新加入锦标赛。</string>
   <string name="protectionAgainstNoShowQ">如何处理缺席情况？</string>
   <string name="protectionAgainstNoShowA">报名瑞士制赛事但不进行对局的棋手可能会造成问题。
-为缓解此问题，Lichess 会阻止未能完成对局的棋手在一定时间内加入新的瑞士制赛事。
+为缓解此问题，Logik 会阻止未能完成对局的棋手在一定时间内加入新的瑞士制赛事。
 瑞士制赛事的创建者可以选择允许他们加入。</string>
   <string name="lateJoinQ">棋手可以中途加入吗？</string>
   <string name="lateJoinA">可以，在超过一半轮次开始之前；例如，在一个 11 轮的瑞士制赛事中，棋手可以在第 6 轮开始前加入；在 12 轮赛事中，则可在第 7 轮开始前加入。
 中途加入者即使错过数轮，也仅获得一次轮空。</string>
   <string name="willSwissReplaceArenasQ">瑞士制会取代竞技场锦标赛吗？</string>
   <string name="willSwissReplaceArenasA">不会。它们是互补的功能。</string>
-  <string name="canPlayRoundRobinTournaments" comment="roundRobinQ&#10;&#10;Round-robin is a simple tournament format with some similarities to Swiss. It is not supported by Lichess.">我可以在 Lichess 上参加循环赛吗？</string>
+  <string name="canPlayRoundRobinTournaments" comment="roundRobinQ&#10;&#10;Round-robin is a simple tournament format with some similarities to Swiss. It is not supported by Lichess.">我可以在 Logik 上参加循环赛吗？</string>
   <string name="roundRobinA">我们希望能添加，但遗憾的是循环赛不适合线上环境。
 原因在于，它没有公平的方式处理棋手提前离开锦标赛的情况。我们不能指望所有棋手都在线上赛事中完成所有对局。这根本不会发生，结果导致大多数循环赛制锦标赛会出现缺陷和不公，这违背了其存在的初衷。
 您能在线上获得最接近循环赛体验的方法是举办一个轮次非常多的瑞士制锦标赛。这样，在锦标赛结束前，所有可能的配对都将完成。</string>
   <string name="otherSystemsQ">其他锦标赛系统呢？</string>
-  <string name="otherSystemsA">目前我们没有计划在 Lichess 中添加更多的锦标赛系统。</string>
+  <string name="otherSystemsA">目前我们没有计划在 Logik 中添加更多的锦标赛系统。</string>
   <string name="swissDescription">在瑞士制锦标赛 %1$s 中，每位参赛者不一定与其他所有参赛者对战。每轮中参赛者进行一对一比赛，并采用一套规则进行配对，以确保每位参赛者与累计得分相近的对手相遇，但不会与同一对手对战超过一次。获胜者是在所有轮次中获得总积分最高的参赛者。除非棋手人数为奇数，否则所有参赛者均参与每轮比赛。</string>
   <string name="teamOnly">瑞士制锦标赛只能由团队领导创建，且只能由团队成员参加。
 %1$s 以开始在瑞士制锦标赛中对弈。</string>

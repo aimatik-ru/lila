@@ -238,9 +238,9 @@
   <string name="forgotPassword">忘记密码？</string>
   <string name="error.weakPassword">此密码极为常见，且极易被猜到。</string>
   <string name="error.namePassword">请不要使用您的用户名作为密码。</string>
-  <string name="blankedPassword">您在另一个网站上使用了相同的密码，而该网站已遭泄露。为确保您 Lichess 账户的安全，我们需要您设置一个新密码。感谢您的理解。</string>
-  <string name="youAreLeavingLichess">您正在离开 Lichess</string>
-  <string name="neverTypeYourPassword">切勿在其他网站上输入您的 Lichess 密码！</string>
+  <string name="blankedPassword">您在另一个网站上使用了相同的密码，而该网站已遭泄露。为确保您 Logik 账户的安全，我们需要您设置一个新密码。感谢您的理解。</string>
+  <string name="youAreLeavingLichess">您正在离开 Logik</string>
+  <string name="neverTypeYourPassword">切勿在其他网站上输入您的 Logik 密码！</string>
   <string name="proceedToX">继续前往 %s</string>
   <string name="passwordSuggestion">切勿使用他人提供的密码，以防账户被盗。</string>
   <string name="emailSuggestion">切勿使用他人提供的邮箱地址，以防账户被盗。</string>
@@ -252,7 +252,7 @@
   <string name="emailSent">我们已向 %s 发送了一封邮件。</string>
   <string name="emailCanTakeSomeTime">邮件可能需要一些时间才能送达。</string>
   <string name="refreshInboxAfterFiveMinutes">请等待 5 分钟并刷新您的收件箱。</string>
-  <string name="checkSpamOrJunkFolder" comment="checkSpamFolder&#10;It = The confirmation email">如果您没有收到确认邮件，请检查您的垃圾邮件文件夹。请务必将来自 lichess.org 的邮件标记为安全且“非垃圾邮件”，以便您能及时收到重要通知。</string>
+  <string name="checkSpamOrJunkFolder" comment="checkSpamFolder&#10;It = The confirmation email">如果您没有收到确认邮件，请检查您的垃圾邮件文件夹。请务必将来自 play.kalugalogic.ru 的邮件标记为安全且“非垃圾邮件”，以便您能及时收到重要通知。</string>
   <string name="sendEmailForAccountVerification">若您无法找到确认邮件，那么请发送邮件至 %s，我们将协助您完成账户确认。</string>
   <string name="accountConfirmed">用户 %s 已成功确认。</string>
   <string name="accountCanLogin">您现在可以立即以 %s 的身份登录。</string>
@@ -338,7 +338,7 @@
   <plurals name="giveNbSeconds">
     <item quantity="other">添加对方 %s 秒</item>
   </plurals>
-  <string name="thisAccountViolatedTos">该账户违反了 Lichess 服务条款</string>
+  <string name="thisAccountViolatedTos">该账户违反了 Logik 服务条款</string>
   <string name="openingExplorerAndTablebase">开局探索器和残局数据库</string>
   <string name="takeback">悔棋</string>
   <string name="proposeATakeback">请求悔棋</string>
@@ -516,7 +516,7 @@
   <string name="inlineNotation">紧凑棋谱</string>
   <string name="makeAStudy">如果要保管和分享，请考虑创建一个研习。</string>
   <string name="clearLocalData">清除本地数据</string>
-  <string name="previouslyOnLichessTV">Lichess TV 近期对局</string>
+  <string name="previouslyOnLichessTV">Logik TV 近期对局</string>
   <string name="onlinePlayers">在线棋手</string>
   <string name="activePlayers">活跃棋手</string>
   <string name="bewareTheGameIsRatedButHasNoClock">注意，这是排位对局但没有计时！</string>
@@ -528,11 +528,11 @@
   <string name="autoSwitch">自动切换</string>
   <string name="puzzles">谜题</string>
   <string name="onlineBots">在线机器人</string>
-  <string name="aboutBotsOnLichess">关于 Lichess 上的机器人</string>
+  <string name="aboutBotsOnLichess">关于 Logik 上的机器人</string>
   <string name="featuredBots">精选机器人</string>
   <string name="tryPlayingTheseInnovativeChessEngines">试试与这些有创意性的国际象棋引擎对弈吧！它们是我们的最爱。</string>
   <string name="communityBots">社区机器人</string>
-  <string name="moreChessEnginesCreatedByTheLichessCommunity">更多由 Lichess 社区创建的国际象棋引擎。它们由其创建者托管，可能不会始终在线。</string>
+  <string name="moreChessEnginesCreatedByTheLichessCommunity">更多由 Logik 社区创建的国际象棋引擎。它们由其创建者托管，可能不会始终在线。</string>
   <string name="name">名称</string>
   <string name="description">描述</string>
   <string name="descPrivate">私密描述</string>
@@ -656,7 +656,7 @@
   </plurals>
   <string name="tpTimeSpentPlaying">对局总时长：%s</string>
   <string name="watchGames">观看对局</string>
-  <string name="tpTimeSpentOnTV">Lichess TV：%s</string>
+  <string name="tpTimeSpentOnTV">Logik TV：%s</string>
   <string name="watch">观看</string>
   <string name="videoLibrary">视频库</string>
   <string name="streamersMenu">主播</string>
@@ -666,7 +666,7 @@
   <string name="aboutX">关于 %s</string>
   <string name="xIsAFreeYLibreOpenSourceChessServer">%1$s 是一个%2$s免费、开源共享、绝无广告的国际象棋平台。</string>
   <string name="really">完全</string>
-  <string name="lichessUpdates">Lichess 动态</string>
+  <string name="lichessUpdates">Logik 动态</string>
   <string name="contribute">协助我们</string>
   <string name="changelog">更新日志</string>
   <string name="termsOfService">服务条款</string>
@@ -696,7 +696,7 @@
   <string name="extraClockTimeForHost" comment="Appears on: https://lichess.org/simul/new&#10;&#10;Allows a simul host to select extra time for the simul.&#10;&#10;Please note this string used to state &quot;Host extra clock time&quot;, without the word &quot;initial&quot;">主持人额外时间：</string>
   <string name="simulAddExtraTimePerPlayer">为每位加入车轮战的棋手增加您时钟的初始时间。</string>
   <string name="simulHostExtraTimePerPlayer">每加入位对手时获得的额外时间</string>
-  <string name="lichessTournaments">Lichess 锦标赛</string>
+  <string name="lichessTournaments">Logik 锦标赛</string>
   <string name="tournamentFAQ">竞技场锦标赛常见问题</string>
   <string name="timeBeforeTournamentStarts">锦标赛开始前等待时间</string>
   <string name="averageCentipawnLoss">平均厘兵损失</string>
@@ -746,8 +746,8 @@
   <string name="weHaveSentYouAnEmailTo">我们已向 %s 发送了一封邮件。请点击邮件中的链接以重置您的密码。</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">注册即表示您同意%s。</string>
   <string name="readAboutOur">请阅读我们的%s。</string>
-  <string name="networkLagBetweenYouAndLichess">您与 Lichess 之间的网络延迟</string>
-  <string name="timeToProcessAMoveOnLichessServer">在 Lichess 服务器上处理一步棋的时间</string>
+  <string name="networkLagBetweenYouAndLichess">您与 Logik 之间的网络延迟</string>
+  <string name="timeToProcessAMoveOnLichessServer">在 Logik 服务器上处理一步棋的时间</string>
   <string name="downloadAnnotated">下载有评注的 PGN</string>
   <string name="downloadRaw">下载无评注的 PGN</string>
   <string name="downloadImported">下载导入的对局</string>
@@ -768,7 +768,7 @@
   <string name="kidMode">儿童模式</string>
   <string name="kidModeIsEnabled">儿童模式已启用</string>
   <string name="kidModeExplanation">安全第一。在儿童模式下，所有网站通信功能都被禁用。为您的孩子或学生启用此模式，以保护他们免受其他用户的影响。</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">在儿童模式下，Lichess 徽标会显示一个 %s 图标，这样您就知道您的孩子是安全的。</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">在儿童模式下，Logik 徽标会显示一个 %s 图标，这样您就知道您的孩子是安全的。</string>
   <string name="askYourChessTeacherAboutLiftingKidMode">您的账户已被托管，请咨询您的国际象棋老师以解除儿童模式。</string>
   <string name="enableKidMode">启用儿童模式</string>
   <string name="disableKidMode">禁用儿童模式</string>
@@ -882,7 +882,7 @@
   <plurals name="andSaveNbPremoveLines">
     <item quantity="other">并保存 %s 条预走棋线路</item>
   </plurals>
-  <string name="showUnreadLichessMessage">您收到了一条来自 Lichess 的私信。</string>
+  <string name="showUnreadLichessMessage">您收到了一条来自 Logik 的私信。</string>
   <string name="readTheMessage" comment="'It' refers to a private message. This text follows after a different string which advises players they have received a private message from Lichess. For users, this is appears as a regular private message from the Lichess account: https://lichess.org/@/Lichess">阅读消息</string>
   <string name="sorry">抱歉 :(</string>
   <string name="weHadToTimeYouOutForAWhile">我们不得不暂时将您封禁一段时间。</string>
@@ -895,7 +895,7 @@
   <string name="tryToWin">尽力赢下（或至少和棋）您参与的每一场对局。</string>
   <string name="resignLostGames">在必输的对局中认输（不要让时钟走完）。</string>
   <string name="temporaryInconvenience">我们对暂时的不便表示歉意，</string>
-  <string name="wishYouGreatGames">并祝您在 lichess.org 上对局愉快。</string>
+  <string name="wishYouGreatGames">并祝您在 play.kalugalogic.ru 上对局愉快。</string>
   <string name="thankYouForReading">感谢您的阅读！</string>
   <string name="lifetimeScore">历史总战绩</string>
   <string name="currentMatchScore">当前对局成绩</string>
@@ -941,7 +941,7 @@
   <string name="congratsYouWon">恭喜，您赢了！</string>
   <string name="gameVsX">与 %1$s 的对局</string>
   <string name="resVsX">%1$s vs %2$s</string>
-  <string name="lostAgainstTOSViolator">您输给了违反 Lichess 服务条款的用户，从而失去了等级分</string>
+  <string name="lostAgainstTOSViolator">您输给了违反 Logik 服务条款的用户，从而失去了等级分</string>
   <string name="refundXpointsTimeControlY">补偿：%1$s 点 %2$s 等级分。</string>
   <string name="timeAlmostUp">时间快到了！</string>
   <string name="clickToRevealEmailAddress">[点击显示邮箱地址]</string>
@@ -995,13 +995,13 @@
   <string name="youCantStartNewGame">轮到您行棋时，您无法开始新的对局！</string>
   <string name="since">自</string>
   <string name="until">至</string>
-  <string name="lichessDbExplanation">来自 Lichess 的排位对局</string>
+  <string name="lichessDbExplanation">来自 Logik 的排位对局</string>
   <string name="switchSides">更换所持颜色</string>
   <string name="closingAccountWithdrawAppeal">关闭您的账户将撤销您的申诉</string>
   <string name="ourEventTips">举办赛事的小建议</string>
   <string name="instructions">说明</string>
   <string name="showMeEverything">显示全部内容</string>
-  <string name="lichessPatronInfo">Lichess 是一家非营利机构，其软件是完全免费的自由开源软件。
+  <string name="lichessPatronInfo">Logik 是一家非营利机构，其软件是完全免费的自由开源软件。
 该网站的所有运营成本、开发工作以及内容产出，都完全依赖于用户的赞助。</string>
   <string name="nothingToSeeHere">目前这里什么都没有。</string>
   <string name="stats">统计信息</string>

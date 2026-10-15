@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="contact">Обратная связь</string>
-  <string name="contactLichess">Связаться с Lichess</string>
+  <string name="contactLichess">Связаться с Логик</string>
   <string name="whatCanWeHelpYouWith">Чем мы можем вам помочь?</string>
   <string name="visitThisPage">Посетите эту страницу для решения проблемы</string>
   <string name="iCantLogIn">Не могу войти</string>
@@ -12,8 +12,8 @@
   <string name="lost2FA">Я потерял доступ к моим кодам двухфакторной аутентификации</string>
   <string name="doPasswordReset">Сделайте сброс пароля, чтобы удалить двухфакторную аутентификацию</string>
   <string name="accountSupport">Мне нужна помощь с аккаунтом</string>
-  <string name="wantTitle">Я хочу, чтобы мой титул отображался на Lichess</string>
-  <string name="visitTitleConfirmation">Чтобы добавить титул в ваш профиль на Lichess и участвовать в Титулованной арене, посетите страницу подтверждения титула</string>
+  <string name="wantTitle">Я хочу, чтобы мой титул отображался на Логик</string>
+  <string name="visitTitleConfirmation">Чтобы добавить титул в ваш профиль на Логик и участвовать в Титулованной арене, посетите страницу подтверждения титула</string>
   <string name="wantCloseAccount">Я хочу закрыть свой аккаунт</string>
   <string name="closeYourAccount">Вы можете закрыть свой аккаунт на этой странице</string>
   <string name="doNotAskByEmail">Не просите нас закрыть аккаунт по электронной почте, мы не будем этого делать.</string>
@@ -33,10 +33,10 @@
   <string name="doNotMessageModerators">Не отправляйте личные сообщения модераторам.</string>
   <string name="onlyReports">Сообщайте об игроках только через форму обращений — это наиболее эффективно.</string>
   <string name="wantReportBug">Я хочу сообщить об ошибке</string>
-  <string name="reportBugInForum">В разделе Обратная связь форума Lichess</string>
-  <string name="reportWebsiteIssue">На странице проблем сайта Lichess на Github</string>
-  <string name="reportMobileIssue">На странице проблем мобильного приложения Lichess на Github</string>
-  <string name="reportBugInDiscord">На сервере Lichess в Discord</string>
+  <string name="reportBugInForum">В разделе Обратная связь форума Логик</string>
+  <string name="reportWebsiteIssue">На странице проблем сайта Логик на Github</string>
+  <string name="reportMobileIssue">На странице проблем мобильного приложения Логик на Github</string>
+  <string name="reportBugInDiscord">На сервере Логик в Discord</string>
   <string name="howToReportBug">Пожалуйста, опишите, как выглядит ошибка, что вы ожидаете вместо нее, и шаги по ее воспроизведению.</string>
   <string name="illegalPawnCapture">Неправильное взятие пешки</string>
   <string name="calledEnPassant">Это называется \"взятие на проходе\" и является одним из правил шахмат.</string>
@@ -53,7 +53,7 @@
   <string name="ratedGame">Убедитесь, что вы играли рейтинговую игру. Пользовательские игры не влияют на рейтинг игроков.</string>
   <string name="botRatingAbuse">В рейтинговых играх против ботов в некоторых случаях очки рейтинга не начисляются, если система считает, что игрок эксплуатирует слабости бота для набивания рейтинга.</string>
   <string name="errorPage">Сообщение об ошибке</string>
-  <string name="learnHowToMakeBroadcasts">Узнайте, как создавать свои собственные стримы на Lichess</string>
+  <string name="learnHowToMakeBroadcasts">Узнайте, как создавать свои собственные стримы на Логик</string>
   <string name="banAppeal">Обжалование бана аккаунта или ограничения IP-адреса</string>
   <string name="engineAppeal">Отметка об использовании шахматных движков или читерстве</string>
   <string name="sendAppealTo">Вы можете отправить апелляцию на %s.</string>
@@ -63,22 +63,22 @@
   <string name="doNotDeny">Не отрицайте факт нечестной игры. Если вы хотите иметь возможность создать новый аккаунт, просто признайте, что вы сделали, и покажите, что вы поняли, что это была ошибка с вашей стороны.</string>
   <string name="otherRestriction">Другие ограничения</string>
   <string name="collaboration">Сотрудничество, юридическое, коммерческое</string>
-  <string name="monetizing">Монетизация Lichess</string>
-  <string name="buyingLichess">Покупка Lichess</string>
-  <string name="authorizationToUse">Разрешение на использование Lichess</string>
-  <string name="welcomeToUse">Вы можете использовать Lichess для вашей деятельности, даже коммерческой.</string>
-  <string name="videosAndBooks">Вы можете использовать нашу платформу в своих видео или распечатывать скриншоты с Lichess в ваших книгах.</string>
-  <string name="creditAppreciated">Запись об использовании Lichess приветствуется, но не является обязательной.</string>
+  <string name="monetizing">Монетизация Логик</string>
+  <string name="buyingLichess">Покупка Логик</string>
+  <string name="authorizationToUse">Разрешение на использование Логик</string>
+  <string name="welcomeToUse">Вы можете использовать Логик для вашей деятельности, даже коммерческой.</string>
+  <string name="videosAndBooks">Вы можете использовать нашу платформу в своих видео или распечатывать скриншоты с Логик в ваших книгах.</string>
+  <string name="creditAppreciated">Запись об использовании Логик приветствуется, но не является обязательной.</string>
   <string name="noneOfTheAbove">Ничего из перечисленного</string>
   <string name="sendEmailAt">Отправьте нам электронное письмо на %s.</string>
   <string name="explainYourRequest">Пожалуйста, подробно опишите ваш запрос. Напишите ваше имя пользователя и любую другую информацию, которая поможет нам помочь вам.</string>
-  <string name="monetiseNotInterested">Мы не заинтересованы в любых способах монетизации Lichess.</string>
+  <string name="monetiseNotInterested">Мы не заинтересованы в любых способах монетизации Логик.</string>
   <string name="monetiseNoAdsTrackingOrTraffic">Мы никогда не будем показывать рекламу, не будем отслеживать наших игроков, и не будем продавать и покупать ни трафик, ни пользователей.</string>
   <string name="monetiseNoMarketingEmail">Пожалуйста, не пишите нам с предложениями маркетинга, отслеживания и рекламы.</string>
   <string name="monetiseEncourageEveryoneTo" comment="string is value of key monetiseBlockAllAdsAndTrackers">Мы призываем всех к %s.</string>
   <string name="monetiseBlockAllAdsAndTrackers">блокировке любой рекламы и трекеров</string>
-  <string name="broadcastTournamentOnLichess">Транслировать турнир на Lichess</string>
-  <string name="ifYouWantToBroadcastClause1">Если вы хотите официально транслировать турнир на Lichess, или у вас есть вопросы о наших трансляциях:</string>
+  <string name="broadcastTournamentOnLichess">Транслировать турнир на Логик</string>
+  <string name="ifYouWantToBroadcastClause1">Если вы хотите официально транслировать турнир на Логик, или у вас есть вопросы о наших трансляциях:</string>
   <string name="ifYouWantToBroadcastClause2" comment="string1 is Lichess email, string2 is value of key ourDiscordServer">Пожалуйста, свяжитесь с нашей службой трансляций по адресу %1$s или на %2$s.</string>
   <string name="ourDiscordServer">нашем Discord-сервере</string>
 </resources>

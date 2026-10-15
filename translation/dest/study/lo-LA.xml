@@ -161,7 +161,7 @@
   <string name="youCompletedThisLesson">ຂໍສະແດງຄວາມຍິນດີ! ທ່ານໄດ້ຮຽນຈົບຊຸດນີ້ແລ້ວ.</string>
   <string name="perPage">%s ຕໍ່ໜ້າ</string>
   <string name="getTheTour">ຕ້ອງການຄວາມຊ່ວຍເຫຼືອບໍ? ເບິ່ງຄຳແນະນຳການໃຊ້ງານ!</string>
-  <string name="welcomeToLichessStudyTitle">ຍິນດີຕ້ອນຮັບເຂົ້າສູ່ບົດສຶກສາ Lichess!</string>
+  <string name="welcomeToLichessStudyTitle">ຍິນດີຕ້ອນຮັບເຂົ້າສູ່ບົດສຶກສາ Logik!</string>
   <string name="welcomeToLichessStudyText">ນີ້ຄືກະດານວິເຄາະທີ່ແບ່ງປັນກັນໄດ້.&lt;br&gt;&lt;br&gt;ໃຊ້ເພື່ອວິເຄາະ ແລະ ຂຽນຄຳອະທິບາຍໃຫ້ເກມ,&lt;br&gt;ສົນທະນາກ່ຽວກັບຕຳແໜ່ງຕ່າງໆກັບໝູ່ເພື່ອນ,&lt;br&gt;ແລະ ແນ່ນອນວ່າມັນໃຊ້ສຳລັບການຮຽນໝາກຮຸກໄດ້ນຳ!&lt;br&gt;&lt;br&gt;ມັນເປັນເຄື່ອງມືທີ່ມີປະສິດທິພາບ, ລອງໃຊ້ເວລາສຶກສາເບິ່ງວ່າມັນເຮັດວຽກແນວໃດ.</string>
   <string name="sharedAndSaveTitle" comment="As in: shared with other members and saved to database">ແບ່ງປັນ ແລະ ບັນທຶກແລ້ວ</string>
   <string name="sharedAndSavedText">ສະມາຊິກຄົນອື່ນສາມາດເຫັນການເດີນໝາກຂອງທ່ານໄດ້ແບບສົດໆ!&lt;br&gt;ນອກຈາກນັ້ນ, ທຸກຢ່າງຈະຖືກບັນທຶກໄວ້ຕະຫຼອດໄປ.</string>
@@ -175,7 +175,7 @@
   <string name="annotatePositionTitle">ວິເຄາະຕຳແໜ່ງ</string>
   <string name="annotatePositionText">ຄລິກປຸ່ມ !? ຫຼື ຄລິກຂວາໃສ່ລາຍການການເດີນທາງເບື້ອງຂວາ.&lt;br&gt;ສັນຍະລັກວິເຄາະຈະຖືກແບ່ງປັນ ແລະ ບັນທຶກໄວ້.</string>
   <string name="conclusionTitle">ຂອບໃຈສຳລັບເວລາຂອງທ່ານ</string>
-  <string name="conclusionText">ທ່ານສາມາດຊອກຫາ &lt;a href=\'/study/mine/hot\'&gt;ບົດສຶກສາກ່ອນໜ້ານີ້&lt;/a&gt; ໄດ້ຈາກໜ້າໂປຣໄຟລ໌ຂອງທ່ານ.&lt;br&gt;ນອກຈາກນັ້ນຍັງມີ &lt;a href=\'//lichess.org/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way\'&gt;ບົດຄວາມກ່ຽວກັບບົດສຶກສາ&lt;/a&gt;.&lt;br&gt;ສຳລັບຜູ້ໃຊ້ຂັ້ນສູງອາດຈະລອງກົດ \"?\" ເພື່ອເບິ່ງຄີລັດຄີບອດ.&lt;br&gt;ຂໍໃຫ້ມີຄວາມສຸກ!</string>
+  <string name="conclusionText">ທ່ານສາມາດຊອກຫາ &lt;a href=\'/study/mine/hot\'&gt;ບົດສຶກສາກ່ອນໜ້ານີ້&lt;/a&gt; ໄດ້ຈາກໜ້າໂປຣໄຟລ໌ຂອງທ່ານ.&lt;br&gt;ນອກຈາກນັ້ນຍັງມີ &lt;a href=\'/\'&gt;ບົດຄວາມກ່ຽວກັບບົດສຶກສາ&lt;/a&gt;.&lt;br&gt;ສຳລັບຜູ້ໃຊ້ຂັ້ນສູງອາດຈະລອງກົດ \"?\" ເພື່ອເບິ່ງຄີລັດຄີບອດ.&lt;br&gt;ຂໍໃຫ້ມີຄວາມສຸກ!</string>
   <string name="createChapterTitle">ມາສ້າງບົດໃໝ່ໃນບົດສຶກສານໍາກັນ</string>
   <string name="createChapterText">ບົດສຶກສາໜຶ່ງສາມາດມີໄດ້ຫຼາຍບົດ.&lt;br&gt;ແຕ່ລະບົດຈະມີຮູບແບບການເດີນຂອງຕົນເອງ&lt;br&gt;ແລະ ສາມາດສ້າງໄດ້ຫຼາຍວິທີ.</string>
   <string name="fromInitialPositionTitle">ຈາກຕຳແໜ່ງເລີ່ມຕົ້ນ</string>
@@ -187,7 +187,7 @@
   <string name="fromPgnGameTitle">ຈາກເກມ PGN</string>
   <string name="fromPgnGameText">ວາງເກມໃນຮູບແບບ PGN.&lt;br&gt;ເພື່ອໂຫຼດການເດີນ, ຄວາມຄິດເຫັນ ແລະ ຮູບແບບແຍກເຂົ້າໃນບົດນີ້.</string>
   <string name="variantsAreSupportedTitle">ບົດສຶກສາຮອງຮັບຮູບແບບໝາກຮຸກອື່ນໆ</string>
-  <string name="variantsAreSupportedText">ແມ່ນແລ້ວ, ທ່ານສາມາດສຶກສາ crazyhouse&lt;br&gt;ແລະ ຮູບແບບອື່ນໆທັງໝົດໃນ Lichess ໄດ້!</string>
+  <string name="variantsAreSupportedText">ແມ່ນແລ້ວ, ທ່ານສາມາດສຶກສາ crazyhouse&lt;br&gt;ແລະ ຮູບແບບອື່ນໆທັງໝົດໃນ Logik ໄດ້!</string>
   <string name="chapterConclusionText">ບົດຕ່າງໆຈະຖືກບັນທຶກໄວ້ຕະຫຼອດໄປ.&lt;br&gt;ຂໍໃຫ້ມີຄວາມສຸກກັບການຈັດການເນື້ອຫາໝາກຮຸກຂອງທ່ານ!</string>
   <string name="doubleDefeat">ເສຍທັງສອງຝ່າຍ</string>
   <string name="blackDefeatWhiteCanNotWin">ຝ່າຍດຳເສຍ, ແຕ່ຝ່າຍຂາວບໍ່ສາມາດຊະນະໄດ້</string>

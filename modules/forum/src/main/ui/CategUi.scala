@@ -14,14 +14,14 @@ final class CategUi(helpers: Helpers, bits: ForumBits):
       .css("bits.forum")
       .csp(_.withInlineIconFont)
       .graph(
-        title = "Lichess community forum",
+        title = "Логик community forum",
         url = routeUrl(routes.ForumCateg.index),
-        description = "Chess discussions and feedback about Lichess development"
+        description = "Chess discussions and feedback about Логик development"
       ):
         val (teamCategs, globalCategs) = categs.partition(_.categ.isTeam)
         main(cls := "forum index box")(
           boxTop(
-            h1(dataIcon := Icon.BubbleConvo, cls := "text")("Lichess Forum"),
+            h1(dataIcon := Icon.BubbleConvo, cls := "text")("Логик Forum"),
             bits.searchForm()
           ),
           showCategs(globalCategs),

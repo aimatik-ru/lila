@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="lichessCoaches">Lichess treneri</string>
-  <string name="lichessCoach">Lichess trener</string>
+  <string name="lichessCoaches">Logik treneri</string>
+  <string name="lichessCoach">Logik trener</string>
   <string name="areYouCoach">Da li ste sjajni trener šaha sa %s?</string>
   <string name="nmOrFideTitle" comment="nmOrFideTitle&#10;&#10;Part of sentence &quot;Are you a great chess coach with a NM or FIDE title?&quot;&#10;&#10;The text links to our title verification page: https://lichess.org/help/master">Nacionalni majstor ili FIDE titulom</string>
   <string name="confirmTitle">Ootvrdite Vašu titulu ovde i pregledaćemo Vašu prijavu.</string>
@@ -26,5 +26,5 @@
   <string name="youtubeVideos">Youtube videozapisi</string>
   <string name="allCountries">Sve zemlje</string>
   <string name="lastLogin">Posljednja prijava</string>
-  <string name="lichessRating">Lichess ocjena</string>
+  <string name="lichessRating">Logik ocjena</string>
 </resources>

@@ -35,7 +35,7 @@ final class CoachUi(helpers: Helpers)(
       heightA := cssSize,
       cls := "picture",
       src := thumbnailUrl(c.coach),
-      alt := s"${c.user.titleUsername} Lichess coach picture"
+      alt := s"${c.user.titleUsername} Логик coach picture"
     )
 
   def widget(c: Coach.WithUser, link: Boolean)(using Context) =

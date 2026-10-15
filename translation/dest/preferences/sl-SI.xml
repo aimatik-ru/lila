@@ -60,7 +60,7 @@
   <string name="notifyGameEvent">Novo v korespondenčnih partijah</string>
   <string name="notifyChallenge">Izzivi</string>
   <string name="notifyTimeAlarm">Potekel vam bo čas</string>
-  <string name="notifyBell">Zvočno obvestilo znotraj Lichess</string>
+  <string name="notifyBell">Zvočno obvestilo znotraj Logik</string>
   <string name="notifyPush">Obvestilo naprave, ko niste na Lichessu</string>
   <string name="notifyWeb">Brskalnik</string>
   <string name="notifyDevice">Naprava</string>

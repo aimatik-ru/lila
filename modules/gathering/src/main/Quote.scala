@@ -1645,10 +1645,10 @@ object Quote:
       "Arpad Elo"
     ),
     // lichess facts
-    Quote("All features for free; for everyone; forever.", "lichess.org"),
-    Quote("We will never display ads.", "lichess.org"),
-    Quote("We do not track you. It's a rare feature, nowadays.", "lichess.org"),
-    Quote("Every chess player is a premium user.", "lichess.org"),
+    Quote("All features for free; for everyone; forever.", "play.kalugalogic.ru"),
+    Quote("We will never display ads.", "play.kalugalogic.ru"),
+    Quote("We do not track you. It's a rare feature, nowadays.", "play.kalugalogic.ru"),
+    Quote("Every chess player is a premium user.", "play.kalugalogic.ru"),
     Quote("I never lose. I either win or learn.", "Nelson Mandela")
   )
 

@@ -3,7 +3,7 @@
   <string name="community">સમુદાય</string>
   <string name="byMonth">મહિના પ્રમાણે</string>
   <string name="byTopic">વિષય પ્રમાણે</string>
-  <string name="byLichess">Lichess દ્વારા</string>
+  <string name="byLichess">Logik દ્વારા</string>
   <string name="myFriends">મારા મિત્રો</string>
   <string name="myLikes">મારી પસંદગીઓ</string>
   <string name="myBlog">મારો બ્લોગ</string>
@@ -13,7 +13,7 @@
     <item quantity="other">%s બ્લોગ પોસ્ટ્સ</item>
   </plurals>
   <string name="continueReadingPost">આ પોસ્ટ વાંચવાનું ચાલુ રાખો</string>
-  <string name="lichessBlogPostsFromXYear">%s માં Lichess બ્લોગ પોસ્ટ્સ</string>
+  <string name="lichessBlogPostsFromXYear">%s માં Logik બ્લોગ પોસ્ટ્સ</string>
   <string name="previousBlogPosts">અગાઉની બ્લોગ પોસ્ટ્સ</string>
   <string name="xBlog">%s નો બ્લોગ</string>
   <string name="newPost">નવી પોસ્ટ</string>

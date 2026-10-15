@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="lichessStreamers">Streymarar á Lichess</string>
-  <string name="lichessStreamer">Streymari á Lichess</string>
+  <string name="lichessStreamers">Streymarar á Logik</string>
+  <string name="lichessStreamer">Streymari á Logik</string>
   <string name="live">Í BEINNI!</string>
   <string name="offline">AFLÍNIS</string>
   <string name="currentlyStreaming">Nú að streyma: %s</string>
   <string name="lastStream">Síðasta streymi %s</string>
-  <string name="becomeStreamer">Gerast streymari á Lichess</string>
+  <string name="becomeStreamer">Gerast streymari á Logik</string>
   <string name="doYouHaveStream">Ertu með Twitch- eða YouTube-rás?</string>
   <string name="hereWeGo">Nú byrjar ballið!</string>
   <string name="allStreamers">Allir streymarar</string>
@@ -15,26 +15,26 @@
   <string name="downloadKit">Hlaða niður streymaratólum</string>
   <string name="xIsStreaming">%s er að streyma</string>
   <string name="rules">Reglur um að streyma</string>
-  <string name="rule1">Láttu leitarorðið „lichess.org“ fylgja með í titli streymisins þíns og notaðu flokkinn „Chess“ (Skák) þegar þú streymir á Lichess.</string>
-  <string name="rule2">Fjarlægðu leitarorðið þegar þú streymir efni sem hefur ekkert með Lichess að gera.</string>
-  <string name="rule3">Lichess greinir streymið þitt sjálfkrafa og virkjar eftirfarandi fríðindi:</string>
+  <string name="rule1">Láttu leitarorðið „play.kalugalogic.ru“ fylgja með í titli streymisins þíns og notaðu flokkinn „Chess“ (Skák) þegar þú streymir á Logik.</string>
+  <string name="rule2">Fjarlægðu leitarorðið þegar þú streymir efni sem hefur ekkert með Logik að gera.</string>
+  <string name="rule3">Logik greinir streymið þitt sjálfkrafa og virkjar eftirfarandi fríðindi:</string>
   <string name="rule4" comment="the resulting message is: Read our streaming Fairplay FAQ to ensure a fair play for everyone in your stream">Lestu %s til þess að tryggja göfuglyndi allra í streyminu þínu.</string>
   <string name="streamingFairplayFAQ">algengar spurningar og svör okkar varðandi göfuglyndi streymis</string>
   <string name="perks">Kostir þess að streyma með leitarorðinu</string>
-  <string name="perk1">Færð logandi streymarateikn á Lichess-prófílinn þinn.</string>
+  <string name="perk1">Færð logandi streymarateikn á Logik-prófílinn þinn.</string>
   <string name="perk2">Færð að vera efst uppi á streymaralistanum.</string>
-  <string name="perk3">Lætur fylgjendur þína á Lichess vita.</string>
+  <string name="perk3">Lætur fylgjendur þína á Logik vita.</string>
   <string name="perk4">Sýnir streymið þitt í skákum þínum, mótum og stúderingum.</string>
   <string name="approved">Streymið þitt er samþykkt.</string>
   <string name="pendingReview">Ritstjórar eru að skoða streymið þitt.</string>
   <string name="pleaseFillIn">Vinsamlegast fylltu út streymaraupplýsingar um þig, og sendu inn mynd.</string>
   <string name="submitForReview">Setja í ritskoðun</string>
-  <string name="streamerLanguageSettings">Streymarasíða Lichess höfðar til áhorfenda þinna á því tungumáli sem streymisveitan þín býður upp á. Stilltu rétt sjálfgefið tungumál fyrir skákstreymi þín í forritinu eða þjónustunni sem þú notar til útsendingar.</string>
+  <string name="streamerLanguageSettings">Streymarasíða Logik höfðar til áhorfenda þinna á því tungumáli sem streymisveitan þín býður upp á. Stilltu rétt sjálfgefið tungumál fyrir skákstreymi þín í forritinu eða þjónustunni sem þú notar til útsendingar.</string>
   <string name="pleaseAllow">Vinsamlegast sýndu biðlund í allt að 72 klukkustundir þar til staðfesting á streymismerki þínu og skráningu liggur fyrir.</string>
-  <string name="chooseYoutubeChannel">Veldu YouTube-rásina sem þú munt nota á Lichess.</string>
+  <string name="chooseYoutubeChannel">Veldu YouTube-rásina sem þú munt nota á Logik.</string>
   <string name="connect">Tengjast</string>
   <string name="disconnect">Aftengjast</string>
-  <string name="streamerName">Streymaranafn þitt á Lichess</string>
+  <string name="streamerName">Streymaranafn þitt á Logik</string>
   <plurals name="keepItShort">
     <item quantity="one">Hafðu það stutt: %s stafur að hámarki</item>
     <item quantity="other">Hafðu það stutt: %s stafir að hámarki</item>

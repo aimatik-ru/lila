@@ -219,8 +219,8 @@
   <string name="forgotPassword">Nakalimutan mo ba ang iyong password?</string>
   <string name="error.weakPassword">Ang password na ito ay sobrang karaniwan, at napakadaling hulaan.</string>
   <string name="error.namePassword">Mangyaring huwag gamitin ang iyong username bilang iyong password.</string>
-  <string name="youAreLeavingLichess">Aalis ka sa Lichess</string>
-  <string name="neverTypeYourPassword">Wag mong ilagay ang iyong Lichess password sa ibang website!</string>
+  <string name="youAreLeavingLichess">Aalis ka sa Logik</string>
+  <string name="neverTypeYourPassword">Wag mong ilagay ang iyong Logik password sa ibang website!</string>
   <string name="proceedToX">Magpatuloy sa %s</string>
   <string name="passwordSuggestion">Wag mo gamitin ang password na galing sa iba. Gagamitin nila ito sa pagnanakaw ng iyong account.</string>
   <string name="emailSuggestion">Wag mo ilagay ang email na galing sa iba. Gagamitin nila iyon para nakawin ang iyong account.</string>
@@ -310,7 +310,7 @@
     <item quantity="one">Magbigay ng %s segundo</item>
     <item quantity="other">Magbigay ng %s mga segundo</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Ang account na ito ay lumabag sa Mga Palatuntunan ng Lichess</string>
+  <string name="thisAccountViolatedTos">Ang account na ito ay lumabag sa Mga Palatuntunan ng Logik</string>
   <string name="openingExplorerAndTablebase">Bubukas tagalakbay &amp; base ng talahanayan</string>
   <string name="takeback">Kunin muli</string>
   <string name="proposeATakeback">Magmungkahi ng pagkuha muli</string>
@@ -479,7 +479,7 @@
   <string name="oneUrlPerLine">Isang URL kada linya.</string>
   <string name="inlineNotation">Nakalinyang notasyon</string>
   <string name="makeAStudy">Para sa pag iingat at pagbabahagi, pag isipang gumawa ng pag-aaral.</string>
-  <string name="previouslyOnLichessTV">Ang Nakaraan sa Lichess TV</string>
+  <string name="previouslyOnLichessTV">Ang Nakaraan sa Logik TV</string>
   <string name="onlinePlayers">Mga online na manlalaro</string>
   <string name="activePlayers">Aktibong manlalaro</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Mag-ingat, ay laro ay namarkahan pero walang orasan!</string>
@@ -636,7 +636,7 @@
   <string name="simulVariantsHint">Kapag ikaw ay pumili ng maraming mga magkakaiba, bawat manlalaro ay pwedeng pumili kung sino ang kanyang makakalaro.</string>
   <string name="simulClockHint">Fischer na Orasan ng pagaayos. Mas maraming manlalaro na iyong nilaro, mas maraming oras ang iyong maaring kailanganin.</string>
   <string name="simulAddExtraTime">Maaring magdadag ng sobrang oras sa iyong orasan upang tumulong na makaya ang simul.</string>
-  <string name="lichessTournaments">Mga Paligsahan ng Lichess</string>
+  <string name="lichessTournaments">Mga Paligsahan ng Logik</string>
   <string name="tournamentFAQ">Lugar ng paligsahan na FAQ</string>
   <string name="timeBeforeTournamentStarts">Oras bago magsimula ang paligsahan</string>
   <string name="averageCentipawnLoss">Karaniwang nawawalang centipawn</string>
@@ -796,7 +796,7 @@
     <item quantity="one">at i-save %s bago gumalaw na linya</item>
     <item quantity="other">at i-save %s bago gumalaw na mga linya</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Nakatanggap ka ng pribadong mensahe mula kay Lichess.</string>
+  <string name="showUnreadLichessMessage">Nakatanggap ka ng pribadong mensahe mula kay Logik.</string>
   <string name="sorry">Pasensya na :(</string>
   <string name="weHadToTimeYouOutForAWhile">Kinailangan naming tapusin ang oras mo pansamantala.</string>
   <string name="why">Bakit?</string>
@@ -808,7 +808,7 @@
   <string name="tryToWin">Subukan mong maipanalo (o maitabla man lamang) ang bawat larong nilalaro mo.</string>
   <string name="resignLostGames">Magbitiw sa mga talong laro (huwag hayaang maubos ang oras).</string>
   <string name="temporaryInconvenience">Humihingi kami ng paumanhin sa pansamantalang abala,</string>
-  <string name="wishYouGreatGames">at hiling ko para sa iyo na magkaroon ka ng mga dakilang laro sa lichess.org.</string>
+  <string name="wishYouGreatGames">at hiling ko para sa iyo na magkaroon ka ng mga dakilang laro sa play.kalugalogic.ru.</string>
   <string name="thankYouForReading">Salamat sa pagbasa!</string>
   <string name="lifetimeScore">Panghabambuhay na iskor</string>
   <string name="currentMatchScore">Kasalukuyang iskor ng labanan</string>
@@ -851,7 +851,7 @@
   <string name="congratsYouWon">Tagumpay!</string>
   <string name="gameVsX">Laro laban kay %1$s</string>
   <string name="resVsX">%1$s vs %2$s</string>
-  <string name="lostAgainstTOSViolator">Katatalo mo lang sa isang tao na lumabag sa Lichess TOS</string>
+  <string name="lostAgainstTOSViolator">Katatalo mo lang sa isang tao na lumabag sa Logik TOS</string>
   <string name="refundXpointsTimeControlY">Refund: %1$s %2$s  na rating points.</string>
   <string name="timeAlmostUp">Yung oras mo ay malapit na matapos!</string>
   <string name="clickToRevealEmailAddress">[Mag-click upang ipakita ang email address]</string>
@@ -902,12 +902,12 @@ Mag-iwan ng walang laman upang magsimula ng mga laro mula sa normal na paunang p
   <string name="resignTheGame">Resign ang laro</string>
   <string name="since">Mula noon</string>
   <string name="until">Hanggang</string>
-  <string name="lichessDbExplanation">Na-rate na mga laro na pinakita mula sa lahat ng manlalaro ng Lichess</string>
+  <string name="lichessDbExplanation">Na-rate na mga laro na pinakita mula sa lahat ng manlalaro ng Logik</string>
   <string name="switchSides">Lumipat ng sides</string>
   <string name="closingAccountWithdrawAppeal">Ang pagsasara ng iyong account ay babawiin ang iyong apela</string>
   <string name="instructions">Mga Tagubilin</string>
   <string name="showMeEverything">Ipakita ang lahat sa akin</string>
-  <string name="lichessPatronInfo">Ang Lichess ay isang charity at buong libre / libre open source software.
+  <string name="lichessPatronInfo">Ang Logik ay isang charity at buong libre / libre open source software.
 Ang lahat ng mga gastos sa pagpapatakbo, pag-unlad, at nilalaman ay pinopondohan lamang ng mga donasyon ng gumagamit.</string>
   <string name="enableBlindMode">Paganahin ang bulag mode</string>
   <string name="disableBlindMode">Huwag paganahin ang bulag mode</string>

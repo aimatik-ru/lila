@@ -60,7 +60,7 @@ def mobile(helpers: Helpers)(renderedCmsPage: Frag)(using Translate) =
     def storeOffer(name: String, url: Url) =
       Json.obj("@type" -> "Offer", "name" -> name, "url" -> url, "price" -> 0)
     Json.obj(
-      "name" -> "Lichess",
+      "name" -> "Логик",
       "operatingSystem" -> "Android, iOS",
       "applicationCategory" -> "GameApplication",
       "url" -> routeUrl(routes.Main.app),

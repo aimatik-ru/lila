@@ -16,7 +16,7 @@
   <string name="zenMode" comment="zenMode&#10;&#10;This is not the religious meaning. Turning this option on takes away make elements of the user interface.&#10;&#10;Can also translate as 'Focus mode' as one example.">מצב זן</string>
   <string name="showPlayerRatings">הצגת דירוגי שחקנים</string>
   <string name="showFlairs">הצגת הסמלילים של השחקנים</string>
-  <string name="explainShowPlayerRatings">אפשרות זו מסתירה את כל הדירוגים מ־Lichess, כדי לסייע לך להתרכז במשחק. משחקים עם דירוג עדיין ישפיעו על הדירוג שלך, אפשרות זו רק מציגה או מסתירה אותו.</string>
+  <string name="explainShowPlayerRatings">אפשרות זו מסתירה את כל הדירוגים מ־Logik, כדי לסייע לך להתרכז במשחק. משחקים עם דירוג עדיין ישפיעו על הדירוג שלך, אפשרות זו רק מציגה או מסתירה אותו.</string>
   <string name="displayBoardResizeHandle">הצג סמן להגדלת הלוח</string>
   <string name="onlyOnInitialPosition">רק בעמדה ההתחלתית</string>
   <string name="inGameOnly">רק במהלך המשחק</string>
@@ -59,8 +59,8 @@
   <string name="notifyGameEvent">עדכונים לגבי משחקים בהתכתבות</string>
   <string name="notifyChallenge">הזמנות למשחקים</string>
   <string name="notifyTimeAlarm">אוזל הזמן במשחק התכתבות</string>
-  <string name="notifyBell">התראות פעמון ב־Lichess</string>
-  <string name="notifyPush">התראה למכשיר גם כשאינך מחובר/ת ל־Lichess</string>
+  <string name="notifyBell">התראות פעמון ב־Logik</string>
+  <string name="notifyPush">התראה למכשיר גם כשאינך מחובר/ת ל־Logik</string>
   <string name="notifyWeb">דפדפן</string>
   <string name="notifyDevice">מכשיר</string>
   <string name="bellNotificationSound">השמעת צליל עבור התראות פעמון</string>

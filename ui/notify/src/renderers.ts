@@ -76,10 +76,10 @@ export default function makeRenderers(): Renderers {
     titledTourney: {
       html: n =>
         generic(n, '/tournament/' + n.content.id, licon.Trophy, [
-          h('span', [h('strong', 'Lichess Titled Arena'), drawTime(n)]),
+          h('span', [h('strong', 'Titled Arena'), drawTime(n)]),
           h('span', n.content.text),
         ]),
-      text: _ => 'Lichess Titled Arena',
+      text: _ => 'Titled Arena',
     },
     reportedBanned: {
       html: n =>

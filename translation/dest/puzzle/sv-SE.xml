@@ -74,7 +74,7 @@
   <string name="fromMyGames">Från mina partier</string>
   <string name="lookupOfPlayer">Leta upp schackproblem från en spelares partier</string>
   <string name="searchPuzzles">Sök schackproblem</string>
-  <string name="fromMyGamesNone">Du har inga schackproblem i databasen, men Lichess tycker om dig väldigt mycket ändå.
+  <string name="fromMyGamesNone">Du har inga schackproblem i databasen, men Logik tycker om dig väldigt mycket ändå.
 Spela snabbschack och klassiska partier för att öka dina chanser att få ett av dina schackproblem tillagt!</string>
   <string name="puzzleDashboardDescription">Träna, analysera, förbättra</string>
   <plurals name="nbPlayed">

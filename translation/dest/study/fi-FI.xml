@@ -65,7 +65,7 @@
   <string name="downloadGame">Lataa peli</string>
   <string name="studyUrl">Tutkielman URL</string>
   <string name="currentChapterUrl">Tämän luvun URL</string>
-  <string name="pasteToEmbedChapterInForumOrBlog" comment="youCanPasteThisInTheForumToEmbed&#10;&#10;The thing you are pasting is a link to a study. This will make it appear in the correct section as well.&#10;&#10;Please note this used to say &quot;in the forum to embed&quot;. It was then changed to include &quot;or a Lichess Blog&quot;. A further update was made to say &quot;or your Lichess blog&quot;, since you can only create blog posts as an individual.">Voit upottaa tämän luvun foorumille tai Lichess-blogiisi liittämällä tämän.</string>
+  <string name="pasteToEmbedChapterInForumOrBlog" comment="youCanPasteThisInTheForumToEmbed&#10;&#10;The thing you are pasting is a link to a study. This will make it appear in the correct section as well.&#10;&#10;Please note this used to say &quot;in the forum to embed&quot;. It was then changed to include &quot;or a Lichess Blog&quot;. A further update was made to say &quot;or your Lichess blog&quot;, since you can only create blog posts as an individual.">Voit upottaa tämän luvun foorumille tai Logik-blogiisi liittämällä tämän.</string>
   <string name="startAtInitialPosition">Aloita alkuperäisestä asemasta</string>
   <string name="startAtX">Aloita siirrosta %s</string>
   <string name="embedInYourWebsite">Upota sivustoosi tai blogiisi</string>
@@ -166,7 +166,7 @@
   <string name="youCompletedThisLesson">Onnittelut! Olet suorittanut tämän oppiaiheen.</string>
   <string name="perPage">%s per sivu</string>
   <string name="getTheTour">Avun tarpeessa? Katso esittely!</string>
-  <string name="welcomeToLichessStudyTitle">Tervetuloa Lichess-tutkielmiin!</string>
+  <string name="welcomeToLichessStudyTitle">Tervetuloa Logik-tutkielmiin!</string>
   <string name="welcomeToLichessStudyText">Tämä on jaettu analyysilauta.&lt;br&gt;&lt;br&gt;Käytä sitä pelien analysoimiseen ja kommentoimiseen,&lt;br&gt;asemien tarkasteluun ystävien kesken&lt;br&gt;ja tietysti shakkioppitunneilla!&lt;br&gt;&lt;br&gt;Katsotaanpa lähemmin, miten tämä tehokas työkalu toimii.</string>
   <string name="sharedAndSaveTitle" comment="As in: shared with other members and saved to database">Jaettuna ja tallessa</string>
   <string name="sharedAndSavedText">Toiset jäsenet näkevät siirtosi reaaliajassa!&lt;br&gt;Lisäksi kaikki pysyy ikuisesti tallennettuna.</string>
@@ -180,7 +180,7 @@
   <string name="annotatePositionTitle">Arvioi asema symbolein</string>
   <string name="annotatePositionText">Napsauta !?-painiketta tai hiiren oikealla näppäimellä oikealla olevaa siirtolistaa.&lt;br&gt;Arviosymbolit tallentuvat ja tulevat näkyviin kaikille jäsenille.</string>
   <string name="conclusionTitle">Kiitokset tutkielmiin tutustumisesta</string>
-  <string name="conclusionText">&lt;a href=\'/study/mine/hot\'&gt;Edelliset tutkielmasi&lt;/a&gt; löytyvät profiilisivultasi.&lt;br&gt;Olemme myös kirjoittaneet tutkielmista &lt;a href=\'//lichess.org/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way\'&gt;blogiin &lt;/a&gt;.&lt;br&gt;Edistyneille käyttäjille suosittelemme tutustumista pikanäppäimin, jotka saa näkyviin painamalla \"?\".&lt;br&gt;Pidä hauskaa!</string>
+  <string name="conclusionText">&lt;a href=\'/study/mine/hot\'&gt;Edelliset tutkielmasi&lt;/a&gt; löytyvät profiilisivultasi.&lt;br&gt;Olemme myös kirjoittaneet tutkielmista &lt;a href=\'/\'&gt;blogiin &lt;/a&gt;.&lt;br&gt;Edistyneille käyttäjille suosittelemme tutustumista pikanäppäimin, jotka saa näkyviin painamalla \"?\".&lt;br&gt;Pidä hauskaa!</string>
   <string name="createChapterTitle">Tutkielman luvun luonti</string>
   <string name="createChapterText">Tutkielmassa voi olla useita lukuja.&lt;br&gt;Jokaisella luvulla on oma siirtopuukaavionsa,&lt;br&gt;ja lukuja voidaan luoda monin eri tavoin.</string>
   <string name="fromInitialPositionTitle">Alkuasema</string>
@@ -188,7 +188,7 @@
   <string name="customPositionTitle">Itse määritetty asema</string>
   <string name="customPositionText">Aseta nappulat laudalle haluamallasi tavalla.&lt;br&gt;Tämä sopii loppupelien tutkimiseen.</string>
   <string name="loadGameFromTheWebTitle">Lataa peli verkosta</string>
-  <string name="loadGameFromTheWebText" comment="The special text tags must be retained in exact order, for example &amp;lt;br&amp;gt; must stay exactly as-is. You do not need to add spaces or new lines before or after them.&#10;&#10;Note that &quot;br&quot; in particular means &quot;line break&quot;. In other words, it will start a new line in the final text.">Kopioi pelin siirrot kappaleeseen liittämällä pelin URL&lt;br&gt;(esim. lichess.org/7fHIU0XI)&lt;br&gt;.</string>
+  <string name="loadGameFromTheWebText" comment="The special text tags must be retained in exact order, for example &amp;lt;br&amp;gt; must stay exactly as-is. You do not need to add spaces or new lines before or after them.&#10;&#10;Note that &quot;br&quot; in particular means &quot;line break&quot;. In other words, it will start a new line in the final text.">Kopioi pelin siirrot kappaleeseen liittämällä pelin URL&lt;br&gt;(esim. play.kalugalogic.ru/7fHIU0XI)&lt;br&gt;.</string>
   <string name="fromFenStringTitle">Tuo FEN-asema</string>
   <string name="fromFenStringText">Kun liität aseman FEN-muodossa,&lt;br&gt;&lt;i&gt;4k3/4rb2/8/7p/8/5Q2/1PP5/1K6 w&lt;/i&gt;&lt;br&gt;tutkielman luku alkaa kyseisestä asemasta.</string>
   <string name="fromPgnGameTitle">Tuo PGN-peli</string>

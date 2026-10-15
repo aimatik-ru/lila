@@ -15,7 +15,7 @@
   <string name="newBroadcast">Bagong live na broadcast</string>
   <string name="subscribedBroadcasts">Mga na-subscribe na broadcast</string>
   <string name="aboutBroadcasts">Tungkol sa mga broadcast</string>
-  <string name="howToUseLichessBroadcasts">Paano gamitin ang mga Lichess Broadcast.</string>
+  <string name="howToUseLichessBroadcasts">Paano gamitin ang mga Logik Broadcast.</string>
   <string name="theNewRoundHelp">Ang bagong round ay magkakaroon ng parehong mga miyembro at kontribyutor tulad ng nauna.</string>
   <string name="addRound">Magdagdag ng isang round</string>
   <string name="ongoing">Patuloy</string>
@@ -41,7 +41,7 @@
   <string name="federation">Pederasyon</string>
   <string name="unrated">Hindi namarkahan</string>
   <string name="recentTournaments">Kamakailang mga torneo</string>
-  <string name="openLichess">Buksan sa Lichess</string>
+  <string name="openLichess">Buksan sa Logik</string>
   <string name="teams">Mga Koponan</string>
   <string name="boards">Mga Board</string>
   <string name="subscribeTitle">Mag-subscribe upang maabisuhan kapag nagsimula ang bawat round. Maaari mong i-toggle ang kampana o push notification para sa mga broadcast sa iyong mga kagustuhan sa account.</string>

@@ -76,10 +76,10 @@ final class CmsUi(helpers: Helpers)(menu: Context ?=> Frag):
         main(cls := "page-menu")(menu, div(cls := "page-menu__content cms box")(mods)(body))
 
   def index(pages: List[CmsPage])(using Context) =
-    layout("Lichess pages")():
+    layout("Логик pages")():
       frag(
         boxTop(
-          h1("Lichess pages"),
+          h1("Логик pages"),
           div(cls := "box__top__actions")(
             input(cls := "cms__pages__search", placeholder := trans.search.search.txt(), autofocus),
             a(
@@ -129,18 +129,18 @@ final class CmsUi(helpers: Helpers)(menu: Context ?=> Frag):
     )
 
   def create(form: Form[CmsPageData], key: Option[CmsPageKey])(using ctx: Context) =
-    layout("Lichess pages: New")(cls := "box-pad"):
+    layout("Логик pages: New")(cls := "box-pad"):
       frag(
-        boxTop(h1(a(href := routes.Cms.index)("Lichess pages"), " • ", "New page!")),
+        boxTop(h1(a(href := routes.Cms.index)("Логик pages"), " • ", "New page!")),
         postForm(cls := "form3", action := routes.Cms.create):
           inForm(form, key)
       )
 
   def edit(form: Form[CmsPageData], page: CmsPage, alts: List[CmsPage])(using Context) =
-    layout(s"Lichess page ${page.key}")(cls := "box-pad"):
+    layout(s"Логик page ${page.key}")(cls := "box-pad"):
       frag(
         boxTop(
-          h1(a(href := routes.Cms.index)("Lichess page"), " • ", page.key, " (", page.language, ")"),
+          h1(a(href := routes.Cms.index)("Логик page"), " • ", page.key, " (", page.language, ")"),
           div(cls := "box__top__actions"):
             a(
               href := addQueryParam(

@@ -6,7 +6,7 @@
   <string name="all">सर्व</string>
   <string name="byMonth">महिन्यानुसार</string>
   <string name="byTopic">विषयानुसार</string>
-  <string name="byLichess">Lichess द्वारे</string>
+  <string name="byLichess">Logik द्वारे</string>
   <string name="myFriends">माझे मित्र</string>
   <string name="myLikes">माझ्या आवडी</string>
   <string name="myBlog">माझी अनुदिनी</string>
@@ -17,7 +17,7 @@
     <item quantity="other">%s अनुदिन्या</item>
   </plurals>
   <string name="continueReadingPost">ह्या अनुदिनीला वाचणे सुरू ठेवा</string>
-  <string name="lichessBlogPostsFromXYear">Lichess चे अनुदिन्या %s मध्ये</string>
+  <string name="lichessBlogPostsFromXYear">Logik चे अनुदिन्या %s मध्ये</string>
   <string name="previousBlogPosts">पूर्वीच्या अनुदिन्या</string>
   <string name="xBlog">%s चि अनुदिनी</string>
   <string name="newPost">नवीन नेमणी</string>

@@ -16,7 +16,7 @@
   <string name="zenMode" comment="zenMode&#10;&#10;This is not the religious meaning. Turning this option on takes away make elements of the user interface.&#10;&#10;Can also translate as 'Focus mode' as one example.">حالت ذن</string>
   <string name="showPlayerRatings">نشان دادن درجه‌بندی بازیکنان</string>
   <string name="showFlairs">نمایش نشان بازیکنان</string>
-  <string name="explainShowPlayerRatings">این گزینه همه درجه‌بندی‌ها در Lichess را پنهان می‌کند تا کمک کند روی شطرنج تمرکز کنید. بازی‌های رسمی همچنان بر درجه‌بندی‌تان تاثیر می‌گذارند، این گزینه فقط مربوط به دیدن/ندیدن درجه‌بندی‌هاست.</string>
+  <string name="explainShowPlayerRatings">این گزینه همه درجه‌بندی‌ها در Logik را پنهان می‌کند تا کمک کند روی شطرنج تمرکز کنید. بازی‌های رسمی همچنان بر درجه‌بندی‌تان تاثیر می‌گذارند، این گزینه فقط مربوط به دیدن/ندیدن درجه‌بندی‌هاست.</string>
   <string name="displayBoardResizeHandle">نمایش دستگیرهٔ تغییر اندازهٔ تخته</string>
   <string name="onlyOnInitialPosition">فقط در وضعیت آغازین</string>
   <string name="inGameOnly">تنها در بازی</string>
@@ -65,8 +65,8 @@
   <string name="notifyTournamentStartReminders" comment="notifyTournamentSoon&#10;&#10;A notification setting - notifies players if a tournament is starting soon.">یادآورِ آغازِ مسابقات</string>
   <string name="notifyBroadcasts">پخش همگانی</string>
   <string name="notifyTimeAlarm">هشدار تنگی زمان</string>
-  <string name="notifyBell">اعلان زنگی در Lichess</string>
-  <string name="notifyPush">اعلان اَفزاره، هنگامی که در Lichess نیستید</string>
+  <string name="notifyBell">اعلان زنگی در Logik</string>
+  <string name="notifyPush">اعلان اَفزاره، هنگامی که در Logik نیستید</string>
   <string name="notifyWeb">مرورگر</string>
   <string name="notifyDevice">اَفزاره</string>
   <string name="bellNotificationSound">صدای اعلان زنگی</string>

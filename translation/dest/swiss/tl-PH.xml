@@ -73,7 +73,7 @@ Bukod pa rito, ang isang bye ng kalahating puntos ay iniuugnay kapag ang manlala
   <string name="lateJoinQ">Maaari bang malate sumali ang mga manlalaro?</string>
   <string name="willSwissReplaceArenasA">Hindi. Sila ay mga komplementaryong tampok.</string>
   <string name="otherSystemsQ">Paano ang iba pang sistema ng paligsahan?</string>
-  <string name="otherSystemsA">Wala kaming planong idagdag ng higit pang mga sistema ng tournament sa Lichess ngayon.</string>
+  <string name="otherSystemsA">Wala kaming planong idagdag ng higit pang mga sistema ng tournament sa Logik ngayon.</string>
   <string name="teamOnly">Ang mga paligsahan sa Swiss ay maaari lamang gumawa ng mga pinuno ng koponan, at maaari lamang maglaro ng mga pinuno ng koponan.
 %1$s upang magsimulang maglaro sa mga paligsahan sa Swiss.</string>
   <string name="joinOrCreateTeam">Sumali o gumawa ng isang koponan</string>

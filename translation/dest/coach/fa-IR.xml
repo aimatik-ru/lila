@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="lichessCoaches">مربیان Lichess</string>
-  <string name="lichessCoach">مربی Lichess</string>
+  <string name="lichessCoaches">مربیان Logik</string>
+  <string name="lichessCoach">مربی Logik</string>
   <string name="areYouCoach">آیا یک مربی خوب شطرنج با %s هستید؟</string>
   <string name="nmOrFideTitle" comment="nmOrFideTitle&#10;&#10;Part of sentence &quot;Are you a great chess coach with a NM or FIDE title?&quot;&#10;&#10;The text links to our title verification page: https://lichess.org/help/master">عنوان NM یا FIDE</string>
   <string name="confirmTitle">اینجا عنوان خود را تایید کنید و ما پرونده شما را بررسی خواهیم کرد.</string>
@@ -14,7 +14,7 @@
   <string name="accepting">دانشجوها را قبول می‌کنم</string>
   <string name="notAccepting">در حال حاضر پذیرای دانشجویان نیستم</string>
   <string name="xCoachesStudents">%s مربی شطرنج‌آموزان است</string>
-  <string name="viewXProfile">رُخ‌نمای %s در Lichess را ببینید</string>
+  <string name="viewXProfile">رُخ‌نمای %s در Logik را ببینید</string>
   <string name="sendPM">یک پیام خصوصی ارسال کنید</string>
   <string name="aboutMe">درباره من</string>
   <string name="playingExperience">سابقه بازی</string>
@@ -26,5 +26,5 @@
   <string name="youtubeVideos">ویدیو های یوتیوب</string>
   <string name="allCountries">تمام کشورها</string>
   <string name="lastLogin">آخرین ورود</string>
-  <string name="lichessRating">درجه‌بندی Lichess</string>
+  <string name="lichessRating">درجه‌بندی Logik</string>
 </resources>

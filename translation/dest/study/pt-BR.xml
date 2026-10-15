@@ -65,7 +65,7 @@
   <string name="downloadGame">Baixar partida</string>
   <string name="studyUrl">URL de estudo</string>
   <string name="currentChapterUrl">URL do capítulo atual</string>
-  <string name="pasteToEmbedChapterInForumOrBlog" comment="youCanPasteThisInTheForumToEmbed&#10;&#10;The thing you are pasting is a link to a study. This will make it appear in the correct section as well.&#10;&#10;Please note this used to say &quot;in the forum to embed&quot;. It was then changed to include &quot;or a Lichess Blog&quot;. A further update was made to say &quot;or your Lichess blog&quot;, since you can only create blog posts as an individual.">Você pode colar isto no fórum ou no seu blog do Lichess para incorporar o capítulo.</string>
+  <string name="pasteToEmbedChapterInForumOrBlog" comment="youCanPasteThisInTheForumToEmbed&#10;&#10;The thing you are pasting is a link to a study. This will make it appear in the correct section as well.&#10;&#10;Please note this used to say &quot;in the forum to embed&quot;. It was then changed to include &quot;or a Lichess Blog&quot;. A further update was made to say &quot;or your Lichess blog&quot;, since you can only create blog posts as an individual.">Você pode colar isto no fórum ou no seu blog do Logik para incorporar o capítulo.</string>
   <string name="startAtInitialPosition">Começar na posição inicial</string>
   <string name="startAtX">Começar em %s</string>
   <string name="embedInYourWebsite">Incorporar em seu site ou blog</string>
@@ -166,7 +166,7 @@
   <string name="youCompletedThisLesson">Parabéns! Você completou essa lição.</string>
   <string name="perPage">%s por página</string>
   <string name="getTheTour">Perdido(a)? Faça o tour!</string>
-  <string name="welcomeToLichessStudyTitle">Bem-vindo(a) aos Estudos do Lichess!</string>
+  <string name="welcomeToLichessStudyTitle">Bem-vindo(a) aos Estudos do Logik!</string>
   <string name="welcomeToLichessStudyText">Este é um tabuleiro de análise compartilhado.&lt;br&gt;&lt;br&gt;Use para analisar jogos,&lt;br&gt;discutir posições com amigos&lt;br&gt;e, claro, ter aulas de xadrez!&lt;br&gt;&lt;br&gt;Vejamos como usar esse poderoso recurso.</string>
   <string name="sharedAndSaveTitle" comment="As in: shared with other members and saved to database">Compartilhado e salvo</string>
   <string name="sharedAndSavedText">Outros membros podem ver suas jogadas em tempo real!&lt;br&gt;E tudo fica salvo para sempre.</string>
@@ -180,7 +180,7 @@
   <string name="annotatePositionTitle">Fazer anotações</string>
   <string name="annotatePositionText">Clique com o botão direito na lista de jogadas, ou no botão !?.&lt;br&gt;As anotações são compartilhadas e salvas.</string>
   <string name="conclusionTitle">Agradecemos seu tempo</string>
-  <string name="conclusionText">Você pode ver seus &lt;a href=\'/study/mine/hot\'&gt;estudos antigos&lt;/a&gt; no seu perfil.&lt;br&gt;Há também um &lt;a href=\'//lichess.org/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way\'&gt;post sobre os estudos&lt;/a&gt;.&lt;br&gt;Usuários avançados podem apertar \"?\" para ver atalhos de teclado.&lt;br&gt;Divirta-se!</string>
+  <string name="conclusionText">Você pode ver seus &lt;a href=\'/study/mine/hot\'&gt;estudos antigos&lt;/a&gt; no seu perfil.&lt;br&gt;Há também um &lt;a href=\'/\'&gt;post sobre os estudos&lt;/a&gt;.&lt;br&gt;Usuários avançados podem apertar \"?\" para ver atalhos de teclado.&lt;br&gt;Divirta-se!</string>
   <string name="createChapterTitle">Vamos criar um capítulo</string>
   <string name="createChapterText">Um estudo pode ter vários capítulos.&lt;br&gt;Cada um tem uma árvore de jogadas&lt;br&gt;e pode ser criado de muitas formas.</string>
   <string name="fromInitialPositionTitle">A partir da posição inicial</string>
@@ -188,7 +188,7 @@
   <string name="customPositionTitle">Posição personalizada</string>
   <string name="customPositionText">Monte do seu jeito.&lt;br&gt;Bom para estudar finais.</string>
   <string name="loadGameFromTheWebTitle">Carregar uma partida da web</string>
-  <string name="loadGameFromTheWebText" comment="The special text tags must be retained in exact order, for example &amp;lt;br&amp;gt; must stay exactly as-is. You do not need to add spaces or new lines before or after them.&#10;&#10;Note that &quot;br&quot; in particular means &quot;line break&quot;. In other words, it will start a new line in the final text.">Cole a URL de uma partida&lt;br&gt;(como lichess.org/7fHIU0XI)&lt;br&gt;para carregar os lances no capítulo.</string>
+  <string name="loadGameFromTheWebText" comment="The special text tags must be retained in exact order, for example &amp;lt;br&amp;gt; must stay exactly as-is. You do not need to add spaces or new lines before or after them.&#10;&#10;Note that &quot;br&quot; in particular means &quot;line break&quot;. In other words, it will start a new line in the final text.">Cole a URL de uma partida&lt;br&gt;(como play.kalugalogic.ru/7fHIU0XI)&lt;br&gt;para carregar os lances no capítulo.</string>
   <string name="fromFenStringTitle">De uma sequência FEN</string>
   <string name="fromFenStringText">Cole uma posição FEN&lt;br&gt;&lt;i&gt;4k3/4rb2/8/7p/8/5Q2/1PP5/1K6 w&lt;/i&gt;&lt;br&gt;para iniciar o capítulo a partir dela.</string>
   <string name="fromPgnGameTitle">A partir de um jogo PGN</string>

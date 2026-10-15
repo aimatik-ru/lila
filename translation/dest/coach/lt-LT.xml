@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="lichessCoaches">Lichess treneriai</string>
-  <string name="lichessCoach">Lichess treneris</string>
+  <string name="lichessCoaches">Logik treneriai</string>
+  <string name="lichessCoach">Logik treneris</string>
   <string name="areYouCoach">Ar esate geras šachmatų treneris su %s?</string>
   <string name="nmOrFideTitle" comment="nmOrFideTitle&#10;&#10;Part of sentence &quot;Are you a great chess coach with a NM or FIDE title?&quot;&#10;&#10;The text links to our title verification page: https://lichess.org/help/master">NM ar FIDE titulu</string>
   <string name="confirmTitle">Patvirtinkite savo titulą čia ir mes peržiūrėsime jūsų aplikaciją.</string>
@@ -26,5 +26,5 @@
   <string name="youtubeVideos">YouTube vaizdo įrašai</string>
   <string name="allCountries">Visos šalys</string>
   <string name="lastLogin">Paskutinis prisijungimas</string>
-  <string name="lichessRating">Lichess reitingas</string>
+  <string name="lichessRating">Logik reitingas</string>
 </resources>

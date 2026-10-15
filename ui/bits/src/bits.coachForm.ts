@@ -20,7 +20,7 @@ site.load.then(() => {
 
     const must = [
       {
-        html: '<a href="/account/profile">Complete your Lichess profile</a>',
+        html: '<a href="/account/profile">Complete your profile</a>',
         check() {
           return $el.data('profile');
         },

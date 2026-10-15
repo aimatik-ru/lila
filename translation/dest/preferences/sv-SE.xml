@@ -60,7 +60,7 @@
   <string name="notifyChallenge">Utmaningar</string>
   <string name="notifyTimeAlarm">Korrespondensklockans tid tar slut</string>
   <string name="notifyBell">Spela upp ett klockljud vid ny avisering</string>
-  <string name="notifyPush">Enhetsnotifiering när du inte använder Lichess</string>
+  <string name="notifyPush">Enhetsnotifiering när du inte använder Logik</string>
   <string name="notifyWeb">Webbläsare</string>
   <string name="notifyDevice">Enhet</string>
   <string name="bellNotificationSound">Klock-notisljud</string>

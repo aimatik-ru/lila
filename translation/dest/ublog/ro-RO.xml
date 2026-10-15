@@ -6,7 +6,7 @@
   <string name="all">Toate</string>
   <string name="byMonth">După lună</string>
   <string name="byTopic">După subiect</string>
-  <string name="byLichess">De Lichess</string>
+  <string name="byLichess">De Logik</string>
   <string name="myFriends">Prietenii mei</string>
   <string name="myLikes">Aprecierile mele</string>
   <string name="myBlog">Blogul meu</string>
@@ -18,7 +18,7 @@
     <item quantity="other">%s de postări pe blog</item>
   </plurals>
   <string name="continueReadingPost">Continuă să citești această postare</string>
-  <string name="lichessBlogPostsFromXYear">Postări pe blog Lichess în %s</string>
+  <string name="lichessBlogPostsFromXYear">Postări pe blog Logik în %s</string>
   <string name="previousBlogPosts">Postări anterioare pe blog</string>
   <string name="xBlog">Blog-ul lui %s</string>
   <string name="newPost">Postare nouă</string>

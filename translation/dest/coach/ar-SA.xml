@@ -14,7 +14,7 @@
   <string name="accepting">قبول الطلاب</string>
   <string name="notAccepting">عدم قبول الطلاب في الوقت الراهن</string>
   <string name="xCoachesStudents">%s يدرب الطلاب الشطرنج</string>
-  <string name="viewXProfile">عرض ملف Lichess الخاص بـ %s</string>
+  <string name="viewXProfile">عرض ملف Logik الخاص بـ %s</string>
   <string name="sendPM">أرسل رسالة خاصة</string>
   <string name="aboutMe">معلومات عني</string>
   <string name="playingExperience">تجربة اللعب</string>
@@ -26,5 +26,5 @@
   <string name="youtubeVideos">فيديوهات اليوتيوب</string>
   <string name="allCountries">كافة الدول</string>
   <string name="lastLogin">آخر تواجد</string>
-  <string name="lichessRating">تقييم Lichess</string>
+  <string name="lichessRating">تقييم Logik</string>
 </resources>

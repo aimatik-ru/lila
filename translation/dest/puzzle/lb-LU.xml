@@ -74,7 +74,7 @@
   <string name="fromMyGames">Aus menge Partien</string>
   <string name="lookupOfPlayer">Sich Aufgaben aus Partie vun engem Spiller</string>
   <string name="searchPuzzles">Aufgabe sichen</string>
-  <string name="fromMyGamesNone">Et befannen sech keng Aufgabe vun dir an der Datebank, mee Lichess schätzt dech weiderhi ganz vill.
+  <string name="fromMyGamesNone">Et befannen sech keng Aufgabe vun dir an der Datebank, mee Logik schätzt dech weiderhi ganz vill.
 Spill rapid an klassesch Partien, fir deng Chancen ze erhéijen, eng Aufgab vun denge Partien bäizefügen!</string>
   <string name="puzzleDashboardDescription">Trainéier, analyséier, verbesser</string>
   <plurals name="nbPlayed">

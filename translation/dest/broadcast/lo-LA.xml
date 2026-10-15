@@ -13,7 +13,7 @@
   <string name="newBroadcast">ສ້າງການຖ່າຍທອດສົດໃໝ່</string>
   <string name="subscribedBroadcasts">ການຖ່າຍທອດສົດທີ່ຕິດຕາມ</string>
   <string name="aboutBroadcasts">ກ່ຽວກັບການຖ່າຍທອດສົດ</string>
-  <string name="howToUseLichessBroadcasts">ວິທີໃຊ້ການຖ່າຍທອດສົດ Lichess.</string>
+  <string name="howToUseLichessBroadcasts">ວິທີໃຊ້ການຖ່າຍທອດສົດ Logik.</string>
   <string name="theNewRoundHelp">ຮອບໃໝ່ຈະມີສະມາຊິກ ແລະ ຜູ້ຮ່ວມຈັດການ ຄືກັນກັບຮອບກ່ອນໜ້າ.</string>
   <string name="addRound">ເພີ່ມຮອບ</string>
   <string name="ongoing">ກຳລັງດຳເນີນການ</string>
@@ -24,8 +24,8 @@
   <string name="fullDescription">ຄຳອະທິບາຍການແຂ່ງຂັນແບບເຕັມ</string>
   <string name="fullDescriptionHelp">ຄຳອະທິບາຍການແຂ່ງຂັນແບບຍາວ (ບໍ່ບັງຄັບ). ສາມາດໃຊ້ %1$s ໄດ້. ຄວາມຍາວຕ້ອງບໍ່ເກີນ %2$s ຕົວອັກສອນ.</string>
   <string name="sourceSingleUrl">URL ແຫຼ່ງຂໍ້ມູນ PGN</string>
-  <string name="sourceUrlHelp">URL ທີ່ Lichess ຈະກວດສອບເພື່ອຮັບຂໍ້ມູນ PGN ໃໝ່. ມັນຕ້ອງສາມາດເຂົ້າເຖິງໄດ້ແບບສາທາລະນະຜ່ານອິນເຕີເນັດ.</string>
-  <string name="sourceGameIds">ລະບຸ ID ເກມ Lichess ໄດ້ສູງສຸດ 64 ລາຍການ, ແຍກກັນດ້ວຍການຍະຫວ່າງ.</string>
+  <string name="sourceUrlHelp">URL ທີ່ Logik ຈະກວດສອບເພື່ອຮັບຂໍ້ມູນ PGN ໃໝ່. ມັນຕ້ອງສາມາດເຂົ້າເຖິງໄດ້ແບບສາທາລະນະຜ່ານອິນເຕີເນັດ.</string>
+  <string name="sourceGameIds">ລະບຸ ID ເກມ Logik ໄດ້ສູງສຸດ 64 ລາຍການ, ແຍກກັນດ້ວຍການຍະຫວ່າງ.</string>
   <string name="startDateTimeZone">ວັນທີເລີ່ມຕົ້ນໃນເຂດເວລາທ້ອງຖິ່ນຂອງການແຂ່ງຂັນ: %s</string>
   <string name="startDateHelp">ບໍ່ບັງຄັບ, ຫາກທ່ານຮູ້ວັນທີເລີ່ມຕົ້ນການແຂ່ງຂັນ</string>
   <string name="currentGameUrl">URL ຂອງເກມປັດຈຸບັນ</string>
@@ -46,7 +46,7 @@
   <string name="age">ອາຍຸ</string>
   <string name="unrated">ບໍ່ມີຄະແນນ (Unrated)</string>
   <string name="recentTournaments">ການແຂ່ງຂັນເມື່ອບໍ່ດົນມານີ້</string>
-  <string name="openLichess">ເປີດໃນ Lichess</string>
+  <string name="openLichess">ເປີດໃນ Logik</string>
   <string name="teams">ທີມ</string>
   <string name="boards">ກະດານ</string>
   <string name="overview">ພາບລວມ</string>

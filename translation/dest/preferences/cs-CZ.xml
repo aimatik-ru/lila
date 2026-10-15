@@ -64,8 +64,8 @@
   <string name="notifyTournamentStartReminders" comment="notifyTournamentSoon&#10;&#10;A notification setting - notifies players if a tournament is starting soon.">Připomenutí začátku turnaje</string>
   <string name="notifyBroadcasts">Vysílání</string>
   <string name="notifyTimeAlarm">Dochází čas na korespondenčních hodinách</string>
-  <string name="notifyBell">Zvuková upozornění na Lichess</string>
-  <string name="notifyPush">Oznámení zařízení, když nejste na Lichess</string>
+  <string name="notifyBell">Zvuková upozornění na Logik</string>
+  <string name="notifyPush">Oznámení zařízení, když nejste na Logik</string>
   <string name="notifyWeb">Prohlížeč</string>
   <string name="notifyDevice">Zařízení</string>
   <string name="bellNotificationSound">Typ zvukového upozornění</string>

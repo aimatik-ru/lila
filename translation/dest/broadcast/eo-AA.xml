@@ -15,7 +15,7 @@
   <string name="newBroadcast">Nova viva elsendo</string>
   <string name="subscribedBroadcasts">Abonitaj elsendoj</string>
   <string name="aboutBroadcasts">Pri elsendoj</string>
-  <string name="howToUseLichessBroadcasts">Kiel uzi Lichess Elsendojn.</string>
+  <string name="howToUseLichessBroadcasts">Kiel uzi Logik Elsendojn.</string>
   <string name="theNewRoundHelp">La nova raŭndo havos la samajn membrojn kaj kontribuantojn, kiom la antaŭa.</string>
   <string name="addRound">Aldoni raŭndon</string>
   <string name="ongoing">Nun ludata</string>
@@ -26,8 +26,8 @@
   <string name="fullDescription">Plena eventa priskribo</string>
   <string name="fullDescriptionHelp">Laŭvola longa priskribo de la elsendo. %1$s haveblas. Longeco devas esti malpli ol %2$s literoj.</string>
   <string name="sourceSingleUrl">Retadreso de PGN</string>
-  <string name="sourceUrlHelp">URL kiun Lichess kontrolos por akiri PGN ĝisdatigojn. Ĝi devas esti publike alirebla en interreto.</string>
-  <string name="sourceGameIds">Ĝis 64 identigiloj de ludoj en Lichess, apartigitaj de komoj.</string>
+  <string name="sourceUrlHelp">URL kiun Logik kontrolos por akiri PGN ĝisdatigojn. Ĝi devas esti publike alirebla en interreto.</string>
+  <string name="sourceGameIds">Ĝis 64 identigiloj de ludoj en Logik, apartigitaj de komoj.</string>
   <string name="startDateHelp">Laŭvola, se vi scias, kiam komenciĝas la evento</string>
   <string name="currentGameUrl">Nuna luda URL</string>
   <string name="downloadAllRounds">Elŝuti ĉiujn raŭndojn</string>
@@ -46,7 +46,7 @@
   <string name="age">Aĝo</string>
   <string name="unrated">Sen rango</string>
   <string name="recentTournaments">Ĵusaj turniroj</string>
-  <string name="openLichess">Malfermi en Lichess</string>
+  <string name="openLichess">Malfermi en Logik</string>
   <string name="teams">Teamoj</string>
   <string name="boards">Tabuloj</string>
   <string name="overview">Superrigardo</string>

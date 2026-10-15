@@ -59,8 +59,8 @@
   <string name="notifyGameEvent">อัพเดตใหม่ๆของเกมยาวนาน</string>
   <string name="notifyChallenge">การประลอง</string>
   <string name="notifyTimeAlarm">นาฬิกาเกมยาวนานหมดเวลา</string>
-  <string name="notifyBell">กระดิ่งแจ้งเตือนภายใน Lichess</string>
-  <string name="notifyPush">การแจ้งเตือนบนอุปกรณ์เมื่อคุณไม่อยู่ใน Lichess</string>
+  <string name="notifyBell">กระดิ่งแจ้งเตือนภายใน Logik</string>
+  <string name="notifyPush">การแจ้งเตือนบนอุปกรณ์เมื่อคุณไม่อยู่ใน Logik</string>
   <string name="notifyWeb">บราวเซอร์</string>
   <string name="notifyDevice">อุปกรณ์</string>
   <string name="bellNotificationSound">เสียงกระดิ่งแจ้งเตือน</string>

@@ -13,7 +13,7 @@
   <string name="newBroadcast">新建实况转播</string>
   <string name="subscribedBroadcasts">订阅的转播</string>
   <string name="aboutBroadcasts">关于转播</string>
-  <string name="howToUseLichessBroadcasts">如何使用 Lichess 转播。</string>
+  <string name="howToUseLichessBroadcasts">如何使用 Logik 转播。</string>
   <string name="theNewRoundHelp">新轮次将继承上一轮次的成员与贡献者。</string>
   <string name="addRound">添加轮次</string>
   <string name="ongoing">进行中</string>
@@ -24,8 +24,8 @@
   <string name="fullDescription">锦标赛完整描述</string>
   <string name="fullDescriptionHelp">锦标赛的详细描述（可选）。可使用 %1$s 格式。长度必须少于 %2$s 个字符。</string>
   <string name="sourceSingleUrl">PGN 源文件链接</string>
-  <string name="sourceUrlHelp">Lichess 将检查此链接以获取 PGN 更新。它必须能在互联网上公开访问。</string>
-  <string name="sourceGameIds">最多 64 个 Lichess 对局 ID，以空格分隔。</string>
+  <string name="sourceUrlHelp">Logik 将检查此链接以获取 PGN 更新。它必须能在互联网上公开访问。</string>
+  <string name="sourceGameIds">最多 64 个 Logik 对局 ID，以空格分隔。</string>
   <string name="startDateTimeZone">锦标赛本地时区的开始日期：%s</string>
   <string name="startDateHelp">如果您知道赛事开始时间（可选）</string>
   <string name="currentGameUrl">当前对局链接</string>
@@ -48,7 +48,7 @@
   <string name="age">年龄</string>
   <string name="unrated">无等级分</string>
   <string name="recentTournaments">近期锦标赛</string>
-  <string name="openLichess">在 Lichess 中打开</string>
+  <string name="openLichess">在 Logik 中打开</string>
   <string name="teams">团队</string>
   <string name="boards">棋盘</string>
   <string name="overview">概览</string>

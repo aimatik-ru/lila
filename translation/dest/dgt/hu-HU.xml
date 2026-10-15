@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="dgtBoard">DGT tábla</string>
-  <string name="lichessAndDgt">Lichess &amp; DGT</string>
+  <string name="lichessAndDgt">Logik &amp; DGT</string>
   <string name="dgtBoardRequirements">DGT tábla követelmények</string>
   <string name="dgtBoardLimitations">DGT tábla limitációk</string>
   <string name="thisPageAllowsConnectingDgtBoard">Az alábbi oldal segítséget nyújt a DGT táblád csatlakoztatásához, hogy azt használhasd a játszmákban.</string>
@@ -11,7 +11,7 @@
   <string name="openingThisLink">az alábbi link megnyitásával</string>
   <string name="ifLiveChessRunningElsewhere">Ha %1$s egy másik gépen vagy másik porton fut, itt kell beállítanod az IP-címet és a portot: %2$s.</string>
   <string name="configurationSection">Beállítási rész</string>
-  <string name="keepPlayPageOpen">A játékoldalnak nyitva kell maradnia a böngésződben. Nem kell láthatónak lennie, kicsinyítheted, vagy az oldalra teheted a Lichess játékoldallal együtt, de ne zárd be, különben a tábla nem működik tovább.</string>
+  <string name="keepPlayPageOpen">A játékoldalnak nyitva kell maradnia a böngésződben. Nem kell láthatónak lennie, kicsinyítheted, vagy az oldalra teheted a Logik játékoldallal együtt, de ne zárd be, különben a tábla nem működik tovább.</string>
   <string name="boardWillAutoConnect">A tábla automatikusan csatlakozik bármelyik folyamatban lévő játékhoz, illetve bármelyik újonnan induló játékhoz. Hamarosan lehetőséged lesz kiválasztani, melyik játékban szeretnél játszani.</string>
   <string name="timeControlsForCasualGames">Időbeállítások barátságos játékokhoz: csak klasszikus, levelező és rapid.</string>
   <string name="timeControlsForRatedGames">Időbeállítások értékszámszerző játékokhoz: klasszikus, levelező és néhány rapid, például 15+10 és 20+0</string>
@@ -20,7 +20,7 @@
   <string name="checkYouHaveMadeOpponentsMove">Először ellenőrizd, hogy megtetted-e a DGT táblán az ellenfeled lépését! Vond vissza a saját lépésedet, majd játszd újra.</string>
   <string name="asALastResort">Végső megoldásként állítsd be a táblát pontosan úgy, mint a Lichessen, majd %s</string>
   <string name="reloadThisPage">Oldal frissítése</string>
-  <string name="lichessConnectivity">Lichess csatlakoztatás</string>
+  <string name="lichessConnectivity">Logik csatlakoztatás</string>
   <string name="validDgtOauthToken">DGT játékhoz megfelelő OAuth token rendelkezésre áll.</string>
   <string name="dgtPlayMenuEntryAdded">A %s bejegyzést a PLAY menüdhöz adtuk fent.</string>
   <string name="noSuitableOauthToken">Nem található OAuth token.</string>
@@ -35,7 +35,7 @@
   <string name="announceAllMoves">Összes lépés bejelentése</string>
   <string name="selectAnnouncePreference">Az IGEN opció bejelenti mindkét fél lépését, a NEM csak az ellenfeled lépését jelenti be.</string>
   <string name="announceMoveFormat">Lépésformátum</string>
-  <string name="moveFormatDescription">A Lichess a SAN jelölést használja, például \"Nf6\". Az UCI jelölést általában sakkmotorok használják, például \"g8f6\".</string>
+  <string name="moveFormatDescription">A Logik a SAN jelölést használja, például \"Nf6\". Az UCI jelölést általában sakkmotorok használják, például \"g8f6\".</string>
   <string name="keywords">Kulcsszavak</string>
   <string name="keywordFormatDescription">A kulcsszavak JSON formátumban, melyekkel az általad használt nyelvre fordítjuk a lépéseket és eredményeket. Alapértelmezetten Angol, de ezt bármikor megváltoztathatod.</string>
   <string name="debug">Hibakeresés</string>

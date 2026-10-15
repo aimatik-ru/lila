@@ -64,8 +64,8 @@
   <string name="notifyTournamentStartReminders" comment="notifyTournamentSoon&#10;&#10;A notification setting - notifies players if a tournament is starting soon.">Turnierafangs-Erinnerig</string>
   <string name="notifyBroadcasts">Überträgig</string>
   <string name="notifyTimeAlarm">Korreschpondänzzit lauft ab</string>
-  <string name="notifyBell">Akustischi Mäldig, innerhalb Lichess</string>
-  <string name="notifyPush">Mäldig vum Grät, wänn du nöd uf Lichess bisch</string>
+  <string name="notifyBell">Akustischi Mäldig, innerhalb Logik</string>
+  <string name="notifyPush">Mäldig vum Grät, wänn du nöd uf Logik bisch</string>
   <string name="notifyWeb">Browser</string>
   <string name="notifyDevice">Grät</string>
   <string name="bellNotificationSound">Ton für Benachrichtige</string>

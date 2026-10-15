@@ -15,7 +15,7 @@
   <string name="newBroadcast">Νέα ζωντανή μετάδοση</string>
   <string name="subscribedBroadcasts">Μεταδόσεις που έχω εγγραφεί</string>
   <string name="aboutBroadcasts">Σχετικά με τις μεταδόσεις</string>
-  <string name="howToUseLichessBroadcasts">Τρόπος χρήσης μεταδόσεων Lichess.</string>
+  <string name="howToUseLichessBroadcasts">Τρόπος χρήσης μεταδόσεων Logik.</string>
   <string name="theNewRoundHelp">Ο νέος γύρος θα έχει τα ίδια μέλη και τους ίδιους συνεισφέροντες με τον προηγούμενο.</string>
   <string name="addRound">Προσθήκη γύρου</string>
   <string name="ongoing">Σε εξέλιξη</string>
@@ -26,8 +26,8 @@
   <string name="fullDescription">Πλήρης περιγραφή τουρνουά</string>
   <string name="fullDescriptionHelp">Προαιρετική αναλυτική περιγραφή της μετάδοσης. Μπορείτε να χρησιμοποιήσετε %1$s και μέχρι %2$s χαρακτήρες.</string>
   <string name="sourceSingleUrl">Πηγαίο URL για PGN</string>
-  <string name="sourceUrlHelp">Η διεύθυνση URL την οποία θα χρησιμοποιήσει το Lichess για τη λήψη ενημερώσεων για τα αρχεία PGN. Πρέπει να είναι δημόσια προσβάσιμη στο διαδίκτυο.</string>
-  <string name="sourceGameIds">Έως και 64 αναγνωριστικά (id) παρτίδων Lichess, χωρισμένα με κενά.</string>
+  <string name="sourceUrlHelp">Η διεύθυνση URL την οποία θα χρησιμοποιήσει το Logik για τη λήψη ενημερώσεων για τα αρχεία PGN. Πρέπει να είναι δημόσια προσβάσιμη στο διαδίκτυο.</string>
+  <string name="sourceGameIds">Έως και 64 αναγνωριστικά (id) παρτίδων Logik, χωρισμένα με κενά.</string>
   <string name="startDateTimeZone">Ημερομηνία έναρξης στην τοπική ζώνη ώρας του τουρνουά: %s</string>
   <string name="startDateHelp">Προαιρετικό, εάν γνωρίζετε πότε αρχίζει το τουρνουά</string>
   <string name="currentGameUrl">Διεύθυνση URL αυτής της παρτίδας</string>
@@ -50,7 +50,7 @@
   <string name="age">Ηλικία</string>
   <string name="unrated">Μη βαθμολογημένο</string>
   <string name="recentTournaments">Πρόσφατα τουρνουά</string>
-  <string name="openLichess">Άνοιγμα στο Lichess</string>
+  <string name="openLichess">Άνοιγμα στο Logik</string>
   <string name="teams">Ομάδες</string>
   <string name="boards">Σκακιέρες</string>
   <string name="overview">Επισκόπηση</string>

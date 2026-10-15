@@ -5,7 +5,7 @@
   <string name="all">Krejt</string>
   <string name="byMonth">Sipas muajsh</string>
   <string name="byTopic">Sipas subjektesh</string>
-  <string name="byLichess">Nga Lichess</string>
+  <string name="byLichess">Nga Logik</string>
   <string name="myFriends">Shokët e mi</string>
   <string name="myLikes">Pëlqimet e mia</string>
   <string name="myBlog">Blogu im</string>
@@ -15,7 +15,7 @@
     <item quantity="other">%s postime blogu</item>
   </plurals>
   <string name="continueReadingPost">Vazhdoni me leximin e këtij postimi</string>
-  <string name="lichessBlogPostsFromXYear">Postime blogu Lichess në %s</string>
+  <string name="lichessBlogPostsFromXYear">Postime blogu Logik në %s</string>
   <string name="previousBlogPosts">Postime të mëparshëm blogu</string>
   <string name="xBlog">Blogu i %s</string>
   <string name="newPost">Postim i ri</string>

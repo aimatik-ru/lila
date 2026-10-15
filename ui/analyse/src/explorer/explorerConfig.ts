@@ -158,7 +158,7 @@ export const view = (ctrl: ExplorerConfigCtrl): VNode[] => [
   ),
 ];
 
-const selectText = 'Select a Lichess player';
+const selectText = 'Select a player';
 
 const playerDb = (ctrl: ExplorerConfigCtrl) => {
   const name = ctrl.data.playerName.value();

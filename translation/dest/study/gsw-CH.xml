@@ -165,7 +165,7 @@
   <string name="youCompletedThisLesson">Gratulation! Du häsch die Lektion abgschlosse.</string>
   <string name="perPage">%s pro Site</string>
   <string name="getTheTour">Bruchsch Hilf? Mach d\'Tour!</string>
-  <string name="welcomeToLichessStudyTitle">Willkomme bi de Lichess-Schtudie!</string>
+  <string name="welcomeToLichessStudyTitle">Willkomme bi de Logik-Schtudie!</string>
   <string name="welcomeToLichessStudyText">Das isch es gmeinsams Analysebrätt.&lt;br&gt;&lt;br&gt;Benutz es zum Partie analysiere und zum kommentiere,&lt;br&gt;zum Schtellige mit Fründe z\'diskutiere,&lt;br&gt;und natürli für Schachunterricht!&lt;br&gt;&lt;br&gt;Es isch es schtarchs Werchzüg, lass der ochli Zit, zum luege, wie\'s funktioniert.</string>
   <string name="sharedAndSaveTitle" comment="As in: shared with other members and saved to database">Teilt und g\'schpeicheret</string>
   <string name="sharedAndSavedText">Anderi Mitglieder chönd dini Züg live gseh!&lt;br&gt;Und alles isch gschpeicheret, für immer.</string>
@@ -179,7 +179,7 @@
   <string name="annotatePositionTitle">E Schtellig vermerke</string>
   <string name="annotatePositionText">Klick ufs !? Schaltfäld, or mach en Rächtsklick uf d\'Zugslischte uf de rächte Site&lt;br&gt;Bemerkigs-Symbol sind frei geh und gsicheret.</string>
   <string name="conclusionTitle">Merci für dini Ziit</string>
-  <string name="conclusionText">Du findsch dini &lt;a href=\'/study/mine/hot\'&gt;vorherige Schtudie&lt;/a&gt; vu dinere Profil-Site.&lt;br&gt;Da isch au en &lt;a href=\'//lichess.org/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way\'&gt;Blog-Post über Schtudie&lt;/a&gt;.&lt;br&gt;Poweruser chönd \"?\" trucke, um d\'Taschtaturchürzel z\'gseh.&lt;br&gt;Viel Schpass!</string>
+  <string name="conclusionText">Du findsch dini &lt;a href=\'/study/mine/hot\'&gt;vorherige Schtudie&lt;/a&gt; vu dinere Profil-Site.&lt;br&gt;Da isch au en &lt;a href=\'/\'&gt;Blog-Post über Schtudie&lt;/a&gt;.&lt;br&gt;Poweruser chönd \"?\" trucke, um d\'Taschtaturchürzel z\'gseh.&lt;br&gt;Viel Schpass!</string>
   <string name="createChapterTitle">Es Schtudie-Kapitel kreiere</string>
   <string name="createChapterText">E Schtudie chann mehreri Kapitel ha.&lt;br&gt;Jedes Kapitel hät en klare Zugsbaum,&lt;br&gt;und chann uf verschideni Arte kreiert werde.</string>
   <string name="fromInitialPositionTitle">Ab de Usgangsschtellig</string>

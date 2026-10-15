@@ -75,7 +75,7 @@
   <string name="fromMyGames">Úr skákum mínum</string>
   <string name="lookupOfPlayer">Fletta upp þrautum útfrá skákum notanda</string>
   <string name="searchPuzzles">Leita að þrautum</string>
-  <string name="fromMyGamesNone">Þú átt engar þrautir í gagnagrunninum, en Lichess þykir samt svo vænt um þig.
+  <string name="fromMyGamesNone">Þú átt engar þrautir í gagnagrunninum, en Logik þykir samt svo vænt um þig.
 
 Tefldu atskákir og hefðbundnar skákir til þess að auka líkurnar á því að þraut þinni verði bætt við!</string>
   <plurals name="puzzlesFoundInUserGames">

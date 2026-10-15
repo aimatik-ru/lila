@@ -17,7 +17,7 @@
     <item quantity="other">%s objav v spletnem dnevniku</item>
   </plurals>
   <string name="continueReadingPost">Nadaljujte z branjem te objave</string>
-  <string name="lichessBlogPostsFromXYear">Objave v spletnem dnevniku Lichess v %s</string>
+  <string name="lichessBlogPostsFromXYear">Objave v spletnem dnevniku Logik v %s</string>
   <string name="previousBlogPosts">Prejšnje objave v spletnem dnevniku</string>
   <string name="xBlog">%s blog</string>
   <string name="newPost">Nova objava</string>

@@ -62,7 +62,7 @@
   <string name="fromMyGames">Dari permainan saya</string>
   <string name="lookupOfPlayer">Mencari teka-teki dari permainan pemain</string>
   <string name="searchPuzzles">Cari teka-teki</string>
-  <string name="fromMyGamesNone">Anda tidak mempunyai teka-teki dalam pangkalan data, tetapi Lichess masih sangat menyayangi anda.
+  <string name="fromMyGamesNone">Anda tidak mempunyai teka-teki dalam pangkalan data, tetapi Logik masih sangat menyayangi anda.
 Main permainan pantas dan klasik untuk meningkatkan peluang anda untuk menambahkan teka-teki anda!</string>
   <plurals name="puzzlesFoundInUserGames">
     <item quantity="other">%1$s Teka-teki dijumpai dalam permainan oleh %2$s</item>

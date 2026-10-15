@@ -161,7 +161,7 @@
   <string name="youCompletedThisLesson">ยินดีด้วย! คุณจบบทเรียนนี้แล้ว</string>
   <string name="perPage">%s ต่อหน้า</string>
   <string name="getTheTour">ต้องการให้ช่วยเหลือไหม ไปทัวร์กัน</string>
-  <string name="welcomeToLichessStudyTitle">ยินดีต้อนรับสู่กรณีศึกษาบน Lichess</string>
+  <string name="welcomeToLichessStudyTitle">ยินดีต้อนรับสู่กรณีศึกษาบน Logik</string>
   <string name="welcomeToLichessStudyText">นี่คือกระดานวิเคราะห์แบบใช้ร่วมกัน&lt;br&gt;&lt;br&gt;ใช้ในการวิเคราะห์และใส่คำอธิบายประกอบเกม&lt;br&gt;พูดคุยเกี่ยวกับตำแหน่งต่างๆ กับเพื่อน&lt;br&gt;และแน่นอนสำหรับบทเรียนหมากรุก!&lt;br&gt;&lt;br&gt;นี่เป็นเครื่องมือที่มีประสิทธิภาพ ลองใช้เวลาสักครู่เพื่อดูว่ามันทำงานอย่างไร</string>
   <string name="sharedAndSaveTitle" comment="As in: shared with other members and saved to database">แชร์และบันทึกแล้ว</string>
   <string name="sharedAndSavedText">สมาชิกคนอื่นๆ สามารถดูตาเดินของคุณได้แบบตามเวลาจริง&lt;br&gt;นอกจากนี้ ทุกอย่างยังถูกบันทึกไว้ตลอดไปอีกด้วย</string>
@@ -176,7 +176,7 @@
   <string name="annotatePositionText">กดปุ่ม !? หรือคลิกขวาที่ตารางที่แสดงตาเดินที่อยู่ฝั่งขวา &lt;br&gt; อักษรคำอธิบายประกอบ
 จะถูกแชร์และบันทึก</string>
   <string name="conclusionTitle">ขอบคุณสำหรับเวลาของคุณ</string>
-  <string name="conclusionText">คุณสามารถเจอ&lt;a href=\'/study/mine/hot\'&gt;การศึกษาก่อนหน้า&lt;/a&gt;จากหน้าโปรไฟล์ &lt;br&gt;นอกจากนั้นยังมี &lt;a href=\'//lichess.org/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way\'&gt; บล็อกเกี่ยวกับกรณีศึกษา&lt;/a&gt; &lt;br&gt;ผู้ใช้งานขั้นสูงอาจต้องการกด \"?\" เพื่อดูแป้นพิมพ์ลัด&lt;br&gt;ขอให้สนุกน้า!</string>
+  <string name="conclusionText">คุณสามารถเจอ&lt;a href=\'/study/mine/hot\'&gt;การศึกษาก่อนหน้า&lt;/a&gt;จากหน้าโปรไฟล์ &lt;br&gt;นอกจากนั้นยังมี &lt;a href=\'/\'&gt; บล็อกเกี่ยวกับกรณีศึกษา&lt;/a&gt; &lt;br&gt;ผู้ใช้งานขั้นสูงอาจต้องการกด \"?\" เพื่อดูแป้นพิมพ์ลัด&lt;br&gt;ขอให้สนุกน้า!</string>
   <string name="createChapterTitle">มาสร้างบทเรียนกันเถอะ</string>
   <string name="createChapterText">กรณีศึกษาหนึ่งสามารถมีได้หลายบท&lt;br&gt;แต่ละบทจะมีตาเดินหลายแขนง&lt;br&gt;และและสามารถสร้างขึ้นได้หลายวิธี</string>
   <string name="fromInitialPositionTitle">จากตำแหน่งเริ่มต้น</string>

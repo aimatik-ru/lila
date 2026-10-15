@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="lichessStreamers">Lichess yayımçıları</string>
-  <string name="lichessStreamer">Lichess yayımçısı</string>
+  <string name="lichessStreamers">Logik yayımçıları</string>
+  <string name="lichessStreamer">Logik yayımçısı</string>
   <string name="live">CANLI!</string>
   <string name="offline">OFLAYN</string>
   <string name="currentlyStreaming">Hazırda yayımdadır: %s</string>
   <string name="lastStream">Son yayım %s</string>
-  <string name="becomeStreamer">Lichess yayımçısı ol</string>
+  <string name="becomeStreamer">Logik yayımçısı ol</string>
   <string name="doYouHaveStream">Twitch və ya YouTube kanalınız var?</string>
   <string name="hereWeGo">Getdik!</string>
   <string name="allStreamers">Bütün yayımçılar</string>
@@ -15,18 +15,18 @@
   <string name="downloadKit">Yayımçı dəstini endir</string>
   <string name="xIsStreaming">%s yayımdadır</string>
   <string name="rules">Yayım qaydaları</string>
-  <string name="rule1">Lichessdə yayım qoşarkən, yayım başlığına \"lichess.org\" açar sözünü daxil edin və Şahmat kateqoriyasını seçin.</string>
-  <string name="rule2">Lichess ilə əlaqəsi olmayan bir yayım edərkən bu açar sözü çıxardın.</string>
-  <string name="rule3">Lichess, yayımınızı avtomatik aşkarlayacaq və bu üstünlükləri aktivləşdirəcək:</string>
+  <string name="rule1">Lichessdə yayım qoşarkən, yayım başlığına \"play.kalugalogic.ru\" açar sözünü daxil edin və Şahmat kateqoriyasını seçin.</string>
+  <string name="rule2">Logik ilə əlaqəsi olmayan bir yayım edərkən bu açar sözü çıxardın.</string>
+  <string name="rule3">Logik, yayımınızı avtomatik aşkarlayacaq və bu üstünlükləri aktivləşdirəcək:</string>
   <string name="perks">Açar söz ilə yayım aparmağın üstünlükləri</string>
-  <string name="perk1">Lichess profilinizdə, yanan yayımçı nişanını göstər.</string>
+  <string name="perk1">Logik profilinizdə, yanan yayımçı nişanını göstər.</string>
   <string name="perk2">Yayımçılar siyahısında ən üst sırada görünün.</string>
-  <string name="perk3">Lichess izləyicilərinizə bildiriş göndərmək.</string>
+  <string name="perk3">Logik izləyicilərinizə bildiriş göndərmək.</string>
   <string name="perk4">Oyun, turnir və çalışmalarınızda yayımınızı göstərə biləcəksiniz.</string>
   <string name="approved">Yayımınız təsdiqləndi.</string>
   <string name="pendingReview">Yayımınız moderatorlar tərəfindən nəzərdən keçirilir.</string>
   <string name="pleaseFillIn">Lütfən yayımçı məlumatlarını doldurun və bir şəkil yükləyin.</string>
-  <string name="streamerName">Lichess yayımçı adınız</string>
+  <string name="streamerName">Logik yayımçı adınız</string>
   <plurals name="keepItShort">
     <item quantity="one">Qısa saxlayın: ən çox %s simvol</item>
     <item quantity="other">Qısa saxlayın: ən çox %s simvol</item>

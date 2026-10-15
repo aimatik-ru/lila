@@ -250,9 +250,9 @@
   <string name="forgotPassword">Unohditko salasanasi?</string>
   <string name="error.weakPassword">Tämä salasana on erittäin yleinen ja liian helppo arvata.</string>
   <string name="error.namePassword">Älä laita salasanaksesi käyttäjänimeäsi.</string>
-  <string name="blankedPassword">Olet käyttänyt samaa salasanaa toisella sivustolla, ja kyseinen sivusto on vaarantunut. Sinun on asetettava uusi salasana Lichess-tunnuksesi turvallisuuden varmistamiseksi. Kiitokset ymmärtäväisyydestäsi.</string>
+  <string name="blankedPassword">Olet käyttänyt samaa salasanaa toisella sivustolla, ja kyseinen sivusto on vaarantunut. Sinun on asetettava uusi salasana Logik-tunnuksesi turvallisuuden varmistamiseksi. Kiitokset ymmärtäväisyydestäsi.</string>
   <string name="youAreLeavingLichess">Olet poistumassa Lichessistä</string>
-  <string name="neverTypeYourPassword">Älä koskaan kirjoita Lichess-salasanaasi toiselle sivustolle!</string>
+  <string name="neverTypeYourPassword">Älä koskaan kirjoita Logik-salasanaasi toiselle sivustolle!</string>
   <string name="proceedToX">Siirry %s</string>
   <string name="passwordSuggestion">Älä ota käyttöön jonkun toisen ehdottamaa salasanaa. Hän voi varastaa sen avulla käyttäjätunnuksesi.</string>
   <string name="emailSuggestion">Älä ota käyttöön jonkun toisen ehdottamaa sähköpostiosoitetta. Hän voi varastaa sen avulla käyttäjätunnuksesi.</string>
@@ -264,7 +264,7 @@
   <string name="emailSent">Olemme lähettäneet sähköpostin osoitteeseen %s.</string>
   <string name="emailCanTakeSomeTime">Sähköpostin saapuminen voi kestää jonkin aikaa.</string>
   <string name="refreshInboxAfterFiveMinutes">Odota 5 minuuttia ja päivitä sähköpostin saapuneet-kansio.</string>
-  <string name="checkSpamOrJunkFolder" comment="checkSpamFolder&#10;It = The confirmation email">Jos et saa vahvistussähköpostia, tarkista roskapostikansiosi. Muista luokitella lichess.org-osoitteesta tulevat viestit turvallisiksi ja \"ei roskapostiksi\", jotta voit pysyä ajan tasalla tärkeistä viesteistä.</string>
+  <string name="checkSpamOrJunkFolder" comment="checkSpamFolder&#10;It = The confirmation email">Jos et saa vahvistussähköpostia, tarkista roskapostikansiosi. Muista luokitella play.kalugalogic.ru-osoitteesta tulevat viestit turvallisiksi ja \"ei roskapostiksi\", jotta voit pysyä ajan tasalla tärkeistä viesteistä.</string>
   <string name="sendEmailForAccountVerification">Jos et löydä vahvistussähköpostia, lähetä meille sähköposti osoitteeseen %s, niin me vahvistamme käyttäjätunnuksesi.</string>
   <string name="accountConfirmed">Käyttäjän %s vahvistaminen onnistui.</string>
   <string name="accountCanLogin">Voit nyt kirjautua sisään tunnuksella %s.</string>
@@ -547,7 +547,7 @@ Kavereita pelaamassa: %2$s</string>
   <string name="inlineNotation">Rivinsisäinen kommentointi</string>
   <string name="makeAStudy">Tallenna analyysisi tutkielmaksi, jos haluat säilyttää sen tai jakaa sen muiden kanssa.</string>
   <string name="clearLocalData">Tyhjennä paikalliset tiedot</string>
-  <string name="previouslyOnLichessTV">Viimeksi Lichess TV:ssä</string>
+  <string name="previouslyOnLichessTV">Viimeksi Logik TV:ssä</string>
   <string name="onlinePlayers">Paikalla olevat pelaajat</string>
   <string name="activePlayers">Aktiiviset pelaajat</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Huomaa, että peli on pisteytetty, vaikka siinä ei olekaan aikarajoitetta!</string>
@@ -564,7 +564,7 @@ Kavereita pelaamassa: %2$s</string>
   <string name="featuredBots">Botit näytteillä</string>
   <string name="tryPlayingTheseInnovativeChessEngines">Kokeilepa pelata näitä innovatiivisia shakkitietokoneita vastaan! Ne ovat suosikkejamme.</string>
   <string name="communityBots">Yhteisön botit</string>
-  <string name="moreChessEnginesCreatedByTheLichessCommunity">Lisää Lichess-yhteisön luomia shakkitietokoneita. Niiden luojat isännöivät niitä eivätkä ne välttämättä ole aina verkossa.</string>
+  <string name="moreChessEnginesCreatedByTheLichessCommunity">Lisää Logik-yhteisön luomia shakkitietokoneita. Niiden luojat isännöivät niitä eivätkä ne välttämättä ole aina verkossa.</string>
   <string name="name">Nimi</string>
   <string name="description">Kuvaus</string>
   <string name="descPrivate">Yksityinen kuvaus</string>
@@ -935,7 +935,7 @@ Kavereita pelaamassa: %2$s</string>
   <string name="tryToWin">Yritä voittaa (tai edes pelata tasan) jokainen pelisi.</string>
   <string name="resignLostGames">Luovuta hävityt pelit (äläkä anna ajan kulua loppuun).</string>
   <string name="temporaryInconvenience">Pahoittelemme tilapäistä harmia,</string>
-  <string name="wishYouGreatGames">ja toivotamme hyviä pelejä lichess.org -sivustolla.</string>
+  <string name="wishYouGreatGames">ja toivotamme hyviä pelejä play.kalugalogic.ru -sivustolla.</string>
   <string name="thankYouForReading">Kiitos, että luit tämän!</string>
   <string name="lifetimeScore">Kaikkien aikojen yhteistilanne</string>
   <string name="currentMatchScore">Nykyisen ottelun tilanne</string>
@@ -1042,7 +1042,7 @@ Jätä kenttä tyhjäksi, jos haluat pelien alkavan normaalista alkuasemasta.</s
   <string name="ourEventTips">Meidän vinkkimme tapahtumien järjestämiseen</string>
   <string name="instructions">Ohjeet</string>
   <string name="showMeEverything">Näytä kaikki</string>
-  <string name="lichessPatronInfo">Lichess on hyväntekeväisyysjärjestö ja täysin ilmainen avoimen lähdekoodin ohjelmisto.
+  <string name="lichessPatronInfo">Logik on hyväntekeväisyysjärjestö ja täysin ilmainen avoimen lähdekoodin ohjelmisto.
 Kaikki toimintakustannukset, kehitystyö ja sisältö rahoitetaan yksinomaan käyttäjien lahjoituksilla. Ilman anteliasta yhteisöämme emme pystyisi pitämään sivustoa yllä. Kiitos liittymisestä tukijoihimme!  </string>
   <string name="nothingToSeeHere">Täällä ei ole tällä hetkellä mitään nähtävää.</string>
   <string name="stats">Tilastot</string>

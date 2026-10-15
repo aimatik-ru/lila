@@ -249,9 +249,9 @@
   <string name="forgotPassword">Har du gløymt passordet?</string>
   <string name="error.weakPassword">Passordet er svært vanleg og for lett å gjette.</string>
   <string name="error.namePassword">Ikkje bruk namnet ditt som passord.</string>
-  <string name="blankedPassword">Du har brukt det same passordet på ei nettside som er vorte kompromittert. For å ta i vare tryggleiken på Lichess-kontoen din, er det naudynt at du lagar eit nytt passord. Takk for di forståing.</string>
-  <string name="youAreLeavingLichess">Du forlèt Lichess</string>
-  <string name="neverTypeYourPassword">Skriv aldri Lichess-passordet på ei anna webside!</string>
+  <string name="blankedPassword">Du har brukt det same passordet på ei nettside som er vorte kompromittert. For å ta i vare tryggleiken på Logik-kontoen din, er det naudynt at du lagar eit nytt passord. Takk for di forståing.</string>
+  <string name="youAreLeavingLichess">Du forlèt Logik</string>
+  <string name="neverTypeYourPassword">Skriv aldri Logik-passordet på ei anna webside!</string>
   <string name="proceedToX">Fortsett til %s</string>
   <string name="passwordSuggestion">Ikkje bruk passord føreslått av andre. Dei kan bruka det til å stela kontoen din.</string>
   <string name="emailSuggestion">Ikkje bruk ein e-postadresse føreslått av andre. Dei kan bruka det til å stela kontoen din.</string>
@@ -358,7 +358,7 @@
     <item quantity="one">Gje %s sekund</item>
     <item quantity="other">Gje %s sekund</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Brukaren bak denne kontoen braut med Lichess sine brukarvilkår</string>
+  <string name="thisAccountViolatedTos">Brukaren bak denne kontoen braut med Logik sine brukarvilkår</string>
   <string name="openingExplorerAndTablebase">Opningsutforskar &amp; tabellbase</string>
   <string name="takeback">Gjer om trekket</string>
   <string name="proposeATakeback">Framlegg om å gjera om trekket</string>
@@ -547,7 +547,7 @@ Vener som spelar: %2$s</string>
   <string name="inlineNotation">Innbygd notasjon</string>
   <string name="makeAStudy">Om du vil ta vare på trekka til seinare er det betre å laga ein studie.</string>
   <string name="clearLocalData">Fjern lokale data</string>
-  <string name="previouslyOnLichessTV">Tidlegare på Lichess TV</string>
+  <string name="previouslyOnLichessTV">Tidlegare på Logik TV</string>
   <string name="onlinePlayers">Innlogga spelarar</string>
   <string name="activePlayers">Aktive spelarar</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Legg merke til at partiet er rangert, men ikkje tidsavgrensa!</string>
@@ -560,11 +560,11 @@ Vener som spelar: %2$s</string>
   <string name="autoSwitch">Hopp automatisk til neste parti</string>
   <string name="puzzles">Sjakknøtter</string>
   <string name="onlineBots">Online botar</string>
-  <string name="aboutBotsOnLichess">Om bottar på Lichess</string>
+  <string name="aboutBotsOnLichess">Om bottar på Logik</string>
   <string name="featuredBots">Framheva bottar</string>
   <string name="tryPlayingTheseInnovativeChessEngines">Prøv å spela desse nyskapande sjakkmotorane! Dei er favorittane våre.</string>
   <string name="communityBots">Bottar frå sjakkmiljøet</string>
-  <string name="moreChessEnginesCreatedByTheLichessCommunity">Fleire sjakkmotorar laga av Lichess-samfunnet. Skaparane av motorane er sjølve vertar, og kanskje ikkje alltid online.</string>
+  <string name="moreChessEnginesCreatedByTheLichessCommunity">Fleire sjakkmotorar laga av Logik-samfunnet. Skaparane av motorane er sjølve vertar, og kanskje ikkje alltid online.</string>
   <string name="name">Namn</string>
   <string name="description">Forklaring</string>
   <string name="descPrivate">Privat omtale</string>
@@ -701,7 +701,7 @@ Vener som spelar: %2$s</string>
   <string name="aboutX">Om %s</string>
   <string name="xIsAFreeYLibreOpenSourceChessServer">%1$s er ein fritt tilgjengeleg (%2$s), libre, annonsefri, open kjeldekode sjakk-server.</string>
   <string name="really">verkeleg</string>
-  <string name="lichessUpdates">Lichess-oppdateringar</string>
+  <string name="lichessUpdates">Logik-oppdateringar</string>
   <string name="contribute">Bidra</string>
   <string name="changelog">Endringslogg</string>
   <string name="termsOfService">Brukarvilkår</string>
@@ -731,7 +731,7 @@ Vener som spelar: %2$s</string>
   <string name="extraClockTimeForHost" comment="Appears on: https://lichess.org/simul/new&#10;&#10;Allows a simul host to select extra time for the simul.&#10;&#10;Please note this string used to state &quot;Host extra clock time&quot;, without the word &quot;initial&quot;">Ekstra klokketid for verten:</string>
   <string name="simulAddExtraTimePerPlayer">Legg ekstra tenketid til klokka di for kvar spelar som melder seg på simultanspelet.</string>
   <string name="simulHostExtraTimePerPlayer">Ekstra tenketid som simultanverten får for kvar spelar</string>
-  <string name="lichessTournaments">Lichess-turnering</string>
+  <string name="lichessTournaments">Logik-turnering</string>
   <string name="tournamentFAQ">Spørsmål og svar knytta til arenaturnering</string>
   <string name="timeBeforeTournamentStarts">Tid til turneringa startar</string>
   <string name="averageCentipawnLoss">Gjennomsnittleg centibondetap</string>
@@ -922,7 +922,7 @@ Vener som spelar: %2$s</string>
     <item quantity="one">og lagra %s line med førehandstrekk</item>
     <item quantity="other">og lagra %s liner med førehandstrekk</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Du har fått ei privat melding frå Lichess.</string>
+  <string name="showUnreadLichessMessage">Du har fått ei privat melding frå Logik.</string>
   <string name="readTheMessage" comment="'It' refers to a private message. This text follows after a different string which advises players they have received a private message from Lichess. For users, this is appears as a regular private message from the Lichess account: https://lichess.org/@/Lichess">Les meldinga</string>
   <string name="sorry">Beklagar :(</string>
   <string name="weHadToTimeYouOutForAWhile">Vi måtte gje deg ein timeout.</string>
@@ -935,7 +935,7 @@ Vener som spelar: %2$s</string>
   <string name="tryToWin">Forsøk å vinne (eller i det minste oppnå remis) i alle parti du spelar.</string>
   <string name="resignLostGames">Resigner ved tapte stillingar (ikkje la tida renne ut).</string>
   <string name="temporaryInconvenience">Vi seier oss leie for det kortvarige bryet,</string>
-  <string name="wishYouGreatGames">og vonar du får gode sjakkoppgjer på lichess.org.</string>
+  <string name="wishYouGreatGames">og vonar du får gode sjakkoppgjer på play.kalugalogic.ru.</string>
   <string name="thankYouForReading">Takk for at du leste!</string>
   <string name="lifetimeScore">Livstidsscore</string>
   <string name="currentMatchScore">Gjeldande kampscore</string>
@@ -981,7 +981,7 @@ Vener som spelar: %2$s</string>
   <string name="congratsYouWon">Gratulerer, du vann!</string>
   <string name="gameVsX">Spel mot %1$s</string>
   <string name="resVsX">%1$s mot %2$s</string>
-  <string name="lostAgainstTOSViolator">Du tapte mot nokon som braut med Lichess\' sine vilkår</string>
+  <string name="lostAgainstTOSViolator">Du tapte mot nokon som braut med Logik\' sine vilkår</string>
   <string name="refundXpointsTimeControlY">Refundering: %1$s %2$s ratingpoeng.</string>
   <string name="timeAlmostUp">Tida er nesten ute!</string>
   <string name="clickToRevealEmailAddress">[Klikk for å visa epost-adresse]</string>
@@ -1036,13 +1036,13 @@ La feltet stå tomt for å starte partia frå den normale utgangsstillinga.</str
   <string name="youCantStartNewGame">Du kan ikkje starta eit nytt parti når det er ditt trekk.</string>
   <string name="since">Frå</string>
   <string name="until">Til</string>
-  <string name="lichessDbExplanation">Rangerte parti samla inn frå alle Lichess-spelarar</string>
+  <string name="lichessDbExplanation">Rangerte parti samla inn frå alle Logik-spelarar</string>
   <string name="switchSides">Byt side</string>
   <string name="closingAccountWithdrawAppeal">Dersom du stenger kontoen din vil protesten din bli trekt attende</string>
   <string name="ourEventTips">Tips for å organisere arrangement</string>
   <string name="instructions">Instruksjonar</string>
   <string name="showMeEverything">Vis alt</string>
-  <string name="lichessPatronInfo">Lichess er ein velgjerdsorganisasjon basert på fritt tilgjengeleg open-kjeldekode-programvare.
+  <string name="lichessPatronInfo">Logik er ein velgjerdsorganisasjon basert på fritt tilgjengeleg open-kjeldekode-programvare.
 Alle kostnader for drift, utvikling og innhald vert finansiert eine og åleine av brukardonasjonar.</string>
   <string name="nothingToSeeHere">Ikkje noko å sjå nett no.</string>
   <string name="stats">Statistikk</string>

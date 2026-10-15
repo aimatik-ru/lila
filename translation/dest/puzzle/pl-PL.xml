@@ -81,7 +81,7 @@
   <string name="fromMyGames">Z moich gier</string>
   <string name="lookupOfPlayer">Wyszukaj zadań z gier gracza</string>
   <string name="searchPuzzles">Szukaj zadań</string>
-  <string name="fromMyGamesNone">Nie masz zadań w bazie danych, ale Lichess nadal bardzo Cię kocha.
+  <string name="fromMyGamesNone">Nie masz zadań w bazie danych, ale Logik nadal bardzo Cię kocha.
 Graj partie szybkie i klasyczne, aby zwiększyć swoje szanse na dodanie zadania!</string>
   <plurals name="puzzlesFoundInUserGames">
     <item quantity="one">Jedno zadanie szachowe znalezione w partiach gracza %2$s</item>

@@ -232,7 +232,7 @@ final class PushApi(
             "invitedBy" -> invitedBy,
             "studyName" -> studyName.value,
             "studyId" -> studyId.value,
-            "url" -> s"https://lichess.org/study/$studyId"
+            "url" -> s"https://play.kalugalogic.ru/study/$studyId"
           )
         )
     )
@@ -328,7 +328,7 @@ final class PushApi(
                 "mentionedBy" -> mentionedBy,
                 "topic" -> topicName,
                 "postId" -> postId.value,
-                "url" -> s"https://lichess.org/forum/redirect/post/$postId"
+                "url" -> s"https://play.kalugalogic.ru/forum/redirect/post/$postId"
               )
             )
     )
@@ -343,7 +343,7 @@ final class PushApi(
         payload = payload(
           "type" -> "streamStart",
           "streamerId" -> streamerId.value,
-          "url" -> s"https://lichess.org/streamer/$streamerId/redirect"
+          "url" -> s"https://play.kalugalogic.ru/streamer/$streamerId/redirect"
         ),
         mobileCompatible = None
       )

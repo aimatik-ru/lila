@@ -224,7 +224,7 @@ object Tournament:
       startsAt = startsAt
     )
 
-  def tournamentUrl(tourId: TourId) = Url(s"https://lichess.org/tournament/$tourId")
+  def tournamentUrl(tourId: TourId) = Url(s"https://play.kalugalogic.ru/tournament/$tourId")
 
   def makeId = TourId(ThreadLocalRandom.nextString(8))
 

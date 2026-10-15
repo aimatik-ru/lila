@@ -65,8 +65,8 @@
   <string name="notifyTournamentStartReminders" comment="notifyTournamentSoon&#10;&#10;A notification setting - notifies players if a tournament is starting soon.">Υπενθύμιση έναρξης τουρνουά</string>
   <string name="notifyBroadcasts">Μεταδόσεις</string>
   <string name="notifyTimeAlarm">Λίγος χρόνος σε παρτίδα δι\' αλληλογραφίας</string>
-  <string name="notifyBell">Ειδοποίηση με καμπανάκι εντός του Lichess</string>
-  <string name="notifyPush">Ειδοποίηση συσκευής όταν δεν είστε στο Lichess</string>
+  <string name="notifyBell">Ειδοποίηση με καμπανάκι εντός του Logik</string>
+  <string name="notifyPush">Ειδοποίηση συσκευής όταν δεν είστε στο Logik</string>
   <string name="notifyWeb">Browser</string>
   <string name="notifyDevice">Συσκευή</string>
   <string name="bellNotificationSound">Ειδοποίηση με ήχο από καμπανάκι</string>

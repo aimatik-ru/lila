@@ -24,7 +24,7 @@ const viewOngoing = (ctrl: SetupCtrl) => {
           hl('p.bot-setup__ongoing__text', 'Should we resume our game?'),
         ]),
       ])
-    : hl('h1.bot-setup__title', ['Lichess official bots', hl('strong.beta', 'EARLY BETA')]);
+    : hl('h1.bot-setup__title', ['Боты', hl('strong.beta', 'EARLY BETA')]);
 };
 
 const viewBotList = (ctrl: SetupCtrl) => {

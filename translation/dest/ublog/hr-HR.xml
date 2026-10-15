@@ -2,7 +2,7 @@
 <resources>
   <string name="likedBlogs">Pozitivno ocjenjeni blogovi</string>
   <string name="continueReadingPost">Nastavi čitati ovu objavu</string>
-  <string name="lichessBlogPostsFromXYear">Lichess blogovi u %s</string>
+  <string name="lichessBlogPostsFromXYear">Logik blogovi u %s</string>
   <string name="previousBlogPosts">Prijašnji blogovi</string>
   <string name="xBlog">Blog korisnika %s</string>
   <string name="newPost">Nova objava</string>

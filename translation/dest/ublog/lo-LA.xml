@@ -3,7 +3,7 @@
   <string name="community">ຊຸມຊົນ</string>
   <string name="byMonth">ຕາມເດືອນ</string>
   <string name="byTopic">ຕາມຫົວຂໍ້</string>
-  <string name="byLichess">ໂດຍ Lichess</string>
+  <string name="byLichess">ໂດຍ Logik</string>
   <string name="myFriends">ໝູ່ຂອງຂ້ອຍ</string>
   <string name="myLikes">ສິ່ງທີ່ຂ້ອຍຖືກໃຈ</string>
   <string name="myBlog">ບລັອກຂອງຂ້ອຍ</string>
@@ -12,7 +12,7 @@
     <item quantity="other">%s ໂພສບລັອກ</item>
   </plurals>
   <string name="continueReadingPost">ອ່ານໂພສນີ້ຕໍ່</string>
-  <string name="lichessBlogPostsFromXYear">ໂພສບລັອກ Lichess ໃນປີ %s</string>
+  <string name="lichessBlogPostsFromXYear">ໂພສບລັອກ Logik ໃນປີ %s</string>
   <string name="previousBlogPosts">ໂພສບລັອກກ່ອນໜ້າ</string>
   <string name="xBlog">ບລັອກຂອງ %s</string>
   <string name="newPost">ໂພສໃໝ່</string>

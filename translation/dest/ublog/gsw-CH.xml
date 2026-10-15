@@ -3,7 +3,7 @@
   <string name="community">G\'meinschaft</string>
   <string name="byMonth">Mündlich</string>
   <string name="byTopic">Nach Thema</string>
-  <string name="byLichess">Vu Lichess</string>
+  <string name="byLichess">Vu Logik</string>
   <string name="myFriends">Mini Fründ*inne</string>
   <string name="myLikes">Mini Bevorzugte</string>
   <string name="myBlog">Min Blog</string>
@@ -13,7 +13,7 @@
     <item quantity="other">%s Blog-Biträg</item>
   </plurals>
   <string name="continueReadingPost">De Bitrag witer läse</string>
-  <string name="lichessBlogPostsFromXYear">Lichess Blog-Biträg im Jahr %s</string>
+  <string name="lichessBlogPostsFromXYear">Logik Blog-Biträg im Jahr %s</string>
   <string name="previousBlogPosts">Vorherigi Blog-Biträg</string>
   <string name="xBlog">%s\'s Blog</string>
   <string name="newPost">Neue Bitrag</string>

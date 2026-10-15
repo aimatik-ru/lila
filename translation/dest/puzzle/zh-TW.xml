@@ -73,7 +73,7 @@
   <string name="fromMyGames">來自我的棋局</string>
   <string name="lookupOfPlayer">尋找其他棋手的棋局謎題</string>
   <string name="searchPuzzles">尋找謎題</string>
-  <string name="fromMyGamesNone">你在資料庫中沒有謎題，但 Lichess 仍然非常愛你。
+  <string name="fromMyGamesNone">你在資料庫中沒有謎題，但 Logik 仍然非常愛你。
 遊玩一些快速和經典遊戲，以增加從你的棋局中生成謎題的機會！</string>
   <string name="puzzleDashboardDescription">訓練、分析、改進</string>
   <plurals name="nbPlayed">

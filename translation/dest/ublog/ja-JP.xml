@@ -6,7 +6,7 @@
   <string name="all">全部</string>
   <string name="byMonth">月別</string>
   <string name="byTopic">トピック別</string>
-  <string name="byLichess">Lichess 公式</string>
+  <string name="byLichess">Logik 公式</string>
   <string name="myFriends">友達</string>
   <string name="myLikes">お気に入り</string>
   <string name="myBlog">自分のブログ</string>
@@ -16,7 +16,7 @@
     <item quantity="other">%s ブログ投稿</item>
   </plurals>
   <string name="continueReadingPost">続きを読む</string>
-  <string name="lichessBlogPostsFromXYear">%s 年の Lichess ブログ投稿</string>
+  <string name="lichessBlogPostsFromXYear">%s 年の Logik ブログ投稿</string>
   <string name="previousBlogPosts">前のブログ投稿</string>
   <string name="xBlog">%s のブログ</string>
   <string name="newPost">新しい投稿</string>

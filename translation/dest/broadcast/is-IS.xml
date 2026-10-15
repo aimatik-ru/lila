@@ -15,7 +15,7 @@
   <string name="newBroadcast">Ný útsending í beinni</string>
   <string name="subscribedBroadcasts">Áskriftarútsendingar</string>
   <string name="aboutBroadcasts">Um útsendingar</string>
-  <string name="howToUseLichessBroadcasts">Hvernig á að nota Lichess-útsendingar.</string>
+  <string name="howToUseLichessBroadcasts">Hvernig á að nota Logik-útsendingar.</string>
   <string name="theNewRoundHelp">Nýja umferðin mun hafa sömu meðlimi og þátttakendur og sú fyrri.</string>
   <string name="addRound">Bæta við umferð</string>
   <string name="ongoing">Yfirstandandi</string>
@@ -26,8 +26,8 @@
   <string name="fullDescription">Lýsing móts í heild sinni</string>
   <string name="fullDescriptionHelp">Valfrjáls ýtarleg lýsing á mótinu. %1$s er í boði. Lengdin verður að vera styttri en %2$s stafir.</string>
   <string name="sourceSingleUrl">PGN-upprunavefslóð</string>
-  <string name="sourceUrlHelp">Vefslóð sem Lichess mun athuga til þess að afla sér PGN-uppfærslur. Hún verður að vera aðgengileg öllum á netinu.</string>
-  <string name="sourceGameIds">Allt að 64 Lichess-skákarauðkenni, aðskilin með bilum.</string>
+  <string name="sourceUrlHelp">Vefslóð sem Logik mun athuga til þess að afla sér PGN-uppfærslur. Hún verður að vera aðgengileg öllum á netinu.</string>
+  <string name="sourceGameIds">Allt að 64 Logik-skákarauðkenni, aðskilin með bilum.</string>
   <string name="startDateTimeZone">Upphafsdagur mótsins, samkvæmt staðartíma: %s</string>
   <string name="startDateHelp">Valfrjálst, ef þú veist hvenær viðburðurinn hefst</string>
   <string name="currentGameUrl">Slóð núverandi skákar</string>
@@ -48,7 +48,7 @@
   <string name="age">Aldur</string>
   <string name="unrated">Skák án stigagjafar</string>
   <string name="recentTournaments">Nýleg mót</string>
-  <string name="openLichess">Opna í Lichess</string>
+  <string name="openLichess">Opna í Logik</string>
   <string name="teams">Lið</string>
   <string name="boards">Stjórnarnefnd</string>
   <string name="overview">Yfirlit</string>

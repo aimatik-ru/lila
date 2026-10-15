@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="lichessCoaches">Lichess コーチ</string>
-  <string name="lichessCoach">Lichess コーチ</string>
+  <string name="lichessCoaches">Logik コーチ</string>
+  <string name="lichessCoach">Logik コーチ</string>
   <string name="areYouCoach">あなたは %s タイトルを持つ優秀なチェスコーチですか？</string>
   <string name="nmOrFideTitle" comment="nmOrFideTitle&#10;&#10;Part of sentence &quot;Are you a great chess coach with a NM or FIDE title?&quot;&#10;&#10;The text links to our title verification page: https://lichess.org/help/master">NM または FIDE</string>
   <string name="confirmTitle">タイトルをこちらで証明してくだされば申請を審査します。</string>
@@ -14,7 +14,7 @@
   <string name="accepting">生徒を募集中です</string>
   <string name="notAccepting">現在、生徒を募集していません</string>
   <string name="xCoachesStudents">%s が生徒を指導します</string>
-  <string name="viewXProfile">%s の Lichess プロフィールを見る</string>
+  <string name="viewXProfile">%s の Logik プロフィールを見る</string>
   <string name="sendPM">プライベートメッセージを送る</string>
   <string name="aboutMe">プロフィール</string>
   <string name="playingExperience">競技歴</string>
@@ -26,5 +26,5 @@
   <string name="youtubeVideos">YouTube 動画</string>
   <string name="allCountries">すべての国</string>
   <string name="lastLogin">最終ログイン</string>
-  <string name="lichessRating">Lichess のレーティング</string>
+  <string name="lichessRating">Logik のレーティング</string>
 </resources>

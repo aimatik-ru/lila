@@ -202,9 +202,9 @@
   <string name="forgotPassword">Wedi anghofio\'r cyfrinair?</string>
   <string name="error.weakPassword">Mae cyfrinair yma yn gyffredin iawn ac yn rhy hawdd i dyfalu.</string>
   <string name="error.namePassword">Os gwelwch yn dda peidiwch â ddefnyddio eich enw defnyddiwr ar gyfer eich cyfrinair.</string>
-  <string name="blankedPassword">Rydych chi wedi ddefnyddio yr un cyfrinair ar gwefan arall, mae gwefan yna wedi ei cyfaddawdu. I sicrhau diogelwch eich cyfrif Lichess rydym ni angen iddych chi osod cyfrinair newydd. Diolch am eich dealltwriaeth.</string>
-  <string name="youAreLeavingLichess">Rydych chi\'n gadael Lichess</string>
-  <string name="neverTypeYourPassword">Peidiwch byth ysgrifennu eich cyfrinair Lichess ar gwefan arall!</string>
+  <string name="blankedPassword">Rydych chi wedi ddefnyddio yr un cyfrinair ar gwefan arall, mae gwefan yna wedi ei cyfaddawdu. I sicrhau diogelwch eich cyfrif Logik rydym ni angen iddych chi osod cyfrinair newydd. Diolch am eich dealltwriaeth.</string>
+  <string name="youAreLeavingLichess">Rydych chi\'n gadael Logik</string>
+  <string name="neverTypeYourPassword">Peidiwch byth ysgrifennu eich cyfrinair Logik ar gwefan arall!</string>
   <string name="proceedToX">Symudwch ymlaen i %s</string>
   <string name="passwordSuggestion">Peidiwch osod cyfrinair wedi ei awgrymu gan rhywun arall. Fydden nhw\'n ei ddefnyddio i dwyn eich cyfrif.</string>
   <string name="emailSuggestion">Peidiwch osod e-bost wedi ei awgrymu gan rhywun arall. Fydden nhw\'n ei ddefnyddio i dwyn eich cyfrif.</string>
@@ -275,7 +275,7 @@
     <item quantity="other">Enillodd %s gêmau</item>
   </plurals>
   <string name="exportGames">Allforio</string>
-  <string name="thisAccountViolatedTos">Mae\'r defnyddiwr y cyfrif yma wedi torri termau defnyddio Lichess</string>
+  <string name="thisAccountViolatedTos">Mae\'r defnyddiwr y cyfrif yma wedi torri termau defnyddio Logik</string>
   <string name="openingExplorerAndTablebase">Porwr agoriadau &amp; bas tabl diweddglo</string>
   <string name="takeback">Cymryd yn ôl</string>
   <string name="proposeATakeback">Awgrymu cymryd yn ôl</string>
@@ -400,7 +400,7 @@
   <string name="socialMediaLinks">Dolenni cyfryngau cymdeithasol</string>
   <string name="oneUrlPerLine">Un URL y llinell.</string>
   <string name="inlineNotation">Nodiant mewnlin</string>
-  <string name="previouslyOnLichessTV">Ar Lichess TV yn barod</string>
+  <string name="previouslyOnLichessTV">Ar Logik TV yn barod</string>
   <string name="onlinePlayers">Chwarewyr ar-lein</string>
   <string name="activePlayers">Chwaraewyr gweithredol</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Mae\'r gêm yn swyddogol ond nid oes cloc ganddi!</string>
@@ -630,7 +630,7 @@
   <string name="usernameSuffixInvalid">Rhaid i\'r enw defnyddiwr orffen efo rhif neu lythyren.</string>
   <string name="usernameCharsInvalid">Gall enw\'r defnyddiwr dim ond cynnwys llythrennu, rhifau, tanlinellai, a chysylltnodau. Ni chaniatáu cael tanlinellai neu gysylltnodau dilynol.</string>
   <string name="usernameUnacceptable">Nid yw enw defnyddiwr hwn yn dderbyniol.</string>
-  <string name="playChessInStyle">Edrychwch yn swanc efo Lichess</string>
+  <string name="playChessInStyle">Edrychwch yn swanc efo Logik</string>
   <string name="chessBasics">Hanfodion gwyddbwyll</string>
   <string name="coaches">Hyfforddwyr</string>
   <string name="invalidPgn">PGN anilys</string>
@@ -680,7 +680,7 @@
   <string name="howToAvoidThis">Sut i osgoi hyn?</string>
   <string name="playEveryGame">Chwaraewch bob gêm rydych yn dechrau.</string>
   <string name="temporaryInconvenience">Rydym ni\'n ymddiheuro am y anhwylustod dros dro,</string>
-  <string name="wishYouGreatGames">ac yn dymuno gemau dda ar lichess.org.</string>
+  <string name="wishYouGreatGames">ac yn dymuno gemau dda ar play.kalugalogic.ru.</string>
   <string name="thankYouForReading">Diolch am darllen!</string>
   <string name="lifetimeScore">Sgôr hyd oes</string>
   <string name="agreementAssistance">Rwy\'n cytuno byddai\'n byth cael unrhyw cymorth yn ystod chwarae gem (wrth gyfrifiadur gwyddbwyll, llyfr, cronfa ddata neu berson arall).</string>

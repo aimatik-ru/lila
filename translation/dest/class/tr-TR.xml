@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="lichessClasses">Lichess Sınıfları</string>
-  <string name="teachClassesOfChessStudents">Satranç öğrencilerine Lichess Sınıflar araç setiyle ders verin.</string>
+  <string name="lichessClasses">Logik Sınıfları</string>
+  <string name="teachClassesOfChessStudents">Satranç öğrencilerine Logik Sınıflar araç setiyle ders verin.</string>
   <string name="features">Özellikler</string>
   <string name="quicklyGenerateSafeUsernames">Öğrenciler için hızlıca güvenli kullanıcı adları ve şifreleri oluşturun</string>
   <string name="trackStudentProgress">Oyunlar ve bulmacalardaki öğrenci ilerlemesini takip edin</string>
   <string name="messageAllStudents">Yeni ders materyali hakkında tüm öğrencilere mesaj atın</string>
   <string name="freeForAllForever">Herkes için, her zaman, reklamsız ve takipçisiz, %100 ücretsiz</string>
-  <string name="applyToBeLichessTeacher">Lichess Eğitmeni olmak için başvurun</string>
+  <string name="applyToBeLichessTeacher">Logik Eğitmeni olmak için başvurun</string>
   <string name="noClassesYet">Henüz bir sınıf yok.</string>
   <string name="teachersX">Eğitmenler: %s</string>
   <string name="newClass">Yeni sınıf</string>
@@ -23,7 +23,7 @@
   <string name="classDescription">Sınıf açıklaması</string>
   <string name="visibleByBothStudentsAndTeachers">Hem antrenörler hem de sınıfın öğrencileri tarafından görülebilir</string>
   <string name="teachersOfTheClass">Sınıf antrenörleri</string>
-  <string name="addLichessUsernames">Oyuncuların Lichess kullanıcı adlarını ekleyerek onları antrenör olarak davet edin. Her satırda bir isim olmalı.</string>
+  <string name="addLichessUsernames">Oyuncuların Logik kullanıcı adlarını ekleyerek onları antrenör olarak davet edin. Her satırda bir isim olmalı.</string>
   <string name="resetPassword">Şifreyi sıfırla</string>
   <string name="makeSureToCopy">Parolayı kopyaladığınızdan veya bir yere yazdığınızdan emin olun. Bir daha parolayı göremeyeceksiniz!</string>
   <string name="passwordX">Şifre: %s</string>
@@ -32,22 +32,22 @@
   <string name="realName">Gerçek isim</string>
   <string name="privateWillNeverBeShown">Özel. Yalnızca sınıftakiler görebilir. Öğrencinin kim olduğunu hatırlamanıza yardımcı olur.</string>
   <string name="addStudent">Öğrenci ekleyin</string>
-  <string name="lichessProfileXCreatedForY">%2$s için Lichess profili %1$s oluşturuldu.</string>
+  <string name="lichessProfileXCreatedForY">%2$s için Logik profili %1$s oluşturuldu.</string>
   <string name="studentCredentials">Öğrenci: %1$s
 Kullanıcı adı: %2$s
 Şifre: %3$s</string>
-  <string name="inviteALichessAccount">Bir Lichess hesabını davet edin</string>
-  <string name="inviteDesc1">Öğrencinin hâlihazırda bir Lichess hesabı varsa sınıfa davet edebilirsiniz.</string>
-  <string name="inviteDesc2">Lichess üzerinden göndereceğimiz mesajdaki bağlantıyı kullanarak sınıfa katılabilirler.</string>
+  <string name="inviteALichessAccount">Bir Logik hesabını davet edin</string>
+  <string name="inviteDesc1">Öğrencinin hâlihazırda bir Logik hesabı varsa sınıfa davet edebilirsiniz.</string>
+  <string name="inviteDesc2">Logik üzerinden göndereceğimiz mesajdaki bağlantıyı kullanarak sınıfa katılabilirler.</string>
   <string name="inviteDesc3">Önemli: Sadece tanıdığınız ve sınıfa etkin bir şekilde katılmak isteyen öğrencileri davet edin.</string>
   <string name="inviteDesc4">Asla rastgele oyunculara istenmeyen davetler göndermeyin.</string>
-  <string name="createANewLichessAccount">Yeni bir Lichess hesabı oluşturun</string>
-  <string name="createDesc1">Öğrencinin Lichess hesabı yoksa buradan yeni bir hesap açabilirsiniz.</string>
+  <string name="createANewLichessAccount">Yeni bir Logik hesabı oluşturun</string>
+  <string name="createDesc1">Öğrencinin Logik hesabı yoksa buradan yeni bir hesap açabilirsiniz.</string>
   <string name="createDesc2">E-posta adresine gerek yoktur. Size vereceğimiz şifreyi öğrenciye iletirseniz hesabına giriş yapabilir.</string>
   <string name="createDesc3">Önemli: Öğrencilerin birden fazla hesabı olmamalı.</string>
   <string name="createDesc4">Hâlihazırda hesabı olan öğrenciler için davet formunu kullanın.</string>
   <string name="createStudentWarning">Yalnızca gerçek öğrenciler için hesap oluşturun. Kendi adınıza birden fazla hesap açmak için bu özelliği kullanmayın. Aksi takdirde hesabınız kapatılabilir.</string>
-  <string name="lichessUsername">Lichess kullanıcı adı</string>
+  <string name="lichessUsername">Logik kullanıcı adı</string>
   <string name="generateANewUsername">Yeni bir kullanıcı adı oluşturun</string>
   <string name="welcomeToClass">Sınıfınıza hoşgeldiniz: %s
 Sınıfa erişim linki burada.</string>
@@ -106,8 +106,8 @@ Bu yatay bir çizgi oluşturacaktır.</string>
   <string name="youAcceptedThisInvitation">Bu daveti kabul ettiniz.</string>
   <string name="youDeclinedThisInvitation">Bu daveti reddettiniz.</string>
   <string name="orSeparator" comment="Used as separator between invite sections. Shown as large '~ or ~'.">veya</string>
-  <string name="createMultipleAccounts">Çoklu Lichess hesabı oluşturun</string>
-  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">Ayrıca %s öğrenci isimlerini içeren bir listeyle birden çok Lichess hesabı oluşturabilirsiniz.</string>
+  <string name="createMultipleAccounts">Çoklu Logik hesabı oluşturun</string>
+  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">Ayrıca %s öğrenci isimlerini içeren bir listeyle birden çok Logik hesabı oluşturabilirsiniz.</string>
   <string name="useThisForm" comment="Link text in multipleAccsFromDescription">bu formu kullanarak</string>
   <string name="maxStudentsNote" comment="%1$s will be replaced with a large number (currently 100).\n%2$s is a link and will be replaced with the translation of createMoreClasses. Make sure both strings fit together.">Bir sınıfta en fazla %1$s öğrenci olabilir. Daha fazla öğrenci eklemek istiyorsanız %2$s.</string>
   <string name="createMoreClasses" comment="Link text in maxStudentsNote">yeni sınıflar oluşturun</string>
@@ -122,7 +122,7 @@ Bu yatay bir çizgi oluşturacaktır.</string>
   <string name="allowMessagingBetweenStudentsDesc">Bu, yalnızca öğrencilerinize oluşturduğunuz hesaplar için geçerlidir.</string>
   <string name="quickLoginCode">Hızlı giriş kodu</string>
   <string name="quickLoginCodes">Hızlı giriş kodları</string>
-  <string name="quickLoginCodesDesc1" comment="String is a URL">Öğrencilerinizin Lichess\'e giriş yapması için bu kodları %s üzerinde kullanın.</string>
+  <string name="quickLoginCodesDesc1" comment="String is a URL">Öğrencilerinizin Logik\'e giriş yapması için bu kodları %s üzerinde kullanın.</string>
   <string name="quickLoginCodesDesc2">Kodların süresi dolduğunda, öğrencileriniz manuel olarak çıkış yapana kadar oturum açmış olarak kalacaklardır.</string>
   <string name="expirationInMomentFromNow" comment="String is the translation of, for example, 'in 2 hours'">Son Kullanım Tarihi: %s</string>
 </resources>

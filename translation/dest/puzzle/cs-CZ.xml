@@ -81,7 +81,7 @@
   <string name="fromMyGames">Z mých partií</string>
   <string name="lookupOfPlayer">Vyhledat úlohy z her hráče</string>
   <string name="searchPuzzles">Hledat hádanky</string>
-  <string name="fromMyGamesNone">V databázi nemáte žádné úlohy, ale Lichess vás stále velmi miluje.
+  <string name="fromMyGamesNone">V databázi nemáte žádné úlohy, ale Logik vás stále velmi miluje.
 Hrajte rapid a klasické hry ke zvýšení šance na přidání vlastní úlohy!</string>
   <plurals name="puzzlesFoundInUserGames">
     <item quantity="one">Nalezena jedna úloha z her od %2$s</item>

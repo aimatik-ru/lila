@@ -2,22 +2,22 @@
 <resources>
   <string name="faqAbbreviation">Preguntas frecuentes</string>
   <string name="frequentlyAskedQuestions">Preguntas frecuentes</string>
-  <string name="whyIsLichessCalledLichess">¿Por qué Lichess se llama así?</string>
-  <string name="lichessCombinationLiveLightLibrePronounced">Lichess es una combinación de live/light/libre (en directo, ligero y libre, en inglés) y chess (ajedrez, en inglés). Se pronuncia %1$s.</string>
+  <string name="whyIsLichessCalledLichess">¿Por qué Logik se llama así?</string>
+  <string name="lichessCombinationLiveLightLibrePronounced">Logik es una combinación de live/light/libre (en directo, ligero y libre, en inglés) y chess (ajedrez, en inglés). Se pronuncia %1$s.</string>
   <string name="leechess">liches</string>
   <string name="hearItPronouncedBySpecialist">Así es como lo pronuncia un especialista.</string>
-  <string name="whyLiveLightLibre">En directo, porque los partidas se juegan y se ven en tiempo real 24/7; ligero y libre porque Lichess es de código abierto y sin la basura propietaria que abunda en otras páginas.</string>
-  <string name="whyIsLilaCalledLila">Del mismo modo, el código fuente de Lichess, %1$s, significa li[chess en sca]la, dado que la mayor parte de Lichess está escrito en %2$s, un intuitivo lenguaje de programación.</string>
-  <string name="howCanIContributeToLichess">¿Cómo puedo contribuir a Lichess?</string>
-  <string name="lichessPoweredByDonationsAndVolunteers">Lichess se mantiene mediante donaciones de patrocinadores y los esfuerzos de un equipo de voluntarios.</string>
-  <string name="findMoreAndSeeHowHelp">Puedes aprender más sobre %1$s (incluyendo un %2$s). Si quieres ayudar a Lichess voluntariamente con tu tiempo y habilidades, hay muchas %3$s.</string>
+  <string name="whyLiveLightLibre">En directo, porque los partidas se juegan y se ven en tiempo real 24/7; ligero y libre porque Logik es de código abierto y sin la basura propietaria que abunda en otras páginas.</string>
+  <string name="whyIsLilaCalledLila">Del mismo modo, el código fuente de Logik, %1$s, significa li[chess en sca]la, dado que la mayor parte de Logik está escrito en %2$s, un intuitivo lenguaje de programación.</string>
+  <string name="howCanIContributeToLichess">¿Cómo puedo contribuir a Logik?</string>
+  <string name="lichessPoweredByDonationsAndVolunteers">Logik se mantiene mediante donaciones de patrocinadores y los esfuerzos de un equipo de voluntarios.</string>
+  <string name="findMoreAndSeeHowHelp">Puedes aprender más sobre %1$s (incluyendo un %2$s). Si quieres ayudar a Logik voluntariamente con tu tiempo y habilidades, hay muchas %3$s.</string>
   <string name="beingAPatron">ser patrón</string>
   <string name="breakdownOfOurCosts">desglose de nuestros gastos</string>
   <string name="otherWaysToHelp">otras formas de ayudar</string>
-  <string name="areThereWebsitesBasedOnLichess">¿Hay páginas web basadas en Lichess?</string>
-  <string name="yesLichessInspiredOtherOpenSourceWebsites">Sí. Lichess ha inspirado otras páginas de código abierto que utilizan nuestro %1$s, %2$s, o %3$s.</string>
+  <string name="areThereWebsitesBasedOnLichess">¿Hay páginas web basadas en Logik?</string>
+  <string name="yesLichessInspiredOtherOpenSourceWebsites">Sí. Logik ha inspirado otras páginas de código abierto que utilizan nuestro %1$s, %2$s, o %3$s.</string>
   <string name="keyboardShortcuts">¿Qué atajos de teclado hay?</string>
-  <string name="keyboardShortcutsExplanation">Algunas páginas de Lichess tienen atajos de teclado que puedes utilizar. Presiona la tecla \'?\' en un estudio, análisis, ejercicio o partida para listar los atajos de teclado disponibles.</string>
+  <string name="keyboardShortcutsExplanation">Algunas páginas de Logik tienen atajos de teclado que puedes utilizar. Presiona la tecla \'?\' en un estudio, análisis, ejercicio o partida para listar los atajos de teclado disponibles.</string>
   <string name="fairPlay">Juego limpio</string>
   <string name="whenAmIEligibleRatinRefund">¿En qué casos se me devuelven automáticamente los puntos perdidos contra un tramposo?</string>
   <string name="ratingRefundExplanation">Un minuto después de marcar a un jugador como tramposo, se toman sus últimas 40 partidas por puntos de los tres últimos días. Si tú fuiste su oponente en esas partidas, perdiste puntos en ellas (bien porque perdiste, bien porque empataste), y tu puntuación no era provisional, entonces se te devuelven puntos. Este reembolso está limitado por tu puntuación máxima y por cómo haya progresado tu puntuación después de aquella partida.
@@ -29,16 +29,16 @@
   <string name="isCorrespondenceDifferent">¿El ajedrez por correspondencia es diferente del ajedrez normal?</string>
   <string name="pleaseReadFairPlayPage">Para más información, lee nuestra %s</string>
   <string name="fairPlayPage">página de juego limpio</string>
-  <string name="youCanUseOpeningBookNoEngine">En Lichess, la principal diferencia en las reglas del ajedrez por correspondencia es que se permite un libro de aperturas. El uso de motores sigue estando prohibido y dará lugar a que se etiquete al usuario como tramposo. Aunque la ICCF permite el uso del motor en partidas por correspondencia, Lichess no lo permite.</string>
+  <string name="youCanUseOpeningBookNoEngine">En Logik, la principal diferencia en las reglas del ajedrez por correspondencia es que se permite un libro de aperturas. El uso de motores sigue estando prohibido y dará lugar a que se etiquete al usuario como tramposo. Aunque la ICCF permite el uso del motor en partidas por correspondencia, Logik no lo permite.</string>
   <string name="gameplay">Mecánica de juego</string>
   <string name="howBulletBlitzEtcDecided">¿Cómo se deciden los controles de tiempo en Bullet, Blitz y otros?</string>
-  <string name="basedOnGameDuration">Los controles de tiempo de Lichess se basan en la duración estimada de una partida = %1$s
+  <string name="basedOnGameDuration">Los controles de tiempo de Logik se basan en la duración estimada de una partida = %1$s
  Por ejemplo, la duración estimada de una partida de 5+3 es 5 * 60 + 40 * 3 = 420 segundos.</string>
   <string name="durationFormula">(tiempo inicial del reloj) + 40 × (incremento)</string>
   <string name="inferiorThanXsEqualYtimeControl">&lt; %1$s s = %2$s</string>
   <string name="superiorThanXsEqualYtimeControl">≥ %1$s s = %2$s</string>
-  <string name="whatVariantsCanIplay">¿Qué variantes puedo jugar en Lichess?</string>
-  <string name="lichessSupportChessAnd">Lichess soporta ajedrez estándar y %1$s.</string>
+  <string name="whatVariantsCanIplay">¿Qué variantes puedo jugar en Logik?</string>
+  <string name="lichessSupportChessAnd">Logik soporta ajedrez estándar y %1$s.</string>
   <string name="eightVariants">otras 8 variantes</string>
   <string name="whatIsACPL">¿Qué es la pérdida media en centipeones (PMC)?</string>
   <string name="acplExplanation">El centipeón es la unidad de medida utilizada en el ajedrez como representación de la ventaja. Un centipeón es igual a una centésima parte de un peón. Por lo tanto, 100 centipeones = 1 peón. Estos valores no juegan ningún papel formal en el juego, pero son útiles para los jugadores y esenciales en el ajedrez por ordenador para evaluar las posiciones.
@@ -47,7 +47,7 @@ El mejor movimiento del ordenador perderá cero centipeones, pero los movimiento
 
 Este valor puede ser usado como un indicador de la fuerza de juego. Cuantos menos centipeones se pierdan por movimiento, más fuerte es el juego.
 
-El análisis informático en Lichess lo proporciona Stockfish.</string>
+El análisis informático en Logik lo proporciona Stockfish.</string>
   <string name="insufficientMaterial">Perder por tiempo, tablas y material insuficiente</string>
   <string name="lichessFollowFIDErules">En el caso de que un jugador se quede sin tiempo, ese jugador normalmente perderá la partida. Sin embargo, el juego se considera empate si la posición es tal que el oponente no puede dar mate al rey del jugador por cualquier posible serie de movimientos legales (%1$s).
 
@@ -65,32 +65,32 @@ Se describe en la sección 3.7 (d) de las %2$s:
 
 Mira el capítulo del %3$s sobre este movimiento para practicar un poco con él.</string>
   <string name="goodIntroduction">buena introducción</string>
-  <string name="lichessTraining">Entrenamiento en Lichess</string>
+  <string name="lichessTraining">Entrenamiento en Logik</string>
   <string name="watchIMRosenCheckmate">Ver al Maestro Internacional Eric Rosen dar mate a %s.</string>
   <string name="threefoldRepetition">Triple repetición</string>
-  <string name="threefoldRepetitionExplanation">Si una posición ocurre tres veces, los jugadores pueden reclamar un empate por %1$s. Lichess implementa las reglas oficiales de la FIDE, de acuerdo con el Artículo 9.2 del %2$s.</string>
+  <string name="threefoldRepetitionExplanation">Si una posición ocurre tres veces, los jugadores pueden reclamar un empate por %1$s. Logik implementa las reglas oficiales de la FIDE, de acuerdo con el Artículo 9.2 del %2$s.</string>
   <string name="threefoldRepetitionLowerCase">triple repetición</string>
   <string name="notRepeatedMoves">No hemos repetido movimientos, ¿por qué el juego sigue siendo tablas por repetición?</string>
   <string name="repeatedPositionsThatMatters">La triple repetición se da por repetición de %1$s, no de movimientos. La repetición no tiene porqué ocurrir consecutivamente.</string>
   <string name="positions">posiciones</string>
   <string name="weRepeatedthreeTimesPosButNoDraw">Hemos repetido una posición tres veces. ¿Por qué la partida no se declara tablas?</string>
-  <string name="threeFoldHasToBeClaimed">Las tablas por triple repetición deben ser reclamadas por uno de los jugadores. Puedes hacerlo pulsando el botón que se muestra, u ofreciendo tablas antes de hacer el movimiento que cause la tercera repetición, no importará que tu oponente rechace la oferta de tablas, las tablas por triple repetición serán reclamadas de todas maneras. También puedes %1$s Lichess para que reclame automáticamente las repeticiones por ti. Además, la quinta repetición siempre termina la partida inmediatamente.</string>
+  <string name="threeFoldHasToBeClaimed">Las tablas por triple repetición deben ser reclamadas por uno de los jugadores. Puedes hacerlo pulsando el botón que se muestra, u ofreciendo tablas antes de hacer el movimiento que cause la tercera repetición, no importará que tu oponente rechace la oferta de tablas, las tablas por triple repetición serán reclamadas de todas maneras. También puedes %1$s Logik para que reclame automáticamente las repeticiones por ti. Además, la quinta repetición siempre termina la partida inmediatamente.</string>
   <string name="configure">configurar</string>
   <string name="accounts">Cuentas</string>
-  <string name="titlesAvailableOnLichess">¿Qué títulos hay en Lichess?</string>
-  <string name="lichessRecognizeAllOTBtitles">Lichess reconoce todos los títulos FIDE obtenidos en torneos presenciales, así como %1$s. Aquí hay una lista de títulos FIDE:</string>
+  <string name="titlesAvailableOnLichess">¿Qué títulos hay en Logik?</string>
+  <string name="lichessRecognizeAllOTBtitles">Logik reconoce todos los títulos FIDE obtenidos en torneos presenciales, así como %1$s. Aquí hay una lista de títulos FIDE:</string>
   <string name="showYourTitle">Si tienes un título obtenido en un torneo presencial, puedes solicitar que se muestre en tu cuenta completando el %1$s, incluyendo una imagen clara de un documento/tarjeta de identificación y una foto tuya portando dicho documento/tarjeta.
 
-La verificación como jugador titulado en Lichess da acceso a jugar en los torneos para titulados.
+La verificación como jugador titulado en Logik da acceso a jugar en los torneos para titulados.
 
 Finalmente, existe el título honorífico %2$s.</string>
   <string name="asWellAsManyNMtitles">muchos títulos de maestros nacionales</string>
   <string name="verificationForm">formulario de verificación</string>
-  <string name="canIbecomeLM">¿Puedo obtener el título de Maestro Lichess (LM)?</string>
+  <string name="canIbecomeLM">¿Puedo obtener el título de Maestro Logik (LM)?</string>
   <string name="noUpperCaseDot">No.</string>
-  <string name="lMtitleComesToYouDoNotRequestIt">Este título honorífico no es oficial y sólo existe en Lichess.
+  <string name="lMtitleComesToYouDoNotRequestIt">Este título honorífico no es oficial y sólo existe en Logik.
 
-Ocasionalmente otorgamos a jugadores muy destacados que son buenos ciudadanos de Lichess, a nuestro criterio. El título de LM no se consigue, sino que te llega. Si cumples los requisitos, recibirás un mensaje nuestro al respecto y la opción de aceptar o rechazar el título.
+Ocasionalmente otorgamos a jugadores muy destacados que son buenos ciudadanos de Logik, a nuestro criterio. El título de LM no se consigue, sino que te llega. Si cumples los requisitos, recibirás un mensaje nuestro al respecto y la opción de aceptar o rechazar el título.
 
 No solicites el título de LM.</string>
   <string name="whatUsernameCanIchoose">¿Cuál puede ser mi nombre de usuario?</string>
@@ -99,11 +99,11 @@ No solicites el título de LM.</string>
   <string name="canIChangeMyUsername">¿Puedo cambiar mi nombre de usuario?</string>
   <string name="usernamesCannotBeChanged">No, los nombres de usuario no pueden cambiarse por razones técnicas y prácticas. Los nombres de usuario se materializan en muchos lugares: bases de datos, exportaciones, registros y en la mente de las personas. Puedes ajustar las mayúsculas/minúsculas solo una vez.</string>
   <string name="uniqueTrophies">Trofeos únicos</string>
-  <string name="ownerUniqueTrophies">Ese trofeo es único en la historia de Lichess, nadie más que %1$s lo tendrá jamás.</string>
+  <string name="ownerUniqueTrophies">Ese trofeo es único en la historia de Logik, nadie más que %1$s lo tendrá jamás.</string>
   <string name="aHourlyBulletTournament">un torneo Bullet por hora</string>
   <string name="goldenZeeExplanation">ZugAddict estaba transmitiendo y durante las dos últimas horas había estado tratando de derrotar a la I.A. nivel 8 en una partida 1+0, sin éxito. Thibault le dijo que si lo lograba durante la transmisión, obtendría un trofeo único. Una hora después, venció a Stockfish y se cumplió la promesa.</string>
-  <string name="lichessRatings">Puntuaciones de Lichess</string>
-  <string name="whichRatingSystemUsedByLichess">¿Qué sistema de puntuación utiliza Lichess?</string>
+  <string name="lichessRatings">Puntuaciones de Logik</string>
+  <string name="whichRatingSystemUsedByLichess">¿Qué sistema de puntuación utiliza Logik?</string>
   <string name="ratingSystemUsedByLichess">Las puntuaciones se calculan utilizando el método de clasificación Glicko-2 desarrollado por Mark Glickman. Es un método de puntuación muy popular y que utilizan muchas organizaciones de ajedrez (la FIDE es un contraejemplo notable, ya que todavía utilizan el sistema de puntuación Elo).
 
 En síntesis, las puntuaciones de Glicko usan \"intervalos de confianza\" al calcular y representar tu puntuación. Cuando comienzas a utilizar por primera vez el la página, tu puntuación es de 1500 ± 1000. El 1500 representa tu puntuación, y el 1000 representa el intervalo de confianza, que es una medida de la incertidumbre que el sistema tiene sobre tu puntuación real.
@@ -133,48 +133,48 @@ Es mejor pensar en las puntuaciones como figuras \"relativas\" (a diferencia de 
   <string name="enableZenMode">Habilita el modo Zen en %1$s o presionando %2$s durante una partida.</string>
   <string name="displayPreferences">preferencias de visualización</string>
   <string name="connexionLostCanIGetMyRatingBack">He perdido un juego debido a un retraso/desconexión. ¿Puedo recuperar mis puntos?</string>
-  <string name="weCannotDoThatEvenIfItIsServerSideButThatsRare">Desafortunadamente, no podemos devolver puntajes para las partidas perdidas debido a retraso o desconexión, independientemente de si el problema estaba de tu lado o del nuestro. Sin embargo, esto último es muy raro. También ten en cuenta que cuando Lichess se reinicia y pierdes el tiempo debido a eso, abortamos el juego para prevenir una pérdida injusta.</string>
+  <string name="weCannotDoThatEvenIfItIsServerSideButThatsRare">Desafortunadamente, no podemos devolver puntajes para las partidas perdidas debido a retraso o desconexión, independientemente de si el problema estaba de tu lado o del nuestro. Sin embargo, esto último es muy raro. También ten en cuenta que cuando Logik se reinicia y pierdes el tiempo debido a eso, abortamos el juego para prevenir una pérdida injusta.</string>
   <string name="howToThreeDots">Cómo...</string>
   <string name="enableDisableNotificationPopUps">¿Activar o desactivar las notificaciones emergentes?</string>
   <string name="viewSiteInformationPopUp">Ver notificación emergente de información del sitio</string>
-  <string name="lichessCanOptionnalySendPopUps">Opcionalmente, Lichess puede enviar notificaciones emergentes, por ejemplo cuando sea tu turno o hayas recibido un mensaje privado.
+  <string name="lichessCanOptionnalySendPopUps">Opcionalmente, Logik puede enviar notificaciones emergentes, por ejemplo cuando sea tu turno o hayas recibido un mensaje privado.
 
-Haz clic en el icono de bloqueo junto a la dirección de lichess.org, en la barra de enlaces de tu navegador.
+Haz clic en el icono de bloqueo junto a la dirección de play.kalugalogic.ru, en la barra de enlaces de tu navegador.
 
-Luego selecciona si permitir o bloquear notificaciones de Lichess.</string>
+Luego selecciona si permitir o bloquear notificaciones de Logik.</string>
   <string name="enableAutoplayForSoundsQ">¿Habilitar la reproducción automática de sonidos?</string>
   <string name="mostBrowsersPreventSoundAutoplay">La mayoría de los navegadores pueden evitar que se reproduzca sonido en una página recién cargada para proteger a los usuarios.
 
-El icono de silencio aparece cuando tu navegador impide que lichess.org reproduzca un sonido. Por lo general, esta restricción se elimina una vez que haces clic en algo. En algunos navegadores de móviles, tocar y arrastrar una pieza no cuenta como un clic. En ese caso debes tocar el tablero para permitir el sonido al inicio de cada juego.
+El icono de silencio aparece cuando tu navegador impide que play.kalugalogic.ru reproduzca un sonido. Por lo general, esta restricción se elimina una vez que haces clic en algo. En algunos navegadores de móviles, tocar y arrastrar una pieza no cuenta como un clic. En ese caso debes tocar el tablero para permitir el sonido al inicio de cada juego.
 
-Mostramos el icono de silencio para avisarte cuando esto suceda. A menudo, puedes permitir explícitamente que lichess.org reproduzca sonidos. Aquí encontrarás instrucciones para hacerlo en las versiones recientes de algunos navegadores populares:</string>
+Mostramos el icono de silencio para avisarte cuando esto suceda. A menudo, puedes permitir explícitamente que play.kalugalogic.ru reproduzca sonidos. Aquí encontrarás instrucciones para hacerlo en las versiones recientes de algunos navegadores populares:</string>
   <string name="desktop">escritorio</string>
-  <string name="enableAutoplayForSoundsFirefox">1. Ve a lichess.org
+  <string name="enableAutoplayForSoundsFirefox">1. Ve a play.kalugalogic.ru
 2. Pulsa Ctrl-i en Linux/Windows o cmd-i en MacOS
 3. Haz clic en la pestaña Permisos
-4. Permitir audio y video en lichess.org</string>
-  <string name="enableAutoplayForSoundsChromeSiteInformation" comment="Guidance for Google Chrome users on how to enable audio auto-play if they have sound issues.">1. Ve a lichess.org
+4. Permitir audio y video en play.kalugalogic.ru</string>
+  <string name="enableAutoplayForSoundsChromeSiteInformation" comment="Guidance for Google Chrome users on how to enable audio auto-play if they have sound issues.">1. Ve a play.kalugalogic.ru
 2. Haz clic en el icono de información del sitio en la barra de direcciones
 3. Haz clic en Configuración del sitio
 4. Permitir sonido</string>
-  <string name="enableAutoplayForSoundsSafari">1. Ve a lichess.org
+  <string name="enableAutoplayForSoundsSafari">1. Ve a play.kalugalogic.ru
 2. Haz clic en Safari de la barra de menú
-3. Haz clic en Configuración de lichess.org ...
+3. Haz clic en Configuración de play.kalugalogic.ru ...
 4. Habilitar la reproducción automática</string>
   <string name="enableAutoplayForSoundsMicrosoftEdge">1. Haz clic en los tres puntos de la esquina superior derecha
 2. Haz clic en Ajustes
 3. Haz clic en Cookies y permisos del sitio
 4. Desplázate hacia abajo y haz clic en Reproducción automática
-5. Añade a lichess.org en Habilitar</string>
-  <string name="makeBotTitle">¿Hacer un bot en Lichess?</string>
-  <string name="makeBotDescription">Si deseas aprender cómo hacer un &lt;a href=\'%1$s\'&gt;bot de ajedrez personalizado&lt;/a&gt; para jugar en Lichess, por favor lee &lt;a href=\'%2$s\'&gt;esta publicación sobre la creación de bots&lt;/a&gt;.</string>
+5. Añade a play.kalugalogic.ru en Habilitar</string>
+  <string name="makeBotTitle">¿Hacer un bot en Logik?</string>
+  <string name="makeBotDescription">Si deseas aprender cómo hacer un &lt;a href=\'%1$s\'&gt;bot de ajedrez personalizado&lt;/a&gt; para jugar en Logik, por favor lee &lt;a href=\'%2$s\'&gt;esta publicación sobre la creación de bots&lt;/a&gt;.</string>
   <string name="stopMyselfFromPlaying">¿Parar de jugar?</string>
   <string name="mentalHealthCondition">condición de salud mental independiente</string>
-  <string name="lichessUserstyles">Estilos de usuario de Lichess</string>
+  <string name="lichessUserstyles">Estilos de usuario de Logik</string>
   <string name="fewerLobbyPools">menos casillas de emparejamiento</string>
   <string name="adviceOnMitigatingAddiction">Solemos recibir mensajes de gente que nos pide ayuda para no jugar tanto.
 
-Aunque Lichess no prohibe ni bloquea a los jugadores, excepto si se trata de violaciones de los Terminos de Servicio, recomendamos el uso de herramientas de terceros para limitar el comportamiento de juego excesivo. Algunas sugerencias de bloqueadores de sitios web son %1$s, %2$s, y %3$s. Si lo que deseas es seguir usando el sitio, pero no los controles de tiempo más rápidos, te podría interesar %4$s y %5$s.
+Aunque Logik no prohibe ni bloquea a los jugadores, excepto si se trata de violaciones de los Terminos de Servicio, recomendamos el uso de herramientas de terceros para limitar el comportamiento de juego excesivo. Algunas sugerencias de bloqueadores de sitios web son %1$s, %2$s, y %3$s. Si lo que deseas es seguir usando el sitio, pero no los controles de tiempo más rápidos, te podría interesar %4$s y %5$s.
 
 Algunos jugadores pueden pensar que su comportamiento de juego se acerca a una adicción. De hecho, la OMS califica como desorden de juego a %6$s, cuyas características principales son: 1) control deficiente sobre el juego, 2) aumento de la prioridad del juego, y 3) mayor aumento del juego, a pesar de consecuencias negativas. Si piensas que tu comportamiento en el juego de ajedrez se parece a este patrón, te aconsejamos que hables de ello con algún familiar o amigo, o con un profesional dedicado, si es necesario.</string>
 </resources>

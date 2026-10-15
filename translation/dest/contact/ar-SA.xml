@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="contact">اتصل بنا</string>
-  <string name="contactLichess">تواصل مع Lichess</string>
+  <string name="contactLichess">تواصل مع Logik</string>
   <string name="whatCanWeHelpYouWith">كيف يمكن أن نساعدك؟</string>
   <string name="visitThisPage">قم بزيارة هذه الصفحة لحل المشكلة</string>
   <string name="iCantLogIn">لا يمكنني تسجيل الدخول</string>
@@ -12,8 +12,8 @@
   <string name="lost2FA">لقد فقدت الوصول إلى رموز المصادقة الثنائية الخاصة بي</string>
   <string name="doPasswordReset">أكمل إعادة تعيين كلمة المرور لإزالة المصادقة الثنائية</string>
   <string name="accountSupport">أنا بحاجة إلى دعم تقني للحساب</string>
-  <string name="wantTitle">أريد أن يتم عرض لقبي على Lichess</string>
-  <string name="visitTitleConfirmation">لإظهار لقبك على ملفك الشخصي في Lichess، والمشاركة في بطولات حملة الألقاب، قم بزيارة صفحة تأكيد اللقب</string>
+  <string name="wantTitle">أريد أن يتم عرض لقبي على Logik</string>
+  <string name="visitTitleConfirmation">لإظهار لقبك على ملفك الشخصي في Logik، والمشاركة في بطولات حملة الألقاب، قم بزيارة صفحة تأكيد اللقب</string>
   <string name="wantCloseAccount">أريد إغلاق حسابي</string>
   <string name="closeYourAccount">يمكنك إغلاق حسابك في هذه الصفحة</string>
   <string name="doNotAskByEmail">لا تطلب إغلاق الحساب عن طريق البريد الإلكتروني، فنحن لن نقوم بذلك.</string>
@@ -34,10 +34,10 @@
   <string name="doNotMessageModerators">لا ترسل رسائل مباشرة للمشرفين.</string>
   <string name="onlyReports">الإبلاغ عن اللاعبين عن طريق الاستمارة هو الطريقة الوحيدة الفعّالة.</string>
   <string name="wantReportBug">أريد أن أبلغ عن خطأ برمجي</string>
-  <string name="reportBugInForum">في قسم التعليقات من منتدى Lichess</string>
-  <string name="reportWebsiteIssue">كمشكلة في موقع Lichess على Github</string>
-  <string name="reportMobileIssue">كمشكلة في تطبيق Lichess المحمول على GitHub</string>
-  <string name="reportBugInDiscord">في خادم ديسكورد Lichess</string>
+  <string name="reportBugInForum">في قسم التعليقات من منتدى Logik</string>
+  <string name="reportWebsiteIssue">كمشكلة في موقع Logik على Github</string>
+  <string name="reportMobileIssue">كمشكلة في تطبيق Logik المحمول على GitHub</string>
+  <string name="reportBugInDiscord">في خادم ديسكورد Logik</string>
   <string name="howToReportBug">يرجى وصف الخطأ البرمجي بدقة، ماذا كنت تتوقع أن يحدث بدلاً من ذلك، والخطوات التي أدت إلى حدوث الخطأ.</string>
   <string name="illegalPawnCapture">أخذ غير قانوني للبيدق</string>
   <string name="calledEnPassant">هذا يُعرف باسم \"الأخذ بالتجاوز\" وهو أحد قوانين الشطرنج.</string>
@@ -57,7 +57,7 @@
   <string name="reportTheBug">يمكنك الإبلاغ عنه:</string>
   <string name="securityVulnerability">ثُغْرَة أمنية</string>
   <string name="otherBug">خلل آخر</string>
-  <string name="learnHowToMakeBroadcasts">تعلم كيفية بث بطولة على Lichess</string>
+  <string name="learnHowToMakeBroadcasts">تعلم كيفية بث بطولة على Logik</string>
   <string name="banAppeal">طلب لرفع حظر او تقييد على IP</string>
   <string name="engineAppeal">علامة الغش او استخدام محرك</string>
   <string name="sendAppealTo">يمكنك ارسال طلب الى %s.</string>
@@ -67,22 +67,22 @@
   <string name="doNotDeny">لاتنكر الغش، إذا اردت ان يسمح لك إنشاء حساب جديد، اعترف بما فعلته، وأظهر انك فهمت ان ما فعلته كان خطأ.</string>
   <string name="otherRestriction">قيود أخرى</string>
   <string name="collaboration">التعاون، قانونيا، تجارياً</string>
-  <string name="monetizing">تحويل Lichess الى مشروع ربحي</string>
-  <string name="buyingLichess">شراء Lichess</string>
-  <string name="authorizationToUse">الإذن لإستخدام Lichess</string>
-  <string name="welcomeToUse">انت مرحب بإستخدام Lichess في نشاطاتك، بما في ذلك النشاطات التجارية.</string>
-  <string name="videosAndBooks">بإمكانك اظهاره في مقاطع الفيديو الخاصة بك، بإمكانك طباعة لقطات شاشة من Lichess في الكتب الخاصة بك.</string>
+  <string name="monetizing">تحويل Logik الى مشروع ربحي</string>
+  <string name="buyingLichess">شراء Logik</string>
+  <string name="authorizationToUse">الإذن لإستخدام Logik</string>
+  <string name="welcomeToUse">انت مرحب بإستخدام Logik في نشاطاتك، بما في ذلك النشاطات التجارية.</string>
+  <string name="videosAndBooks">بإمكانك اظهاره في مقاطع الفيديو الخاصة بك، بإمكانك طباعة لقطات شاشة من Logik في الكتب الخاصة بك.</string>
   <string name="creditAppreciated">ذكر الإسم مشكور ولكن ليست مطلوب.</string>
   <string name="noneOfTheAbove">لا شيء مما سبق</string>
   <string name="sendEmailAt">راسلنا عبر البريد الإلكتروني %s.</string>
-  <string name="explainYourRequest">يرجى شرح طلبك بوضوح ودقة. حدد اسم المستخدم الخاص بك في Lichess، وأي معلومات يمكن أن تساعدنا في مساعدتك.</string>
-  <string name="monetiseNotInterested">لسنا مهتمين بأي شكل من أشكال تحقيق الدخل من Lichess.</string>
+  <string name="explainYourRequest">يرجى شرح طلبك بوضوح ودقة. حدد اسم المستخدم الخاص بك في Logik، وأي معلومات يمكن أن تساعدنا في مساعدتك.</string>
+  <string name="monetiseNotInterested">لسنا مهتمين بأي شكل من أشكال تحقيق الدخل من Logik.</string>
   <string name="monetiseNoAdsTrackingOrTraffic">لن نعرض أي نوع من الإعلانات أبدًا، ولن نتتبع لاعبينا، ولن نبيع أو نشتري الزيارات أو المستخدمين.</string>
   <string name="monetiseNoMarketingEmail">يُرجى عدم مراسلتنا عبر البريد الإلكتروني بشأن التسويق أو التتبع أو الإعلانات.</string>
   <string name="monetiseEncourageEveryoneTo" comment="string is value of key monetiseBlockAllAdsAndTrackers">نشجّع الجميع على %s.</string>
   <string name="monetiseBlockAllAdsAndTrackers">حظر جميع الإعلانات والمتعقبين</string>
   <string name="broadcastTournamentOnLichess">بث بطولة على ليشيس</string>
-  <string name="ifYouWantToBroadcastClause1">إذا كنت ترغب في بث بطولة رسمية على Lichess، أو لديك أي أسئلة حول بثنا:</string>
+  <string name="ifYouWantToBroadcastClause1">إذا كنت ترغب في بث بطولة رسمية على Logik، أو لديك أي أسئلة حول بثنا:</string>
   <string name="ifYouWantToBroadcastClause2" comment="string1 is Lichess email, string2 is value of key ourDiscordServer">يرجى الاتصال بفريق البث الخاص بنا على %1$s أو على %2$s.</string>
   <string name="ourDiscordServer">خادم ديسكورد الخاص بنا</string>
 </resources>

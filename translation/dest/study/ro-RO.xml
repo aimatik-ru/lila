@@ -68,7 +68,7 @@
   <string name="downloadGame">Descarcă partida</string>
   <string name="studyUrl">URL-ul studiului</string>
   <string name="currentChapterUrl">URL-ul capitolului curent</string>
-  <string name="pasteToEmbedChapterInForumOrBlog" comment="youCanPasteThisInTheForumToEmbed&#10;&#10;The thing you are pasting is a link to a study. This will make it appear in the correct section as well.&#10;&#10;Please note this used to say &quot;in the forum to embed&quot;. It was then changed to include &quot;or a Lichess Blog&quot;. A further update was made to say &quot;or your Lichess blog&quot;, since you can only create blog posts as an individual.">Puteți insera asta în forum sau în blogul dvs de pe Lichess pentru a încorpora capitolul.</string>
+  <string name="pasteToEmbedChapterInForumOrBlog" comment="youCanPasteThisInTheForumToEmbed&#10;&#10;The thing you are pasting is a link to a study. This will make it appear in the correct section as well.&#10;&#10;Please note this used to say &quot;in the forum to embed&quot;. It was then changed to include &quot;or a Lichess Blog&quot;. A further update was made to say &quot;or your Lichess blog&quot;, since you can only create blog posts as an individual.">Puteți insera asta în forum sau în blogul dvs de pe Logik pentru a încorpora capitolul.</string>
   <string name="startAtInitialPosition">Începeți de la poziția inițială</string>
   <string name="startAtX">Începeți la %s</string>
   <string name="embedInYourWebsite">Înglobează pe site-ul sau blog-ul tău</string>
@@ -170,7 +170,7 @@
   <string name="youCompletedThisLesson">Felicitări! Ai terminat această lecție.</string>
   <string name="perPage">%s pe pagină</string>
   <string name="getTheTour">Ai nevoie de ajutor? Urmează turul!</string>
-  <string name="welcomeToLichessStudyTitle">Bine ai venit în Studiile Lichess!</string>
+  <string name="welcomeToLichessStudyTitle">Bine ai venit în Studiile Logik!</string>
   <string name="welcomeToLichessStudyText">Aceasta este tabla de analiză comună.&lt;br&gt;&lt;br&gt; Folosește-o pentru analiza si adnotarea jocurilor, &lt;br&gt;discuții pe poziții cu prieteni&lt;br&gt; si desigur pentru lecții de șah.&lt;br&gt;&lt;br&gt; Este o unealtă puternică, hai să vedem cum funcționează.</string>
   <string name="sharedAndSaveTitle" comment="As in: shared with other members and saved to database">Distribuit și salvat</string>
   <string name="sharedAndSavedText">Alţi membri vă pot vedea mutările în timp real!&lt;br&gt;Plus, totul este salvat pentru totdeauna.</string>
@@ -184,7 +184,7 @@
   <string name="annotatePositionTitle">Adnotează o poziție</string>
   <string name="annotatePositionText">Clic pe butonul !? sau clic dreapta pe lista de mutări din dreapta.&lt;br&gt; Simbolurile sunt comune și salvate.</string>
   <string name="conclusionTitle">Mulțumim pentru timpul tău</string>
-  <string name="conclusionText">Poți găsi studiile tale &lt;a href=\'/study/mine/hot\'&gt;anterioare&lt;/a&gt; din pagina ta de profil.&lt;br&gt;Există, de asemenea, un blog &lt;a href=\'//lichess.org/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way\'&gt;despre studii&lt;/a&gt;.&lt;br&gt;Utilizatorii avansați ar putea dori să apese \"?\" pentru a vedea scurtături de taste.&lt;br&gt;Distracție plăcută!</string>
+  <string name="conclusionText">Poți găsi studiile tale &lt;a href=\'/study/mine/hot\'&gt;anterioare&lt;/a&gt; din pagina ta de profil.&lt;br&gt;Există, de asemenea, un blog &lt;a href=\'/\'&gt;despre studii&lt;/a&gt;.&lt;br&gt;Utilizatorii avansați ar putea dori să apese \"?\" pentru a vedea scurtături de taste.&lt;br&gt;Distracție plăcută!</string>
   <string name="createChapterTitle">Să creăm un capitol de studiu</string>
   <string name="createChapterText">Un studiu poate avea mai multe capitole.&lt;br&gt;Fiecare capitol are un arbore de mutări distinct,&lt;br&gt;și poate fi creat în diferite moduri.</string>
   <string name="fromInitialPositionTitle">Din poziţia iniţială</string>
@@ -192,13 +192,13 @@
   <string name="customPositionTitle">Poziție personalizată</string>
   <string name="customPositionText">Aranjați tabla cum vreți.&lt;br&gt;Potrivită pentru explorarea finalurilor de joc.</string>
   <string name="loadGameFromTheWebTitle">Încarcă un joc de pe web</string>
-  <string name="loadGameFromTheWebText" comment="The special text tags must be retained in exact order, for example &amp;lt;br&amp;gt; must stay exactly as-is. You do not need to add spaces or new lines before or after them.&#10;&#10;Note that &quot;br&quot; in particular means &quot;line break&quot;. In other words, it will start a new line in the final text.">Lipește o adresă URL a jocului&lt;br&gt;(ex: lichess.org/7fHIU0XI)&lt;br&gt;pentru a încărca mișcările din joc în capitol.</string>
+  <string name="loadGameFromTheWebText" comment="The special text tags must be retained in exact order, for example &amp;lt;br&amp;gt; must stay exactly as-is. You do not need to add spaces or new lines before or after them.&#10;&#10;Note that &quot;br&quot; in particular means &quot;line break&quot;. In other words, it will start a new line in the final text.">Lipește o adresă URL a jocului&lt;br&gt;(ex: play.kalugalogic.ru/7fHIU0XI)&lt;br&gt;pentru a încărca mișcările din joc în capitol.</string>
   <string name="fromFenStringTitle">Dintr-un text FEN</string>
   <string name="fromFenStringText">Lipiți o poziție în formatul FEN&lt;br&gt;&lt;i&gt;4k3/4rb2/8/7p/8/5Q2/1PP5/1K6 w&lt;/i&gt;&lt;br&gt;pentru a începe capitolul dintr-o poziție anume.</string>
   <string name="fromPgnGameTitle">Dintr-un PGN de joc(uri)</string>
   <string name="fromPgnGameText">Lipiți un joc în format PGN.&lt;br&gt;pentru a încărca mutări, comentarii și variații în capitol.</string>
   <string name="variantsAreSupportedTitle">Studiile suportă variante de șah</string>
-  <string name="variantsAreSupportedText">Da, poți studia Crazyhouse&lt;br&gt;și toate variantele de șah de pe Lichess!</string>
+  <string name="variantsAreSupportedText">Da, poți studia Crazyhouse&lt;br&gt;și toate variantele de șah de pe Logik!</string>
   <string name="chapterConclusionText">Capitolele sunt salvate pentru totdeauna.&lt;br&gt;Distracție plăcută organizând conținutul tău de șah!</string>
   <string name="doubleDefeat">Înfrângere dublă</string>
   <string name="blackDefeatWhiteCanNotWin">Negrul pierde, dar Albul nu poate câștiga</string>

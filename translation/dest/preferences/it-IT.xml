@@ -64,8 +64,8 @@
   <string name="notifyChallenge">Sfide</string>
   <string name="notifyBroadcasts">Dirette</string>
   <string name="notifyTimeAlarm">Il tempo sta per scadere in una partita per corrispondenza</string>
-  <string name="notifyBell">Notifica sonora in Lichess</string>
-  <string name="notifyPush">Notifiche dispositivo (push) quando non sei collegato a Lichess</string>
+  <string name="notifyBell">Notifica sonora in Logik</string>
+  <string name="notifyPush">Notifiche dispositivo (push) quando non sei collegato a Logik</string>
   <string name="notifyWeb">Browser</string>
   <string name="notifyDevice">Dispositivo</string>
   <string name="bellNotificationSound">Tono notifica</string>

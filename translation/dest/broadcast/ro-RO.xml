@@ -17,7 +17,7 @@
   <string name="newBroadcast">O nouă difuzare în direct</string>
   <string name="subscribedBroadcasts">Transmisii abonate</string>
   <string name="aboutBroadcasts">Despre emisiuni</string>
-  <string name="howToUseLichessBroadcasts">Cum să utilizați emisiunile Lichess.</string>
+  <string name="howToUseLichessBroadcasts">Cum să utilizați emisiunile Logik.</string>
   <string name="theNewRoundHelp">Runda noua va avea aceiași membri și contribuitori ca cea anterioară.</string>
   <string name="addRound">Adaugă o rundă</string>
   <string name="ongoing">În desfășurare</string>
@@ -28,8 +28,8 @@
   <string name="fullDescription">Întreaga descriere a evenimentului</string>
   <string name="fullDescriptionHelp">Descriere lungă, opțională, a difuzării. %1$s este disponibil. Lungimea trebuie să fie mai mică decât %2$s caractere.</string>
   <string name="sourceSingleUrl">URL sursă PGN</string>
-  <string name="sourceUrlHelp">URL-ul pe care Lichess îl va verifica pentru a obține actualizări al PGN-ului. Trebuie să fie public accesibil pe Internet.</string>
-  <string name="sourceGameIds">Până la 64 de ID-uri de joc Lichess, separate prin spații.</string>
+  <string name="sourceUrlHelp">URL-ul pe care Logik îl va verifica pentru a obține actualizări al PGN-ului. Trebuie să fie public accesibil pe Internet.</string>
+  <string name="sourceGameIds">Până la 64 de ID-uri de joc Logik, separate prin spații.</string>
   <string name="startDateTimeZone">Data de start în fusul orar local al turneului: %s</string>
   <string name="startDateHelp">Opțional, dacă știi când va începe evenimentul</string>
   <string name="currentGameUrl">URL-ul partidei curente</string>
@@ -52,7 +52,7 @@
   <string name="age">Vârstă</string>
   <string name="unrated">Fără rating</string>
   <string name="recentTournaments">Turnee recente</string>
-  <string name="openLichess">Deschide în Lichess</string>
+  <string name="openLichess">Deschide în Logik</string>
   <string name="teams">Echipe</string>
   <string name="boards">Table</string>
   <string name="overview">Prezentare generală</string>

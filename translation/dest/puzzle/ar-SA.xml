@@ -87,7 +87,7 @@
   <string name="fromMyGames">من مبارياتي</string>
   <string name="lookupOfPlayer">ابحث عن ألغاز في مباريات لاعبين آخريين</string>
   <string name="searchPuzzles">ابحث عن ألغاز</string>
-  <string name="fromMyGamesNone">ليس لديك أي ألغز في قاعدة البيانات، لكن Lichess تحبك جداً.
+  <string name="fromMyGamesNone">ليس لديك أي ألغز في قاعدة البيانات، لكن Logik تحبك جداً.
 إلعب مبارايات سريعة أو مبارايات كلاسيكية لزيادة فرصك في الحصول على ألغازك الخاصة!</string>
   <plurals name="puzzlesFoundInUserGames">
     <item quantity="zero">يوجد %1$s لُغز في مباريات اللاعب %2$s</item>

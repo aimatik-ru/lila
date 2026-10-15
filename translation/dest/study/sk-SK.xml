@@ -173,7 +173,7 @@
   <string name="youCompletedThisLesson">Gratulujeme! Túto lekciu ste ukončili.</string>
   <string name="perPage">%s na stránku</string>
   <string name="getTheTour">Potrebujete pomoc? Pozrite sa ako to funguje!</string>
-  <string name="welcomeToLichessStudyTitle">Vitajte v Lichess štúdii!</string>
+  <string name="welcomeToLichessStudyTitle">Vitajte v Logik štúdii!</string>
   <string name="welcomeToLichessStudyText">Toto je zdieľaná analytická tabuľka.&lt;br&gt;&lt;br&gt;Použite ju na analýzu a komentovanie partií,&lt;br&gt;diskutujte o pozíciách s priateľmi,&lt;br&gt;a samozrejme na šachové lekcie!&lt;br&gt;&lt;br&gt;Je to silný nástroj, poďme sa pozrieť, ako funguje.</string>
   <string name="sharedAndSaveTitle" comment="As in: shared with other members and saved to database">Zdieľané a uložené</string>
   <string name="sharedAndSavedText">Ostatní členovia môžu vidieť vaše pohyby v reálnom čase!&lt;br&gt;Navyše je všetko navždy uložené.</string>
@@ -187,7 +187,7 @@
   <string name="annotatePositionTitle">Anotovať pozíciu</string>
   <string name="annotatePositionText">Kliknite na tlačidlo !? alebo kliknite pravým tlačidlom myši na zoznam ťahov vpravo.&lt;br&gt;Anotačné glyfy sú zdieľané a uložené.</string>
   <string name="conclusionTitle">Vďaka za Váš čas</string>
-  <string name="conclusionText">Svoje &lt;a href=\'/study/mine/hot\'&gt;predchádzajúce štúdie&lt;/a&gt; nájdete na stránke svojho profilu.&lt;br&gt;K dispozícii je aj &lt;a href=\'//lichess.org/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way\'&gt;blogový príspevok o štúdiách&lt;/a&gt;.&lt;br&gt;Zdatní používatelia si môžu stlačiť „?“ a zobraziť klávesové skratky.&lt;br&gt;Príjemnú zábavu!</string>
+  <string name="conclusionText">Svoje &lt;a href=\'/study/mine/hot\'&gt;predchádzajúce štúdie&lt;/a&gt; nájdete na stránke svojho profilu.&lt;br&gt;K dispozícii je aj &lt;a href=\'/\'&gt;blogový príspevok o štúdiách&lt;/a&gt;.&lt;br&gt;Zdatní používatelia si môžu stlačiť „?“ a zobraziť klávesové skratky.&lt;br&gt;Príjemnú zábavu!</string>
   <string name="createChapterTitle">Vytvorme kapitolu štúdie</string>
   <string name="createChapterText">Štúdia môže mať niekoľko kapitol.&lt;br&gt;Každá kapitola má svoj vlastný strom ťahov,&lt;br&gt;a môže byť vytvorená rôznymi spôsobmi.</string>
   <string name="fromInitialPositionTitle">Z počiatočnej pozície</string>

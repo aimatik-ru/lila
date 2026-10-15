@@ -229,8 +229,8 @@
   <string name="error.weakPassword">Šī parole ir ļoti bieži izmantota, un viegli uzminama.</string>
   <string name="error.namePassword">Lūdzu, neizmantojiet savu lietotājvārdu kā paroli.</string>
   <string name="blankedPassword">Šī parole tikusi izmantota citā vietnē, kas tika kompromitēta. Lai nodrošinātu sava konta drošību, jums jāiestata jauna parole. Paldies par sapratni!</string>
-  <string name="youAreLeavingLichess">Jūs pārejat uz vietni ārpus Lichess</string>
-  <string name="neverTypeYourPassword">Nekad neievadiet savu Lichess paroli citā vietnē!</string>
+  <string name="youAreLeavingLichess">Jūs pārejat uz vietni ārpus Logik</string>
+  <string name="neverTypeYourPassword">Nekad neievadiet savu Logik paroli citā vietnē!</string>
   <string name="proceedToX">Virzīties uz %s</string>
   <string name="passwordSuggestion">Neizmantojiet paroli, ko ieteicis kāds cits. To var izmantot, lai gūtu piekļuvi jūsu kontam.</string>
   <string name="emailSuggestion">Neizmantojiet e-pasta adresi, ko ieteicis kāds cits. To var izmantot, lai gūtu piekļuvi jūsu kontam.</string>
@@ -339,7 +339,7 @@
     <item quantity="one">Piešķirt %s sekundi</item>
     <item quantity="other">Piešķirt %s sekundes</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Šis konts pārkāpa Lichess Pakalpojuma Noteikumus</string>
+  <string name="thisAccountViolatedTos">Šis konts pārkāpa Logik Pakalpojuma Noteikumus</string>
   <string name="openingExplorerAndTablebase">Atklātņu pārlūks &amp; datubāze</string>
   <string name="takeback">Gājiena atsaukšana</string>
   <string name="proposeATakeback">Piedāvāt gājiena atsaukšanu</string>
@@ -519,7 +519,7 @@
   <string name="oneUrlPerLine">Katrā rindā vienu URL.</string>
   <string name="inlineNotation">Iekļautā notācija</string>
   <string name="makeAStudy">Lai saglabātu un dalītos, varat izveidot izpēti.</string>
-  <string name="previouslyOnLichessTV">Iepriekš pārraidīts Lichess TV</string>
+  <string name="previouslyOnLichessTV">Iepriekš pārraidīts Logik TV</string>
   <string name="onlinePlayers">Spēlētāji tiešsaistē</string>
   <string name="activePlayers">Aktīvākie spēlētāji</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Uzmanību! Spēle ir vērtēta bet bez laika limita!</string>
@@ -684,7 +684,7 @@
   <string name="simulAddExtraTime">Varat pievienot papildus laiku savam pulkstenim, lai vieglāk tiktu galā ar simultānseansu.</string>
   <string name="simulAddExtraTimePerPlayer">Pievienot papildu laiku jūsu pulkstenim par katru spēlētāju, kas pievienojas simultānseansam.</string>
   <string name="simulHostExtraTimePerPlayer">Papildus laiks vadītājam par katru spēlētāju</string>
-  <string name="lichessTournaments">Lichess turnīri</string>
+  <string name="lichessTournaments">Logik turnīri</string>
   <string name="tournamentFAQ">Arena turnīru BUJ</string>
   <string name="timeBeforeTournamentStarts">Laiks līdz turnīra sākumam</string>
   <string name="averageCentipawnLoss">Vidējais centibandinieka zudums</string>
@@ -728,8 +728,8 @@
   <string name="weHaveSentYouAnEmailTo">Esam aizsūtījuši e-pastu uz %s. Klikšķiniet uz saites e-pastā, lai atjaunotu savu paroli.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Reģistrējoties, jums jāpiekrīt saistībām atbilstoši mūsu %s.</string>
   <string name="readAboutOur">Lasiet par mūsu %s.</string>
-  <string name="networkLagBetweenYouAndLichess">Tīkla aizture starp jums un Lichess</string>
-  <string name="timeToProcessAMoveOnLichessServer">Gājiena apstrādei nepieciešamais laiks Lichess serverī</string>
+  <string name="networkLagBetweenYouAndLichess">Tīkla aizture starp jums un Logik</string>
+  <string name="timeToProcessAMoveOnLichessServer">Gājiena apstrādei nepieciešamais laiks Logik serverī</string>
   <string name="downloadAnnotated">Lejupielādēt anotētu</string>
   <string name="downloadRaw">Lejupielādēt neapstrādātu</string>
   <string name="downloadImported">Lejupielādēt importēto</string>
@@ -746,7 +746,7 @@
   <string name="kidMode">Bērnu režīms</string>
   <string name="kidModeIsEnabled">Bērnu režīms ir ieslēgts.</string>
   <string name="kidModeExplanation">Runa ir par drošību. Bērnu režīmā jebkāda saziņa ir atspējota. Ieslēdziet šo režīmu, lai pasargātu savus bērnus un skolēnus no citiem interneta lietotājiem.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">Bērnu režīmā Lichess logo tiek pievienota %s ikona, lai jūs zinātu, ka jūsu bērni ir drošībā.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">Bērnu režīmā Logik logo tiek pievienota %s ikona, lai jūs zinātu, ka jūsu bērni ir drošībā.</string>
   <string name="askYourChessTeacherAboutLiftingKidMode">Jūsu konts tiek pārvaldīts. Prasiet savam šaha skolotājam, ja vēlaties noņemt bērnu režīmu.</string>
   <string name="enableKidMode">Iespējot Bērnu režīmu</string>
   <string name="disableKidMode">Atspējot Bērnu režīmu</string>
@@ -853,7 +853,7 @@
     <item quantity="one">un saglabāt %s priekšgājienu variantu</item>
     <item quantity="other">un saglabāt %s priekšgājienu variantus</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Saņemta privāta ziņa no Lichess.</string>
+  <string name="showUnreadLichessMessage">Saņemta privāta ziņa no Logik.</string>
   <string name="sorry">Lūdzu piedodiet :(</string>
   <string name="weHadToTimeYouOutForAWhile">Mums nācās jūs apturēt uz laiku.</string>
   <string name="why">Kāpēc?</string>
@@ -865,7 +865,7 @@
   <string name="tryToWin">Mēģiniet uzvarēt (vai vismaz panākt neizšķirtu) katrā spēlē, ko spēlējat.</string>
   <string name="resignLostGames">Padodieties zaudētajās spēlēs (neļaujiet laikam beigties).</string>
   <string name="temporaryInconvenience">Mēs atvainojamies par īslaicīgajām neērtībām,</string>
-  <string name="wishYouGreatGames">un novēlam jums lieliskas spēles mājaslapā lichess.org.</string>
+  <string name="wishYouGreatGames">un novēlam jums lieliskas spēles mājaslapā play.kalugalogic.ru.</string>
   <string name="thankYouForReading">Paldies, ka izlasījāt!</string>
   <string name="lifetimeScore">Visu laiku rezultāts</string>
   <string name="currentMatchScore">Pašreizējais spēļu reitings</string>
@@ -909,7 +909,7 @@
   <string name="congratsYouWon">Apsveicam ar uzvaru!</string>
   <string name="gameVsX">Spēle pret %1$s</string>
   <string name="resVsX">%1$s pret %2$s</string>
-  <string name="lostAgainstTOSViolator">Zaudējāt pretiniekam, kas pārkāpa Lichess noteikumus</string>
+  <string name="lostAgainstTOSViolator">Zaudējāt pretiniekam, kas pārkāpa Logik noteikumus</string>
   <string name="refundXpointsTimeControlY">Atlīdzība: %1$s %2$s reitinga punkti.</string>
   <string name="timeAlmostUp">Laiks gandrīz beidzies!</string>
   <string name="clickToRevealEmailAddress">[Noklikšķiniet, lai atklātu e-pasta adresi]</string>
@@ -959,13 +959,13 @@ Atstājiet tukšu, lai spēles sāktos no parastās pozīcijas.</string>
   <string name="resignTheGame">Padoties</string>
   <string name="since">Kopš</string>
   <string name="until">Līdz</string>
-  <string name="lichessDbExplanation">Vērtērtu spēļu paraugi no visiem Lichess spēlētājiem</string>
+  <string name="lichessDbExplanation">Vērtērtu spēļu paraugi no visiem Logik spēlētājiem</string>
   <string name="switchSides">Mainīties ar pusēm</string>
   <string name="closingAccountWithdrawAppeal">Konta slēgšana atsauks jūsu iesniegumu</string>
   <string name="ourEventTips">Pasākumu organizēšanas ieteikumi</string>
   <string name="instructions">Instrukcijas</string>
   <string name="showMeEverything">Rādīt visu</string>
-  <string name="lichessPatronInfo">Lichess ir labdarības organizācija un pilnībā bezmaksas/brīva atvērtā koda programmatūra.
+  <string name="lichessPatronInfo">Logik ir labdarības organizācija un pilnībā bezmaksas/brīva atvērtā koda programmatūra.
 Visas izmaksas, izstrādāšanu un saturu finansē vienīgi lietotāju ziedojumi.</string>
   <string name="nothingToSeeHere">Šobrīd te nav, ko parādīt.</string>
   <string name="stats">Statistika</string>

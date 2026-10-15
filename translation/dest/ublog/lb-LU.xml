@@ -3,7 +3,7 @@
   <string name="community">Communautéit</string>
   <string name="byMonth">Nom Mount</string>
   <string name="byTopic">Nom Theema</string>
-  <string name="byLichess">Vu Lichess</string>
+  <string name="byLichess">Vu Logik</string>
   <string name="myFriends">Meng Kolleegen</string>
   <string name="myLikes">Meng Liken</string>
   <string name="myBlog">Mäi Blog</string>
@@ -13,7 +13,7 @@
     <item quantity="other">%s Blog-Bäiträg</item>
   </plurals>
   <string name="continueReadingPost">Virufuere mam Liese vun dësem Bäitrag</string>
-  <string name="lichessBlogPostsFromXYear">Lichess-Blog-Bäiträg vun %s</string>
+  <string name="lichessBlogPostsFromXYear">Logik-Blog-Bäiträg vun %s</string>
   <string name="previousBlogPosts">Virege Blog-Bäitrag</string>
   <string name="xBlog">%s säi Blog</string>
   <string name="newPost">Neie Bäitrag</string>

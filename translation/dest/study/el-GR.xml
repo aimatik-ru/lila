@@ -166,7 +166,7 @@
   <string name="youCompletedThisLesson">Συγχαρητήρια! Ολοκληρώσατε αυτό το μάθημα.</string>
   <string name="perPage">%s ανά σελίδα</string>
   <string name="getTheTour">Χρειάζεστε βοήθεια; Ξεναγηθείτε!</string>
-  <string name="welcomeToLichessStudyTitle">Καλώς ήρθατε στις μελέτες του Lichess!</string>
+  <string name="welcomeToLichessStudyTitle">Καλώς ήρθατε στις μελέτες του Logik!</string>
   <string name="welcomeToLichessStudyText">Αυτή είναι η κοινή σκακιέρα ανάλυσης.&lt;br&gt;&lt;br&gt;Χρησιμοποιήστε την για να αναλύσετε και να σχολιάσετε παρτίδες,&lt;br&gt;για να συζητήσετε συγκεκριμένες θέσεις με φίλους&lt;br&gt;και φυσικά για να δημιουργήσετε σκακιστικά μαθήματα!&lt;br&gt;&lt;br&gt;Η σκακιέρα ανάλυσης είναι πολύ ισχυρό εργαλείο — ας δούμε, λοιπόν, πώς λειτουργεί.</string>
   <string name="sharedAndSaveTitle" comment="As in: shared with other members and saved to database">Κοινοποιήθηκε και αποθηκεύτηκε</string>
   <string name="sharedAndSavedText">Τα άλλα μέλη της μελέτης μπορούν να δουν τις κινήσεις που κάνετε σε πραγματικό χρόνο!&lt;br&gt;Και βέβαια, οτιδήποτε εισάγετε αποθηκεύεται για πάντα.</string>
@@ -180,7 +180,7 @@
   <string name="annotatePositionTitle">Δημιουργία σχολίου με σύμβολα σε μία θέση</string>
   <string name="annotatePositionText">Κάντε κλικ στο κουμπί !? ή δεξί κλικ στη λίστα των κινήσεων δεξιά.&lt;br&gt;Τα σχόλια με σύμβολα κοινοποιούνται και αποθηκεύονται.</string>
   <string name="conclusionTitle">Σας ευχαριστούμε για τον χρόνο σας</string>
-  <string name="conclusionText">Μπορείτε να βρείτε τις&lt;a href=\'/study/mine/hot\'&gt;προηγούμενες μελέτες σας&lt;/a&gt; στη σελίδα προφίλ σας.&lt;br&gt;Έχουμε επίσης δημοσιεύσει μια &lt;a href=\'//lichess.org/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way\'&gt;ανάρτηση για τις μελέτες στο ιστολόγιό μας&lt;/a&gt;.&lt;br&gt;Οι έμπειροι χρήστες μπορούν να πατήσουν το πλήκτρο «?» για να δουν τους διαθέσιμους συνδυασμούς πλήκτρων.&lt;br&gt;Καλή διασκέδαση!</string>
+  <string name="conclusionText">Μπορείτε να βρείτε τις&lt;a href=\'/study/mine/hot\'&gt;προηγούμενες μελέτες σας&lt;/a&gt; στη σελίδα προφίλ σας.&lt;br&gt;Έχουμε επίσης δημοσιεύσει μια &lt;a href=\'/\'&gt;ανάρτηση για τις μελέτες στο ιστολόγιό μας&lt;/a&gt;.&lt;br&gt;Οι έμπειροι χρήστες μπορούν να πατήσουν το πλήκτρο «?» για να δουν τους διαθέσιμους συνδυασμούς πλήκτρων.&lt;br&gt;Καλή διασκέδαση!</string>
   <string name="createChapterTitle">Ας δημιουργήσουμε μαζί ένα νέο κεφάλαιο</string>
   <string name="createChapterText">Μια μελέτη μπορεί να περιέχει παραπάνω από ένα κεφάλαια.&lt;br&gt;Κάθε κεφάλαιο έχει το δικό του δέντρο κινήσεων&lt;br&gt;και μπορεί να δημιουργηθεί με πολλούς τρόπους.</string>
   <string name="fromInitialPositionTitle">Αρχική θέση</string>
@@ -194,7 +194,7 @@
   <string name="fromPgnGameTitle">Παρτίδα από αρχείο PGN</string>
   <string name="fromPgnGameText">Φορτώστε μια παρτίδα επικολλώντας το αντίστοιχο&lt;br&gt;αρχείο PGN για να φορτώσετε τις κινήσεις, τα σχόλια και τις βαριάντες στο κεφάλαιο.</string>
   <string name="variantsAreSupportedTitle">Οι μελέτες υποστηρίζουν τις παραλλαγές</string>
-  <string name="variantsAreSupportedText">Μπορείτε να δημιουργήσετε μία μελέτη Crazyhouse&lt;br&gt;η μία μελέτη με οποιαδήποτε άλλη παραλλαγή υποστηρίζει το Lichess!</string>
+  <string name="variantsAreSupportedText">Μπορείτε να δημιουργήσετε μία μελέτη Crazyhouse&lt;br&gt;η μία μελέτη με οποιαδήποτε άλλη παραλλαγή υποστηρίζει το Logik!</string>
   <string name="chapterConclusionText">Τα κεφάλαια αποθηκεύονται για πάντα&lt;br&gt;Ευχόμαστε καλή διασκέδαση και καλή επιτυχία στην οργάνωση του σκακιστικού σας περιεχομένου!</string>
   <string name="doubleDefeat">Διπλή ήττα</string>
   <string name="blackDefeatWhiteCanNotWin">Τα μαύρα χάνουν, αλλά τα λευκά δεν μπορούν να κερδίσουν</string>

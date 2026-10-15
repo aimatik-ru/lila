@@ -65,8 +65,8 @@
   <string name="notifyTournamentStartReminders" comment="notifyTournamentSoon&#10;&#10;A notification setting - notifies players if a tournament is starting soon.">Turnuva başlangıç hatırlatıcıları</string>
   <string name="notifyBroadcasts">Canlı Turnuvalar</string>
   <string name="notifyTimeAlarm">Yazışmalı oyununuzda süreniz azalıyor</string>
-  <string name="notifyBell">Lichess içinde çan bildirimi</string>
-  <string name="notifyPush">Lichess\'te değilken cihaz bildirimleri</string>
+  <string name="notifyBell">Logik içinde çan bildirimi</string>
+  <string name="notifyPush">Logik\'te değilken cihaz bildirimleri</string>
   <string name="notifyWeb">Tarayıcı</string>
   <string name="notifyDevice">Cihaz</string>
   <string name="bellNotificationSound">Çan bildirimi sesi</string>

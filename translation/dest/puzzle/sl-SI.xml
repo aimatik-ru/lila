@@ -81,7 +81,7 @@
   <string name="fromMyGames">Iz mojih iger</string>
   <string name="lookupOfPlayer">Iskanje ugank iz igralčevih iger</string>
   <string name="searchPuzzles">Išči uganke</string>
-  <string name="fromMyGamesNone">V bazi podatkov nimate ugank, vendar vas ima Lichess še vedno zelo rad.
+  <string name="fromMyGamesNone">V bazi podatkov nimate ugank, vendar vas ima Logik še vedno zelo rad.
 Igrajte hitre in klasične igre, da povečate možnosti za dodajanje svoje uganke!</string>
   <plurals name="puzzlesFoundInUserGames">
     <item quantity="one">Ena uganka, najdena v igrah igralca %2$s</item>

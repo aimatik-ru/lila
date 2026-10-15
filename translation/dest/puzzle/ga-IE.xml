@@ -77,7 +77,7 @@
   <string name="fromMyGames">Ó mo chluichí</string>
   <string name="lookupOfPlayer">Cuardaigh fadhbanna ó chluichí imreoir</string>
   <string name="searchPuzzles">Cuardaigh fadhbanna</string>
-  <string name="fromMyGamesNone">Níl aon fadhb agat sa bhunachar sonraí, ach is breá le Lichess tú go mór fós. 
+  <string name="fromMyGamesNone">Níl aon fadhb agat sa bhunachar sonraí, ach is breá le Logik tú go mór fós. 
 Imir cluichí gasta agus clasaiceacha chun cur leis na seansanna go gcuirfear fadhb de do chuid féin leis!</string>
   <string name="puzzleDashboardDescription">Traenáil, anailís, feabhsú</string>
   <plurals name="nbPlayed">

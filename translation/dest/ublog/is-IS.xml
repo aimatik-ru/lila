@@ -3,7 +3,7 @@
   <string name="community">Samfélag</string>
   <string name="byMonth">Eftir mánuði</string>
   <string name="byTopic">Eftir umræðu</string>
-  <string name="byLichess">Eftir Lichess</string>
+  <string name="byLichess">Eftir Logik</string>
   <string name="myFriends">Vinir mínir</string>
   <string name="myLikes">Gildismatið mitt</string>
   <string name="myBlog">Bloggið mitt</string>
@@ -13,7 +13,7 @@
     <item quantity="other">%s færslur á bloggi</item>
   </plurals>
   <string name="continueReadingPost">Halda áfram að lesa þessa færslu</string>
-  <string name="lichessBlogPostsFromXYear">Lichess-bloggfærslur árið %s</string>
+  <string name="lichessBlogPostsFromXYear">Logik-bloggfærslur árið %s</string>
   <string name="previousBlogPosts">Fyrri bloggfærslur</string>
   <string name="xBlog">Blogg notandans %s</string>
   <string name="newPost">Ný færsla</string>

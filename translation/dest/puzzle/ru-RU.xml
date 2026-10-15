@@ -81,7 +81,7 @@
   <string name="fromMyGames">Из моих партий</string>
   <string name="lookupOfPlayer">Искать задачи из партий игрока</string>
   <string name="searchPuzzles">Искать задачи</string>
-  <string name="fromMyGamesNone">В базе данных нет задач из ваших партий, но Lichess надеется на вас.
+  <string name="fromMyGamesNone">В базе данных нет задач из ваших партий, но Логик надеется на вас.
 Сыграйте больше партий в рапид или с классическим контролем времени, и ваши шансы попасть в список игроков с задачами увеличатся!</string>
   <plurals name="puzzlesFoundInUserGames">
     <item quantity="one">Одна задача найдена в играх %2$s</item>

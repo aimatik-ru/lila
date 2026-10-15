@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="lichessCoaches">Προπονητές του Lichess</string>
-  <string name="lichessCoach">Προπονητής του Lichess</string>
+  <string name="lichessCoaches">Προπονητές του Logik</string>
+  <string name="lichessCoach">Προπονητής του Logik</string>
   <string name="areYouCoach">Είστε προπονητής σκακιού που έχει τίτλο %s;</string>
   <string name="nmOrFideTitle" comment="nmOrFideTitle&#10;&#10;Part of sentence &quot;Are you a great chess coach with a NM or FIDE title?&quot;&#10;&#10;The text links to our title verification page: https://lichess.org/help/master">NM ή FIDE</string>
   <string name="confirmTitle">Επιβεβαιώστε εδώ τον τίτλο σας και θα εξετάσουμε την αίτησή σας.</string>
@@ -26,5 +26,5 @@
   <string name="youtubeVideos">Βίντεο στο YouTube</string>
   <string name="allCountries">Οποιαδήποτε χώρα</string>
   <string name="lastLogin">Τελευταία σύνδεση</string>
-  <string name="lichessRating">Βαθμολογία στο Lichess</string>
+  <string name="lichessRating">Βαθμολογία στο Logik</string>
 </resources>

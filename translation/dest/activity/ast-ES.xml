@@ -4,7 +4,7 @@
   <string name="hostedALiveStream">Emitió en directu</string>
   <plurals name="supportedNbMonths">
     <item quantity="one">Collaboró con *lichess.*org mientres %1$s mes como %2$s</item>
-    <item quantity="other">Collaboró con *lichess.org mientres %1$s meses como %2$s</item>
+    <item quantity="other">Collaboró con *play.kalugalogic.ru mientres %1$s meses como %2$s</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="one">Practicó %1$s posición en %2$s</item>
@@ -71,7 +71,7 @@
     <item quantity="other">Compitió en %s torneos suizos</item>
   </plurals>
   <string name="rankedInSwissTournament">#%1$s Na *Clasificatoria de %2$s</string>
-  <string name="signedUp">Rexistráu en *Lichess</string>
+  <string name="signedUp">Rexistráu en *Logik</string>
   <plurals name="joinedNbTeams">
     <item quantity="one">Miembru de %s equipu</item>
     <item quantity="other">Miembru de %s equipos</item>

@@ -69,11 +69,11 @@
 	<string name="malwareNoAbuse">Ми не використовували ваш пристрій проти вас</string>
 	<string name="malwareWarningPrefix" comment="%s is 'be careful'">Але інші вебсайти роблять таке, тому, будь ласка, %s.</string>
 	<string name="malwareWarningCta" comment="It is a link to https://lichess.org/ads">будьте обачні</string>
-	<string name="lichessGamesPlayedIn" comment="%1$s is the number of games, %2$s is the year">Зіграно %1$s ігор на Lichess у %2$s-му</string>
+	<string name="lichessGamesPlayedIn" comment="%1$s is the number of games, %2$s is the year">Зіграно %1$s ігор на Logik у %2$s-му</string>
 	<string name="lichessGamesOfThemYours" comment="%s is the percentage of games that are yours">%s із них — ваші.</string>
-	<string name="thanksTitle">Дякуємо, що граєте на Lichess!</string>
+	<string name="thanksTitle">Дякуємо, що граєте на Logik!</string>
 	<string name="thanksHaveAGreat" comment="%s is the next year">Ми раді, що ви тут. Щасливого %s-го!</string>
-	<string name="patronCostsThisYear" comment="%1$s is 'costs'. %2$s is the cost with currency symbol e.g. '$750,000'">%1$s Lichess цього року становлять %2$s.</string>
+	<string name="patronCostsThisYear" comment="%1$s is 'costs'. %2$s is the cost with currency symbol e.g. '$750,000'">%1$s Logik цього року становлять %2$s.</string>
 	<string name="patronCosts" comment="It is a link to lichess.org/costs">Витрати</string>
 	<string name="patronCharity">Ми благодійна організація, і працюємо лише завдяки пожертвам.</string>
 	<string name="patronConsiderDonating" comment="%s is 'supporting us with a donation'">Якщо ми розважили вас цього року, або ви вірите в нашу роботу, будь ласка, %s!</string>

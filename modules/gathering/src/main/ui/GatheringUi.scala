@@ -16,9 +16,9 @@ final class GatheringUi(helpers: Helpers)(prizeTournamentMakers: () => UserIds):
   def userPrizeDisclaimer(ownerId: UserId): Option[Frag] =
     (!prizeTournamentMakers().value.contains(ownerId)).option:
       st.section(cls := "tour__prize")(
-        "This tournament is not organized by Lichess.",
+        "This tournament is not organized by Логик.",
         br,
-        "If it has prizes, Lichess is not responsible for paying them."
+        "If it has prizes, Логик is not responsible for paying them."
       )
 
   def verdicts(vs: WithVerdicts, pk: PerfKey, relevant: Boolean = true)(using
@@ -146,7 +146,7 @@ final class GatheringFormUi(helpers: Helpers):
           field,
           frag("Prize payouts"),
           help = frag(
-            "Only if Lichess is responsible for the payout",
+            "Only if Логик is responsible for the payout",
             br,
             "Amounts in USD: e.g. $500/$250/$100/$50/$25",
             br,

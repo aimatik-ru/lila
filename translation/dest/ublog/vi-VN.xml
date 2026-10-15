@@ -6,7 +6,7 @@
   <string name="all">Tất cả</string>
   <string name="byMonth">Theo tháng</string>
   <string name="byTopic">Theo chủ đề</string>
-  <string name="byLichess">Bởi Lichess</string>
+  <string name="byLichess">Bởi Logik</string>
   <string name="myFriends">Của bạn bè</string>
   <string name="myLikes">Đã thích</string>
   <string name="myBlog">Blog của tôi</string>
@@ -16,7 +16,7 @@
     <item quantity="other">%s bài đăng blog</item>
   </plurals>
   <string name="continueReadingPost">Tiếp tục đọc bài đăng này</string>
-  <string name="lichessBlogPostsFromXYear">Bài blog của Lichess đăng trong năm %s</string>
+  <string name="lichessBlogPostsFromXYear">Bài blog của Logik đăng trong năm %s</string>
   <string name="previousBlogPosts">Những bài blog trước</string>
   <string name="xBlog">Bài viết của %s</string>
   <string name="newPost">Bài đăng mới</string>

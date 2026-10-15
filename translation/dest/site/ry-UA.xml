@@ -215,9 +215,9 @@
   <string name="forgotPassword">Забыли сьте паролу?</string>
   <string name="error.weakPassword">Сися парола дуже легка, ї дуже просто угадати.</string>
   <string name="error.namePassword">Не хоснуйте своє имня таги паролу.</string>
-  <string name="blankedPassword">Вы хосновали таку паролу на другому сайтови, из того сайту ся стало протїканя інформації. Обы обеспечити безопасность свого Lichess акаунту, захоснуйте другу паролу. Дякуєме за розуміня.</string>
-  <string name="youAreLeavingLichess">Вы лишаєте Lichess</string>
-  <string name="neverTypeYourPassword">Ниґда не уводьте свою паролу Lichess дись инде!</string>
+  <string name="blankedPassword">Вы хосновали таку паролу на другому сайтови, из того сайту ся стало протїканя інформації. Обы обеспечити безопасность свого Logik акаунту, захоснуйте другу паролу. Дякуєме за розуміня.</string>
+  <string name="youAreLeavingLichess">Вы лишаєте Logik</string>
+  <string name="neverTypeYourPassword">Ниґда не уводьте свою паролу Logik дись инде!</string>
   <string name="proceedToX">Перейти до %s</string>
   <string name="passwordSuggestion">Не кладіт паролу, котру вам посочили другі люди, они можут украсти ваш акаунт.</string>
   <string name="emailSuggestion">Не кладіт почту, котру вам посочили другі люди, они можут украсти ваш акаунт.</string>
@@ -325,7 +325,7 @@
     <item quantity="few">Дати %s секунды</item>
     <item quantity="other">Дати %s секунд</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Сись бавляч нарушив правила хоснованя Lichess</string>
+  <string name="thisAccountViolatedTos">Сись бавляч нарушив правила хоснованя Logik</string>
   <string name="openingExplorerAndTablebase">Зберька дебютув &amp; ай ендшпілюв</string>
   <string name="takeback">Вернути ход</string>
   <string name="proposeATakeback">Попросити вернути ход</string>
@@ -571,7 +571,7 @@
   <string name="teamNamedX">%1$s дружина</string>
   <string name="subscribe">Подписати ся</string>
   <string name="unsubscribe">Одписати ся</string>
-  <string name="lostAgainstTOSViolator">Вы прыйграли, тому тко нарушив правила Lichess</string>
+  <string name="lostAgainstTOSViolator">Вы прыйграли, тому тко нарушив правила Logik</string>
   <string name="refundXpointsTimeControlY">Верненя: %1$s %2$s рейтінґовых балув.</string>
   <string name="download">Стерьхати</string>
   <string name="tournDescriptionHelp">Хочете дашто уповісти хосновачам? Будьте курті у свойих словах. Приступні одкликованя у форматови Markdown:[name](https://url)</string>
@@ -604,8 +604,8 @@
   <string name="resignTheGame">Здати ся</string>
   <string name="since">Из</string>
   <string name="until">До</string>
-  <string name="lichessDbExplanation">Рейтінґові партії вшыткых бавлячув Lichess</string>
+  <string name="lichessDbExplanation">Рейтінґові партії вшыткых бавлячув Logik</string>
   <string name="switchSides">Перемінити бук</string>
-  <string name="lichessPatronInfo">Lichess - то незысковоє ай докус задарноє проґрамноє застаченя из одкрытым зачаточным кодом. 
+  <string name="lichessPatronInfo">Logik - то незысковоє ай докус задарноє проґрамноє застаченя из одкрытым зачаточным кодом. 
 Вшыткі кельтункы, розробкы ай контент ся фінанзувут лем бо вы нас поддіржуєте.</string>
 </resources>

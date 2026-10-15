@@ -64,7 +64,7 @@ final class PuzzleUi(helpers: Helpers, val bits: PuzzleBits)(
                 trans.puzzle.findTheBestMoveForWhite.txt(),
                 trans.puzzle.findTheBestMoveForBlack.txt()
               )
-              s"Lichess tactic trainer: $findMove. Played by ${puzzle.plays} players."
+              s"Логик tactic trainer: $findMove. Played by ${puzzle.plays} players."
         )
       )
       .hrefLangs(langPath)
@@ -94,10 +94,7 @@ final class PuzzleUi(helpers: Helpers, val bits: PuzzleBits)(
           )
         )
 
-  private def themeInfo(using Context) =
-    p(cls := "puzzle-themes__db text", dataIcon := Icon.Heart):
-      trans.puzzleTheme.puzzleDownloadInformation:
-        a(href := "https://database.lichess.org/")("database.lichess.org")
+  private def themeInfo(using Context) = emptyFrag
 
   private def themeCategory(cat: I18nKey, themes: List[PuzzleTheme.WithCount])(using Context) =
     frag(

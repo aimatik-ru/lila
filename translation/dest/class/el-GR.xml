@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="lichessClasses">Τάξεις</string>
-  <string name="teachClassesOfChessStudents">Διδασκαλία μαθητών με τη σουίτα εργαλείων των τάξεων που προσφέρει το Lichess.</string>
+  <string name="teachClassesOfChessStudents">Διδασκαλία μαθητών με τη σουίτα εργαλείων των τάξεων που προσφέρει το Logik.</string>
   <string name="features">Δυνατότητες</string>
   <string name="quicklyGenerateSafeUsernames">Γρήγορη δημιουργία χρηστών και κωδικών πρόσβασης για τους μαθητές</string>
   <string name="trackStudentProgress">Παρακολούθηση της προόδου μαθητών σε παρτίδες και τακτικά</string>
   <string name="messageAllStudents">Αποστολή μηνύματος σε όλους τους μαθητές σχετικά με νέο υλικό τάξης</string>
   <string name="freeForAllForever">100% δωρεάν για όλους, για πάντα, χωρίς διαφημίσεις και χωρίς παρακολούθηση</string>
-  <string name="applyToBeLichessTeacher">Ζητήστε να γίνετε δάσκαλος στο Lichess</string>
+  <string name="applyToBeLichessTeacher">Ζητήστε να γίνετε δάσκαλος στο Logik</string>
   <string name="noClassesYet">Δεν υπάρχουν τάξεις ακόμη.</string>
   <string name="teachersX">Δάσκαλοι: %s</string>
   <string name="newClass">Νέα τάξη</string>
@@ -23,7 +23,7 @@
   <string name="classDescription">Περιγραφή τάξης</string>
   <string name="visibleByBothStudentsAndTeachers">Ορατή τόσο από τους δασκάλους όσο και από τους μαθητές της τάξης</string>
   <string name="teachersOfTheClass">Δάσκαλοι τάξης</string>
-  <string name="addLichessUsernames">Προσθέστε ονόματα χρηστών Lichess για να τους προσκαλέσετε να συμμετέχουν σε αυτήν την τάξη ως δάσκαλοι. Πληκτρολογήστε ένα όνομα ανά γραμμή.</string>
+  <string name="addLichessUsernames">Προσθέστε ονόματα χρηστών Logik για να τους προσκαλέσετε να συμμετέχουν σε αυτήν την τάξη ως δάσκαλοι. Πληκτρολογήστε ένα όνομα ανά γραμμή.</string>
   <string name="resetPassword">Επαναφορά κωδικού πρόσβασης</string>
   <string name="makeSureToCopy">Βεβαιωθείτε πως αντιγράψατε ή σημειώσατε κάπου τον κωδικό πρόσβασης — δε θα έχετε τη δυνατότητα να τον δείτε ξανά!</string>
   <string name="passwordX">Κωδικός πρόσβασης: %s</string>
@@ -36,18 +36,18 @@
   <string name="studentCredentials">Ονοματεπώνυμο μαθητή: %1$s
 Όνομα χρήστη: %2$s
 Κωδικός πρόσβασης: %3$s</string>
-  <string name="inviteALichessAccount">Πρόσκληση λογαριασμού Lichess</string>
-  <string name="inviteDesc1">Εάν ο μαθητής έχει ήδη λογαριασμό στο Lichess, μπορείτε να τον προσκαλέσετε στην τάξη.</string>
-  <string name="inviteDesc2">Ο μαθητής σας θα λάβει με μήνυμα στο Lichess τον σύνδεσμο για τη συμμετοχή του στην τάξη.</string>
+  <string name="inviteALichessAccount">Πρόσκληση λογαριασμού Logik</string>
+  <string name="inviteDesc1">Εάν ο μαθητής έχει ήδη λογαριασμό στο Logik, μπορείτε να τον προσκαλέσετε στην τάξη.</string>
+  <string name="inviteDesc2">Ο μαθητής σας θα λάβει με μήνυμα στο Logik τον σύνδεσμο για τη συμμετοχή του στην τάξη.</string>
   <string name="inviteDesc3">Σημειώνουμε πως πρέπει να προσκαλείτε μόνο μαθητές που γνωρίζετε, και οι οποίοι θέλουν να συμμετέχουν ενεργά στην τάξη.</string>
   <string name="inviteDesc4">Μη στέλνετε για κανένα λόγο ανεπιθύμητες προσκλήσεις σε τυχαίους χρήστες.</string>
-  <string name="createANewLichessAccount">Δημιουργία νέου λογαριασμού Lichess</string>
-  <string name="createDesc1">Εάν ο μαθητής δεν έχει λογαριασμό στο Lichess, μπορείτε να δημιουργήσετε έναν για αυτόν εδώ.</string>
+  <string name="createANewLichessAccount">Δημιουργία νέου λογαριασμού Logik</string>
+  <string name="createDesc1">Εάν ο μαθητής δεν έχει λογαριασμό στο Logik, μπορείτε να δημιουργήσετε έναν για αυτόν εδώ.</string>
   <string name="createDesc2">Δεν απαιτείται η καταχώριση διεύθυνσης email. Θα δημιουργηθεί αυτόματα ένας κωδικός πρόσβασης, τον οποίο μπορείτε να στείλετε στον μαθηματή, ώστε να μπορέσει να συνδεθεί.</string>
   <string name="createDesc3">Σημαντικό: ο μαθητής δεν πρέπει να έχει πολλαπλούς λογαριασμούς.</string>
-  <string name="createDesc4">Σε περίπτωση που κάποιος μαθητής σας έχει ήδη λογαριασμό στο Lichess, χρησιμοποιήστε την παραπάνω φόρμα πρόσκλησης.</string>
+  <string name="createDesc4">Σε περίπτωση που κάποιος μαθητής σας έχει ήδη λογαριασμό στο Logik, χρησιμοποιήστε την παραπάνω φόρμα πρόσκλησης.</string>
   <string name="createStudentWarning">Δημιουργήστε λογαριασμούς μόνο για πραγματικούς μαθητές. Σε περίπτωση που διαπιστώσουμε πως χρησιμοποιείτε αυτή τη δυνατότητα για να δημιουργείτε πολλούς λογαριασμούς για τον εαυτό σας, θα προβούμε στον αποκλεισμό του λογαριασμού σας.</string>
-  <string name="lichessUsername">Όνομα χρήστη Lichess</string>
+  <string name="lichessUsername">Όνομα χρήστη Logik</string>
   <string name="generateANewUsername">Δημιουργία νέου ονόματος χρήστη</string>
   <string name="welcomeToClass">Καλώς ήρθατε στην τάξη σας: %s.
 Κάντε κλικ στον παρακάτω σύνδεσμο για να αποκτήσετε πρόσβαση στην τάξη σας.</string>
@@ -106,8 +106,8 @@
   <string name="youAcceptedThisInvitation">Έχετε αποδεχθεί την πρόσκληση.</string>
   <string name="youDeclinedThisInvitation">Έχετε απορρίψει την πρόσκληση.</string>
   <string name="orSeparator" comment="Used as separator between invite sections. Shown as large '~ or ~'.">ή</string>
-  <string name="createMultipleAccounts">Δημιουργία πολλών λογαριασμών Lichess ταυτόχρονα</string>
-  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">Μπορείτε επίσης να %s για να δημιουργήσετε πολλούς λογαριασμούς Lichess από μια λίστα με ονόματα μαθητών.</string>
+  <string name="createMultipleAccounts">Δημιουργία πολλών λογαριασμών Logik ταυτόχρονα</string>
+  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">Μπορείτε επίσης να %s για να δημιουργήσετε πολλούς λογαριασμούς Logik από μια λίστα με ονόματα μαθητών.</string>
   <string name="useThisForm" comment="Link text in multipleAccsFromDescription">χρησιμοποιήσετε αυτήν τη φόρμα</string>
   <string name="maxStudentsNote" comment="%1$s will be replaced with a large number (currently 100).\n%2$s is a link and will be replaced with the translation of createMoreClasses. Make sure both strings fit together.">Μία τάξη μπορεί να έχει έως %1$s μαθητές. Για να διαχειριστείτε περισσότερους μαθητές, %2$s.</string>
   <string name="createMoreClasses" comment="Link text in maxStudentsNote">δημιουργήστε περισσότερες τάξεις</string>
@@ -122,7 +122,7 @@
   <string name="allowMessagingBetweenStudentsDesc">Η ρύθμιση αυτή ισχύει μόνο για τους λογαριασμούς που έχετε δημιουργήσει εσείς για τους μαθητές σας.</string>
   <string name="quickLoginCode">Γρήγορος κωδικός σύνδεσης</string>
   <string name="quickLoginCodes">Γρήγοροι κωδικοί σύνδεσης</string>
-  <string name="quickLoginCodesDesc1" comment="String is a URL">Χρησιμοποιήστε αυτούς τους κωδικούς στη διεύθυνση %s για να πραγματοποιήσετε την είσοδο των μαθητών σας στο Lichess.</string>
+  <string name="quickLoginCodesDesc1" comment="String is a URL">Χρησιμοποιήστε αυτούς τους κωδικούς στη διεύθυνση %s για να πραγματοποιήσετε την είσοδο των μαθητών σας στο Logik.</string>
   <string name="quickLoginCodesDesc2">Αφού οι κωδικοί λήξουν, οι μαθητές σας θα παραμείνουν συνδεδεμένοι έως ότου επιλέξουν να αποσυνδεθούν.</string>
   <string name="expirationInMomentFromNow" comment="String is the translation of, for example, 'in 2 hours'">Λήγει %s</string>
 </resources>

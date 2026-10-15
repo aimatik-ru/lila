@@ -3,8 +3,8 @@
   <string name="activity">செயல்பாடு</string>
   <string name="hostedALiveStream">இணைய நேரலை</string>
   <plurals name="supportedNbMonths">
-    <item quantity="one">%1$s மாதத்திற்கு %2$s ஆக lichess.org ஆதரிக்கப்படுகிறது</item>
-    <item quantity="other">%1$s மாதங்களுக்கு %2$s ஆக lichess.org ஆதரிக்கப்படுகிறது</item>
+    <item quantity="one">%1$s மாதத்திற்கு %2$s ஆக play.kalugalogic.ru ஆதரிக்கப்படுகிறது</item>
+    <item quantity="other">%1$s மாதங்களுக்கு %2$s ஆக play.kalugalogic.ru ஆதரிக்கப்படுகிறது</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="one">%2$s இல் %1$s நிலையைப் பயிற்சி செய்தேன்</item>
@@ -71,7 +71,7 @@
     <item quantity="other">%s சுவிஸ் போட்டிகளில் போட்டியிட்டார்</item>
   </plurals>
   <string name="rankedInSwissTournament">%2$s இல் #%1$s ஆம் தரவரிசை</string>
-  <string name="signedUp">Lichess.org இல் பதிவு செய்துள்ளார்</string>
+  <string name="signedUp">Logik.org இல் பதிவு செய்துள்ளார்</string>
   <plurals name="joinedNbTeams">
     <item quantity="one">%s குழுவில் சேர்ந்தார்</item>
     <item quantity="other">%s குழுக்களில் சேர்ந்தார்</item>

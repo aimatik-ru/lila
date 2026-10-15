@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="contact">Kontakt</string>
-  <string name="contactLichess">Lichess kontaktiere</string>
+  <string name="contactLichess">Logik kontaktiere</string>
   <string name="whatCanWeHelpYouWith">Mit was chömmer hälfe?</string>
   <string name="visitThisPage">Bsuech die Site, um s\'Problem z\'löse</string>
   <string name="iCantLogIn">Ich chann nöd ilogge</string>
@@ -12,7 +12,7 @@
   <string name="lost2FA">Ich han de Zuegriff zu mim Zwei-Faktor-Code verlore</string>
   <string name="doPasswordReset">Setz dis Passwort zrugg, zum de zweit Faktor entferne</string>
   <string name="accountSupport">Ich bruche Konto Underschtützig</string>
-  <string name="wantTitle">Ich wett, dass min Titel uf Lichess azeigt wird</string>
+  <string name="wantTitle">Ich wett, dass min Titel uf Logik azeigt wird</string>
   <string name="visitTitleConfirmation">Das din Titel i dim Profil azeigt wird und dass du dörfsch bi Arena Turnier für Schpiller mit Titel aträte, muesch zerscht uf d\'Site für d\'Titelbeschtätigung</string>
   <string name="wantCloseAccount">Ich wott mis Konto schlüsse</string>
   <string name="closeYourAccount">Du chasch dis Konto uf dere Site schlüsse</string>
@@ -33,10 +33,10 @@
   <string name="doNotMessageModerators">Bitte schick de Moderatore kei diräkti Nachrichte.</string>
   <string name="onlyReports">Effektiv sind Mäldige vu Schpiller nur via Mäldigsformular.</string>
   <string name="wantReportBug">Ich möcht en Fähler mälde</string>
-  <string name="reportBugInForum">Under \"Lichess Feedback\", im Lichess Forum</string>
-  <string name="reportWebsiteIssue">Als es \"Lichess Website Problem\" uf GitHub</string>
-  <string name="reportMobileIssue">Als es \"Lichess Mobile App Problem\" uf GitHub</string>
-  <string name="reportBugInDiscord">Im Lichess Discordserver</string>
+  <string name="reportBugInForum">Under \"Logik Feedback\", im Logik Forum</string>
+  <string name="reportWebsiteIssue">Als es \"Logik Website Problem\" uf GitHub</string>
+  <string name="reportMobileIssue">Als es \"Logik Mobile App Problem\" uf GitHub</string>
+  <string name="reportBugInDiscord">Im Logik Discordserver</string>
   <string name="howToReportBug">Bitte beschrib, wie de Fähler usgseht, was du stattdesse erwartet häsch und wie mer de Fähler chann reproduziere.</string>
   <string name="illegalPawnCapture">Unerlaubts Schlah vu Puure</string>
   <string name="calledEnPassant">Das nännt sich \"en passant\" und e Schachregle.</string>
@@ -53,7 +53,7 @@
   <string name="ratedGame">Nöd g\'werteti Schpiel ändered dini Wertig (Rating) nöd - schpill G\'werteti!</string>
   <string name="botRatingAbuse">Under beschtimmte Umschtänd - wänn gäge es \"Bot Konto\" gschpillt wird - chas si, dass kei Pünkt vergeh werded, wänn feschtgschtellt wird, dass de \"Bot\" für d\'Wertig missbrucht wird.</string>
   <string name="errorPage">Fählersite</string>
-  <string name="learnHowToMakeBroadcasts">Lern wie du - uf Lichess - dini eigeni Überträgig machsch</string>
+  <string name="learnHowToMakeBroadcasts">Lern wie du - uf Logik - dini eigeni Überträgig machsch</string>
   <string name="banAppeal">Ischpruch gäge en Usschluss oder IP-Beschränkig</string>
   <string name="engineAppeal">Markierig vu Computer Underschtützig oder Betrug</string>
   <string name="sendAppealTo">Du chasch en Ischpruch a %s sände.</string>
@@ -63,22 +63,22 @@
   <string name="doNotDeny">Schtrit de Betrug nöd ab. Wänn du es neus Konto wottsch, gisch eifach zue, was du gmacht häsch und zeigsch, dass du verschtande häsch, dass es en Fähler gsi isch.</string>
   <string name="otherRestriction">Anderi Beschränkige</string>
   <string name="collaboration">Zämmearbet, Rächtlichs, Kommerziells</string>
-  <string name="monetizing">Lichess finanzielli Bewertig</string>
-  <string name="buyingLichess">Lichess chaufe</string>
-  <string name="authorizationToUse">Genehmigung Lichess z\'benutze</string>
-  <string name="welcomeToUse">Du chasch Lichess für Aktivitäte verwände, au für Kommerzielli.</string>
-  <string name="videosAndBooks">Du chasch Lichess i dine Videos zeige und au Screenshots usdrucke und verwände.</string>
+  <string name="monetizing">Logik finanzielli Bewertig</string>
+  <string name="buyingLichess">Logik chaufe</string>
+  <string name="authorizationToUse">Genehmigung Logik z\'benutze</string>
+  <string name="welcomeToUse">Du chasch Logik für Aktivitäte verwände, au für Kommerzielli.</string>
+  <string name="videosAndBooks">Du chasch Logik i dine Videos zeige und au Screenshots usdrucke und verwände.</string>
   <string name="creditAppreciated">Erwähnig isch g\'wünscht, aber nöd notwändig.</string>
   <string name="noneOfTheAbove">Öppis anders</string>
   <string name="sendEmailAt">Schick eus e E-Mail a %s.</string>
   <string name="explainYourRequest">Bitte erchlär dini Afrag klar und dütlich. Nänn eus din Nutzername und alli Infos wo eus chönnd hälfe, dir z\'hälfe.</string>
-  <string name="monetiseNotInterested">Lichess het chais Interesse, monetisiert z\'werde.</string>
+  <string name="monetiseNotInterested">Logik het chais Interesse, monetisiert z\'werde.</string>
   <string name="monetiseNoAdsTrackingOrTraffic">Mir werdet niä Werbig schalte, üsi Schpiller überwache oder au Schpiller oder Verchär für\'d site choufe odr verchoufe.</string>
   <string name="monetiseNoMarketingEmail">Bitte sind so guet und schicket eus chai Mails über Marketing, Tracking odr Werbig.</string>
   <string name="monetiseEncourageEveryoneTo" comment="string is value of key monetiseBlockAllAdsAndTrackers">Mir motivieret alli, %s.</string>
   <string name="monetiseBlockAllAdsAndTrackers">jeglichi Tracker und Werbige z\'blockiere</string>
-  <string name="broadcastTournamentOnLichess">Es Turnier uf Lichess übertragä</string>
-  <string name="ifYouWantToBroadcastClause1">Wenn du wotsch es offiziels Turnier uf Lichess übertrage, oder jegli Fräge hesch:</string>
+  <string name="broadcastTournamentOnLichess">Es Turnier uf Logik übertragä</string>
+  <string name="ifYouWantToBroadcastClause1">Wenn du wotsch es offiziels Turnier uf Logik übertrage, oder jegli Fräge hesch:</string>
   <string name="ifYouWantToBroadcastClause2" comment="string1 is Lichess email, string2 is value of key ourDiscordServer">Bitte chontaktier s\'Broadcast Team übr %1$s odr uf %2$s.</string>
   <string name="ourDiscordServer">üse Discord Server</string>
 </resources>

@@ -15,7 +15,7 @@
     <item quantity="other">%s blogových příspěvků</item>
   </plurals>
   <string name="continueReadingPost">Pokračovat ve čtení tohoto příspěvku</string>
-  <string name="lichessBlogPostsFromXYear">Příspěvky blogu Lichess v %s</string>
+  <string name="lichessBlogPostsFromXYear">Příspěvky blogu Logik v %s</string>
   <string name="previousBlogPosts">Předchozí příspěvky blogu</string>
   <string name="xBlog">Blog hráče %s</string>
   <string name="newPost">Nový příspěvek</string>

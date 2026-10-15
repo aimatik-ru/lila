@@ -19,7 +19,7 @@
   <string name="newBroadcast">Nové živé vysielanie</string>
   <string name="subscribedBroadcasts">Odoberané vysielania</string>
   <string name="aboutBroadcasts">O vysielaní</string>
-  <string name="howToUseLichessBroadcasts">Ako používať Lichess vysielanie.</string>
+  <string name="howToUseLichessBroadcasts">Ako používať Logik vysielanie.</string>
   <string name="theNewRoundHelp">Nové kolo bude mať tých istých členov a prispievateľov ako to predchádzajúce.</string>
   <string name="addRound">Pridať kolo</string>
   <string name="ongoing">Prebiehajúci</string>
@@ -30,8 +30,8 @@
   <string name="fullDescription">Úplný popis turnaja</string>
   <string name="fullDescriptionHelp">Voliteľný dlhý popis vysielania. %1$s je dostupný. Dĺžka musí byť menej ako %2$s znakov.</string>
   <string name="sourceSingleUrl">Zdrojová URL pre PGN súbor</string>
-  <string name="sourceUrlHelp">URL, ktorú bude Lichess kontrolovať, aby získal aktualizácie PGN. Musí byť verejne prístupná z internetu.</string>
-  <string name="sourceGameIds">Až do 64 identifikátorov Lichess partií oddelených medzerami.</string>
+  <string name="sourceUrlHelp">URL, ktorú bude Logik kontrolovať, aby získal aktualizácie PGN. Musí byť verejne prístupná z internetu.</string>
+  <string name="sourceGameIds">Až do 64 identifikátorov Logik partií oddelených medzerami.</string>
   <string name="startDateTimeZone">Dátum začiatku v miestnej časovej zóne turnaja: %s</string>
   <string name="startDateHelp">Voliteľné, ak viete kedy sa udalosť začne</string>
   <string name="currentGameUrl">Adresa URL aktuálnej partie</string>
@@ -52,7 +52,7 @@
   <string name="age">Vek</string>
   <string name="unrated">Bez hodnotenia</string>
   <string name="recentTournaments">Posledné turnaje</string>
-  <string name="openLichess">Otvoriť na Lichess</string>
+  <string name="openLichess">Otvoriť na Logik</string>
   <string name="teams">Tímy</string>
   <string name="boards">Šachovnice</string>
   <string name="overview">Prehľad</string>

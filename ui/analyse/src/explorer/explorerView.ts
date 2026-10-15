@@ -330,8 +330,8 @@ const explorerTitle = (ctrl: AnalyseCtrl) => {
       ? active([hl('strong', 'Masters'), ' database'], masterDbExplanation, licon.Book)
       : explorer.config.allDbs.includes('masters') && otherLink('Masters', masterDbExplanation),
     db === 'lichess'
-      ? active([hl('strong', 'Lichess'), ' database'], i18n.site.lichessDbExplanation, licon.Logo)
-      : otherLink('Lichess', i18n.site.lichessDbExplanation),
+      ? active([hl('strong', 'Логик'), ' database'], i18n.site.lichessDbExplanation, licon.Logo)
+      : otherLink('Логик', i18n.site.lichessDbExplanation),
     db === 'player'
       ? playerName
         ? active(

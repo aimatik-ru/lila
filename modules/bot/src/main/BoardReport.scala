@@ -38,7 +38,7 @@ private final class BoardReport(settingStore: SettingStore.Builder)(using
       else 24
     val minutes = (2 + delayBase + ThreadLocalRandom.nextInt(delayBase * 60))
     lila.log.system.warn:
-      s"Marking https://lichess.org/@/${me.username} for https://lichess.org/${game.id} with $ref in $minutes minutes"
+      s"Marking https://play.kalugalogic.ru/@/${me.username} for https://play.kalugalogic.ru/${game.id} with $ref in $minutes minutes"
     scheduler.scheduleOnce(minutes.minutes):
       lila.common.Bus.pub(lila.core.mod.BoardApiMark(me.userId, ref))
 

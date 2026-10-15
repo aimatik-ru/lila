@@ -20,25 +20,11 @@ final class SitePages(helpers: Helpers):
     val external = frag(" ", iconTag(Icon.ExternalArrow))
     def activeCls(c: String) = cls := active.activeO(c)
     lila.ui.bits.pageMenuSubnav(
-      a(activeCls("about"), href := "/about")(trans.site.aboutX("lichess.org")),
-      a(activeCls("news"), href := routes.Feed.index(1))(trans.site.lichessUpdates()),
-      a(activeCls("faq"), href := routes.Main.faq)(trans.faq.faqAbbreviation()),
-      a(activeCls("contact"), href := routes.Main.contact)(trans.contact.contact()),
+      a(activeCls("about"), href := "/about")(trans.site.aboutX("Логик")),
       a(activeCls("tos"), href := routes.Cms.tos)(trans.site.termsOfService()),
       a(activeCls("privacy"), href := "/privacy")(trans.site.privacy()),
-      a(activeCls("title"), href := routes.TitleVerify.index)(trans.site.titleVerification()),
       sep,
-      a(activeCls("source"), href := routes.Cms.source)(trans.site.sourceCode()),
-      a(activeCls("help"), href := routes.Cms.help)(trans.site.contribute()),
-      a(activeCls("changelog"), href := routes.Cms.menuPage(CmsPageKey("changelog")))(trans.site.changelog()),
-      a(activeCls("thanks"), href := "/thanks")(trans.site.thankYou()),
-      sep,
-      a(activeCls("webmasters"), href := routes.Main.webmasters)(trans.site.webmasters()),
-      a(activeCls("database"), href := "https://database.lichess.org")(trans.site.database(), external),
-      a(activeCls("api"), href := "/api")("API", external),
-      sep,
-      a(activeCls("lag"), href := routes.Main.lag)(trans.lag.isLichessLagging()),
-      a(activeCls("ads"), href := "/ads")(trans.site.blockAds())
+      a(activeCls("source"), href := routes.Cms.source)(trans.site.sourceCode())
     )
 
   def webmasters(pieceNames: List[String])(using Context) =
@@ -57,12 +43,12 @@ final class SitePages(helpers: Helpers):
       active = "webmasters",
       contentCls = "page force-ltr"
     ).css("bits.page")
-      .csp(_.copy(frameSrc = "https://lichess.org" :: Nil)):
+      .csp(_.copy(frameSrc = "https://play.kalugalogic.ru" :: Nil)):
         frag(
           st.section(cls := "box box-pad developers")(
             h1(cls := "box__top")("HTTP API"),
             p(
-              "Lichess exposes a RESTish HTTP/JSON API that you are welcome to use. Read the ",
+              "Логик exposes a RESTish HTTP/JSON API that you are welcome to use. Read the ",
               a(href := "/api")("HTTP API documentation"),
               "."
             )
@@ -73,7 +59,7 @@ final class SitePages(helpers: Helpers):
               """style="width: 400px; aspect-ratio: 10/11;" allowtransparency="true" frameborder="0""""
             frag(
               a(href := "#embed-tv")(
-                h1(cls := "box__top", id := "embed-tv")("Embed Lichess TV in your site")
+                h1(cls := "box__top", id := "embed-tv")("Embed Логик TV in your site")
               ),
               div(cls := "body")(
                 div(cls := "center")(raw(s"""<iframe src="/tv/frame?theme=brown&bg=dark" $args></iframe>""")),
@@ -82,7 +68,7 @@ final class SitePages(helpers: Helpers):
                 parameters(),
                 p(
                   "You can also show the channel for a specific variant or time control by adding the channel key to the URL, corresponding to the channels available at ",
-                  a(href := "/tv")("lichess.org/tv"),
+                  a(href := "/tv")("play.kalugalogic.ru/tv"),
                   ". If not included, the top rated game will be shown."
                 ),
                 copyMeInput(
@@ -166,7 +152,7 @@ final class SitePages(helpers: Helpers):
               div(cls := "body")(
                 div(cls := "center"):
                   raw:
-                    s"""<iframe src="https://lichess.org/embed/broadcast/fide-world-rapidblitz-team-championships-2024--rapid-matches-1-10/G1YjiG7j" $args></iframe>"""
+                    s"""<iframe src="https://play.kalugalogic.ru/embed/broadcast/fide-world-rapidblitz-team-championships-2024--rapid-matches-1-10/G1YjiG7j" $args></iframe>"""
                 ,
                 p(
                   "On a broadcast page, select the embed iframe code, then optionally add query parameters to customize the appearance."
@@ -180,7 +166,7 @@ final class SitePages(helpers: Helpers):
           st.section(cls := "box box-pad developers", id := "analysis") {
             val args = """style="width: 100%; aspect-ratio: 4/3;" frameborder="0""""
             val iframe =
-              s"""<iframe src="https://lichess.org/embed/analysis" $args></iframe>"""
+              s"""<iframe src="https://play.kalugalogic.ru/embed/analysis" $args></iframe>"""
             frag(
               a(href := "#embed-analysis")(
                 h1(cls := "box__top", id := "embed-analysis")("Embed an analysis board")
@@ -189,7 +175,7 @@ final class SitePages(helpers: Helpers):
                 div(cls := "center")(raw(iframe)),
                 p(
                   "Embeds the ",
-                  a(href := routes.UserAnalysis.index)("fully-featured Lichess analysis board"),
+                  a(href := routes.UserAnalysis.index)("fully-featured Логик analysis board"),
                   " with stockfish evaluation, opening explorer and tablebase."
                 ),
                 copyMeInput(iframe),
@@ -200,7 +186,7 @@ final class SitePages(helpers: Helpers):
                 div(
                   "Example using a custom initial position:",
                   copyMeInput:
-                    s"""<iframe src="https://lichess.org/embed/analysis?fen=r1bqkb1r/pp2pppp/2np1n2/6B1/3NP3/2N5/PPP2PPP/R2QKB1R_b_KQkq_-_1_6&color=black" $args></iframe>"""
+                    s"""<iframe src="https://play.kalugalogic.ru/embed/analysis?fen=r1bqkb1r/pp2pppp/2np1n2/6B1/3NP3/2N5/PPP2PPP/R2QKB1R_b_KQkq_-_1_6&color=black" $args></iframe>"""
                 ),
                 p("The text is automatically translated to your visitor's language.")
               )
@@ -258,7 +244,7 @@ final class SitePages(helpers: Helpers):
 
   def lag(using Context) =
     import trans.lag as trl
-    SitePage(title = "Is Lichess lagging?", active = "lag")
+    SitePage(title = "Is Логик lagging?", active = "lag")
       .css("bits.lag")
       .js(esmInit("chart.lag")):
         div(cls := "box box-pad lag")(

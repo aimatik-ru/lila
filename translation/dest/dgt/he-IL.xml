@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="dgtBoard">לוח DGT</string>
-  <string name="lichessAndDgt">Lichess ו־DGT</string>
+  <string name="lichessAndDgt">Logik ו־DGT</string>
   <string name="dgtBoardRequirements">הדרישות עבור לוח DGT</string>
   <string name="dgtBoardLimitations">ההגבלות של לוח ה־DGT</string>
-  <string name="thisPageAllowsConnectingDgtBoard">העמוד הזה מאפשר לך לחבר את לוח ה־DGT שברשותך ל־Lichess ולהשתמש בו כדי לשחק.</string>
+  <string name="thisPageAllowsConnectingDgtBoard">העמוד הזה מאפשר לך לחבר את לוח ה־DGT שברשותך ל־Logik ולהשתמש בו כדי לשחק.</string>
   <string name="toConnectTheDgtBoard">כדי לחבר את לוח ה־DGT האלקטרוני שלך יש להתקין את %s.</string>
   <string name="downloadHere">ניתן להוריד את התוכנה כאן: %s.</string>
   <string name="ifLiveChessRunningOnThisComputer">אם %1$s מותקן על המחשב הזה, ניתן לבדוק את החיבור שלך אליו על ידי %2$s.</string>
@@ -18,9 +18,9 @@
   <string name="whenReadySetupBoard">כשאתם מוכנים, סדרו את הלוח שלהם ולחצו על %s.</string>
   <string name="ifMoveNotDetected">אם לא זוהה מהלך</string>
   <string name="checkYouHaveMadeOpponentsMove">תחילה, בדקו שעשיתם את המהלך של היריב שלכם גם על הלוח שלהם. לאחר מכן, החזירו את המהלך שלכם ושחקו אותו שוב.</string>
-  <string name="asALastResort">כמוצא אחרון, ערכו את הלוח בדיוק כפי שהוא מוצג ב־Lichess, ואז %s</string>
+  <string name="asALastResort">כמוצא אחרון, ערכו את הלוח בדיוק כפי שהוא מוצג ב־Logik, ואז %s</string>
   <string name="reloadThisPage">טענו את העמוד מחדש</string>
-  <string name="lichessConnectivity">החיבור ל־Lichess</string>
+  <string name="lichessConnectivity">החיבור ל־Logik</string>
   <string name="validDgtOauthToken">יש לך תו OAuth שמתאים למשחק באמצעות לוח DGT.</string>
   <string name="dgtPlayMenuEntryAdded">הערך ׳%s׳ התווסף לתפריט שלמעלה, תחת הקטגוריה ׳שחקו׳.</string>
   <string name="noSuitableOauthToken">לא נוצר תו OAuth מתאים.</string>
@@ -35,7 +35,7 @@
   <string name="announceAllMoves">הכריזו על כל המהלכים</string>
   <string name="selectAnnouncePreference">בחרו ב־YES כדי להקריא את כל המהלכים. בחרו ב־NO כדי להקריא רק את מהלכי יריבך.</string>
   <string name="announceMoveFormat">פורמט הקראת המסעים</string>
-  <string name="moveFormatDescription">SAN זהו הסטנדרט ב־Lichess: Nf6. 
+  <string name="moveFormatDescription">SAN זהו הסטנדרט ב־Logik: Nf6. 
 UCI נפוץ במנועי שחמט: g8f6.</string>
   <string name="keywords">מילות מפתח</string>
   <string name="keywordFormatDescription">מילות המפתח הן בפורמט JSON. הן משמשות כדי לתרגם את המהלכים והתוצאות לשפה שלך. ברירת המחדל היא אנגלית, אך ניתן לשנות אותה כרצונכם.</string>

@@ -15,7 +15,7 @@
   <string name="newBroadcast">Ny live-udsendelse</string>
   <string name="subscribedBroadcasts">Udsendelser, du abonnerer på</string>
   <string name="aboutBroadcasts">Om udsendelse</string>
-  <string name="howToUseLichessBroadcasts">Sådan bruges Lichess-udsendelser.</string>
+  <string name="howToUseLichessBroadcasts">Sådan bruges Logik-udsendelser.</string>
   <string name="theNewRoundHelp">Den nye runde vil have de samme medlemmer og bidragydere som den foregående.</string>
   <string name="addRound">Tilføj en runde</string>
   <string name="ongoing">I gang</string>
@@ -26,8 +26,8 @@
   <string name="fullDescription">Fuld beskrivelse af begivenheden</string>
   <string name="fullDescriptionHelp">Valgfri lang beskrivelse af transmissionen. %1$s er tilgængelig. Længde skal være mindre end %2$s tegn.</string>
   <string name="sourceSingleUrl">URL for PGN-kilde</string>
-  <string name="sourceUrlHelp">URL som Lichess vil trække på for at få PGN updates. Den skal være offentlig tilgængelig fra internettet.</string>
-  <string name="sourceGameIds">Op til 64 Lichess parti-ID\'er, adskilt af mellemrum.</string>
+  <string name="sourceUrlHelp">URL som Logik vil trække på for at få PGN updates. Den skal være offentlig tilgængelig fra internettet.</string>
+  <string name="sourceGameIds">Op til 64 Logik parti-ID\'er, adskilt af mellemrum.</string>
   <string name="startDateTimeZone">Startdato i turneringens lokale tidszone: %s</string>
   <string name="startDateHelp">Valgfri, hvis du ved, hvornår begivenheden starter</string>
   <string name="currentGameUrl">Nuværende parti URL</string>
@@ -50,7 +50,7 @@
   <string name="age">Alder</string>
   <string name="unrated">Uden rating</string>
   <string name="recentTournaments">Seneste turneringer</string>
-  <string name="openLichess">Åbn i Lichess</string>
+  <string name="openLichess">Åbn i Logik</string>
   <string name="teams">Hold</string>
   <string name="boards">Brætter</string>
   <string name="overview">Oversigt</string>

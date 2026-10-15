@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="contact">Aloqa</string>
-  <string name="contactLichess">Lichess bilan bogʻlanish</string>
+  <string name="contactLichess">Logik bilan bogʻlanish</string>
   <string name="whatCanWeHelpYouWith">Sizga qanday yordam bera olamiz?</string>
   <string name="visitThisPage">Muammoni hal qilish uchun ushbu sahifaga oʻting</string>
   <string name="iCantLogIn">Akkauntimga kira olmayapman</string>
@@ -13,7 +13,7 @@
   <string name="doPasswordReset">Ikki bosqichli autentifikatsiyani oʻchirish uchun parolingizni tiklang</string>
   <string name="accountSupport">Akkaunt boʻyicha yordam kerak</string>
   <string name="wantTitle">Lichessʼda unvonim koʻrinishini xohlayman</string>
-  <string name="visitTitleConfirmation">Lichess profilingizda unvoningizni koʻrsatish va unvonli oʻyinchilar arenalarida (Titled Arenas) qatnashish uchun unvonni tasdiqlash sahifasiga oʻting</string>
+  <string name="visitTitleConfirmation">Logik profilingizda unvoningizni koʻrsatish va unvonli oʻyinchilar arenalarida (Titled Arenas) qatnashish uchun unvonni tasdiqlash sahifasiga oʻting</string>
   <string name="wantCloseAccount">Akkauntimni yopmoqchiman</string>
   <string name="closeYourAccount">Akkauntingizni ushbu sahifada yopishingiz mumkin</string>
   <string name="doNotAskByEmail">Akkauntingizni yopishni e‑pochta orqali soʻramang, biz buni bajara olmaymiz.</string>
@@ -34,9 +34,9 @@
   <string name="doNotMessageModerators">Moderatorlarga toʻgʻridan‑toʻgʻri shaxsiy xabarlarlar yubormang.</string>
   <string name="onlyReports">Faqatgina maxsus forma orqali yuborilgan shikoyatlar koʻrib chiqiladi va natija beradi.</string>
   <string name="wantReportBug">Men xato haqida xabar bermoqchiman</string>
-  <string name="reportBugInForum">Forumning “Lichess Feedback” (Lichess fikr‑mulohaza) boʻlimida</string>
-  <string name="reportWebsiteIssue">GitHubʼdagi \"Lichess website issue\" (sayt muammolari) sahifasiga</string>
-  <string name="reportMobileIssue">GitHubʼdagi \"Lichess mobile app issue\" (mobil ilova muammolari) sahifasiga</string>
+  <string name="reportBugInForum">Forumning “Logik Feedback” (Logik fikr‑mulohaza) boʻlimida</string>
+  <string name="reportWebsiteIssue">GitHubʼdagi \"Logik website issue\" (sayt muammolari) sahifasiga</string>
+  <string name="reportMobileIssue">GitHubʼdagi \"Logik mobile app issue\" (mobil ilova muammolari) sahifasiga</string>
   <string name="reportBugInDiscord">Lichessʼning Discord serveriga</string>
   <string name="howToReportBug">Iltimos, xatolik aynan nimada koʻringani, aslida qanday boʻlishi kerakligi va uni qanday harakatlar orqali qayta keltirib chiqarish mumkinligini batafsil yozib bering.</string>
   <string name="illegalPawnCapture">Piyodaning gʻalati urib olinishi (noqonuniy yurishdek tuyulsa)</string>

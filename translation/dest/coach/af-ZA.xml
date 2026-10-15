@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="lichessCoaches">Lichess afrigters</string>
-  <string name="lichessCoach">Lichess afrigter</string>
+  <string name="lichessCoaches">Logik afrigters</string>
+  <string name="lichessCoach">Logik afrigter</string>
   <string name="areYouCoach">Is jy \'n uitstekende skaak afrigter met \'n %s?</string>
   <string name="nmOrFideTitle" comment="nmOrFideTitle&#10;&#10;Part of sentence &quot;Are you a great chess coach with a NM or FIDE title?&quot;&#10;&#10;The text links to our title verification page: https://lichess.org/help/master">NM of FIDE titel</string>
   <string name="confirmTitle">Bevestig jou titel hier en ons sal jou aansoek hersien.</string>
@@ -14,7 +14,7 @@
   <string name="accepting">Aanvaar studente</string>
   <string name="notAccepting">Aanvaar nie tans studente nie</string>
   <string name="xCoachesStudents">%s rig skaak studente af</string>
-  <string name="viewXProfile">Sien %s se Lichess profiel</string>
+  <string name="viewXProfile">Sien %s se Logik profiel</string>
   <string name="sendPM">Stuur \'n privaat boodskap</string>
   <string name="aboutMe">Wie is ek?</string>
   <string name="playingExperience">Speel ervaring</string>
@@ -26,5 +26,5 @@
   <string name="youtubeVideos">YouTube videos</string>
   <string name="allCountries">Alle lande</string>
   <string name="lastLogin">Laaste aanmelding</string>
-  <string name="lichessRating">Lichess-gradering</string>
+  <string name="lichessRating">Logik-gradering</string>
 </resources>

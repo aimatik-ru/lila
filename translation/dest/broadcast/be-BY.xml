@@ -7,7 +7,7 @@
   <string name="newBroadcast">Новая прамая трансляцыя</string>
   <string name="subscribedBroadcasts">Выбраныя трансляцыі</string>
   <string name="aboutBroadcasts">Пра трансляцыіі</string>
-  <string name="howToUseLichessBroadcasts">Як карыстацца трансляцыямі Lichess.</string>
+  <string name="howToUseLichessBroadcasts">Як карыстацца трансляцыямі Logik.</string>
   <string name="theNewRoundHelp">У новым туры будуць тыя ж удзельнікі і рэдактары, што і ў папярэдняму.</string>
   <string name="addRound">Дадаць тур</string>
   <string name="ongoing">Бягучыя</string>
@@ -18,8 +18,8 @@
   <string name="fullDescription">Поўнае апісанне турніру</string>
   <string name="fullDescriptionHelp">Неабавязковая дасканалае апісанне турніру. Даступны %1$s. Даўжыня павінна быць менш за %2$s сімвалаў.</string>
   <string name="sourceSingleUrl">Спасылка ў фармаце PGN</string>
-  <string name="sourceUrlHelp">Спасылка, з якой Lichess паспрабуе атрымоўваць абнаўленні PGN. Яны павінна быць даступнай для кожнай ва Інтэрнэце.</string>
-  <string name="sourceGameIds">Да 64 ігравых ID Lichess, раздзеленых прабеламі.</string>
+  <string name="sourceUrlHelp">Спасылка, з якой Logik паспрабуе атрымоўваць абнаўленні PGN. Яны павінна быць даступнай для кожнай ва Інтэрнэце.</string>
+  <string name="sourceGameIds">Да 64 ігравых ID Logik, раздзеленых прабеламі.</string>
   <string name="startDateTimeZone">Дата пачатку ў мясцовым часавым поясе: %s</string>
   <string name="startDateHelp">Па жаданні, калі вы ведаеце пачатак падзеі</string>
   <string name="currentGameUrl">Спасылка на бягучую гульню</string>
@@ -40,7 +40,7 @@
   <string name="age">Узрост</string>
   <string name="unrated">Без рейтынгу</string>
   <string name="recentTournaments">Нядаўнія турніры</string>
-  <string name="openLichess">Адкрыць у Lichess</string>
+  <string name="openLichess">Адкрыць у Logik</string>
   <string name="teams">Каманды</string>
   <string name="boards">Дошкі</string>
   <string name="overview">Агляд</string>

@@ -9,7 +9,7 @@ lazy val ui =
 
 def embed(daily: DailyPuzzle.WithHtml)(using config: EmbedContext) =
   views.base.embed.minimal(
-    title = "lichess.org chess puzzle",
+    title = "play.kalugalogic.ru chess puzzle",
     cssKeys = List("bits.tv.embed"),
     modules = Esm("site.puzzleEmbed")
   )(

@@ -238,9 +238,9 @@
   <string name="forgotPassword">Disoñjet hoc\'h eus ho ker-tremen?</string>
   <string name="error.weakPassword">Ordin eo ho ker-kuzh betek re hag aes-tre da gavout.</string>
   <string name="error.namePassword">Disheñvel e vo ho ker-kuzh diouzh hoc\'h anv-implijer mar plij ganeoc\'h.</string>
-  <string name="blankedPassword">Ar memes ger-kuzh ho peus graet gantañ war ul lec\'hienn all hag a zo bet preizhet. Ur ger-kuzh nevez zo ezhomm da gaout neuze evit ma chomfe diarvar ho kont Lichess. Ho trugarekaat a reomp.</string>
-  <string name="youAreLeavingLichess">O kuitaat Lichess emaoc\'h</string>
-  <string name="neverTypeYourPassword">Arabat bizskrivañ ho ker-kuzh Lichess war ul lec\'hienn all!</string>
+  <string name="blankedPassword">Ar memes ger-kuzh ho peus graet gantañ war ul lec\'hienn all hag a zo bet preizhet. Ur ger-kuzh nevez zo ezhomm da gaout neuze evit ma chomfe diarvar ho kont Logik. Ho trugarekaat a reomp.</string>
+  <string name="youAreLeavingLichess">O kuitaat Logik emaoc\'h</string>
+  <string name="neverTypeYourPassword">Arabat bizskrivañ ho ker-kuzh Logik war ul lec\'hienn all!</string>
   <string name="proceedToX">Kuitaat war-zu %s</string>
   <string name="passwordSuggestion">Na choazit ket ur ger-kuzh bet silet e pleg ho skouarn gant unan all. Arveriet e vo evit laerezh ho kont diganeoc\'h.</string>
   <string name="emailSuggestion">Na choazit ket ur chomlec\'h postel bet aliet deoc\'h gant unan all. Arveriet e vo evit laerezh ho kont diganeoc\'h.</string>
@@ -365,7 +365,7 @@
     <item quantity="many">Reiñ %s eilenn</item>
     <item quantity="other">Reiñ %s eilenn</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Perc\'henner ar gont-mañ n\'en deus ket doujet da Reolennoù Lichess</string>
+  <string name="thisAccountViolatedTos">Perc\'henner ar gont-mañ n\'en deus ket doujet da Reolennoù Logik</string>
   <string name="openingExplorerAndTablebase">Furcher an digoradurioù &amp; tablebase</string>
   <string name="takeback">Nullañ ar fiñvadenn ziwezhañ</string>
   <string name="proposeATakeback">Kinnig nullañ ar fiñvadenn ziwezhañ</string>
@@ -550,7 +550,7 @@
   <string name="socialMediaLinks">Liammoù ar mediaoù sokial</string>
   <string name="oneUrlPerLine">Un URL dre linenn.</string>
   <string name="inlineNotation">Notennoù en-linenn</string>
-  <string name="previouslyOnLichessTV">N\'eus ket pell zo war Lichess TV</string>
+  <string name="previouslyOnLichessTV">N\'eus ket pell zo war Logik TV</string>
   <string name="onlinePlayers">C\'hoarierien enlinenn</string>
   <string name="activePlayers">C\'hoarierien oberiat</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Diwallit, renket eo ar c\'hrogad met n\'eus horolaj ebet!</string>
@@ -714,7 +714,7 @@
   <string name="simulVariantsHint">Ma choazit meur a eilstumm en do pep c\'hoarier da zibab pehini c\'hoari.</string>
   <string name="simulClockHint">Aozet an horolaj e mod Fischer. Seul vuioc\'h a c\'hoarierien seul vuioc\'h a amzer ho po ezhomm da gaout.</string>
   <string name="simulAddExtraTime">Gallout a rit lakaat amzer ouzhpenn d\'ho horolaj, evit ho sikour d\'ober war-dro ar bartienn gempred.</string>
-  <string name="lichessTournaments">Tournamantoù Lichess</string>
+  <string name="lichessTournaments">Tournamantoù Logik</string>
   <string name="tournamentFAQ">FAG aren an tournamant</string>
   <string name="timeBeforeTournamentStarts">Ar pezh a chom a-raok ma krogfe an tournamant</string>
   <string name="averageCentipawnLoss">Koll keitat e sentipawn</string>
@@ -753,8 +753,8 @@
   <string name="weHaveSentYouAnEmailTo">Kaset hon eus ur postel da %s. Klikit war al liamm er postel evit cheñch ho ker-tremen.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">En ur lakaat hoc\'h anv e asantit d\'hor %s.</string>
   <string name="readAboutOur">Goût hiroc\'h diwar-benn hor %s.</string>
-  <string name="networkLagBetweenYouAndLichess">\"Lag\" zo etrezoc\'h ha Lichess</string>
-  <string name="timeToProcessAMoveOnLichessServer">Amzer ret evit ober ur fiñvadenn war servijer Lichess</string>
+  <string name="networkLagBetweenYouAndLichess">\"Lag\" zo etrezoc\'h ha Logik</string>
+  <string name="timeToProcessAMoveOnLichessServer">Amzer ret evit ober ur fiñvadenn war servijer Logik</string>
   <string name="downloadAnnotated">Pellgargañ gant an notennoù</string>
   <string name="downloadRaw">Pellgargañ ar PGN kriz</string>
   <string name="downloadImported">Enkargañ enporzhiet</string>
@@ -874,11 +874,11 @@
     <item quantity="many">hag enrollit %s linennoù raktaolioù</item>
     <item quantity="other">hag enrollit %s linennoù raktaolioù</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Resevet ho peus ur gemennadenn brevez eus perzh Lichess.</string>
+  <string name="showUnreadLichessMessage">Resevet ho peus ur gemennadenn brevez eus perzh Logik.</string>
   <string name="sorry">Hon digarezit :(</string>
   <string name="weHadToTimeYouOutForAWhile">Ret e oa deomp ho skarzhañ e-pad ur prantad.</string>
   <string name="why">Perak?</string>
-  <string name="pleasantChessExperience">Plijout a rafe deomp e vourrfe pep hini c\'hoari echedoù war Lichess.</string>
+  <string name="pleasantChessExperience">Plijout a rafe deomp e vourrfe pep hini c\'hoari echedoù war Logik.</string>
   <string name="goodPractice">Evit hen ober e dav deomp bezañ sur e vez graet gant doareoù dereat gant an holl.</string>
   <string name="potentialProblem">Pa vez merzhet ar pezh a c\'hallfe bezañ ur gudenn e vez dispaket ar gemennadenn-mañ ganeomp.</string>
   <string name="howToAvoidThis">Penaos ober kuit ma c\'hoarvezfe an dra-mañ en-dro?</string>
@@ -886,7 +886,7 @@
   <string name="tryToWin">Klaskit gounit pep krogad (pe bezañ rampo diantav).</string>
   <string name="resignLostGames">Dilezit ar c\'hrogadoù pa ne vez ket an tu kreñv ganeoc\'h (ha n\'eo ket gortoz ez afe an amzer e-biou).</string>
   <string name="temporaryInconvenience">Hon digarezit evit an diaezamant berrbad,</string>
-  <string name="wishYouGreatGames">hag e hetomp krogadoù mat deoc\'h war lichess.org.</string>
+  <string name="wishYouGreatGames">hag e hetomp krogadoù mat deoc\'h war play.kalugalogic.ru.</string>
   <string name="thankYouForReading">Mersi da vezañ lennet!</string>
   <string name="lifetimeScore">Disoc\'h hollek</string>
   <string name="currentMatchScore">Taolenn an disoc\'hoù etrezoc\'h</string>
@@ -961,7 +961,7 @@
   <string name="resignTheGame">Dilezel ar c\'hrogad</string>
   <string name="since">Adalek</string>
   <string name="until">Betek</string>
-  <string name="lichessDbExplanation">Krogadoù renket c\'hoariet war Lichess</string>
+  <string name="lichessDbExplanation">Krogadoù renket c\'hoariet war Logik</string>
   <string name="switchSides">Cheñch tu</string>
   <string name="closingAccountWithdrawAppeal">Nullet e vo hoc\'h engalv ma serrit ho kont</string>
   <string name="ourEventTips">Alioù fur a-raok aozañ abadennoù</string>

@@ -117,8 +117,6 @@ object home:
           div(cls := "lobby__about")(
             ctx.blind.option(h2(trans.site.about())),
             a(href := "/about")(trans.site.aboutX(siteName)),
-            a(href := "/faq")(trans.faq.faqAbbreviation()),
-            a(href := "/contact")(trans.contact.contact()),
             a(href := routes.Cms.tos)(trans.site.termsOfService()),
             a(href := "/privacy")(trans.site.privacy()),
             a(href := "/source")(trans.site.sourceCode())

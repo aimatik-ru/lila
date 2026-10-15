@@ -162,7 +162,7 @@
   <string name="whatWouldYouPlay">Wat géifs du an dëser Stellung spillen?</string>
   <string name="youCompletedThisLesson">Gudd gemaach! Du hues dës Übung ofgeschloss.</string>
   <string name="perPage">%s pro Säit</string>
-  <string name="welcomeToLichessStudyTitle">Wëllkomm op Lichess Study!</string>
+  <string name="welcomeToLichessStudyTitle">Wëllkomm op Logik Study!</string>
   <string name="sharedAndSaveTitle" comment="As in: shared with other members and saved to database">Gedeelt a gespäichert</string>
   <string name="sharedAndSavedText">Aner Membere kënnen deng Zich an Echtzäit gesinn!&lt;br&gt;Ausserdeem gëtt alles fir ëmmer gespäichert.</string>
   <string name="studyMembersTitle">Membere vun der Etüd</string>
@@ -172,7 +172,7 @@
   <string name="commentPositionTitle">Eng Stellung kommentéieren</string>
   <string name="annotatePositionTitle">Eng Stellung annotéieren</string>
   <string name="conclusionTitle">Merci fir deng Zäit</string>
-  <string name="conclusionText">Du fënns deng &lt;a href=\'/study/mine/hot\'&gt;vireg Etüden&lt;/a&gt; op denger Profilsäit.&lt;br&gt;Et gëtt och e &lt;a href=\'//lichess.org/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way\'&gt;Blog-Bäitrag iwwer Etüden&lt;/a&gt;.&lt;br&gt;Power-Benotzer wëlle villäicht op „?“ drécke fir d\'Tastatur-Ofkierzungen ze gesinn.&lt;br&gt;Vill Spaass!</string>
+  <string name="conclusionText">Du fënns deng &lt;a href=\'/study/mine/hot\'&gt;vireg Etüden&lt;/a&gt; op denger Profilsäit.&lt;br&gt;Et gëtt och e &lt;a href=\'/\'&gt;Blog-Bäitrag iwwer Etüden&lt;/a&gt;.&lt;br&gt;Power-Benotzer wëlle villäicht op „?“ drécke fir d\'Tastatur-Ofkierzungen ze gesinn.&lt;br&gt;Vill Spaass!</string>
   <string name="createChapterTitle">Looss eis en Etüdekapitel uleeën</string>
   <string name="createChapterText">Eng Etüd kann aus méi Kapitelen opgebaut sinn.&lt;br&gt;Jiddwer Kapitel huet en eegene Variantebam,&lt;br&gt;a kann op verschidde Manéieren ugeluecht ginn.</string>
   <string name="fromInitialPositionTitle">Vun der Ausgangsstellung aus</string>
@@ -180,7 +180,7 @@
   <string name="fromFenStringTitle">Vun enger FEN-Zeecheketten</string>
   <string name="fromPgnGameTitle">Aus enger PGN-Partie</string>
   <string name="variantsAreSupportedTitle">Etüden ënnerstëtze Schachvarianten</string>
-  <string name="variantsAreSupportedText">Jo, du kanns Crazyhouse&lt;br&gt;an all aner Lichess-Schachvariante studéieren!</string>
+  <string name="variantsAreSupportedText">Jo, du kanns Crazyhouse&lt;br&gt;an all aner Logik-Schachvariante studéieren!</string>
   <string name="doubleDefeat">Duebel Néierlag</string>
   <string name="blackDefeatWhiteCanNotWin">Néierlag fir Schwaarz, mee Wäiss kann net gewannen</string>
   <string name="whiteDefeatBlackCanNotWin">Néierlag fir Wäiss, mee Schwaarz kann net gewannen</string>

@@ -221,9 +221,9 @@
   <string name="forgotPassword">പാസ്‌വേഡ് മറന്നുപോയോ?</string>
   <string name="error.weakPassword">ഈ രഹസ്യവാക്ക് ഊഹിക്കുകാൻ വളരെ എളുപ്പമാണ്.</string>
   <string name="error.namePassword">ദയവായി താങ്ങളുടെ ഉപയോക്തൃനാമം രഹസ്യവാക്കയായി ഉപയോഗിക്കരുത്.</string>
-  <string name="blankedPassword">താങ്ങൾ ഇതേ രഹസ്യവാക്കു് മറ്റൊരു വെബ്സ്ഥാനത്തിൽ ഉപയോഗിച്ചിട്ടുണ്ടു് പക്ഷേ ആ വെബ്സ്ഥാനത്തിന്റെ ഒത്തുതീർപ്പു് നടന്നിരിക്കുന്നു. താങ്ങളുടെ Lichess അക്കൗണ്ടിന്റെ സുരക്ഷക്കു വേണ്ടി താങ്ങൾക്കു് ഒരു പുതിയ രഹസ്യവാക്കു് ഇടണ്ടി വരും. സഹകരിക്കുന്നതിനു് നന്ദി.</string>
-  <string name="youAreLeavingLichess">താങ്ങൾ Lichess വിടുകയാണ്</string>
-  <string name="neverTypeYourPassword">ഒരിക്കലും താങ്ങളുടെ Lichess രഹസ്യവാക്കു് മറ്റെ വെബ്സ്ഥാനത്തിൽ എഴുതരുതു്!</string>
+  <string name="blankedPassword">താങ്ങൾ ഇതേ രഹസ്യവാക്കു് മറ്റൊരു വെബ്സ്ഥാനത്തിൽ ഉപയോഗിച്ചിട്ടുണ്ടു് പക്ഷേ ആ വെബ്സ്ഥാനത്തിന്റെ ഒത്തുതീർപ്പു് നടന്നിരിക്കുന്നു. താങ്ങളുടെ Logik അക്കൗണ്ടിന്റെ സുരക്ഷക്കു വേണ്ടി താങ്ങൾക്കു് ഒരു പുതിയ രഹസ്യവാക്കു് ഇടണ്ടി വരും. സഹകരിക്കുന്നതിനു് നന്ദി.</string>
+  <string name="youAreLeavingLichess">താങ്ങൾ Logik വിടുകയാണ്</string>
+  <string name="neverTypeYourPassword">ഒരിക്കലും താങ്ങളുടെ Logik രഹസ്യവാക്കു് മറ്റെ വെബ്സ്ഥാനത്തിൽ എഴുതരുതു്!</string>
   <string name="proceedToX">%s വരെ ചെല്ലുക</string>
   <string name="passwordSuggestion">മറ്റാരെങ്കിലും പറഞ്ഞ രഹസ്യവാക്ക് ഉപയോഗിക്കരുത്. അവർ താങ്ങളുടെ അക്കൌണ്ട് തട്ടിയെടുക്കാൻ ശ്രമിക്കും.</string>
   <string name="emailSuggestion">മറ്റെയാരുടേ ഉപദേശ പ്രകാരം ഇമെയിൽ-വിലാസം തിരഞ്ഞെടുക്കരുതു്. അവർക്കു് പിന്നേ താങ്ങളുടെ അക്കൌണ്ടു് മോഷ്ടിക്കാൻ സാധിക്കും.</string>
@@ -494,7 +494,7 @@
   <string name="oneUrlPerLine">ഒരു വരിയിൽ ഒരു വിലാസം.</string>
   <string name="inlineNotation">ഇൻഫയൽ നോട്ടെഷൻ</string>
   <string name="makeAStudy">കരുതിവയ്ക്കാനും പങ്കിടാനും ഒരു പഠനം ഉണ്ടാക്കാൻ പരിഗണയിൽ എടുക്കുക.</string>
-  <string name="previouslyOnLichessTV">Lichess TV യിൽ നേരെത്തെയുള്ളത്</string>
+  <string name="previouslyOnLichessTV">Logik TV യിൽ നേരെത്തെയുള്ളത്</string>
   <string name="onlinePlayers">തൽസമയ കളിക്കാർ</string>
   <string name="activePlayers">സജീവ കളിക്കാർ</string>
   <string name="bewareTheGameIsRatedButHasNoClock">നോക്കൂ, ഈ കളി ക്രമപ്പെടുത്തിയതാണ്. പക്ഷെ സമയ പരിധിയില്ല!</string>
@@ -643,7 +643,7 @@
   <string name="yourPendingSimuls">താങ്ങളുടെ തൂങ്ങുന്ന ഒരേവേളകളികൾ</string>
   <string name="createdSimuls">പുതിയ സിമുൽ</string>
   <string name="hostANewSimul">ഒരു പുതിയ സിമുലിന് ആതിഥ്യം നൽകൂ</string>
-  <string name="signUpToHostOrJoinASimul">ഒരേവേളകളിയിൽ കളിക്കുകാൻ അതോ നടുത്താൻ Lichess-ലേക്കു പ്രവേശിക്കൽ ചെയ്യുക</string>
+  <string name="signUpToHostOrJoinASimul">ഒരേവേളകളിയിൽ കളിക്കുകാൻ അതോ നടുത്താൻ Logik-ലേക്കു പ്രവേശിക്കൽ ചെയ്യുക</string>
   <string name="noSimulFound">സിമുൽ കണ്ടെത്തിയില്ല</string>
   <string name="noSimulExplanation">ഈ ഒരേ സമയത്തുള്ള പ്രദര്ശനം നിലവിലില്ല.</string>
   <string name="returnToSimulHomepage">സിമുൽ ഹോംപേജിലേക്ക് മടക്കം</string>
@@ -658,7 +658,7 @@
   <string name="simulAddExtraTime">Simul-മായി പൊരുത്തപ്പെടാൻ കുറച്ച് അധികം സമയം നിങ്ങൾക്ക് ചേർക്കാം.</string>
   <string name="simulAddExtraTimePerPlayer">ഓരോ കളിക്കാരൻ ഒരേവേളകളിയിൽ കൂട്ടച്ചേരുമ്പോൾ താങ്ങളുടെ തുടക്കത്തിലുള്ള കളിസമയം കൂട്ടിക്കുക.</string>
   <string name="simulHostExtraTimePerPlayer">അതിഥേയനിനു് ഓരോ കളിക്കാരനുമധിക നാഴികമണിയിൽ സമയം</string>
-  <string name="lichessTournaments">Lichess പരമ്പരകൾ</string>
+  <string name="lichessTournaments">Logik പരമ്പരകൾ</string>
   <string name="tournamentFAQ">പോർക്കള മത്സര പരമ്പര</string>
   <string name="timeBeforeTournamentStarts">പരമ്പര തുടങ്ങുന്നതിനു മുൻപുള്ള സമയം</string>
   <string name="averageCentipawnLoss">ശരാശരി centipawn നഷ്ടം</string>
@@ -703,7 +703,7 @@
   <string name="byRegisteringYouAgreeToBeBoundByOur">രജിസ്റ്റർ ചെയ്യുന്നത് വഴി നിങ്ങൾ ഞങ്ങളുടെ %s പിന്തുടരുമെന്നു സമ്മതിക്കുന്നു.</string>
   <string name="readAboutOur">%s ഇനി കുറിച്ച് വായിക്കുക.</string>
   <string name="networkLagBetweenYouAndLichess">നിങ്ങളും lichessഉം തമ്മിലുള്ള നെറ്റ്വർക്ക് കാലയളവ്</string>
-  <string name="timeToProcessAMoveOnLichessServer">Lichess സെർവറിൽ ഒരു നീക്കം വിശകലനം ചെയ്യാൻ എടുക്കുന്ന സമയം</string>
+  <string name="timeToProcessAMoveOnLichessServer">Logik സെർവറിൽ ഒരു നീക്കം വിശകലനം ചെയ്യാൻ എടുക്കുന്ന സമയം</string>
   <string name="downloadAnnotated">Annotated ആയി ഡൗൺലോഡ് ചെയ്യുക</string>
   <string name="downloadRaw">അസംസ്കൃതമായി ഡൗൺലോഡ് ചെയ്യുക</string>
   <string name="downloadImported">Import ചെയ്തത് ഡൌൺലോഡ് ചെയ്യുക</string>
@@ -825,7 +825,7 @@
     <item quantity="one">എന്നിട്ട് %s premove ലൈൻ സേവ് ചെയ്യൂ</item>
     <item quantity="other">എന്നിട്ട് %s premove ലൈനുകൾ സേവ് ചെയ്യൂ</item>
   </plurals>
-  <string name="showUnreadLichessMessage">താങ്ങൾക്കു് Lichess നിന്നു് ഒരു സ്വകാര്യ അറിയിപ്പു് കിട്ടിയിരിക്കുന്നു.</string>
+  <string name="showUnreadLichessMessage">താങ്ങൾക്കു് Logik നിന്നു് ഒരു സ്വകാര്യ അറിയിപ്പു് കിട്ടിയിരിക്കുന്നു.</string>
   <string name="sorry">പൊറുക്കണം :(</string>
   <string name="weHadToTimeYouOutForAWhile">ഞങ്ങൾക്ക് നിങ്ങളെ കുറച്ചു സമയം പുറത്തു നിർത്തേണ്ടി വന്നു.</string>
   <string name="why">എന്തുകൊണ്ട്?</string>
@@ -837,7 +837,7 @@
   <string name="tryToWin">നിങ്ങൾ കളിക്കുന്ന എല്ലാ കളികളും ജയിക്കാനോ (അല്ലെങ്കിൽ സമനിലയിലാക്കാനോ) ശ്രമിക്കുക.</string>
   <string name="resignLostGames">തോറ്റു എന്ന് ബോധ്യമായാൽ റിസൈന്‍ ചെയ്യുക (ക്ലോക്ക് തീരുന്ന വരെ കളി അവശേഷിപ്പിക്കാതിരിക്കുക).</string>
   <string name="temporaryInconvenience">താത്കാലികമായ ബുദ്ധിമുട്ടിനു ക്ഷമ ചോദിക്കുന്നു</string>
-  <string name="wishYouGreatGames">lichess.org-ൽ നല്ല കളികൾ ആശംസിക്കുന്നു.</string>
+  <string name="wishYouGreatGames">play.kalugalogic.ru-ൽ നല്ല കളികൾ ആശംസിക്കുന്നു.</string>
   <string name="thankYouForReading">വായിച്ചതിനു നന്ദി!</string>
   <string name="lifetimeScore">ജീവിതകാല സ്കോർ</string>
   <string name="currentMatchScore">നിലവിലെ മത്സര സ്കോർ</string>
@@ -925,13 +925,13 @@
   <string name="resignTheGame">കളി വഴങ്ങികൊടുക്കുക</string>
   <string name="since">മുതൽ</string>
   <string name="until">വരേ</string>
-  <string name="lichessDbExplanation">Lichess-ൽ കളിച്ചതുള്ള റേറ്റിങ്ങുള്ള കളികൾ</string>
+  <string name="lichessDbExplanation">Logik-ൽ കളിച്ചതുള്ള റേറ്റിങ്ങുള്ള കളികൾ</string>
   <string name="switchSides">പക്ഷം മാറുക</string>
   <string name="closingAccountWithdrawAppeal">താങ്ങളുടെ അക്കൌണ്ടു് അവസാനിച്ചാൽ താങ്ങളുടെ നിർവേദനം പിൻവലിക്കപെടും</string>
   <string name="ourEventTips">പരിപാടി നടുത്താൻ ഞങ്ങളുടെ ഉപദേശങ്ങൾ</string>
   <string name="instructions">നിർദേശങ്ങൾ</string>
   <string name="showMeEverything">എല്ലാം കാണിക്കുക</string>
-  <string name="lichessPatronInfo">Lichess ഒരു സൗജന്യവും/ലിബർ തുറന്ന ഉറവിട യന്ത്രാംശം ആണു്. 
+  <string name="lichessPatronInfo">Logik ഒരു സൗജന്യവും/ലിബർ തുറന്ന ഉറവിട യന്ത്രാംശം ആണു്. 
 നടത്തിപ്പിനും വികാസനത്തിനും ഉള്ളടക്കത്തിനും ചെലവു് എല്ലാം ഉപയോക്താവു് സംഭാവനതോടാണു് കഴിയുന്നതു്.</string>
   <string name="nothingToSeeHere">അല്പസമയത്തേക്കു് ഒന്നും കാണാനില്ല.</string>
   <string name="stats">സ്ഥിതിവിവരണങ്ങൾ</string>

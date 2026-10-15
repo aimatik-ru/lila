@@ -57,8 +57,8 @@
   <string name="notifyGameEvent">ಪತ್ರವ್ಯವಹಾರದ ಆಟದ ನವೀಕರಣಗಳು</string>
   <string name="notifyChallenge">ಸವಾಲುಗಳು</string>
   <string name="notifyTimeAlarm">ಪತ್ರವ್ಯವಹಾರ ಗಡಿಯಾರ ಮುಗಿಯುತ್ತಿದೆ</string>
-  <string name="notifyBell">Lichess ಒಳಗೆ ಬೆಲ್ ಅಧಿಸೂಚನೆ</string>
-  <string name="notifyPush">ನೀವು Lichess ನಲ್ಲಿ ಇಲ್ಲದಿರುವಾಗ ಸಾಧನದ ಅಧಿಸೂಚನೆ</string>
+  <string name="notifyBell">Logik ಒಳಗೆ ಬೆಲ್ ಅಧಿಸೂಚನೆ</string>
+  <string name="notifyPush">ನೀವು Logik ನಲ್ಲಿ ಇಲ್ಲದಿರುವಾಗ ಸಾಧನದ ಅಧಿಸೂಚನೆ</string>
   <string name="notifyWeb">ಬ್ರೌಸರ್</string>
   <string name="notifyDevice">ಸಾಧನ</string>
   <string name="bellNotificationSound">ಬೆಲ್ ಅಧಿಸೂಚನೆಯ ಧ್ವನಿ</string>

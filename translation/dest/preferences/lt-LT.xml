@@ -59,8 +59,8 @@
   <string name="notifyGameEvent">Korespondencinių partijų naujienos</string>
   <string name="notifyChallenge">Iššūkiai</string>
   <string name="notifyTimeAlarm">Baigiasi korespondencinės partijos laikmatis</string>
-  <string name="notifyBell">Varpelio pranešimai Lichess</string>
-  <string name="notifyPush">Pranešimai prietaisuose kai nesate Lichess</string>
+  <string name="notifyBell">Varpelio pranešimai Logik</string>
+  <string name="notifyPush">Pranešimai prietaisuose kai nesate Logik</string>
   <string name="notifyWeb">Naršyklėje</string>
   <string name="notifyDevice">Įrenginyje</string>
   <string name="bellNotificationSound">Pranešimų varpelio garsas</string>

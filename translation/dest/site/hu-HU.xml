@@ -240,9 +240,9 @@
   <string name="forgotPassword">Elfelejtetted a jelszavad?</string>
   <string name="error.weakPassword">Ez a jelszó rettentő gyakori és túl könnyű kitalálni.</string>
   <string name="error.namePassword">Kérjük, ne a felhasználónevedet add meg jelszónak.</string>
-  <string name="blankedPassword">Ugyanezt a jelszót már használtad egy másik webhelyen, ami veszélybe került. A Lichess fiókod biztonsága érdekében új jelszót kell megadnod. Köszönjük megértésed.</string>
-  <string name="youAreLeavingLichess">Elhagyod a Lichess-t</string>
-  <string name="neverTypeYourPassword">Soha ne írd be Lichess jelszavad más oldalon!</string>
+  <string name="blankedPassword">Ugyanezt a jelszót már használtad egy másik webhelyen, ami veszélybe került. A Logik fiókod biztonsága érdekében új jelszót kell megadnod. Köszönjük megértésed.</string>
+  <string name="youAreLeavingLichess">Elhagyod a Logik-t</string>
+  <string name="neverTypeYourPassword">Soha ne írd be Logik jelszavad más oldalon!</string>
   <string name="proceedToX">Tovább a(z) %s oldalra</string>
   <string name="passwordSuggestion">Ne állíts be olyan jelszót, amit más ajánlott! Arra használhatják, hogy ellopják a fiókod.</string>
   <string name="emailSuggestion">Ne állíts be olyan email címet, amit más ajánlott! Arra használhatják, hogy ellopják a fiókod.</string>
@@ -345,7 +345,7 @@
     <item quantity="one">Adj %s másodpercet</item>
     <item quantity="other">Adj %s másodpercet</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Ez a fiók megsértette a Lichess Felhasználási Feltételeit</string>
+  <string name="thisAccountViolatedTos">Ez a fiók megsértette a Logik Felhasználási Feltételeit</string>
   <string name="openingExplorerAndTablebase">Megnyitás- és állásböngésző</string>
   <string name="takeback">Visszalépés</string>
   <string name="proposeATakeback">Visszalépés kérése</string>
@@ -526,7 +526,7 @@
   <string name="oneUrlPerLine">Egy URL soronként.</string>
   <string name="inlineNotation">Megjegyzések beszúrása</string>
   <string name="makeAStudy">A biztonság kedvéért és a későbbi megosztás lehetőségéért fontold meg egy tanulmány létrehozását.</string>
-  <string name="previouslyOnLichessTV">A Lichess TV korábbi műsorai</string>
+  <string name="previouslyOnLichessTV">A Logik TV korábbi műsorai</string>
   <string name="onlinePlayers">Online játékosok</string>
   <string name="activePlayers">Aktív játékosok</string>
   <string name="bewareTheGameIsRatedButHasNoClock">A játszma értékelt, de nincs időmérés!</string>
@@ -693,7 +693,7 @@
   <string name="simulAddExtraTime">Plusz időt adhatsz az órához, hogy a szimultán könnyebb legyen.</string>
   <string name="simulAddExtraTimePerPlayer">A beállított idő hozzáadása az órádhoz minden szimultánhoz csatlakozó játékos után.</string>
   <string name="simulHostExtraTimePerPlayer">Játékosonként extra idő az órához</string>
-  <string name="lichessTournaments">Lichess versenyek</string>
+  <string name="lichessTournaments">Logik versenyek</string>
   <string name="tournamentFAQ">Aréna verseny GYIK</string>
   <string name="timeBeforeTournamentStarts">Kezdés ennyi perc múlva</string>
   <string name="averageCentipawnLoss">Átlagos gyalogveszteség</string>
@@ -743,8 +743,8 @@
 Jelszavad megváltoztatásához kattints az üzenetben lévő linkre.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">A regisztrációval elfogadod a %s-t.</string>
   <string name="readAboutOur">Itt olvashatók az %s.</string>
-  <string name="networkLagBetweenYouAndLichess">Hálózati késleltetés a számítógéped és a Lichess szervere között</string>
-  <string name="timeToProcessAMoveOnLichessServer">Az az idő, amíg a Lichess szerver egy lépést feldolgoz</string>
+  <string name="networkLagBetweenYouAndLichess">Hálózati késleltetés a számítógéped és a Logik szervere között</string>
+  <string name="timeToProcessAMoveOnLichessServer">Az az idő, amíg a Logik szerver egy lépést feldolgoz</string>
   <string name="downloadAnnotated">Letöltés elemzéssel</string>
   <string name="downloadRaw">Letöltés elemzés nélkül</string>
   <string name="downloadImported">Importált PGN letöltése</string>
@@ -763,7 +763,7 @@ Jelszavad megváltoztatásához kattints az üzenetben lévő linkre.</string>
   <string name="kidMode">Gyereküzemmód</string>
   <string name="kidModeIsEnabled">Gyermek mód aktiválva van.</string>
   <string name="kidModeExplanation">A Gyereküzemmód a biztonságról szól. A mód bekapcsolásával az összes kommunikáció megszűnik a többi játékossal, így megvédheted a gyermekeid vagy a diákjaid a többi felhasználó elől.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">Gyereküzemmódban a Lichess logón megjelenik egy %s ikon, így tudhatod, hogy gyermekeid biztonságos felületen játszanak.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">Gyereküzemmódban a Logik logón megjelenik egy %s ikon, így tudhatod, hogy gyermekeid biztonságos felületen játszanak.</string>
   <string name="askYourChessTeacherAboutLiftingKidMode">A felhasználói fiókodat a tanárod felügyeli. Kérd meg, hogy inaktiválja a gyerek módot.</string>
   <string name="enableKidMode">Gyereküzemmód bekapcsolása</string>
   <string name="disableKidMode">Gyereküzemmód kikapcsolása</string>
@@ -883,7 +883,7 @@ Jelszavad megváltoztatásához kattints az üzenetben lévő linkre.</string>
   <string name="tryToWin">Minden játszmát próbálj megnyerni, vagy legalább döntetlent kihozni.</string>
   <string name="resignLostGames">Az elveszett játszmákat add fel (ne hagyd lejárni az időt).</string>
   <string name="temporaryInconvenience">Elnézést kérünk az átmeneti kellemetlenségért</string>
-  <string name="wishYouGreatGames">és további sok jó játékot kívánunk a lichess.org-on.</string>
+  <string name="wishYouGreatGames">és további sok jó játékot kívánunk a play.kalugalogic.ru-on.</string>
   <string name="thankYouForReading">Köszönjük, hogy elolvastad!</string>
   <string name="lifetimeScore">Mindenkori pontszám</string>
   <string name="currentMatchScore">Jelenlegi pontszám</string>
@@ -928,7 +928,7 @@ Jelszavad megváltoztatásához kattints az üzenetben lévő linkre.</string>
   <string name="congratsYouWon">Gratulálunk, nyertél!</string>
   <string name="gameVsX">Játszma %1$s ellen</string>
   <string name="resVsX">%1$s %2$s ellen</string>
-  <string name="lostAgainstTOSViolator">Vesztettél valaki ellen, aki megszegte a Lichess szabályait</string>
+  <string name="lostAgainstTOSViolator">Vesztettél valaki ellen, aki megszegte a Logik szabályait</string>
   <string name="refundXpointsTimeControlY">Visszakaptál %1$s %2$s pontot.</string>
   <string name="timeAlmostUp">Hamarosan lejár az idő!</string>
   <string name="clickToRevealEmailAddress">[Kattints az email cím megtekintéséhez]</string>
@@ -980,13 +980,13 @@ Hagyd üresen és a játszmák a kezdőállásból indulnak.</string>
   <string name="resignTheGame">Játszma feladása</string>
   <string name="since">Ettől</string>
   <string name="until">Eddig</string>
-  <string name="lichessDbExplanation">A Lichess játékosok értékelt játszmáiból összeállítva</string>
+  <string name="lichessDbExplanation">A Logik játékosok értékelt játszmáiból összeállítva</string>
   <string name="switchSides">Oldal megfordítása</string>
   <string name="closingAccountWithdrawAppeal">A fiókod lezárása visszavonja a fellebbezésed</string>
   <string name="ourEventTips">Tippjeink események szervezéséhez</string>
   <string name="instructions">Használati útmutató</string>
   <string name="showMeEverything">Az összes parancs megjelenítése</string>
-  <string name="lichessPatronInfo">A Lichess egy jótékonysági szervezet és teljesen ingyenes/szabad nyílt forrású szoftver.
+  <string name="lichessPatronInfo">A Logik egy jótékonysági szervezet és teljesen ingyenes/szabad nyílt forrású szoftver.
 Minden működési költséget, fejlesztést és tartalmat felhasználói adományokból fedezünk.</string>
   <string name="nothingToSeeHere">Itt nincs semmi látnivaló jelenleg.</string>
   <string name="stats">Statisztikák</string>

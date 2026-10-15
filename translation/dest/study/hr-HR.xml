@@ -169,7 +169,7 @@
   <string name="youCompletedThisLesson">Čestitamo! Završili ste lekciju.</string>
   <string name="perPage">%s po stranici</string>
   <string name="getTheTour">Trebaš li pomoć? Prati obilazak!</string>
-  <string name="welcomeToLichessStudyTitle">Dobrodošli u Lichess studije!</string>
+  <string name="welcomeToLichessStudyTitle">Dobrodošli u Logik studije!</string>
   <string name="welcomeToLichessStudyText">Ovo je dijeljena analitička ploča.&lt;br&gt;&lt;br&gt;Koristi je za analizu i komentiranje partija,&lt;br&gt;diskusiju o pozicijama s prijateljima&lt;br&gt;i naravno za satove šaha!&lt;br&gt;&lt;br&gt;To je moćan alat, ajmo da odvojimo malo vremena da vidimo kako funkcijonira.</string>
   <string name="sharedAndSaveTitle" comment="As in: shared with other members and saved to database">Podijeljeno i sačuvano</string>
   <string name="sharedAndSavedText">Drugi članovi mogu vidjeti tvoje poteze u stvarnom vremenu!&lt;br&gt;Osim toga, je sve zauvijek spremljeno.</string>
@@ -183,7 +183,7 @@
   <string name="annotatePositionTitle">Označi poziciju</string>
   <string name="annotatePositionText">Klikni na dugme \"!?\" ili desnim klikom miša na listu poteza.&lt;br&gt;Označenja se djele i čuvaju.</string>
   <string name="conclusionTitle">Hvala na tvom vremenu</string>
-  <string name="conclusionText">Svoje &lt;a href=\'/study/mine/hot\'&gt;stare studije&lt;/a&gt; možeš pronaći na stranici svog profila.&lt;br&gt;Postoji i &lt;a href=\'//lichess.org/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way\'&gt;blog objava na blogu o studijama&lt;/a&gt;.&lt;br&gt;Napredni korisnici možda žele pritisnuti \"?\" da bi vidjeli prečice na tastaturi.&lt;br&gt;Uživaj!</string>
+  <string name="conclusionText">Svoje &lt;a href=\'/study/mine/hot\'&gt;stare studije&lt;/a&gt; možeš pronaći na stranici svog profila.&lt;br&gt;Postoji i &lt;a href=\'/\'&gt;blog objava na blogu o studijama&lt;/a&gt;.&lt;br&gt;Napredni korisnici možda žele pritisnuti \"?\" da bi vidjeli prečice na tastaturi.&lt;br&gt;Uživaj!</string>
   <string name="createChapterTitle">Ajmo da kreiramo poglavlje studije</string>
   <string name="createChapterText">Studija može imati nekoliko poglavlja.&lt;br&gt;Svako poglavlje ima zasebno stablo poteza,&lt;br&gt;i može se kreirati na različite načine.</string>
   <string name="fromInitialPositionTitle">Sa počentne pozicije</string>

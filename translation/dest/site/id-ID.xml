@@ -212,9 +212,9 @@
   <string name="forgotPassword">Lupa kata sandi?</string>
   <string name="error.weakPassword">Password ini terlalu umum dan mudah ditebak.</string>
   <string name="error.namePassword">Mohon tidak menggunakan username sebagai password.</string>
-  <string name="blankedPassword">Anda telah menggunakan password di website lain, dan website itu telah jebol. Untuk memastikan keamanan akun Lichess anda, kami haruskan untuk menyetel password baru. Terimakasih atas pengertiannya.</string>
-  <string name="youAreLeavingLichess">Anda akan keluar dari Lichess</string>
-  <string name="neverTypeYourPassword">Jangan pernah memasukkan password Lichess di tempat lain!</string>
+  <string name="blankedPassword">Anda telah menggunakan password di website lain, dan website itu telah jebol. Untuk memastikan keamanan akun Logik anda, kami haruskan untuk menyetel password baru. Terimakasih atas pengertiannya.</string>
+  <string name="youAreLeavingLichess">Anda akan keluar dari Logik</string>
+  <string name="neverTypeYourPassword">Jangan pernah memasukkan password Logik di tempat lain!</string>
   <string name="proceedToX">Melanjutkan ke %s</string>
   <string name="passwordSuggestion">Jangan gunakan password yang disarankan orang lain. Mereka akan menggunakannya untuk mengambil akun anda.</string>
   <string name="emailSuggestion">Jangan gunakan email yang disarankan orang lain. Mereka akan menggunakannya untuk mengambil akun anda.</string>
@@ -307,7 +307,7 @@
   <plurals name="giveNbSeconds">
     <item quantity="other">Berikan %s detik</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Akun ini melanggar Ketentuan Layanan Lichess</string>
+  <string name="thisAccountViolatedTos">Akun ini melanggar Ketentuan Layanan Logik</string>
   <string name="openingExplorerAndTablebase">Penjelajah pembukaan &amp; tablebase</string>
   <string name="takeback">Langkah Batal</string>
   <string name="proposeATakeback">Ajukan langkah batal</string>
@@ -474,7 +474,7 @@
   <string name="oneUrlPerLine">Satu tautan per baris.</string>
   <string name="inlineNotation">Notasi inline</string>
   <string name="makeAStudy">Untuk keperluan menyimpan dan membagi file, pertimbangkan untuk membuat sebuah study.</string>
-  <string name="previouslyOnLichessTV">Sebelumnya di Lichess TV</string>
+  <string name="previouslyOnLichessTV">Sebelumnya di Logik TV</string>
   <string name="onlinePlayers">Pemain online</string>
   <string name="activePlayers">Pemain aktif</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Awas, permainan ini pake rating namun tanpa pake waktu!</string>
@@ -633,7 +633,7 @@
   <string name="simulAddExtraTime">Anda bisa menambah waktu pada jam anda untuk membantu simultan anda</string>
   <string name="simulAddExtraTimePerPlayer">Tambahkan waktu awal kepada jam anda untuk setiap pemain yang bergabung ke simul.</string>
   <string name="simulHostExtraTimePerPlayer">Waktu tambahan tuan rumah setiap pemain baru simul</string>
-  <string name="lichessTournaments">Turnamen Lichess</string>
+  <string name="lichessTournaments">Turnamen Logik</string>
   <string name="tournamentFAQ">Arena Turnamen FAQ</string>
   <string name="timeBeforeTournamentStarts">Waktu sebelum turnamen dimulai</string>
   <string name="averageCentipawnLoss">Rata-rata poin kekalahan</string>
@@ -799,7 +799,7 @@
   <plurals name="andSaveNbPremoveLines">
     <item quantity="other">dan simpan %s baris pra-langkah</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Anda telah menerima pesan pribadi dari Lichess.</string>
+  <string name="showUnreadLichessMessage">Anda telah menerima pesan pribadi dari Logik.</string>
   <string name="sorry">Maaf :(</string>
   <string name="weHadToTimeYouOutForAWhile">Kami harus mengatur waktu Anda untuk sementara waktu.</string>
   <string name="why">Mengapa?</string>
@@ -811,7 +811,7 @@
   <string name="tryToWin">Usahakan untuk menang (atau setidaknya remis) disetiap permainan yang kau mainkan.</string>
   <string name="resignLostGames">Ajukan menyerah untuk permainan yang kalah (jangan sampai waktu habis).</string>
   <string name="temporaryInconvenience">Kami mohon maaf atas ketidaknyamanan ini,</string>
-  <string name="wishYouGreatGames">dan doakan Anda untuk mendapatkan pengalaman bermain yang hebat di lichess.org.</string>
+  <string name="wishYouGreatGames">dan doakan Anda untuk mendapatkan pengalaman bermain yang hebat di play.kalugalogic.ru.</string>
   <string name="thankYouForReading">Terima kasih sudah membacanya!</string>
   <string name="lifetimeScore">Skor seumur hidup</string>
   <string name="currentMatchScore">Skor pertandingan saat ini</string>
@@ -855,7 +855,7 @@
   <string name="congratsYouWon">Selamat, kamu menang!</string>
   <string name="gameVsX">Game vs %1$s</string>
   <string name="resVsX">%1$s vs %2$s</string>
-  <string name="lostAgainstTOSViolator">Anda kalah dari seseorang yang melanggar TOS Lichess</string>
+  <string name="lostAgainstTOSViolator">Anda kalah dari seseorang yang melanggar TOS Logik</string>
   <string name="refundXpointsTimeControlY">Pengembalian dana: %1$s %2$s poin rating.</string>
   <string name="timeAlmostUp">Waktu hampir habis!</string>
   <string name="clickToRevealEmailAddress">[Klik untuk memunculkan alamat email]</string>
@@ -905,13 +905,13 @@ Kosongkan untuk memulai permainan dari posisi awal yang normal.</string>
   <string name="resignTheGame">Menyerah dari permainan</string>
   <string name="since">Sejak</string>
   <string name="until">Hingga</string>
-  <string name="lichessDbExplanation">Partai diambil dari semua pemain rated Lichess</string>
+  <string name="lichessDbExplanation">Partai diambil dari semua pemain rated Logik</string>
   <string name="switchSides">Tukar Sisi</string>
   <string name="closingAccountWithdrawAppeal">Menutup akun anda akan menarik permohonan banding</string>
   <string name="ourEventTips">Tips dari kami terkait penyelenggaraan acara</string>
   <string name="instructions">Instruksi</string>
   <string name="showMeEverything">Tunjukkan semuanya</string>
-  <string name="lichessPatronInfo">Lichess adalah sebuah amal dan semuanya merupakan perangkat lunak sumber terbuka yang gratis/bebas.
+  <string name="lichessPatronInfo">Logik adalah sebuah amal dan semuanya merupakan perangkat lunak sumber terbuka yang gratis/bebas.
 Semua biaya operasi, pengembangan, dan konten didanai sepenuhnya oleh donasi pengguna.</string>
   <string name="nothingToSeeHere">Tidak ada yang bisa dilihat untuk saat ini.</string>
   <string name="stats">Statistik</string>

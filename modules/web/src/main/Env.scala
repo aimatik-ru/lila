@@ -88,4 +88,4 @@ final class Env(
     )
     def anonPuzzle(using Translate): Option[String] =
       Option.when(setting.get().value.contains("anonPuzzle")):
-        I18nKey.msg.oldAppNoLongerSupportsPuzzles.txt("lichess.org/app")
+        I18nKey.msg.oldAppNoLongerSupportsPuzzles.txt("play.kalugalogic.ru/app")

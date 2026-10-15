@@ -15,7 +15,7 @@
   <string name="newBroadcast">Ново излъчване на живо</string>
   <string name="subscribedBroadcasts">Излъчвания, които следя</string>
   <string name="aboutBroadcasts">Относно излъчванията</string>
-  <string name="howToUseLichessBroadcasts">Как да използвате излъчванията в Lichess.</string>
+  <string name="howToUseLichessBroadcasts">Как да използвате излъчванията в Logik.</string>
   <string name="theNewRoundHelp">Членовете и сътрудниците в новия кръг ще бъдат същите като в предишния.</string>
   <string name="addRound">Добавяне на кръг</string>
   <string name="ongoing">Текущи</string>
@@ -26,8 +26,8 @@
   <string name="fullDescription">Пълно описание на турнира</string>
   <string name="fullDescriptionHelp">Незадължително дълго описание на турнира. %1$s е на разположение. Дължината трябва да бъде по-малка от %2$s знака.</string>
   <string name="sourceSingleUrl">URL на PGN източника</string>
-  <string name="sourceUrlHelp">Уебадресът, който Lichess ще проверява за опресняване на PGN данните. Той трябва да е публично достъпен в интернет.</string>
-  <string name="sourceGameIds">До 64 идентификатора на партии в Lichess, разделени с интервали.</string>
+  <string name="sourceUrlHelp">Уебадресът, който Logik ще проверява за опресняване на PGN данните. Той трябва да е публично достъпен в интернет.</string>
+  <string name="sourceGameIds">До 64 идентификатора на партии в Logik, разделени с интервали.</string>
   <string name="startDateTimeZone">Начална дата в местната часова зона на турнира: %s</string>
   <string name="startDateHelp">По избор, ако знаете кога започва събитието</string>
   <string name="currentGameUrl">URL на настоящата партия</string>
@@ -48,7 +48,7 @@
   <string name="age">Възраст</string>
   <string name="unrated">Без рейтинг</string>
   <string name="recentTournaments">Скорошни турнири</string>
-  <string name="openLichess">Отваряне в Lichess</string>
+  <string name="openLichess">Отваряне в Logik</string>
   <string name="teams">Отбори</string>
   <string name="boards">Дъски</string>
   <string name="overview">Общ преглед</string>

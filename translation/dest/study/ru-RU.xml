@@ -173,7 +173,7 @@
   <string name="youCompletedThisLesson">Поздравляем! Вы прошли этот урок.</string>
   <string name="perPage">%s на страницу</string>
   <string name="getTheTour">Нужна помощь? Пройдите обучение!</string>
-  <string name="welcomeToLichessStudyTitle">Добро пожаловать в Студии Lichess!</string>
+  <string name="welcomeToLichessStudyTitle">Добро пожаловать в Студии Логик!</string>
   <string name="welcomeToLichessStudyText">Это общая аналитическая доска.&lt;br&gt;&lt;br&gt; Используйте её для анализа и аннотирования партий,&lt;br&gt;обсуждения позиций с друзьями,&lt;br&gt; и, конечно же, для уроков шахмат!&lt;br&gt;&lt;br&gt; Это мощный инструмент, давайте уделим немного времени, чтобы посмотреть, как он работает.</string>
   <string name="sharedAndSaveTitle" comment="As in: shared with other members and saved to database">Общие и сохранённые</string>
   <string name="sharedAndSavedText">Другие пользователи могут смотреть за вашими ходами в режиме реального времени!&lt;br&gt;Кроме того, всё сохраняется навсегда.</string>
@@ -187,7 +187,7 @@
   <string name="annotatePositionTitle">Добавьте метки к позиции</string>
   <string name="annotatePositionText">Нажмите на кнопку !?, или нажмите правой кнопкой мыши в списке ходов справа.&lt;br&gt;Значки аннотации открыты для участников и сохранены.</string>
   <string name="conclusionTitle">Благодарим за уделённое время</string>
-  <string name="conclusionText">Вы можете найти ваши&lt;a href=\'/study/mine/hot\'&gt; предыдущие студии&lt;/a&gt; на странице вашего профиля.&lt;br&gt;Есть также&lt;a href=\'//lichess.org/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way\'&gt; блог про студии&lt;/a&gt;&lt;br&gt;Опытные пользователи могут попробовать нажать «?» чтобы увидеть горячие клавиши.&lt;br&gt;Наслаждайтесь!</string>
+  <string name="conclusionText">Вы можете найти ваши&lt;a href=\'/study/mine/hot\'&gt; предыдущие студии&lt;/a&gt; на странице вашего профиля.&lt;br&gt;Опытные пользователи могут попробовать нажать «?» чтобы увидеть горячие клавиши.&lt;br&gt;Наслаждайтесь!</string>
   <string name="createChapterTitle">Давайте создадим главу студии</string>
   <string name="createChapterText">В студии может быть несколько глав.&lt;br&gt;В каждой главе есть своё дерево ходов,&lt;br&gt;и она может быть создана разными способами.</string>
   <string name="fromInitialPositionTitle">Из начальной позиции</string>
@@ -199,7 +199,7 @@
   <string name="fromPgnGameTitle">Из нотации PGN</string>
   <string name="fromPgnGameText">Вставьте партию в нотации PGN.&lt;br&gt;чтобы загрузить ходы, комментарии и варианты в главу.</string>
   <string name="variantsAreSupportedTitle">Студии поддерживают варианты шахмат</string>
-  <string name="variantsAreSupportedText">Да, вы можете исследовать Безумные шахматы&lt;br&gt;и другие варианты шахмат Lichess!</string>
+  <string name="variantsAreSupportedText">Да, вы можете исследовать Безумные шахматы&lt;br&gt;и другие варианты шахмат Логик!</string>
   <string name="chapterConclusionText">Главы сохраняются навсегда.&lt;br&gt;Получайте удовольствие от разбора вашей шахматной истории!</string>
   <string name="doubleDefeat">Обоюдное поражение</string>
   <string name="blackDefeatWhiteCanNotWin">Чёрные сдались, но белые не могут выиграть</string>

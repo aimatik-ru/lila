@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="lichessMobileApp">Lichess-mobiilisovellus</string>
-  <string name="returningToApp" comment="Displayed on interstitial page that automatically opens the Lichess app">Palataan Lichess-sovellukseen</string>
+  <string name="lichessMobileApp">Logik-mobiilisovellus</string>
+  <string name="returningToApp" comment="Displayed on interstitial page that automatically opens the Lichess app">Palataan Logik-sovellukseen</string>
   <string name="ifAppDoesNotOpenAutomatically">Jos sovellus ei aukea automaattisesti, napauta \"%s\" -painiketta.</string>
-  <string name="openTheApp" comment="Button text to open the Lichess app on the device">Avaa Lichess-sovellus</string>
+  <string name="openTheApp" comment="Button text to open the Lichess app on the device">Avaa Logik-sovellus</string>
   <string name="viewAllReleases" comment="To view a list of all mobile app releases on Github">Voit katsoa %s GitHubissa</string>
   <string name="allReleases">kaikkia versioita</string>
   <string name="downloadOnAppleAppStore">Lataa Apple App Storesta</string>

@@ -9,7 +9,7 @@
     <item quantity="other">%s tinklaraščio įrašų</item>
   </plurals>
   <string name="continueReadingPost">Toliau skaityti šį įrašą</string>
-  <string name="lichessBlogPostsFromXYear">Lichess tinklaraščių įrašai %s</string>
+  <string name="lichessBlogPostsFromXYear">Logik tinklaraščių įrašai %s</string>
   <string name="previousBlogPosts">Praėję įrašai</string>
   <string name="xBlog">%s Tinklaraštis</string>
   <string name="newPost">Naujas įrašas</string>

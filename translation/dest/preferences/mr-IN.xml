@@ -65,8 +65,8 @@
   <string name="notifyTournamentStartReminders" comment="notifyTournamentSoon&#10;&#10;A notification setting - notifies players if a tournament is starting soon.">स्पर्धा सुरू होण्याबाबतच्या आठवणी</string>
   <string name="notifyBroadcasts">प्रसारणे</string>
   <string name="notifyTimeAlarm">पत्रव्यवहार खेळाचा वेळ संपत आहे</string>
-  <string name="notifyBell">Lichess मधिल बेल सूचना</string>
-  <string name="notifyPush">तुम्ही Lichess वर नसतानाच्या डिव्हाइस सूचना</string>
+  <string name="notifyBell">Logik मधिल बेल सूचना</string>
+  <string name="notifyPush">तुम्ही Logik वर नसतानाच्या डिव्हाइस सूचना</string>
   <string name="notifyWeb">ब्राउझर</string>
   <string name="notifyDevice">डिव्हाइस</string>
   <string name="bellNotificationSound">बेल सूचनांचा आवाज</string>

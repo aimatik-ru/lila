@@ -55,11 +55,11 @@
 	<string name="malwareNoAbuse">Não utilizamos seu dispositivo contra você</string>
 	<string name="malwareWarningPrefix" comment="%s is 'be careful'">Mas outros sites fazem, então por favor %s.</string>
 	<string name="malwareWarningCta" comment="It is a link to https://lichess.org/ads">tenha cuidado</string>
-	<string name="lichessGamesPlayedIn" comment="%1$s is the number of games, %2$s is the year">%1$s partidas jogadas no Lichess em %2$s</string>
+	<string name="lichessGamesPlayedIn" comment="%1$s is the number of games, %2$s is the year">%1$s partidas jogadas no Logik em %2$s</string>
 	<string name="lichessGamesOfThemYours" comment="%s is the percentage of games that are yours">%s delas foram suas.</string>
-	<string name="thanksTitle">Obrigado por jogar no Lichess!</string>
+	<string name="thanksTitle">Obrigado por jogar no Logik!</string>
 	<string name="thanksHaveAGreat" comment="%s is the next year">Estamos felizes por você estar aqui. Tenha um grande %s!</string>
-	<string name="patronCostsThisYear" comment="%1$s is 'costs'. %2$s is the cost with currency symbol e.g. '$750,000'">Nesse ano, os %1$s do Lichess foram de %2$s.</string>
+	<string name="patronCostsThisYear" comment="%1$s is 'costs'. %2$s is the cost with currency symbol e.g. '$750,000'">Nesse ano, os %1$s do Logik foram de %2$s.</string>
 	<string name="patronCosts" comment="It is a link to lichess.org/costs">custos</string>
 	<string name="patronCharity">Nós somos uma instituição de caridade, que depende exclusivamente de doações.</string>
 	<string name="patronConsiderDonating" comment="%s is 'supporting us with a donation'">Se nós ajudamos a entreter você nesse ano, ou você acredita no nosso trabalho, por favor, considere %s!</string>

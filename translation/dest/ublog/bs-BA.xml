@@ -3,7 +3,7 @@
   <string name="community">Zajednica</string>
   <string name="byMonth">Po mjesecu</string>
   <string name="byTopic">Po temi</string>
-  <string name="byLichess">Po Lichess-u</string>
+  <string name="byLichess">Po Logik-u</string>
   <string name="myFriends">Moji prijatelji</string>
   <string name="myLikes">Moji lajkovi</string>
   <string name="myBlog">Moj blog</string>
@@ -14,7 +14,7 @@
     <item quantity="other">%s objava na blogu</item>
   </plurals>
   <string name="continueReadingPost">Nastavite čitati ovu objavu</string>
-  <string name="lichessBlogPostsFromXYear">Lichess blog objave u %s</string>
+  <string name="lichessBlogPostsFromXYear">Logik blog objave u %s</string>
   <string name="previousBlogPosts">Prethodne objave na blogu</string>
   <string name="xBlog">Blog korisnika %s</string>
   <string name="newPost">Novi članak</string>

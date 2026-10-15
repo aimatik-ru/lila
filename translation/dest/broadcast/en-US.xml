@@ -15,7 +15,7 @@
   <string name="newBroadcast">New live broadcast</string>
   <string name="subscribedBroadcasts">Subscribed broadcasts</string>
   <string name="aboutBroadcasts">About broadcasts</string>
-  <string name="howToUseLichessBroadcasts">How to use Lichess Broadcasts.</string>
+  <string name="howToUseLichessBroadcasts">How to use Logik Broadcasts.</string>
   <string name="theNewRoundHelp">The new round will have the same members and contributors as the previous one.</string>
   <string name="addRound">Add a round</string>
   <string name="ongoing">Ongoing</string>
@@ -26,8 +26,8 @@
   <string name="fullDescription">Full event description</string>
   <string name="fullDescriptionHelp">Optional long description of the event. You can use %1$s for additional formatting options. Length must be less than %2$s characters.</string>
   <string name="sourceSingleUrl">PGN Source URL</string>
-  <string name="sourceUrlHelp">URL that Lichess will check to get PGN updates. It must be publicly accessible from the Internet.</string>
-  <string name="sourceGameIds">Up to 64 Lichess game IDs, separated by spaces.</string>
+  <string name="sourceUrlHelp">URL that Logik will check to get PGN updates. It must be publicly accessible from the Internet.</string>
+  <string name="sourceGameIds">Up to 64 Logik game IDs, separated by spaces.</string>
   <string name="startDateTimeZone">Start date in the tournament local timezone: %s</string>
   <string name="startDateHelp">Optional, if you know when the event starts</string>
   <string name="currentGameUrl">Current game URL</string>
@@ -50,7 +50,7 @@
   <string name="age">Age</string>
   <string name="unrated">Unrated</string>
   <string name="recentTournaments">Recent tournaments</string>
-  <string name="openLichess">Open in Lichess</string>
+  <string name="openLichess">Open in Logik</string>
   <string name="teams">Teams</string>
   <string name="boards">Boards</string>
   <string name="overview">Overview</string>

@@ -259,7 +259,7 @@
     <item quantity="other">%s spyljende</item>
   </plurals>
   <string name="exportGames">Eksportear partijen</string>
-  <string name="thisAccountViolatedTos">Dit akkount hat de regels fan de Lichess Tsjinstbetingsten oertrêden</string>
+  <string name="thisAccountViolatedTos">Dit akkount hat de regels fan de Logik Tsjinstbetingsten oertrêden</string>
   <string name="openingExplorerAndTablebase">Openingsblêder &amp; tablebase</string>
   <string name="takeback">Set werom</string>
   <string name="proposeATakeback">Stel in weromset foar</string>
@@ -373,7 +373,7 @@ kompjûteranalyze, partijpetear en dielbere URL te krijen.</string>
   <string name="thankYou">Tankewol!</string>
   <string name="socialMediaLinks">Keppelingen nei sosjale media</string>
   <string name="inlineNotation">Ynboude notaasje</string>
-  <string name="previouslyOnLichessTV">Earder op Lichess TV</string>
+  <string name="previouslyOnLichessTV">Earder op Logik TV</string>
   <string name="onlinePlayers">Online spilers</string>
   <string name="activePlayers">Aktive spilers</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Tink derom, dizze partij is wol om rating, mar is sûnder klok!</string>

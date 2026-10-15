@@ -249,8 +249,8 @@
   <string name="forgotPassword">Pasahitza ahaztu duzu?</string>
   <string name="error.weakPassword">Pasahitz hau oso arrunta eta asmatzeko erraza da.</string>
   <string name="error.namePassword">Ez erabili zure erabiltzaile-izena pasahitz gisa.</string>
-  <string name="blankedPassword">Pasahitz hau beste webgune baten erabili duzu eta publikoki ezaguna da hori. Lichess kontuaren segurtasuna bermatzeko beste pasahitz bat erabili behar duzu. Eskerrik asko.</string>
-  <string name="youAreLeavingLichess">Lichess uzten ari zara</string>
+  <string name="blankedPassword">Pasahitz hau beste webgune baten erabili duzu eta publikoki ezaguna da hori. Logik kontuaren segurtasuna bermatzeko beste pasahitz bat erabili behar duzu. Eskerrik asko.</string>
+  <string name="youAreLeavingLichess">Logik uzten ari zara</string>
   <string name="neverTypeYourPassword">Ez erabiili zure Lichesseko pasahitza beste inon!</string>
   <string name="proceedToX">Joan zaitez %s helbidera</string>
   <string name="passwordSuggestion">Ez erabili beste norbaitek esandako pasahitzak. Zure kontua lapurtzeko erabiliko dute.</string>
@@ -263,7 +263,7 @@
   <string name="emailSent">%s helbidera email bat bidali dugu.</string>
   <string name="emailCanTakeSomeTime">Itxaron pixkatean emaila jaso arte.</string>
   <string name="refreshInboxAfterFiveMinutes">Itxaron 5 minutu eta freskatu zure emailaren sarrera-ontzia.</string>
-  <string name="checkSpamOrJunkFolder" comment="checkSpamFolder&#10;It = The confirmation email">Emailik jasotzen ez baduzu, kontsultatu zure Spam edo Zabor karpeta. Esan lichess.org-eko mezuak seguruak direla eta \"spam ez\" direla, komunikazio garrantzitsuen berri izateko.</string>
+  <string name="checkSpamOrJunkFolder" comment="checkSpamFolder&#10;It = The confirmation email">Emailik jasotzen ez baduzu, kontsultatu zure Spam edo Zabor karpeta. Esan play.kalugalogic.ru-eko mezuak seguruak direla eta \"spam ez\" direla, komunikazio garrantzitsuen berri izateko.</string>
   <string name="sendEmailForAccountVerification">Zure baieztapen emaila ezin baduzu aurkitu, idatzi %s helbidera eta kontua baieztatu egingo dugu.</string>
   <string name="accountConfirmed">%s erabiltzailea ondo baieztatu da.</string>
   <string name="accountCanLogin">Orain %s izena erabiliz sartu zaitezke.</string>
@@ -545,7 +545,7 @@ Jokatu puntuaziorako balio duten partidak egonkortasuna handitzeko.</string>
   <string name="inlineNotation">Lerroarteko oharrak</string>
   <string name="makeAStudy">Ondo gorde eta partekatzeko sortu azterlan bat.</string>
   <string name="clearLocalData">Garbitu datu lokalak</string>
-  <string name="previouslyOnLichessTV">Aurreko Lichess TV saioak</string>
+  <string name="previouslyOnLichessTV">Aurreko Logik TV saioak</string>
   <string name="onlinePlayers">Konektatutako jokalariak</string>
   <string name="activePlayers">Jokalari aktiboak</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Kontuz!  erlojurik eduki ez arren, partida hau puntuagarria da!</string>
@@ -718,7 +718,7 @@ Jokatu puntuaziorako balio duten partidak egonkortasuna handitzeko.</string>
   <string name="extraClockTimeForHost" comment="Appears on: https://lichess.org/simul/new&#10;&#10;Allows a simul host to select extra time for the simul.&#10;&#10;Please note this string used to state &quot;Host extra clock time&quot;, without the word &quot;initial&quot;">Ostatatzailearentzat denbora gehigarria:</string>
   <string name="simulAddExtraTimePerPlayer">Aldibereko partidara sartzen den jokalari bakoitzagatik denbora gehitu zure erlojuan.</string>
   <string name="simulHostExtraTimePerPlayer">Jokalari bakoitzeko denbora gehigarria</string>
-  <string name="lichessTournaments">Lichess txapelketak</string>
+  <string name="lichessTournaments">Logik txapelketak</string>
   <string name="tournamentFAQ">Arena txapelketaren ohiko galderak</string>
   <string name="timeBeforeTournamentStarts">Txapelketa hasteko denbora</string>
   <string name="averageCentipawnLoss">Bataz besteko peoi-ehuneko galera</string>
@@ -770,7 +770,7 @@ Jokatu puntuaziorako balio duten partidak egonkortasuna handitzeko.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Izena ematean, gure %s onartzen dituzu.</string>
   <string name="readAboutOur">Irakurri gure %s.</string>
   <string name="networkLagBetweenYouAndLichess">Sarearen atzerapena Lichessen eta zure artean</string>
-  <string name="timeToProcessAMoveOnLichessServer">Lichess zerbitzariak jokaldi bat egiteko denbora</string>
+  <string name="timeToProcessAMoveOnLichessServer">Logik zerbitzariak jokaldi bat egiteko denbora</string>
   <string name="downloadAnnotated">Oharrekin jaitsi</string>
   <string name="downloadRaw">Oharrik gabe jaitsi</string>
   <string name="downloadImported">Igo zen moduan jaitsi</string>
@@ -918,7 +918,7 @@ Jokatu puntuaziorako balio duten partidak egonkortasuna handitzeko.</string>
   <string name="tryToWin">Jokatutako partida guztiak irabazten saiatu (edo gutxienez berdindu).</string>
   <string name="resignLostGames">Galdutako partidetan amore eman (ez utzi denbora agortzen).</string>
   <string name="temporaryInconvenience">Barkatu eragozpenak,</string>
-  <string name="wishYouGreatGames">segi lichess.org-en jokatzen.</string>
+  <string name="wishYouGreatGames">segi play.kalugalogic.ru-en jokatzen.</string>
   <string name="thankYouForReading">Eskerrik asko irakurtzeagatik!</string>
   <string name="lifetimeScore">Jokalari honekin duzun emaitza</string>
   <string name="currentMatchScore">Uneko partidetako emaitza</string>
@@ -1024,7 +1024,7 @@ Utzi hutsik partidak ohiko posizioarekin hasteko.</string>
   <string name="ourEventTips">Txapelketak antolatzeko gure aholkuak</string>
   <string name="instructions">Jarraibideak</string>
   <string name="showMeEverything">Erakutsi guztia</string>
-  <string name="lichessPatronInfo">Lichess software librea da.
+  <string name="lichessPatronInfo">Logik software librea da.
 Garapen eta mantentze-kostu guztiak erabiltzaileen dohaintzekin ordaintzen dira.</string>
   <string name="nothingToSeeHere">Hemen ez dago ezer zuretzat.</string>
   <string name="stats">Estatistikak</string>

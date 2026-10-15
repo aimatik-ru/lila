@@ -6,7 +6,7 @@
   <string name="all">All</string>
   <string name="byMonth">By month</string>
   <string name="byTopic">By topic</string>
-  <string name="byLichess">By Lichess</string>
+  <string name="byLichess">By Logik</string>
   <string name="myFriends">My friends</string>
   <string name="myLikes">My likes</string>
   <string name="myBlog">My blog</string>
@@ -17,7 +17,7 @@
     <item quantity="other">%s blog posts</item>
   </plurals>
   <string name="continueReadingPost">Continue reading this post</string>
-  <string name="lichessBlogPostsFromXYear">Lichess blog posts in %s</string>
+  <string name="lichessBlogPostsFromXYear">Logik blog posts in %s</string>
   <string name="previousBlogPosts">Previous blog posts</string>
   <string name="xBlog">%s's Blog</string>
   <string name="newPost">New post</string>

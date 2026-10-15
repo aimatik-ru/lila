@@ -17,7 +17,7 @@
     <item quantity="other">%s blogikirjoitusta</item>
   </plurals>
   <string name="continueReadingPost">Jatka tämän kirjoituksen lukemista</string>
-  <string name="lichessBlogPostsFromXYear">Lichess-blogikirjoitukset vuodelta %s</string>
+  <string name="lichessBlogPostsFromXYear">Logik-blogikirjoitukset vuodelta %s</string>
   <string name="previousBlogPosts">Edelliset blogikirjoitukset</string>
   <string name="xBlog">Käyttäjän %s blogi</string>
   <string name="newPost">Uusi kirjoitus</string>

@@ -238,9 +238,9 @@
   <string name="forgotPassword">An ndearna tú dearmad ar do phasfhocal?</string>
   <string name="error.weakPassword">Tá an pasfhocal seo thar a bheith coitianta, agus ró-éasca le buille faoi thuairim.</string>
   <string name="error.namePassword">Ná húsáid d\'ainm úsáideora mar do phasfhocal.</string>
-  <string name="blankedPassword">D\'úsáid tú an pasfhocal céanna ar shuíomh eile, agus tá an suíomh sin curtha i gcontúirt. Chun sábháilteacht do chuntais Lichess a chinntiú, ní mór dúinn pasfhocal nua a shocrú. Go raibh maith agat as do thuiscint.</string>
-  <string name="youAreLeavingLichess">Tá tú ag fágáil Lichess</string>
-  <string name="neverTypeYourPassword">Ná clóscríobh do phasfhocal Lichess ar shuíomh eile riamh!</string>
+  <string name="blankedPassword">D\'úsáid tú an pasfhocal céanna ar shuíomh eile, agus tá an suíomh sin curtha i gcontúirt. Chun sábháilteacht do chuntais Logik a chinntiú, ní mór dúinn pasfhocal nua a shocrú. Go raibh maith agat as do thuiscint.</string>
+  <string name="youAreLeavingLichess">Tá tú ag fágáil Logik</string>
+  <string name="neverTypeYourPassword">Ná clóscríobh do phasfhocal Logik ar shuíomh eile riamh!</string>
   <string name="proceedToX">Lean ar aghaidh go %s</string>
   <string name="passwordSuggestion">Ná socraigh pasfhocal a mhol duine éigin eile. Úsáidfidh siad é chun do chuntas a ghoid.</string>
   <string name="emailSuggestion">Ná socraigh seoladh ríomhphoist a mhol duine éigin eile. Úsáidfidh siad é chun do chuntas a ghoid.</string>
@@ -366,7 +366,7 @@
     <item quantity="many">Tabhair %s shoicind</item>
     <item quantity="other">Tabhair %s shoicind</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Sháraigh an cuntas Téarmaí Seirbhíse Lichess</string>
+  <string name="thisAccountViolatedTos">Sháraigh an cuntas Téarmaí Seirbhíse Logik</string>
   <string name="openingExplorerAndTablebase">Ag oscailt taiscéalaí &amp; bunachar deiridh an chluiche</string>
   <string name="takeback">Aisthógáil</string>
   <string name="proposeATakeback">Aisthógáil a mholadh</string>
@@ -554,7 +554,7 @@ anailís ríomhaire, comhrá cluiche agus URL inroinnte.</string>
   <string name="oneUrlPerLine">URL amháin an líne.</string>
   <string name="inlineNotation">Nodaireacht inlíne</string>
   <string name="makeAStudy">Ar mhaithe le slánú agus le roinnt, smaoinigh ar staidéar a dhéanamh.</string>
-  <string name="previouslyOnLichessTV">Roimhe seo ar Lichess TV</string>
+  <string name="previouslyOnLichessTV">Roimhe seo ar Logik TV</string>
   <string name="onlinePlayers">Imreoirí ar líne</string>
   <string name="activePlayers">Imreoirí gníomhacha</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Tabhair aire, tá an cluiche seo rátáilte ach níl clog aige!</string>
@@ -721,7 +721,7 @@ anailís ríomhaire, comhrá cluiche agus URL inroinnte.</string>
   <string name="simulAddExtraTime">Féadfaidh tú am breise a chur le do chlog chun cabhrú leat déileáil leis an gcluiche comhuaineach.</string>
   <string name="simulAddExtraTimePerPlayer">Cuir am tosaigh le do chlog do gach imreoir a ghlacann páirt sa chluiche comhuaineach.</string>
   <string name="simulHostExtraTimePerPlayer">Óstáil am breise clog do gach imreora</string>
-  <string name="lichessTournaments">Comórtais Lichess</string>
+  <string name="lichessTournaments">Comórtais Logik</string>
   <string name="tournamentFAQ">Ceisteanna Coitianta Comórtais Airéine</string>
   <string name="timeBeforeTournamentStarts">Am fágtha sula dtosnaíonn an comórtas</string>
   <string name="averageCentipawnLoss">Meán chaillteanas ceithearnach sa lár</string>
@@ -759,8 +759,8 @@ anailís ríomhaire, comhrá cluiche agus URL inroinnte.</string>
   <string name="weHaveSentYouAnEmailTo">Tá ríomhphost seolta againn chuig %s. Cliceáil ar an nasc sa ríomhphost chun do phasfhocal a athshocrú.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Trí chlárú, aontaíonn tú leis na %s.</string>
   <string name="readAboutOur">Léigh faoinár %s.</string>
-  <string name="networkLagBetweenYouAndLichess">Moill gréasáin idir tú féin agus Lichess</string>
-  <string name="timeToProcessAMoveOnLichessServer">Am le beart a phróiseáil ar fhreastalaí Lichess</string>
+  <string name="networkLagBetweenYouAndLichess">Moill gréasáin idir tú féin agus Logik</string>
+  <string name="timeToProcessAMoveOnLichessServer">Am le beart a phróiseáil ar fhreastalaí Logik</string>
   <string name="downloadAnnotated">Íoslódáil leagan anótáilte</string>
   <string name="downloadRaw">Ioslódáil sonraí loma</string>
   <string name="downloadImported">Ioslódáil sonraí iompórtáilte</string>
@@ -776,7 +776,7 @@ anailís ríomhaire, comhrá cluiche agus URL inroinnte.</string>
   <string name="withEverybody">Le gach duine</string>
   <string name="kidMode">Mód páistí</string>
   <string name="kidModeExplanation">Baineann sé seo le sábháilteacht. I mód na bpáistí, tá gach cumarsáid múchta. Úsáid seo do pháistí agus daltaí scoile, chun iad a chosaint ó úsáideoirí idirlín eile.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">I mód na bpáistí, faigheann an lógó Lichess íocón %s, ionas go mbeidh a fhios agat go bhfuil do pháistí sábháilte.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">I mód na bpáistí, faigheann an lógó Logik íocón %s, ionas go mbeidh a fhios agat go bhfuil do pháistí sábháilte.</string>
   <string name="askYourChessTeacherAboutLiftingKidMode">Tá do chuntas á bhainistiú. Iarr ar do mhúinteoir fichille faoi mhodh ardú na bpáistí.</string>
   <string name="enableKidMode">Cuir mód na bpáistí ar siúl</string>
   <string name="disableKidMode">Múch mód na bpáistí</string>
@@ -895,7 +895,7 @@ anailís ríomhaire, comhrá cluiche agus URL inroinnte.</string>
   <string name="tryToWin">Déan iarracht gach cluiche a imríonn tú a bhuachaint (nó comhscór a fháil ar a laghad).</string>
   <string name="resignLostGames">Éirigh as cluichí caillte (ná lig don clog rith amach).</string>
   <string name="temporaryInconvenience">Gabhaimid leithscéal as an míchaoithiúlacht shealadach,</string>
-  <string name="wishYouGreatGames">agus guímid cluichí iontacha ort ar lichess.org.</string>
+  <string name="wishYouGreatGames">agus guímid cluichí iontacha ort ar play.kalugalogic.ru.</string>
   <string name="thankYouForReading">Go raibh maith agat as léamh!</string>
   <string name="lifetimeScore">Scór saoil</string>
   <string name="currentMatchScore">Scór reatha an chluiche</string>
@@ -937,7 +937,7 @@ anailís ríomhaire, comhrá cluiche agus URL inroinnte.</string>
   <string name="congratsYouWon">Comhghairdeas, bhuaigh tú!</string>
   <string name="gameVsX">Cluiche in aghaidh %1$s</string>
   <string name="resVsX">%1$s in aghaidh %2$s</string>
-  <string name="lostAgainstTOSViolator">Chaill tú i gcoinne duine a sháraigh téarmaí seirbhíse Lichess</string>
+  <string name="lostAgainstTOSViolator">Chaill tú i gcoinne duine a sháraigh téarmaí seirbhíse Logik</string>
   <string name="refundXpointsTimeControlY">Athchistiú: %1$s %2$s pointí rátála.</string>
   <string name="timeAlmostUp">Tá an t-am beagnach suas!</string>
   <string name="clickToRevealEmailAddress">[Cliceáil chun seoladh ríomhphoist a nochtadh]</string>
@@ -988,10 +988,10 @@ Fág folamh chun cluichí a thosú ón ngnáthshuíomh tosaigh.</string>
   <string name="resignTheGame">Éirigh as</string>
   <string name="since">Ó</string>
   <string name="until">Go dtí</string>
-  <string name="lichessDbExplanation">Cluichí rátáilte a sampláladh ó gach imreoir Lichess</string>
+  <string name="lichessDbExplanation">Cluichí rátáilte a sampláladh ó gach imreoir Logik</string>
   <string name="switchSides">Athraigh taobhanna</string>
   <string name="closingAccountWithdrawAppeal">Má dhúnann tú do chuntas tarraingeofar siar d’achomharc</string>
   <string name="ourEventTips">Ár leideanna chun imeachtaí a eagrú</string>
-  <string name="lichessPatronInfo">Is carthanas é Lichess, agus agus bogearraí foinse oscailte go hiomlán saor in aisce.
+  <string name="lichessPatronInfo">Is carthanas é Logik, agus agus bogearraí foinse oscailte go hiomlán saor in aisce.
 Maoinítear na costais oibriúcháin, na forbartha agus an t-ábhar go léir trí thabhartais úsáideora amháin.</string>
 </resources>

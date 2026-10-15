@@ -257,8 +257,8 @@
   <string name="error.weakPassword">Ova lozinka izuzetno je česta i prelahka za pogađanje.</string>
   <string name="error.namePassword">Molimo da ne upotrebljavate Vaše korisničko ime kao lozinku.</string>
   <string name="blankedPassword">Upotrijebili ste istu lozinku na drugom sajtu, a taj je sajt kompromitiran. Da bismo omogućili sigurnost Vašeg računa na Lichessu, trebate postaviti novu lozinku. Hvala na razumijevanju.</string>
-  <string name="youAreLeavingLichess">Napuštate Lichess</string>
-  <string name="neverTypeYourPassword">Nikada nemojte unijeti Vašu lozinku za Lichess na nekom drugom sajtu!</string>
+  <string name="youAreLeavingLichess">Napuštate Logik</string>
+  <string name="neverTypeYourPassword">Nikada nemojte unijeti Vašu lozinku za Logik na nekom drugom sajtu!</string>
   <string name="proceedToX">Idite na %s</string>
   <string name="passwordSuggestion">Nemojte postavljati lozinku koju je predložio netko drugi. Mogu je iskoristiti za krađu vašeg računa.</string>
   <string name="emailSuggestion">Nemojte postavljati e-mail adresu koju je predložio netko drugi. Mogu je iskoristiti za krađu vašeg računa.</string>
@@ -270,7 +270,7 @@
   <string name="emailSent">Poslali smo e-poštu na %s.</string>
   <string name="emailCanTakeSomeTime">Može potrajati neko vrijeme dok stigne.</string>
   <string name="refreshInboxAfterFiveMinutes">Pričekajte pet minuta i osvježite pristiglu poštu.</string>
-  <string name="checkSpamOrJunkFolder" comment="checkSpamFolder&#10;It = The confirmation email">Ako ne primite email potvrde, provjerite neželjenu poštu. Obavezno označite poruke sa lichess.org kao sigurne i \"nije neželjena pošta\", kako biste mogli ostati obaviješteni o važnim porukama.</string>
+  <string name="checkSpamOrJunkFolder" comment="checkSpamFolder&#10;It = The confirmation email">Ako ne primite email potvrde, provjerite neželjenu poštu. Obavezno označite poruke sa play.kalugalogic.ru kao sigurne i \"nije neželjena pošta\", kako biste mogli ostati obaviješteni o važnim porukama.</string>
   <string name="sendEmailForAccountVerification">Ako ne možete pronaći konfirmacijski email, pošaljite email na %s i mi ćemo potvrditi vaš račun za vas.</string>
   <string name="accountConfirmed">Korisnik %s uspješno je potvrđen.</string>
   <string name="accountCanLogin">Možete se prijaviti odmah kao %s.</string>
@@ -572,7 +572,7 @@ računarsku analizu, mogućnost dopisivanja i link za slanje drugima.</string>
   <string name="oneUrlPerLine">Jedan link po redu.</string>
   <string name="inlineNotation">Kompaktnija notacija</string>
   <string name="makeAStudy">Radi čuvanja i dijeljenja razmislite o izradi studije.</string>
-  <string name="previouslyOnLichessTV">Prethodno na Lichess TV-u</string>
+  <string name="previouslyOnLichessTV">Prethodno na Logik TV-u</string>
   <string name="onlinePlayers">Online igrači</string>
   <string name="activePlayers">Aktivni igrači</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Oprez, igra se za rejting bodove, ali bez ograničenog vremena!</string>
@@ -749,7 +749,7 @@ računarsku analizu, mogućnost dopisivanja i link za slanje drugima.</string>
   <string name="extraClockTimeForHost" comment="Appears on: https://lichess.org/simul/new&#10;&#10;Allows a simul host to select extra time for the simul.&#10;&#10;Please note this string used to state &quot;Host extra clock time&quot;, without the word &quot;initial&quot;">Dodatno vrijeme za domaćina:</string>
   <string name="simulAddExtraTimePerPlayer">Dodajte početno vrijeme na Vaš sat za svakog igrača koji se pridruži simultanci.</string>
   <string name="simulHostExtraTimePerPlayer">Dodatno vrijeme po igraču za domaćina simultanke</string>
-  <string name="lichessTournaments">Lichess turniri</string>
+  <string name="lichessTournaments">Logik turniri</string>
   <string name="tournamentFAQ">Najčešće postavljana pitanja o Arena turnirima</string>
   <string name="timeBeforeTournamentStarts">Vrijeme do početka turnira</string>
   <string name="averageCentipawnLoss">Prosječni gubitak u stotim dijelovima pješaka</string>
@@ -939,7 +939,7 @@ računarsku analizu, mogućnost dopisivanja i link za slanje drugima.</string>
     <item quantity="few">i snimi %s poteza unaprijed</item>
     <item quantity="other">i snimi %s poteza unaprijed</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Primili ste privatnu poruku od Lichess-a.</string>
+  <string name="showUnreadLichessMessage">Primili ste privatnu poruku od Logik-a.</string>
   <string name="readTheMessage" comment="'It' refers to a private message. This text follows after a different string which advises players they have received a private message from Lichess. For users, this is appears as a regular private message from the Lichess account: https://lichess.org/@/Lichess">Pročitaj poruku</string>
   <string name="sorry">Izvinjavamo se :(</string>
   <string name="weHadToTimeYouOutForAWhile">Morali smo Vam staviti privremenu zabranu na igranje.</string>
@@ -952,7 +952,7 @@ računarsku analizu, mogućnost dopisivanja i link za slanje drugima.</string>
   <string name="tryToWin">Pokušajte pobijediti (ili barem izboriti neriješen rezultat) svaku partiju ​​koju igrate.</string>
   <string name="resignLostGames">Predajte izgubljenu partiju (ne čekajte da vrijeme istekne).</string>
   <string name="temporaryInconvenience">Izvinjavamo se zbog privremene neugodnosti,</string>
-  <string name="wishYouGreatGames">i želimo Vam odlične partije na lichess.org.</string>
+  <string name="wishYouGreatGames">i želimo Vam odlične partije na play.kalugalogic.ru.</string>
   <string name="thankYouForReading">Hvala Vam na čitanju!</string>
   <string name="lifetimeScore">Ukupni rezultat</string>
   <string name="currentMatchScore">Rezultat sadašnjeg meča</string>
@@ -1060,7 +1060,7 @@ Ostavite prazno za početak igre sa normalne početne pozicije.</string>
   <string name="ourEventTips">Naši savjeti za organiziranje događajâ</string>
   <string name="instructions">Upute</string>
   <string name="showMeEverything">Pokaži mi sve</string>
-  <string name="lichessPatronInfo">Lichess je dobrotvorni i potpuno besplatan softver otvorenog koda.
+  <string name="lichessPatronInfo">Logik je dobrotvorni i potpuno besplatan softver otvorenog koda.
 Svi operativni troškovi, razvoj i sadržaj finansiraju se isključivo od donacija korisnikâ.</string>
   <string name="nothingToSeeHere">Trenutno nema ništa za vidjeti ovdje.</string>
   <string name="stats">Statistika</string>

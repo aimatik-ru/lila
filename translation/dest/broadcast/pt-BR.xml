@@ -15,7 +15,7 @@
   <string name="newBroadcast">Nova transmissão ao vivo</string>
   <string name="subscribedBroadcasts">Transmissões em que você se inscreveu</string>
   <string name="aboutBroadcasts">Sobre as transmissões</string>
-  <string name="howToUseLichessBroadcasts">Como usar as Transmissões do Lichess.</string>
+  <string name="howToUseLichessBroadcasts">Como usar as Transmissões do Logik.</string>
   <string name="theNewRoundHelp">A nova rodada terá os mesmos membros e colaboradores que a anterior.</string>
   <string name="addRound">Adicionar uma ronda</string>
   <string name="ongoing">Em andamento</string>
@@ -26,8 +26,8 @@
   <string name="fullDescription">Descrição completa do evento</string>
   <string name="fullDescriptionHelp">Descrição longa e opcional da transmissão. %1$s está disponível. O tamanho deve ser menor que %2$s caracteres.</string>
   <string name="sourceSingleUrl">URL de origem de PGN</string>
-  <string name="sourceUrlHelp">URL que Lichess irá verificar para obter atualizações PGN. Deve ser acessível ao público a partir da Internet.</string>
-  <string name="sourceGameIds">Até 64 IDs de partidas do Lichess, separados por espaços.</string>
+  <string name="sourceUrlHelp">URL que Logik irá verificar para obter atualizações PGN. Deve ser acessível ao público a partir da Internet.</string>
+  <string name="sourceGameIds">Até 64 IDs de partidas do Logik, separados por espaços.</string>
   <string name="startDateTimeZone">Data de início no horário local do torneio: %s</string>
   <string name="startDateHelp">Opcional, se você sabe quando o evento começa</string>
   <string name="currentGameUrl">URL da partida atual</string>
@@ -50,7 +50,7 @@
   <string name="age">Idade</string>
   <string name="unrated">Sem rating</string>
   <string name="recentTournaments">Torneios recentes</string>
-  <string name="openLichess">Abrir no Lichess</string>
+  <string name="openLichess">Abrir no Logik</string>
   <string name="teams">Equipes</string>
   <string name="boards">Tabuleiros</string>
   <string name="overview">Visão geral</string>

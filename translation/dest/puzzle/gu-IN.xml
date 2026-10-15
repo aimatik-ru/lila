@@ -75,7 +75,7 @@
   <string name="fromMyGames">મારી રમતોમાંથી</string>
   <string name="lookupOfPlayer">એક ખેલાડીની રમતોમાંથી પઝલ જુઓ</string>
   <string name="searchPuzzles">પઝલ શોધો</string>
-  <string name="fromMyGamesNone">તમારા ડેટાબેઝમાં કોઈ પઝલ નથી, પરંતુ Lichess તમને હજી પણ ખૂબ પ્રેમ કરે છે. તમારી પઝલ ઉમેરવાની શક્યતાઓ વધારવા માટે રેપિડ અને ક્લાસિકલ ગેમ્સ રમો!</string>
+  <string name="fromMyGamesNone">તમારા ડેટાબેઝમાં કોઈ પઝલ નથી, પરંતુ Logik તમને હજી પણ ખૂબ પ્રેમ કરે છે. તમારી પઝલ ઉમેરવાની શક્યતાઓ વધારવા માટે રેપિડ અને ક્લાસિકલ ગેમ્સ રમો!</string>
   <plurals name="puzzlesFoundInUserGames">
     <item quantity="one">%2$s દ્વારા રમતોમાં એક પઝલ મળી</item>
     <item quantity="other">%1$s પઝલ %2$s દ્વારા રમતોમાં મળી</item>

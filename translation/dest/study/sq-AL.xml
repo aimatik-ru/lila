@@ -164,7 +164,7 @@
   <string name="youCompletedThisLesson">Përgëzime! E mbaruat këtë mësim.</string>
   <string name="perPage">%s për faqe</string>
   <string name="getTheTour">Ju duhet ndihmë? Bëni turin!</string>
-  <string name="welcomeToLichessStudyTitle">Mirë se vini te Ushtrim në Lichess!</string>
+  <string name="welcomeToLichessStudyTitle">Mirë se vini te Ushtrim në Logik!</string>
   <string name="welcomeToLichessStudyText">Kjo është një fushë analize që u tregohet të tjerëve.&lt;br&gt;&lt;br&gt;Përdoreni për të analizuar dhe mbajtur shëni lojërat,&lt;br&gt;për të diskutuar pozicione me shokët,&lt;br&gt;dhe, sigurisht, për mësime shahu!&lt;br&gt;&lt;br&gt;Është një mjet i fuqishëm, le ta kalojmë për pak, për të parë se si funksionon.</string>
   <string name="sharedAndSaveTitle" comment="As in: shared with other members and saved to database">Tregohen dhe ruhen</string>
   <string name="sharedAndSavedText">Anëtarët e tjerë mund të shohin aty për aty lëvizjet tuaja!&lt;br&gt;Plus, gjithçka ruhet përgjithmonë.</string>
@@ -178,7 +178,7 @@
   <string name="annotatePositionTitle">Vini shënim për një pozicion</string>
   <string name="annotatePositionText">Klikoni butonin !? , ose djathtasklikoni mbi listën e lëvizjeve djathtas.&lt;br&gt;Tregohen shenja shënimi dhe ruhen.</string>
   <string name="conclusionTitle">Faleminderit për kohën që harxhoni</string>
-  <string name="conclusionText">&lt;a href=\'/study/mine/hot\'&gt;Ushtrimet tuaja të mëparshme&lt;/a&gt; mund t’i gjeni te faqja e profilit tuaj.&lt;br&gt;Ka edhe një &lt;a href=\'//lichess.org/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way\'&gt;postim blogu rreth ushtrimeve&lt;/a&gt;.&lt;br&gt;Përdoruesit e sprovuar mund të duan të shtypin “?”, që të shohin shkurtore tastiere.&lt;br&gt;Bëfshi qejf!</string>
+  <string name="conclusionText">&lt;a href=\'/study/mine/hot\'&gt;Ushtrimet tuaja të mëparshme&lt;/a&gt; mund t’i gjeni te faqja e profilit tuaj.&lt;br&gt;Ka edhe një &lt;a href=\'/\'&gt;postim blogu rreth ushtrimeve&lt;/a&gt;.&lt;br&gt;Përdoruesit e sprovuar mund të duan të shtypin “?”, që të shohin shkurtore tastiere.&lt;br&gt;Bëfshi qejf!</string>
   <string name="createChapterTitle">Le të krijojmë një kapitull ushtrimi</string>
   <string name="createChapterText">Një ushtrim mund të ketë disa kapituj.&lt;br&gt;Çdo kapitull ka një pemë të vetën lëvizjesh,&lt;br&gt;dhe mund të krijohet në rrugë të ndryshme.</string>
   <string name="fromInitialPositionTitle">Nga pozicioni fillestar</string>

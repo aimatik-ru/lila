@@ -40,7 +40,7 @@ export class LangsCtrl extends PaneCtrl {
       h(
         'a.help.text',
         { attrs: { href: 'https://crowdin.com/project/lichess', 'data-icon': licon.Heart } },
-        'Help translate Lichess',
+        'Help translate',
       ),
     ]);
 

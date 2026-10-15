@@ -6,7 +6,7 @@
   <string name="all">Όλα</string>
   <string name="byMonth">Ανά μήνα</string>
   <string name="byTopic">Ανά θέμα</string>
-  <string name="byLichess">Από το Lichess</string>
+  <string name="byLichess">Από το Logik</string>
   <string name="myFriends">Οι φίλοι μου</string>
   <string name="myLikes">Αγαπημένες αναρτήσεις</string>
   <string name="myBlog">Το ιστολόγιό μου</string>
@@ -17,7 +17,7 @@
     <item quantity="other">%s αναρτήσεις ιστολογίου</item>
   </plurals>
   <string name="continueReadingPost">Συνεχίστε εδώ για να διαβάσετε αυτή την ανάρτηση</string>
-  <string name="lichessBlogPostsFromXYear">Αναρτήσεις στο ιστολόγιο του Lichess το \"%s\"</string>
+  <string name="lichessBlogPostsFromXYear">Αναρτήσεις στο ιστολόγιο του Logik το \"%s\"</string>
   <string name="previousBlogPosts">Προηγούμενες αναρτήσεις</string>
   <string name="xBlog">Ιστολόγιο του χρήστη %s</string>
   <string name="newPost">Νέα ανάρτηση</string>

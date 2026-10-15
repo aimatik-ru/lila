@@ -71,7 +71,7 @@
   <string name="downloadGame">Pobierz partię</string>
   <string name="studyUrl">Link do opracowania</string>
   <string name="currentChapterUrl">URL bieżącego rozdziału</string>
-  <string name="pasteToEmbedChapterInForumOrBlog" comment="youCanPasteThisInTheForumToEmbed&#10;&#10;The thing you are pasting is a link to a study. This will make it appear in the correct section as well.&#10;&#10;Please note this used to say &quot;in the forum to embed&quot;. It was then changed to include &quot;or a Lichess Blog&quot;. A further update was made to say &quot;or your Lichess blog&quot;, since you can only create blog posts as an individual.">Możesz wkleić to na forum lub na blogu Lichess, aby osadzić ten rozdział.</string>
+  <string name="pasteToEmbedChapterInForumOrBlog" comment="youCanPasteThisInTheForumToEmbed&#10;&#10;The thing you are pasting is a link to a study. This will make it appear in the correct section as well.&#10;&#10;Please note this used to say &quot;in the forum to embed&quot;. It was then changed to include &quot;or a Lichess Blog&quot;. A further update was made to say &quot;or your Lichess blog&quot;, since you can only create blog posts as an individual.">Możesz wkleić to na forum lub na blogu Logik, aby osadzić ten rozdział.</string>
   <string name="startAtInitialPosition">Rozpocznij z pozycji początkowej</string>
   <string name="startAtX">Rozpocznij od %s</string>
   <string name="embedInYourWebsite">Udostępnij na swojej stronie lub na blogu</string>
@@ -174,7 +174,7 @@
   <string name="youCompletedThisLesson">Gratulacje! Ukończono tę lekcję.</string>
   <string name="perPage">%s na stronie</string>
   <string name="getTheTour">Potrzebujesz pomocy? Zapoznaj się z przewodnikiem!</string>
-  <string name="welcomeToLichessStudyTitle">Witaj w opracowaniach Lichess!</string>
+  <string name="welcomeToLichessStudyTitle">Witaj w opracowaniach Logik!</string>
   <string name="welcomeToLichessStudyText">To jest wspólna tablica analizy.&lt;br&gt;&lt;br&gt;Używaj jej do analizowania i opisywania partii,&lt;br&gt;omawiania pozycji ze znajomymi, &lt;br&gt; a także oczywiście do lekcji szachów!&lt;br&gt;&lt;br&gt;To potężne narzędzie — poświęćmy więc chwilę, aby zobaczyć, jak działa.</string>
   <string name="sharedAndSaveTitle" comment="As in: shared with other members and saved to database">Udostępnione i zapisane</string>
   <string name="sharedAndSavedText">Inni uczestnicy mogą widzieć Twoje ruchy w czasie rzeczywistym!&lt;br&gt;Co więcej, wszystko jest zapisywane na zawsze.</string>
@@ -188,7 +188,7 @@
   <string name="annotatePositionTitle">Dodaj adnotację do pozycji</string>
   <string name="annotatePositionText">Kliknij przycisk !? lub kliknij prawym przyciskiem myszy na liście ruchów po prawej stronie.&lt;br&gt;Symbole adnotacji są udostepniane i zapisywane.</string>
   <string name="conclusionTitle">Dziękujemy za poświęcony czas</string>
-  <string name="conclusionText">Swoje &lt;a href=\'/study/mine/hot\'&gt;poprzednie opracowania&lt;/a&gt; możesz znaleźć na stronie swojego profilu.&lt;br&gt;Dostępny jest również &lt;a href=\'//lichess.org/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way\'&gt;wpis na blogu o opracowaniach&lt;/a&gt;.&lt;br&gt;Zaawansowani użytkownicy mogą nacisnąć „?”, aby zobaczyć skróty klawiszowe.&lt;br&gt;Miłej zabawy!</string>
+  <string name="conclusionText">Swoje &lt;a href=\'/study/mine/hot\'&gt;poprzednie opracowania&lt;/a&gt; możesz znaleźć na stronie swojego profilu.&lt;br&gt;Dostępny jest również &lt;a href=\'/\'&gt;wpis na blogu o opracowaniach&lt;/a&gt;.&lt;br&gt;Zaawansowani użytkownicy mogą nacisnąć „?”, aby zobaczyć skróty klawiszowe.&lt;br&gt;Miłej zabawy!</string>
   <string name="createChapterTitle">Stwórzmy rozdział opracowania</string>
   <string name="createChapterText">Opracowanie może mieć kilka rozdziałów.&lt;br&gt;Każdy rozdział ma odrębne drzewo posunięć,&lt;br&gt;i może być tworzony na różne sposoby.</string>
   <string name="fromInitialPositionTitle">Z pozycji początkowej</string>
@@ -196,13 +196,13 @@
   <string name="customPositionTitle">Z własnej niestandardowej pozycji</string>
   <string name="customPositionText">Ustaw szachownicę po swojemu.&lt;br&gt;Dobre do eksploracji końcówek.</string>
   <string name="loadGameFromTheWebTitle">Zaimportuj partię z sieci</string>
-  <string name="loadGameFromTheWebText" comment="The special text tags must be retained in exact order, for example &amp;lt;br&amp;gt; must stay exactly as-is. You do not need to add spaces or new lines before or after them.&#10;&#10;Note that &quot;br&quot; in particular means &quot;line break&quot;. In other words, it will start a new line in the final text.">Wklej adres URL partii&lt;br&gt;(na przykład lichess.org/7fHIU0XI), &lt;br&gt;aby załadować posunięcia partii do rozdziału.</string>
+  <string name="loadGameFromTheWebText" comment="The special text tags must be retained in exact order, for example &amp;lt;br&amp;gt; must stay exactly as-is. You do not need to add spaces or new lines before or after them.&#10;&#10;Note that &quot;br&quot; in particular means &quot;line break&quot;. In other words, it will start a new line in the final text.">Wklej adres URL partii&lt;br&gt;(na przykład play.kalugalogic.ru/7fHIU0XI), &lt;br&gt;aby załadować posunięcia partii do rozdziału.</string>
   <string name="fromFenStringTitle">Z zapisu FEN pozycji</string>
   <string name="fromFenStringText">Wklej pozycję w formacie FEN&lt;br&gt;&lt;i&gt;4k3/4rb2/8/7p/8/5Q2/1PP5/1K6 w, &lt;/i&gt;&lt;br&gt;aby rozpocząć rozdział od tej pozycji.</string>
   <string name="fromPgnGameTitle">Z zapisu PGN partii</string>
   <string name="fromPgnGameText">Wklej partię w formacie PGN, &lt;br&gt;aby załadować ruchy, komentarze i warianty do rozdziału.</string>
   <string name="variantsAreSupportedTitle">Opracowania wspierają warianty</string>
-  <string name="variantsAreSupportedText">Tak, możesz studiować crazyhouse&lt;br&gt;i wszystkie inne warianty dostępne na Lichess!</string>
+  <string name="variantsAreSupportedText">Tak, możesz studiować crazyhouse&lt;br&gt;i wszystkie inne warianty dostępne na Logik!</string>
   <string name="chapterConclusionText">Rozdziały są zapisywane na zawsze.&lt;br&gt;Miłej zabawy przy organizowaniu swojej szachowej zawartości!</string>
   <string name="doubleDefeat">Podwójna przegrana</string>
   <string name="blackDefeatWhiteCanNotWin">Przegrana czarnych, ale białe nie mogą wygrać</string>

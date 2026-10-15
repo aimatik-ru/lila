@@ -238,8 +238,8 @@
   <string name="forgotPassword">パスワードを忘れた方はこちら</string>
   <string name="error.weakPassword">このパスワードはありふれすぎていて簡単に破られます。</string>
   <string name="error.namePassword">パスワードはユーザー名と同じにしないでください。</string>
-  <string name="blankedPassword">あなたは別のサイトで同じパスワードを使用し、そのサイトは侵入を受けています。 Lichess アカウントの安全性のため、新しいパスワードを設定してください。ご理解に感謝します。</string>
-  <string name="youAreLeavingLichess">Lichess から移動します</string>
+  <string name="blankedPassword">あなたは別のサイトで同じパスワードを使用し、そのサイトは侵入を受けています。 Logik アカウントの安全性のため、新しいパスワードを設定してください。ご理解に感謝します。</string>
+  <string name="youAreLeavingLichess">Logik から移動します</string>
   <string name="neverTypeYourPassword">別のサイトで同じパスワードを使わないで！</string>
   <string name="proceedToX">%s に移動する</string>
   <string name="passwordSuggestion">他の人が提案したパスワードは使わないように。アカウントが乗っ取られるかもしれません。</string>
@@ -252,7 +252,7 @@
   <string name="emailSent">%s にメールを送信しました。</string>
   <string name="emailCanTakeSomeTime">受信まで少しかかるかもしれません。</string>
   <string name="refreshInboxAfterFiveMinutes">5 分待ってからメール受信箱を更新してください。</string>
-  <string name="checkSpamOrJunkFolder" comment="checkSpamFolder&#10;It = The confirmation email">確認メールが届かない場合は迷惑メールフォルダを確認してください。重要な連絡を見逃さないように、Lichess からのメッセージを必ず「安全」「非スパム」などと指定しておいてください。</string>
+  <string name="checkSpamOrJunkFolder" comment="checkSpamFolder&#10;It = The confirmation email">確認メールが届かない場合は迷惑メールフォルダを確認してください。重要な連絡を見逃さないように、Logik からのメッセージを必ず「安全」「非スパム」などと指定しておいてください。</string>
   <string name="sendEmailForAccountVerification">確認メールが見つからない場合は %s にメールを送信してください。当方でアカウントを確認します。</string>
   <string name="accountConfirmed">ユーザー %s の確認が完了しました。</string>
   <string name="accountCanLogin">すぐに %s としてログインできます。</string>
@@ -338,7 +338,7 @@
   <plurals name="giveNbSeconds">
     <item quantity="other">%s秒を与える</item>
   </plurals>
-  <string name="thisAccountViolatedTos">このアカウントは Lichess の利用規約に違反しました</string>
+  <string name="thisAccountViolatedTos">このアカウントは Logik の利用規約に違反しました</string>
   <string name="openingExplorerAndTablebase">オープニング探索 &amp; テーブルベース</string>
   <string name="takeback">待った</string>
   <string name="proposeATakeback">待ったのお願い</string>
@@ -516,7 +516,7 @@
   <string name="inlineNotation">棋譜を行書き</string>
   <string name="makeAStudy">永久保存や共有には「研究」機能をお使いください。</string>
   <string name="clearLocalData">ローカルデータを消去</string>
-  <string name="previouslyOnLichessTV">過去の Lichess TV 対局</string>
+  <string name="previouslyOnLichessTV">過去の Logik TV 対局</string>
   <string name="onlinePlayers">接続中のプレイヤー</string>
   <string name="activePlayers">総対局数上位</string>
   <string name="bewareTheGameIsRatedButHasNoClock">注意！レイティング対象ですが時間無制限です</string>
@@ -528,11 +528,11 @@
   <string name="autoSwitch">自動切り替え</string>
   <string name="puzzles">タクティクス問題</string>
   <string name="onlineBots">オンラインのボット</string>
-  <string name="aboutBotsOnLichess">Lichess のボットについて</string>
+  <string name="aboutBotsOnLichess">Logik のボットについて</string>
   <string name="featuredBots">注目のボット</string>
   <string name="tryPlayingTheseInnovativeChessEngines">革新的なチェスエンジンと対戦してみよう！　私たちのお気に入りです。</string>
   <string name="communityBots">コミュニティボット</string>
-  <string name="moreChessEnginesCreatedByTheLichessCommunity">Lichess のコミュニティが作成したチェスエンジンです。作成者がホストしているもので、常に接続中とは限りません。</string>
+  <string name="moreChessEnginesCreatedByTheLichessCommunity">Logik のコミュニティが作成したチェスエンジンです。作成者がホストしているもので、常に接続中とは限りません。</string>
   <string name="name">名称</string>
   <string name="description">説明</string>
   <string name="descPrivate">非公開説明文</string>
@@ -662,11 +662,11 @@
   <string name="streamersMenu">配信者</string>
   <string name="mobileApp">モバイルアプリ</string>
   <string name="webmasters">ウェブサイト運営者の方へ</string>
-  <string name="about">Lichess 概要</string>
+  <string name="about">Logik 概要</string>
   <string name="aboutX">%s について</string>
   <string name="xIsAFreeYLibreOpenSourceChessServer">%1$s は無料 (%2$s)・自由・広告なし・オープンソースのチェス サーバです。</string>
   <string name="really">本当に</string>
-  <string name="lichessUpdates">Lichess 更新情報</string>
+  <string name="lichessUpdates">Logik 更新情報</string>
   <string name="contribute">力を貸す</string>
   <string name="changelog">変更ログ</string>
   <string name="termsOfService">利用規約（英文）</string>
@@ -696,7 +696,7 @@
   <string name="extraClockTimeForHost" comment="Appears on: https://lichess.org/simul/new&#10;&#10;Allows a simul host to select extra time for the simul.&#10;&#10;Please note this string used to state &quot;Host extra clock time&quot;, without the word &quot;initial&quot;">ホストのための追加時間：</string>
   <string name="simulAddExtraTimePerPlayer">同時対局の参加者 1 人につき何分の形で自分の持時間を増やせます。</string>
   <string name="simulHostExtraTimePerPlayer">ホスト延長時間（人数比例）</string>
-  <string name="lichessTournaments">Lichess トーナメント</string>
+  <string name="lichessTournaments">Logik トーナメント</string>
   <string name="tournamentFAQ">アリーナ・トーナメントFAQ</string>
   <string name="timeBeforeTournamentStarts">開始までの時間</string>
   <string name="averageCentipawnLoss">平均センチポーン差</string>
@@ -745,9 +745,9 @@
   <string name="verifyYourAddress">%s があなたのメールアドレスであることを確認する</string>
   <string name="weHaveSentYouAnEmailTo">%sにメールを送信しました。リンクをクリックしてパスワードの変更を完了してください。</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">登録するとあなたは %s に従うと同意したことになります。</string>
-  <string name="readAboutOur">Lichess の %s 文書です。</string>
-  <string name="networkLagBetweenYouAndLichess">あなたと Lichess の間のネットワークラグ</string>
-  <string name="timeToProcessAMoveOnLichessServer">Lichess サーバが手を処理する時間</string>
+  <string name="readAboutOur">Logik の %s 文書です。</string>
+  <string name="networkLagBetweenYouAndLichess">あなたと Logik の間のネットワークラグ</string>
+  <string name="timeToProcessAMoveOnLichessServer">Logik サーバが手を処理する時間</string>
   <string name="downloadAnnotated">解説つきダウンロード</string>
   <string name="downloadRaw">棋譜のみダウンロード</string>
   <string name="downloadImported">インポート分のダウンロード</string>
@@ -768,7 +768,7 @@
   <string name="kidMode">キッズモード</string>
   <string name="kidModeIsEnabled">キッズモードが有効です。</string>
   <string name="kidModeExplanation">これは安全対策です。「キッズモード」ではサイト上の会話がすべて無効になります。子供や生徒のアカウントでこのモードを有効にしておけば、彼らを他のユーザーから守ることができます。</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">キッズモードでは Lichess のロゴに %s のアイコンが付き、安全であることを示します。</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">キッズモードでは Logik のロゴに %s のアイコンが付き、安全であることを示します。</string>
   <string name="askYourChessTeacherAboutLiftingKidMode">あなたのアカウントは管理されています。キッズモードの停止は講師に依頼してください。</string>
   <string name="enableKidMode">キッズモードを有効化</string>
   <string name="disableKidMode">キッズモードを無効化</string>
@@ -879,12 +879,12 @@
   <plurals name="andSaveNbPremoveLines">
     <item quantity="other">%s 種のコンディショナルムーブを設定</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Lichess からプライベートメッセージが来ました。</string>
+  <string name="showUnreadLichessMessage">Logik からプライベートメッセージが来ました。</string>
   <string name="readTheMessage" comment="'It' refers to a private message. This text follows after a different string which advises players they have received a private message from Lichess. For users, this is appears as a regular private message from the Lichess account: https://lichess.org/@/Lichess">メッセージを読む</string>
   <string name="sorry">残念です :(</string>
   <string name="weHadToTimeYouOutForAWhile">しばらく対局を禁止します。</string>
   <string name="why">どうして？</string>
-  <string name="pleasantChessExperience">Lichess ではすべての人に楽しいチェス体験を提供しています。</string>
+  <string name="pleasantChessExperience">Logik ではすべての人に楽しいチェス体験を提供しています。</string>
   <string name="goodPractice">そのためには、すべての人にマナーを守っていただく必要があります。</string>
   <string name="potentialProblem">問題があった場合、このメッセージ画面が表示されます。</string>
   <string name="howToAvoidThis">どうすればいいの？</string>
@@ -892,7 +892,7 @@
   <string name="tryToWin">すべてのゲームで勝ち（またはドロー）を目指す</string>
   <string name="resignLostGames">敗勢なら投了する（時間切れまで放置しない）</string>
   <string name="temporaryInconvenience">しばらくご不便をおかけしますが</string>
-  <string name="wishYouGreatGames">今後も Lichess ですばらしいゲームを楽しまれるよう願っています。</string>
+  <string name="wishYouGreatGames">今後も Logik ですばらしいゲームを楽しまれるよう願っています。</string>
   <string name="thankYouForReading">熟読ありがとう！</string>
   <string name="lifetimeScore">通算成績</string>
   <string name="currentMatchScore">現在のスコア</string>
@@ -993,13 +993,13 @@
   <string name="youCantStartNewGame">自分の手番の間は別の対局は開始できません。</string>
   <string name="since">開始</string>
   <string name="until">終了</string>
-  <string name="lichessDbExplanation">Lichess 全プレイヤーのレート戦が対象</string>
+  <string name="lichessDbExplanation">Logik 全プレイヤーのレート戦が対象</string>
   <string name="switchSides">色変更</string>
   <string name="closingAccountWithdrawAppeal">アカウントを閉鎖すると異議申立ても取り下げになります</string>
   <string name="ourEventTips">チェスイベント開催のアドバイス</string>
   <string name="instructions">使用法</string>
   <string name="showMeEverything">すべてを表示</string>
-  <string name="lichessPatronInfo">Lichess は非営利組織であり、完全に無料/自由なオープンソースソフトウェアです。
+  <string name="lichessPatronInfo">Logik は非営利組織であり、完全に無料/自由なオープンソースソフトウェアです。
 運営費、開発、コンテンツを支えているのはすべてユーザーの寄付です。</string>
   <string name="nothingToSeeHere">今は何もありません。</string>
   <string name="stats">統計</string>

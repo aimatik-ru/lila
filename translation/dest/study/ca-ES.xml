@@ -65,7 +65,7 @@
   <string name="downloadGame">Descarrega partida</string>
   <string name="studyUrl">URL de l’estudi</string>
   <string name="currentChapterUrl">URL del capítol actual</string>
-  <string name="pasteToEmbedChapterInForumOrBlog" comment="youCanPasteThisInTheForumToEmbed&#10;&#10;The thing you are pasting is a link to a study. This will make it appear in the correct section as well.&#10;&#10;Please note this used to say &quot;in the forum to embed&quot;. It was then changed to include &quot;or a Lichess Blog&quot;. A further update was made to say &quot;or your Lichess blog&quot;, since you can only create blog posts as an individual.">Pots enganxar això en el fòrum o el teu blog de Lichess per incrustar-ne el capítol.</string>
+  <string name="pasteToEmbedChapterInForumOrBlog" comment="youCanPasteThisInTheForumToEmbed&#10;&#10;The thing you are pasting is a link to a study. This will make it appear in the correct section as well.&#10;&#10;Please note this used to say &quot;in the forum to embed&quot;. It was then changed to include &quot;or a Lichess Blog&quot;. A further update was made to say &quot;or your Lichess blog&quot;, since you can only create blog posts as an individual.">Pots enganxar això en el fòrum o el teu blog de Logik per incrustar-ne el capítol.</string>
   <string name="startAtInitialPosition">Comnçar a la posició inicial</string>
   <string name="startAtX">Començar a %s</string>
   <string name="embedInYourWebsite">Inserta en la teva web o blog</string>
@@ -166,7 +166,7 @@
   <string name="youCompletedThisLesson">Enhorabona, heu completat aquesta lliçó.</string>
   <string name="perPage">%s per pàgina</string>
   <string name="getTheTour">Necessites ajuda? Segueix el gira!</string>
-  <string name="welcomeToLichessStudyTitle">Benvingut/da als estudis de Lichess!</string>
+  <string name="welcomeToLichessStudyTitle">Benvingut/da als estudis de Logik!</string>
   <string name="welcomeToLichessStudyText">Això és un tauler d\'anàlisis compartit.&lt;br&gt;&lt;br&gt;Utilitzal per analitzar i anotar partides,&lt;br&gt;discutir posicions amb els amics,&lt;br&gt; i per descomptat per lliçons d\'escacs!&lt;br&gt;&lt;br&gt;És una eina molt poderosa, anem a veure com funciona.</string>
   <string name="sharedAndSaveTitle" comment="As in: shared with other members and saved to database">Compartit i guardat</string>
   <string name="sharedAndSavedText">Els altres membres poden veure els teus moviments en temps real!&lt;br&gt;A més a més, tot es guarda per sempre.</string>
@@ -180,7 +180,7 @@
   <string name="annotatePositionTitle">Anotar una posició</string>
   <string name="annotatePositionText">Prem el botó !?, o fes clic dret a la llista de moviments de la dreta.&lt;br&gt;Les icones d\'anotacions es comparteixen i es guarden.</string>
   <string name="conclusionTitle">Gràcies pel teu temps</string>
-  <string name="conclusionText">Podeu trobar els vostres &lt;a href=\'/study/mine/hot\'&gt;estudis anteriors&lt;/a&gt; dins del vostre perfil.&lt;br&gt;Tambe podeu trobar &lt;a href=\'//lichess.org/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way\'&gt;una entrada del blog sobre els estudis&lt;/a&gt;.&lt;br&gt;Els usaris avançats poden premer la tecla \"?\" per veure les dreceres del teclat.&lt;br&gt;Disfruteu!</string>
+  <string name="conclusionText">Podeu trobar els vostres &lt;a href=\'/study/mine/hot\'&gt;estudis anteriors&lt;/a&gt; dins del vostre perfil.&lt;br&gt;Tambe podeu trobar &lt;a href=\'/\'&gt;una entrada del blog sobre els estudis&lt;/a&gt;.&lt;br&gt;Els usaris avançats poden premer la tecla \"?\" per veure les dreceres del teclat.&lt;br&gt;Disfruteu!</string>
   <string name="createChapterTitle">Creem un capítol de l\'estudi</string>
   <string name="createChapterText">Un estudi pot tenir diferents capítols.&lt;br&gt;Cada capítol té un arbre de moviments diferent,&lt;br&gt;i es pot crear de formes diferents.</string>
   <string name="fromInitialPositionTitle">A partir de la posició inicial</string>
@@ -188,13 +188,13 @@
   <string name="customPositionTitle">Posició personalitzada</string>
   <string name="customPositionText">Munta el tauler a la teva manera.&lt;br&gt; Preparat per estudiar finals.</string>
   <string name="loadGameFromTheWebTitle">Carregar una partida des de la web</string>
-  <string name="loadGameFromTheWebText" comment="The special text tags must be retained in exact order, for example &amp;lt;br&amp;gt; must stay exactly as-is. You do not need to add spaces or new lines before or after them.&#10;&#10;Note that &quot;br&quot; in particular means &quot;line break&quot;. In other words, it will start a new line in the final text.">Enganxa l\'URL d\'una partida &lt;br&gt;(per exemple lichess.org/7fHIU0XI)&lt;br&gt;per carregar els moviments de la partida al capítol.</string>
+  <string name="loadGameFromTheWebText" comment="The special text tags must be retained in exact order, for example &amp;lt;br&amp;gt; must stay exactly as-is. You do not need to add spaces or new lines before or after them.&#10;&#10;Note that &quot;br&quot; in particular means &quot;line break&quot;. In other words, it will start a new line in the final text.">Enganxa l\'URL d\'una partida &lt;br&gt;(per exemple play.kalugalogic.ru/7fHIU0XI)&lt;br&gt;per carregar els moviments de la partida al capítol.</string>
   <string name="fromFenStringTitle">A partir d\'una cadena FEN</string>
   <string name="fromFenStringText">Enganxa una posició en format FEN &lt;br&gt;&lt;i&gt;4k3/4rb2/8/7p/8/5Q2/1PP5/1K6 w&lt;/i&gt;&lt;br&gt;per començar el capítol en una posició.</string>
   <string name="fromPgnGameTitle">A partir d\'una partida en PGN</string>
   <string name="fromPgnGameText">Enganxa una partida en format PGN &lt;br&gt;per carregar moviments, comentaris i variacions al capítol.</string>
   <string name="variantsAreSupportedTitle">Els estudis també suporten variants</string>
-  <string name="variantsAreSupportedText">Sí, podeu estudiar crazyhouse &lt;br&gt; i totes les variants de Lichess!</string>
+  <string name="variantsAreSupportedText">Sí, podeu estudiar crazyhouse &lt;br&gt; i totes les variants de Logik!</string>
   <string name="chapterConclusionText">Els capítols es guarden per sempre.&lt;br&gt;Passa-t\'ho bé organitzant el teu material d\'escacs!</string>
   <string name="doubleDefeat">Doble derrota</string>
   <string name="blackDefeatWhiteCanNotWin">El negre ha perdut però el blanc no pot guanyar</string>

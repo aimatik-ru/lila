@@ -240,8 +240,8 @@ jo musi pi awen ala</string>
   <string name="error.weakPassword">sina nimi awen wawa lili.</string>
   <string name="error.namePassword">o kepeken ala e nimi tawa nimi awen a.</string>
   <string name="blankedPassword">sina kepeken e nimi awen sama lon lipu ante. awen la, lipu ante ni li pakala. o anu e nimi awen ante.</string>
-  <string name="youAreLeavingLichess">sina tawa tan lipu Lichess</string>
-  <string name="neverTypeYourPassword">o sitelen ala e nimi awen sina pi ilo Lichess tawa lipu ante!</string>
+  <string name="youAreLeavingLichess">sina tawa tan lipu Logik</string>
+  <string name="neverTypeYourPassword">o sitelen ala e nimi awen sina pi ilo Logik tawa lipu ante!</string>
   <string name="proceedToX">o tawa lipu %s</string>
   <string name="passwordSuggestion">jan ante li pana e nimi awen tawa sina, la o kepeken ala e nimi awen ni. ante la, ona li lanpan e lipu jan sina.</string>
   <string name="emailSuggestion">o kepeken ala poki lipu pi jan ante tawa lipu musi sina. jan ante ni li ken kama lawa ike e lipu sina.</string>
@@ -253,7 +253,7 @@ jo musi pi awen ala</string>
   <string name="emailSent">mi mute li pini pana e lipu toki tawa %s.</string>
   <string name="emailCanTakeSomeTime">lipu toki li kepeken tenpo tawa kama la sina o awen.</string>
   <string name="refreshInboxAfterFiveMinutes">o awen lon tenpo Minuta kama 5. pini la o open sin e poki sina pi lipu toki.</string>
-  <string name="checkSpamOrJunkFolder" comment="checkSpamFolder&#10;It = The confirmation email">sina jo ala e lipu pi jan sina, la o lukin e toki mute ike anu jaki pi ma ona. o sitelen e ni. lipu pi lipu Lichess.org li pona li toki mute ike ala, la sina ken sona e ale tawa toki suli.</string>
+  <string name="checkSpamOrJunkFolder" comment="checkSpamFolder&#10;It = The confirmation email">sina jo ala e lipu pi jan sina, la o lukin e toki mute ike anu jaki pi ma ona. o sitelen e ni. lipu pi lipu Logik.org li pona li toki mute ike ala, la sina ken sona e ale tawa toki suli.</string>
   <string name="sendEmailForAccountVerification">sina lukin ala a e lipu mi la o pana e lipu tawa poki %s. ni la mi ken e sina.</string>
   <string name="accountConfirmed">jan %s li lon</string>
   <string name="accountCanLogin">sina ken kama lon lipu sina kepeken nimi %s.</string>
@@ -345,7 +345,7 @@ jo musi pi awen ala</string>
     <item quantity="one">o pana e tenpo Sekunta %s</item>
     <item quantity="other">o pana e tenpo Sekunta %s</item>
   </plurals>
-  <string name="thisAccountViolatedTos">jan pi lipu jan ni li pali e ijo ni: ona li ike tawa nasin lawa pi kulupu Lichess</string>
+  <string name="thisAccountViolatedTos">jan pi lipu jan ni li pali e ijo ni: ona li ike tawa nasin lawa pi kulupu Logik</string>
   <string name="openingExplorerAndTablebase">lipu sona pi open musi en pini musi</string>
   <string name="takeback">kama jo sin</string>
   <string name="proposeATakeback">o toki e kama jo sin</string>
@@ -666,7 +666,7 @@ o musi lon lipu pona. sina wile ala pana e nimi li wile ala e ilo. sitelen esun 
   <string name="videoLibrary">tomo pi sitelen tawa</string>
   <string name="streamersMenu">jan ni li pali e sitelen tawa pi musi ona</string>
   <string name="mobileApp">pi ilo toki</string>
-  <string name="webmasters">jan ni li pali e lipu kon pi ilo Lichess</string>
+  <string name="webmasters">jan ni li pali e lipu kon pi ilo Logik</string>
   <string name="about">o kama sona e</string>
   <string name="aboutX">%s li seme?</string>
   <string name="xIsAFreeYLibreOpenSourceChessServer">musi %1$s li esun ala (%2$s), li pona, li sitelen esun ala, li ilo pana pi lipu sona pi tan open</string>
@@ -694,7 +694,7 @@ o musi lon lipu pona. sina wile ala pana e nimi li wile ala e ilo. sitelen esun 
   <string name="simulClockHint">nasin tenpo pi jan Bobby Fischer. mute pi jan musi ante li suli, tenpo pi tawa sina li suli.</string>
   <string name="simulAddExtraTime">musi mute pi tenpo sama li pali kiwen tawa sina la, sina ken suli e tenpo tawa.</string>
   <string name="simulHostExtraTimePerPlayer">jan utala li kama la jan lawa li kama jo e tenpo ni</string>
-  <string name="lichessTournaments">utala musi pi ilo Lichess</string>
+  <string name="lichessTournaments">utala musi pi ilo Logik</string>
   <string name="tournamentFAQ">wile sona pi jan mute pi utala musi</string>
   <string name="timeBeforeTournamentStarts">tenpo open pi utala musi li kama lon</string>
   <string name="averageCentipawnLoss">nanpa insa CPL</string>
@@ -736,8 +736,8 @@ o musi lon lipu pona. sina wile ala pana e nimi li wile ala e ilo. sitelen esun 
   <string name="weHaveSentYouAnEmailTo">mi pana e lipu tawa poki %s. o lukin e ona. nimi nasin li lon ona. sina ken ante e nimi awen sina kepeken ona.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">sina open e lipu sina la, sina toki e ni: nasin \"%s\" li pona tawa mi.</string>
   <string name="readAboutOur">o lukin e lipu \"%s\".</string>
-  <string name="networkLagBetweenYouAndLichess">ilo sina li toki tawa ilo Lichess lon tenpo ni.</string>
-  <string name="timeToProcessAMoveOnLichessServer">ilo Lichess li pali e tawa lon tenpo ni.</string>
+  <string name="networkLagBetweenYouAndLichess">ilo sina li toki tawa ilo Logik lon tenpo ni.</string>
+  <string name="timeToProcessAMoveOnLichessServer">ilo Logik li pali e tawa lon tenpo ni.</string>
   <string name="downloadAnnotated">o awen e ante pi sitelen sin pi lipu ni</string>
   <string name="downloadRaw">o awen e lipu ni (ante ala)</string>
   <string name="downloadImported">o awen e ante tan pi lipu ni</string>
@@ -755,8 +755,8 @@ o musi lon lipu pona. sina wile ala pana e nimi li wile ala e ilo. sitelen esun 
   <string name="withEverybody">tawa jan ale</string>
   <string name="kidMode">nasin pi jan lili</string>
   <string name="kidModeIsEnabled">nasin pi jan lili li lon</string>
-  <string name="kidModeExplanation">nasin pi jan lili li awen e jan musi. jan li ken ala toki lon nasin ni. jan lili li musi kepeken ilo Lichess la, nasin pi jan lili li pali e ni: ona li ken ala lukin e toki ike tan jan ante.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">nasin pi jan lili li lon, sitelen lawa pi ilo Lichess li kama jo e sitelen \"%s\". ona li toki e ni: nasin pi jan lili li lon, jan lili sina li awen.</string>
+  <string name="kidModeExplanation">nasin pi jan lili li awen e jan musi. jan li ken ala toki lon nasin ni. jan lili li musi kepeken ilo Logik la, nasin pi jan lili li pali e ni: ona li ken ala lukin e toki ike tan jan ante.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">nasin pi jan lili li lon, sitelen lawa pi ilo Logik li kama jo e sitelen \"%s\". ona li toki e ni: nasin pi jan lili li lon, jan lili sina li awen.</string>
   <string name="askYourChessTeacherAboutLiftingKidMode">linluwi awen li lawa. o toki seme tawa jan pi pana sona sina e ni. ona li weka e jan lili pi nasin.</string>
   <string name="enableKidMode">o kepeken e nasin pi jan lili</string>
   <string name="disableKidMode">o kepeken ala e nasin pi jan lili</string>
@@ -867,7 +867,7 @@ sina wile e ni la, o pali e tawa ken pi jan musi tu.</string>
     <item quantity="one">sina pali e ni la, tawa %s pi tenpo kama ken li awen</item>
     <item quantity="other">sina pali e ni la, tawa %s pi tenpo kama ken li awen</item>
   </plurals>
-  <string name="showUnreadLichessMessage">jan Lichess li toki len tawa sina</string>
+  <string name="showUnreadLichessMessage">jan Logik li toki len tawa sina</string>
   <string name="sorry">pakala a :(</string>
   <string name="weHadToTimeYouOutForAWhile">sina wile awen lon tenpo lili.</string>
   <string name="why">tan seme?</string>
@@ -879,7 +879,7 @@ sina wile e ni la, o pali e tawa ken pi jan musi tu.</string>
   <string name="tryToWin">o wile e ni: mi wile pini pona (anu pini pi anpa ala) e musi.</string>
   <string name="resignLostGames">musi li pini ike, o toki \"mi anpa\" (kepeken nena).</string>
   <string name="temporaryInconvenience">mi pilin ike tan ni,</string>
-  <string name="wishYouGreatGames">mi wile e ni: musi sina pi ilo Lichess li pona.</string>
+  <string name="wishYouGreatGames">mi wile e ni: musi sina pi ilo Logik li pona.</string>
   <string name="thankYouForReading">sina lukin ale e lipu ni la, sina pona!</string>
   <string name="lifetimeScore">nanpa pona pi musi ale</string>
   <string name="currentMatchScore">nanpa pona pi kulupu musi ni</string>
@@ -904,7 +904,7 @@ sina wile e ni la, o pali e tawa ken pi jan musi tu.</string>
   <string name="inTheFAQ">lon lipu \"wile sona pi jan mute\"</string>
   <string name="toReportSomeoneForCheatingOrBadBehavior">jan li pali ike, li kepeken e ilo ike la, %1$s</string>
   <string name="useTheReportForm">o toki kepeken lipu ni</string>
-  <string name="toRequestSupport">sina wile toki tawa mi mute pi ilo Lichess la, %1$s</string>
+  <string name="toRequestSupport">sina wile toki tawa mi mute pi ilo Logik la, %1$s</string>
   <string name="tryTheContactPage">o toki kepeken lipu \"toki tawa mi mute\"</string>
   <string name="makeSureToRead">o lukin e %1$s</string>
   <string name="theForumEtiquette">nasin pi ma toki</string>
@@ -923,7 +923,7 @@ sina wile e ni la, o pali e tawa ken pi jan musi tu.</string>
   <string name="congratsYouWon">sina anpa e jan musi ante!</string>
   <string name="gameVsX">musi pi jan %1$s</string>
   <string name="resVsX">jan %1$s en jan %2$s</string>
-  <string name="lostAgainstTOSViolator">sina kama anpa. taso, jan musi ante li pali ike tawa nasin pi ilo Lichess.</string>
+  <string name="lostAgainstTOSViolator">sina kama anpa. taso, jan musi ante li pali ike tawa nasin pi ilo Logik.</string>
   <string name="refundXpointsTimeControlY">sina kama jo monsi e nanpa wawa %1$s pi nasin musi %2$s.</string>
   <string name="timeAlmostUp">tenpo lili li lon a!</string>
   <string name="clickToRevealEmailAddress">[pilin la sina ken lukin e ma pi lipu kon]</string>
@@ -974,11 +974,11 @@ sina wile kepeken e nasin ijo pi ante ala, o sitelen ala.</string>
   <string name="resignTheGame">o pini e musi ni (pini ike)</string>
   <string name="since">poki open tenpo</string>
   <string name="until">poki pini tenpo</string>
-  <string name="lichessDbExplanation">musi ale pi nanpa wawa tan jan musi ale pi ilo \"Lichess\"</string>
+  <string name="lichessDbExplanation">musi ale pi nanpa wawa tan jan musi ale pi ilo \"Logik\"</string>
   <string name="switchSides">o lukin tan poka ante</string>
   <string name="instructions">nasin</string>
   <string name="showMeEverything">lukin e ala</string>
-  <string name="lichessPatronInfo">ilo Lichess li mani ala li pona. ale li ken lukin e lipu ilo pi ilo Lichess li ken ante e ilo Lichess.
+  <string name="lichessPatronInfo">ilo Logik li mani ala li pona. ale li ken lukin e lipu ilo pi ilo Logik li ken ante e ilo Logik.
 ona li wile e mani la jan li wile pana e mani tawa ona.</string>
   <string name="nothingToSeeHere">tenpo ni la ijo ala li lon.</string>
   <string name="stats">nanpa</string>

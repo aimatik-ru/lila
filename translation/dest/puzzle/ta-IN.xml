@@ -74,7 +74,7 @@
   <string name="fromMyGames">எனது விளையாட்டுக்களிலிருந்து</string>
   <string name="lookupOfPlayer">வீரர்களின் விளையாட்டுகளிலிருந்து புதிர்களைத் தேடுங்கள்</string>
   <string name="searchPuzzles">புதிர்களைத் தேட</string>
-  <string name="fromMyGamesNone">தரவுத்தளத்தில் உங்களுக்குரிய புதிர்கள் ஏதுமில்லை, ஆனாலும் Lichess உங்களை மிகவும் விரும்புகின்றது!
+  <string name="fromMyGamesNone">தரவுத்தளத்தில் உங்களுக்குரிய புதிர்கள் ஏதுமில்லை, ஆனாலும் Logik உங்களை மிகவும் விரும்புகின்றது!
 
 உங்கள் புதிர் சேர்க்கப்படுவதற்கான வாய்ப்புகளை அதிகரிக்க துரிதம் மற்றும் செவ்வியல் ஆட்டங்களை விளையாடுங்கள்!</string>
   <plurals name="puzzlesFoundInUserGames">

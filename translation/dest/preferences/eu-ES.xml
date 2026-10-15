@@ -64,7 +64,7 @@
   <string name="notifyTournamentStartReminders" comment="notifyTournamentSoon&#10;&#10;A notification setting - notifies players if a tournament is starting soon.">Txapelketa hasieren gogorarazpenak</string>
   <string name="notifyBroadcasts">Zuzenekoak</string>
   <string name="notifyTimeAlarm">Posta bidezko partidaren denbora amaitzen ari da</string>
-  <string name="notifyBell">Kanpai bidezko jakinarazpena Lichess barruan</string>
+  <string name="notifyBell">Kanpai bidezko jakinarazpena Logik barruan</string>
   <string name="notifyPush">Gailuko jakinarazpena Lichessen ez zaudenean</string>
   <string name="notifyWeb">Nabigatzailea</string>
   <string name="notifyDevice">Gailua</string>

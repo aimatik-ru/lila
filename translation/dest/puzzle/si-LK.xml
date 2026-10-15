@@ -72,7 +72,7 @@
   <string name="fromMyGames">මගේ ක්‍රීඩා වලින්</string>
   <string name="lookupOfPlayer">ක්‍රීඩකයෙකුගේ ක්‍රීඩා වලින් ප්‍රහේලිකා සොයන්න</string>
   <string name="searchPuzzles">ප්‍රහේලිකා සොයන්න​</string>
-  <string name="fromMyGamesNone">ඔබට දත්ත ගබඩාවේ ප්‍රහේලිකා නොමැත, නමුත් Lichess තවමත් ඔබට බෙහෙවින් ආදරය කරයි.
+  <string name="fromMyGamesNone">ඔබට දත්ත ගබඩාවේ ප්‍රහේලිකා නොමැත, නමුත් Logik තවමත් ඔබට බෙහෙවින් ආදරය කරයි.
 
 ඔබේ ප්‍රහේලිකාව එකතු කර ගැනීමේ අවස්ථාව වැඩි කිරීමට Rapid සහ Classical ක්‍රීඩා කරන්න!</string>
   <string name="puzzleDashboardDescription">පුහුණුවෙන්න, විශ්ලේෂණය කරන්න, වැඩි දියුණු වෙන්න</string>

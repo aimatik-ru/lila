@@ -266,7 +266,7 @@
   <string name="editProfile">Профӗлне тӳрлетни</string>
   <string name="biography">Биографи</string>
   <string name="thankYou">Тавах!</string>
-  <string name="previouslyOnLichessTV">Lichess TV паҫӑр кӑтартни</string>
+  <string name="previouslyOnLichessTV">Logik TV паҫӑр кӑтартни</string>
   <string name="onlinePlayers">Тетелти вӑйӑҫӑ</string>
   <string name="activePlayers">Тимлӗ вӑйӑҫӑ</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Асту, ку хаклавшӑн вӑййи сехетсӗр!</string>
@@ -378,7 +378,7 @@
   <string name="aboutSimulImage">50 ӑмӑртуҫран, Фишӗр 47 ҫӗнтернӗ, 2 парма-пар выльанӑ, 1 выльаса йанӑ.</string>
   <string name="aboutSimulSettings">Пӗр вӑхӑтри вӑйӑ йаланах ахаль вӑйӑ. Рематч выльама, тавӑрма тата \"ытлаши вӑхӑт\" илме ҫук.</string>
   <string name="create">Йӗркелес</string>
-  <string name="lichessTournaments">Lichess турнирӗсем</string>
+  <string name="lichessTournaments">Logik турнирӗсем</string>
   <string name="tournamentFAQ">Аренӑ турнирӗн ТЛЫӗ</string>
   <string name="timeBeforeTournamentStarts">Турнир пуҫланиччен хушши</string>
   <string name="averageCentipawnLoss">Вӑтам сантисалтак ҫухатӑвӗ</string>
@@ -401,8 +401,8 @@
   <string name="ifYouDoNotSeeTheEmailCheckOtherPlaces">Ҫырӑвӗ курӑнмасть пулсан, вӑл пурри-ҫуккине спам папкинче йе ытти папкӑра тӗрӗсле.</string>
   <string name="weHaveSentYouAnEmailTo">Епир %s ҫине ҫыру йатӑмӑр. Вӑрттӑн сӑмахна улӑштарас тесе ҫырури каҫӑ ҫине пус.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Регистратсилесси пирӗн %s килӗшессине пӗлтерет.</string>
-  <string name="networkLagBetweenYouAndLichess">Санпа Lichess хушшинче тетел чӑрмантарса тӑни пур</string>
-  <string name="timeToProcessAMoveOnLichessServer">Lichess сервӗрӗ пӗр куҫӑм ӗҫлесе илмелли вӑхӑт</string>
+  <string name="networkLagBetweenYouAndLichess">Санпа Logik хушшинче тетел чӑрмантарса тӑни пур</string>
+  <string name="timeToProcessAMoveOnLichessServer">Logik сервӗрӗ пӗр куҫӑм ӗҫлесе илмелли вӑхӑт</string>
   <string name="downloadAnnotated">Ӑнлантаруллă</string>
   <string name="downloadRaw">Ӑнлантарусӑр</string>
   <string name="downloadImported">Оригиналлӑ</string>

@@ -530,7 +530,7 @@
   <string name="oneUrlPerLine">Serê rêzikê yek URL.</string>
   <string name="inlineNotation">Notasyona navrêzî</string>
   <string name="makeAStudy">Ji bo parastin û parvekirinê, çêkirina xebatekê li be çav bigire.</string>
-  <string name="previouslyOnLichessTV">Berê ser Lichess TVyê</string>
+  <string name="previouslyOnLichessTV">Berê ser Logik TVyê</string>
   <string name="onlinePlayers">Lîzerên serhêl</string>
   <string name="activePlayers">Lîzerên aktîv</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Baldar be, lîstik bi reytîng e lê sînorek wextê tine!</string>
@@ -876,7 +876,7 @@
     <item quantity="one">û %s rêza pêşhemleyê muhafeze bike</item>
     <item quantity="other">û %s rêzên pêşhemleyê muhafeze bike</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Peyameke taybet ji Lichess ê ji te re hat.</string>
+  <string name="showUnreadLichessMessage">Peyameke taybet ji Logik ê ji te re hat.</string>
   <string name="sorry">Bibore :(</string>
   <string name="weHadToTimeYouOutForAWhile">Em ji bo demekê te bi dûr xistin.</string>
   <string name="why">Çima?</string>
@@ -888,7 +888,7 @@
   <string name="tryToWin">Biceribîne ku bi ser bikevî (an jî qenebe wekheviyê bi dest bixe) di her lîstikê ku tu lîstî de.</string>
   <string name="resignLostGames">Ji lîstikên ku tu mexlûb bûyî vekişe (nehêle ku dema te tijî bibe).</string>
   <string name="temporaryInconvenience">Em lêborîna xwe dixwazin ji ber aciziya demkî,</string>
-  <string name="wishYouGreatGames">û em lîstikêm xweş hêvî dikin ji bo te li ser lichess.org-ê.</string>
+  <string name="wishYouGreatGames">û em lîstikêm xweş hêvî dikin ji bo te li ser play.kalugalogic.ru-ê.</string>
   <string name="thankYouForReading">Spas ji bo xwendinê!</string>
   <string name="lifetimeScore">Yekûna skorê</string>
   <string name="currentMatchScore">Skora lîstika berdest</string>
@@ -985,13 +985,13 @@ Ji bo destpêkirina lîstikan ji pozîsyona normal ya destpêkê, vala bihêle.<
   <string name="resignTheGame">Dest ji lîstikê bikêşe</string>
   <string name="since">Ji dema</string>
   <string name="until">Heta</string>
-  <string name="lichessDbExplanation">Lîstikên bipuan hatîn lîstin li ser Lichess ê</string>
+  <string name="lichessDbExplanation">Lîstikên bipuan hatîn lîstin li ser Logik ê</string>
   <string name="switchSides">Rûyê lîstikê biguhere</string>
   <string name="closingAccountWithdrawAppeal">Girtina hesaba te wê bibe sedema pûçkirina gazina te</string>
   <string name="ourEventTips">Rênîşanderên me ji bo rêkxistina çalakiyan</string>
   <string name="instructions">Rênima</string>
   <string name="showMeEverything">Her tiştî nîanî min bide</string>
-  <string name="lichessPatronInfo">Lichess saziyeke xêrxwaziyê ye û bi tevahî nermalaveke çavkanî-vekirî ya azad û bêpere ye. Em pişta xwe bi bexşên bikarhêneran ve girêdidin ji bo dabînkirina xerviyên birêvebirinê, geşepêdanê û naverokê. Bêyî civaka me ya dilvekirî, me nedikarî vê malperê berdewam bikin. Spas ji bo tevlêbûna we!  </string>
+  <string name="lichessPatronInfo">Logik saziyeke xêrxwaziyê ye û bi tevahî nermalaveke çavkanî-vekirî ya azad û bêpere ye. Em pişta xwe bi bexşên bikarhêneran ve girêdidin ji bo dabînkirina xerviyên birêvebirinê, geşepêdanê û naverokê. Bêyî civaka me ya dilvekirî, me nedikarî vê malperê berdewam bikin. Spas ji bo tevlêbûna we!  </string>
   <string name="nothingToSeeHere">Vê gavê tiştek ji bo dîtinê tu ne.</string>
   <string name="stats">Amar</string>
   <string name="accessibility">Hêsaniya gihîştinê</string>

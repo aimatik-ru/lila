@@ -7,7 +7,7 @@
   <string name="trackStudentProgress">விளையாட்டுகள் மற்றும் புதிர்களில் மாணவர் முன்னேற்றத்தைக் கண்காணிக்கவும்</string>
   <string name="messageAllStudents">வகுப்பில் புதிதாகச் சேர்க்கப்பட்டதை அனைத்து மாணவர்களுக்கும் அறிவிக்கவும்</string>
   <string name="freeForAllForever">அனைவருக்கும், என்றென்றும் 100% சுதந்திரமாக, விளம்பரமோ பின்தொடர்தல்களோ இல்லாமல்</string>
-  <string name="applyToBeLichessTeacher">Lichess ஆசிரியராக விண்ணப்பியுங்கள்</string>
+  <string name="applyToBeLichessTeacher">Logik ஆசிரியராக விண்ணப்பியுங்கள்</string>
   <string name="noClassesYet">இன்னும் வகுப்புகள் இல்லை.</string>
   <string name="teachersX">ஆசிரியர்: %s</string>
   <string name="newClass">புதிய வகுப்பு</string>
@@ -32,22 +32,22 @@
   <string name="realName">உண்மையான பெயர்</string>
   <string name="privateWillNeverBeShown">தனியார். வகுப்பிற்கு வெளியே காட்டப்படாது. மாணவர் யார் என்பதை நினைவில் கொள்ள உதவுகிறது.</string>
   <string name="addStudent">மாணவரைச் சேர்</string>
-  <string name="lichessProfileXCreatedForY">Lichess சுயவிவரம் %1$s %2$sக்காக உருவாக்கப்பட்டது.</string>
+  <string name="lichessProfileXCreatedForY">Logik சுயவிவரம் %1$s %2$sக்காக உருவாக்கப்பட்டது.</string>
   <string name="studentCredentials">மாணவர்: %1$s
 பயனர் பெயர்: %2$s
 கடவுச்சொல்: %3$s</string>
-  <string name="inviteALichessAccount">Lichess கணக்கை அழைக்கவும்</string>
-  <string name="inviteDesc1">மாணவர் ஏற்கனவே Lichess கணக்கு வைத்திருந்தால், நீங்கள் அவர்களை வகுப்பிற்கு அழைக்கலாம்.</string>
-  <string name="inviteDesc2">வகுப்பில் சேர்வதற்கான இணைப்புடன் Lichess இல் ஒரு தூது பெறுவார்கள்.</string>
+  <string name="inviteALichessAccount">Logik கணக்கை அழைக்கவும்</string>
+  <string name="inviteDesc1">மாணவர் ஏற்கனவே Logik கணக்கு வைத்திருந்தால், நீங்கள் அவர்களை வகுப்பிற்கு அழைக்கலாம்.</string>
+  <string name="inviteDesc2">வகுப்பில் சேர்வதற்கான இணைப்புடன் Logik இல் ஒரு தூது பெறுவார்கள்.</string>
   <string name="inviteDesc3">முக்கியமானது: உங்களுக்குத் தெரிந்த மற்றும் தீவிரமாக வகுப்பில் சேர விரும்பும் மாணவர்களை மட்டும் அழைக்கவும்.</string>
   <string name="inviteDesc4">தன்னிச்சையான வீரர்களுக்கு ஒருபோதும் கோரப்படாத அழைப்புகளை அனுப்ப வேண்டாம்.</string>
-  <string name="createANewLichessAccount">புதிய Lichess கணக்கை உருவாக்கவும்</string>
-  <string name="createDesc1">மாணவரிடம் இன்னும் Lichess கணக்கு இல்லையென்றால், அவர்களுக்காக இங்கே ஒன்றை உருவாக்கலாம்.</string>
+  <string name="createANewLichessAccount">புதிய Logik கணக்கை உருவாக்கவும்</string>
+  <string name="createDesc1">மாணவரிடம் இன்னும் Logik கணக்கு இல்லையென்றால், அவர்களுக்காக இங்கே ஒன்றை உருவாக்கலாம்.</string>
   <string name="createDesc2">மின்னஞ்சல் முகவரி தேவையில்லை. ஒரு கடவுச்சொல் உருவாக்கப்படும், மேலும் நீங்கள் அதை மாணவருக்கு அனுப்ப வேண்டும், இதனால் அவர்கள் உள்நுழைய முடியும்.</string>
   <string name="createDesc3">முக்கியமானது: ஒரு மாணவருக்குப் பல கணக்குகள் இருக்கக் கூடாது.</string>
   <string name="createDesc4">அவர்களிடம் ஏற்கனவே ஒன்று இருந்தால், அதற்குப் பதிலாக அழைப்புப் படிவத்தைப் பயன்படுத்தவும்.</string>
   <string name="createStudentWarning">உண்மையான மாணவர்களுக்கு மட்டுமே கணக்குகளை உருவாக்கவும். உங்களுக்காகப் பல கணக்குகளை உருவாக்க இதைப் பயன்படுத்த வேண்டாம். நீங்கள் தடை செய்யப்படுவீர்கள்.</string>
-  <string name="lichessUsername">Lichess பயனர்பெயர்</string>
+  <string name="lichessUsername">Logik பயனர்பெயர்</string>
   <string name="generateANewUsername">புதிய பயனர்பெயரை உருவாக்கவும்</string>
   <string name="welcomeToClass">உங்கள் வகுப்பிற்கு வரவேற்கிறோம்: %s.
 வகுப்பை அணுகுவதற்கான இணைப்பு இதோ.</string>
@@ -106,8 +106,8 @@
   <string name="youAcceptedThisInvitation">இந்த அழைப்பை ஏற்றுக்கொண்டீர்கள்.</string>
   <string name="youDeclinedThisInvitation">இந்த அழைப்பை நிராகரித்துவிட்டீர்கள்.</string>
   <string name="orSeparator" comment="Used as separator between invite sections. Shown as large '~ or ~'.">அல்லது</string>
-  <string name="createMultipleAccounts">ஒரே நேரத்தில் பல Lichess கணக்குகளை உருவாக்கவும்</string>
-  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">மாணவர் பெயர்களின் பட்டியலிலிருந்து பல Lichess கணக்குகளை உருவாக்க நீங்கள் %s ஐயும் செய்யலாம்.</string>
+  <string name="createMultipleAccounts">ஒரே நேரத்தில் பல Logik கணக்குகளை உருவாக்கவும்</string>
+  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">மாணவர் பெயர்களின் பட்டியலிலிருந்து பல Logik கணக்குகளை உருவாக்க நீங்கள் %s ஐயும் செய்யலாம்.</string>
   <string name="useThisForm" comment="Link text in multipleAccsFromDescription">இந்தப் படிவத்தைப் பயன்படுத்தவும்</string>
   <string name="maxStudentsNote" comment="%1$s will be replaced with a large number (currently 100).\n%2$s is a link and will be replaced with the translation of createMoreClasses. Make sure both strings fit together.">ஒரு வகுப்பில் %1$s மாணவர்கள்வரை இருக்கலாம் என்பதை நினைவில் கொள்ளவும். அதிகமான மாணவர்களை நிர்வகிக்க, %2$s.</string>
   <string name="createMoreClasses" comment="Link text in maxStudentsNote">மேலும் வகுப்புகளை உருவாக்குங்கள்</string>

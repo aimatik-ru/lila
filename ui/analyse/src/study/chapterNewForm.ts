@@ -264,7 +264,7 @@ export function view(ctrl: StudyChapterNewForm): VNode {
             ),
           activeTab === 'game' &&
             div('.form-group', [
-              label('.form-label', { for: 'chapter-game' }, 'Load Lichess games'),
+              label('.form-label', { for: 'chapter-game' }, 'Load games'),
               textarea()('#chapter-game.form-control', {
                 placeholder: i18n.study.urlOfTheGame,
                 hook: onInsert((el: HTMLTextAreaElement) => {

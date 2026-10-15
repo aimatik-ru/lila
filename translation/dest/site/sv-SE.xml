@@ -232,8 +232,8 @@
   <string name="error.weakPassword">Detta lösenord är extremt vanligt, och alltför lätt att gissa.</string>
   <string name="error.namePassword">Använd inte ditt användarnamn som lösenord.</string>
   <string name="blankedPassword">Du har använt samma lösenord på en annan hemsida, och den hemsidan har blivit hackad. För att säkra ditt Lichesskonto måste du välja ett nytt lösenord. Tack för din förståelse.</string>
-  <string name="youAreLeavingLichess">Du lämnar Lichess</string>
-  <string name="neverTypeYourPassword">Skriv aldrig ditt Lichess-lösenord på en annan webbplats!</string>
+  <string name="youAreLeavingLichess">Du lämnar Logik</string>
+  <string name="neverTypeYourPassword">Skriv aldrig ditt Logik-lösenord på en annan webbplats!</string>
   <string name="proceedToX">Gå vidare till %s</string>
   <string name="passwordSuggestion">Ange inte ett lösenord som föreslagits av någon annan. De kommer att använda det för att stjäla ditt konto.</string>
   <string name="emailSuggestion">Ange inte en e-postadress som föreslagits av någon annan. De kommer att använda den för att stjäla ditt konto.</string>
@@ -335,7 +335,7 @@
     <item quantity="one">Ge %s sekund</item>
     <item quantity="other">Ge %s sekunder</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Detta konto bröt mot användarvillkoren för Lichess</string>
+  <string name="thisAccountViolatedTos">Detta konto bröt mot användarvillkoren för Logik</string>
   <string name="openingExplorerAndTablebase">Öppningsutforskare &amp; slutspelsteori</string>
   <string name="takeback">Gör om drag</string>
   <string name="proposeATakeback">Fråga om du får göra om draget</string>
@@ -516,7 +516,7 @@
   <string name="oneUrlPerLine">En URL per rad.</string>
   <string name="inlineNotation">Visa notation</string>
   <string name="makeAStudy">För förvaring och delning, överväg att göra en studie.</string>
-  <string name="previouslyOnLichessTV">Föregående Lichess-TV</string>
+  <string name="previouslyOnLichessTV">Föregående Logik-TV</string>
   <string name="onlinePlayers">Inloggade spelare</string>
   <string name="activePlayers">Mest aktiva spelare</string>
   <string name="bewareTheGameIsRatedButHasNoClock">OBS! Partiet är rankat men har ingen tidsgräns.</string>
@@ -657,7 +657,7 @@
   <string name="streamersMenu">Videosändningar</string>
   <string name="mobileApp">Mobilapp</string>
   <string name="webmasters">Webbmasters</string>
-  <string name="about">Om Lichess</string>
+  <string name="about">Om Logik</string>
   <string name="aboutX">Om %s</string>
   <string name="xIsAFreeYLibreOpenSourceChessServer">%1$s är en gratis (%2$s), oberoende och reklamfri schackserver med öppen källkod.</string>
   <string name="really">på riktigt</string>
@@ -686,7 +686,7 @@
   <string name="simulAddExtraTime">Du kan lägga till extra tid till dig för att klara av simultanspelet.</string>
   <string name="simulAddExtraTimePerPlayer">Lägg till en starttid på klockan för varje spelare som går med i simultanmatchen.</string>
   <string name="simulHostExtraTimePerPlayer">Extratid för värden för varje spelare som deltar</string>
-  <string name="lichessTournaments">Lichess-turneringar</string>
+  <string name="lichessTournaments">Logik-turneringar</string>
   <string name="tournamentFAQ">Turnering: Vanliga frågor</string>
   <string name="timeBeforeTournamentStarts">Tid tills turneringen börjar</string>
   <string name="averageCentipawnLoss">Genomsnittligt förlorad hundradelsbonde</string>
@@ -866,7 +866,7 @@
     <item quantity="one">och spara %s linje av förhandsdrag</item>
     <item quantity="other">och spara %s linje av förhandsdrag</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Du har fått ett privat meddelande från Lichess.</string>
+  <string name="showUnreadLichessMessage">Du har fått ett privat meddelande från Logik.</string>
   <string name="sorry">Beklagar :(</string>
   <string name="weHadToTimeYouOutForAWhile">Vi är tvugna att stänga av dig en stund.</string>
   <string name="why">Varför?</string>
@@ -878,7 +878,7 @@
   <string name="tryToWin">Försök vinna (eller åtminstone nå remi i) varje parti som du spelar.</string>
   <string name="resignLostGames">Ge upp förlorade partier (i stället för att låta tiden rinna ut).</string>
   <string name="temporaryInconvenience">Vi ber om ursäkt för den tillfälliga olägenheten,</string>
-  <string name="wishYouGreatGames">och önskar dig bra partier på lichess.org.</string>
+  <string name="wishYouGreatGames">och önskar dig bra partier på play.kalugalogic.ru.</string>
   <string name="thankYouForReading">Tack för att du läste!</string>
   <string name="lifetimeScore">Livstidspoäng</string>
   <string name="currentMatchScore">Nuvarande matchpoäng</string>
@@ -923,7 +923,7 @@
   <string name="congratsYouWon">Grattis, du vann!</string>
   <string name="gameVsX">Parti mot %1$s</string>
   <string name="resVsX">%1$s mot %2$s</string>
-  <string name="lostAgainstTOSViolator">Du förlorade mot någon som bröt mot Lichess TOS</string>
+  <string name="lostAgainstTOSViolator">Du förlorade mot någon som bröt mot Logik TOS</string>
   <string name="refundXpointsTimeControlY">Ersättning: %1$s %2$s rankingpoäng.</string>
   <string name="timeAlmostUp">Tiden är nästan slut!</string>
   <string name="clickToRevealEmailAddress">[Klicka för att visa mailadress]</string>
@@ -976,13 +976,13 @@ Lämna tomt för att starta spel från den normala startpositionen.</string>
   <string name="resignTheGame">Ge upp partiet</string>
   <string name="since">Sedan</string>
   <string name="until">Tills</string>
-  <string name="lichessDbExplanation">Rankade spel från alla Lichess spelare</string>
+  <string name="lichessDbExplanation">Rankade spel från alla Logik spelare</string>
   <string name="switchSides">Växla sida</string>
   <string name="closingAccountWithdrawAppeal">Att avsluta ditt konto kommer att dra tillbaka ditt överklagande</string>
   <string name="ourEventTips">Våra tips för anordnande av evenemang</string>
   <string name="instructions">Instruktioner</string>
   <string name="showMeEverything">Visa mig allt</string>
-  <string name="lichessPatronInfo">Lichess är en välgörenhet och helt gratis/fri programvara med öppen källkod.
+  <string name="lichessPatronInfo">Logik är en välgörenhet och helt gratis/fri programvara med öppen källkod.
 Alla driftskostnader, utveckling och innehåll finansieras enbart av användardonationer.</string>
   <string name="nothingToSeeHere">Här finns ingenting att se för tillfället.</string>
   <string name="stats">Statistik</string>

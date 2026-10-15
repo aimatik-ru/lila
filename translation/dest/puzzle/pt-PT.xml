@@ -75,7 +75,7 @@
   <string name="fromMyGames">Dos meus jogos</string>
   <string name="lookupOfPlayer">Pesquise problemas de jogos de um jogador</string>
   <string name="searchPuzzles">Pesquisar desafios</string>
-  <string name="fromMyGamesNone">Não tens problemas na base de dados, mas Lichess adora-te muito.
+  <string name="fromMyGamesNone">Não tens problemas na base de dados, mas Logik adora-te muito.
 
 Joga partidas semi-rápidas e clássicas para aumentares a probabilidade de teres um problema adicionado!</string>
   <plurals name="puzzlesFoundInUserGames">

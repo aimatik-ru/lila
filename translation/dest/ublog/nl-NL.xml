@@ -6,7 +6,7 @@
   <string name="all">Alles</string>
   <string name="byMonth">Per maand</string>
   <string name="byTopic">Per onderwerp</string>
-  <string name="byLichess">Door Lichess</string>
+  <string name="byLichess">Door Logik</string>
   <string name="myFriends">Mijn vrienden</string>
   <string name="myLikes">Mijn vind-ik-leuks</string>
   <string name="myBlog">Mijn blog</string>
@@ -17,7 +17,7 @@
     <item quantity="other">%s blogberichten</item>
   </plurals>
   <string name="continueReadingPost">Doorgaan met lezen van dit bericht</string>
-  <string name="lichessBlogPostsFromXYear">Lichess blogberichten uit %s</string>
+  <string name="lichessBlogPostsFromXYear">Logik blogberichten uit %s</string>
   <string name="previousBlogPosts">Eerdere blogberichten</string>
   <string name="xBlog">Blog van %s</string>
   <string name="newPost">Nieuw blogbericht</string>

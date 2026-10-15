@@ -73,7 +73,7 @@
   <string name="fromMyGames">Nga lojërat e mia</string>
   <string name="lookupOfPlayer">Kërkoni te ushtrime prej lojërave të një lojtari</string>
   <string name="searchPuzzles">Kërkoni në ushtrime</string>
-  <string name="fromMyGamesNone">S’keni ushtrime te baza e të dhënave, por Lichess-i prapë ju do fort.
+  <string name="fromMyGamesNone">S’keni ushtrime te baza e të dhënave, por Logik-i prapë ju do fort.
 
 Luani lojëra të shpejta dhe klasike, që të rriten shanset tuaja për të pasur një ushtrim nga tuajt të shtuar atje!</string>
   <plurals name="puzzlesFoundInUserGames">

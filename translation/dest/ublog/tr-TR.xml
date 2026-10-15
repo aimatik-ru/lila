@@ -6,7 +6,7 @@
   <string name="all">Tümü</string>
   <string name="byMonth">Aya göre</string>
   <string name="byTopic">Konuya göre</string>
-  <string name="byLichess">Lichess\'ten</string>
+  <string name="byLichess">Logik\'ten</string>
   <string name="myFriends">Arkadaşlarım</string>
   <string name="myLikes">Beğenilerim</string>
   <string name="myBlog">Bloğum</string>
@@ -17,7 +17,7 @@
     <item quantity="other">%s blog gönderisi</item>
   </plurals>
   <string name="continueReadingPost">Bu gönderiyi okumaya devam et</string>
-  <string name="lichessBlogPostsFromXYear">%s yılından Lichess blog gönderileri</string>
+  <string name="lichessBlogPostsFromXYear">%s yılından Logik blog gönderileri</string>
   <string name="previousBlogPosts">Önceki blog gönderileri</string>
   <string name="xBlog">%s Bloğu</string>
   <string name="newPost">Yeni gönderi</string>

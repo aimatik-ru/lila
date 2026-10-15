@@ -249,9 +249,9 @@
   <string name="forgotPassword">Has oblidat la contrasenya?</string>
   <string name="error.weakPassword">La contrasenya és extremadament comú i massa fàcil d\'endevinar.</string>
   <string name="error.namePassword">Si us plau, no facis servir el teu nom d\'usuari com a contrasenya.</string>
-  <string name="blankedPassword">Has fet servir la mateixa contrasenya en altres llocs web i aquest lloc ha estat compromès. Per assegurar la seguretat del vostre compte de Lichess heu d\'establir una nova contrasenya. Gràcies per la teva comprensió.</string>
-  <string name="youAreLeavingLichess">Estàs sortint de Lichess</string>
-  <string name="neverTypeYourPassword">Mai teclegis la contrasenya de Lichess en un altre lloc web!</string>
+  <string name="blankedPassword">Has fet servir la mateixa contrasenya en altres llocs web i aquest lloc ha estat compromès. Per assegurar la seguretat del vostre compte de Logik heu d\'establir una nova contrasenya. Gràcies per la teva comprensió.</string>
+  <string name="youAreLeavingLichess">Estàs sortint de Logik</string>
+  <string name="neverTypeYourPassword">Mai teclegis la contrasenya de Logik en un altre lloc web!</string>
   <string name="proceedToX">Continuar a %s</string>
   <string name="passwordSuggestion">No facis servir una contrasenya suggerida per algú altre. La farà servir per robar el vostre compte.</string>
   <string name="emailSuggestion">No facis server un correu electrònic suggerit per algú altre. La farà servir per robar el vostre compte.</string>
@@ -358,7 +358,7 @@
     <item quantity="one">Dona %s segon</item>
     <item quantity="other">Dona %s segons</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Aquest compte ha violat els Termes de Servei de Lichess</string>
+  <string name="thisAccountViolatedTos">Aquest compte ha violat els Termes de Servei de Logik</string>
   <string name="openingExplorerAndTablebase">Explorador d\'obertures &amp; taula de finals</string>
   <string name="takeback">Desfés la jugada</string>
   <string name="proposeATakeback">Proposa desfer la jugada</string>
@@ -547,7 +547,7 @@ Amics jugant: %2$s</string>
   <string name="inlineNotation">Notació lineal</string>
   <string name="makeAStudy">Per salvaguardar i compartir, considera fer un estudi.</string>
   <string name="clearLocalData">Eliminar les dades locals</string>
-  <string name="previouslyOnLichessTV">Prèviament a Lichess TV</string>
+  <string name="previouslyOnLichessTV">Prèviament a Logik TV</string>
   <string name="onlinePlayers">Jugadors connectats</string>
   <string name="activePlayers">Jugadors actius</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Compte, la partida és puntuada però no hi ha límit de temps!</string>
@@ -720,7 +720,7 @@ Amics jugant: %2$s</string>
   <string name="extraClockTimeForHost" comment="Appears on: https://lichess.org/simul/new&#10;&#10;Allows a simul host to select extra time for the simul.&#10;&#10;Please note this string used to state &quot;Host extra clock time&quot;, without the word &quot;initial&quot;">Temps extra per l\'amfitrió:</string>
   <string name="simulAddExtraTimePerPlayer">Afegir temps inicial al vostre rellotge per cada jugador que entri a la simultània.</string>
   <string name="simulHostExtraTimePerPlayer">Temps extra de l\'amfitrió per jugador</string>
-  <string name="lichessTournaments">Tornejos de Lichess</string>
+  <string name="lichessTournaments">Tornejos de Logik</string>
   <string name="tournamentFAQ">Torneig Arena: Preguntes Més Freqüents</string>
   <string name="timeBeforeTournamentStarts">Temps per a què comenci el torneig</string>
   <string name="averageCentipawnLoss">Pèrdua mitjana en centipeons</string>
@@ -911,7 +911,7 @@ Amics jugant: %2$s</string>
     <item quantity="one">i guardar %s línia anticipada</item>
     <item quantity="other">i guardar %s línies anticipades</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Has rebut un missatge privat de Lichess.</string>
+  <string name="showUnreadLichessMessage">Has rebut un missatge privat de Logik.</string>
   <string name="readTheMessage" comment="'It' refers to a private message. This text follows after a different string which advises players they have received a private message from Lichess. For users, this is appears as a regular private message from the Lichess account: https://lichess.org/@/Lichess">Llegeix el missatge</string>
   <string name="sorry">Ho sentim :(</string>
   <string name="weHadToTimeYouOutForAWhile">Hem hagut de penalitzar-te una estona.</string>
@@ -924,7 +924,7 @@ Amics jugant: %2$s</string>
   <string name="tryToWin">Prova de guanyar (o al menys fer taules) cada partida.</string>
   <string name="resignLostGames">Resigna els jocs perduts (no deixis córrer el temps).</string>
   <string name="temporaryInconvenience">Disculpes per aquest inconvenient temporal</string>
-  <string name="wishYouGreatGames">i et desitgem unes grans partides a lichess.org.</string>
+  <string name="wishYouGreatGames">i et desitgem unes grans partides a play.kalugalogic.ru.</string>
   <string name="thankYouForReading">Gràcies per la teva lectura!</string>
   <string name="lifetimeScore">Valoració total de sempre</string>
   <string name="currentMatchScore">Valoració actual de partides</string>
@@ -970,7 +970,7 @@ Amics jugant: %2$s</string>
   <string name="congratsYouWon">Felicitats, has guanyat!</string>
   <string name="gameVsX">Partida vs %1$s</string>
   <string name="resVsX">%1$s vs %2$s</string>
-  <string name="lostAgainstTOSViolator">Has perdut contra algú que ha violat les CDS de Lichess</string>
+  <string name="lostAgainstTOSViolator">Has perdut contra algú que ha violat les CDS de Logik</string>
   <string name="refundXpointsTimeControlY">Reemborsament: %1$s %2$s punts.</string>
   <string name="timeAlmostUp">El temps quasi s\'ha exhaurit!</string>
   <string name="clickToRevealEmailAddress">[Clica per a mostrar l\'adreça de correu electrònic]</string>
@@ -1025,13 +1025,13 @@ Deixa-ho en blanc per començar els jocs de la posició inicial.</string>
   <string name="youCantStartNewGame">No pots començar una nova partida mentre és el teu torn.</string>
   <string name="since">Des de</string>
   <string name="until">Fins</string>
-  <string name="lichessDbExplanation">Mostra de partides puntuades de tots els jugadors de Lichess</string>
+  <string name="lichessDbExplanation">Mostra de partides puntuades de tots els jugadors de Logik</string>
   <string name="switchSides">Canviar de bàndol</string>
   <string name="closingAccountWithdrawAppeal">El tancament del vostre compte eliminarà la vostra queixa</string>
   <string name="ourEventTips">Els nostres consells per organitzar esdeveniments</string>
   <string name="instructions">Instruccions</string>
   <string name="showMeEverything">Mostrar tot</string>
-  <string name="lichessPatronInfo">Lichess és una entitat sense ànim de lucre i un programari totalment lliure i de codi obert.
+  <string name="lichessPatronInfo">Logik és una entitat sense ànim de lucre i un programari totalment lliure i de codi obert.
 Les despeses de funcionament, desenvolupament i continguts es financen exclusivament amb donacions d\'usuaris.</string>
   <string name="nothingToSeeHere">Res a veure per aquí de moment.</string>
   <string name="stats">Estadístiques</string>

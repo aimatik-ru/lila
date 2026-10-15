@@ -71,7 +71,7 @@
 	<string name="malwareWarningCta" comment="It is a link to https://lichess.org/ads">dávejte si pozor</string>
 	<string name="lichessGamesPlayedIn" comment="%1$s is the number of games, %2$s is the year">%1$s her zahraných na Lichessu v roce %2$s</string>
 	<string name="lichessGamesOfThemYours" comment="%s is the percentage of games that are yours">%s z nich bylo vašich.</string>
-	<string name="thanksTitle">Děkujeme za hraní na Lichess!</string>
+	<string name="thanksTitle">Děkujeme za hraní na Logik!</string>
 	<string name="thanksHaveAGreat" comment="%s is the next year">Jsme moc rádi, že jste tady. Mějte krásný %s!</string>
 	<string name="patronCostsThisYear" comment="%1$s is 'costs'. %2$s is the cost with currency symbol e.g. '$750,000'">%1$s Lichessu byly tento rok %2$s.</string>
 	<string name="patronCosts" comment="It is a link to lichess.org/costs">náklady</string>

@@ -274,9 +274,9 @@
   <string name="forgotPassword">Nie pamiętasz hasła?</string>
   <string name="error.weakPassword">To hasło jest bardzo popularne i zbyt łatwe do odgadnięcia.</string>
   <string name="error.namePassword">Nie używaj nazwy użytkownika jako hasła.</string>
-  <string name="blankedPassword">Użyłeś tego samego hasła na innej stronie, która padła ofiarą ataku. Aby zapewnić bezpieczeństwo Twojego konta na Lichess, prosimy o ustawienie nowego hasła. Dziękujemy za wyrozumiałość.</string>
-  <string name="youAreLeavingLichess">Opuszczasz Lichess</string>
-  <string name="neverTypeYourPassword">Nigdy nie wpisuj hasła Lichess na innej stronie!</string>
+  <string name="blankedPassword">Użyłeś tego samego hasła na innej stronie, która padła ofiarą ataku. Aby zapewnić bezpieczeństwo Twojego konta na Logik, prosimy o ustawienie nowego hasła. Dziękujemy za wyrozumiałość.</string>
+  <string name="youAreLeavingLichess">Opuszczasz Logik</string>
+  <string name="neverTypeYourPassword">Nigdy nie wpisuj hasła Logik na innej stronie!</string>
   <string name="proceedToX">Przejdź do %s</string>
   <string name="passwordSuggestion">Nie ustawiaj hasła zasugerowanego przez kogoś innego. Wykorzystają je do kradzieży Twojego konta.</string>
   <string name="emailSuggestion">Nie ustawiaj adresu e-mail zasugerowanego przez kogoś innego. Wykorzystają go do kradzieży Twojego konta.</string>
@@ -288,7 +288,7 @@
   <string name="emailSent">Wysłaliśmy do Ciebie e-mail na %s.</string>
   <string name="emailCanTakeSomeTime">Dostarczenie email\'a może zająć trochę czasu.</string>
   <string name="refreshInboxAfterFiveMinutes">Poczekaj 5 minut i odśwież swoją skrzynkę pocztową.</string>
-  <string name="checkSpamOrJunkFolder" comment="checkSpamFolder&#10;It = The confirmation email">Jeśli nie otrzymasz wiadomości e-mail z potwierdzeniem, sprawdź folder Spam lub Śmieci. Upewnij się, że oznaczyłeś wiadomości z lichess.org jako bezpieczne i \"to nie spam\", dzięki czemu będziesz mógł otrzymywać ważne komunikaty.</string>
+  <string name="checkSpamOrJunkFolder" comment="checkSpamFolder&#10;It = The confirmation email">Jeśli nie otrzymasz wiadomości e-mail z potwierdzeniem, sprawdź folder Spam lub Śmieci. Upewnij się, że oznaczyłeś wiadomości z play.kalugalogic.ru jako bezpieczne i \"to nie spam\", dzięki czemu będziesz mógł otrzymywać ważne komunikaty.</string>
   <string name="sendEmailForAccountVerification">Jeśli nie możesz znaleźć wiadomości e-mail z potwierdzeniem, wyślij wiadomość do %s, a potwierdzimy Twoje konto.</string>
   <string name="accountConfirmed">Użytkownik %s został pomyślnie potwierdzony.</string>
   <string name="accountCanLogin">Teraz możesz się zalogować jako %s.</string>
@@ -401,7 +401,7 @@
     <item quantity="many">Dodaj %s sekund</item>
     <item quantity="other">Dodaj %s sekund</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Użytkownik tego konta naruszył warunki korzystania z Lichess</string>
+  <string name="thisAccountViolatedTos">Użytkownik tego konta naruszył warunki korzystania z Logik</string>
   <string name="openingExplorerAndTablebase">Biblioteka debiutów i końcówek</string>
   <string name="takeback">Cofnij ruch</string>
   <string name="proposeATakeback">Poproś o cofnięcie ruchu</string>
@@ -612,7 +612,7 @@ Znajomi grający: %2$s</string>
   <string name="inlineNotation">Notacja ciągła</string>
   <string name="makeAStudy">Aby bezpiecznie zapamiętać i udostępniać, rozważ stworzenie opracowania.</string>
   <string name="clearLocalData">Wyczyść dane lokalne</string>
-  <string name="previouslyOnLichessTV">Poprzednio w Lichess TV</string>
+  <string name="previouslyOnLichessTV">Poprzednio w Logik TV</string>
   <string name="onlinePlayers">Gracze online</string>
   <string name="activePlayers">Aktywni gracze</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Miej na uwadze, że partia jest rankingowa, ale nie ma limitu czasu!</string>
@@ -627,11 +627,11 @@ Znajomi grający: %2$s</string>
   <string name="autoSwitch">Przełącz po ruchu</string>
   <string name="puzzles">Zadania szachowe</string>
   <string name="onlineBots">Boty online</string>
-  <string name="aboutBotsOnLichess">O botach na Lichess</string>
+  <string name="aboutBotsOnLichess">O botach na Logik</string>
   <string name="featuredBots">Polecane boty</string>
   <string name="tryPlayingTheseInnovativeChessEngines">Spróbuj zagrać przeciwko tym udoskonalonym silnikom szachowym! To są nasze ulubione.</string>
   <string name="communityBots">Boty społeczności</string>
-  <string name="moreChessEnginesCreatedByTheLichessCommunity">Więcej silników szachowych stworzonych przez społeczność Lichess. Udostępniane są przez swoich twórców i mogą nie zawsze być online.</string>
+  <string name="moreChessEnginesCreatedByTheLichessCommunity">Więcej silników szachowych stworzonych przez społeczność Logik. Udostępniane są przez swoich twórców i mogą nie zawsze być online.</string>
   <string name="name">Nazwa</string>
   <string name="description">Opis</string>
   <string name="descPrivate">Prywatny opis</string>
@@ -774,7 +774,7 @@ Znajomi grający: %2$s</string>
   <string name="aboutX">Informacje o %s</string>
   <string name="xIsAFreeYLibreOpenSourceChessServer">%1$s jest %2$s darmowym, wolnym, pozbawionym reklam, otwartym serwisem szachowym.</string>
   <string name="really">naprawdę</string>
-  <string name="lichessUpdates">Aktualizacje Lichess</string>
+  <string name="lichessUpdates">Aktualizacje Logik</string>
   <string name="contribute">Wsparcie</string>
   <string name="changelog">Dziennik zmian</string>
   <string name="termsOfService">Regulamin</string>
@@ -804,7 +804,7 @@ Znajomi grający: %2$s</string>
   <string name="extraClockTimeForHost" comment="Appears on: https://lichess.org/simul/new&#10;&#10;Allows a simul host to select extra time for the simul.&#10;&#10;Please note this string used to state &quot;Host extra clock time&quot;, without the word &quot;initial&quot;">Dodatkowy czas zegara dla prowadzącego symultanę:</string>
   <string name="simulAddExtraTimePerPlayer">Dodaj początkowy czas do zegara dla każdego gracza dołączającego do symultany.</string>
   <string name="simulHostExtraTimePerPlayer">Dodatkowy czas dla symultanisty za każdego gracza</string>
-  <string name="lichessTournaments">Turnieje Lichess</string>
+  <string name="lichessTournaments">Turnieje Logik</string>
   <string name="tournamentFAQ">Turnieje typu Arena FAQ</string>
   <string name="timeBeforeTournamentStarts">Czas do rozpoczęcia turnieju</string>
   <string name="averageCentipawnLoss">Średnia strata w centypionach</string>
@@ -1005,7 +1005,7 @@ Znajomi grający: %2$s</string>
     <item quantity="many">i zapisz %s wariantów warunkowych</item>
     <item quantity="other">i zapisz %s wariantów warunkowych</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Otrzymałeś prywatną wiadomość od Lichess.</string>
+  <string name="showUnreadLichessMessage">Otrzymałeś prywatną wiadomość od Logik.</string>
   <string name="readTheMessage" comment="'It' refers to a private message. This text follows after a different string which advises players they have received a private message from Lichess. For users, this is appears as a regular private message from the Lichess account: https://lichess.org/@/Lichess">Przeczytaj wiadomość</string>
   <string name="sorry">Przykro nam :(</string>
   <string name="weHadToTimeYouOutForAWhile">Na pewien czas musieliśmy wykluczyć Cię z gry.</string>
@@ -1018,7 +1018,7 @@ Znajomi grający: %2$s</string>
   <string name="tryToWin">Staraj się wygrywać (lub przynajmniej remisować) każdą rozgrywaną partię.</string>
   <string name="resignLostGames">Poddawaj przegrane partie (nie czekaj na upłynięcie czasu gry).</string>
   <string name="temporaryInconvenience">Przepraszamy za chwilowe niedogodności,</string>
-  <string name="wishYouGreatGames">i życzymy Ci samych udanych partii na lichess.org.</string>
+  <string name="wishYouGreatGames">i życzymy Ci samych udanych partii na play.kalugalogic.ru.</string>
   <string name="thankYouForReading">Dziękujemy za przeczytanie!</string>
   <string name="lifetimeScore">Wynik wszystkich partii</string>
   <string name="currentMatchScore">Wynik bieżącego meczu</string>
@@ -1064,7 +1064,7 @@ Znajomi grający: %2$s</string>
   <string name="congratsYouWon">Gratulacje, wygrałeś/aś!</string>
   <string name="gameVsX">Partia przeciwko %1$s</string>
   <string name="resVsX">%1$s vs %2$s</string>
-  <string name="lostAgainstTOSViolator">Przegrałeś/aś z kimś, kto naruszył warunki użytkowania Lichess</string>
+  <string name="lostAgainstTOSViolator">Przegrałeś/aś z kimś, kto naruszył warunki użytkowania Logik</string>
   <string name="refundXpointsTimeControlY">Zwrot: %1$s %2$s punktów rankingu.</string>
   <string name="timeAlmostUp">Czas prawie minął!</string>
   <string name="clickToRevealEmailAddress">[Kliknij, aby ujawnić adres e-mail]</string>
@@ -1119,13 +1119,13 @@ Pozostaw puste, aby rozpoczynać partie z normalnej pozycji początkowej.</strin
   <string name="youCantStartNewGame">Nie możesz rozpocząć nowej gry, kiedy to Twoja kolej.</string>
   <string name="since">Od</string>
   <string name="until">Do</string>
-  <string name="lichessDbExplanation">Partie rankingowe pobrane od wszystkich graczy Lichess</string>
+  <string name="lichessDbExplanation">Partie rankingowe pobrane od wszystkich graczy Logik</string>
   <string name="switchSides">Zmień kolor</string>
   <string name="closingAccountWithdrawAppeal">Zamknięcie konta spowoduje wycofanie Twojego odwołania</string>
   <string name="ourEventTips">Nasze wskazówki dotyczące organizacji wydarzeń</string>
   <string name="instructions">Instrukcje</string>
   <string name="showMeEverything">Pokaż mi wszystko</string>
-  <string name="lichessPatronInfo">Lichess jest organizacją niedochodową i całkowicie darmowym otwartym oprogramowaniem.
+  <string name="lichessPatronInfo">Logik jest organizacją niedochodową i całkowicie darmowym otwartym oprogramowaniem.
 Wszystkie koszty operacyjne, rozwój i treści są finansowane wyłącznie z darowizn użytkowników.</string>
   <string name="nothingToSeeHere">W tej chwili nie ma nic do zobaczenia.</string>
   <string name="stats">Statystyki</string>

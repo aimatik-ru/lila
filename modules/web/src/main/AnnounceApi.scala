@@ -22,7 +22,7 @@ final class LichobileAnnounceApi(settingStore: SettingStore.Builder):
 
   def get: Option[JsObject] =
     showNow.option:
-      val msg = "Please use lichess.org/app"
+      val msg = "Please use play.kalugalogic.ru/app"
       val date = nowInstant.plusMinutes(1)
       AnnounceApi.makeJson(msg, date)
 

@@ -16,7 +16,7 @@
   <string name="zenMode" comment="zenMode&#10;&#10;This is not the religious meaning. Turning this option on takes away make elements of the user interface.&#10;&#10;Can also translate as 'Focus mode' as one example.">ໂໝດສະມາທິ</string>
   <string name="showPlayerRatings">ສະແດງລະດັບຄະແນນຜູ້ຫຼິ້ນ</string>
   <string name="showFlairs">ສະແດງປ້າຍສັນຍະລັກຜູ້ຫຼິ້ນ</string>
-  <string name="explainShowPlayerRatings">ສິ່ງນີ້ຈະເຊື່ອງຄະແນນທັງໝົດໃນ Lichess ເພື່ອຊ່ວຍໃຫ້ທ່ານມີສະມາທິກັບການຫຼິ້ນ. ເກມທີ່ມີການນັບຄະແນນຍັງຄົງມີຜົນຕໍ່ຄະແນນຂອງທ່ານຄືເກົ່າ, ແຕ່ວ່າທ່ານຈະບໍ່ເຫັນມັນໃນຂະນະຫຼິ້ນເທົ່ານັ້ນ.</string>
+  <string name="explainShowPlayerRatings">ສິ່ງນີ້ຈະເຊື່ອງຄະແນນທັງໝົດໃນ Logik ເພື່ອຊ່ວຍໃຫ້ທ່ານມີສະມາທິກັບການຫຼິ້ນ. ເກມທີ່ມີການນັບຄະແນນຍັງຄົງມີຜົນຕໍ່ຄະແນນຂອງທ່ານຄືເກົ່າ, ແຕ່ວ່າທ່ານຈະບໍ່ເຫັນມັນໃນຂະນະຫຼິ້ນເທົ່ານັ້ນ.</string>
   <string name="displayBoardResizeHandle">ສະແດງປຸ່ມປັບຂະໜາດກະດານ</string>
   <string name="onlyOnInitialPosition">ສະເພາະຕອນເລີ່ມຕົ້ນເທົ່ານັ້ນ</string>
   <string name="inGameOnly">ສະເພາະຕອນຢູ່ໃນເກມເທົ່ານັ້ນ</string>
@@ -59,8 +59,8 @@
   <string name="notifyGameEvent">ການເຄື່ອນໄຫວໃນເກມ Correspondence</string>
   <string name="notifyChallenge">ຄຳທ້າດວນ</string>
   <string name="notifyTimeAlarm">ເວລາໃນເກມ Correspondence ໃກ້ຈະໝົດ</string>
-  <string name="notifyBell">ການແຈ້ງເຕືອນຮູບກະດິ່ງພາຍໃນ Lichess</string>
-  <string name="notifyPush">ການແຈ້ງເຕືອນເທິງອຸປະກອນເມື່ອບໍ່ໄດ້ເປີດ Lichess</string>
+  <string name="notifyBell">ການແຈ້ງເຕືອນຮູບກະດິ່ງພາຍໃນ Logik</string>
+  <string name="notifyPush">ການແຈ້ງເຕືອນເທິງອຸປະກອນເມື່ອບໍ່ໄດ້ເປີດ Logik</string>
   <string name="notifyWeb">ບຣາວເຊີ</string>
   <string name="notifyDevice">ອຸປະກອນ</string>
   <string name="bellNotificationSound">ສຽງແຈ້ງເຕືອນຮູບກະດິ່ງ</string>

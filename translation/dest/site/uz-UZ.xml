@@ -250,9 +250,9 @@
   <string name="forgotPassword">Parolni unutdingizmi?</string>
   <string name="error.weakPassword">Ushbu parol juda oddiy va uni taxmin qilish oson.</string>
   <string name="error.namePassword">Foydalanuvchi nomini parol sifatida ishlatmang.</string>
-  <string name="blankedPassword">Siz boshqa saytda ham aynan shu paroldan foydalangansiz va oʻsha sayt xavfsizligiga putur yetgan. Lichess akkauntingiz xavfsizligini taʼminlash uchun yangi parol oʻrnatishingizni soʻraymiz. Toʻgʻri tushunasiz degan umiddamiz.</string>
+  <string name="blankedPassword">Siz boshqa saytda ham aynan shu paroldan foydalangansiz va oʻsha sayt xavfsizligiga putur yetgan. Logik akkauntingiz xavfsizligini taʼminlash uchun yangi parol oʻrnatishingizni soʻraymiz. Toʻgʻri tushunasiz degan umiddamiz.</string>
   <string name="youAreLeavingLichess">Lichessʼni tark etmoqdasiz</string>
-  <string name="neverTypeYourPassword">Lichess parolingizni boshqa saytlarda hech qachon kiritmang!</string>
+  <string name="neverTypeYourPassword">Logik parolingizni boshqa saytlarda hech qachon kiritmang!</string>
   <string name="proceedToX">%sʼga oʻtish</string>
   <string name="passwordSuggestion">Boshqa birov aytgan parolni oʻrnatmang. Ular oʻsha parolni akkauntingizni oʻgʻirlash uchun ishlatishlari mumkin.</string>
   <string name="emailSuggestion">Boshqa birov aytgan e‑pochta manzilini oʻrnatmang. Ular oʻsha e‑pochta manzilini akkauntingizni oʻgʻirlash uchun ishlatishlari mumkin.</string>
@@ -264,7 +264,7 @@
   <string name="emailSent">%s manziliga e‑pochta yubordik.</string>
   <string name="emailCanTakeSomeTime">Xat yetib kelishi uchun biroz vaqt ketishi mumkin.</string>
   <string name="refreshInboxAfterFiveMinutes">5 minut kutib e‑pochta qutingizni yangilang.</string>
-  <string name="checkSpamOrJunkFolder" comment="checkSpamFolder&#10;It = The confirmation email">Agar tasdiqlash xatini olmagan boʻlsangiz, spam yoki keraksiz xatlar jildini tekshiring. Muhim xabarlardan xabardor boʻlib turish uchun lichess.org saytidan keladigan xatlarni xavfsiz va \"spam emas\" deb belgilang.</string>
+  <string name="checkSpamOrJunkFolder" comment="checkSpamFolder&#10;It = The confirmation email">Agar tasdiqlash xatini olmagan boʻlsangiz, spam yoki keraksiz xatlar jildini tekshiring. Muhim xabarlardan xabardor boʻlib turish uchun play.kalugalogic.ru saytidan keladigan xatlarni xavfsiz va \"spam emas\" deb belgilang.</string>
   <string name="sendEmailForAccountVerification">Agar tasdiqlash xatini topa olmasangiz, %s manziliga xat yuboring va biz hisobingizni tasdiqlab beramiz.</string>
   <string name="accountConfirmed">Foydalanuvchi %s muvaffaqiyatli tasdiqlandi.</string>
   <string name="accountCanLogin">Hozirning oʻzidayoq %s sifatida tizimga kirishingiz mumkin.</string>
@@ -359,7 +359,7 @@
     <item quantity="one">%s sekund berish</item>
     <item quantity="other">%s sekund berish</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Ushbu oʻyinchi Lichess foydalanish shartlarini buzgan</string>
+  <string name="thisAccountViolatedTos">Ushbu oʻyinchi Logik foydalanish shartlarini buzgan</string>
   <string name="openingExplorerAndTablebase">Debyutlar va endshpillar bazasi</string>
   <string name="takeback">Yurishni qaytarish</string>
   <string name="proposeATakeback">Yurishni qaytarishni soʻrash</string>
@@ -548,7 +548,7 @@ Oʻynayotgan doʻstlar: %2$s</string>
   <string name="inlineNotation">Qator ichi notatsiyasi</string>
   <string name="makeAStudy">Saqlab qoʻyish va ulashish uchun saboq yaratishni tavsiya qilamiz.</string>
   <string name="clearLocalData">Lokal maʼlumotlarni oʻchirish</string>
-  <string name="previouslyOnLichessTV">Lichess TVdagi avvalgi koʻrsatuvlar</string>
+  <string name="previouslyOnLichessTV">Logik TVdagi avvalgi koʻrsatuvlar</string>
   <string name="onlinePlayers">Onlayn oʻyinchilar</string>
   <string name="activePlayers">Faol oʻyinchilar</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Diqqat qiling: oʻyin reytingli, biroq vaqt nazorati oʻrnatilmagan!</string>
@@ -565,7 +565,7 @@ Oʻynayotgan doʻstlar: %2$s</string>
   <string name="featuredBots">Tavsiya etilgan botlar</string>
   <string name="tryPlayingTheseInnovativeChessEngines">Ushbu innovatsion shaxmat dvijoklari bilan oʻynab koʻring! Bular bizning eng sara botlarimizdir.</string>
   <string name="communityBots">Hamjamiyat botlari</string>
-  <string name="moreChessEnginesCreatedByTheLichessCommunity">Lichess hamjamiyati tomonidan yaratilgan boshqa shaxmat dvijoklari. Ular bot mualliflarning serverlarida joylashgan boʻlib, har doim ham onlayn boʻlmasligi mumkin.</string>
+  <string name="moreChessEnginesCreatedByTheLichessCommunity">Logik hamjamiyati tomonidan yaratilgan boshqa shaxmat dvijoklari. Ular bot mualliflarning serverlarida joylashgan boʻlib, har doim ham onlayn boʻlmasligi mumkin.</string>
   <string name="name">Nomi</string>
   <string name="description">Izoh</string>
   <string name="descPrivate">Yopiq tavsif</string>
@@ -702,7 +702,7 @@ Oʻynayotgan doʻstlar: %2$s</string>
   <string name="aboutX">%s haqida</string>
   <string name="xIsAFreeYLibreOpenSourceChessServer">%1$s — bu %2$s bepul, reklamasiz, ochiq kodli shaxmat serveri.</string>
   <string name="really">mutlaqo</string>
-  <string name="lichessUpdates">Lichess yangiliklari</string>
+  <string name="lichessUpdates">Logik yangiliklari</string>
   <string name="contribute">Hissa qo‘shish</string>
   <string name="changelog">Oʻzgarishlar roʻyxati</string>
   <string name="termsOfService">Foydalanish shartlari</string>
@@ -732,7 +732,7 @@ Oʻynayotgan doʻstlar: %2$s</string>
   <string name="extraClockTimeForHost" comment="Appears on: https://lichess.org/simul/new&#10;&#10;Allows a simul host to select extra time for the simul.&#10;&#10;Please note this string used to state &quot;Host extra clock time&quot;, without the word &quot;initial&quot;">Mezbon uchun qoʻshimcha vaqt:</string>
   <string name="simulAddExtraTimePerPlayer">Seansga qoʻshilgan har bir oʻyinchi uchun soatingizga boshlangʻich vaqt qoʻshing.</string>
   <string name="simulHostExtraTimePerPlayer">Har bir oʻyinchi uchun qoʻshimcha vaqt (seans oʻtkazuvchi uchun)</string>
-  <string name="lichessTournaments">Lichess turnirlar</string>
+  <string name="lichessTournaments">Logik turnirlar</string>
   <string name="tournamentFAQ">Arena turnirlari haqida FAQ</string>
   <string name="timeBeforeTournamentStarts">Turnir boshlangunicha</string>
   <string name="averageCentipawnLoss">Oʻrtacha santipiyoda yoʻqotilishi</string>
@@ -783,8 +783,8 @@ Oʻynayotgan doʻstlar: %2$s</string>
   <string name="weHaveSentYouAnEmailTo">Biz %s manziliga xat yubordik. Parolni tiklash uchun xatdagi havolani bosing.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Roʻyxatdan oʻtish orqali siz %sga rozilik bildirasiz.</string>
   <string name="readAboutOur">%smiz bilan tanishib chiqing.</string>
-  <string name="networkLagBetweenYouAndLichess">Siz va Lichess oʻrtasidagi tarmoq kechikishi (lag)</string>
-  <string name="timeToProcessAMoveOnLichessServer">Lichess serverida yurishga ketadigan vaqt</string>
+  <string name="networkLagBetweenYouAndLichess">Siz va Logik oʻrtasidagi tarmoq kechikishi (lag)</string>
+  <string name="timeToProcessAMoveOnLichessServer">Logik serverida yurishga ketadigan vaqt</string>
   <string name="downloadAnnotated">Annotatsiyalar bilan yuklab olish</string>
   <string name="downloadRaw">Asl holatda yuklab olish</string>
   <string name="downloadImported">Import qilinganini yuklab olish</string>
@@ -804,7 +804,7 @@ Oʻynayotgan doʻstlar: %2$s</string>
   <string name="kidMode">Bola rejimi</string>
   <string name="kidModeIsEnabled">Bola rejimi yoqilgan.</string>
   <string name="kidModeExplanation">Bu xavfsizlik uchun. Bola rejimida saytdagi barcha muloqot imkoniyatlari oʻchirib qoʻyiladi. Farzandlaringizni va oʻquvchilaringizni boshqa internet foydalanuvchilaridan himoya qilishni istasangiz ushbu rejimni yoqing.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">Farzandlaringiz xavfsizligini bildirish uchun bola rejimida Lichess logotipi %s belgisi bilan koʻrsatiladi.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">Farzandlaringiz xavfsizligini bildirish uchun bola rejimida Logik logotipi %s belgisi bilan koʻrsatiladi.</string>
   <string name="askYourChessTeacherAboutLiftingKidMode">Akkauntingiz nazorat ostida. Bola rejimini oʻchirish uchun shaxmat murabbiyingizga murojaat qiling.</string>
   <string name="enableKidMode">Bola rejimini yoqish</string>
   <string name="disableKidMode">Bola rejimini oʻchirish</string>
@@ -933,7 +933,7 @@ Oʻynayotgan doʻstlar: %2$s</string>
   <string name="tryToWin">Har bir oʻyinda yutishga uchun harakat qiling (yoki hech boʻlmaganda duranga).</string>
   <string name="resignLostGames">Yutqazilgan oʻyinlarda taslim boʻling (vaqtni ataylab tugatmang).</string>
   <string name="temporaryInconvenience">Vaqtinchalik noqulayliklar uchun uzr soʻraymiz</string>
-  <string name="wishYouGreatGames">va lichess.org saytida maroqli oʻyinlar tilaymiz.</string>
+  <string name="wishYouGreatGames">va play.kalugalogic.ru saytida maroqli oʻyinlar tilaymiz.</string>
   <string name="thankYouForReading">Eʻtiboringiz uchun rahmat!</string>
   <string name="lifetimeScore">Umumiy hisob</string>
   <string name="currentMatchScore">Joriy match hisobi</string>
@@ -979,7 +979,7 @@ Oʻynayotgan doʻstlar: %2$s</string>
   <string name="congratsYouWon">Tabriklaymiz siz yutdingiz!</string>
   <string name="gameVsX">%1$sga qarshi o‘yin</string>
   <string name="resVsX">%1$s vs %2$s</string>
-  <string name="lostAgainstTOSViolator">Siz Lichess foydalanish shartlarini buzgan oʻyinchiga reyting ochkolarini yutqazdingiz</string>
+  <string name="lostAgainstTOSViolator">Siz Logik foydalanish shartlarini buzgan oʻyinchiga reyting ochkolarini yutqazdingiz</string>
   <string name="refundXpointsTimeControlY">%1$s %2$s reyting ochko qaytarildi.</string>
   <string name="timeAlmostUp">Vaqt tugashiga oz qoldi!</string>
   <string name="clickToRevealEmailAddress">[E‑pochta manzilini koʻrish uchun bosing]</string>
@@ -1039,7 +1039,7 @@ Oʻyinlarni boshlangʻich pozitsiyadan boshlash uchun boʻsh qoldiring.</string>
   <string name="ourEventTips">Tadbirlarni tashkillashtirish boʻyicha tavsiyalarimiz</string>
   <string name="instructions">Koʻrsatmalar</string>
   <string name="showMeEverything">Hammasini koʻrsat</string>
-  <string name="lichessPatronInfo">Lichess — bu xayriya loyihasi boʻlib, mutlaqo bepul va ochiq kodli dasturdir.
+  <string name="lichessPatronInfo">Logik — bu xayriya loyihasi boʻlib, mutlaqo bepul va ochiq kodli dasturdir.
 Loyiha faoliyati, uni rivojlantirish va barcha xarajatlar faqat foydalanuvchilarning ixtiyoriy donatlari orqali qoplanadi.
   </string>
   <string name="nothingToSeeHere">Ayni paytda bu yerda hech nima yoʻq.</string>

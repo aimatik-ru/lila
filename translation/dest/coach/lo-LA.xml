@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="lichessCoaches">ຄູຝຶກ Lichess</string>
-  <string name="lichessCoach">ຄູຝຶກ Lichess</string>
+  <string name="lichessCoaches">ຄູຝຶກ Logik</string>
+  <string name="lichessCoach">ຄູຝຶກ Logik</string>
   <string name="areYouCoach">ເຈົ້າແມ່ນຄູຝຶກໝາກຮຸກທີ່ເກັ່ງທີ່ມີ %s ບໍ?</string>
   <string name="nmOrFideTitle" comment="nmOrFideTitle&#10;&#10;Part of sentence &quot;Are you a great chess coach with a NM or FIDE title?&quot;&#10;&#10;The text links to our title verification page: https://lichess.org/help/master">ຕຳແໜ່ງ NM ຫຼື FIDE</string>
   <string name="confirmTitle">ຢືນຢັນຕຳແໜ່ງຂອງທ່ານຢູ່ບ່ອນນີ້ ແລະ ພວກເຮົາຈະກວດສອບໃບສະໝັກຂອງທ່ານ.</string>
@@ -14,7 +14,7 @@
   <string name="accepting">ຮັບນັກຮຽນ</string>
   <string name="notAccepting">ຍັງບໍ່ທັນຮັບນັກຮຽນໃນເວລານີ້</string>
   <string name="xCoachesStudents">%s ສອນນັກຮຽນໝາກຮຸກ</string>
-  <string name="viewXProfile">ເບິ່ງໂປຣໄຟລ໌ Lichess ຂອງ %s</string>
+  <string name="viewXProfile">ເບິ່ງໂປຣໄຟລ໌ Logik ຂອງ %s</string>
   <string name="sendPM">ສົ່ງຂໍ້ຄວາມສ່ວນຕົວ</string>
   <string name="aboutMe">ກ່ຽວກັບຂ້ອຍ</string>
   <string name="playingExperience">ປະສົບການການຫຼິ້ນ</string>
@@ -26,5 +26,5 @@
   <string name="youtubeVideos">ວິດີໂອ YouTube</string>
   <string name="allCountries">ທຸກປະເທດ</string>
   <string name="lastLogin">ເຂົ້າສູ່ລະບົບຫຼ້າສຸດ</string>
-  <string name="lichessRating">ຄະແນນ Lichess</string>
+  <string name="lichessRating">ຄະແນນ Logik</string>
 </resources>

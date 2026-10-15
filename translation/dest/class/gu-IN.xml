@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="lichessClasses">કલાસ્સેસ </string>
-  <string name="teachClassesOfChessStudents">Lichess ક્લાસીસ ટૂલ સ્યુટ વડે ચેસના વિદ્યાર્થીઓને વર્ગો શીખવો.</string>
+  <string name="teachClassesOfChessStudents">Logik ક્લાસીસ ટૂલ સ્યુટ વડે ચેસના વિદ્યાર્થીઓને વર્ગો શીખવો.</string>
   <string name="features">સુવિધાઓ</string>
   <string name="quicklyGenerateSafeUsernames">વિદ્યાર્થીઓ માટે ઝડપથી સુરક્ષિત વપરાશકર્તાનામ અને પાસવર્ડ જનરેટ કરો</string>
   <string name="trackStudentProgress">રમતો અને કોયડાઓમાં વિદ્યાર્થીઓની પ્રગતિ ટ્રૅક કરો</string>
   <string name="messageAllStudents">બધા વિદ્યાર્થીઓને નવા વર્ગ સામગ્રી વિશે સંદેશ આપો.</string>
   <string name="freeForAllForever">બધા માટે ૧૦૦% મફત, કાયમ માટે, કોઈ જાહેરાતો કે ટ્રેકર વિના</string>
-  <string name="applyToBeLichessTeacher">Lichess શિક્ષક બનવા માટે અરજી કરો</string>
+  <string name="applyToBeLichessTeacher">Logik શિક્ષક બનવા માટે અરજી કરો</string>
   <string name="noClassesYet">હજુ સુધી કોઈ વર્ગો નથી.</string>
   <string name="teachersX">શિક્ષકો: %s</string>
   <string name="newClass">નવો વર્ગ</string>
@@ -23,7 +23,7 @@
   <string name="classDescription">વર્ગ વર્ણન</string>
   <string name="visibleByBothStudentsAndTeachers">વર્ગના શિક્ષકો અને વિદ્યાર્થીઓ બંને દ્વારા દૃશ્યમાન</string>
   <string name="teachersOfTheClass">વર્ગના શિક્ષકો</string>
-  <string name="addLichessUsernames">શિક્ષક તરીકે આમંત્રિત કરવા માટે Lichess વપરાશકર્તાનામો ઉમેરો. દરેક લાઇનમાં એક.</string>
+  <string name="addLichessUsernames">શિક્ષક તરીકે આમંત્રિત કરવા માટે Logik વપરાશકર્તાનામો ઉમેરો. દરેક લાઇનમાં એક.</string>
   <string name="resetPassword">પાસવર્ડ રીસેટ કરો</string>
   <string name="makeSureToCopy">પાસવર્ડ હમણાં જ કોપી કરી લો અથવા લખી લો. તમે તેને ફરી ક્યારેય જોઈ શકશો નહીં!</string>
   <string name="passwordX">પાસવર્ડ: %s</string>
@@ -32,22 +32,22 @@
   <string name="realName">સાચું નામ</string>
   <string name="privateWillNeverBeShown">ખાનગી. વર્ગની બહાર ક્યારેય બતાવવામાં આવશે નહીં. વિદ્યાર્થી કોણ છે તે યાદ રાખવામાં મદદ કરે છે.</string>
   <string name="addStudent">વિદ્યાર્થી ઉમેરો</string>
-  <string name="lichessProfileXCreatedForY">%2$s માટે Lichess પ્રોફાઇલ %1$s બનાવવામાં આવી.</string>
+  <string name="lichessProfileXCreatedForY">%2$s માટે Logik પ્રોફાઇલ %1$s બનાવવામાં આવી.</string>
   <string name="studentCredentials">વિદ્યાર્થી: %1$s
 વપરાશકર્તા નામ: %2$s
 પાસવર્ડ: %3$s</string>
-  <string name="inviteALichessAccount">Lichess એકાઉન્ટને આમંત્રિત કરો</string>
-  <string name="inviteDesc1">જો વિદ્યાર્થી પાસે પહેલેથી જ Lichess એકાઉન્ટ છે, તો તમે તેમને વર્ગમાં આમંત્રિત કરી શકો છો.</string>
-  <string name="inviteDesc2">તેમને Lichess પર એક સંદેશ પ્રાપ્ત થશે જેમાં વર્ગમાં જોડાવા માટે એક લિંક હશે.</string>
+  <string name="inviteALichessAccount">Logik એકાઉન્ટને આમંત્રિત કરો</string>
+  <string name="inviteDesc1">જો વિદ્યાર્થી પાસે પહેલેથી જ Logik એકાઉન્ટ છે, તો તમે તેમને વર્ગમાં આમંત્રિત કરી શકો છો.</string>
+  <string name="inviteDesc2">તેમને Logik પર એક સંદેશ પ્રાપ્ત થશે જેમાં વર્ગમાં જોડાવા માટે એક લિંક હશે.</string>
   <string name="inviteDesc3">મહત્વપૂર્ણ: ફક્ત એવા વિદ્યાર્થીઓને જ આમંત્રિત કરો જે તમારા પરિચિત હોય અને જેઓ સક્રિયપણે વર્ગમાં જોડાવા માંગે છે.</string>
   <string name="inviteDesc4">મનસ્વી ખેલાડીઓને ક્યારેય અવાંછિત આમંત્રણો મોકલશો નહીં.</string>
-  <string name="createANewLichessAccount">નવું Lichess એકાઉન્ટ બનાવો</string>
-  <string name="createDesc1">જો વિદ્યાર્થી પાસે હજુ સુધી Lichess એકાઉન્ટ નથી, તો તમે તેમના માટે અહીં એક એકાઉન્ટ બનાવી શકો છો.</string>
+  <string name="createANewLichessAccount">નવું Logik એકાઉન્ટ બનાવો</string>
+  <string name="createDesc1">જો વિદ્યાર્થી પાસે હજુ સુધી Logik એકાઉન્ટ નથી, તો તમે તેમના માટે અહીં એક એકાઉન્ટ બનાવી શકો છો.</string>
   <string name="createDesc2">કોઈ ઈમેલ એડ્રેસની જરૂર નથી. એક પાસવર્ડ જનરેટ થશે, અને તમારે તે વિદ્યાર્થીને મોકલવો પડશે જેથી તેઓ લોગ ઇન કરી શકે.</string>
   <string name="createDesc3">મહત્વપૂર્ણ: વિદ્યાર્થી પાસે બહુવિધ ખાતા ન હોવા જોઈએ.</string>
   <string name="createDesc4">જો તેમની પાસે પહેલેથી જ એક હોય, તો તેના બદલે આમંત્રણ ફોર્મનો ઉપયોગ કરો.</string>
   <string name="createStudentWarning">ફક્ત વાસ્તવિક વિદ્યાર્થીઓ માટે જ એકાઉન્ટ બનાવો. આનો ઉપયોગ તમારા માટે બહુવિધ એકાઉન્ટ બનાવવા માટે કરશો નહીં. તમારા પર પ્રતિબંધ મૂકવામાં આવશે.</string>
-  <string name="lichessUsername">Lichess વપરાશકર્તા નામ</string>
+  <string name="lichessUsername">Logik વપરાશકર્તા નામ</string>
   <string name="generateANewUsername">નવું વપરાશકર્તા નામ જનરેટ કરો</string>
   <string name="welcomeToClass">તમારા વર્ગમાં આપનું સ્વાગત છે: %s.
 વર્ગને ઍક્સેસ કરવા માટેની લિંક અહીં છે.</string>
@@ -106,8 +106,8 @@
   <string name="youAcceptedThisInvitation">તમે આ આમંત્રણ સ્વીકાર્યું.</string>
   <string name="youDeclinedThisInvitation">તમે આ આમંત્રણ નકાર્યું.</string>
   <string name="orSeparator" comment="Used as separator between invite sections. Shown as large '~ or ~'.">અથવા</string>
-  <string name="createMultipleAccounts">એકસાથે અનેક Lichess એકાઉન્ટ બનાવો</string>
-  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">તમે વિદ્યાર્થીઓના નામોની યાદીમાંથી બહુવિધ Lichess એકાઉન્ટ્સ બનાવવા માટે %s પણ વાપરી શકો છો.</string>
+  <string name="createMultipleAccounts">એકસાથે અનેક Logik એકાઉન્ટ બનાવો</string>
+  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">તમે વિદ્યાર્થીઓના નામોની યાદીમાંથી બહુવિધ Logik એકાઉન્ટ્સ બનાવવા માટે %s પણ વાપરી શકો છો.</string>
   <string name="useThisForm" comment="Link text in multipleAccsFromDescription">આ ફોર્મનો ઉપયોગ કરો</string>
   <string name="maxStudentsNote" comment="%1$s will be replaced with a large number (currently 100).\n%2$s is a link and will be replaced with the translation of createMoreClasses. Make sure both strings fit together.">નોંધ કરો કે એક વર્ગમાં %1$s વિદ્યાર્થીઓ હોઈ શકે છે. વધુ વિદ્યાર્થીઓનું સંચાલન કરવા માટે, %2$s.</string>
   <string name="createMoreClasses" comment="Link text in maxStudentsNote">વધુ વર્ગો બનાવો</string>

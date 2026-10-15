@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="lichessCoaches">Mga Tagapagturo sa Lichess</string>
-  <string name="lichessCoach">Mga Tagapagturo sa Lichess</string>
+  <string name="lichessCoaches">Mga Tagapagturo sa Logik</string>
+  <string name="lichessCoach">Mga Tagapagturo sa Logik</string>
   <string name="areYouCoach">Magaling ka ba magturo ng chess na mayroong %s?</string>
   <string name="nmOrFideTitle" comment="nmOrFideTitle&#10;&#10;Part of sentence &quot;Are you a great chess coach with a NM or FIDE title?&quot;&#10;&#10;The text links to our title verification page: https://lichess.org/help/master">NM o FIDE titulo</string>
   <string name="confirmTitle">Kumpirmahin ang iyong titulo dito at ito ay aming susuriin ang iyong aplikasyon.</string>
@@ -14,7 +14,7 @@
   <string name="accepting">Tumatanggap ng mga estudyante</string>
   <string name="notAccepting">Hindi tumatanggap ng estudyante sa ngayon</string>
   <string name="xCoachesStudents">%s tagapagturo ng mga estudyante</string>
-  <string name="viewXProfile">Tingnan %s Lichess profile</string>
+  <string name="viewXProfile">Tingnan %s Logik profile</string>
   <string name="sendPM">Magpadala ng pribadong mensahe</string>
   <string name="aboutMe">Tungkol sa akin</string>
   <string name="playingExperience">Karanasan sa paglalaro</string>
@@ -26,5 +26,5 @@
   <string name="youtubeVideos">Mga bidyo sa YouTube</string>
   <string name="allCountries">Lahat ng bansa</string>
   <string name="lastLogin">Huling login</string>
-  <string name="lichessRating">Lichess marka</string>
+  <string name="lichessRating">Logik marka</string>
 </resources>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="lichessStreamers">Transmetues Lichess-i</string>
-  <string name="lichessStreamer">Transmetues Lichess</string>
+  <string name="lichessStreamers">Transmetues Logik-i</string>
+  <string name="lichessStreamer">Transmetues Logik</string>
   <string name="live">Drejtpërsëdrejti!</string>
   <string name="offline">Jashtë Linje</string>
   <string name="currentlyStreaming">Tani po transmetohet: %s</string>
   <string name="lastStream">Transmetimi i fundit %s</string>
-  <string name="becomeStreamer">Bëhuni një transmetues në Lichess</string>
+  <string name="becomeStreamer">Bëhuni një transmetues në Logik</string>
   <string name="doYouHaveStream">Keni një kanal Twitch ose YouTube?</string>
   <string name="hereWeGo">Ja ku jemi!</string>
   <string name="allStreamers">Krejt transmetuesit</string>
@@ -15,26 +15,26 @@
   <string name="downloadKit">Shkarkoni mjetet e transmetimit</string>
   <string name="xIsStreaming">%s po transmeton</string>
   <string name="rules">Rregulla transmetimi</string>
-  <string name="rule1">Përfshini fjalëkyçen “lichess.org” në titullin e transmetimit dhe përdorni kategorinë “Shah”, kur transmetoni në Lichess.</string>
-  <string name="rule2">Hiqeni fjalëkyçen kur transmetoni gjëra që s’kanë të bëjnë me Lichess-in.</string>
-  <string name="rule3">Lichess-i do ta pikasë automatikisht transmetimin tuaj dhe do të aktivizojë anët vijuese:</string>
+  <string name="rule1">Përfshini fjalëkyçen “play.kalugalogic.ru” në titullin e transmetimit dhe përdorni kategorinë “Shah”, kur transmetoni në Logik.</string>
+  <string name="rule2">Hiqeni fjalëkyçen kur transmetoni gjëra që s’kanë të bëjnë me Logik-in.</string>
+  <string name="rule3">Logik-i do ta pikasë automatikisht transmetimin tuaj dhe do të aktivizojë anët vijuese:</string>
   <string name="rule4" comment="the resulting message is: Read our streaming Fairplay FAQ to ensure a fair play for everyone in your stream">Lexoni %s për të garantuar lojë të drejtë për këdo gjatë transmetimit tuaj</string>
   <string name="streamingFairplayFAQ">PBR tonat mbi lojë të drejtë në transmetime</string>
   <string name="perks">Përfitime transmetimi me fjalëkyç</string>
-  <string name="perk1">Merrni një ikonë të ndezur transmetuesi te profili juaj në Lichess.</string>
+  <string name="perk1">Merrni një ikonë të ndezur transmetuesi te profili juaj në Logik.</string>
   <string name="perk2">Përfitoni kalim në krye të listës së transmetuesve.</string>
-  <string name="perk3">Njoftoni ndjekësit tuaj të Lichess-it.</string>
+  <string name="perk3">Njoftoni ndjekësit tuaj të Logik-it.</string>
   <string name="perk4">Shfaqeni transmetimin tuaj në lojëra, turne dhe mësime.</string>
   <string name="approved">Transmetimi juaj u miratua.</string>
   <string name="pendingReview">Transmetimi juaj po shqyrtohet nga moderatorët.</string>
   <string name="pleaseFillIn">Ju lutemi, plotësoni hollësitë tuaja si transmetuesit dhe ngarkoni një fotografi.</string>
   <string name="submitForReview">Parashtrojeni për shqyrtim</string>
-  <string name="streamerLanguageSettings">Faqja e transmetuesit Lichess aplikon për publikun tuaj gjuhën e dhënë nga platforma juaj e transmetimit. Caktoni gjuhën e saktë parazgjedhje për transmetime shahu nga ju, te aplikacioni apo shërbimi që përdorni për të transmetuar.</string>
+  <string name="streamerLanguageSettings">Faqja e transmetuesit Logik aplikon për publikun tuaj gjuhën e dhënë nga platforma juaj e transmetimit. Caktoni gjuhën e saktë parazgjedhje për transmetime shahu nga ju, te aplikacioni apo shërbimi që përdorni për të transmetuar.</string>
   <string name="pleaseAllow">Ju lutemi, lejoni deri në 72 orë, para se të miratohen stema juaj si transmetues dhe transmetimi juaj.</string>
-  <string name="chooseYoutubeChannel">Zgjidhni kanalin YouTube që do të përdorni në Lichess.</string>
+  <string name="chooseYoutubeChannel">Zgjidhni kanalin YouTube që do të përdorni në Logik.</string>
   <string name="connect">Lidhu</string>
   <string name="disconnect">Shkëputu</string>
-  <string name="streamerName">Emri i transmetuesit tuaj në Lichess</string>
+  <string name="streamerName">Emri i transmetuesit tuaj në Logik</string>
   <plurals name="keepItShort">
     <item quantity="one">Bjerini shkurt: %s shenjë e shumta</item>
     <item quantity="other">Bjerini shkurt: %s shenja e shumta</item>

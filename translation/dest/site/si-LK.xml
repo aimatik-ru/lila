@@ -227,7 +227,7 @@
   <string name="error.namePassword">ඔබේ නම මුරපදය නොවිය යුතුයි.</string>
   <string name="blankedPassword">ඔබ එකම මුරපදය වෙනත් අඩවියක යොදාගෙන ඇති අතර, එම අඩවිය තර්ජනයට ලක්ව ඇත. ඔබේ ගිණුමේ ආරක්ෂාව සහතික කිරීම සඳහා, අපට ඔබ නව මුරපදය සාදන්න අවශ්‍ය වේ.</string>
   <string name="youAreLeavingLichess">ඔබ පිට වීමටයි යන්නේ</string>
-  <string name="neverTypeYourPassword">ඔබේ Lichess මුරපදය වෙනත් වෙබ් අඩවියක ටයිප් නොකරන්න!</string>
+  <string name="neverTypeYourPassword">ඔබේ Logik මුරපදය වෙනත් වෙබ් අඩවියක ටයිප් නොකරන්න!</string>
   <string name="proceedToX">%s වෙත යන්න</string>
   <string name="passwordSuggestion">වෙනත් කෙනෙකු විසින් යෝජනා කරන ලද මුරපදයක් නොසකසන්න. ඔවුන් ඔබේ ගිණුම සොරකම් කිරීමට එය භාවිතා කරනු ඇත.</string>
   <string name="emailSuggestion">වෙනත් කෙනෙකු විසින් යෝජනා කරන ලද ඊමේල් ලිපිනයක් නොසකසන්න. ඔවුන් ඔබේ ගිණුම සොරකම් කිරීමට එය භාවිතා කරනු ඇත.</string>
@@ -329,7 +329,7 @@
     <item quantity="one">තප්පර %s දීම</item>
     <item quantity="other">තප්පර %s දීම</item>
   </plurals>
-  <string name="thisAccountViolatedTos">මෙම ගිණුම Lichess සේවා කොන්දේසි උල්ලංඝනය කර ඇත</string>
+  <string name="thisAccountViolatedTos">මෙම ගිණුම Logik සේවා කොන්දේසි උල්ලංඝනය කර ඇත</string>
   <string name="openingExplorerAndTablebase">Opening explorer &amp; වගු පදනම</string>
   <string name="takeback">ආපසු ගැනීම</string>
   <string name="proposeATakeback">ආපසු ගැනීමක් යෝජනා කරන්න</string>
@@ -506,7 +506,7 @@
   <string name="oneUrlPerLine">පේළියකට එක් url එකක් බැගින්.</string>
   <string name="inlineNotation">පේළිගත අංකනය</string>
   <string name="makeAStudy">සුරක්ෂිතව තබාගැනීමට සහ බෙදාගැනීම සඳහා, අධ්‍යයනයක් කිරීමට සලකා බලන්න.</string>
-  <string name="previouslyOnLichessTV">කලින් Lichess TV එකේ</string>
+  <string name="previouslyOnLichessTV">කලින් Logik TV එකේ</string>
   <string name="onlinePlayers">ඔන්ලයින් ක්‍රීඩකයන්</string>
   <string name="activePlayers">ක්‍රියාකාරි ක්‍රීඩකයන්</string>
   <string name="bewareTheGameIsRatedButHasNoClock">පරිස්සම් වන්න, ක්‍රීඩාව ශ්‍රේණිගත කර ඇති නමුත් ඔරලෝසුවක් නොමැත!</string>
@@ -618,7 +618,7 @@
   <string name="simulClockHint">ෆිෂර් ඔරලෝසු සැකසුම. ඔබ වැඩිපුර ක්‍රීඩකයින් භාර ගන්නා තරමට, ඔබට වැඩි කාලයක් අවශ්‍ය විය හැකිය.</string>
   <string name="simulAddExtraTime">ඔබට සිමියුලය සමඟ සාර්ථකව කටයුතු කිරීමට උපකාර කිරීම සඳහා ඔබේ ඔරලෝසුවට අමතර ආරම්භක වේලාවක් එක් කළ හැක.</string>
   <string name="simulAddExtraTimePerPlayer">සිමියුලයට සම්බන්ධ වන එක් එක් ක්‍රීඩකයා සඳහා ඔබේ ඔරලෝසුවට ආරම්භක වේලාව එක් කරන්න.</string>
-  <string name="lichessTournaments">Lichess තරඟාවලි</string>
+  <string name="lichessTournaments">Logik තරඟාවලි</string>
   <string name="tournamentFAQ">තරඟාවලිය FAQ</string>
   <string name="timeBeforeTournamentStarts">තරඟාවලිය</string>
   <string name="averageCentipawnLoss">සාමාන්‍ය සෙන්ටිපාන් හානි

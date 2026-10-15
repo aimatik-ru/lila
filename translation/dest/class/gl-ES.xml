@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="lichessClasses">Clases</string>
-  <string name="teachClassesOfChessStudents">Imparte clases de xadrez coa ferramenta Clases de Lichess.</string>
+  <string name="teachClassesOfChessStudents">Imparte clases de xadrez coa ferramenta Clases de Logik.</string>
   <string name="features">Características</string>
   <string name="quicklyGenerateSafeUsernames">Xera rapidamente nomes de usuario e contrasinais seguros para os estudantes</string>
   <string name="trackStudentProgress">Segue o progreso dos alumnos nas partidas e crebacabezas</string>
   <string name="messageAllStudents">Envía unha mensaxe a todos os estudantes sobre o novo material da clase</string>
   <string name="freeForAllForever">100% libre e gratuíto para todo o mundo, para sempre, sen anuncios nin rastrexadores</string>
-  <string name="applyToBeLichessTeacher">Solicita ser Profesor de Lichess</string>
+  <string name="applyToBeLichessTeacher">Solicita ser Profesor de Logik</string>
   <string name="noClassesYet">Aínda non hai clases.</string>
   <string name="teachersX">Profesores: %s</string>
   <string name="newClass">Nova clase</string>
@@ -23,7 +23,7 @@
   <string name="classDescription">Descrición da clase</string>
   <string name="visibleByBothStudentsAndTeachers">Visible para os profesores e os alumnos</string>
   <string name="teachersOfTheClass">Profesores desta clase</string>
-  <string name="addLichessUsernames">Engadir usuarios de Lichess para convidalos como profesores. Un por liña.</string>
+  <string name="addLichessUsernames">Engadir usuarios de Logik para convidalos como profesores. Un por liña.</string>
   <string name="resetPassword">Restablecer o contrasinal</string>
   <string name="makeSureToCopy">Asegúrate de copiar agora o contrasinal. Non o volverás ver!</string>
   <string name="passwordX">Contrasinal: %s</string>
@@ -32,22 +32,22 @@
   <string name="realName">Nome real</string>
   <string name="privateWillNeverBeShown">Privado. Nunca se amosará fóra da clase. Axuda a lembrar quen é cada alumno.</string>
   <string name="addStudent">Engadir alumno</string>
-  <string name="lichessProfileXCreatedForY">Perfil de Lichess %1$s creado para %2$s.</string>
+  <string name="lichessProfileXCreatedForY">Perfil de Logik %1$s creado para %2$s.</string>
   <string name="studentCredentials">Alumno: %1$s
 Nome de usuario: %2$s
 Contrasinal %3$s</string>
-  <string name="inviteALichessAccount">Invitar unha conta de Lichess</string>
-  <string name="inviteDesc1">Se o alumno xa ten conta en Lichess, pódelo invitar á clase.</string>
-  <string name="inviteDesc2">Recibirán unha mensaxe en Lichess coa ligazón para unirse á clase.</string>
+  <string name="inviteALichessAccount">Invitar unha conta de Logik</string>
+  <string name="inviteDesc1">Se o alumno xa ten conta en Logik, pódelo invitar á clase.</string>
+  <string name="inviteDesc2">Recibirán unha mensaxe en Logik coa ligazón para unirse á clase.</string>
   <string name="inviteDesc3">Importante: invita só estudantes que coñezas e queiran unirse á clase.</string>
   <string name="inviteDesc4">Nunca envíes invitacións a xogadores que non as pediran.</string>
-  <string name="createANewLichessAccount">Crear unha nova conta en Lichess</string>
-  <string name="createDesc1">Se o alumno non ten conta en Lichess, podes crearlla desde aquí.</string>
+  <string name="createANewLichessAccount">Crear unha nova conta en Logik</string>
+  <string name="createDesc1">Se o alumno non ten conta en Logik, podes crearlla desde aquí.</string>
   <string name="createDesc2">Non se precisa enderezo de correo electrónico. Xerarase un contrasinal que debes pasarlle ó alumno para que poida acceder.</string>
   <string name="createDesc3">Importante: os alumnos non deben ter máis dunha conta.</string>
   <string name="createDesc4">Se xa a teñen, usa o formulario de invitación.</string>
   <string name="createStudentWarning">Só podes crear contas para estudantes reais. Non empregues esta función para crear múltiples contas ó teu nome. Poderías ser suspendido.</string>
-  <string name="lichessUsername">Nome de usuario en Lichess</string>
+  <string name="lichessUsername">Nome de usuario en Logik</string>
   <string name="generateANewUsername">Xerar un novo nome de usuario</string>
   <string name="welcomeToClass">Benvido á túa clase: %s
 Aquí está a ligazón para acceder.</string>
@@ -106,8 +106,8 @@ Amosará unha liña separadora horizontal.</string>
   <string name="youAcceptedThisInvitation">Aceptaches esta invitación.</string>
   <string name="youDeclinedThisInvitation">Rexeitaches esta invitación.</string>
   <string name="orSeparator" comment="Used as separator between invite sections. Shown as large '~ or ~'.">ou</string>
-  <string name="createMultipleAccounts">Crea múltiples contas de Lichess á vez</string>
-  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">Tamén podes %s para crear varias contas de Lichess a partir dunha lista de nomes de estudantes.</string>
+  <string name="createMultipleAccounts">Crea múltiples contas de Logik á vez</string>
+  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">Tamén podes %s para crear varias contas de Logik a partir dunha lista de nomes de estudantes.</string>
   <string name="useThisForm" comment="Link text in multipleAccsFromDescription">empregar este formulario</string>
   <string name="maxStudentsNote" comment="%1$s will be replaced with a large number (currently 100).\n%2$s is a link and will be replaced with the translation of createMoreClasses. Make sure both strings fit together.">Ten en conta que unha clase pode ter ata %1$s estudantes. Para administrar máis estudantes, %2$s.</string>
   <string name="createMoreClasses" comment="Link text in maxStudentsNote">crea máis clases</string>
@@ -122,7 +122,7 @@ Amosará unha liña separadora horizontal.</string>
   <string name="allowMessagingBetweenStudentsDesc">Só se aplica ás contas que creaches para os teus estudantes.</string>
   <string name="quickLoginCode">Código de inicio de sesión rápida</string>
   <string name="quickLoginCodes">Códigos de inicio de sesión rápida</string>
-  <string name="quickLoginCodesDesc1" comment="String is a URL">Emprega estes códigos en %s para que os teus estudantes inicien a sesión en Lichess.</string>
-  <string name="quickLoginCodesDesc2">Cando os códigos expiren os teus estudantes permanecerán na sesión ata que saian manualmente do Lichess.</string>
+  <string name="quickLoginCodesDesc1" comment="String is a URL">Emprega estes códigos en %s para que os teus estudantes inicien a sesión en Logik.</string>
+  <string name="quickLoginCodesDesc2">Cando os códigos expiren os teus estudantes permanecerán na sesión ata que saian manualmente do Logik.</string>
   <string name="expirationInMomentFromNow" comment="String is the translation of, for example, 'in 2 hours'">Caducan %s</string>
 </resources>

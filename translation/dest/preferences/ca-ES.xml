@@ -65,8 +65,8 @@
   <string name="notifyTournamentStartReminders" comment="notifyTournamentSoon&#10;&#10;A notification setting - notifies players if a tournament is starting soon.">Recordatori inici tornejos</string>
   <string name="notifyBroadcasts">Retransmissions</string>
   <string name="notifyTimeAlarm">S\'està esgotant el rellotge d\'una partida per correspondència</string>
-  <string name="notifyBell">Notificació emergent a Lichess</string>
-  <string name="notifyPush">Notifica un dispositiu quan no esteu a Lichess</string>
+  <string name="notifyBell">Notificació emergent a Logik</string>
+  <string name="notifyPush">Notifica un dispositiu quan no esteu a Logik</string>
   <string name="notifyWeb">Navegador</string>
   <string name="notifyDevice">Dispositiu</string>
   <string name="bellNotificationSound">So de notificació</string>

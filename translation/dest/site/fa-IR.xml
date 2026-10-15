@@ -263,7 +263,7 @@
   <string name="emailSent">ما رایانامه‌ای به %s فرستاده‌ایم.</string>
   <string name="emailCanTakeSomeTime">ممکن است کمی طول بکشد تا برسد.</string>
   <string name="refreshInboxAfterFiveMinutes">۵ دقیقه بصبرید و صندوق رایانامه‌تان را تازه کنید.</string>
-  <string name="checkSpamOrJunkFolder" comment="checkSpamFolder&#10;It = The confirmation email">اگر رایانامهٔ تایید دریافت نکردید، پوشه هرزنامه یا بُنجُل خود را بررسید. حتماً پیام‌های lichess.org را ایمن و \"نا-هرزنامه\" مشخص کنید تا بتوانید از ارتباطاتِ مهم آگاه شوید.</string>
+  <string name="checkSpamOrJunkFolder" comment="checkSpamFolder&#10;It = The confirmation email">اگر رایانامهٔ تایید دریافت نکردید، پوشه هرزنامه یا بُنجُل خود را بررسید. حتماً پیام‌های play.kalugalogic.ru را ایمن و \"نا-هرزنامه\" مشخص کنید تا بتوانید از ارتباطاتِ مهم آگاه شوید.</string>
   <string name="sendEmailForAccountVerification">اگر نمی‌توانید رایانامهٔ تاییدتان را بیابید، رایانامه‌ای به %s ارسال کنید تا حساب‌تان را تایید کنیم.</string>
   <string name="accountConfirmed">کاربر با نام %s با موفقیت تایید شده است.</string>
   <string name="accountCanLogin">شما می توانید همین الان با نام %s وارد شوید.</string>
@@ -545,7 +545,7 @@
   <string name="inlineNotation">نشانه‌گذاریِ درخط</string>
   <string name="makeAStudy">برای نگهداری مطمئن و همرسانی، ساخت یک مطالعه را در نظر بگیرید.</string>
   <string name="clearLocalData">پاکیدنِ دادهٔ محلی</string>
-  <string name="previouslyOnLichessTV">بازی پیشین در Lichess</string>
+  <string name="previouslyOnLichessTV">بازی پیشین در Logik</string>
   <string name="onlinePlayers">بازیکنان بَرخط</string>
   <string name="activePlayers">بازیکنان فعال</string>
   <string name="bewareTheGameIsRatedButHasNoClock">مراقب باشید،این بازی رتبه بندی میشود اما بدون ساعت!</string>
@@ -558,11 +558,11 @@
   <string name="autoSwitch">تعویض خودکار</string>
   <string name="puzzles">معما</string>
   <string name="onlineBots">رَت‌های بَرخط</string>
-  <string name="aboutBotsOnLichess">درباره رَت‌ها در Lichess</string>
+  <string name="aboutBotsOnLichess">درباره رَت‌ها در Logik</string>
   <string name="featuredBots">رَت‌های آرَنگیده</string>
   <string name="tryPlayingTheseInnovativeChessEngines">این موتورهای شطرنج نوآورانه را بیازمایید! آنها موتورهای دلپسندِ ما هستند.</string>
   <string name="communityBots">رَت‌های همدارگان</string>
-  <string name="moreChessEnginesCreatedByTheLichessCommunity">موتورهای شطرنجِ بیشتری توسط همدارگانِ Lichess ایجاد شده‌اند. آنها را ایجادگران‌شان میزبانی می‌کنند و ممکن است همیشه بَرخط نباشند.</string>
+  <string name="moreChessEnginesCreatedByTheLichessCommunity">موتورهای شطرنجِ بیشتری توسط همدارگانِ Logik ایجاد شده‌اند. آنها را ایجادگران‌شان میزبانی می‌کنند و ممکن است همیشه بَرخط نباشند.</string>
   <string name="name">نام</string>
   <string name="description">شرح</string>
   <string name="descPrivate">توضیحات خصوصی</string>
@@ -699,7 +699,7 @@
   <string name="aboutX">درباره %s</string>
   <string name="xIsAFreeYLibreOpenSourceChessServer">وبگاه %1$s (%2$s) رایگان، آزاد، بی‌تبلیغ و با کارسازِ متن‌بازِ شطرنج است.</string>
   <string name="really">واقعاً</string>
-  <string name="lichessUpdates">روزامدهای Lichess</string>
+  <string name="lichessUpdates">روزامدهای Logik</string>
   <string name="contribute">مشارکت</string>
   <string name="changelog">تغییرشرح</string>
   <string name="termsOfService">شرایطِ استفاده</string>
@@ -729,7 +729,7 @@
   <string name="extraClockTimeForHost" comment="Appears on: https://lichess.org/simul/new&#10;&#10;Allows a simul host to select extra time for the simul.&#10;&#10;Please note this string used to state &quot;Host extra clock time&quot;, without the word &quot;initial&quot;">زمانِ اضافه برای میزبان:</string>
   <string name="simulAddExtraTimePerPlayer">به ازای پیوستنِ هر بازیکن به هَمگاه، به زمان اولیه‌تان بیفزایید.</string>
   <string name="simulHostExtraTimePerPlayer">زمان اضافه میزبان به ازای بازیکن</string>
-  <string name="lichessTournaments">مسابقات Lichess</string>
+  <string name="lichessTournaments">مسابقات Logik</string>
   <string name="tournamentFAQ">پرسش‌های پربسامد مسابقات راوان</string>
   <string name="timeBeforeTournamentStarts">زمان باقی مانده به شروع مسابقه</string>
   <string name="averageCentipawnLoss">میانگینِ تلفِ صدم‌پیاده</string>
@@ -782,7 +782,7 @@
   <string name="byRegisteringYouAgreeToBeBoundByOur">با ثبت‌نام، با %s موافقت می‌کنید.</string>
   <string name="readAboutOur">درباره %s ما بخوانید.</string>
   <string name="networkLagBetweenYouAndLichess">تاخیر شبکه میان شما و لیچس</string>
-  <string name="timeToProcessAMoveOnLichessServer">زمانِ پردازش یک حرکت در کارسازِ Lichess</string>
+  <string name="timeToProcessAMoveOnLichessServer">زمانِ پردازش یک حرکت در کارسازِ Logik</string>
   <string name="downloadAnnotated">بارگیری حرکت‌نویسی</string>
   <string name="downloadRaw">بارگیری خام</string>
   <string name="downloadImported">بارگیری درونبُرد</string>
@@ -917,7 +917,7 @@
     <item quantity="one">و پیش حرکت %s را حفظ کنید</item>
     <item quantity="other">و پیش حرکت های %s را حفظ کنید</item>
   </plurals>
-  <string name="showUnreadLichessMessage">شما یک پیام خصوصی از Lichess دریافت کرده‌اید.</string>
+  <string name="showUnreadLichessMessage">شما یک پیام خصوصی از Logik دریافت کرده‌اید.</string>
   <string name="readTheMessage" comment="'It' refers to a private message. This text follows after a different string which advises players they have received a private message from Lichess. For users, this is appears as a regular private message from the Lichess account: https://lichess.org/@/Lichess">خواندنِ پیام</string>
   <string name="sorry">متاسفم :(</string>
   <string name="weHadToTimeYouOutForAWhile">شما برای مدتی مسدود شدید.</string>
@@ -930,7 +930,7 @@
   <string name="tryToWin">در هر بازی برای پیروزی (یا حداقل تساوی) تلاش کنید.</string>
   <string name="resignLostGames">بازی های از دست رفته را انصراف دهید(نگذارید زمان تمام شود).</string>
   <string name="temporaryInconvenience">ما برای این مشکل موقت عذرخواهی می کنیم،</string>
-  <string name="wishYouGreatGames">و برای شما بازیهای عالی در lichess.org آرزو می کنیم.</string>
+  <string name="wishYouGreatGames">و برای شما بازیهای عالی در play.kalugalogic.ru آرزو می کنیم.</string>
   <string name="thankYouForReading">از اینکه متن را خواندید متشکریم!</string>
   <string name="lifetimeScore">امتیاز کل</string>
   <string name="currentMatchScore">امتیاز بازی فعلی</string>
@@ -976,7 +976,7 @@
   <string name="congratsYouWon">شادباش، شما بُردید!</string>
   <string name="gameVsX">بازی در برابر %1$s</string>
   <string name="resVsX">%1$s در برابر %2$s</string>
-  <string name="lostAgainstTOSViolator">شما برابر کسی که قانون‌های Lichess را نقض کرده، امتیاز درجه‌بندی از دست دادید</string>
+  <string name="lostAgainstTOSViolator">شما برابر کسی که قانون‌های Logik را نقض کرده، امتیاز درجه‌بندی از دست دادید</string>
   <string name="refundXpointsTimeControlY">پس‌دادن: %1$s امتیاز به درجه‌بندی %2$s.</string>
   <string name="timeAlmostUp">زمان نزدیک به پایان است!</string>
   <string name="clickToRevealEmailAddress">[برای آشکارسازی نشانیِ رایانامه بتِلیکید]</string>
@@ -1038,7 +1038,7 @@
   <string name="ourEventTips">پیشنهادهای ما برای برگزاری رویدادها</string>
   <string name="instructions">راهنما</string>
   <string name="showMeEverything">همه چیز را به من نشان بده</string>
-  <string name="lichessPatronInfo">وبگاهِ Lichess خیریه است و نرم‌افزار متن‌بازِ تمام‌رایگانی است. همهٔ هزینه‌های عملیات، توسعه و محتوا تنها از راهِ داشَن‌های کاربران تأمین می‌شود.</string>
+  <string name="lichessPatronInfo">وبگاهِ Logik خیریه است و نرم‌افزار متن‌بازِ تمام‌رایگانی است. همهٔ هزینه‌های عملیات، توسعه و محتوا تنها از راهِ داشَن‌های کاربران تأمین می‌شود.</string>
   <string name="nothingToSeeHere">فعلا هیچی اینجا نیست.</string>
   <string name="stats">آمار</string>
   <string name="accessibility">دسترسی</string>

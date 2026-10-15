@@ -160,6 +160,6 @@
   <string name="youCompletedThisLesson">恭喜！您完成了這個課程。</string>
   <string name="perPage">%s 每頁</string>
   <string name="getTheTour">需要幫助？查看導覽！</string>
-  <string name="welcomeToLichessStudyTitle">歡迎來到 Lichess 研究區！</string>
+  <string name="welcomeToLichessStudyTitle">歡迎來到 Logik 研究區！</string>
   <string name="blackDefeatWhiteCanNotWin">黑敗，但白無法取勝</string>
 </resources>

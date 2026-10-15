@@ -115,4 +115,4 @@ object TreeBuilder:
       root.addChild(branch.copy(children = branch.children.updateAllWith(_.setComp)).setComp)
 
   private def formatError(id: GameId, err: chess.ErrorStr) =
-    s"TreeBuilder https://lichess.org/$id ${err.value.linesIterator.toList.headOption}"
+    s"TreeBuilder https://play.kalugalogic.ru/$id ${err.value.linesIterator.toList.headOption}"

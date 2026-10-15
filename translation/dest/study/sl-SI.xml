@@ -174,7 +174,7 @@
   <string name="youCompletedThisLesson">Čestitke! Končali ste to lekcijo.</string>
   <string name="perPage">%s na stran</string>
   <string name="getTheTour">Potrebujete pomoč? Oglejte si ogled!</string>
-  <string name="welcomeToLichessStudyTitle">Dobrodošli v Lichess Study!</string>
+  <string name="welcomeToLichessStudyTitle">Dobrodošli v Logik Study!</string>
   <string name="welcomeToLichessStudyText">To je skupna tabla za analizo.&lt;br&gt;&lt;br&gt;Uporabite jo za analizo in označevanje iger,&lt;br&gt;razpravo o položajih s prijatelji,&lt;br&gt;in seveda za lekcije šaha!&lt;br&gt;&lt;br&gt;To je močno orodje, vzemimo si nekaj časa, da vidimo, kako deluje.</string>
   <string name="sharedAndSaveTitle" comment="As in: shared with other members and saved to database">V skupni rabi in shranjeno</string>
   <string name="sharedAndSavedText">Drugi člani lahko vidijo vaše poteze v realnem času!&lt;br&gt;Poleg tega je vse shranjeno za vedno.</string>
@@ -188,7 +188,7 @@
   <string name="annotatePositionTitle">Označite položaj</string>
   <string name="annotatePositionText">Kliknite !? gumb ali desni klik na seznam za premikanje na desni.&lt;br&gt;Glifi pripisov so v skupni rabi in shranjeni.</string>
   <string name="conclusionTitle">Hvala za vaš čas</string>
-  <string name="conclusionText">Najdete lahko svoje &lt;a href=\'/study/mine/hot\'&gt;prejšnje študije&lt;/a&gt; na strani vašega profila.&lt;br&gt;Obstaja tudi &lt;a href=\'//lichess.org/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way\'&gt;objava v spletnem dnevniku o študiju&lt;/a&gt;.&lt;br&gt;Izkušeni uporabniki bodo morda želeli pritisniti \"?\" za ogled bližnjic na tipkovnici.&lt;br&gt;Zabavajte se!</string>
+  <string name="conclusionText">Najdete lahko svoje &lt;a href=\'/study/mine/hot\'&gt;prejšnje študije&lt;/a&gt; na strani vašega profila.&lt;br&gt;Obstaja tudi &lt;a href=\'/\'&gt;objava v spletnem dnevniku o študiju&lt;/a&gt;.&lt;br&gt;Izkušeni uporabniki bodo morda želeli pritisniti \"?\" za ogled bližnjic na tipkovnici.&lt;br&gt;Zabavajte se!</string>
   <string name="createChapterTitle">Ustvarimo študijsko poglavje</string>
   <string name="createChapterText">Študija ima lahko več poglavij.&lt;br&gt;Vsako poglavje ima ločeno drevo premikov&lt;br&gt;in ga je mogoče ustvariti na različne načine.</string>
   <string name="fromInitialPositionTitle">Iz začetnega položaja</string>
@@ -196,13 +196,13 @@
   <string name="customPositionTitle">Položaj po meri</string>
   <string name="customPositionText">Nastavite desko po svoje.&lt;br&gt;Primerno za raziskovanje končnic.</string>
   <string name="loadGameFromTheWebTitle">Naložite igro s spleta</string>
-  <string name="loadGameFromTheWebText" comment="The special text tags must be retained in exact order, for example &amp;lt;br&amp;gt; must stay exactly as-is. You do not need to add spaces or new lines before or after them.&#10;&#10;Note that &quot;br&quot; in particular means &quot;line break&quot;. In other words, it will start a new line in the final text.">Prilepite URL igre &lt;br&amp;gt (kot je lichess.org/7fHIU0XI)&lt;br&amp;gt, da naložite poteze igre v poglavju.</string>
+  <string name="loadGameFromTheWebText" comment="The special text tags must be retained in exact order, for example &amp;lt;br&amp;gt; must stay exactly as-is. You do not need to add spaces or new lines before or after them.&#10;&#10;Note that &quot;br&quot; in particular means &quot;line break&quot;. In other words, it will start a new line in the final text.">Prilepite URL igre &lt;br&amp;gt (kot je play.kalugalogic.ru/7fHIU0XI)&lt;br&amp;gt, da naložite poteze igre v poglavju.</string>
   <string name="fromFenStringTitle">Iz niza FEN</string>
   <string name="fromFenStringText">Prilepite položaj v obliki zapisa FEN&lt;br&gt;&lt;i&gt;4k3/4rb2/8/7p/8/5Q2/1PP5/1K6 w&lt;/i&gt;&lt;br&gt; da začnete poglavje s položaja.</string>
   <string name="fromPgnGameTitle">Iz PGN igre</string>
   <string name="fromPgnGameText">Prilepite igro v formatu PGN.&lt;br&gt;da naložite poteze, komentarje in različice v poglavju.</string>
   <string name="variantsAreSupportedTitle">Študije podpirajo variante</string>
-  <string name="variantsAreSupportedText">Da, lahko študiraš Crazyhouse&lt;br&gt;in vse Lichess različice!</string>
+  <string name="variantsAreSupportedText">Da, lahko študiraš Crazyhouse&lt;br&gt;in vse Logik različice!</string>
   <string name="chapterConclusionText">Poglavja so shranjena za vedno.&lt;br&gt;Zabavajte se z organiziranjem svoje šahovske vsebine!</string>
   <string name="doubleDefeat">Dvojni poraz</string>
   <string name="blackDefeatWhiteCanNotWin">Črni poraz, beli pa ne more zmagati</string>

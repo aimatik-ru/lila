@@ -72,7 +72,7 @@
   <string name="fromMyGames">Từ ván đấu của tôi</string>
   <string name="lookupOfPlayer">Tìm câu đố từ các ván đấu của người khác</string>
   <string name="searchPuzzles">Tìm câu đố</string>
-  <string name="fromMyGamesNone">Bạn không có câu đố nào trong dữ liệu, nhưng Lichess vẫn rất yêu mến bạn.
+  <string name="fromMyGamesNone">Bạn không có câu đố nào trong dữ liệu, nhưng Logik vẫn rất yêu mến bạn.
 
 Hãy chơi thêm nhiều ván cờ nhanh và cờ chậm để có cơ hội có một câu đố từ ván cờ của riêng bạn!</string>
   <plurals name="puzzlesFoundInUserGames">

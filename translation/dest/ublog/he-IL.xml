@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="byLichess">מאת Lichess</string>
+  <string name="byLichess">מאת Logik</string>
   <string name="myFriends">החברים שלי</string>
   <string name="myBlog">הבלוג שלי</string>
   <string name="likedBlogs">בלוגים שאהבת</string>
@@ -10,7 +10,7 @@
     <item quantity="other">%s פוסטים בבלוג</item>
   </plurals>
   <string name="continueReadingPost">המשך קריאה של הבלוג</string>
-  <string name="lichessBlogPostsFromXYear">בלוגים של Lichess ב־%s</string>
+  <string name="lichessBlogPostsFromXYear">בלוגים של Logik ב־%s</string>
   <string name="previousBlogPosts">בלוגים קודמים</string>
   <string name="xBlog">הבלוג של %s</string>
   <string name="newPost">פוסט חדש</string>

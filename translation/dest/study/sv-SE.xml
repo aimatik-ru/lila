@@ -164,7 +164,7 @@
   <string name="youCompletedThisLesson">Grattis! Du har slutfört denna lektionen.</string>
   <string name="perPage">%s per sida</string>
   <string name="getTheTour">Behöver du hjälp? Ta en snabbtur!</string>
-  <string name="welcomeToLichessStudyTitle">Välkommen till Lichess Studier!</string>
+  <string name="welcomeToLichessStudyTitle">Välkommen till Logik Studier!</string>
   <string name="welcomeToLichessStudyText">Detta är ett delat analysbräde.&lt;br&gt;&lt;br&gt;Använd det för att analysera och kommentera partier,&lt;br&gt;diskutera positioner med vänner,&lt;br&gt;och naturligtvis för schacklektioner!&lt;br&gt;&lt;br&gt;Det är ett kraftfullt verktyg, låt oss ta lite tid att se hur det fungerar.</string>
   <string name="sharedAndSaveTitle" comment="As in: shared with other members and saved to database">Delat och sparat</string>
   <string name="sharedAndSavedText">Andra medlemmar kan se dina drag i realtid!&lt;br&gt;Och allt sparas för evigt.</string>
@@ -178,7 +178,7 @@
   <string name="annotatePositionTitle">Annotera en position</string>
   <string name="annotatePositionText">Klicka på knappen !?, eller högerklicka på drag-listan till höger.&lt;br&gt;Kommentarer delas och sparas.</string>
   <string name="conclusionTitle">Tack för din tid</string>
-  <string name="conclusionText">Du hittar dina &lt;a href=\'/study/mine/hot\'&gt;tidigare studier&lt;/a&gt; på din profilsida.&lt;br&gt;Det finns också ett &lt;a href=\'//lichess.org/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way\'&gt;blogginlägg om studier&lt;/a&gt;.&lt;br&gt;Erfarna användare kanske vill trycka på \"?\" för att se kortkommandon.&lt;br&gt;Ha så kul!</string>
+  <string name="conclusionText">Du hittar dina &lt;a href=\'/study/mine/hot\'&gt;tidigare studier&lt;/a&gt; på din profilsida.&lt;br&gt;Det finns också ett &lt;a href=\'/\'&gt;blogginlägg om studier&lt;/a&gt;.&lt;br&gt;Erfarna användare kanske vill trycka på \"?\" för att se kortkommandon.&lt;br&gt;Ha så kul!</string>
   <string name="createChapterTitle">Låt oss skapa ett studiekapitel</string>
   <string name="createChapterText">En studie kan ha flera kapitel.&lt;br&gt;Varje kapitel har ett distinkt drag-träd,&lt;br&gt;och kan skapas på olika sätt.</string>
   <string name="fromInitialPositionTitle">Från ursprunglig position</string>
@@ -190,7 +190,7 @@
   <string name="fromPgnGameTitle">Från ett PGN-parti</string>
   <string name="fromPgnGameText">Klistra in ett spel i PGN-format.&lt;br&gt;för att hämta drag, kommentarer och variationer till kapitlet.</string>
   <string name="variantsAreSupportedTitle">Studier stödjer varianter</string>
-  <string name="variantsAreSupportedText">Ja, du kan studera crazyhouse&lt;br&gt;och alla varianter som finns på Lichess!</string>
+  <string name="variantsAreSupportedText">Ja, du kan studera crazyhouse&lt;br&gt;och alla varianter som finns på Logik!</string>
   <string name="chapterConclusionText">Kapitel sparas för evigt.&lt;br&gt;Ha kul med att organisera ditt schackinnehåll!</string>
   <string name="doubleDefeat">Dubbel förlust</string>
   <string name="blackDefeatWhiteCanNotWin">Svart förlorar, men vit kan inte vinna</string>

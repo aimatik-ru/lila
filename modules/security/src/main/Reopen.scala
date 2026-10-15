@@ -49,7 +49,7 @@ final class Reopen(
       mailer.sendOrFail:
         Mailer.Message(
           to = email,
-          subject = s"Reopen your lichess.org account: ${user.username}",
+          subject = s"Reopen your play.kalugalogic.ru account: ${user.username}",
           text = Mailer.txt.addServiceNote(s"""
 ${trans.passwordReset_clickOrIgnore.txt()}
 

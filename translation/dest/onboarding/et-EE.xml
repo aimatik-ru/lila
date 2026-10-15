@@ -13,6 +13,6 @@
   <string name="followYourFriendsOnLichess">Jälgi oma sõpru Lichessis.</string>
   <string name="playInTournaments">Osale turniiridel.</string>
   <string name="learnFromXAndY">Õpi %1$s ja %2$s eeskujul.</string>
-  <string name="configureLichess">Seadista Lichess oma maitse järgi.</string>
+  <string name="configureLichess">Seadista Logik oma maitse järgi.</string>
   <string name="exploreTheSiteAndHaveFun">Tutvu veebisaidiga ja lõbutse :)</string>
 </resources>

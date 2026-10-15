@@ -56,8 +56,8 @@
   <string name="notifyGameEvent">Korrespondensiespelopdaterings</string>
   <string name="notifyChallenge">Uitdagings</string>
   <string name="notifyTimeAlarm">Korrespondensietyd raak min</string>
-  <string name="notifyBell">Klokkie kennisgewing binne Lichess</string>
-  <string name="notifyPush">Toetstel kennisgewing wanneer jy nie op Lichess is nie</string>
+  <string name="notifyBell">Klokkie kennisgewing binne Logik</string>
+  <string name="notifyPush">Toetstel kennisgewing wanneer jy nie op Logik is nie</string>
   <string name="notifyWeb">Blaaier</string>
   <string name="notifyDevice">Toestel</string>
   <string name="bellNotificationSound">Klokkie kennisgewing klank</string>

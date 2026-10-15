@@ -4,7 +4,7 @@
   <string name="challengeDeclined">Aramba kutamba newe</string>
   <string name="challengeAccepted">\"Abvuma Kutamba newe!\"!</string>
   <string name="challengeCanceled">Mutambo wavhariswa.</string>
-  <string name="registerToSendChallenges">Joina Lichess kana uchida kumba neMutambi uyu.</string>
+  <string name="registerToSendChallenges">Joina Logik kana uchida kumba neMutambi uyu.</string>
   <string name="youCannotChallengeX">Haukwanisi kutamba na %s.</string>
   <string name="xDoesNotAcceptChallenges">%s haagamuchiri maChallenges.</string>
   <string name="yourXRatingIsTooFarFromY">Zera rako re %1$s ririkure zvisingaite ne %2$s.</string>

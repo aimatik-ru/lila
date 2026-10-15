@@ -3,7 +3,7 @@
   <string name="community">Супольнасць</string>
   <string name="byMonth">Па месяцах</string>
   <string name="byTopic">Па тэмах</string>
-  <string name="byLichess">Ад Lichess</string>
+  <string name="byLichess">Ад Logik</string>
   <string name="myFriends">Мае сябры</string>
   <string name="myLikes">Мае ўпадабаныя</string>
   <string name="myBlog">Мой блог</string>
@@ -15,7 +15,7 @@
     <item quantity="other">%s публікацыі ў блогу</item>
   </plurals>
   <string name="continueReadingPost">Працягнуць чытаць гэты пост</string>
-  <string name="lichessBlogPostsFromXYear">Запісы ў блоге Lichess за %s</string>
+  <string name="lichessBlogPostsFromXYear">Запісы ў блоге Logik за %s</string>
   <string name="previousBlogPosts">Папярэднія запісы блога</string>
   <string name="xBlog">Блог %s</string>
   <string name="newPost">Новы допіс</string>

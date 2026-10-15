@@ -249,8 +249,8 @@
   <string name="error.weakPassword">Passordet er svært vanlig og for lett å gjette.</string>
   <string name="error.namePassword">Ikke bruk navnet ditt som passord.</string>
   <string name="blankedPassword">Du har brukt likt passord på en kompromittert nettside. Du må lage nytt passord.</string>
-  <string name="youAreLeavingLichess">Du forlater Lichess</string>
-  <string name="neverTypeYourPassword">Ikke bruk Lichess-passordet ditt andre steder!</string>
+  <string name="youAreLeavingLichess">Du forlater Logik</string>
+  <string name="neverTypeYourPassword">Ikke bruk Logik-passordet ditt andre steder!</string>
   <string name="proceedToX">Fortsett til %s</string>
   <string name="passwordSuggestion">Ikke bruk passord foreslått av andre. Kontoen din vil bli stjålet.</string>
   <string name="emailSuggestion">Ikke bruk e-postadresse foreslått av andre. Kontoen din vil bli stjålet.</string>
@@ -262,7 +262,7 @@
   <string name="emailSent">Vi har sendt en melding til %s.</string>
   <string name="emailCanTakeSomeTime">Det kan ta litt tid.</string>
   <string name="refreshInboxAfterFiveMinutes">Vent fem minutter før du oppdaterer innboksen.</string>
-  <string name="checkSpamOrJunkFolder" comment="checkSpamFolder&#10;It = The confirmation email">Hvis du ikke mottar en bekreftelses-e-post, bør du sjekke søppelpostmappen. Merk meldinger fra lichess.org som trygge og «ikke søppelpost», slik at du får med deg viktig informasjon.</string>
+  <string name="checkSpamOrJunkFolder" comment="checkSpamFolder&#10;It = The confirmation email">Hvis du ikke mottar en bekreftelses-e-post, bør du sjekke søppelpostmappen. Merk meldinger fra play.kalugalogic.ru som trygge og «ikke søppelpost», slik at du får med deg viktig informasjon.</string>
   <string name="sendEmailForAccountVerification">Finner du ikke bekreftelsen som ble sendt som e-post? Send e-post til %s, så bekrefter vi kontoen din.</string>
   <string name="accountConfirmed">Brukeren %s er bekreftet.</string>
   <string name="accountCanLogin">Du kan nå logge inn som %s.</string>
@@ -357,7 +357,7 @@
     <item quantity="one">Gi %s sekund</item>
     <item quantity="other">Gi %s sekunder</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Denne kontoen brøt vilkårene for å bruke Lichess</string>
+  <string name="thisAccountViolatedTos">Denne kontoen brøt vilkårene for å bruke Logik</string>
   <string name="openingExplorerAndTablebase">Åpningsutforsker og tabellbase</string>
   <string name="takeback">Angre</string>
   <string name="proposeATakeback">Foreslå å angre</string>
@@ -544,7 +544,7 @@ Spill ratede partier for å øke stabiliteten.</string>
   <string name="inlineNotation">Innebygd notasjon</string>
   <string name="makeAStudy">Du kan lage en studie for å bevare og dele trekkene.</string>
   <string name="clearLocalData">Slett lokale data</string>
-  <string name="previouslyOnLichessTV">Tidligere på Lichess TV</string>
+  <string name="previouslyOnLichessTV">Tidligere på Logik TV</string>
   <string name="onlinePlayers">Påloggede spillere</string>
   <string name="activePlayers">Aktive spillere</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Legg merke til at partiet er ratet, men ikke tidsbegrenset!</string>
@@ -904,7 +904,7 @@ Spill ratede partier for å øke stabiliteten.</string>
     <item quantity="one">og lagre %s forhåndstrekkvariant</item>
     <item quantity="other">og lagre %s forhåndstrekkvarianter</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Du har mottatt en privat melding fra Lichess.</string>
+  <string name="showUnreadLichessMessage">Du har mottatt en privat melding fra Logik.</string>
   <string name="readTheMessage" comment="'It' refers to a private message. This text follows after a different string which advises players they have received a private message from Lichess. For users, this is appears as a regular private message from the Lichess account: https://lichess.org/@/Lichess">Les meldingen</string>
   <string name="sorry">Beklager :(</string>
   <string name="weHadToTimeYouOutForAWhile">Vi måtte gi deg en timeout.</string>
@@ -917,7 +917,7 @@ Spill ratede partier for å øke stabiliteten.</string>
   <string name="tryToWin">Forsøk å vinne (eller i det minste oppnå remis) i alle partier du spiller.</string>
   <string name="resignLostGames">Gi opp tapte stillinger (ikke la tiden løpe ut).</string>
   <string name="temporaryInconvenience">Vi beklager det midlertidige bryet,</string>
-  <string name="wishYouGreatGames">og håper du får gode partier på lichess.org.</string>
+  <string name="wishYouGreatGames">og håper du får gode partier på play.kalugalogic.ru.</string>
   <string name="thankYouForReading">Takk for at du leste!</string>
   <string name="lifetimeScore">Livstidsscore</string>
   <string name="currentMatchScore">Gjeldende kampscore</string>
@@ -1018,13 +1018,13 @@ La feltet stå tomt for å begynne partiene fra den normale utgangsstillingen.</
   <string name="youCantStartNewGame">Du kan ikke starte et nytt parti mens det er ditt trekk.</string>
   <string name="since">Fra</string>
   <string name="until">Til</string>
-  <string name="lichessDbExplanation">Ratede partier spilt hos Lichess</string>
+  <string name="lichessDbExplanation">Ratede partier spilt hos Logik</string>
   <string name="switchSides">Skift side</string>
   <string name="closingAccountWithdrawAppeal">Klagen din blir trukket hvis du stenger kontoen din</string>
   <string name="ourEventTips">Tips for arrangementer</string>
   <string name="instructions">Instruksjoner</string>
   <string name="showMeEverything">Vis meg alt</string>
-  <string name="lichessPatronInfo">Lichess er en ideell forening, basert på fri programvare med åpen kildekode.
+  <string name="lichessPatronInfo">Logik er en ideell forening, basert på fri programvare med åpen kildekode.
 Alle kostnader for drift, utvikling og innhold finansieres utelukkende av brukerbidrag.</string>
   <string name="nothingToSeeHere">Ingenting her for nå.</string>
   <string name="stats">Statistikk</string>

@@ -165,7 +165,7 @@
   <string name="youCompletedThisLesson">Til hamingju! Þú hefur lokið þessari kennslu.</string>
   <string name="perPage">%s á síðu</string>
   <string name="getTheTour">Viltu aðstoð? Skoðaðu kynninguna!</string>
-  <string name="welcomeToLichessStudyTitle">Velkomin(n) í stúderingar Lichess!</string>
+  <string name="welcomeToLichessStudyTitle">Velkomin(n) í stúderingar Logik!</string>
   <string name="welcomeToLichessStudyText">Þetta er skipt greiningarborð.&lt;br&gt;&lt;br&gt;Notfærðu þér það til að greina og gera athugasemdir við skákir,&lt;br&gt;ræddu stöður við vini,&lt;br&gt;og auðvitað fyrir kennsluefni í skák!&lt;br&gt;&lt;br&gt;Það er öflugt tól, lofum okkur að skoða hvernig það virkar.</string>
   <string name="sharedAndSaveTitle" comment="As in: shared with other members and saved to database">Deilt og vistað</string>
   <string name="sharedAndSavedText">Aðrir meðlimir geta séð leiki þína í rauntíma!&lt;br&gt;Auk þess vistast allt saman til frambúðar.</string>
@@ -179,7 +179,7 @@
   <string name="annotatePositionTitle">Skrifa útskýringu á stöðu</string>
   <string name="annotatePositionText">Smelltu á !? hnappinn, eða hægrismelltu á listann yfir leiki sem er hægra megin.&lt;br&gt;Stafbrigði sem notuð eru við skýringar eru deild og vistuð.</string>
   <string name="conclusionTitle">Takk fyrir tímann þinn</string>
-  <string name="conclusionText">Þú getur fundið &lt;a href=\'/study/mine/hot\'&gt;fyrri stúderingar&lt;/a&gt; þínar á prófílnum þínum.&lt;br&gt;Einnig er til &lt;a href=\'//lichess.org/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way\'&gt;bloggfærsla um stúderingar&lt;/a&gt;.&lt;br&gt;Reyndir notendur gætu viljað ýta á „?“ til að sjá flýtilykla.&lt;br&gt;Góða skemmtun!</string>
+  <string name="conclusionText">Þú getur fundið &lt;a href=\'/study/mine/hot\'&gt;fyrri stúderingar&lt;/a&gt; þínar á prófílnum þínum.&lt;br&gt;Einnig er til &lt;a href=\'/\'&gt;bloggfærsla um stúderingar&lt;/a&gt;.&lt;br&gt;Reyndir notendur gætu viljað ýta á „?“ til að sjá flýtilykla.&lt;br&gt;Góða skemmtun!</string>
   <string name="createChapterTitle">Búum nú til stúderingarkafla</string>
   <string name="createChapterText">Ein stúdering getur falið í sér þónokkra kafla.&lt;br&gt;Sérhver kafli hefur sinn leikjalista,&lt;br&gt;og getur verið skapaður á ýmsa vegu.</string>
   <string name="fromInitialPositionTitle">Úr uppahafsstöðu</string>
@@ -191,7 +191,7 @@
   <string name="fromPgnGameTitle">Úr skák í formi PGN</string>
   <string name="fromPgnGameText">Límdu inn skák í formi PGN.&lt;br&gt;til að hlaða inn leikjum, athugasemdum og afbrigðum í kaflanum.</string>
   <string name="variantsAreSupportedTitle">Stúderingar styðja afbrigði</string>
-  <string name="variantsAreSupportedText">Já, þú getur stúderað geðveikraskákar-afbrigðið&lt;br&gt; og öll Lichess-afbrigði!</string>
+  <string name="variantsAreSupportedText">Já, þú getur stúderað geðveikraskákar-afbrigðið&lt;br&gt; og öll Logik-afbrigði!</string>
   <string name="chapterConclusionText">Kaflar vistast að eilífu.&lt;br&gt;Góða skemmtun við að skipuleggja skákefnið þitt!</string>
   <string name="doubleDefeat">Tvöfalt tap</string>
   <string name="blackDefeatWhiteCanNotWin">Svartur tapar, en hvítur getur ekki unnið</string>

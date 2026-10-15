@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="contact">Επικοινωνία</string>
-  <string name="contactLichess">Επικοινωνήστε με το Lichess</string>
+  <string name="contactLichess">Επικοινωνήστε με το Logik</string>
   <string name="whatCanWeHelpYouWith">Πώς μπορούμε να σας βοηθήσουμε;</string>
   <string name="visitThisPage">Επισκεφτείτε αυτή τη σελίδα για την επίλυση του προβλήματος</string>
   <string name="iCantLogIn">Δεν μπορώ να συνδεθώ</string>
@@ -12,8 +12,8 @@
   <string name="lost2FA">Έχασα τους κωδικούς ελέγχου ταυτότητας δύο παραγόντων</string>
   <string name="doPasswordReset">Αλλάξτε τον κωδικό πρόσβασης για να απενεργοποιήσετε τον έλεγχο ταυτότητας δύο παραγόντων</string>
   <string name="accountSupport">Χρειάζομαι υποστήριξη για τον λογαριασμό μου</string>
-  <string name="wantTitle">Θέλω ο τίτλος μου να εμφανίζεται στο προφίλ μου στο Lichess</string>
-  <string name="visitTitleConfirmation">Για να εμφανίζεται ο τίτλος σας στο προφίλ σας στο Lichess και να συμμετέχετε στην Αρένα Τιτλούχων, επισκεφτείτε τη σελίδα επιβεβαίωσης τίτλων</string>
+  <string name="wantTitle">Θέλω ο τίτλος μου να εμφανίζεται στο προφίλ μου στο Logik</string>
+  <string name="visitTitleConfirmation">Για να εμφανίζεται ο τίτλος σας στο προφίλ σας στο Logik και να συμμετέχετε στην Αρένα Τιτλούχων, επισκεφτείτε τη σελίδα επιβεβαίωσης τίτλων</string>
   <string name="wantCloseAccount">Θέλω να κλείσω τον λογαριασμό μου</string>
   <string name="closeYourAccount">Μπορείτε να κλείσετε τον λογαριασμό σας σε αυτή τη σελίδα</string>
   <string name="doNotAskByEmail">Μη μας ζητάτε μέσω email να κλείσουμε τον λογαριασμό σας — δεν πρόκειται να το κάνουμε.</string>
@@ -34,10 +34,10 @@
   <string name="doNotMessageModerators">Μη στέλνετε απευθείας μηνύματα στους διαχειριστές.</string>
   <string name="onlyReports">Μπορείτε να αναφέρετε χρήστες μόνο μέσω της σχετικής φόρμας.</string>
   <string name="wantReportBug">Θέλω να αναφέρω ένα σφάλμα</string>
-  <string name="reportBugInForum">στο φόρουμ του Lichess, στην ενότητα Lichess Feedback</string>
+  <string name="reportBugInForum">στο φόρουμ του Logik, στην ενότητα Logik Feedback</string>
   <string name="reportWebsiteIssue">στο αποθετήριο της ιστοσελίδας στο GitHub, ανοίγοντας ένα issue</string>
-  <string name="reportMobileIssue">στο αποθετήριο της εφαρμογής Lichess για κινητά στο GitHub, ανοίγοντας ένα issue</string>
-  <string name="reportBugInDiscord">στον διακομιστή Discord του Lichess</string>
+  <string name="reportMobileIssue">στο αποθετήριο της εφαρμογής Logik για κινητά στο GitHub, ανοίγοντας ένα issue</string>
+  <string name="reportBugInDiscord">στον διακομιστή Discord του Logik</string>
   <string name="howToReportBug">Περιγράψτε πώς εμφανίζεται το σφάλμα, τι περιμένατε να συμβεί κανονικά, και τα βήματα που οδήγησαν σε αυτό.</string>
   <string name="illegalPawnCapture">Αντικανονική αιχμαλώτιση πιονιού</string>
   <string name="calledEnPassant">Ονομάζεται «en passant» και είναι ένας από τους κανόνες του σκακιού.</string>
@@ -57,7 +57,7 @@
   <string name="reportTheBug">Μπορείτε να το αναφέρετε:</string>
   <string name="securityVulnerability">Ευπάθεια ασφάλειας</string>
   <string name="otherBug">Άλλο σφάλμα</string>
-  <string name="learnHowToMakeBroadcasts">Μάθετε πώς να κάνετε τις δικές σας μεταδόσεις στο Lichess</string>
+  <string name="learnHowToMakeBroadcasts">Μάθετε πώς να κάνετε τις δικές σας μεταδόσεις στο Logik</string>
   <string name="banAppeal">Θέλω να αρθεί ο αποκλεισμός της διεύθυνσης IP μου</string>
   <string name="engineAppeal">Μηχανή ή χρήση εξωτερικής βοήθειας</string>
   <string name="sendAppealTo">Μπορείτε να υποβάλετε ένσταση στη διεύθυνση %s.</string>
@@ -67,22 +67,22 @@
   <string name="doNotDeny">Μην αρνείστε ότι κλέψατε — αν θέλετε να σας επιτραπεί η δημιουργία νέου λογαριασμού, παραδεχθείτε τις πράξεις σας και δείξτε ότι καταλάβατε το λάθος σας.</string>
   <string name="otherRestriction">Άλλος αποκλεισμός</string>
   <string name="collaboration">Συνεργασίες, νομικά, εμπορικά</string>
-  <string name="monetizing">Θέλω να χρησιμοποιήσω το Lichess για να κερδίσω χρήματα</string>
-  <string name="buyingLichess">Θέλω να αγοράσω το Lichess</string>
-  <string name="authorizationToUse">Θέλω έγκριση για να χρησιμοποιήσω το Lichess</string>
-  <string name="welcomeToUse">Είστε ευπρόσδεκτοι να χρησιμοποιήσετε το Lichess για τις δραστηριότητές σας, ακόμα και τις εμπορικές.</string>
+  <string name="monetizing">Θέλω να χρησιμοποιήσω το Logik για να κερδίσω χρήματα</string>
+  <string name="buyingLichess">Θέλω να αγοράσω το Logik</string>
+  <string name="authorizationToUse">Θέλω έγκριση για να χρησιμοποιήσω το Logik</string>
+  <string name="welcomeToUse">Είστε ευπρόσδεκτοι να χρησιμοποιήσετε το Logik για τις δραστηριότητές σας, ακόμα και τις εμπορικές.</string>
   <string name="videosAndBooks">Μπορείτε να το εμφανίσετε στα βίντεο σας, ή ακόμα και να χρησιμοποιήσετε στιγμιότυπα της ιστοσελίδας σε βιβλίο σας.</string>
   <string name="creditAppreciated">Η αναφορά της πηγής εκτιμάται, αλλά δεν είναι απαραίτητη.</string>
   <string name="noneOfTheAbove">Κανένα απο τα παραπάνω</string>
   <string name="sendEmailAt">Στείλτε μας email στη διεύθυνση %s.</string>
-  <string name="explainYourRequest">Εξηγήστε το αίτημά σας με σαφή και λεπτομερή τρόπο. Γράψτε το όνομα χρήστη σας στο Lichess και κάθε πληροφορία που θα μπορούσε να μας βοηθήσει να σας βοηθήσουμε.</string>
-  <string name="monetiseNotInterested">Δεν έχουμε καμία πρόθεση να βγάλουμε χρήματα από το Lichess.</string>
+  <string name="explainYourRequest">Εξηγήστε το αίτημά σας με σαφή και λεπτομερή τρόπο. Γράψτε το όνομα χρήστη σας στο Logik και κάθε πληροφορία που θα μπορούσε να μας βοηθήσει να σας βοηθήσουμε.</string>
+  <string name="monetiseNotInterested">Δεν έχουμε καμία πρόθεση να βγάλουμε χρήματα από το Logik.</string>
   <string name="monetiseNoAdsTrackingOrTraffic">Ποτέ δεν προβάλλουμε οποιουδήποτε είδους διαφημίσεις, δεν παρακολουθούμε τους παίκτες μας και δεν εμπορευόμαστε την επισκεψιμότητα ή τους χρήστες μας.</string>
   <string name="monetiseNoMarketingEmail">Παρακαλούμε μη μας στέλνετε email για μάρκετινγκ, παρακολούθηση χρηστών ή διαφημίσεις.</string>
   <string name="monetiseEncourageEveryoneTo" comment="string is value of key monetiseBlockAllAdsAndTrackers">Σας ενθαρρύνουμε να %s.</string>
   <string name="monetiseBlockAllAdsAndTrackers">μπλοκάρετε όλες τις διαφημίσεις και τους ιχνηλάτες</string>
-  <string name="broadcastTournamentOnLichess">Μετάδοση τουρνουά στο Lichess</string>
-  <string name="ifYouWantToBroadcastClause1">Αν θέλετε να μεταδώσετε επίσημα ένα τουρνουά στο Lichess ή έχετε οποιαδήποτε απορία σχετικά με τις μεταδόσεις μας:</string>
+  <string name="broadcastTournamentOnLichess">Μετάδοση τουρνουά στο Logik</string>
+  <string name="ifYouWantToBroadcastClause1">Αν θέλετε να μεταδώσετε επίσημα ένα τουρνουά στο Logik ή έχετε οποιαδήποτε απορία σχετικά με τις μεταδόσεις μας:</string>
   <string name="ifYouWantToBroadcastClause2" comment="string1 is Lichess email, string2 is value of key ourDiscordServer">Παρακαλούμε επικοινωνήστε με την ομάδα μεταδόσεων στο %1$s ή μέσω %2$s.</string>
   <string name="ourDiscordServer">του διακομιστή μας στο Discord</string>
 </resources>

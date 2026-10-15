@@ -216,9 +216,9 @@
   <string name="forgotPassword">Парол кӀочонищ тараб?</string>
   <string name="error.weakPassword">Гьеб парол кутакалда тӀибитӀараб буго, гьединго гьелда нахъгӀунтӀизе цӀакъ бигьаго буго.</string>
   <string name="error.namePassword">Дур хӀалтӀизабулесда цӀар пароллъун хӀалтӀизабуге.</string>
-  <string name="blankedPassword">Дуца гьебго парол цогидаб сайталда хъвана, гьеб сайт къимат хвараб хӀалалда ккун буго. Дур Lichess аккаунталъул хъинкъи гьечӀебали ракӀчӀун лъазе, нижее къваригӀуна дуца цӀияб парол чӀезабизе. БичӀчӀулелъухъ баркала.</string>
-  <string name="youAreLeavingLichess">Мун Lichess-алдаса унев вуго</string>
-  <string name="neverTypeYourPassword">БатӀияб сайталда дур Lichess парол киданиги хъваге!</string>
+  <string name="blankedPassword">Дуца гьебго парол цогидаб сайталда хъвана, гьеб сайт къимат хвараб хӀалалда ккун буго. Дур Logik аккаунталъул хъинкъи гьечӀебали ракӀчӀун лъазе, нижее къваригӀуна дуца цӀияб парол чӀезабизе. БичӀчӀулелъухъ баркала.</string>
+  <string name="youAreLeavingLichess">Мун Logik-алдаса унев вуго</string>
+  <string name="neverTypeYourPassword">БатӀияб сайталда дур Logik парол киданиги хъваге!</string>
   <string name="proceedToX">%s-алде вахъине</string>
   <string name="passwordSuggestion">Цогидаз абураб парол чӀезабуге. Доз дур аккаунт бикъизе гьеб хӀалтӀизабизе буго.</string>
   <string name="emailSuggestion">Цогидаз абураб электронияб поч чӀезабуге. Доз дур аккаунт бикъизе гьеб хӀалтӀизабизе буго.</string>
@@ -319,7 +319,7 @@
     <item quantity="one">%s секунд кьезе</item>
     <item quantity="other">%s секунд кьезе</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Гьаб аккаунталъ Lichess-алъул Сервисазул шартӀал хвезаруна</string>
+  <string name="thisAccountViolatedTos">Гьаб аккаунталъ Logik-алъул Сервисазул шартӀал хвезаруна</string>
   <string name="openingExplorerAndTablebase">Байбихьиялъулги ахиралъулги база</string>
   <string name="takeback">ТӀадбуссинабизе</string>
   <string name="proposeATakeback">Тlадбуссинабизе биччаян абизе</string>
@@ -492,7 +492,7 @@
   <string name="oneUrlPerLine">Мухъда цо бухьен.</string>
   <string name="inlineNotation">Мухъилаб нотация</string>
   <string name="makeAStudy">ЦӀунизеги гӀахьал гьабизеги, цӀех-рех гьабизе бегьула.</string>
-  <string name="previouslyOnLichessTV">Lichess TV-ялда цебе букӀараб</string>
+  <string name="previouslyOnLichessTV">Logik TV-ялда цебе букӀараб</string>
   <string name="onlinePlayers">Онлайн ругел хӀалел чагӀи</string>
   <string name="activePlayers">ХӀаракатал хӀалел чагӀи</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Воре, хӀай рейтингалъул буго амма гьелъул сагӀат гьечӀо!</string>
@@ -643,7 +643,7 @@
   <string name="aboutSimulRules">Сеанс байбихьараб мехалъ щивав хӀалев чи сеанс гьабуравгун хӀаялде лъугьуна. Сеанс лъугӀула кинабго хӀай лъугӀараб мехалъ.</string>
   <string name="create">Гьабизе</string>
   <string name="simulHostExtraTimePerPlayer">Щивав хӀалесе хосталъул тӀаде жубалеб заман</string>
-  <string name="lichessTournaments">Lichess турнирал</string>
+  <string name="lichessTournaments">Logik турнирал</string>
   <string name="tournamentFAQ">Аренаялъул суалалги жавабалги</string>
   <string name="timeBeforeTournamentStarts">Турнир байбихьизегӀан заман</string>
   <string name="averageCentipawnLoss">Пешкабазул гьоркьохъеб ками</string>
@@ -681,8 +681,8 @@
   <string name="weHaveSentYouAnEmailTo">Нижеца %s-(и)хъе кагъатӀ битӀана. Дур парол цӀидасан чӀезабизе почалда бухьеналда тӀаде цуй.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">ХӀисабалде воси гьабиялъ, мун %sда разилъула.</string>
   <string name="readAboutOur">Нижер %s-ялъул цӀале.</string>
-  <string name="networkLagBetweenYouAndLichess">Дудаги Lichess-алдаги гьоркьоб интернеталъе квекӀен ккун буго</string>
-  <string name="timeToProcessAMoveOnLichessServer">Хъурщи Lichess-алъул сервералда мухӀкан гьабизе заман</string>
+  <string name="networkLagBetweenYouAndLichess">Дудаги Logik-алдаги гьоркьоб интернеталъе квекӀен ккун буго</string>
+  <string name="timeToProcessAMoveOnLichessServer">Хъурщи Logik-алъул сервералда мухӀкан гьабизе заман</string>
   <string name="downloadAnnotated">Аннотациягун рещтӀинабизе</string>
   <string name="downloadRaw">Бугеб куцалъ рещтӀинабизе</string>
   <string name="downloadImported">Жаниб лъураб рещтӀинабизе</string>
@@ -806,7 +806,7 @@
   <string name="tryToWin">Дур щибаб хӀаялда бергьине (яги ващад ккезениги) хӀалбихье.</string>
   <string name="resignLostGames">Хьул къотӀарал хӀаязда къун чӀа (заман лъугӀизегӀан чӀоге).</string>
   <string name="temporaryInconvenience">Заманаялъе бугеб къварилъиялда нижеда тӀаса лъугьа,</string>
-  <string name="wishYouGreatGames">цӀакъал хӀаял кьеги дуе lichess.org-алда.</string>
+  <string name="wishYouGreatGames">цӀакъал хӀаял кьеги дуе play.kalugalogic.ru-алда.</string>
   <string name="thankYouForReading">ЦӀаларалъухъ баркала!</string>
   <string name="currentMatchScore">Гьанжесеб мачалъул рикӀкӀин</string>
   <string name="agreementAssistance">Дун рази вуго дица дир хӀаязда квербакъи босичӀого тезе (шахматазул компутералдаса, тӀехьалдаса, яги цогидав чиясдаса).</string>
@@ -895,13 +895,13 @@
   <string name="resignTheGame">Къун чӀезе</string>
   <string name="since">-даса</string>
   <string name="until">ЩвезегӀан</string>
-  <string name="lichessDbExplanation">Lichess-алда хӀарал рейтингалъул хӀаял</string>
+  <string name="lichessDbExplanation">Logik-алда хӀарал рейтингалъул хӀаял</string>
   <string name="switchSides">Рахъ хизисе</string>
   <string name="closingAccountWithdrawAppeal">Дур аккаунт къаялъ дур хитӀаб нахъе ахӀула</string>
   <string name="ourEventTips">Тадбирал гьабизелъун нижер гӀакълаби</string>
   <string name="instructions">Нухмалъи</string>
   <string name="showMeEverything">Кинабго бихьизабизе</string>
-  <string name="lichessPatronInfo">Lichess ккола лъикӀаб гьариги ругеб тӀубанго мухьги босулареб рагьараб кьучӀаб код бугеб программаялдалъун хьезари.
+  <string name="lichessPatronInfo">Logik ккола лъикӀаб гьариги ругеб тӀубанго мухьги босулареб рагьараб кьучӀаб код бугеб программаялдалъун хьезари.
 Садакъа кьолел хӀалтӀизабулез киналго харжал, разработка, контент гӀарцудалъун хьезарула.</string>
   <string name="stats">Истатистика</string>
   <string name="accessibility">Хасал рекъезариял</string>

@@ -15,7 +15,7 @@
   <string name="newBroadcast">नवीन थेट प्रसारण</string>
   <string name="subscribedBroadcasts">सदस्यत्व घेतलेली प्रसारणे</string>
   <string name="aboutBroadcasts">प्रसारणांबद्दल माहिती</string>
-  <string name="howToUseLichessBroadcasts">Lichess ब्रॉडकास्ट कसे वापरावे.</string>
+  <string name="howToUseLichessBroadcasts">Logik ब्रॉडकास्ट कसे वापरावे.</string>
   <string name="theNewRoundHelp">नवीन फेरीत मागील प्रमाणेच सदस्य आणि योगदानकर्ते असतील.</string>
   <string name="addRound">फेरी जोडा</string>
   <string name="ongoing">चालू आहे</string>
@@ -27,7 +27,7 @@
   <string name="fullDescriptionHelp">स्पर्धेचे पर्यायी संपूर्ण वर्णन. %1$s उपलब्ध आहे. %2$s अक्षरांपेक्षा कमी.</string>
   <string name="sourceSingleUrl">PGN चे स्रोत URL</string>
   <string name="sourceUrlHelp">URL जी लाइसेस PGN अद्यतने मिळविण्यासाठी तपासणी करेल. ते इंटरनेट वरून सार्वजनिकरित्या प्रवेश करण्यायोग्य असणे आवश्यक आहे.</string>
-  <string name="sourceGameIds">६४ Lichess खेळ ID पर्यंत, अवकाशांने (space) वेगळे केलेले.</string>
+  <string name="sourceGameIds">६४ Logik खेळ ID पर्यंत, अवकाशांने (space) वेगळे केलेले.</string>
   <string name="startDateTimeZone">स्थानिक कालविभाग स्पर्धा सुरू होण्याची तारीख: %s</string>
   <string name="startDateHelp">पर्यायी, इव्हेंट कधी सुरू होतो हे आपल्याला माहिती असल्यास</string>
   <string name="currentGameUrl">चालू खेळाचा URL</string>
@@ -50,7 +50,7 @@
   <string name="age">वय</string>
   <string name="unrated">अस्थित</string>
   <string name="recentTournaments">नुकतीच स्पर्धा</string>
-  <string name="openLichess">Lichess मध्ये उघडा</string>
+  <string name="openLichess">Logik मध्ये उघडा</string>
   <string name="teams">संघ</string>
   <string name="boards">पट</string>
   <string name="overview">विहंगावलोकन</string>

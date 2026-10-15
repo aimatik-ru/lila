@@ -80,7 +80,7 @@
   <string name="fromMyGames">Iš mano partijų</string>
   <string name="lookupOfPlayer">Peržiūrėti galvosūkius iš žaidėjo partijų</string>
   <string name="searchPuzzles">Ieškoti galvosūkių</string>
-  <string name="fromMyGamesNone">Jūs galvosūkių duomenų bazėje neturite, bet Lichess vis tiek jus labai myli.
+  <string name="fromMyGamesNone">Jūs galvosūkių duomenų bazėje neturite, bet Logik vis tiek jus labai myli.
 Žaiskite greituosius ir klasikinius žaidimus ir taip padidinkite šansus, kad bus pridėtas galvosūkis iš jūsų partijos!</string>
   <string name="puzzleDashboardDescription">Treniruokitės, analizuokite, tobulinkitės</string>
   <plurals name="nbPlayed">

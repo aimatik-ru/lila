@@ -483,7 +483,7 @@
   <string name="oneUrlPerLine">प्रति पंक्ति एक कड़ी</string>
   <string name="inlineNotation">इनलाइन नोटेशन</string>
   <string name="makeAStudy">सुरक्षित रखने और साझा करने के लिए, एक अध्ययन करने पर विचार करें।</string>
-  <string name="previouslyOnLichessTV">इससे पहले Lichess TV पर</string>
+  <string name="previouslyOnLichessTV">इससे पहले Logik TV पर</string>
   <string name="onlinePlayers">ऑनलाइन खिलाड़ियों</string>
   <string name="activePlayers">सक्रिय  खिलाडी</string>
   <string name="bewareTheGameIsRatedButHasNoClock">सावधान, खेल मूल्यांकित है लेकिन कोई समय नियंत्रण नहीं है!</string>
@@ -675,7 +675,7 @@
   <string name="byRegisteringYouAgreeToBeBoundByOur">दर्ज करके, आप हमारे %s द्वारा बाध्य होने के लिए सहमत हैं।</string>
   <string name="readAboutOur">हमारे%s के बारे में पढ़ें।</string>
   <string name="networkLagBetweenYouAndLichess">आप और lichess के बीच नेटवर्क के अंतराल</string>
-  <string name="timeToProcessAMoveOnLichessServer">Lichess सर्वर पर एक कदम प्रक्रिया के लिए समय</string>
+  <string name="timeToProcessAMoveOnLichessServer">Logik सर्वर पर एक कदम प्रक्रिया के लिए समय</string>
   <string name="downloadAnnotated">एनोटेट नीचे लादें</string>
   <string name="downloadRaw">कच्चा नीचे लादें</string>
   <string name="downloadImported">डाउनलोड आयातित</string>
@@ -797,7 +797,7 @@
   <string name="tryToWin">आपके द्वारा खेले जाने वाले हर खेल को जीतने की कोशिश करें। (या कम से कम खेल ड्रा करें)।</string>
   <string name="resignLostGames">हारे हुए खेलों को त्याग दें (घड़ी को अंत तक न चलने दें)।</string>
   <string name="temporaryInconvenience">हमें अल्पकालिक असुविधा के लिए खेद है</string>
-  <string name="wishYouGreatGames">और lichess.org पर आपको अनेक शानदार खेलों की शुभकामनाएं।</string>
+  <string name="wishYouGreatGames">और play.kalugalogic.ru पर आपको अनेक शानदार खेलों की शुभकामनाएं।</string>
   <string name="thankYouForReading">पढ़ने के लिए धन्यवाद!</string>
   <string name="lifetimeScore">जीवनकाल स्कोर</string>
   <string name="currentMatchScore">वर्तमान मैच का स्कोर</string>
@@ -838,7 +838,7 @@
   <string name="congratsYouWon">बधाई हो, आप जीत गए!</string>
   <string name="gameVsX">खेल बनाम %1$s</string>
   <string name="resVsX">%1$s बनाम %2$s</string>
-  <string name="lostAgainstTOSViolator">आप Lichess TOS का उल्लंघन करने वाले व्यक्ति से हार गए</string>
+  <string name="lostAgainstTOSViolator">आप Logik TOS का उल्लंघन करने वाले व्यक्ति से हार गए</string>
   <string name="refundXpointsTimeControlY">%1$s %2$s वापसी की</string>
   <string name="timeAlmostUp">समय लगभग समाप्त है!</string>
   <string name="clickToRevealEmailAddress">[ईमेल देखने के लिए क्लिक करें]</string>
@@ -888,11 +888,11 @@
   <string name="resignTheGame">हार मान ले</string>
   <string name="since">दिनांक से</string>
   <string name="until">दिनांक तक​</string>
-  <string name="lichessDbExplanation">मुल्यांकित खेल Lichess के सभी खिलाड़ियो से</string>
+  <string name="lichessDbExplanation">मुल्यांकित खेल Logik के सभी खिलाड़ियो से</string>
   <string name="switchSides">पार्श्व बदलना</string>
   <string name="closingAccountWithdrawAppeal">आपका खाता बंद करने से आपकी अपील वापस ले ली जाएगी</string>
   <string name="ourEventTips">कार्यक्रम आयोजित करने कि सलाह</string>
-  <string name="lichessPatronInfo">Lichess एक चैरिटी और पूरी तरह से फ्री/लिबर ओपन सोर्स सॉफ्टवेयर है।
+  <string name="lichessPatronInfo">Logik एक चैरिटी और पूरी तरह से फ्री/लिबर ओपन सोर्स सॉफ्टवेयर है।
 सभी परिचालन लागत, विकास और सामग्री पूरी तरह से उपयोगकर्ता दान द्वारा वित्त पोषित हैं।</string>
   <string name="nothingToSeeHere">इस समय यहां देखने को कुछ भी नहीं है।</string>
 </resources>

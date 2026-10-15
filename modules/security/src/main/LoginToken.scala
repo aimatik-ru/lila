@@ -62,14 +62,14 @@ final class LoginToken(
           import Mailer.html.*
           sendEmail(user, email)(
             List(
-              "Enter this code to log in with your Lichess account:",
+              "Enter this code to log in with your Логик account:",
               "",
               code,
               "",
               "This code expires in 5 minutes. If you didn’t request it, you can safely ignore this email."
             ),
             emailMessage(
-              p("Enter this code to log in with your Lichess account:"),
+              p("Enter this code to log in with your Логик account:"),
               loginCode(metaName("Log in code"), code),
               p(
                 "This code expires in 5 minutes. If you didn’t request it, you can safely ignore this email."

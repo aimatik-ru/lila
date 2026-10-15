@@ -46,7 +46,7 @@ C játékos - D játékos
 Ha párosítás helyett egy játékosnak bye-t (1 pont) szeretnél adni, így írd be:
 E játékos 1
 A hiányzó játékosok távollévőnek számítanak, és nulla pontot kapnak.
-Hagyd üresen ezt a mezőt, hogy a Lichess automatikusan létrehozza a párosításokat.</string>
+Hagyd üresen ezt a mezőt, hogy a Logik automatikusan létrehozza a párosításokat.</string>
   <string name="mustHavePlayedTheirLastSwissGame">Az utolsó svájci parti lejátszása kötelező</string>
   <string name="mustHavePlayedTheirLastSwissGameHelp">Csak azok a játékosok csatlakozhatnak, akik lejátszották az utolsó svájci játszmájukat. Akik nem jelentek meg egy közelmúltbeli svájci tornán, nem tudnak belépni a tiédre. Ez jobb versenyzési élményt eredményez azoknak, akik ténylegesen megjelennek.</string>
   <string name="newSwiss">Új svájci rendszerű verseny</string>
@@ -76,7 +76,7 @@ Ha egy játékost nem lehet párosítani, erőnyerő lesz, ami egy pontot ér.</
 A rendszer visszalépteti ezeket a játékosokat a versenytől, hogy ne veszítsenek több játszmát.
  Bármikor újra csatlakozhatnak a versenyhez.</string>
   <string name="protectionAgainstNoShowQ">Mi van, ha nem jelenik meg egy játékos?</string>
-  <string name="protectionAgainstNoShowA">Játékosok akik regisztrálnak egy svájci rendszerű versenyre, de nem játszák le játszmáikat, az problémás lehet. Hogy enyhítsen a dolgon, Lichess egy adott időre megakadályozza ezeket a játékosokat hogy új svájci rendszerű versenyre jelentkezzenek. Egy verseny szervezője dönthet úgy, hogy ennek ellenére is játszhassanak.</string>
+  <string name="protectionAgainstNoShowA">Játékosok akik regisztrálnak egy svájci rendszerű versenyre, de nem játszák le játszmáikat, az problémás lehet. Hogy enyhítsen a dolgon, Logik egy adott időre megakadályozza ezeket a játékosokat hogy új svájci rendszerű versenyre jelentkezzenek. Egy verseny szervezője dönthet úgy, hogy ennek ellenére is játszhassanak.</string>
   <string name="lateJoinQ">Csatlakozhatnak-e a játékosok utólag?</string>
   <string name="lateJoinA">Igen, amíg a fordulóknak kevesebb, mint a fele kezdődött el. Például egy 11 fordulós versenyben a játékosok csatlakozhatnak a 6. forduló kezdete előtt; illetve egy 12 fordulósban a 7. forduló kezdetéig.
 A későn csatlakozók egy fél pontot érő bye-t kapnak akkor is, ha több fordulóból maradtak ki.</string>
@@ -86,7 +86,7 @@ A későn csatlakozók egy fél pontot érő bye-t kapnak akkor is, ha több for
 Ennek az az oka, hogy nem tudjuk tisztességesen kezelni a versenyből idő előtt távozókat. Nem várhatjuk el, hogy egy online versenyen minden játékos lejátssza az összes meccsét. Ez egyszerűen nem fog menni és ennek eredményeképpen a legtöbb körmérkőzés verseny hibás és igazságtalan lenne, ami meghiúsítja az értelmüket.
 Az online körmérkőzéshez legközelebb egy svájci verseny áll, ahol nagyon sok forduló van. Ilyenkor az összes lehetséges párosítást lejátsszák, mielőtt a verseny véget ér.</string>
   <string name="otherSystemsQ">Mi a helyzet más verseny struktúrákkal?</string>
-  <string name="otherSystemsA">Jelenleg nem tervezzük további versenytípusok hozzáadását a Lichess-hez.</string>
+  <string name="otherSystemsA">Jelenleg nem tervezzük további versenytípusok hozzáadását a Logik-hez.</string>
   <string name="swissDescription">A svájci rendszerű versenyekben %1$s a résztvevők nem feltétlen játszanak mindenki más ellen. A versenyzőket egymás ellen párosítják minden fordulóban előre meghatározott szabályok alapján úgy, hogy mindenki hasonló teljesítményű ellenfelet kapjon, de ne ugyanazt kétszer egymás után. A nyertes az, aki a legtöbb pontot szerezte a fordulókban összesen. Minden résztvevő játszik valaki ellen minden fordulóban, kivéve ha páratlan számú versenyző van.</string>
   <string name="teamOnly">Svájci rendszerű versenyeket csak csapatvezetők indíthatnak és csak csapattagok vehetnek benne részt.           
 %1$s, hogy részt vehess svájci rendszerű versenyben.</string>

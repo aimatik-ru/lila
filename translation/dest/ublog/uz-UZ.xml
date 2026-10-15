@@ -6,7 +6,7 @@
   <string name="all">Barchasi</string>
   <string name="byMonth">Oyma‑oy</string>
   <string name="byTopic">Mavzu boʻyicha</string>
-  <string name="byLichess">Lichess tomonidan</string>
+  <string name="byLichess">Logik tomonidan</string>
   <string name="myFriends">Doʻstlarim</string>
   <string name="myLikes">Menga yoqqanlar</string>
   <string name="myBlog">Mening blogim</string>
@@ -17,7 +17,7 @@
     <item quantity="other">%s blog post</item>
   </plurals>
   <string name="continueReadingPost">Davomini oʻqish</string>
-  <string name="lichessBlogPostsFromXYear">%s‑yildagi Lichess blog postlari</string>
+  <string name="lichessBlogPostsFromXYear">%s‑yildagi Logik blog postlari</string>
   <string name="previousBlogPosts">Oldingi blog postlar</string>
   <string name="xBlog">%s\'ning blogi</string>
   <string name="newPost">Yangi post</string>

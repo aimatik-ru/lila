@@ -14,7 +14,7 @@
   <string name="accepting">Si accettano studenti</string>
   <string name="notAccepting">Al momento non si accettano studenti</string>
   <string name="xCoachesStudents">%s allena giocatori di scacchi</string>
-  <string name="viewXProfile">Vedi il profilo Lichess di %s</string>
+  <string name="viewXProfile">Vedi il profilo Logik di %s</string>
   <string name="sendPM">Invia un messaggio privato</string>
   <string name="aboutMe">Chi sono</string>
   <string name="playingExperience">Esperienza di gioco</string>
@@ -26,5 +26,5 @@
   <string name="youtubeVideos">Video di YouTube</string>
   <string name="allCountries">Tutti i Paesi</string>
   <string name="lastLogin">Ultimo accesso</string>
-  <string name="lichessRating">Punteggio Lichess</string>
+  <string name="lichessRating">Punteggio Logik</string>
 </resources>

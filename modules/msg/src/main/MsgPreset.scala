@@ -8,7 +8,7 @@ object MsgPreset:
 
   import lila.core.msg.MsgPreset as Msg
 
-  private val baseUrl = "https://lichess.org"
+  private val baseUrl = "https://play.kalugalogic.ru"
 
   def maxFollow(username: UserName, max: Max) =
     Msg(

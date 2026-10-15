@@ -242,9 +242,9 @@
   <string name="forgotPassword">Забравена парола?</string>
   <string name="error.weakPassword">Тази парола е често срещана и несигурна.</string>
   <string name="error.namePassword">Моля, не използвайте потребителското си име като парола.</string>
-  <string name="blankedPassword">Използвали сте същата парола в друг сайт и той е бил компрометиран. За да гарантираме сигурността на вашия акаунт в Lichess, трябва да зададете нова парола. Благодарим ви за разбирането.</string>
-  <string name="youAreLeavingLichess">Напускате Lichess</string>
-  <string name="neverTypeYourPassword">Никога не използвайте паролата си за Lichess в друг сайт!</string>
+  <string name="blankedPassword">Използвали сте същата парола в друг сайт и той е бил компрометиран. За да гарантираме сигурността на вашия акаунт в Logik, трябва да зададете нова парола. Благодарим ви за разбирането.</string>
+  <string name="youAreLeavingLichess">Напускате Logik</string>
+  <string name="neverTypeYourPassword">Никога не използвайте паролата си за Logik в друг сайт!</string>
   <string name="proceedToX">Продължи към %s</string>
   <string name="passwordSuggestion">Не използвайте парола предложена от друг човек. Понеже може да ви открадне профила.</string>
   <string name="emailSuggestion">Не използвайте имейл адрес на друг човек. Понеже може да ви открадне профила.</string>
@@ -348,7 +348,7 @@
     <item quantity="one">Дай %s sec</item>
     <item quantity="other">Дай %s sec</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Този профил е нарушил Условията за Ползване на Lichess</string>
+  <string name="thisAccountViolatedTos">Този профил е нарушил Условията за Ползване на Logik</string>
   <string name="openingExplorerAndTablebase">&amp; - Изследовател на дебютите</string>
   <string name="takeback">Върни ход</string>
   <string name="proposeATakeback">Предложи връщане на ход</string>
@@ -698,7 +698,7 @@
   <string name="simulAddExtraTime">Можеш да си прибавиш време, за да се справиш с предизвикателството.</string>
   <string name="simulAddExtraTimePerPlayer">Добавете начално време на Вашия часовник за всеки играч, който се присъедини към сеанса.</string>
   <string name="simulHostExtraTimePerPlayer">Допълнително време на организатора за всеки играч</string>
-  <string name="lichessTournaments">Lichess състезания</string>
+  <string name="lichessTournaments">Logik състезания</string>
   <string name="tournamentFAQ">ЧЗВ относно състезанието</string>
   <string name="timeBeforeTournamentStarts">Време до началото на турнира</string>
   <string name="averageCentipawnLoss">Средна загуба в стотни на пешка</string>
@@ -767,7 +767,7 @@
   <string name="kidMode">Детски режим</string>
   <string name="kidModeIsEnabled">Детският режим е включен.</string>
   <string name="kidModeExplanation">В името на безопасността. В детския режим цялата комуникация в сайта е изключена. Включете детския режим, за да защитите вашите деца и ученици от другите потребители.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">В детския режим логото на Lichess става %s, за да сте сигурни в безопасността на своите деца.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">В детския режим логото на Logik става %s, за да сте сигурни в безопасността на своите деца.</string>
   <string name="askYourChessTeacherAboutLiftingKidMode">Вашата сметка се управлява. Попитайте учителя си по шахмат за вдигане на детския режим.</string>
   <string name="enableKidMode">Включване на детски режим</string>
   <string name="disableKidMode">Изключване на детски режим</string>
@@ -875,7 +875,7 @@
     <item quantity="one">и запиши %s като предварителен ход</item>
     <item quantity="other">и запиши %s като предварителен ход</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Получихте лично съобщение от Lichess.</string>
+  <string name="showUnreadLichessMessage">Получихте лично съобщение от Logik.</string>
   <string name="sorry">Съжалявам :(</string>
   <string name="weHadToTimeYouOutForAWhile">Наложи се да Ви сложим в принудителна почивка за известно време.</string>
   <string name="why">Защо?</string>
@@ -887,7 +887,7 @@
   <string name="tryToWin">Опитайте да спечелите (или поне да свършите наравно) всяка игра, която играете.</string>
   <string name="resignLostGames">Предавайте се, когато играта е загубена (не оставяйте часовникът просто да спре).</string>
   <string name="temporaryInconvenience">Извиняваме се за временното неудобство</string>
-  <string name="wishYouGreatGames">и Ви желаем чудесни игри на lichess.org.</string>
+  <string name="wishYouGreatGames">и Ви желаем чудесни игри на play.kalugalogic.ru.</string>
   <string name="thankYouForReading">Благодарим, че прочетохте това!</string>
   <string name="lifetimeScore">Общ резултат</string>
   <string name="currentMatchScore">Текущ резултат</string>
@@ -933,7 +933,7 @@
   <string name="congratsYouWon">Поздравления, спечелихте!</string>
   <string name="gameVsX">Партия срещу %1$s</string>
   <string name="resVsX">%1$s срещу %2$s</string>
-  <string name="lostAgainstTOSViolator">Изгубили сте партия срещу някой който е нарушил правилата за ползване на Lichess</string>
+  <string name="lostAgainstTOSViolator">Изгубили сте партия срещу някой който е нарушил правилата за ползване на Logik</string>
   <string name="refundXpointsTimeControlY">Възстановяване: %1$s %2$s точки.</string>
   <string name="timeAlmostUp">Времето почти изтече!</string>
   <string name="clickToRevealEmailAddress">[Щракнете, за да видите имейл адреса]</string>
@@ -983,13 +983,13 @@
   <string name="resignTheGame">Предаване</string>
   <string name="since">От</string>
   <string name="until">До</string>
-  <string name="lichessDbExplanation">Игри с рейтинг измежду всички Lichess играчи</string>
+  <string name="lichessDbExplanation">Игри с рейтинг измежду всички Logik играчи</string>
   <string name="switchSides">Смени страната</string>
   <string name="closingAccountWithdrawAppeal">Закриването на регистрацията Ви ще оттегли Вашето обжалване</string>
   <string name="ourEventTips">Нашите съвети за организиране на събития</string>
   <string name="instructions">Инструкции</string>
   <string name="showMeEverything">Покажи ми всичко</string>
-  <string name="lichessPatronInfo">Lichess е благотворителна организация и работи с напълно безплатен софтуер и отворен код. Всички разходи за опериране, разработка и съдържание са финансирани единствено от дарения от потребителите ни.</string>
+  <string name="lichessPatronInfo">Logik е благотворителна организация и работи с напълно безплатен софтуер и отворен код. Всички разходи за опериране, разработка и съдържание са финансирани единствено от дарения от потребителите ни.</string>
   <string name="nothingToSeeHere">Засега тук няма нищо.</string>
   <string name="stats">Статистика</string>
   <string name="accessibility">Достъпност</string>

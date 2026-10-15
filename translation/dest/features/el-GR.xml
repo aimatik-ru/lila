@@ -3,7 +3,7 @@
   <string name="zeroAdsAndNoTracking">Χωρίς διαφημίσεις, χωρίς παρακολούθηση</string>
   <string name="correspondenceWithConditionalPremoves">Σκάκι δι\' αλληλογραφίας με υπό όρους προκινήσεις</string>
   <string name="standardChessAndX" comment="%s is 8 variants">Κλασικό σκάκι και %s</string>
-  <string name="deepXServerAnalysis" comment="%s is the engine name">Ανάλυση σε βάθος από το %s στους διακομιστές του Lichess</string>
+  <string name="deepXServerAnalysis" comment="%s is the engine name">Ανάλυση σε βάθος από το %s στους διακομιστές του Logik</string>
   <plurals name="gamesPerDay">
     <item quantity="one">%s παρτίδες ανά ημέρα</item>
     <item quantity="other">%s παρτίδες ανά ημέρα</item>
@@ -27,6 +27,6 @@
   <string name="everybodyGetsAllFeaturesForFree">Ναι, και οι δύο λογαριασμοί έχουν τα ίδια χαρακτηριστικά!</string>
   <string name="weBelieveEveryChessPlayerDeservesTheBest">Πιστεύουμε ότι κάθε σκακιστής αξίζει το καλύτερο, και έτσι:</string>
   <string name="allFeaturesAreFreeForEverybody">Όλες οι λειτουργίες είναι δωρεάν για όλους, για πάντα!</string>
-  <string name="ifYouLoveLichess">Αν αγαπάτε το Lichess,</string>
+  <string name="ifYouLoveLichess">Αν αγαπάτε το Logik,</string>
   <string name="supportUsWithAPatronAccount">Υποστηρίξτε μας μέσω λογαριασμού Patron!</string>
 </resources>

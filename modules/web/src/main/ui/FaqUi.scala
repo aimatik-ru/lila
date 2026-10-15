@@ -34,7 +34,7 @@ final class FaqUi(helpers: Helpers, sitePages: SitePages)(
       .css("bits.faq"):
         div(cls := "faq box box-pad")(
           h1(cls := "box__top")(trf.frequentlyAskedQuestions()),
-          h2("Lichess"),
+          h2("Логик"),
           question(
             "name",
             trf.whyIsLichessCalledLichess.txt(),
@@ -226,7 +226,7 @@ final class FaqUi(helpers: Helpers, sitePages: SitePages)(
             p(
               trf.showYourTitle(
                 a(href := routes.TitleVerify.index)(trf.verificationForm()),
-                a(href := "#lm")("Lichess Master (LM)")
+                a(href := "#lm")("Логик Master (LM)")
               )
             )
           ),
@@ -241,7 +241,7 @@ final class FaqUi(helpers: Helpers, sitePages: SitePages)(
             trf.whatUsernameCanIchoose.txt(),
             p(
               trf.usernamesNotOffensive(
-                a(href := "https://lichess.org/page/username-policy")(trf.guidelines())
+                a(href := "https://play.kalugalogic.ru/page/username-policy")(trf.guidelines())
               )
             )
           ),
@@ -256,7 +256,7 @@ final class FaqUi(helpers: Helpers, sitePages: SitePages)(
             h4("The Golden Zee"),
             p(
               trf.ownerUniqueTrophies(
-                a(href := "https://lichess.org/@/ZugAddict")("ZugAddict")
+                a(href := "https://play.kalugalogic.ru/@/ZugAddict")("ZugAddict")
               )
             ),
             p(
@@ -374,8 +374,8 @@ final class FaqUi(helpers: Helpers, sitePages: SitePages)(
             trf.makeBotTitle.txt(),
             p(
               trf.makeBotDescription.rawHtml(
-                "https://lichess.org/blog/WvDNticAAMu_mHKP/welcome-lichess-bots",
-                "https://lichess.org/@/thibault/blog/how-to-create-a-lichess-bot/FuKyvDuB"
+                "https://play.kalugalogic.ru/blog/WvDNticAAMu_mHKP/welcome-lichess-bots",
+                "https://play.kalugalogic.ru/@/thibault/blog/how-to-create-a-lichess-bot/FuKyvDuB"
               )
             )
           ),
@@ -387,7 +387,7 @@ final class FaqUi(helpers: Helpers, sitePages: SitePages)(
                 a(href := "https://getcoldturkey.com")("ColdTurkey"),
                 a(href := "https://freedom.to")("Freedom"),
                 a(href := "https://www.proginosko.com/leechblock")("LeechBlock"),
-                a(href := "https://lichess.org/page/userstyles")(trf.lichessUserstyles()),
+                a(href := "https://play.kalugalogic.ru/page/userstyles")(trf.lichessUserstyles()),
                 a(href := "https://github.com/ornicar/userstyles/blob/master/lichess.fewer-pools.user.css")(
                   trf.fewerLobbyPools()
                 ),

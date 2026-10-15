@@ -220,9 +220,9 @@
   <string name="forgotPassword">கடவுச்சொல்லை மறந்து விட்டீர்களா?</string>
   <string name="error.weakPassword">இந்தக் கடவுச்சொல் பொதுவானதும், மிக இலகுவாக ஊகிக்கக் கூடியதுமாகும்.</string>
   <string name="error.namePassword">தயவுசெய்து உங்களின் பயனர் பெயரைக் கடவுச்சொல்லாகப் பயனபடுத்த வேண்டாம்.</string>
-  <string name="blankedPassword">நீங்கள் இதே கடவுச்சொலை பிறிதொரு தளத்தில் பாவிக்கின்றீர்கள், அந்த வலைத்தளம் திருடப்பட்டுள்ளது. உங்களின் Lichess கணக்கைப் பாதுகாக்க, நீங்கள் புதிய கடவுச்சொல் ஒன்றை உருவாக்க வேண்டும். விளங்கிக் கொண்டமைக்கு நன்றி.</string>
-  <string name="youAreLeavingLichess">நீங்கள் Lichess ஐ விட்டு வெளியேறுகிறீர்கள்</string>
-  <string name="neverTypeYourPassword">உங்கள் Lichess கடவுச்சொல்லை ஒருபோதும் பிறிதொரு தளத்தில் பாவிக்க வேண்டாம்!</string>
+  <string name="blankedPassword">நீங்கள் இதே கடவுச்சொலை பிறிதொரு தளத்தில் பாவிக்கின்றீர்கள், அந்த வலைத்தளம் திருடப்பட்டுள்ளது. உங்களின் Logik கணக்கைப் பாதுகாக்க, நீங்கள் புதிய கடவுச்சொல் ஒன்றை உருவாக்க வேண்டும். விளங்கிக் கொண்டமைக்கு நன்றி.</string>
+  <string name="youAreLeavingLichess">நீங்கள் Logik ஐ விட்டு வெளியேறுகிறீர்கள்</string>
+  <string name="neverTypeYourPassword">உங்கள் Logik கடவுச்சொல்லை ஒருபோதும் பிறிதொரு தளத்தில் பாவிக்க வேண்டாம்!</string>
   <string name="proceedToX">%s தொடரவும்</string>
   <string name="passwordSuggestion">வேறொருவர் பரிந்துரைக்கும் கடவுச்சொல்லைப் பயன்படுத்த வேண்டாம். அவர்கள் உங்களின் கணக்கைத் திருட இதைப் பயன்படுத்தலாம்.</string>
   <string name="emailSuggestion">வேறோருவர் பரிந்துரைக்கும் மின்னஞ்சல் முகவரியை உள்ளிட வேண்டாம். அவர்கள் உங்களின் கணக்கைத் திருடுவதற்கு இதைப் பயன்படுத்தலாம்.</string>
@@ -290,7 +290,7 @@
   <string name="play">விளையாடு</string>
   <string name="inbox">மடல்</string>
   <string name="chatRoom">உரையாடலறை</string>
-  <string name="loginToChat">உரையாடுவதற்காக Lichess இல் சேருங்கள்</string>
+  <string name="loginToChat">உரையாடுவதற்காக Logik இல் சேருங்கள்</string>
   <string name="youHaveBeenTimedOut">உங்கள் காலங்கடந்தது.</string>
   <string name="spectatorRoom">பார்வையாளர் அறை</string>
   <string name="composeMessage">தூது எழுது</string>
@@ -323,7 +323,7 @@
     <item quantity="one">%s நொடி வழங்கு</item>
     <item quantity="other">%s நொடிகள் வழங்கு</item>
   </plurals>
-  <string name="thisAccountViolatedTos">இந்தக் கணக்கு Lichess சேவை விதிமுறைகள் மீறியது</string>
+  <string name="thisAccountViolatedTos">இந்தக் கணக்கு Logik சேவை விதிமுறைகள் மீறியது</string>
   <string name="openingExplorerAndTablebase">உலாவியில் &amp; அட்டவணையைத் திறக்கிறது</string>
   <string name="takeback">மீட்சி</string>
   <string name="proposeATakeback">மீட்சி கோருக</string>
@@ -494,7 +494,7 @@
   <string name="oneUrlPerLine">ஒரு வரிக்கு ஒரு URL.</string>
   <string name="inlineNotation">உள்ளமை எண்ணிடல்</string>
   <string name="makeAStudy">பாதுகாப்பதற்கும் பகிர்வதற்கும், ஒரு கற்கையை மேற்கொள்ளுங்கள்.</string>
-  <string name="previouslyOnLichessTV">முன்பு Lichess தொலைகாட்சியில்</string>
+  <string name="previouslyOnLichessTV">முன்பு Logik தொலைகாட்சியில்</string>
   <string name="onlinePlayers">நிகழ்நிலை ஆட்டக்காரர்கள்</string>
   <string name="activePlayers">பங்குபெற்ற விளையாட்டாளர்கள்</string>
   <string name="bewareTheGameIsRatedButHasNoClock">எச்சரிக்கை, மதிப்பீட்டுடனான இவ்வாட்டத்தில் கடிகாரம் இல்லை!</string>
@@ -707,7 +707,7 @@
   <string name="byRegisteringYouAgreeToBeBoundByOur">பதிவு செய்வதன் மூலம், நீங்கள் %s ஐ ஒப்புக்கொள்கிறீர்கள்.</string>
   <string name="readAboutOur">எங்கள் %s பற்றி படிக்கவும்.</string>
   <string name="networkLagBetweenYouAndLichess">உங்களுக்கும் லிச்சஸுக்கும் இடையே நெட்வொர்க் லேக்</string>
-  <string name="timeToProcessAMoveOnLichessServer">Lichess இன் சர்வரில் ஒரு நகர்வைச் செயல்படுத்துவதற்கான நேரம்</string>
+  <string name="timeToProcessAMoveOnLichessServer">Logik இன் சர்வரில் ஒரு நகர்வைச் செயல்படுத்துவதற்கான நேரம்</string>
   <string name="downloadAnnotated">பதிவிறக்கம் சிறுகுறிப்பு</string>
   <string name="downloadRaw">பச்சையாகப் பதிவிறக்கவும்</string>
   <string name="downloadImported">பதிவிறக்கம் இறக்குமதி செய்யப்பட்டது</string>
@@ -725,7 +725,7 @@
   <string name="kidMode">குழந்தை முறை</string>
   <string name="kidModeIsEnabled">குழந்தை பயன்முறை இயக்கப்பட்டது.</string>
   <string name="kidModeExplanation">இது பாதுகாப்பு பற்றியது. கிட் பயன்முறையில், அனைத்து தள தகவல்தொடர்புகளும் முடக்கப்பட்டுள்ளன. உங்கள் குழந்தைகள் மற்றும் பள்ளி மாணவர்கள், பிற இணைய பயனர்களிடமிருந்து அவர்களைப் பாதுகாக்க இதை இயக்கவும்.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">கிட் பயன்முறையில், Lichess லோகோ %s ஐகானைப் பெறுகிறது, எனவே உங்கள் குழந்தைகள் பாதுகாப்பாக இருப்பதை நீங்கள் அறிவீர்கள்.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">கிட் பயன்முறையில், Logik லோகோ %s ஐகானைப் பெறுகிறது, எனவே உங்கள் குழந்தைகள் பாதுகாப்பாக இருப்பதை நீங்கள் அறிவீர்கள்.</string>
   <string name="askYourChessTeacherAboutLiftingKidMode">உங்கள் கணக்கு நிர்வகிக்கப்படுகிறது. குழந்தைப் பயன்முறையைத் தூக்குவது பற்றி உங்கள் சதுரங்க ஆசிரியரிடம் கேளுங்கள்.</string>
   <string name="enableKidMode">குழந்தை பயன்முறையை இயக்கவும்</string>
   <string name="disableKidMode">குழந்தை பயன்முறையை முடக்கு</string>
@@ -830,7 +830,7 @@
     <item quantity="one">மற்றும் %s முன்னோட்ட வரியைச் சேமிக்கவும்</item>
     <item quantity="other">மற்றும் %s முன்னோட்ட வரிகளை சேமிக்கவும்</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Lichess இடமிருந்து நீங்கள் ஒரு தனிப்பட்ட செய்தியைப் பெற்றுள்ளீர்கள்.</string>
+  <string name="showUnreadLichessMessage">Logik இடமிருந்து நீங்கள் ஒரு தனிப்பட்ட செய்தியைப் பெற்றுள்ளீர்கள்.</string>
   <string name="sorry">மன்னிக்கவும் :(</string>
   <string name="weHadToTimeYouOutForAWhile">நாங்கள் உங்களை சிறிது நேரம் வெளியேற்ற வேண்டியிருந்தது.</string>
   <string name="why">ஏன்?</string>
@@ -842,7 +842,7 @@
   <string name="tryToWin">நீங்கள் விளையாடும் ஒவ்வொரு ஆட்டத்திலும் வெற்றி பெற (அல்லது குறைந்தபட்சம் சமநிலை படுத்த) முயலவும்.</string>
   <string name="resignLostGames">இழந்த ஆட்டங்களைக் கைதுறந்து ஒப்படையுங்கள் (கடிகாரத்தை இயக்க விடாதீர்கள்).</string>
   <string name="temporaryInconvenience">தற்காலிக சிரமத்திற்கு வருந்துகிறோம்,</string>
-  <string name="wishYouGreatGames">மற்றும் lichess.org இல் நீங்கள் சிறந்த ஆட்டங்களை ஆட விரும்புகிறோம்.</string>
+  <string name="wishYouGreatGames">மற்றும் play.kalugalogic.ru இல் நீங்கள் சிறந்த ஆட்டங்களை ஆட விரும்புகிறோம்.</string>
   <string name="thankYouForReading">படித்ததற்கு நன்றி!</string>
   <string name="lifetimeScore">வாழ்நாள் மதிப்பெண்</string>
   <string name="currentMatchScore">தற்போதைய போட்டி மதிப்பெண்</string>
@@ -886,7 +886,7 @@
   <string name="congratsYouWon">வாழ்த்துக்கள், நீங்கள் வெற்றி பெற்றீர்கள்!</string>
   <string name="gameVsX">ஆட்டம் vs %1$s</string>
   <string name="resVsX">%1$s vs %2$s</string>
-  <string name="lostAgainstTOSViolator">Lichess TOS ஐ மீறிய ஒருவருக்கு நீங்கள் மதிப்பீடு புள்ளிகளை இழந்துவிட்டீர்கள்</string>
+  <string name="lostAgainstTOSViolator">Logik TOS ஐ மீறிய ஒருவருக்கு நீங்கள் மதிப்பீடு புள்ளிகளை இழந்துவிட்டீர்கள்</string>
   <string name="refundXpointsTimeControlY">பணத்தைத் திரும்பப்பெறுதல்: %1$s %2$s மதிப்பீடு புள்ளிகள்.</string>
   <string name="timeAlmostUp">நேரம் கிட்டத்தட்ட முடிந்துவிட்டது!</string>
   <string name="clickToRevealEmailAddress">[மின்னஞ்சல் முகவரியை வெளிப்படுத்த கிளிக் செய்யவும்]</string>
@@ -937,13 +937,13 @@ FEN நிலையை உருவாக்க %s ஐப் பயன்பட�
   <string name="resignTheGame">விளையாட்டை ராஜினாமா செய்யுங்கள்</string>
   <string name="since">இருந்து</string>
   <string name="until">வரை</string>
-  <string name="lichessDbExplanation">Lichess இல் விளையாடிய மதிப்பிடப்பட்ட கேம்கள்</string>
+  <string name="lichessDbExplanation">Logik இல் விளையாடிய மதிப்பிடப்பட்ட கேம்கள்</string>
   <string name="switchSides">பக்கங்களை மாற்றவும்</string>
   <string name="closingAccountWithdrawAppeal">உங்கள் கணக்கை மூடுவது உங்கள் முறையீட்டைத் திரும்பப் பெறும்</string>
   <string name="ourEventTips">நிகழ்வுகளை ஒழுங்கமைப்பதற்கான எங்கள் உதவிக்குறிப்புகள்</string>
   <string name="instructions">வழிமுறைகள்</string>
   <string name="showMeEverything">எல்லாவற்றையும் எனக்குக் காட்டு</string>
-  <string name="lichessPatronInfo">Lichess ஒரு தொண்டு நிறுவனம் மற்றும் முற்றிலும் இலவச/லிபர் திறந்த மூல மென்பொருள்.
+  <string name="lichessPatronInfo">Logik ஒரு தொண்டு நிறுவனம் மற்றும் முற்றிலும் இலவச/லிபர் திறந்த மூல மென்பொருள்.
 அனைத்து இயக்க செலவுகள், மேம்பாடு மற்றும் உள்ளடக்கம் ஆகியவை பயனர் நன்கொடைகளால் மட்டுமே நிதியளிக்கப்படுகின்றன.</string>
   <string name="nothingToSeeHere">இப்போதைக்கு இங்கே பார்ப்பதற்கு ஒன்றுமில்லை.</string>
   <string name="stats">புள்ளிவிவரங்கள்</string>

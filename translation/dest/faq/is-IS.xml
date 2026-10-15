@@ -2,22 +2,22 @@
 <resources>
   <string name="faqAbbreviation">Algengar Spurningar</string>
   <string name="frequentlyAskedQuestions">Algengar spurningar</string>
-  <string name="whyIsLichessCalledLichess">Af hverju nafnið Lichess?</string>
-  <string name="lichessCombinationLiveLightLibrePronounced">Lichess er blanda af lifandi (e. live), létt (e. light), frítt (e. libre) og skák (e. chess). Orðið er borið fram %1$s.</string>
+  <string name="whyIsLichessCalledLichess">Af hverju nafnið Logik?</string>
+  <string name="lichessCombinationLiveLightLibrePronounced">Logik er blanda af lifandi (e. live), létt (e. light), frítt (e. libre) og skák (e. chess). Orðið er borið fram %1$s.</string>
   <string name="leechess">lí\'tjess</string>
   <string name="hearItPronouncedBySpecialist">Heyra sérfræðing bera þetta fram.</string>
-  <string name="whyLiveLightLibre">Live (í beinni), af því að skákir eru tefldar allan sólahringin; light (létt) og libre (frítt) vegna þess að Lichess er opinn hugbúnaður og óheftur af rusli sem hrjáir aðrar vefsíður.</string>
-  <string name="whyIsLilaCalledLila">Á sama hátt stendur frumkóði Lichess, %1$s, fyrir li[chess in sca]la, þar sem meginhluti Lichess er skrifaður í %2$s, sem er hyggjuvitsforritunarmál.</string>
-  <string name="howCanIContributeToLichess">Hvernig get ég hjálpað Lichess?</string>
-  <string name="lichessPoweredByDonationsAndVolunteers">Starfsemi Lichess er fjármögnuð með gjöfum velunnara og vinnuframlagi sjálfboðaliða.</string>
-  <string name="findMoreAndSeeHowHelp">Þú getur fundið meira um %1$s (þar á meðal %2$s). Ef þú vilt hjálpa Lichess með því að bjóða fram tímann þinn og færni, er hægt %3$s.</string>
+  <string name="whyLiveLightLibre">Live (í beinni), af því að skákir eru tefldar allan sólahringin; light (létt) og libre (frítt) vegna þess að Logik er opinn hugbúnaður og óheftur af rusli sem hrjáir aðrar vefsíður.</string>
+  <string name="whyIsLilaCalledLila">Á sama hátt stendur frumkóði Logik, %1$s, fyrir li[chess in sca]la, þar sem meginhluti Logik er skrifaður í %2$s, sem er hyggjuvitsforritunarmál.</string>
+  <string name="howCanIContributeToLichess">Hvernig get ég hjálpað Logik?</string>
+  <string name="lichessPoweredByDonationsAndVolunteers">Starfsemi Logik er fjármögnuð með gjöfum velunnara og vinnuframlagi sjálfboðaliða.</string>
+  <string name="findMoreAndSeeHowHelp">Þú getur fundið meira um %1$s (þar á meðal %2$s). Ef þú vilt hjálpa Logik með því að bjóða fram tímann þinn og færni, er hægt %3$s.</string>
   <string name="beingAPatron">að gerast velunnari</string>
   <string name="breakdownOfOurCosts">sundurliðaðan heildarkostnað okkar</string>
   <string name="otherWaysToHelp">að hjálpa á ýmsa vegu</string>
-  <string name="areThereWebsitesBasedOnLichess">Eru til vefsíður byggðar á Lichess?</string>
-  <string name="yesLichessInspiredOtherOpenSourceWebsites">Já. Lichess hefur sannarlega veitt öðrum vefsíðum sem nota opinn hugbúnað innblástur, sem nota %1$s okkar, %2$s eða %3$s.</string>
+  <string name="areThereWebsitesBasedOnLichess">Eru til vefsíður byggðar á Logik?</string>
+  <string name="yesLichessInspiredOtherOpenSourceWebsites">Já. Logik hefur sannarlega veitt öðrum vefsíðum sem nota opinn hugbúnað innblástur, sem nota %1$s okkar, %2$s eða %3$s.</string>
   <string name="keyboardShortcuts">Hvaða flýtilyklar eru til?</string>
-  <string name="keyboardShortcutsExplanation">Sumar Lichess-síður gera þér kleift að nota flýtilykla. Prófaðu að ýta á \'?\' lykilinn á stúderingar-, greiningar-, þrautar- eða skákarsíðu til að sýna lista yfir tiltæka flýtilykla.</string>
+  <string name="keyboardShortcutsExplanation">Sumar Logik-síður gera þér kleift að nota flýtilykla. Prófaðu að ýta á \'?\' lykilinn á stúderingar-, greiningar-, þrautar- eða skákarsíðu til að sýna lista yfir tiltæka flýtilykla.</string>
   <string name="fairPlay">Göfuglyndi</string>
   <string name="whenAmIEligibleRatinRefund">Hvenær á ég rétt á að fá sjálfkrafa umbun fyrir skákstig sökum svindlara?</string>
   <string name="ratingRefundExplanation">Einni mínútu eftir að notandi fær merkimiða eru 40 nýlegustu stigaskákir hans á síðustu 5 dögum teknar. Ef þú varst mótherji viðkomanda í einni af þessum skákum, tapaðir skákstigum (sökum taps eða jafnteflis), og skákstigin þín voru ekki tímabundin, færðu þau stig til baka. Umbunin er takmörkuð miðað við hápunkt skákstiganna þinna og skákstigaframvindu þína eftir skákina. (Til dæmis, ef skákstigatala þín hækkaði mikið eftir skákina, gætirðu fengið enga umbun eða aðeins að hluta til.) Umbun mun aldrei vera meira en 150 stig.</string>
@@ -28,16 +28,16 @@
   <string name="isCorrespondenceDifferent">Er bréfskák öðruvísi en venjuleg skák?</string>
   <string name="pleaseReadFairPlayPage">Ef þú óskar eftir frekari upplýsingum, er þér bent á að lesa %s</string>
   <string name="fairPlayPage">síðu okkar um göfuglyndi</string>
-  <string name="youCanUseOpeningBookNoEngine">Á Lichess er helsti munurinn á reglum fyrir bréfskák sá að byrjanabók er leyfð. Notkun skákforrita er enn bönnuð og mun leiða til þess að maður verði merktur fyrir notkun skákforrits. Þó að ICCF leyfi notkun skákforrits í bréfskák gerir Lichess það ekki.</string>
+  <string name="youCanUseOpeningBookNoEngine">Á Logik er helsti munurinn á reglum fyrir bréfskák sá að byrjanabók er leyfð. Notkun skákforrita er enn bönnuð og mun leiða til þess að maður verði merktur fyrir notkun skákforrits. Þó að ICCF leyfi notkun skákforrits í bréfskák gerir Logik það ekki.</string>
   <string name="gameplay">Taflupplifun</string>
   <string name="howBulletBlitzEtcDecided">Hvernig eru tímamörk leifturskáka, hraðskáka og annarra kappskáka ákvörðuð?</string>
-  <string name="basedOnGameDuration">Tímamörk Lichess miðast við áætlaða tímalengd skákar = %1$s.
+  <string name="basedOnGameDuration">Tímamörk Logik miðast við áætlaða tímalengd skákar = %1$s.
 Til dæmis er áætluð tímalengd 5+3 skákar 5 × 60 + 40 × 3 = 420 sekúndur.</string>
   <string name="durationFormula">(upphafstími klukku í sekúndum) + 40 × (viðbótartími á klukku)</string>
   <string name="inferiorThanXsEqualYtimeControl">≤ %1$ss = %2$s</string>
   <string name="superiorThanXsEqualYtimeControl">≥ %1$ss = %2$s</string>
-  <string name="whatVariantsCanIplay">Hvaða afbrigði get ég teflt á Lichess?</string>
-  <string name="lichessSupportChessAnd">Lichess býður upp á hefðbundna skák og %1$s.</string>
+  <string name="whatVariantsCanIplay">Hvaða afbrigði get ég teflt á Logik?</string>
+  <string name="lichessSupportChessAnd">Logik býður upp á hefðbundna skák og %1$s.</string>
   <string name="eightVariants">8 skákafbrigði</string>
   <string name="whatIsACPL">Hvert er meðaltalstap á sentipeði (ACPL)?</string>
   <string name="acplExplanation">Svokallaða sentipeð (e. centipawn) er sú mælieining sem notuð er í skák til að lýsa forskoti. Eitt sentipeð er jafnt og 1/100 af peði. Þar af leiðandi 100 sentipeð = 1 peð. Þessar tölur hafa ekki fest sig í sessi í beinlínis skák en eru nytsamlegar fyrir skákmenn, og nauðsynlegar í tölvuskák, til að meta stöður á taflborðinu.
@@ -46,7 +46,7 @@ Besti leikur tölvunnar mun tapa núll sentipeðum, en lakari leikir munu gera s
 
 Með þessu gildi er hægt að meta hversu góð taflmennskan er. Því færri sentipeð sem tapast á leik, því betri er leikurinn.
 
-Tölvugreiningin á Lichess er drifin af Stockfish.</string>
+Tölvugreiningin á Logik er drifin af Stockfish.</string>
   <string name="insufficientMaterial">Að falla á tíma, gera jafntefli og skorta mannafla</string>
   <string name="lichessFollowFIDErules">Verði annar skákmaður uppiskroppa með tíma á klukku, mun sá skákmaður yfirleitt tapa leiknum. Hins vegar er jafntefli ef staðan er þannig að andstæðingurinn getur ekki mátað kóng skákmannsins með neinum fjölda leikja (%1$s).
 
@@ -64,32 +64,32 @@ Fjallað er um þetta í gr. 3.7.3.1 og 3.7.3.2 af %2$s:
 
 Kíktu á %3$s varðandi þetta leikbragð til þess að ná tökum á því.</string>
   <string name="goodIntroduction">góða kynningu</string>
-  <string name="lichessTraining">Æfingu Lichess</string>
+  <string name="lichessTraining">Æfingu Logik</string>
   <string name="watchIMRosenCheckmate">Horfðu á alþjóðalega meistarann Eric Rosen máta %s.</string>
   <string name="threefoldRepetition">Þreföld endurtekning</string>
-  <string name="threefoldRepetitionExplanation">Ef staða kemur upp þrisvar sinnum geta skákmenn krafist jafnteflis sökum %1$s. Lichess framfylgir þeim reglum sem koma fram í leikreglubók Alþjóðaskáksambandsins, eins og lýst er í gr. 9.2 í %2$s.</string>
+  <string name="threefoldRepetitionExplanation">Ef staða kemur upp þrisvar sinnum geta skákmenn krafist jafnteflis sökum %1$s. Logik framfylgir þeim reglum sem koma fram í leikreglubók Alþjóðaskáksambandsins, eins og lýst er í gr. 9.2 í %2$s.</string>
   <string name="threefoldRepetitionLowerCase">þrefaldrar endurtekningar</string>
   <string name="notRepeatedMoves">Við endurtókum ekki leiki. Hvers vegna varð samt jafntefli sökum endurtekningar?</string>
   <string name="repeatedPositionsThatMatters">Þreföld endurtekning snýst um endurteknar %1$s, ekki leiki. Endurtekning þarf ekki að eiga sér stað í samfelldri röð.</string>
   <string name="positions">stöður</string>
   <string name="weRepeatedthreeTimesPosButNoDraw">Við endurtókum stöðu þrisvar sinnum. Af hverju varð ekki jafntefli?</string>
-  <string name="threeFoldHasToBeClaimed">Annar skákmannanna þarf að lýsa yfir endurtekningu. Þú getur gert það með því að smella á takkann sem birtist, eða með því að bjóða jafntefli áður en þú leikur síðasta endurtekna leikinn þinn; það skiptir engu máli þó andstæðingurinn hafni jafnteflisboðinu, jafnteflið vegna þrefaldrar endurtekningar gildir samt sem áður. Þú mátt einnig %1$s Lichess til að krefjast endurtekninga sjálfkrafa fyrir þig. Auk þess lýkur fimmföld endurtekning skákinni alltaf tafarlaust.</string>
+  <string name="threeFoldHasToBeClaimed">Annar skákmannanna þarf að lýsa yfir endurtekningu. Þú getur gert það með því að smella á takkann sem birtist, eða með því að bjóða jafntefli áður en þú leikur síðasta endurtekna leikinn þinn; það skiptir engu máli þó andstæðingurinn hafni jafnteflisboðinu, jafnteflið vegna þrefaldrar endurtekningar gildir samt sem áður. Þú mátt einnig %1$s Logik til að krefjast endurtekninga sjálfkrafa fyrir þig. Auk þess lýkur fimmföld endurtekning skákinni alltaf tafarlaust.</string>
   <string name="configure">stilla</string>
   <string name="accounts">Aðgangar</string>
-  <string name="titlesAvailableOnLichess">Hvaða titlar eru á Lichess?</string>
-  <string name="lichessRecognizeAllOTBtitles">Lichess viðurkennir alla FIDE-titla sem áunnust í atvinnumannaskákum (e. OTB), auk %1$s. Hér er listi yfir FIDE-titla:</string>
+  <string name="titlesAvailableOnLichess">Hvaða titlar eru á Logik?</string>
+  <string name="lichessRecognizeAllOTBtitles">Logik viðurkennir alla FIDE-titla sem áunnust í atvinnumannaskákum (e. OTB), auk %1$s. Hér er listi yfir FIDE-titla:</string>
   <string name="showYourTitle">Ef þú ert með raunsannan atvinnumannstitil (OTB-titill) geturðu óskað eftir því að fá hann birtan á aðganginum þínum með því að fylla út %1$s, þar sem skýr mynd af skilríkjum og sjálfsmynd af þér að halda á skilríkjunum eiga að fylgja með.
 
-Að staðfesta sig sem skákmann með titil á Lichess veitir aðgang að þátttöku í mótum titilhafa.
+Að staðfesta sig sem skákmann með titil á Logik veitir aðgang að þátttöku í mótum titilhafa.
 
 Loks er til heiðurstitillinn %2$s.</string>
   <string name="asWellAsManyNMtitles">margra meistaratitla þjóða</string>
   <string name="verificationForm">staðfestingareyðublaðið</string>
-  <string name="canIbecomeLM">Get ég fengið titilinn „Lichess-meistari (LM)“?</string>
+  <string name="canIbecomeLM">Get ég fengið titilinn „Logik-meistari (LM)“?</string>
   <string name="noUpperCaseDot">Nei.</string>
-  <string name="lMtitleComesToYouDoNotRequestIt">Þessi heiðurstitill er ekki formlega viðurkenndur og er einungis til á Lichess-síðunni.
+  <string name="lMtitleComesToYouDoNotRequestIt">Þessi heiðurstitill er ekki formlega viðurkenndur og er einungis til á Logik-síðunni.
 
-Við veitum hana sjaldan mjög þekktum skákmönnum sem eru góðir netverjar Lichess, að okkar vild. Þú færð ekki LM-titilinn, LM-titillinn kemur til þín. Ef þú uppfyllir skilyrðin, færðu skilaboð frá okkur varðandi titilinn og val um að þiggja eða afþakka.
+Við veitum hana sjaldan mjög þekktum skákmönnum sem eru góðir netverjar Logik, að okkar vild. Þú færð ekki LM-titilinn, LM-titillinn kemur til þín. Ef þú uppfyllir skilyrðin, færðu skilaboð frá okkur varðandi titilinn og val um að þiggja eða afþakka.
 
 Alls ekki biðja um LM-titilinn.</string>
   <string name="whatUsernameCanIchoose">Hvað getur notandanafnið mitt verið?</string>
@@ -98,11 +98,11 @@ Alls ekki biðja um LM-titilinn.</string>
   <string name="canIChangeMyUsername">Get ég breytt notandanafni mínu?</string>
   <string name="usernamesCannotBeChanged">Nei, ekki er unnt að breyta notendanöfnum vegna tæknilegra og hagnýtra ástæðna. Notendanöfn eru að finna á of mörgum stöðum: í gagnagrunnum, útflutningi, dagálum og í huga fólks. Þú getur einu sinni lagað stafsetningu hvað varðar stóra og litla stafi.</string>
   <string name="uniqueTrophies">Fágætir bikarar</string>
-  <string name="ownerUniqueTrophies">Þessi bikar er fágætur í sögu Lichess, enginn annar en %1$s mun nokkurn tímann eiga hann.</string>
+  <string name="ownerUniqueTrophies">Þessi bikar er fágætur í sögu Logik, enginn annar en %1$s mun nokkurn tímann eiga hann.</string>
   <string name="aHourlyBulletTournament">klukkustundarleifturskákarmóti</string>
   <string name="goldenZeeExplanation">ZugAddict var að streyma og hafði í tvo klukkutíma reynt að vinna tölvuna á stigi 8 í 1+0 skák, án árangurs. Thibault sagði honum að ef honum tækist það í beinni útsendingu myndi hann fá fágætan bikar. Klukkustund síðar gersigraði hann Stockfish, og loforðið var uppfyllt.</string>
-  <string name="lichessRatings">Skákstyrkur á Lichess</string>
-  <string name="whichRatingSystemUsedByLichess">Hvers konar stigakerfi notar Lichess?</string>
+  <string name="lichessRatings">Skákstyrkur á Logik</string>
+  <string name="whichRatingSystemUsedByLichess">Hvers konar stigakerfi notar Logik?</string>
   <string name="ratingSystemUsedByLichess">Skákstig eru reiknuð út frá stigakerfi er kallast Glicko-2, sem Mark Glickman þróaði. Þetta kerfi nýtur mikilla vinsælda og er í notkun hjá ótalmörgum skáksamböndum (Alþjóðaskáksambandið, FIDE, er athyglisverð undantekning þar sem sambandið reiðir sig enn á hið úrelta elóstigakerfi).
 
 Í grundvallaratriðum byggja Glicko-einkunnir á „vissustuðli\" við útreikning og framsetningu á skákstyrk þínum. Þegar þú byrjar fyrst að nota vefsvæðið, eru skákstigin þín 1500 ± 1000. Talan 1500 eru skákstigin þín, og 1000 er bilið á vissustuðlinum.
@@ -132,37 +132,37 @@ Best er að líta á skákstig sem „hlutfallslegar\" tölur (öfugt við „al
   <string name="enableZenMode">Virkja einbeitingarham í %1$s, eða með því að ýta á %2$s á meðan teflt er.</string>
   <string name="displayPreferences">birtingarstillingum</string>
   <string name="connexionLostCanIGetMyRatingBack">Ég tapaði leik sökum seinkunar/aftengingar. Get ég fengið skákstig mín til baka?</string>
-  <string name="weCannotDoThatEvenIfItIsServerSideButThatsRare">Því miður getum við ekki endurheimt skákstig fyrir skákir sem tapast sökum seinkunar eða aftengingar, óháð því hvort vandamálið var hjá þér eða okkur. Hið síðarnefnda er þó afar sjaldgæft. Athugaðu einnig að þegar Lichess endurræsir sig og þú tapar út af klukkunni þá hættum við skákinni til að koma í veg fyrir ósanngjarnt tap.</string>
+  <string name="weCannotDoThatEvenIfItIsServerSideButThatsRare">Því miður getum við ekki endurheimt skákstig fyrir skákir sem tapast sökum seinkunar eða aftengingar, óháð því hvort vandamálið var hjá þér eða okkur. Hið síðarnefnda er þó afar sjaldgæft. Athugaðu einnig að þegar Logik endurræsir sig og þú tapar út af klukkunni þá hættum við skákinni til að koma í veg fyrir ósanngjarnt tap.</string>
   <string name="howToThreeDots">Hvernig á að...</string>
   <string name="enableDisableNotificationPopUps">Virkja eða afvirkja sprettitilkynningar?</string>
   <string name="viewSiteInformationPopUp">Sýna upplýsingar um síðuna í sprettiglugga</string>
-  <string name="lichessCanOptionnalySendPopUps">Lichess getur aukalega sent sprettitilkynningar, til dæmis þegar þú átt leik eða þú fékkst einkaskilaboð.
+  <string name="lichessCanOptionnalySendPopUps">Logik getur aukalega sent sprettitilkynningar, til dæmis þegar þú átt leik eða þú fékkst einkaskilaboð.
 
-Smelltu á lásinn við hliðina á slóð lichess.org í vefslóðastikunni í vafranum þínum.
+Smelltu á lásinn við hliðina á slóð play.kalugalogic.ru í vefslóðastikunni í vafranum þínum.
 
-Veldu síðan hvort skuli leyfa eða loka fyrir tilkynningar frá Lichess.</string>
+Veldu síðan hvort skuli leyfa eða loka fyrir tilkynningar frá Logik.</string>
   <string name="enableAutoplayForSoundsQ">Virkja sjálfvirka spilun hljóða?</string>
   <string name="desktop">skjáborð</string>
-  <string name="enableAutoplayForSoundsFirefox">1. Farðu á lichess.org
+  <string name="enableAutoplayForSoundsFirefox">1. Farðu á play.kalugalogic.ru
 2. Ýttu á Ctrl-i á Linux/Windows eða cmd-i á MacOS-stýrikerfi
 3. Smelltu á „Heimildir“ (e. Permissions) flipann
-4. Leyfðu hljóð- og myndgögn á lichess.org</string>
-  <string name="enableAutoplayForSoundsSafari">1. Farðu á lichess.org
+4. Leyfðu hljóð- og myndgögn á play.kalugalogic.ru</string>
+  <string name="enableAutoplayForSoundsSafari">1. Farðu á play.kalugalogic.ru
 2. Smelltu á Safari í valmyndastikunni
-3. Smelltu á stillingar fyrir lichess.org ...
+3. Smelltu á stillingar fyrir play.kalugalogic.ru ...
 4. Leyfa sjálfvirka spilun af öllu tagi (Auto-Play)</string>
   <string name="enableAutoplayForSoundsMicrosoftEdge">1. Smelltu á punktana þrjá efst í hægra horninu
 2. Smelltu á „Stillingar“
 3. Smelltu á „Heimildir fyrir svæði“
 4. Skrunaðu niður og smelltu á „Sjálfvirk spilun á efni“
-5. Bættu við lichess.org til að Leyfa</string>
+5. Bættu við play.kalugalogic.ru til að Leyfa</string>
   <string name="stopMyselfFromPlaying">Koma í veg fyrir að ég tefli netskák?</string>
   <string name="mentalHealthCondition">í sjálfu sér geðröskun</string>
-  <string name="lichessUserstyles">Notendastíla fyrir Lichess</string>
+  <string name="lichessUserstyles">Notendastíla fyrir Logik</string>
   <string name="fewerLobbyPools">færri fjölda potta í sal</string>
   <string name="adviceOnMitigatingAddiction">Reglulega berast okkur erindi frá notendum sem óska eftir aðstoð við að koma í veg fyrir að þeir tefli netskák of mikið.
 
-Hingað til hefur Lichess ekki lagt bann eða blokkeringu á notendur nema að brot á þjónustuskilmálum sé um að ræða, en við mælum engu að síður með því að notast sé við ytri tól til að hefta óhóflega spilahegðun. Meðal almennra tillagna að vefsíðuhemla eru %1$s, %2$s og %3$s. Ef þú vilt halda áfram að nota vefsvæðið án þess að láta freistast af hröðum tímastillingum, gætirðu einnig haft áhuga á %4$s, hér er ein með %5$s.
+Hingað til hefur Logik ekki lagt bann eða blokkeringu á notendur nema að brot á þjónustuskilmálum sé um að ræða, en við mælum engu að síður með því að notast sé við ytri tól til að hefta óhóflega spilahegðun. Meðal almennra tillagna að vefsíðuhemla eru %1$s, %2$s og %3$s. Ef þú vilt halda áfram að nota vefsvæðið án þess að láta freistast af hröðum tímastillingum, gætirðu einnig haft áhuga á %4$s, hér er ein með %5$s.
 
 Sumum notendum kann að þykja leikhegðun sín vera að taka á sig mynd fíknar. Raunar flokkar Alþjóðaheilbrigðismálastofnunin tölvuleikjafíkn sem %6$s, og einkennist hún af 1) skertri stjórn á spilun, 2) auknum forgangi á spilun og 3) aukingu á spilun þrátt fyrir neikvæðar afleiðingar. Ef þér sýnist þitt eigið skákframferði fylgja þessu mynstri, hvetjum við þig til að ræða um það við vin eða fjölskyldumeðlim og/eða fagaðila.</string>
 </resources>

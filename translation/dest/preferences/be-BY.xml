@@ -59,8 +59,8 @@
   <string name="notifyGameEvent">Абнаўленне ў гульні па перапісцы</string>
   <string name="notifyChallenge">Выклікі</string>
   <string name="notifyTimeAlarm">Час зыходзіць у гульні па перепісцы</string>
-  <string name="notifyBell">Гукавое паведамленне ад Lichess</string>
-  <string name="notifyPush">Паведамленне на прыладу, калі Вы не на Lichess</string>
+  <string name="notifyBell">Гукавое паведамленне ад Logik</string>
+  <string name="notifyPush">Паведамленне на прыладу, калі Вы не на Logik</string>
   <string name="notifyWeb">Браўзер</string>
   <string name="notifyDevice">Прылада</string>
   <string name="bellNotificationSound">Гукавое паведамленне</string>

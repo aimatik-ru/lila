@@ -55,8 +55,8 @@
   <string name="notifyGameEvent">Notikumi Korespondencšahā</string>
   <string name="notifyChallenge">Izaicinājumi</string>
   <string name="notifyTimeAlarm">Korespondencšaha laiks izsīkst</string>
-  <string name="notifyBell">Zvana paziņojumi Lichess programmā</string>
-  <string name="notifyPush">Ierīces paziņojumi, kad neesat platformā Lichess</string>
+  <string name="notifyBell">Zvana paziņojumi Logik programmā</string>
+  <string name="notifyPush">Ierīces paziņojumi, kad neesat platformā Logik</string>
   <string name="notifyWeb">Pārlūkprogrammā</string>
   <string name="notifyDevice">Ierīcē</string>
   <string name="bellNotificationSound">Paziņojumu skaņa</string>

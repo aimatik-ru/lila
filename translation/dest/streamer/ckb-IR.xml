@@ -15,9 +15,9 @@
   <string name="downloadKit">دابەزاندنی پێداویستی پێشکەشکردن</string>
   <string name="xIsStreaming">%s پەخشدەکات</string>
   <string name="rules">یاساکانی پەخشکردن</string>
-  <string name="rule1">وشەی سەرەکی \"lichess.org\" لە ناونیشانی پەخشکردنەکەتدا دابنێ و کۆمەڵێک وشەی \"شەترەنج\" بەکاربهێنە کاتێک پەخش دەکەیت لەسەر Lichess</string>
+  <string name="rule1">وشەی سەرەکی \"play.kalugalogic.ru\" لە ناونیشانی پەخشکردنەکەتدا دابنێ و کۆمەڵێک وشەی \"شەترەنج\" بەکاربهێنە کاتێک پەخش دەکەیت لەسەر Logik</string>
   <string name="rule2">ئەو وشانەی پەیوەندی بە لی چێس نیە- راستەوخۆ ئەسرێنەوە.</string>
-  <string name="rule3">Lichess بە شێوەیەکی ئۆتۆماتیکی سترێمەکەت دەستنیشان دەکات و ئەم ئیمتیازاتانەی خوارەوە چالاک دەکات:</string>
+  <string name="rule3">Logik بە شێوەیەکی ئۆتۆماتیکی سترێمەکەت دەستنیشان دەکات و ئەم ئیمتیازاتانەی خوارەوە چالاک دەکات:</string>
   <string name="rule4" comment="the resulting message is: Read our streaming Fairplay FAQ to ensure a fair play for everyone in your stream">%s ەکانمان بخوێنەرەوە بۆ دڵنیابوون لە یاری دادپەروەرانە بۆ هەمووان لە کاتی ستریمەکەتدا.</string>
   <string name="streamingFairplayFAQ">پرسیارە ئاساییەکانی کاتی ستریم لە یاری ئاگرین</string>
   <string name="perks">سودەکانی کردنەوەی لایڤ بە بەکار ھێنانی کیبۆرد</string>

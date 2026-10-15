@@ -149,7 +149,7 @@ final private class RoundAsyncActor(
           has <- gameRepo.hasHoldAlert(pov)
           _ <- has.not.so:
             logger.info:
-              s"hold alert $ip https://lichess.org/${pov.gameId}/${pov.color.name}#${pov.game.ply} ${pov.player.userId | "anon"} mean: $mean SD: $sd"
+              s"hold alert $ip https://play.kalugalogic.ru/${pov.gameId}/${pov.color.name}#${pov.game.ply} ${pov.player.userId | "anon"} mean: $mean SD: $sd"
             lila.mon.cheat.holdAlert.increment()
             gameRepo.setHoldAlert(pov, GamePlayer.HoldAlert(ply = pov.game.ply, mean = mean, sd = sd)).void
         yield Nil
@@ -336,7 +336,7 @@ final private class RoundAsyncActor(
     case WsBoot =>
       handle: game =>
         game.playable.so:
-          messenger.volatile(game, "Lichess has been updated! Sorry for the inconvenience.", reboot = true)
+          messenger.volatile(game, "Логик has been updated! Sorry for the inconvenience.", reboot = true)
           val progress = moretimer.give(game, Color.all, 20.seconds, reboot = true)
           proxy.save(progress).inject(progress.events)
 

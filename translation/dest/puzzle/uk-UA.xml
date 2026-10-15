@@ -81,7 +81,7 @@
   <string name="fromMyGames">З моїх ігор</string>
   <string name="lookupOfPlayer">Знайти задачі з ігр користувача</string>
   <string name="searchPuzzles">Шукати задачі</string>
-  <string name="fromMyGamesNone">Ваших задач немає в базі даних, проте Lichess все одно дуже сильно вас любить.
+  <string name="fromMyGamesNone">Ваших задач немає в базі даних, проте Logik все одно дуже сильно вас любить.
 Грайте ігри в рапід або з класичною системою контролю часу, для того щоб збільшити можливість додання вашої задачі!</string>
   <plurals name="puzzlesFoundInUserGames">
     <item quantity="one">Одну задачу знайдено в іграх від %2$s</item>

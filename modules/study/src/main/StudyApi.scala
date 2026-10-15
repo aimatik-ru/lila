@@ -188,7 +188,7 @@ final class StudyApi(
 
   def cloneWithChat(me: User, prev: Study, update: Study => Study = identity): Fu[Option[Study]] = for
     study <- justCloneNoChecks(me, prev, update)
-    _ <- chatApi.system(study.id.into(ChatId), s"Cloned from lichess.org/study/${prev.id}", _.study)
+    _ <- chatApi.system(study.id.into(ChatId), s"Cloned from play.kalugalogic.ru/study/${prev.id}", _.study)
   yield study.some
 
   def justCloneNoChecks(

@@ -3,7 +3,7 @@
   <string name="community">Comunità</string>
   <string name="byMonth">Per mese</string>
   <string name="byTopic">Per argomento</string>
-  <string name="byLichess">Di Lichess</string>
+  <string name="byLichess">Di Logik</string>
   <string name="myFriends">I miei amici</string>
   <string name="myLikes">Il mio lichess</string>
   <string name="myBlog">Il mio blog</string>
@@ -13,7 +13,7 @@
     <item quantity="other">%s post del blog</item>
   </plurals>
   <string name="continueReadingPost">Continua a leggere questo post</string>
-  <string name="lichessBlogPostsFromXYear">Post del blog di Lichess nel %s</string>
+  <string name="lichessBlogPostsFromXYear">Post del blog di Logik nel %s</string>
   <string name="previousBlogPosts">Post del blog precedenti</string>
   <string name="xBlog">Blog di %s</string>
   <string name="newPost">Nuovo post</string>

@@ -74,7 +74,7 @@
   <string name="fromMyGames">Quitaus d\'as mías partidas</string>
   <string name="lookupOfPlayer">Mira los problemas quitaus d\'as partidas d\'un chugador</string>
   <string name="searchPuzzles">Mirar problemas</string>
-  <string name="fromMyGamesNone">No i hai problemas de las tuyas partidas en a base de datos, pero Lichess te quiere muito igual.
+  <string name="fromMyGamesNone">No i hai problemas de las tuyas partidas en a base de datos, pero Logik te quiere muito igual.
 Chuga partidas rapidas y clasica pa tener mas opcions de que anyadamos un problemas tuyo.</string>
   <string name="puzzleDashboardDescription">Entrena, analisa, millora</string>
   <plurals name="nbPlayed">

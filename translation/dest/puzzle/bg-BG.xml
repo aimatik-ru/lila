@@ -75,7 +75,7 @@
   <string name="fromMyGames">От моите партии</string>
   <string name="lookupOfPlayer">Търсене на задачи от партиите на играч</string>
   <string name="searchPuzzles">Търсене на задачи</string>
-  <string name="fromMyGamesNone">В базата данни няма задачи от Ваши игри но Lichess разчита на Вас.
+  <string name="fromMyGamesNone">В базата данни няма задачи от Ваши игри но Logik разчита на Вас.
 Играйте още ускорени и класически партии за да увеличите шансовете задачи от Ваши партии да бъдат добавени!</string>
   <plurals name="puzzlesFoundInUserGames">
     <item quantity="one">Една задача е намерена в игрите на %2$s</item>

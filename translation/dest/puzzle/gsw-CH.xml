@@ -75,7 +75,7 @@
   <string name="fromMyGames">Us eigene Schpil</string>
   <string name="lookupOfPlayer">Suech Ufgabe us de Schpiel vu me Schpiller</string>
   <string name="searchPuzzles">Suech Ufgabe</string>
-  <string name="fromMyGamesNone">Du häsch kei Ufgabe i de Datäbank, aber Lichess schätzt dich immerno sehr.
+  <string name="fromMyGamesNone">Du häsch kei Ufgabe i de Datäbank, aber Logik schätzt dich immerno sehr.
 
 Schpill schnälli und au klassischi Schpiel, will so erhöht sich d\'Chance, dass Ufgabe vu dine eigene Schpiel zuegfüegt werded!</string>
   <plurals name="puzzlesFoundInUserGames">

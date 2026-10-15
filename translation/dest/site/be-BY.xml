@@ -246,9 +246,9 @@
   <string name="forgotPassword">Забыліся на пароль?</string>
   <string name="error.weakPassword">Гэты пароль вельмі распаўсюджаны, і яго занадта лёгка адгадаць.</string>
   <string name="error.namePassword">Калі ласка, не выкарыстоўвайце сваё імя карыстальніка ў якасці пароля.</string>
-  <string name="blankedPassword">Вы выкарыстоўвалі той жа пароль на іншым сайце, і гэты сайт быў узламаны. Каб забяспечыць бяспеку вашага ўліковага запісу Lichess, трэба каб вы ўсталявалі новы пароль. Дзякуй за разуменне.</string>
-  <string name="youAreLeavingLichess">Вы пакідаеце Lichess</string>
-  <string name="neverTypeYourPassword">Ніколі не ўводзьце свой пароль Lichess на іншым сайце!</string>
+  <string name="blankedPassword">Вы выкарыстоўвалі той жа пароль на іншым сайце, і гэты сайт быў узламаны. Каб забяспечыць бяспеку вашага ўліковага запісу Logik, трэба каб вы ўсталявалі новы пароль. Дзякуй за разуменне.</string>
+  <string name="youAreLeavingLichess">Вы пакідаеце Logik</string>
+  <string name="neverTypeYourPassword">Ніколі не ўводзьце свой пароль Logik на іншым сайце!</string>
   <string name="proceedToX">Перайсці да %s</string>
   <string name="passwordSuggestion">Не ўстанаўлівайце пароль, прапанаваны кімсьці. Яго могуць выкарыстаць, каб скрасці ваш уліковы запіс.</string>
   <string name="emailSuggestion">Не ўстанаўлівайце адрас электроннай пошты, прапанаваны кімсьці. Яго могуць выкарыстаць, каб скрасці ваш уліковы запіс.</string>
@@ -366,7 +366,7 @@
     <item quantity="many">Даць %s секунд</item>
     <item quantity="other">Даць %s секунд</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Гэты ўліковы запіс парушыў Умовы выкарыстання Lichess</string>
+  <string name="thisAccountViolatedTos">Гэты ўліковы запіс парушыў Умовы выкарыстання Logik</string>
   <string name="openingExplorerAndTablebase">База дэбютаў і эндшпіляў</string>
   <string name="takeback">Скасаваць ход</string>
   <string name="proposeATakeback">Прапанаваць скасаваць ход</string>
@@ -550,7 +550,7 @@
   <string name="oneUrlPerLine">Адзін URL на радок.</string>
   <string name="inlineNotation">Убудаваная натацыя</string>
   <string name="makeAStudy">Для захавання і сумеснага выкарыстання стварыце студыю.</string>
-  <string name="previouslyOnLichessTV">Раней на Lichess TV</string>
+  <string name="previouslyOnLichessTV">Раней на Logik TV</string>
   <string name="onlinePlayers">Гульцы анлайн</string>
   <string name="activePlayers">Актыўныя гульцы</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Увага! Гэта рэйтынгавая гульня, але без абмежавання часу!</string>
@@ -715,7 +715,7 @@
   <string name="simulVariantsHint">Вы таксама можаце абраць некалькі варыянтаў для гульні: тады кожны гулец абярэ той з іх, у якім ён хоча гуляць з вамі.</string>
   <string name="simulClockHint">Налады гадзінніку Фішэра. Чым больш у вас супернікаў, тым больш часу вам можа спатрэбіцца.</string>
   <string name="simulAddExtraTime">Вы можаце ўзяць сабе дадатковы час на роздумы.</string>
-  <string name="lichessTournaments">Турніры Lichess</string>
+  <string name="lichessTournaments">Турніры Logik</string>
   <string name="tournamentFAQ">Частыя пытанні пра турніры арэны</string>
   <string name="timeBeforeTournamentStarts">Турнір пачнецца праз</string>
   <string name="averageCentipawnLoss">У сярэднім страчана сотых пешкі</string>
@@ -756,7 +756,7 @@
   <string name="weHaveSentYouAnEmailTo">Мы адправілі ліст на вашу пошту %s. Перайдзіце па спасылцы ў лісце, каб аднавіць ваш пароль.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Звярніце ўвагу: рэгіструючыся, вы прымаеце нашыя %s.</string>
   <string name="readAboutOur">Чытай пра нас %s.</string>
-  <string name="networkLagBetweenYouAndLichess">Затрымка сеткі паміж вамі і Lichess</string>
+  <string name="networkLagBetweenYouAndLichess">Затрымка сеткі паміж вамі і Logik</string>
   <string name="timeToProcessAMoveOnLichessServer">Час апрацоўкі ходу на серверы</string>
   <string name="downloadAnnotated">Спампаваць з анатацыямі</string>
   <string name="downloadRaw">Спампаваць без анатацый</string>
@@ -903,7 +903,7 @@
   <string name="tryToWin">Паспрабуйце перамагчы (або звесці на нічыю) кожную вашу гульню.</string>
   <string name="resignLostGames">Здавайцеся ў ясна прайграных гульнях (а не чакайце, пакуль час скончыцца).</string>
   <string name="temporaryInconvenience">Мы просім прабачэння за часовыя нязручнасці,</string>
-  <string name="wishYouGreatGames">і жадаем вам вельмі добрых гульняў на lichess.org.</string>
+  <string name="wishYouGreatGames">і жадаем вам вельмі добрых гульняў на play.kalugalogic.ru.</string>
   <string name="thankYouForReading">Дзякуй за ўвагу!</string>
   <string name="lifetimeScore">Лік за ўвесь час</string>
   <string name="currentMatchScore">Лік бягучага матчу</string>
@@ -949,7 +949,7 @@
   <string name="congratsYouWon">Віншуем, вы перамаглі!</string>
   <string name="gameVsX">Партыя супраць %1$s</string>
   <string name="resVsX">%1$s супраць %2$s</string>
-  <string name="lostAgainstTOSViolator">Вы прайгралі камусьці, хто парушыў ўмовы карыстання Lichess</string>
+  <string name="lostAgainstTOSViolator">Вы прайгралі камусьці, хто парушыў ўмовы карыстання Logik</string>
   <string name="refundXpointsTimeControlY">Вяртанне: %1$s %2$s балаў рэйтынгу.</string>
   <string name="timeAlmostUp">Час амаль выйшаў!</string>
   <string name="clickToRevealEmailAddress">Націсніце, каб высветліць электроную пошту</string>
@@ -1000,13 +1000,13 @@
   <string name="resignTheGame">Здацца</string>
   <string name="since">З</string>
   <string name="until">Да</string>
-  <string name="lichessDbExplanation">Рэйтынгавыя партыі ўсіх гульцоў на Lichess</string>
+  <string name="lichessDbExplanation">Рэйтынгавыя партыі ўсіх гульцоў на Logik</string>
   <string name="switchSides">Змяніць бок</string>
   <string name="closingAccountWithdrawAppeal">Закрыцце вашага ўліковага запісу адкліча вашу апеляцыю</string>
   <string name="ourEventTips">Нашы парады па арганізацыі падзей</string>
   <string name="instructions">Інструкцыі</string>
   <string name="showMeEverything">Паказаць усё</string>
-  <string name="lichessPatronInfo">Lichess - гэта дабрачынная і цалкам бясплатная праграма з адкрытым зыходным кодам.
+  <string name="lichessPatronInfo">Logik - гэта дабрачынная і цалкам бясплатная праграма з адкрытым зыходным кодам.
 Усе аперацыйныя выдаткі, распрацоўка і шахматны кантэнт фінансуюцца выключна за кошт ахвяраванняў карыстальнікаў.</string>
   <string name="stats">Статыстыка</string>
   <string name="accessibility">Спецыяльныя магчымасці</string>

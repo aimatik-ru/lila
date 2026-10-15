@@ -59,7 +59,7 @@
 Norėdami žaidėjui suteikti \"bye\" (1 tašką), jo neporuojant, pridėkite tokią eilutę:
 ŽaidėjasE 1
 Nesantys žaidėjai bus laikomi nedalyvaujančiais ir gaus nulį taškų.
-Palikite šį lauką tuščią, kad \"Lichess\" galėtų automatiškai sukurti poras.</string>
+Palikite šį lauką tuščią, kad \"Logik\" galėtų automatiškai sukurti poras.</string>
   <string name="mustHavePlayedTheirLastSwissGame">Turėjo sužaisti paskutinę savo šveicariško turnyro partiją</string>
   <string name="mustHavePlayedTheirLastSwissGameHelp">Leiskite žaidėjams prisijungti tik tuo atveju, jei jie sužaidė savo partijas paskutiniame šveicariškame turnyre. Jei jiems nepavyko pasirodyti paskutiniame vykusiame šveicariškame turnyre, jie negalės patekti ir į šį jūsų. Tai lemia geresnę šveicariškų turnyrų patirtį žaidėjams, kurie juose dalyvauja, ne vien tik užregistruoja.</string>
   <string name="newSwiss">Naujas Šveicariškas turnyras</string>
@@ -101,7 +101,7 @@ Vėlyvi žaidėjai gauna vieną \"bye\", net jei jie praleido daugiau negu vien�
 To priežastis - nėra gerų būtų išspręsti situacijas, kai žaidėjai pasitraukia anksčiau laiko. Mes negalime tikėtis, kad turnyre tinkle visi žaidėjai sužais visas partijas. Tai tiesiog neįvyksta, todėl Round Robin turnyrai būtų nesmagūs ir nesąžiningi - tokiu atveju jų geriau neturėti visai.
 Artimiausias Round Robin dalykas tinkle - šveicariškas turnyras su dideliu skaičiumi raundų. Tokiu atveju iki turnyro galo bus sužaistos visos poros.</string>
   <string name="otherSystemsQ">O kaip su kitomis turnyrų sistemomis?</string>
-  <string name="otherSystemsA">Šiuo metu prie Lichess daugiau turnyrų sistemų pridėti neplanuojame.</string>
+  <string name="otherSystemsA">Šiuo metu prie Logik daugiau turnyrų sistemų pridėti neplanuojame.</string>
   <string name="swissDescription">Šveicariškuose turnyruose %1$s kiekvienas varžovas ne būtinai turi žaisti su visais kitais dalyviais. Priešininkai susitinka akis į akį kiekviename raunde ir yra suporuojami remiantis tam tikromis taisyklėmis. Šios taisyklės užtikrina, kad kiekvienas varžovas žaidžia su priešininkais turinčiais panašų taškų skaičių, bet su tuo pačiu oponentu ne daugiau nei kartą. Laimėtojas yra varžovas su daugiausia per visus raundus surinktų taškų. Visi varžovai žaidžia po raundą, nebent yra nelyginis žaidėjų skaičius.\"</string>
   <string name="teamOnly">Šveicariški turnyrai gali būti pradėti tik komandų lygerių ir gali būti žaidžiami tik komandos narių.           
 %1$s norėdami pradėti žaisti šveicariškuose turnyruose.</string>

@@ -106,7 +106,7 @@ final class Env(
 
   Bus.sub[lila.core.mod.SelfReportMark]:
     case lila.core.mod.SelfReportMark(suspectId, name, gameId) =>
-      val msg = s"Self report: ${name} on https://lichess.org/${gameId}"
+      val msg = s"Self report: ${name} on https://play.kalugalogic.ru/${gameId}"
       api.autoEngine(SuspectId(suspectId), msg)(using UserId.lichessAsMe)
 
   Bus.sub[lila.core.mod.ChatTimeout]:

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="lichessCoaches">Lichess тренери</string>
-  <string name="lichessCoach">Lichess тренер</string>
+  <string name="lichessCoaches">Logik тренери</string>
+  <string name="lichessCoach">Logik тренер</string>
   <string name="areYouCoach">Да ли си одличан шаховски тренер са %s?</string>
   <string name="nmOrFideTitle" comment="nmOrFideTitle&#10;&#10;Part of sentence &quot;Are you a great chess coach with a NM or FIDE title?&quot;&#10;&#10;The text links to our title verification page: https://lichess.org/help/master">NM или ФИДЕ титулом</string>
   <string name="confirmTitle">Потврди своју титулу овде и ми ћемо прегледати твоју пријаву.</string>
@@ -14,7 +14,7 @@
   <string name="accepting">Прихвата ученике</string>
   <string name="notAccepting">Тренутно не прихвата ученике</string>
   <string name="xCoachesStudents">%s тренира ученике шаха</string>
-  <string name="viewXProfile">Погледај %s Lichess профил</string>
+  <string name="viewXProfile">Погледај %s Logik профил</string>
   <string name="sendPM">Пошаљи приватну поруку</string>
   <string name="aboutMe">О мени</string>
   <string name="playingExperience">Искуство у игрању</string>

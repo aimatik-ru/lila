@@ -74,8 +74,8 @@ final class PgnDump(
   private def eventOf(game: Game) =
     val perf = game.perfType.nameKey
     game.tournamentId
-      .map(id => s"${game.rated.name} $perf tournament https://lichess.org/tournament/$id")
-      .orElse(game.simulId.map(id => s"$perf simul https://lichess.org/simul/$id"))
+      .map(id => s"${game.rated.name} $perf tournament https://play.kalugalogic.ru/tournament/$id")
+      .orElse(game.simulId.map(id => s"$perf simul https://play.kalugalogic.ru/simul/$id"))
       .getOrElse(s"${game.rated.name} $perf game")
 
   private def ratingDiffTag(p: Player, tag: Tag.type => TagType) =

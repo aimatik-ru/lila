@@ -237,9 +237,9 @@
   <string name="forgotPassword">Quên mật khẩu?</string>
   <string name="error.weakPassword">Mật khẩu này quá phổ biến và quá dễ đoán.</string>
   <string name="error.namePassword">Vui lòng không sử dụng tên đăng nhập làm mật khẩu.</string>
-  <string name="blankedPassword">Bạn đã sử dụng cùng một mật khẩu trên một trang web khác và trang web đó đã bị xâm nhập. Để đảm bảo an toàn cho tài khoản Lichess của bạn, chúng tôi cần bạn đặt mật khẩu mới. Cảm ơn vì bạn đã thông cảm.</string>
-  <string name="youAreLeavingLichess">Bạn đang thoát Lichess</string>
-  <string name="neverTypeYourPassword">Không bao giờ nhập mật khẩu Lichess của bạn trên bất kì trang web nào khác!</string>
+  <string name="blankedPassword">Bạn đã sử dụng cùng một mật khẩu trên một trang web khác và trang web đó đã bị xâm nhập. Để đảm bảo an toàn cho tài khoản Logik của bạn, chúng tôi cần bạn đặt mật khẩu mới. Cảm ơn vì bạn đã thông cảm.</string>
+  <string name="youAreLeavingLichess">Bạn đang thoát Logik</string>
+  <string name="neverTypeYourPassword">Không bao giờ nhập mật khẩu Logik của bạn trên bất kì trang web nào khác!</string>
   <string name="proceedToX">Chuyển tới trang %s</string>
   <string name="passwordSuggestion">Đừng sử dụng mật khẩu được đề xuất bởi người khác. Họ có thể dùng nó để đánh cắp tài khoản của bạn.</string>
   <string name="emailSuggestion">Đừng đặt địa chỉ email được gợi ý bởi người khác. Họ có thể dùng nó để đánh cắp tài khoản của bạn.</string>
@@ -251,7 +251,7 @@
   <string name="emailSent">Chúng tôi đã gửi cho %s một email.</string>
   <string name="emailCanTakeSomeTime">Có thể sẽ mất một lúc để nhận được.</string>
   <string name="refreshInboxAfterFiveMinutes">Đợi 5 phút sau đó làm mới hộp thư đến trong email.</string>
-  <string name="checkSpamOrJunkFolder" comment="checkSpamFolder&#10;It = The confirmation email">Nếu bạn không nhận được email xác nhận, hãy kiểm tra thư mục Spam hoặc Thư rác. Hãy nhớ đánh dấu các tin nhắn từ lichess.org là an toàn và \"không phải thư rác\" để bạn có thể nhận được thông báo quan trọng.</string>
+  <string name="checkSpamOrJunkFolder" comment="checkSpamFolder&#10;It = The confirmation email">Nếu bạn không nhận được email xác nhận, hãy kiểm tra thư mục Spam hoặc Thư rác. Hãy nhớ đánh dấu các tin nhắn từ play.kalugalogic.ru là an toàn và \"không phải thư rác\" để bạn có thể nhận được thông báo quan trọng.</string>
   <string name="sendEmailForAccountVerification">Nếu bạn không tìm thấy email xác minh, hãy gửi email đến %s và chúng tôi sẽ xác minh tài khoản cho bạn.</string>
   <string name="accountConfirmed">Đã xác nhận người dùng %s thành công.</string>
   <string name="accountCanLogin">Bạn đã có thể đăng nhập ngay bây giờ tại %s.</string>
@@ -337,7 +337,7 @@
   <plurals name="giveNbSeconds">
     <item quantity="other">Cho thêm %s giây</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Tài khoản này đã vi phạm Điều khoản Dịch vụ của Lichess</string>
+  <string name="thisAccountViolatedTos">Tài khoản này đã vi phạm Điều khoản Dịch vụ của Logik</string>
   <string name="openingExplorerAndTablebase">Sách khai cuộc &amp; tàn cuộc</string>
   <string name="takeback">Đi lại</string>
   <string name="proposeATakeback">Đề nghị lùi một nước</string>
@@ -516,7 +516,7 @@ Bạn bè đang chơi: %2$s</string>
   <string name="inlineNotation">Ký hiệu bên trong bàn cờ</string>
   <string name="makeAStudy">Để bảo vệ và chia sẻ an toàn, hãy xem xét thực hiện một nghiên cứu.</string>
   <string name="clearLocalData">Xóa dữ liệu cục bộ</string>
-  <string name="previouslyOnLichessTV">Ván trước được lên Lichess TV</string>
+  <string name="previouslyOnLichessTV">Ván trước được lên Logik TV</string>
   <string name="onlinePlayers">Các kỳ thủ trực tuyến</string>
   <string name="activePlayers">Các kỳ thủ tích cực</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Lưu ý, ván cờ có xếp hạng nhưng không tính thời gian!</string>
@@ -528,11 +528,11 @@ Bạn bè đang chơi: %2$s</string>
   <string name="autoSwitch">Tự động chuyển</string>
   <string name="puzzles">Câu đố</string>
   <string name="onlineBots">Các Bot trực tuyến</string>
-  <string name="aboutBotsOnLichess">Thông tin về bot trên Lichess</string>
+  <string name="aboutBotsOnLichess">Thông tin về bot trên Logik</string>
   <string name="featuredBots">Các bot nổi bật</string>
   <string name="tryPlayingTheseInnovativeChessEngines">Hãy thử chơi những bot cờ vua sáng tạo này! Chúng là những chương trình mà chúng tôi yêu thích nhất.</string>
   <string name="communityBots">Các bot cộng đồng</string>
-  <string name="moreChessEnginesCreatedByTheLichessCommunity">Thêm nhiều bot cờ vua khác được tạo ra bởi cộng đồng Lichess. Chúng được lưu trữ bởi chính những người tạo ra chúng và có thể không phải lúc nào cũng trực tuyến.</string>
+  <string name="moreChessEnginesCreatedByTheLichessCommunity">Thêm nhiều bot cờ vua khác được tạo ra bởi cộng đồng Logik. Chúng được lưu trữ bởi chính những người tạo ra chúng và có thể không phải lúc nào cũng trực tuyến.</string>
   <string name="name">Tên</string>
   <string name="description">Mô tả</string>
   <string name="descPrivate">Mô tả riêng tư</string>
@@ -656,7 +656,7 @@ Bạn bè đang chơi: %2$s</string>
   </plurals>
   <string name="tpTimeSpentPlaying">Thời gian đã chơi: %s</string>
   <string name="watchGames">Xem các ván đấu</string>
-  <string name="tpTimeSpentOnTV">Thời gian được lên Lichess TV: %s</string>
+  <string name="tpTimeSpentOnTV">Thời gian được lên Logik TV: %s</string>
   <string name="watch">Xem</string>
   <string name="videoLibrary">Thư viện video</string>
   <string name="streamersMenu">Các Streamer</string>
@@ -666,7 +666,7 @@ Bạn bè đang chơi: %2$s</string>
   <string name="aboutX">Giới thiệu về %s</string>
   <string name="xIsAFreeYLibreOpenSourceChessServer">%1$s là một máy chủ cờ vua miễn phí (%2$s), có mã nguồn mở và không có quảng cáo.</string>
   <string name="really">thật sự</string>
-  <string name="lichessUpdates">Cập nhật từ Lichess</string>
+  <string name="lichessUpdates">Cập nhật từ Logik</string>
   <string name="contribute">Đóng góp</string>
   <string name="changelog">Nhật kí thay đổi</string>
   <string name="termsOfService">Điều khoản Dịch vụ</string>
@@ -696,7 +696,7 @@ Bạn bè đang chơi: %2$s</string>
   <string name="extraClockTimeForHost" comment="Appears on: https://lichess.org/simul/new&#10;&#10;Allows a simul host to select extra time for the simul.&#10;&#10;Please note this string used to state &quot;Host extra clock time&quot;, without the word &quot;initial&quot;">Thời gian cộng thêm cho người chủ trì:</string>
   <string name="simulAddExtraTimePerPlayer">Thêm thời gian ban đầu của bạn khi đấu với mỗi người chơi tham gia sự kiện đồng loạt.</string>
   <string name="simulHostExtraTimePerPlayer">Thời gian cộng thêm cho người chủ trì theo số người tham gia</string>
-  <string name="lichessTournaments">Các giải đấu của Lichess</string>
+  <string name="lichessTournaments">Các giải đấu của Logik</string>
   <string name="tournamentFAQ">Các câu hỏi hay gặp về giải đấu Đấu trường</string>
   <string name="timeBeforeTournamentStarts">Thời gian trước khi giải đấu bắt đầu</string>
   <string name="averageCentipawnLoss">Tỉ lệ mất tốt trung bình (ACPL)</string>
@@ -745,8 +745,8 @@ Bạn bè đang chơi: %2$s</string>
   <string name="weHaveSentYouAnEmailTo">Chúng tôi đã gửi một email đến %s. Nhấp vào liên kết trong email để đặt lại mật khẩu của bạn.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Bằng cách đăng ký, bạn đồng ý tuân thủ %s của chúng tôi.</string>
   <string name="readAboutOur">Đọc về %s của chúng tôi.</string>
-  <string name="networkLagBetweenYouAndLichess">Độ trễ mạng giữa bạn và Lichess</string>
-  <string name="timeToProcessAMoveOnLichessServer">Thời gian để tiến hành một nước đi trên máy chủ Lichess</string>
+  <string name="networkLagBetweenYouAndLichess">Độ trễ mạng giữa bạn và Logik</string>
+  <string name="timeToProcessAMoveOnLichessServer">Thời gian để tiến hành một nước đi trên máy chủ Logik</string>
   <string name="downloadAnnotated">Tải về kèm chú thích</string>
   <string name="downloadRaw">Tải về bản thô</string>
   <string name="downloadImported">Tải về tệp đã được nhập</string>
@@ -765,7 +765,7 @@ Bạn bè đang chơi: %2$s</string>
   <string name="kidMode">Chế độ trẻ em</string>
   <string name="kidModeIsEnabled">Chế độ trẻ em đã được bật.</string>
   <string name="kidModeExplanation">Điều này là để an toàn. Trong chế độ trẻ em, tất cả mọi giao tiếp trên trang web đều bị tắt. Kích hoạt điều này cho con của bạn và học viên trong lớp để bảo vệ chúng khỏi những người dùng khác trên Internet.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">Trong chế độ trẻ em, biểu tượng Lichess có một biểu tượng %s, từ đó bạn biết con bạn được an toàn.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">Trong chế độ trẻ em, biểu tượng Logik có một biểu tượng %s, từ đó bạn biết con bạn được an toàn.</string>
   <string name="askYourChessTeacherAboutLiftingKidMode">Tài khoản của bạn đang bị quản lý. Hỏi giáo viên dạy cờ của bạn để lấy lại quyền điều khiển.</string>
   <string name="enableKidMode">Kích hoạt chế độ Trẻ em</string>
   <string name="disableKidMode">Tắt chế độ Trẻ em</string>
@@ -879,7 +879,7 @@ Bạn bè đang chơi: %2$s</string>
   <plurals name="andSaveNbPremoveLines">
     <item quantity="other">và lưu %s nước đi trước</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Bạn đã nhận được một tin nhắn riêng từ Lichess.</string>
+  <string name="showUnreadLichessMessage">Bạn đã nhận được một tin nhắn riêng từ Logik.</string>
   <string name="readTheMessage" comment="'It' refers to a private message. This text follows after a different string which advises players they have received a private message from Lichess. For users, this is appears as a regular private message from the Lichess account: https://lichess.org/@/Lichess">Đọc tin nhắn</string>
   <string name="sorry">Rất tiếc :(</string>
   <string name="weHadToTimeYouOutForAWhile">Chúng tôi phải ngừng bạn lại một thời gian.</string>
@@ -892,7 +892,7 @@ Bạn bè đang chơi: %2$s</string>
   <string name="tryToWin">Cố gắng thắng (hoặc ít nhất hòa) mỗi ván mà bạn chơi.</string>
   <string name="resignLostGames">Chịu thua những ván chắc chắn thua (đừng để đồng hồ chạy đến hết giờ).</string>
   <string name="temporaryInconvenience">Chúng tôi rất tiếc vì những bất tiện tạm thời này,</string>
-  <string name="wishYouGreatGames">và chúc bạn có những ván cờ tuyệt vời trên lichess.org.</string>
+  <string name="wishYouGreatGames">và chúc bạn có những ván cờ tuyệt vời trên play.kalugalogic.ru.</string>
   <string name="thankYouForReading">Cảm ơn bạn vì đã đọc!</string>
   <string name="lifetimeScore">Tổng điểm đối đầu</string>
   <string name="currentMatchScore">Tỷ số của lần đối đầu hiện tại</string>
@@ -938,7 +938,7 @@ Bạn bè đang chơi: %2$s</string>
   <string name="congratsYouWon">Chúc mừng, bạn đã giành chiến thắng!</string>
   <string name="gameVsX">Ván đấu với %1$s</string>
   <string name="resVsX">%1$s với %2$s</string>
-  <string name="lostAgainstTOSViolator">Bạn đã mất điểm hệ số vào người vi phạm Điều khoản Dịch vụ của Lichess</string>
+  <string name="lostAgainstTOSViolator">Bạn đã mất điểm hệ số vào người vi phạm Điều khoản Dịch vụ của Logik</string>
   <string name="refundXpointsTimeControlY">Hoàn lại: %1$s điểm hệ số %2$s.</string>
   <string name="timeAlmostUp">Thời gian sắp hết!</string>
   <string name="clickToRevealEmailAddress">[Nhấp để tiết lộ địa chỉ email]</string>
@@ -992,13 +992,13 @@ Bỏ trống để bắt đầu tất cả ván đấu bằng thế trận ban �
   <string name="youCantStartNewGame">Bạn không thể bắt đầu một ván cờ mới khi đang đến lượt mình.</string>
   <string name="since">Từ</string>
   <string name="until">Cho tới</string>
-  <string name="lichessDbExplanation">Các ván đấu có xếp hạng được lấy từ tất cả các kỳ thủ trên Lichess</string>
+  <string name="lichessDbExplanation">Các ván đấu có xếp hạng được lấy từ tất cả các kỳ thủ trên Logik</string>
   <string name="switchSides">Đổi bên</string>
   <string name="closingAccountWithdrawAppeal">Việc đóng tài khoản sẽ rút lại kháng cáo của bạn</string>
   <string name="ourEventTips">Lời khuyên của chúng tôi để tổ chức các sự kiện</string>
   <string name="instructions">Hướng dẫn</string>
   <string name="showMeEverything">Cho tôi xem mọi thứ nào</string>
-  <string name="lichessPatronInfo">Lichess là một tổ chức phi lợi nhuận và là phần mềm hoàn toàn miễn phí/mã nguồn mở.
+  <string name="lichessPatronInfo">Logik là một tổ chức phi lợi nhuận và là phần mềm hoàn toàn miễn phí/mã nguồn mở.
 Mọi chi phí vận hành, phát triển, và nội dung được tài trợ bởi những đóng góp của người dùng.</string>
   <string name="nothingToSeeHere">Không có gì để xem ở đây vào lúc này.</string>
   <string name="stats">Thống kê</string>

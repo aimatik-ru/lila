@@ -262,9 +262,9 @@
   <string name="forgotPassword">Ți-ai uitat parola?</string>
   <string name="error.weakPassword">Această parolă este extrem de comună şi prea uşor de ghicit.</string>
   <string name="error.namePassword">Te rugăm să nu folosești numele tău de utilizator ca parolă.</string>
-  <string name="blankedPassword">Ați folosit aceeași parolă pe un alt site, iar acel site a fost compromis. Pentru a asigura siguranța contului dvs. Lichess, trebuie să setați o parolă nouă. Vă mulțumim pentru înțelegere.</string>
-  <string name="youAreLeavingLichess">Părăsești Lichess</string>
-  <string name="neverTypeYourPassword">Nu introduceți niciodată parola Lichess pe un alt site!</string>
+  <string name="blankedPassword">Ați folosit aceeași parolă pe un alt site, iar acel site a fost compromis. Pentru a asigura siguranța contului dvs. Logik, trebuie să setați o parolă nouă. Vă mulțumim pentru înțelegere.</string>
+  <string name="youAreLeavingLichess">Părăsești Logik</string>
+  <string name="neverTypeYourPassword">Nu introduceți niciodată parola Logik pe un alt site!</string>
   <string name="proceedToX">Continuă către %s</string>
   <string name="passwordSuggestion">Nu seta o parolă sugerată de altcineva. O vor folosi pentru a vă fura contul.</string>
   <string name="emailSuggestion">Nu setați o adresă de e-mail sugerată de altcineva. O vor folosi pentru a vă fura contul.</string>
@@ -276,7 +276,7 @@
   <string name="emailSent">Am trimis un email la %s.</string>
   <string name="emailCanTakeSomeTime">Poate dura ceva timp să ajungă.</string>
   <string name="refreshInboxAfterFiveMinutes">Așteptați 5 minute și reîncărcați emailurile primite.</string>
-  <string name="checkSpamOrJunkFolder" comment="checkSpamFolder&#10;It = The confirmation email">Dacă nu primiți un e-mail de confirmare, verificați folderul Spam sau Junk. Asigurați-vă că marcați mesajele de la lichess.org ca sigure și \"nu spam\", pentru a rămâne informat cu privire la comunicări importante.</string>
+  <string name="checkSpamOrJunkFolder" comment="checkSpamFolder&#10;It = The confirmation email">Dacă nu primiți un e-mail de confirmare, verificați folderul Spam sau Junk. Asigurați-vă că marcați mesajele de la play.kalugalogic.ru ca sigure și \"nu spam\", pentru a rămâne informat cu privire la comunicări importante.</string>
   <string name="sendEmailForAccountVerification">Dacă nu găsești e-mailul de confirmare, trimite un e-mail la %s și îți vom confirma contul.</string>
   <string name="accountConfirmed">Utilizatorul %s a fost confirmat cu succes.</string>
   <string name="accountCanLogin">Vă puteți autentifica chiar acum ca %s.</string>
@@ -380,7 +380,7 @@
     <item quantity="few">Acordă %s secunde</item>
     <item quantity="other">Acordă %s de secunde</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Acest cont a încălcat condițiile de utilizare ale site-ului Lichess</string>
+  <string name="thisAccountViolatedTos">Acest cont a încălcat condițiile de utilizare ale site-ului Logik</string>
   <string name="openingExplorerAndTablebase">Deschide exploratorul și baza de finaluri</string>
   <string name="takeback">Revocare</string>
   <string name="proposeATakeback">Propune revocarea mutării</string>
@@ -580,7 +580,7 @@ Prieteni jucând: %2$s</string>
   <string name="inlineNotation">Notație integrată</string>
   <string name="makeAStudy">Pentru păstrare în siguranță și partajare, aveți în vedere crearea unui studiu.</string>
   <string name="clearLocalData">Șterge datele locale</string>
-  <string name="previouslyOnLichessTV">Anterior pe Lichess TV</string>
+  <string name="previouslyOnLichessTV">Anterior pe Logik TV</string>
   <string name="onlinePlayers">Jucători conectați</string>
   <string name="activePlayers">Jucători activi</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Atenție, partida este oficială, dar se joacă fără ceas!</string>
@@ -594,11 +594,11 @@ Prieteni jucând: %2$s</string>
   <string name="autoSwitch">Schimbă automat</string>
   <string name="puzzles">Probleme de șah</string>
   <string name="onlineBots">Boți online</string>
-  <string name="aboutBotsOnLichess">Despre boții de pe Lichess</string>
+  <string name="aboutBotsOnLichess">Despre boții de pe Logik</string>
   <string name="featuredBots">Boți recomandați</string>
   <string name="tryPlayingTheseInnovativeChessEngines">Încearcă să joci împotriva acestor motoare inovatoare de șah! Sunt favoritele noastre.</string>
   <string name="communityBots">Boți ai comunității</string>
-  <string name="moreChessEnginesCreatedByTheLichessCommunity">Mai multe motoare de șah create de comunitatea Lichess. Ele sunt găzduite de creatorii lor și s-ar putea să nu fie întotdeauna online.</string>
+  <string name="moreChessEnginesCreatedByTheLichessCommunity">Mai multe motoare de șah create de comunitatea Logik. Ele sunt găzduite de creatorii lor și s-ar putea să nu fie întotdeauna online.</string>
   <string name="name">Nume</string>
   <string name="description">Descriere</string>
   <string name="descPrivate">Descriere privată</string>
@@ -738,7 +738,7 @@ Prieteni jucând: %2$s</string>
   <string name="aboutX">Despre %s</string>
   <string name="xIsAFreeYLibreOpenSourceChessServer">%1$s este un server de șah gratuit (%2$s), fără reclame și open-source.</string>
   <string name="really">pe bune</string>
-  <string name="lichessUpdates">Actualizări Lichess</string>
+  <string name="lichessUpdates">Actualizări Logik</string>
   <string name="contribute">Contribuie</string>
   <string name="changelog">Jurnal de schimbări</string>
   <string name="termsOfService">Termeni și condiții</string>
@@ -768,7 +768,7 @@ Prieteni jucând: %2$s</string>
   <string name="extraClockTimeForHost" comment="Appears on: https://lichess.org/simul/new&#10;&#10;Allows a simul host to select extra time for the simul.&#10;&#10;Please note this string used to state &quot;Host extra clock time&quot;, without the word &quot;initial&quot;">Timp suplimentar pentru gazdă:</string>
   <string name="simulAddExtraTimePerPlayer">Adaugă timp inițial la ceasul tău pentru fiecare jucător care se alătură jocului simultan.</string>
   <string name="simulHostExtraTimePerPlayer">Timp suplimentar pentru ceasul gazdei, pentru fiecare jucător</string>
-  <string name="lichessTournaments">Turnee Lichess</string>
+  <string name="lichessTournaments">Turnee Logik</string>
   <string name="tournamentFAQ">Întrebări și răspunsuri pentru turneu</string>
   <string name="timeBeforeTournamentStarts">Timp până la începerea turneului</string>
   <string name="averageCentipawnLoss">Medie centipioni pierduți</string>
@@ -820,8 +820,8 @@ Prieteni jucând: %2$s</string>
   <string name="weHaveSentYouAnEmailTo">Am trimis un email la %s. Dă click pe link-ul trimis în acel email pentru a-ți reseta parola.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Înregistrându-te, ești de acord cu %s.</string>
   <string name="readAboutOur">Citește despre %s.</string>
-  <string name="networkLagBetweenYouAndLichess">Rețea lentă între tine și Lichess</string>
-  <string name="timeToProcessAMoveOnLichessServer">Timpul necesar procesării unei mutări pe serverul Lichess</string>
+  <string name="networkLagBetweenYouAndLichess">Rețea lentă între tine și Logik</string>
+  <string name="timeToProcessAMoveOnLichessServer">Timpul necesar procesării unei mutări pe serverul Logik</string>
   <string name="downloadAnnotated">Descarcă cu note</string>
   <string name="downloadRaw">Descarcă brut</string>
   <string name="downloadImported">Descarcă importat</string>
@@ -964,7 +964,7 @@ Prieteni jucând: %2$s</string>
     <item quantity="few">și salvează %s variațiile cu mutare anticipată</item>
     <item quantity="other">și salvează %s variații cu mutare anticipată</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Ați primit un mesaj privat de la Lichess.</string>
+  <string name="showUnreadLichessMessage">Ați primit un mesaj privat de la Logik.</string>
   <string name="readTheMessage" comment="'It' refers to a private message. This text follows after a different string which advises players they have received a private message from Lichess. For users, this is appears as a regular private message from the Lichess account: https://lichess.org/@/Lichess">Citește mesajul</string>
   <string name="sorry">Scuze :(</string>
   <string name="weHadToTimeYouOutForAWhile">Am fost nevoiți să suspendăm activitatea pentru puțin timp.</string>
@@ -977,7 +977,7 @@ Prieteni jucând: %2$s</string>
   <string name="tryToWin">Încercați să câștigați (sau măcar să faceți remiză) fiecare meci pe care-l jucați.</string>
   <string name="resignLostGames">Abandonați partidele pierdute (nu lăsați timpul să expire).</string>
   <string name="temporaryInconvenience">Ne pare rău pentru neplăcerile temporare</string>
-  <string name="wishYouGreatGames">și vă dorim partide deosebite pe Lichess.org.</string>
+  <string name="wishYouGreatGames">și vă dorim partide deosebite pe Logik.org.</string>
   <string name="thankYouForReading">Îți mulțumim pentru atenție!</string>
   <string name="lifetimeScore">Scorul total</string>
   <string name="currentMatchScore">Scorul curent</string>
@@ -1023,7 +1023,7 @@ Prieteni jucând: %2$s</string>
   <string name="congratsYouWon">Felicitări, ați câștigat!</string>
   <string name="gameVsX">Joc vs %1$s</string>
   <string name="resVsX">%1$s vs %2$s</string>
-  <string name="lostAgainstTOSViolator">Ai pierdut în fața cuiva care a încălcat Termenii și Condițiile Lichess</string>
+  <string name="lostAgainstTOSViolator">Ai pierdut în fața cuiva care a încălcat Termenii și Condițiile Logik</string>
   <string name="refundXpointsTimeControlY">Rambursare: %1$s puncte de evaluare %2$s.</string>
   <string name="timeAlmostUp">Timpul se apropie de sfârșit!</string>
   <string name="clickToRevealEmailAddress">[Click pentru a dezvălui adresa de e-mail]</string>
@@ -1078,13 +1078,13 @@ Lăsați gol pentru a începe jocurile din poziția inițială normală.</string
   <string name="youCantStartNewGame">Nu poți începe un joc nou în timp ce este rândul tău.</string>
   <string name="since">De la</string>
   <string name="until">Până la</string>
-  <string name="lichessDbExplanation">Partide evaluate obținute de la toți jucătorii Lichess</string>
+  <string name="lichessDbExplanation">Partide evaluate obținute de la toți jucătorii Logik</string>
   <string name="switchSides">Întoarce tabla</string>
   <string name="closingAccountWithdrawAppeal">Închiderea contului dvs. vă va retrage apelul</string>
   <string name="ourEventTips">Sfaturile noastre pentru organizarea evenimentelor</string>
   <string name="instructions">Instrucțiuni</string>
   <string name="showMeEverything">Afișează-mi tot</string>
-  <string name="lichessPatronInfo">Lichess este o asociație non-profit și un software gratuit și open-source.
+  <string name="lichessPatronInfo">Logik este o asociație non-profit și un software gratuit și open-source.
 Toate costurile de operare și de dezvoltare sunt finanțate doar din donațiile utilizatorilor.</string>
   <string name="nothingToSeeHere">Nimic de văzut aici momentan.</string>
   <string name="stats">Statistici</string>

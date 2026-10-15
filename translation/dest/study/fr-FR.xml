@@ -166,7 +166,7 @@
   <string name="youCompletedThisLesson">Félicitations ! Vous avez terminé ce cours.</string>
   <string name="perPage">%s par page</string>
   <string name="getTheTour">Besoin d\'aide? Effectuez la visite!</string>
-  <string name="welcomeToLichessStudyTitle">Études Lichess</string>
+  <string name="welcomeToLichessStudyTitle">Études Logik</string>
   <string name="welcomeToLichessStudyText">Ceci est un échiquier d\'analyse partagé.&lt;br&gt;&lt;br&gt;Utilisez-le pour analyser et annoter des parties,&lt;br&gt;discuter de positions avec des amis,&lt;br&gt;et aussi pour des leçons d\'échecs!&lt;br&gt;&lt;br&gt;C\'est un outil très pratique, voyons comment il fonctionne.</string>
   <string name="sharedAndSaveTitle" comment="As in: shared with other members and saved to database">Partagé et sauvegardé</string>
   <string name="sharedAndSavedText">Les autres participants peuvent voir vos coups en temps réel.&lt;br&gt;En plus, tout est sauvegardé indéfiniment.</string>
@@ -180,7 +180,7 @@
   <string name="annotatePositionTitle">Annoter une position</string>
   <string name="annotatePositionText">Cliquez sur le bouton « !? » ou faites un clic droit sur la liste des coups à droite.&lt;br&gt;Les symboles d\'annotation sont partagés et sauvegardés.</string>
   <string name="conclusionTitle">Merci pour votre temps.</string>
-  <string name="conclusionText">Vous trouverez vos &lt;a href=\'/study/mine/hot\'&gt;études précédentes&lt;/a&gt; dans votre page de profil.&lt;br&gt;Il y a aussi &lt;a href=\'//lichess.org/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way\'&gt;un article de blogue sur les études&lt;/a&gt;.&lt;br&gt;Les utilisateurs expérimentés peuvent appuyer sur la touche « ? » pour voir les raccourcis clavier.&lt;br&gt;Amusez-vous!</string>
+  <string name="conclusionText">Vous trouverez vos &lt;a href=\'/study/mine/hot\'&gt;études précédentes&lt;/a&gt; dans votre page de profil.&lt;br&gt;Il y a aussi &lt;a href=\'/\'&gt;un article de blogue sur les études&lt;/a&gt;.&lt;br&gt;Les utilisateurs expérimentés peuvent appuyer sur la touche « ? » pour voir les raccourcis clavier.&lt;br&gt;Amusez-vous!</string>
   <string name="createChapterTitle">Créons un chapitre d\'étude.</string>
   <string name="createChapterText">Une étude peut avoir plusieurs chapitres.&lt;br&gt;Chaque chapitre a un arbre de coups distinct,&lt;br&gt;et peut être créé de différentes manières.</string>
   <string name="fromInitialPositionTitle">À partir de la position initiale</string>
@@ -188,13 +188,13 @@
   <string name="customPositionTitle">Position personnalisée</string>
   <string name="customPositionText">Configurez l\'échiquier comme vous le voulez.&lt;br&gt;Convient pour explorer les finales.</string>
   <string name="loadGameFromTheWebTitle">Charger une partie à partir du Web</string>
-  <string name="loadGameFromTheWebText" comment="The special text tags must be retained in exact order, for example &amp;lt;br&amp;gt; must stay exactly as-is. You do not need to add spaces or new lines before or after them.&#10;&#10;Note that &quot;br&quot; in particular means &quot;line break&quot;. In other words, it will start a new line in the final text.">Collez l\'URL d\'une partie&lt;br&gt;(ex. lichess.org/7fHIU0XI)&lt;br&gt;pour insérer les coups dans le chapitre.</string>
+  <string name="loadGameFromTheWebText" comment="The special text tags must be retained in exact order, for example &amp;lt;br&amp;gt; must stay exactly as-is. You do not need to add spaces or new lines before or after them.&#10;&#10;Note that &quot;br&quot; in particular means &quot;line break&quot;. In other words, it will start a new line in the final text.">Collez l\'URL d\'une partie&lt;br&gt;(ex. play.kalugalogic.ru/7fHIU0XI)&lt;br&gt;pour insérer les coups dans le chapitre.</string>
   <string name="fromFenStringTitle">À partir d\'une position en format FEN</string>
   <string name="fromFenStringText">Collez une position en format FEN&lt;br&gt;&lt;i&gt;4k3/4rb2/8/7p/8/5Q2/1PP5/1K6 w&lt;/i&gt;&lt;br&gt;pour ouvrir le chapitre à partir d\'une position.</string>
   <string name="fromPgnGameTitle">À partir d\'une partie en format PGN</string>
   <string name="fromPgnGameText">Collez un partie en format PGN&lt;br&gt;pour insérer les coups, les commentaires et les variantes dans le chapitre.</string>
   <string name="variantsAreSupportedTitle">Les variantes sont possibles dans les études.</string>
-  <string name="variantsAreSupportedText">Oui, vous pouvez étudier la variante Crazyhorse&lt;br&gt;et toutes les autres variantes Lichess!</string>
+  <string name="variantsAreSupportedText">Oui, vous pouvez étudier la variante Crazyhorse&lt;br&gt;et toutes les autres variantes Logik!</string>
   <string name="chapterConclusionText">Les chapitres sont sauvegardés indéfiniment.&lt;br&gt;Amusez-vous à organiser votre contenu d\'échecs!</string>
   <string name="doubleDefeat">Double défaite</string>
   <string name="blackDefeatWhiteCanNotWin">Défaite des noirs, mais les blancs ne peuvent pas gagner</string>

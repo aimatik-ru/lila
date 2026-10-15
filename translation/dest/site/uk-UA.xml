@@ -275,9 +275,9 @@
   <string name="forgotPassword">Забули пароль?</string>
   <string name="error.weakPassword">Цей пароль дуже поширений, і його легко відгадати.</string>
   <string name="error.namePassword">Будь ласка, не використовуйте своє ім\'я користувача як пароль.</string>
-  <string name="blankedPassword">Ви використали той самий пароль на іншому сайті, безпека якого є під загрозою. Для забезпечення безпеки вашого профілю Lichess вам потрібно встановити новий пароль. Дякуємо за розуміння.</string>
-  <string name="youAreLeavingLichess">Ви залишаєте Lichess</string>
-  <string name="neverTypeYourPassword">Ніколи не вводьте свій пароль Lichess на іншому сайті!</string>
+  <string name="blankedPassword">Ви використали той самий пароль на іншому сайті, безпека якого є під загрозою. Для забезпечення безпеки вашого профілю Logik вам потрібно встановити новий пароль. Дякуємо за розуміння.</string>
+  <string name="youAreLeavingLichess">Ви залишаєте Logik</string>
+  <string name="neverTypeYourPassword">Ніколи не вводьте свій пароль Logik на іншому сайті!</string>
   <string name="proceedToX">Перейти до %s</string>
   <string name="passwordSuggestion">Не встановлюйте пароль, запропонований кимось. Він може використати його для крадіжки вашого облікового запису.</string>
   <string name="emailSuggestion">Не встановлюйте поштову адресу, запропоновану кимось. Він може використати його для крадіжки вашого облікового запису.</string>
@@ -289,7 +289,7 @@
   <string name="emailSent">Ми надіслали лист на %s.</string>
   <string name="emailCanTakeSomeTime">Отримання повідомлення може зайняти деякий час.</string>
   <string name="refreshInboxAfterFiveMinutes">Зачекайте 5 хвилин і оновіть поштову скриньку.</string>
-  <string name="checkSpamOrJunkFolder" comment="checkSpamFolder&#10;It = The confirmation email">Якщо ви не отримали електронного листа з підтвердженням, перевірте теку зі спамом та кошик. Позначте листи від lichess.org як «не спам», щоб ви могли залишатися в курсі подій.</string>
+  <string name="checkSpamOrJunkFolder" comment="checkSpamFolder&#10;It = The confirmation email">Якщо ви не отримали електронного листа з підтвердженням, перевірте теку зі спамом та кошик. Позначте листи від play.kalugalogic.ru як «не спам», щоб ви могли залишатися в курсі подій.</string>
   <string name="sendEmailForAccountVerification">Якщо ви не можете знайти лист підтвердження, відправте лист на %s, і ми підтвердимо ваш обліковий запис.</string>
   <string name="accountConfirmed">Користувач %s успішно підтверджений.</string>
   <string name="accountCanLogin">Тепер ви можете ввійти як %s.</string>
@@ -402,7 +402,7 @@
     <item quantity="many">Додати %s секунд</item>
     <item quantity="other">Додати %s секунд</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Цей обліковий запис порушив умови використання Lichess</string>
+  <string name="thisAccountViolatedTos">Цей обліковий запис порушив умови використання Logik</string>
   <string name="openingExplorerAndTablebase">Дослідження дебютів та ендшпілів</string>
   <string name="takeback">Повернення ходу</string>
   <string name="proposeATakeback">Запропонувати повернути хід</string>
@@ -613,7 +613,7 @@
   <string name="inlineNotation">Вбудована нотація</string>
   <string name="makeAStudy">Щоб зберегти та поділитися, подумайте про проведення дослідження.</string>
   <string name="clearLocalData">Очистити локальні дані</string>
-  <string name="previouslyOnLichessTV">Раніше на Lichess TV</string>
+  <string name="previouslyOnLichessTV">Раніше на Logik TV</string>
   <string name="onlinePlayers">Гравці онлайн</string>
   <string name="activePlayers">Активні гравці</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Зверніть увагу на те, що гра є рейтинговою, але облік часу не ведеться!</string>
@@ -628,11 +628,11 @@
   <string name="autoSwitch">Автоперехід</string>
   <string name="puzzles">Задачі</string>
   <string name="onlineBots">Онлайн-боти</string>
-  <string name="aboutBotsOnLichess">Про боти на Lichess</string>
+  <string name="aboutBotsOnLichess">Про боти на Logik</string>
   <string name="featuredBots">Рекомендовані боти</string>
   <string name="tryPlayingTheseInnovativeChessEngines">Зіграйте з цими інноваційними шаховими рушіями! Вони — наші улюблені.</string>
   <string name="communityBots">Спільнотні боти</string>
-  <string name="moreChessEnginesCreatedByTheLichessCommunity">Інші шахові рушії, створені спільнотою Lichess. Вони розміщуються їхніми творцями й не завжди можуть працювати.</string>
+  <string name="moreChessEnginesCreatedByTheLichessCommunity">Інші шахові рушії, створені спільнотою Logik. Вони розміщуються їхніми творцями й не завжди можуть працювати.</string>
   <string name="name">Назва</string>
   <string name="description">Опис</string>
   <string name="descPrivate">Приватний опис</string>
@@ -775,7 +775,7 @@
   <string name="aboutX">Про %s</string>
   <string name="xIsAFreeYLibreOpenSourceChessServer">%1$s є безкоштовним (%2$s) шаховим сервером без реклами та з відкритим кодом.</string>
   <string name="really">дійсно</string>
-  <string name="lichessUpdates">Оновлення Lichess</string>
+  <string name="lichessUpdates">Оновлення Logik</string>
   <string name="contribute">Сприяти розвитку</string>
   <string name="changelog">Список змін</string>
   <string name="termsOfService">Умови користування</string>
@@ -805,7 +805,7 @@
   <string name="extraClockTimeForHost" comment="Appears on: https://lichess.org/simul/new&#10;&#10;Allows a simul host to select extra time for the simul.&#10;&#10;Please note this string used to state &quot;Host extra clock time&quot;, without the word &quot;initial&quot;">Додатковий час на годиннику для організатора:</string>
   <string name="simulAddExtraTimePerPlayer">Додавайте початковий час до вашого годинника для кожного гравця, що приєднується до сеансу.</string>
   <string name="simulHostExtraTimePerPlayer">Додатковий час для організатора за гравця</string>
-  <string name="lichessTournaments">Турніри Lichess</string>
+  <string name="lichessTournaments">Турніри Logik</string>
   <string name="tournamentFAQ">ЧаПи про турнір Арена</string>
   <string name="timeBeforeTournamentStarts">Час до початку турніру</string>
   <string name="averageCentipawnLoss">Середня втрата сотих пішаків</string>
@@ -858,8 +858,8 @@
   <string name="weHaveSentYouAnEmailTo">Ми надіслали повідомлення на адресу %s. Перейдіть за посиланням у повідомленні для скидання паролю.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Реєструючись, Ви даєте згоду дотримуватись наших %s.</string>
   <string name="readAboutOur">Читайте про наш %s.</string>
-  <string name="networkLagBetweenYouAndLichess">Мережева затримка між вами та Lichess</string>
-  <string name="timeToProcessAMoveOnLichessServer">Час обробки ходу на сервері Lichess</string>
+  <string name="networkLagBetweenYouAndLichess">Мережева затримка між вами та Logik</string>
+  <string name="timeToProcessAMoveOnLichessServer">Час обробки ходу на сервері Logik</string>
   <string name="downloadAnnotated">Завантажити з коментарями</string>
   <string name="downloadRaw">Завантажити без коментарів</string>
   <string name="downloadImported">Завантажити імпортоване</string>
@@ -878,7 +878,7 @@
   <string name="kidMode">Дитячий режим</string>
   <string name="kidModeIsEnabled">Дитячий режим активовано.</string>
   <string name="kidModeExplanation">Це заради безпеки. У дитячому режимі усе спілкування на сайті вимкнено. Увімкніть цю функцію для ваших дітей та учнів, щоб захистити їх від інших користувачів Інтернету.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">В дитячому режимі логотип Lichess замінюється на %s, щоб ви знали, що ваші діти в безпеці.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">В дитячому режимі логотип Logik замінюється на %s, щоб ви знали, що ваші діти в безпеці.</string>
   <string name="askYourChessTeacherAboutLiftingKidMode">Ваш обліковий запис керується. Попросіть вашого вчителя шахів вимкнути дитячий режим.</string>
   <string name="enableKidMode">Увімкнути дитячий режим</string>
   <string name="disableKidMode">Вимкнути дитячий режим</string>
@@ -1004,7 +1004,7 @@
     <item quantity="many">і зберегти %s послідовностей</item>
     <item quantity="other">і зберегти %s послідовностей</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Ви отримали особисте повідомлення від Lichess.</string>
+  <string name="showUnreadLichessMessage">Ви отримали особисте повідомлення від Logik.</string>
   <string name="readTheMessage" comment="'It' refers to a private message. This text follows after a different string which advises players they have received a private message from Lichess. For users, this is appears as a regular private message from the Lichess account: https://lichess.org/@/Lichess">Прочитати повідомлення</string>
   <string name="sorry">Вибачте :(</string>
   <string name="weHadToTimeYouOutForAWhile">Нам довелося забанити вас на певний час.</string>
@@ -1017,7 +1017,7 @@
   <string name="tryToWin">Грайте завжди на перемогу (чи принаймні на нічию).</string>
   <string name="resignLostGames">Здавайтеся в програних іграх (не чекайте кінця таймера).</string>
   <string name="temporaryInconvenience">Вибачте за тимчасові незручності,</string>
-  <string name="wishYouGreatGames">і бажаємо чудових ігор на lichess.org.</string>
+  <string name="wishYouGreatGames">і бажаємо чудових ігор на play.kalugalogic.ru.</string>
   <string name="thankYouForReading">Дякуємо, що прочитали!</string>
   <string name="lifetimeScore">Рахунок за весь час</string>
   <string name="currentMatchScore">Поточний рахунок матчу</string>
@@ -1063,7 +1063,7 @@
   <string name="congratsYouWon">Вітання, ви виграли!</string>
   <string name="gameVsX">Гра проти %1$s</string>
   <string name="resVsX">%1$s vs %2$s</string>
-  <string name="lostAgainstTOSViolator">Ви програли комусь хто порушував Lichess TOS</string>
+  <string name="lostAgainstTOSViolator">Ви програли комусь хто порушував Logik TOS</string>
   <string name="refundXpointsTimeControlY">Повернення: %1$s %2$s рангових очок.</string>
   <string name="timeAlmostUp">Час майже скінчився!</string>
   <string name="clickToRevealEmailAddress">[Натисніть щоб побачити електронну адресу]</string>
@@ -1117,13 +1117,13 @@
   <string name="youCantStartNewGame">Ви не можете розпочати нову гру, коли ваша черга ходити.</string>
   <string name="since">Від</string>
   <string name="until">До</string>
-  <string name="lichessDbExplanation">Рейтингові партії всіх гравців Lichess</string>
+  <string name="lichessDbExplanation">Рейтингові партії всіх гравців Logik</string>
   <string name="switchSides">Змінити сторону</string>
   <string name="closingAccountWithdrawAppeal">Закриття облікового запису призведе до скасування вашої апеляції</string>
   <string name="ourEventTips">Наші поради щодо організації подій</string>
   <string name="instructions">Інструкція</string>
   <string name="showMeEverything">Показати все</string>
-  <string name="lichessPatronInfo">Lichess — це благодійне й абсолютно безкоштовне програмне забезпечення з відкритим кодом.
+  <string name="lichessPatronInfo">Logik — це благодійне й абсолютно безкоштовне програмне забезпечення з відкритим кодом.
 Усі витрати на обслуговування, розробку й контент фінансуються виключно пожертвуваннями користувачів.</string>
   <string name="nothingToSeeHere">Поки тут нічого немає.</string>
   <string name="stats">Статистика</string>
