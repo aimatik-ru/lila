@@ -65,7 +65,7 @@ Voir les link3 sur ce coup pour vous entraîner."""
     given Lang = Lang("ar", "SA")
     assertEquals(
       I18nKey.faq.lichessCombinationLiveLightLibrePronounced.txt("link1"),
-      """كلمة Lichess مزيج من live/light/libre (مباشر\خفيف\حر) و chess (شطرنج). تنطق link1."""
+      """كلمة Logik مزيج من live/light/libre (مباشر\خفيف\حر) و chess (شطرنج). تنطق link1."""
     )
 
   private def argsForKey(k: String): List[String] =
