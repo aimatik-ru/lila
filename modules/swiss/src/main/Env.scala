@@ -88,7 +88,6 @@ final class Env(
 
   lazy val getName = GetSwissName(cache.name)
 
-  private lazy val officialSchedule = wire[SwissOfficialSchedule]
 
   wire[SwissNotify]
 
@@ -108,9 +107,6 @@ final class Env(
 
   LilaScheduler("Swiss.checkOngoingGames", _.Every(10.seconds), _.AtMost(15.seconds), _.Delay(20.seconds)):
     api.checkOngoingGames.logFailure(logger)
-
-  LilaScheduler("Swiss.generate", _.Every(3.hours), _.AtMost(15.seconds), _.Delay(15.minutes)):
-    officialSchedule.generate.logFailure(logger)
 
   private val payoutsDmUrl = "/swiss/(\\w{8})".r.unanchored
 

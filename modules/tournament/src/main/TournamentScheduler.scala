@@ -91,33 +91,12 @@ private object TournamentScheduler:
 
     val farFuture = today.plusMonths(7).atStartOfDay
 
-    val birthday = LocalDate.of(2010, 6, 20)
-
     extension (date: LocalDate)
       def withDayOfWeek(day: java.time.DayOfWeek): LocalDate =
         date.adjust(TemporalAdjusters.nextOrSame(day))
 
     // all dates UTC
     List(
-      List( // legendary tournaments!
-        at(birthday.withYear(today.getYear), 12).pipe(orNextYear).pipe { date =>
-          val yo = date.getYear - 2010
-          Schedule(Unique, Rapid, Standard, none, date).plan {
-            _.copy(
-              name = s"${date.getYear} Логик Anniversary",
-              minutes = 12 * 60,
-              description = s"""
-We've had $yo great chess years together!
-
-Thank you all, you rock!""".some,
-              spotlight = Spotlight(
-                headline = s"$yo years of free chess!",
-                homepageHours = 24.some
-              ).some
-            )
-          }
-        }
-      ),
       List( // yearly tournaments!
         secondWeekOf(JANUARY).withDayOfWeek(MONDAY) -> Bullet,
         secondWeekOf(FEBRUARY).withDayOfWeek(TUESDAY) -> SuperBlitz,
