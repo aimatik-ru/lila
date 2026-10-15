@@ -20,7 +20,7 @@ final class SitePages(helpers: Helpers):
     val external = frag(" ", iconTag(Icon.ExternalArrow))
     def activeCls(c: String) = cls := active.activeO(c)
     lila.ui.bits.pageMenuSubnav(
-      a(activeCls("about"), href := "/about")(trans.site.aboutX("Логик")),
+      a(activeCls("about"), href := "/about")("О площадке"),
       a(activeCls("tos"), href := routes.Cms.tos)(trans.site.termsOfService()),
       a(activeCls("privacy"), href := "/privacy")(trans.site.privacy()),
       sep,

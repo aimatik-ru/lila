@@ -77,12 +77,8 @@ object home:
             else
               div(cls := "about-side")(
                 ctx.blind.option(h2(trans.site.about())),
-                trans.site.xIsAFreeYLibreOpenSourceChessServer(
-                  siteName,
-                  a(cls := "blue", href := routes.Plan.features)(trans.site.really.txt())
-                ),
-                " ",
-                a(href := "/about")(trans.site.aboutX(siteName), "...")
+                "Шахматная площадка клуба «Логик» из Калуги. Бесплатно и без рекламы. ",
+                a(href := "/about")("О площадке")
               )
           ),
           currentGame
@@ -116,7 +112,7 @@ object home:
           ctx.noBot.option(bits.underboards(tours, simuls)),
           div(cls := "lobby__about")(
             ctx.blind.option(h2(trans.site.about())),
-            a(href := "/about")(trans.site.aboutX(siteName)),
+            a(href := "/about")("О площадке"),
             a(href := routes.Cms.tos)(trans.site.termsOfService()),
             a(href := "/privacy")(trans.site.privacy()),
             a(href := "/source")(trans.site.sourceCode())
