@@ -88,7 +88,6 @@ final class Env(
 
   lazy val getName = GetSwissName(cache.name)
 
-
   wire[SwissNotify]
 
   Bus.sub[lila.core.game.FinishGame]:

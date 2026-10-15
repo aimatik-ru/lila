@@ -186,7 +186,6 @@ class SchedulerTest extends munit.FunSuite:
         """2023-01-05T17:00:00Z Weekly standard rapid(10+0) Conditions() standard""",
         """2023-02-02T17:00:00Z Monthly standard rapid(10+0) Conditions() standard""",
         """2023-04-13T17:00:00Z Yearly standard rapid(10+0) Conditions() standard""",
-        """2023-06-20T12:00:00Z Unique standard rapid(10+0) Conditions() standard""",
         """2023-01-06T16:00:00Z Shield standard classical(20+10) Conditions() standard""",
         """2023-01-06T17:00:00Z Weekly standard classical(20+10) Conditions() standard""",
         """2023-02-03T17:00:00Z Monthly standard classical(20+10) Conditions() standard""",

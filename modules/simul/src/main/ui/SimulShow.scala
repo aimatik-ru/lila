@@ -77,7 +77,10 @@ final class SimulShow(helpers: Helpers, gathering: GatheringUi):
                 sim.position
                   .flatMap(p => lila.gathering.Thematic.byFen(p.opening))
                   .map { pos =>
-                    frag(br, a(targetBlank, href := s"/analysis/${pos.fen.value.replace(' ', '_')}")(pos.name))
+                    frag(
+                      br,
+                      a(targetBlank, href := s"/analysis/${pos.fen.value.replace(' ', '_')}")(pos.name)
+                    )
                   }
                   .orElse(sim.position.map { fen =>
                     frag(
