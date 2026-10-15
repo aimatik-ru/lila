@@ -52,7 +52,7 @@ const openings = db.puzzle2_puzzle
     { $limit: maxOpenings },
     { $group: { _id: null, openings: { $push: '$_id' } } },
   ])
-  .next().openings;
+  .toArray()[0]?.openings ?? []; // no puzzle has an opening (e.g. a seed db)
 
 function chunkify(a, n) {
   let len = a.length,
