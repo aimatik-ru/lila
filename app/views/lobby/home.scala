@@ -114,7 +114,6 @@ object home:
             ctx.blind.option(h2(trans.site.about())),
             a(href := "/about")("О площадке"),
             a(href := routes.Cms.tos)(trans.site.termsOfService()),
-            a(href := "/privacy")(trans.site.privacy()),
-            a(href := "/source")(trans.site.sourceCode())
+            a(href := "/privacy")(trans.site.privacy())
           )
         )
