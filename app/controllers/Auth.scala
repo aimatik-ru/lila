@@ -202,6 +202,30 @@ final class Auth(env: Env, accountC: => Account) extends LilaController(env):
             yield res
       )
 
+  private val logicLoginRateLimit =
+    env.security.ipTrust.rateLimit(100, 1.hour, "clas.logic.login")
+
+  // вход ученика «Логика» по одноразовой ссылке из бота MAX (lila.clas.ClasLogic)
+  def logicLogin(t: String) = Open:
+    def fail(msg: String) = BadRequest.page:
+      import scalatags.Text.all.stringFrag
+      views.site.message("Ссылка не сработала")(stringFrag(msg))
+    if !env.clas.logic.enabled then notFound
+    else if ctx.req.client.isCrawler then Ok("Логик").toFuccess // превью мессенджера не тратит ссылку
+    else
+      Firewall:
+        logicLoginRateLimit(rateLimited):
+          env.clas.logic.consume(t) match
+            case None =>
+              fail("Ссылка устарела или уже открыта. Запросите новую в боте MAX: «Шахматная площадка».")
+            case Some(payload) =>
+              env.clas.logic
+                .login(payload)
+                .flatMap:
+                  case None => fail("Вход для этого ученика закрыт. Напишите администратору клуба.")
+                  case Some(user) =>
+                    authenticateUser(user, IsPwned.No, remember = true, Redirect(routes.Lobby.home).some)
+
   def logout = Open:
     val sid = env.security.api.reqSessionId(ctx.req)
     for

@@ -9,6 +9,9 @@ private final class ClasColls(db: lila.db.Db)(using Executor):
   val student = db(CollName("clas_student"))
   val invite = db(CollName("clas_invite"))
   val login = db(CollName("clas_login"))
+  // вход учеников «Логика» по ссылке из бота MAX: ученик сайта -> аккаунт, группа сайта -> класс
+  val logicStudent = db(CollName("clas_logic_student"))
+  val logicGroup = db(CollName("clas_logic_group"))
 
   // works for clas & student
   def selectArchived(v: Boolean) = bdoc("archived".exists(v))

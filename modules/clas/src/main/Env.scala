@@ -1,12 +1,14 @@
 package lila.clas
 
 import com.softwaremill.macwire.*
+import play.api.Configuration
 
 import lila.core.config.*
 import lila.core.misc.clas.ClasBus
 
 @Module
 final class Env(
+    appConfig: Configuration,
     db: lila.db.Db,
     userRepo: lila.user.UserRepo,
     perfsRepo: lila.user.UserPerfsRepo,
@@ -47,6 +49,16 @@ final class Env(
   lazy val signup = wire[ClasSignup]
 
   lazy val bulk = wire[ClasBulkApi]
+
+  lazy val logic = ClasLogic(
+    secret = appConfig.getOptional[String]("logic.login.secret").filter(_.nonEmpty).map(Secret(_)),
+    ownerName = UserStr(appConfig.getOptional[String]("logic.login.owner") | "Grom2021"),
+    colls = colls,
+    clasApi = api,
+    signup = signup,
+    userRepo = userRepo,
+    nameGenerator = nameGenerator
+  )
 
   def isAnyTeacher(using me: Me) = lila.core.perm.Granter(_.Teacher)
 

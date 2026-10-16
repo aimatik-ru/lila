@@ -572,6 +572,7 @@ POST  /translation/select              controllers.I18n.select
 GET   /login                           controllers.Auth.login
 POST  /login                           controllers.Auth.authenticate
 POST  /login/class                     controllers.Auth.clasLogin
+GET   /login/logic                     controllers.Auth.logicLogin(t: String)
 GET   /$lang<\w\w\w?>/login            controllers.Auth.loginLang(lang: Language)
 GET   /logout                          controllers.Auth.logoutGet
 POST  /logout                          controllers.Auth.logout
