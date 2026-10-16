@@ -110,8 +110,8 @@ final class layout(helpers: Helpers, assetHelper: lila.web.ui.AssetFullHelper)(
 
   val favicons = raw:
     val path = s"$assetBaseUrl/assets/logo"
-    s"""<link rel="alternate icon" type="image/png" href="$path/lichess-favicon-64.png">""" +
-      s"""<link id="favicon" rel="icon" type="image/svg+xml" href="$path/lichess-favicon.svg">"""
+    s"""<link rel="alternate icon" type="image/png" href="$path/logik-favicon-64.png">""" +
+      s"""<link id="favicon" rel="icon" type="image/svg+xml" href="$path/logik-favicon.svg">"""
 
   def blindModeForm(using ctx: Context) = raw:
     val btnText =
@@ -315,7 +315,7 @@ final class layout(helpers: Helpers, assetHelper: lila.web.ui.AssetFullHelper)(
             else ctx.isBot.option(botImage),
             div(cls := "site-icon")(
               img(
-                src := staticAssetUrl("logo/lichess-favicon.svg"),
+                src := staticAssetUrl("logo/logik-favicon.svg"),
                 alt := siteName,
                 style := "display:block;width:1em;height:1em"
               )

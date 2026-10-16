@@ -36,7 +36,7 @@ Allow: /game/export/gif/thumbnail/
     "description" -> "Шахматный клуб «Логик», Калуга",
     "icons" -> List(32, 64, 128, 192, 256, 512, 1024).map: size =>
       Json.obj(
-        "src" -> s"//${net.assetDomain}/assets/logo/lichess-favicon-$size.png",
+        "src" -> s"//${net.assetDomain}/assets/logo/logik-favicon-$size.png",
         "sizes" -> s"${size}x$size",
         "type" -> "image/png"
       )
@@ -103,7 +103,7 @@ Allow: /game/export/gif/thumbnail/
     Json.obj(
       "url" -> net.baseUrl,
       "sameAs" -> List("https://kalugalogic.ru/"),
-      "logo" -> s"https://${net.assetDomain}/assets/logo/lichess-favicon-512.png",
+      "logo" -> s"https://${net.assetDomain}/assets/logo/logik-favicon-512.png",
       "name" -> "Логик",
       "description" -> "Шахматная площадка шахматного клуба «Логик», Калуга"
     )
