@@ -24,3 +24,13 @@ class ClasLogicTest extends munit.FunSuite:
   test("reject garbage"):
     assertEquals(ClasLogic.parse("not-base64!"), None)
     assertEquals(ClasLogic.parse(java.util.Base64.getUrlEncoder.encodeToString("{}".getBytes)), None)
+
+  test("site data on top, teacher notes kept"):
+    import ClasLogic.mergeNotes
+    assertEquals(mergeNotes(Some("ФИО: А"), ""), "ФИО: А\n———")
+    assertEquals(mergeNotes(Some("ФИО: Б"), "ФИО: А\n———\nсильный эндшпиль"), "ФИО: Б\n———\nсильный эндшпиль")
+    assertEquals(mergeNotes(Some("ФИО: Б"), "старая заметка"), "ФИО: Б\n———\nстарая заметка")
+    assertEquals(mergeNotes(None, "старая заметка"), "старая заметка")
+
+  test("old payload without card fields still parses"):
+    assertEquals(ClasLogic.parse(body).map(p => (p.login, p.info, p.rcf)), Some((None, None, None)))

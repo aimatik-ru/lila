@@ -7,6 +7,7 @@ import scalalib.actor.AsyncActorSequencers
 
 import lila.core.config.Secret
 import lila.core.id.ClasId
+import lila.core.user.{ FlagCode, Profile }
 import lila.db.dsl.{ *, given }
 
 /* Вход учеников шахматной школы «Логик» по подписанной ссылке из бота MAX.
@@ -16,6 +17,10 @@ import lila.db.dsl.{ *, given }
  * у учеников класса), группа сайта превращается в класс, тренер группы
  * подключается к классу по почте своего аккаунта. Дальше вход идёт в тот же аккаунт.
  * Паролей ученик не знает: новая ссылка — новый вход.
+ *
+ * Ник собирает сайт (две буквы имени + две фамилии + месяц и год рождения: ilef1085).
+ * ФИО и данные с сайта (дата рождения, разряд, ФШР) лежат в карточке ученика в классе —
+ * её видят только тренеры; в открытый профиль ребёнка идут только флаг, город и рейтинг ФШР.
  */
 final class ClasLogic(
     secret: Option[Secret],
@@ -75,6 +80,7 @@ final class ClasLogic(
           clases <- groups.sequentially(clasOf)
           user <- userOf(p, clases)
           _ <- user.so(u => clases.sequentiallyVoid(ensureStudent(u, p, _)))
+          _ <- user.so(syncProfile(_, p))
         yield user
 
   private def userOf(p: Payload, clases: List[Clas])(using Me): Fu[Option[User]] =
@@ -87,13 +93,31 @@ final class ClasLogic(
   private def createUser(p: Payload, clas: Clas)(using Me): Fu[Option[User]] =
     given Lang = Lang("ru")
     for
-      name <- nameGenerator().orFail("no free username")
+      name <- pickName(p.login)
       student <- signup.one.create(clas, ClasForm.CreateStudent(name, Student.RealName(p.name)))
       _ <- colls.logicStudent.insert.one(
         bdoc("_id" -> p.sid, "userId" -> student.student.userId, "createdAt" -> nowInstant)
       )
       user <- userRepo.byId(student.student.userId)
     yield user
+
+  private def pickName(login: Option[String])(using Lang): Fu[UserName] =
+    def free(names: List[String]): Fu[UserName] = names match
+      case Nil => nameGenerator().orFail("no free username")
+      case name :: rest =>
+        userRepo.existsSec(UserName(name)).flatMap(if _ then free(rest) else fuccess(UserName(name)))
+    val base = login.map(_.trim.toLowerCase).filter(l => l.length <= 26 && validLogin.matches(l))
+    free(base.toList.flatMap(b => b :: (2 to 9).map(i => s"$b-$i").toList))
+
+  /* В открытый профиль ребёнка — только флаг, город и рейтинг ФШР; ФИО туда не кладём. */
+  private def syncProfile(user: User, p: Payload): Funit =
+    val prof = user.profile | Profile()
+    val next = prof.copy(
+      flag = prof.flag.orElse(FlagCode("RU").some),
+      location = prof.location.orElse("Калуга".some),
+      rcfRating = p.rcf.orElse(prof.rcfRating)
+    )
+    (next != prof).so(userRepo.setProfile(user.id, next))
 
   private def clasOf(g: Group)(using me: Me): Fu[Clas] =
     for
@@ -138,16 +162,26 @@ final class ClasLogic(
         )
         .inject(synced)
 
+  /* Карточка ученика в классе: ФИО и данные с сайта обновляются при каждом входе. */
   private def ensureStudent(user: User, p: Payload, clas: Clas)(using me: Me): Funit =
     val id = Student.makeId(user.id, clas.id)
+    val realName = Student.RealName(p.name.trim.take(100))
     colls.student
       .byId[Student](id.value)
       .flatMap:
-        case Some(s) if s.isArchived => colls.student.unsetField(bid(id), "archived").void
-        case Some(_) => funit
+        case Some(s) =>
+          val notes = mergeNotes(p.info, s.notes)
+          (s.isArchived || s.realName != realName || s.notes != notes).so:
+            colls.student.update
+              .one(bid(id), set("realName" -> realName, "notes" -> notes) ++ unset("archived"))
+              .void
         case None =>
           colls.student.insert
-            .one(Student.make(user, clas, me.userId, Student.RealName(p.name), managed = true))
+            .one(
+              Student
+                .make(user, clas, me.userId, realName, managed = true)
+                .copy(notes = mergeNotes(p.info, ""))
+            )
             .void
 
 object ClasLogic:
@@ -155,7 +189,28 @@ object ClasLogic:
   val maxLifetime = 30.minutes
 
   case class Group(id: Int, name: String, teacher: Option[String])
-  case class Payload(sid: Int, name: String, groups: List[Group], exp: Long, n: String)
+  case class Payload(
+      sid: Int,
+      name: String,
+      groups: List[Group],
+      exp: Long,
+      n: String,
+      login: Option[String] = None,
+      info: Option[String] = None,
+      rcf: Option[Int] = None
+  )
+
+  private val validLogin = lila.user.nameRules.newUsernameRegex
+
+  // Сверху — данные с сайта (перезаписываются), под чертой — заметки тренера (не трогаем).
+  private val notesMark = "———"
+
+  private[clas] def mergeNotes(info: Option[String], current: String): String =
+    info.filter(_.trim.nonEmpty).fold(current): i =>
+      val teacher = current.indexOf(notesMark) match
+        case -1 => current.trim
+        case k => current.drop(k + notesMark.length).trim
+      s"${i.trim.take(5000)}\n$notesMark\n$teacher".trim
 
   private val noGroup = Group(0, "Без группы", none)
 
