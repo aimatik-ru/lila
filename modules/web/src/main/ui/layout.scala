@@ -297,8 +297,6 @@ final class layout(helpers: Helpers, assetHelper: lila.web.ui.AssetFullHelper)(
           title := trans.team.teams.txt()
         )
 
-    private val siteNameFrag: Frag = frag(siteName)
-
     def apply(
         zenable: Boolean,
         isAppealUser: Boolean,
@@ -313,14 +311,16 @@ final class layout(helpers: Helpers, assetHelper: lila.web.ui.AssetFullHelper)(
           a(cls := "site-title", href := langHref("/"), testId("site-title"))(
             if ctx.kid.yes then span(title := trans.site.kidMode.txt(), cls := "kiddo")(":)")
             else ctx.isBot.option(botImage),
-            div(cls := "site-icon")(
-              img(
-                src := staticAssetUrl("logo/logik-favicon.svg"),
-                alt := siteName,
-                style := "display:block;width:1em;height:1em"
-              )
+            img(
+              cls := "site-logo site-logo--dark",
+              src := staticAssetUrl("logo/logik-lockup.png"),
+              alt := siteName
             ),
-            div(cls := "site-name")(siteNameFrag)
+            img(
+              cls := "site-logo site-logo--light",
+              src := staticAssetUrl("logo/logik-lockup-light.png"),
+              alt := siteName
+            )
           ),
           (!isAppealUser).option(topnav),
           ctx.blind.option(h2("Navigation"))

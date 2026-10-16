@@ -60,8 +60,8 @@ case class Pref(
   def realTheme3d = Theme3d(theme3d)
   def realPieceSet3d = PieceSet3d.get(pieceSet3d)
 
-  val themeColorLight = "#dbd7d1"
-  val themeColorDark = "#2e2a24"
+  val themeColorLight = "#cfe2f0"
+  val themeColorDark = "#24292d"
   def themeColor = if bg == Bg.LIGHT || bg == Bg.LIGHT_TRANSP then themeColorLight else themeColorDark
 
   def realSoundSet = SoundSet(soundSet)
@@ -447,14 +447,14 @@ object Pref:
 
   def create(user: User) = default.copy(
     id = user.id,
-    bg = Bg.SYSTEM,
+    bg = Bg.LIGHT,
     agreement =
       Agreement.current // if user.createdAt.isAfter(Agreement.changedAt) then Agreement.current else 0
   )
 
   lazy val default = Pref(
     id = UserId(""),
-    bg = Bg.SYSTEM,
+    bg = Bg.LIGHT,
     bgImg = none,
     is3d = false,
     theme = Theme.default.name,

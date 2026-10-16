@@ -2,7 +2,7 @@
 // $c-<color-name>: var(--c-<color-name>);
 
 :root {
-  ---site-hue: 37deg;
+  ---site-hue: 205deg; // голубой как у kalugalogic.ru (#cfe2f0)
   --c-bg: hsl(var(---site-hue) 7% 14%);
   --c-bg-box: var(--c-bg);
   --c-bg-high: var(--c-bg);
@@ -55,7 +55,7 @@
   --c-link-dim: var(--c-primary-dim);
   --c-link-clear: var(--c-primary-clear);
   --c-over: white;
-  --c-brag: hsl(var(---site-hue) 74% 43%);
+  --c-brag: hsl(37deg 74% 43%);
   --c-brag-hover: hsl(from var(--c-brag) h 100 70);
   --c-contours: color-mix(in oklab, var(--c-brag) 80%, var(--c-shade));
   --c-accent: hsl(22 100% 42%);

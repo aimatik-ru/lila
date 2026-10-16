@@ -28,43 +28,29 @@
     outline-offset: -2px;
   }
 
-  .site-name {
-    display: none;
+  .site-logo {
+    display: block;
+    height: calc($site-header-height - 6px);
+    width: auto;
+    transform: translateY(3px);
   }
 
-  .site-icon {
-    display: none;
-    font-size: 24px;
+  .site-logo--light {
+    @include if-light {
+      display: none;
+    }
+  }
 
-    @media (min-height: at-least($tall)) {
-      font-size: 36px;
+  .site-logo--dark {
+    display: none;
+
+    @include if-light {
+      display: block;
     }
   }
 
   @media (max-width: at-most($xx-small)) {
     display: none;
-  }
-
-  @media (min-width: at-least($xx-small)) {
-    .site-icon {
-      display: block;
-    }
-  }
-
-  @media (min-width: at-least($large)) {
-    .site-name {
-      display: block;
-    }
-
-    .site-icon {
-      display: none;
-    }
-  }
-
-  @media (min-width: at-least($xx-large)) {
-    .site-icon {
-      display: block;
-    }
   }
 
   span {
