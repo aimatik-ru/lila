@@ -25,7 +25,7 @@ final class ClasLogic(
     signup: ClasSignup,
     userRepo: lila.user.UserRepo,
     nameGenerator: NameGenerator
-)(using Executor):
+)(using Executor, Scheduler):
 
   import ClasLogic.*
   import BsonHandlers.given

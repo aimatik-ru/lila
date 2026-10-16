@@ -217,7 +217,7 @@ final class Auth(env: Env, accountC: => Account) extends LilaController(env):
         logicLoginRateLimit(rateLimited):
           env.clas.logic.consume(t) match
             case None =>
-              fail("Ссылка устарела или уже открыта. Запросите новую в боте MAX: «Шахматная площадка».")
+              fail("Эта ссылка уже открыта или устарела. Новую пришлёт бот MAX: кнопка «Шахматная площадка».")
             case Some(payload) =>
               env.clas.logic
                 .login(payload)
