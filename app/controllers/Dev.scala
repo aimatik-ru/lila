@@ -20,6 +20,30 @@ final class Dev(env: Env) extends LilaController(env):
     }
   }
 
+  def logicColors = Secure(_.Settings) { _ ?=> _ ?=>
+    val s = env.web.settings
+    Ok.page:
+      views.dev.logicColors(s.logicBg.get(), s.logicPrimary.get())
+  }
+
+  private val logicColorsForm =
+    import play.api.data.Forms.*
+    play.api.data.Form(tuple("bg" -> text, "primary" -> text, "reset" -> optional(text)))
+
+  def logicColorsPost = SecureBody(_.Settings) { _ ?=> me ?=>
+    bindForm(logicColorsForm)(
+      _ => Redirect(routes.Dev.logicColors),
+      (bg, primary, reset) =>
+        val s = env.web.settings
+        val clean = (v: String) => if reset.isDefined then "" else lila.web.LogicColors.clean(v) | ""
+        lila.log.system.info(s"setting ${me.username} changes logic colors to ${clean(bg)} ${clean(primary)}")
+        for
+          _ <- s.logicBg.set(clean(bg))
+          _ <- s.logicPrimary.set(clean(primary))
+        yield Redirect(routes.Dev.logicColors).flashSuccess
+    )
+  }
+
   def cli = Secure(_.Cli) { _ ?=> _ ?=>
     Ok.page:
       views.dev.cli(env.api.cli.form, none)

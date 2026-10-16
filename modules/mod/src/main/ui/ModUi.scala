@@ -267,6 +267,8 @@ final class ModUi(helpers: Helpers):
         .option(a(cls := itemCls(active, "ip-tiers"), href := routes.Dev.ipTiers)("IP limit tiers")),
       Granter(_.Settings)
         .option(a(cls := itemCls(active, "setting"), href := routes.Dev.settings)("Settings")),
+      Granter(_.Settings)
+        .option(a(cls := itemCls(active, "logic-colors"), href := routes.Dev.logicColors)("Цвета площадки")),
       Granter(_.Cli).option(a(cls := itemCls(active, "cli"), href := routes.Dev.cli)("CLI"))
     )
 

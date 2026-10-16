@@ -21,7 +21,15 @@ object page:
   private val topnav = lila.web.ui.TopNav(helpers)
 
   private def metaThemeColor(using ctx: Context): Frag =
-    raw(s"""<meta name="theme-color" content="${ctx.pref.themeColor}">""")
+    val color = lila.web.LogicColors
+      .clean(env.web.settings.logicBg.get())
+      .filter(_ => ctx.pref.themeColor == ctx.pref.themeColorLight) | ctx.pref.themeColor
+    raw(s"""<meta name="theme-color" content="$color">""")
+
+  private def logicColorsStyle: Option[Frag] =
+    lila.web.LogicColors
+      .css(env.web.settings.logicBg.get(), env.web.settings.logicPrimary.get())
+      .map(c => raw(s"""<style id="logic-colors">$c</style>"""))
 
   private def boardPreload(using ctx: Context) = frag(
     imagePreload(assetUrl(s"images/board/${ctx.pref.currentTheme.file}")),
@@ -67,6 +75,7 @@ object page:
           ,
           cssTag("lib.theme.all"),
           cssTag("site"),
+          logicColorsStyle,
           pref.is3d.option(cssTag("lib.board-3d")),
           ctx.data.inquiry.isDefined.option(cssTag("mod.inquiry")),
           ctx.impersonatedBy.isDefined.option(cssTag("mod.impersonate")),

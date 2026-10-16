@@ -951,6 +951,8 @@ GET   /dev/cli                         controllers.Dev.cli
 POST  /dev/cli                         controllers.Dev.cliPost
 GET   /dev/settings                    controllers.Dev.settings
 POST  /dev/settings/:id                controllers.Dev.settingsPost(id)
+GET   /dev/logic-colors                controllers.Dev.logicColors
+POST  /dev/logic-colors                controllers.Dev.logicColorsPost
 GET   /dev/ip-tiers                    controllers.Dev.ipTiers
 POST  /dev/ip-tiers                    controllers.Dev.ipTiersPost
 GET   /dev/email-error                 controllers.Dev.emailErrorGet

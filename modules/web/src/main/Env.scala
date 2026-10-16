@@ -75,6 +75,18 @@ final class Env(
       default = 300,
       text = "Opening explorer games per second".some
     )
+    val logicBg = settingStore[String](
+      "logicBg",
+      default = "",
+      text = "Цвет фона площадки (#rrggbb), пусто = из темы".some,
+      perm = _.Settings
+    )
+    val logicPrimary = settingStore[String](
+      "logicPrimary",
+      default = "",
+      text = "Цвет кнопок и ссылок площадки (#rrggbb), пусто = из темы".some,
+      perm = _.Settings
+    )
 
   object lichobileDisables:
     import lila.core.data.Strings

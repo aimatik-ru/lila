@@ -34,6 +34,37 @@ final class DevUi(helpers: Helpers)(modMenu: String => Context ?=> Frag):
         )
       )
 
+  def logicColors(bg: String, primary: String)(using Context) =
+    val title = "Цвета площадки"
+    def picker(field: String, text: String, current: String, default: String) =
+      div(cls := "form-group")(
+        label(cls := "form-label", `for` := s"logic-$field")(text),
+        input(
+          tpe := "color",
+          id := s"logic-$field",
+          name := field,
+          value := (LogicColors.clean(current) | default)
+        )
+      )
+    Page(title)
+      .css("mod.misc")
+      .css("bits.form3"):
+        main(cls := "page-menu")(
+          modMenu("logic-colors"),
+          div(cls := "page-menu__content box box-pad")(
+            h1(cls := "box__top")(title),
+            p("После сохранения цвета сменятся на всех страницах. Тёмная тема берёт оттенок от цвета фона."),
+            postForm(cls := "form3", action := routes.Dev.logicColorsPost)(
+              picker("bg", "Фон страницы", bg, LogicColors.defaultBg),
+              picker("primary", "Кнопки и ссылки", primary, LogicColors.defaultPrimary),
+              div(cls := "form-actions")(
+                submitButton(cls := "button")("Сохранить цвета"),
+                submitButton(cls := "button button-empty", name := "reset", value := "1")("Вернуть голубые")
+              )
+            )
+          )
+        )
+
   def ipTiers(form: Either[String, Form[?]])(using Context) =
     val title = "IP limit tiers"
     Page(title)
