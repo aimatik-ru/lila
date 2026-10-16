@@ -21,7 +21,7 @@ export function movetime(
 
 const models = new Map<Seconds, (turn: number) => Seconds>();
 
-// keyframes mined from jan 2025 https://database.lichess.org
+// keyframes mined from the jan 2025 open games database
 const keyframes = new Map([
   [0, { first: { m: -0.0002, b: 0.6 }, peak: { m: -0.0003, b: 1.0 }, tail: { m: -0.00016, b: 0.46 } }],
   [15, { first: { m: -0.00027, b: 0.72 }, peak: { m: -0.00031, b: 1.11 }, tail: { m: -0.00015, b: 0.46 } }],

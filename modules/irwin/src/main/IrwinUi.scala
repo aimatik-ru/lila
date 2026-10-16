@@ -101,7 +101,7 @@ final class IrwinUi(helpers: Helpers)(menu: String => Context ?=> Frag):
           ),
           div(cls := "box__top__actions")(
             a(
-              href := "https://monitor.lichess.ovh/d/a5qOnu9Wz/mod-yield",
+              href := "/mod/table",
               cls := "button button-empty"
             )("Monitoring")
           )
@@ -181,7 +181,7 @@ final class IrwinUi(helpers: Helpers)(menu: String => Context ?=> Frag):
             ),
             div(cls := "box__top__actions")(
               a(
-                href := "https://monitor.lichess.ovh/d/a5qOnu9Wz/mod-yield",
+                href := "/mod/table",
                 cls := "button button-empty"
               )("Monitoring")
             )

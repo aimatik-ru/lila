@@ -237,7 +237,7 @@ final class ModUi(helpers: Helpers):
       Granter(_.PublicChatView)
         .option(a(cls := itemCls(active, "public-chat"), href := routes.Mod.publicChat)("Public Chats")),
       Granter(_.SeeReport).option:
-        a(targetBlank, href := "https://monitor.lichess.ovh/d/ad7cldm/mod-queue-and-closed-report-charts"):
+        a(targetBlank, href := "/report"):
           "Queue charts"
       ,
       Granter(_.GamifyView)

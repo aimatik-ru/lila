@@ -45,7 +45,7 @@ function score(moves: SearchMove[], args: MoveArgs, limiter: number): FilterResu
   return result;
 }
 
-// michael's python algorithm: https://hq.lichess.ovh/#narrow/channel/8-dev/topic/Fancy.20Bots/near/3803327
+// michael's python algorithm (upstream dev chat)
 
 function pawnStructure(b: co.Position, color: Color): number {
   const pawnSquares: co.SquareSet = b.board.pieces(color, 'pawn');
