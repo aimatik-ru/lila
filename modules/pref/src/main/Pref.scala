@@ -144,7 +144,7 @@ case class Pref(
 object Pref:
 
   val defaultBgImgUrl = "//play.kalugalogic.ru/assets/images/background/landscape.jpg"
-  val defaultBgOpacity = 50
+  val defaultBgOpacity = 22
 
   case class BoardPref(
       brightness: Int,
@@ -447,14 +447,14 @@ object Pref:
 
   def create(user: User) = default.copy(
     id = user.id,
-    bg = Bg.LIGHT,
+    bg = Bg.SYSTEM_TRANSP,
     agreement =
       Agreement.current // if user.createdAt.isAfter(Agreement.changedAt) then Agreement.current else 0
   )
 
   lazy val default = Pref(
     id = UserId(""),
-    bg = Bg.LIGHT,
+    bg = Bg.SYSTEM_TRANSP,
     bgImg = none,
     is3d = false,
     theme = Theme.default.name,
