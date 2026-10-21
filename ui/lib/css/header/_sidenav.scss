@@ -1,0 +1,192 @@
+// Левое боковое меню на широких экранах (в духе chess.com).
+// Разметка та же, что у горизонтального topnav: .site-title-nav становится
+// фиксированной колонкой слева, #topnav — вертикальным списком разделов,
+// подменю (section > div) открывается панелью справа от колонки.
+// #top остаётся узкой полосой с кнопками сайта (.site-buttons) над контентом.
+// Ниже $topnav-visible работает прежний мобильный гамбургер.
+
+$sidenav-width: 168px;
+
+@include mq-topnav-visible {
+  // Ширина колонки видна всем расчётам страницы (см. abstract/_uniboard.scss).
+  // В zen-режиме .site-title-nav скрыт страницей, поэтому отступа нет.
+  body:not(.zen):has(> #top) {
+    ---sidenav-w: #{$sidenav-width};
+    ---site-header-sticky-padding: max(
+      0px,
+      calc((100vw - #{$sidenav-width} - #{$site-header-sticky-max-width}) / 2)
+    );
+
+    padding-inline-start: var(---sidenav-w);
+
+    #top {
+      justify-content: flex-end;
+      max-width: none;
+      padding: 0 var(---site-header-sticky-padding);
+
+      // Прятать полосу при прокрутке нельзя: transform на #top делает его
+      // контейнером для position: fixed, и колонка уехала бы вместе с ним.
+      &.hide {
+        transform: none;
+
+        #topnav,
+        .dropdown {
+          opacity: unset;
+          visibility: unset;
+          pointer-events: unset;
+          transition: unset;
+        }
+      }
+    }
+  }
+
+  .site-title-nav {
+    ---sidenav-bg: color-mix(in oklab, #{$c-bg-opaque} 88%, #{$c-dimmer});
+
+    @include if-light {
+      ---sidenav-bg: #{$c-bg-low};
+    }
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    inset-inline-start: 0;
+    width: $sidenav-width;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    background: var(---sidenav-bg);
+    border-inline-end: 1px solid $c-border;
+
+    @include if-transp {
+      @include back-blur;
+    }
+  }
+
+  .site-title {
+    justify-content: center;
+    flex: 0 0 auto;
+    height: 56px;
+    padding: 0;
+    margin: 0;
+    transform: none;
+
+    @include mq-site-header-tall {
+      height: 88px;
+    }
+
+    .site-logo {
+      height: 44px;
+      transform: none;
+
+      @include mq-site-header-tall {
+        height: 72px;
+      }
+    }
+  }
+
+  // поиск на узких экранах прятал #topnav — в колонке места хватает
+  body.clinput #top #topnav,
+  #topnav {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  #topnav {
+    ---nav-section: 38px;
+
+    @include mq-site-header-tall {
+      ---nav-section: 48px;
+    }
+
+    section {
+      > a {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        padding: 0 0.8rem;
+        line-height: 1.2;
+        color: $c-font;
+        font-size: 15px;
+        font-weight: 600;
+        text-transform: none;
+        white-space: nowrap;
+        border-inline-start-width: 3px;
+
+        &::before {
+          flex: 0 0 1.6rem;
+          font-family: lichess;
+          font-size: 1.5rem;
+          font-weight: normal;
+          line-height: 1;
+          text-align: center;
+          color: $c-font-dim;
+          speak: none;
+        }
+
+        &:hover::before {
+          color: $c-primary;
+        }
+      }
+
+      // Порядок разделов задан в TopNav.scala; у ботов нет «Задач».
+      &:nth-child(1) > a::before {
+        content: $licon-Swords;
+      }
+
+      &:nth-child(2) > a::before {
+        content: $licon-ArcheryTarget;
+      }
+
+      &:nth-child(3) > a::before {
+        content: $licon-GraduateCap;
+      }
+
+      &:nth-child(4) > a::before {
+        content: $licon-AnalogTv;
+      }
+
+      &:nth-child(5) > a::before {
+        content: $licon-Group;
+      }
+
+      &:nth-child(6) > a::before {
+        content: $licon-Tools;
+      }
+    }
+
+    // подменю — панель справа от колонки, верхним краем на уровне раздела
+    div {
+      @include inline-start(100%);
+
+      top: 0;
+      min-width: 13rem;
+
+      a {
+        padding: 0.65rem 1rem;
+      }
+    }
+
+    // открытие с клавиатуры: фокус на разделе или внутри его подменю
+    section:has(:focus-visible) {
+      > a {
+        background: $c-bg-header-dropdown;
+        color: $c-header-dropdown;
+        border-color: $c-primary;
+      }
+
+      div {
+        visibility: visible;
+        max-height: none;
+      }
+    }
+
+    &.hover section:hover,
+    section:active,
+    section.active,
+    section:has(:focus-visible) {
+      > a::before {
+        color: $c-primary;
+      }
+    }
+  }
+}

@@ -1,11 +1,11 @@
 package lila.web
 
 // Цвета площадки «Логик», которые админ задаёт на /dev/logic-colors.
-// Пустая строка в настройке = цвет из темы (голубой как у kalugalogic.ru).
+// Пустая строка в настройке = цвет из темы (тёплый фон и зелёные кнопки).
 object LogicColors:
 
-  val defaultBg = "#cfe2f0"
-  val defaultPrimary = "#1b78d0"
+  val defaultBg = "#f1f0ec"
+  val defaultPrimary = "#82b74e"
 
   private val hexRe = "^#[0-9a-f]{6}$".r
 
