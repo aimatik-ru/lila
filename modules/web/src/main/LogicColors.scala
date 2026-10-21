@@ -24,13 +24,22 @@ object LogicColors:
         else (r - g) / d + 4
       ((math.round(h * 60).toInt % 360) + 360) % 360
 
+  def lightness(hex: String): Double =
+    def ch(i: Int) = Integer.parseInt(hex.substring(i, i + 2), 16) / 255d
+    val (r, g, b) = (ch(1), ch(3), ch(5))
+    (r.max(g).max(b) + r.min(g).min(b)) / 2
+
   // Фон задаёт оттенок всей гаммы (---site-hue) и точный цвет страницы в светлой теме.
+  // Тёмный цвет кнопок (чёрный, тёмно-синий) на тёмной теме не виден — там остаётся цвет темы.
   def css(bg: String, primary: String): Option[String] =
     val parts = List(
       clean(bg).map: c =>
         s":root{---site-hue:${hue(c)}deg}" +
           s"html.light{--c-bg-page:$c;--c-body-gradient:hsl(from $c h s calc(l - 6))}",
       clean(primary).map: c =>
-        s"html.light{--c-primary:$c}:root:not(.light){--c-primary:hsl(from $c h s calc(l + 10))}"
+        val dark =
+          if lightness(c) >= 0.3 then s":root:not(.light){--c-primary:hsl(from $c h s calc(l + 10))}"
+          else ""
+        s"html.light{--c-primary:$c}$dark"
     ).flatten
     Option.when(parts.nonEmpty)(parts.mkString)
