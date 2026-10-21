@@ -136,9 +136,7 @@ final class ReportUi(helpers: Helpers)(menu: Context ?=> Frag):
         )(
           if reason == Cheat || reason == Boost then trans.report.reportCheatBoostHelp()
           else if reason == Username then trans.report.reportUsernameHelp()
-          else
-            "Расскажите как можно подробнее, приложите ссылки на партии, записи и сообщения."
-          ,
+          else "Расскажите как можно подробнее, приложите ссылки на партии, записи и сообщения.",
           " ",
           trans.report.processReportFasterInEnglish(),
           " ",

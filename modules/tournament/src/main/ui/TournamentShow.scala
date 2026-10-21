@@ -82,11 +82,10 @@ final class TournamentShow(helpers: Helpers, gathering: GatheringUi)(
       .graph(
         title = s"${tour.name()}: ${tour.perfType.trans} ${tour.clock.show} #${tour.id}",
         url = routeUrl(routes.Tournament.show(tour.id)),
-        description =
-          s"Турнир ${tour.name()}, ${showDate(tour.startsAt)}. Игроков: ${tour.nbPlayers}. " +
-            s"Партии ${tour.clock.show}, $ratedTxt, турнир длится ${tour.durationString}. " +
-            tour.winnerId.fold("Победитель ещё не определён."): winnerId =>
-              s"Победитель — ${titleNameOrId(winnerId)}!"
+        description = s"Турнир ${tour.name()}, ${showDate(tour.startsAt)}. Игроков: ${tour.nbPlayers}. " +
+          s"Партии ${tour.clock.show}, $ratedTxt, турнир длится ${tour.durationString}. " +
+          tour.winnerId.fold("Победитель ещё не определён."): winnerId =>
+            s"Победитель — ${titleNameOrId(winnerId)}!"
       )
 
   object side:

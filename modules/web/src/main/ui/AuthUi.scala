@@ -174,7 +174,7 @@ final class AuthUi(helpers: Helpers):
               div(cls := "text-wrapper"):
                 if invite.isDefined then form3.input(f, typ = "email")(required, readonly)
                 else frag(form3.input(f, typ = "email")(required), clearFieldButton)
-              ,
+            ,
             input(id := "signup-fp-input", name := "fp", tpe := "hidden"),
             simple.not.option:
               div(cls := "form-group text", dataIcon := Icon.InfoCircle)(

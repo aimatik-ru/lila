@@ -223,8 +223,7 @@ final class ClasLogic(
     if synced == clas then fuccess(clas)
     else
       newTeacher.foreach(clasApi.isTeacher.add)
-      colls.clas
-        .update
+      colls.clas.update
         .one(
           bid(clas.id),
           set("name" -> synced.name, "teachers" -> synced.teachers.toList) ++ unset("archived")
@@ -290,11 +289,13 @@ object ClasLogic:
   private val notesMark = "———"
 
   private[clas] def mergeNotes(info: Option[String], current: String): String =
-    info.filter(_.trim.nonEmpty).fold(current): i =>
-      val teacher = current.indexOf(notesMark) match
-        case -1 => current.trim
-        case k => current.drop(k + notesMark.length).trim
-      s"${i.trim.take(5000)}\n$notesMark\n$teacher".trim
+    info
+      .filter(_.trim.nonEmpty)
+      .fold(current): i =>
+        val teacher = current.indexOf(notesMark) match
+          case -1 => current.trim
+          case k => current.drop(k + notesMark.length).trim
+        s"${i.trim.take(5000)}\n$notesMark\n$teacher".trim
 
   private val noGroup = Group(0, "Без группы", none)
 

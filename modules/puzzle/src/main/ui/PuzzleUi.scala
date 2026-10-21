@@ -57,7 +57,8 @@ final class PuzzleUi(helpers: Helpers, val bits: PuzzleBits)(
             if isStreak then "Серия задач"
             else
               val toPlay = puzzle.color.fold(trans.site.whitePlays.txt(), trans.site.blackPlays.txt())
-              s"Шахматная задача #${puzzle.id} — $toPlay",
+              s"Шахматная задача #${puzzle.id} — $toPlay"
+          ,
           url = routeUrl(routes.Puzzle.show(puzzle.id.value)),
           description =
             if isStreak then trans.puzzle.streakDescription.txt()

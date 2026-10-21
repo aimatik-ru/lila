@@ -151,8 +151,7 @@ final class SimulHome(helpers: Helpers, ui: SimulUi):
       .css("simul.user.list")
       .js(infiniteScrollEsmInit):
         main(cls := "page-small box simul-list")(
-          if pager.nbResults == 0 then
-            div(cls := "box__top")(h1(userLink(user), " пока не проводил сеансов"))
+          if pager.nbResults == 0 then div(cls := "box__top")(h1(userLink(user), " пока не проводил сеансов"))
           else
             table(cls := "slist slist-pad")(
               thead(
