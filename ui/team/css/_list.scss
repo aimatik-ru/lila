@@ -67,10 +67,6 @@
       display: block;
       width: auto;
       padding-top: 0;
-
-      p {
-        text-align: start;
-      }
     }
   }
 
@@ -93,6 +89,10 @@
       margin-bottom: 0;
       text-align: right;
       font-variant-numeric: tabular-nums;
+
+      @media (max-width: $x-small) {
+        text-align: start;
+      }
     }
   }
 
