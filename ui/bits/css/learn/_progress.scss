@@ -4,7 +4,7 @@
   position: relative;
   height: 30px;
   color: $c-over;
-  background: #1a7edb;
+  background: color-mix(in srgb, #{$c-primary} 80%, #000);
   box-shadow: inset 0 1px 1px rgb(0 0 0 / 0.1);
   overflow: hidden;
 }
@@ -13,7 +13,7 @@
   @extend %box-radius-right;
 
   height: 100%;
-  background: #1566b2;
+  background: color-mix(in srgb, #{$c-primary} 62%, #000);
   background-image: url('../images/grain.png');
   transform: translateX(-100px);
   animation:

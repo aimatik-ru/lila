@@ -9,7 +9,7 @@ html.light {
   --c-bg-opaque: hsl(0 0% 100%);
   --c-body-gradient: hsl(var(---site-hue) 10% 91%);
   --c-font: hsl(var(---site-hue) 5% 25%);
-  --c-font-dim: hsl(0 0% 47%);
+  --c-font-dim: hsl(0 0% 40%); // 4.5:1 и на бежевом фоне из админки (#f4ecdc)
   --c-primary: hsl(90 42% 51%); // #81b64c, как в тёмной
   --c-link: color-mix(in oklab, var(--c-clearer) 28%, var(--c-primary)); // темнее для текста на белом
   --c-brag: hsl(37 74% 48%);

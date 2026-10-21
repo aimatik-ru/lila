@@ -44,7 +44,7 @@ $sidenav-width: 168px;
     ---sidenav-bg: color-mix(in oklab, #{$c-bg-opaque} 88%, #{$c-dimmer});
 
     @include if-light {
-      ---sidenav-bg: #{$c-bg-low};
+      ---sidenav-bg: color-mix(in oklab, #{$c-bg-page} 94%, #000); // в тон фону, в т. ч. админскому
     }
 
     position: fixed;

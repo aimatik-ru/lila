@@ -9,7 +9,8 @@
   --btn-lip: rgb(0 0 0 / 0.35);
 
   font-weight: bold;
-  background: $c-primary;
+  // primary темнее на 20%: белая подпись на #82b74e даёт 2.4:1, так — 3.6:1
+  background: color-mix(in srgb, #{$c-primary} 80%, #000);
   text-transform: none;
   padding: 0.7em 1em calc(0.7em + 0.25rem);
   border: none;
