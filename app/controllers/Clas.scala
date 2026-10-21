@@ -10,6 +10,7 @@ import scalalib.model.Days
 import lila.app.{ *, given }
 import lila.clas.ClasForm.ClasData
 import lila.clas.{ ClasBulk, ClasBulkForm, Student }
+import lila.common.Json.given
 import lila.core.id.{ ClasId, ClasInviteId }
 import lila.core.security.ClearPassword
 
