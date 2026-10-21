@@ -13,7 +13,7 @@ site.load.then(() => {
   $('.flatpickr').each(function (this: HTMLInputElement) {
     flatpickr(this, {
       minDate: 'today',
-      maxDate: new Date(Date.now() + 1000 * 3600 * 24 * 31 * 6),
+      maxDate: new Date(Date.now() + 1000 * 3600 * 24 * 366 * 2),
       dateFormat: 'Z',
       altInput: true,
       altFormat: 'Y-m-d h:i K',
