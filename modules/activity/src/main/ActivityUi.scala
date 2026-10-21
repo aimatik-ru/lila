@@ -121,7 +121,7 @@ final class ActivityUi(helpers: Helpers)(
       iconTag(Icon.ArrowThruApple),
       div(
         trans.storm.playedNbRunsOfPuzzleStorm
-          .plural(s.runs, s.runs.localize, a(href := routes.Puzzle.streak)("Puzzle Streak"))
+          .plural(s.runs, s.runs.localize, a(href := routes.Puzzle.streak)("Серия задач"))
       ),
       scoreTag(winTag(trans.storm.highscoreX(strong(s.score))))
     )
