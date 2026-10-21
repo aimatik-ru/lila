@@ -4,9 +4,12 @@ import com.roundeights.hasher.Algo
 import play.api.i18n.Lang
 import play.api.libs.json.*
 import scalalib.actor.AsyncActorSequencers
+import scalalib.data.LazyFu
 
+import lila.common.Bus
 import lila.core.config.Secret
 import lila.core.id.ClasId
+import lila.core.misc.clas.{ ClasTeamConfig, ClasTeamUpdate }
 import lila.core.user.{ FlagCode, Profile }
 import lila.db.dsl.{ *, given }
 
@@ -21,6 +24,11 @@ import lila.db.dsl.{ *, given }
  * Ник собирает сайт (две буквы имени + две фамилии + месяц и год рождения: ilef1085).
  * ФИО и данные с сайта (дата рождения, разряд, ФШР) лежат в карточке ученика в классе —
  * её видят только тренеры; в открытый профиль ребёнка идут только флаг, город и рейтинг ФШР.
+ *
+ * По разряду с сайта ученик попадает в одну из закрытых команд (Tier): «До 2 юн.» или
+ * «1 юн. и выше». Команды ведёт TeamClasSync, как команды классов: состав целиком
+ * пересобирается из clas_logic_student, тренеры классов «Логика» — руководители команды
+ * и могут делать турниры «только для команды».
  */
 final class ClasLogic(
     secret: Option[Secret],
@@ -81,6 +89,7 @@ final class ClasLogic(
           user <- userOf(p, clases)
           _ <- user.so(u => clases.sequentiallyVoid(ensureStudent(u, p, _)))
           _ <- user.so(syncProfile(_, p))
+          _ <- user.so(_ => syncTier(p))
         yield user
 
   private def userOf(p: Payload, clases: List[Clas])(using Me): Fu[Option[User]] =
@@ -118,6 +127,28 @@ final class ClasLogic(
       rcfRating = p.rcf.orElse(prof.rcfRating)
     )
     (next != prof).so(userRepo.setProfile(user.id, next))
+
+  /* Разряд поменялся (или пропал) — пересобрать обе команды. */
+  private def syncTier(p: Payload)(using me: Me): Funit =
+    val tier = p.tier.flatMap(Tier.byKey)
+    colls.logicStudent
+      .primitiveOne[String](bdoc("_id" -> p.sid), "tier")
+      .flatMap: prev =>
+        (prev != tier.map(_.key)).so:
+          colls.logicStudent.update
+            .one(bdoc("_id" -> p.sid), tier.fold(unset("tier"))(t => set("tier" -> t.key)))
+            .flatMap(_ => Tier.values.toList.sequentiallyVoid(tierTeamSync))
+
+  private def tierTeamSync(t: Tier)(using me: Me): Funit =
+    for
+      clasIds <- colls.logicGroup.distinctEasy[ClasId, List]("clasId", $empty)
+      teachers <- colls.clas.distinctEasy[UserId, List]("teachers", $inIds(clasIds))
+    yield
+      val leaders = NonEmptyList(me.userId, teachers.filterNot(_ == me.userId).distinct)
+      val students =
+        LazyFu(() => colls.logicStudent.distinctEasy[UserId, List]("userId", bdoc("tier" -> t.key)))
+      val config = ClasTeamConfig(t.teamName, leaders, students)
+      Bus.pub(ClasTeamUpdate(t.clasId, config.some)(using me.some))
 
   private def clasOf(g: Group)(using me: Me): Fu[Clas] =
     for
@@ -197,8 +228,17 @@ object ClasLogic:
       n: String,
       login: Option[String] = None,
       info: Option[String] = None,
-      rcf: Option[Int] = None
+      rcf: Option[Int] = None,
+      tier: Option[String] = None
   )
+
+  // разрядные команды: ключ приходит с сайта (kl_play_rank_tier)
+  enum Tier(val key: String, val teamName: String):
+    case Junior extends Tier("u2", "До 2 юн.")
+    case Senior extends Tier("1j", "1 юн. и выше")
+    def clasId = ClasId(s"logic-$key")
+  object Tier:
+    def byKey(key: String) = values.find(_.key == key)
 
   private val validLogin = lila.user.nameRules.newUsernameRegex
 
