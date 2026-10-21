@@ -1,42 +1,30 @@
 .lobby__spotlights {
-  @extend %box-neat-force;
+  @include lobby-card;
 
   flex: 0 0 auto;
+  overflow: hidden;
 }
 
+// строки событий внутри карточки: плоские, без «металла»; идущие сейчас — с отливом акцента
 .tour-spotlight {
-  @extend %flex-center-nowrap, %page-text-shadow, %nowrap-hidden, %metal;
+  @extend %flex-center-nowrap, %nowrap-hidden;
   @include transition;
 
   flex: 0 0 auto;
-  padding: 0.3em;
-  opacity: 0.8;
+  padding: 0.5em 0.4em;
   color: $c-font;
+  background: $c-bg-box;
 
-  @include if-light {
-    background-image: linear-gradient(
-      to bottom,
-      color-mix(in oklab, $c-primary 20%, $c-bg),
-      rgb(197 216 234)
-    );
-  }
-
-  &.invert,
-  &.event-spotlight,
-  &:hover {
-    text-shadow: none;
-
-    @include if-light {
-      background-image: linear-gradient(
-        to bottom,
-        color-mix(in oklab, $c-primary 25%, $c-bg),
-        color-mix(in oklab, $c-primary 20%, $c-bg-page)
-      );
-    }
+  &.invert {
+    background: color-mix(in oklab, $c-primary 12%, $c-bg-box);
   }
 
   &:hover {
-    opacity: 1;
+    background: color-mix(in oklab, $c-font 7%, $c-bg-box);
+  }
+
+  &.invert:hover {
+    background: color-mix(in oklab, $c-primary 20%, $c-bg-box);
   }
 
   &:focus-visible {
@@ -50,18 +38,8 @@
   }
 
   icon.img::before {
-    color: #fff;
+    color: $c-primary;
     font-size: 42px;
-
-    @include if-light {
-      text-shadow: 1px 1px 2px $c-link;
-    }
-  }
-
-  img.img.icon {
-    @include if-light {
-      filter: drop-shadow(1px 1px 1px $c-link);
-    }
   }
 
   .name {

@@ -2,23 +2,23 @@
 // $c-<color-name>: var(--c-<color-name>);
 
 :root {
-  ---site-hue: 205deg; // голубой как у kalugalogic.ru (#cfe2f0)
+  ---site-hue: 36deg; // тёплый угольный, гамма в духе chess.com (#312e2b / #262421)
   --c-bg: hsl(var(---site-hue) 7% 14%);
   --c-bg-box: var(--c-bg);
   --c-bg-high: var(--c-bg);
   --c-page-input: var(--c-bg);
   --c-bg-mid: hsl(var(---site-hue) 7% 16%);
-  --c-bg-low: hsl(var(---site-hue) 7% 22%);
+  --c-bg-low: hsl(var(---site-hue) 5% 22%);
   --c-bg-popup: var(--c-bg-low);
-  --c-bg-page: hsl(var(---site-hue) 10% 8%);
+  --c-bg-page: hsl(var(---site-hue) 6% 18%);
   --c-bg-zebra: hsl(var(---site-hue) 5% 19%);
   --c-bg-zebra2: hsl(var(---site-hue) 5% 24%);
   --c-bg-header-dropdown: var(--c-bg-popup);
   --c-bg-input: hsl(from var(--c-bg-page) h s 12% / alpha);
   --c-bg-variation: hsl(var(---site-hue) 5% 15%);
   --c-bg-opaque: hsl(var(---site-hue) 7% 14%);
-  --c-body-gradient: hsl(var(---site-hue) 12% 16%);
-  --c-font: hsl(0 0% 73%);
+  --c-body-gradient: hsl(var(---site-hue) 6% 16%);
+  --c-font: hsl(var(---site-hue) 4% 88%);
   --c-header-dropdown: var(--c-font);
   --c-shade: hsl(0 0% 30%);
   --c-dark: #333;
@@ -27,14 +27,14 @@
   --c-clas: rgb(88 28 135);
   --c-future: hsl(274 48% 60%);
   --c-page-mask: hsl(0 0% 0% / 0.6);
-  --c-metal-top: hsl(var(---site-hue) 7% 22%);
-  --c-metal-bottom: hsl(var(---site-hue) 5% 19%);
-  --c-metal-top-hover: hsl(var(---site-hue) 7% 25%);
-  --c-metal-bottom-hover: hsl(var(---site-hue) 5% 22%);
-  --c-font-dim: hsl(0 0% 58%);
-  --c-font-dimmer: hsl(from var(--c-font) h s 42% / alpha);
-  --c-font-clear: hsl(from var(--c-font) h s 80% / alpha);
-  --c-font-clearer: hsl(from var(--c-font) h s 89% / alpha);
+  --c-metal-top: hsl(var(---site-hue) 5% 24%);
+  --c-metal-bottom: hsl(var(---site-hue) 5% 22%);
+  --c-metal-top-hover: hsl(var(---site-hue) 4% 29%);
+  --c-metal-bottom-hover: hsl(var(---site-hue) 4% 27%);
+  --c-font-dim: hsl(var(---site-hue) 1% 59%);
+  --c-font-dimmer: hsl(from var(--c-font) h s 45% / alpha);
+  --c-font-clear: hsl(from var(--c-font) h s 93% / alpha);
+  --c-font-clearer: hsl(from var(--c-font) h s 97% / alpha);
   --c-font-page: var(--c-font-dim);
   --c-font-shadow: hsl(0 0% 17% / 0.66);
   --c-primary-dim: color-mix(in oklab, var(--c-dimmer) 15%, var(--c-primary));
@@ -42,11 +42,13 @@
   --c-chat-host-bg: rgb(78 122 29 / 0.4);
   --c-chat-mention-bg: rgb(59 92 22 / 0.4);
   --c-fancy: hsl(294 62% 48%);
-  --c-border: hsl(0 0% 25%);
-  --c-border-page: hsl(0 0% 22%);
+  --c-border: hsl(var(---site-hue) 4% 25%);
+  --c-border-page: hsl(var(---site-hue) 4% 24%);
   --c-border-tour: color-mix(in oklab, var(--c-border-page) 50%, var(--c-bg-page));
   --c-border-light: hsl(0 0% 40%);
-  --c-primary: hsl(209 79% 56%);
+  --c-primary: hsl(90 42% 51%); // #81b64c
+  --c-primary-hover: hsl(from var(--c-primary) calc(h - 6) calc(s + 13) calc(l + 9)); // #a3d160
+  --c-primary-shadow: hsl(from var(--c-primary) calc(h + 20) calc(s - 10) calc(l - 16)); // #45753c
   --c-primary-clear: color-mix(in oklab, var(--c-clearer) 20%, var(--c-primary));
   --c-secondary: hsl(88 62% 37%);
   --c-secondary-dim: color-mix(in oklab, var(--c-dimmer) 20%, var(--c-secondary));
@@ -55,7 +57,7 @@
   --c-link-dim: var(--c-primary-dim);
   --c-link-clear: var(--c-primary-clear);
   --c-over: white;
-  --c-brag: hsl(37deg 74% 43%);
+  --c-brag: hsl(37 74% 43%);
   --c-brag-hover: hsl(from var(--c-brag) h 100 70);
   --c-contours: color-mix(in oklab, var(--c-brag) 80%, var(--c-shade));
   --c-accent: hsl(22 100% 42%);
@@ -73,7 +75,7 @@
   --c-live: var(--c-bad);
   --c-dasher-light: color-mix(in oklab, var(--c-secondary) 40%, var(--c-bg-low));
   --c-racer-boost: hsl(from var(--c-brag) h s 50% / 0.7);
-  --c-marathon: hsl(from var(--c-primary) calc(h - 190) calc(s - 70%) l);
+  --c-marathon: hsl(19 9% 56%); // было производным от голубого primary
   --c-tutor-bg: hsl(from color-mix(in oklab, var(--c-secondary) 80%, var(--c-bg)) h calc(s - 10) l);
   --c-inaccuracy: hsl(202 78% 62%);
   --c-mistake: hsl(41 100% 45%);

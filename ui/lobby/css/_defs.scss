@@ -28,3 +28,13 @@
     max-height: calc(100vh - #{$site-header-outer-height} - #{$block-gap});
   }
 }
+
+// карточки главной в духе chess.com: панель без рамки, скругление 8px
+$lobby-radius: 8px;
+
+@mixin lobby-card {
+  @include backdrop-blur-if-transparent;
+
+  background: $c-bg-box;
+  border-radius: $lobby-radius;
+}

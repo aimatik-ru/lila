@@ -1,12 +1,16 @@
 .lobby {
+  // карточка блока главной: панель без рамки и «металла», жирный заголовок
   &__box {
-    @extend %flex-column, %box-neat-force;
+    @extend %flex-column;
+    @include lobby-card;
+
+    overflow: hidden;
 
     &__top {
-      @extend %metal, %flex-between;
+      @extend %flex-between;
 
       flex: 0 0 auto;
-      padding: 0.3em 0.5em;
+      padding: 0.6em 0.8em 0.4em;
 
       .more {
         color: $c-font-dim;
@@ -19,10 +23,14 @@
       .title {
         @extend %base-font;
 
-        font-size: 1em;
+        font-size: 1.15em;
         font-weight: bold;
-        color: $c-font-dim;
+        color: $c-font-clear;
         padding: 0.3em;
+
+        &::before {
+          color: $c-primary;
+        }
       }
     }
 
@@ -46,7 +54,6 @@
       @extend %nowrap-ellipsis;
 
       padding: 0.5em 0.4em;
-      border-bottom: $border;
       max-width: 21ch;
 
       @media (max-width: at-most($x-small)) {
@@ -65,17 +72,9 @@
       }
     }
 
-    tr:last-child td {
-      border-bottom: none;
-    }
-
     tr:nth-child(even) {
       background: $c-bg-zebra;
     }
-  }
-
-  &__blog .lobby__box__top {
-    border-bottom: $border;
   }
 
   .progress-td {

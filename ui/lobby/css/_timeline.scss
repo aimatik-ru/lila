@@ -1,10 +1,15 @@
 .lobby__timeline {
-  @extend %page-text;
+  @include lobby-card;
 
   flex: 1 1 auto;
-  margin-inline-start: $block-gap;
+  min-height: 0;
+  padding: 0.8em 1em 0.2em;
 
   @include hoverflow;
+
+  &:not(:has(.entry)) {
+    display: none;
+  }
 
   .entry {
     @extend %roboto, %break-word;
@@ -26,12 +31,12 @@
       display: block;
       width: 100%;
       height: 1px;
-      background: linear-gradient(to start, $c-border 20%, $c-bg-page);
+      background: color-mix(in oklab, $c-border 60%, transparent);
       margin: 0.7em 0;
+    }
 
-      @include if-rtl {
-        background: linear-gradient(to end, $c-border 20%, $c-bg-page);
-      }
+    &:last-of-type::after {
+      display: none;
     }
 
     .line:not(.patron) {

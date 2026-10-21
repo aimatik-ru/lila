@@ -93,8 +93,9 @@ export default function table(ctrl: LobbyController) {
   ]);
 
   function makeLobbyButton({ gameType, label, disabled, title }: ButtonInfo) {
+    const look = gameType === 'hook' ? '' : '.button-metal'; // first button is the primary one
     return hl(
-      `button.button.button-metal.lobby__start__button.lobby__start__button--${gameType}`,
+      `button.button${look}.lobby__start__button.lobby__start__button--${gameType}`,
       {
         class: { active: ctrl.setupCtrl.gameType === gameType, disabled: !!disabled },
         attrs: { type: 'button', title: title ?? '', 'aria-disabled': disabled ? 'true' : 'false' },

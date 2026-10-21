@@ -145,3 +145,6 @@ body.zen {
 html.transp body[data-board3d] #top::before {
   display: none;
 }
+
+// после правил #top: боковое меню переопределяет их на широких экранах
+@import 'sidenav';

@@ -8,7 +8,7 @@
   grid-area: main;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  grid-template-areas: 'table' 'app' 'side' 'puzzle' 'tours' 'tv' 'timeline' 'about';
+  grid-template-areas: 'table' 'app' 'side' 'tours' 'puzzle' 'tv' 'timeline' 'about';
   gap: $block-gap;
 
   &__tournaments-simuls {

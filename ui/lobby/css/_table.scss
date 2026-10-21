@@ -9,9 +9,9 @@
   &__start {
     @extend %flex-column;
 
-    flex: 1 1 auto;
+    flex: 0 0 auto;
     justify-content: stretch;
-    gap: 9px; // grid gap in app/_pool.scss
+    gap: 0.75rem;
 
     &__button {
       display: flex;
@@ -55,13 +55,52 @@
           cursor: default;
         }
 
-        &:hover:not(.disabled) {
+        &.button-metal:hover:not(.disabled) {
           color: $c-font-clear !important;
 
           &::before {
             color: $c-accent;
           }
         }
+      }
+    }
+  }
+
+  // крупные кнопки «играть» на главной, как у chess.com:
+  // первая — основная (.button), остальные — вторичные (.button-metal)
+  &__start > &__start__button {
+    @extend %flex-center-nowrap;
+
+    justify-content: flex-start;
+    gap: 1rem;
+    min-height: 64px;
+    height: auto;
+    padding: 0.6rem 1.2rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1.15;
+    text-align: start;
+    white-space: normal;
+
+    @include mq-at-least-col3 {
+      min-height: 72px;
+      font-size: 1.3rem;
+    }
+
+    &::before {
+      flex: 0 0 2.5rem;
+      font-size: 2.25rem;
+      text-align: center;
+      color: $c-font-dim;
+    }
+
+    &:not(.button-metal)::before {
+      color: $c-over;
+    }
+
+    @media (hover: hover) {
+      &.button-metal:hover:not(.disabled)::before {
+        color: $c-primary;
       }
     }
   }
@@ -86,10 +125,6 @@
   }
 
   .lobby__tournaments-simuls {
-    .lobby__box__top {
-      border-bottom: $border;
-    }
-
     .timeago {
       @media (max-width: at-most($x-small)) {
         display: none;

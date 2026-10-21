@@ -92,7 +92,7 @@ object home:
           ,
           div(cls := "lobby__table")(
             div(cls := "lobby__start")(
-              button(cls := "button button-metal lobby__start__button lobby__start__button--hook")(
+              button(cls := "button lobby__start__button lobby__start__button--hook")(
                 trans.site.createLobbyGame()
               ),
               button(cls := "button button-metal lobby__start__button lobby__start__button--friend")(

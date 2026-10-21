@@ -8,9 +8,10 @@ $col3-uniboard-side: minmax(#{$col3-uniboard-side-min}, 350px);
 $col3-uniboard-table: minmax(#{$col3-uniboard-table-min}, #{$col3-uniboard-table-max});
 $col3-uniboard-controls: 3rem;
 $col3-min-bottom-margin: 1rem;
+// ---sidenav-w: ширина левого бокового меню (header/_sidenav.scss), иначе 0
 $col3-uniboard-max-width: calc(
-  100vw - #{$col3-uniboard-side-min} - #{$block-gap} - #{$col3-uniboard-table-min} - 2 *
-    var(---main-margin, 0px) - #{$scrollbar-width}
+  100vw - var(---sidenav-w, 0px) - #{$col3-uniboard-side-min} - #{$block-gap} - #{$col3-uniboard-table-min} -
+    2 * var(---main-margin, 0px) - #{$scrollbar-width}
 );
 $col3-uniboard-max-height: calc(100vh - #{$site-header-outer-height} - #{$col3-min-bottom-margin});
 $col3-uniboard-max-size: min(#{$col3-uniboard-max-width}, #{$col3-uniboard-max-height});
@@ -33,7 +34,8 @@ $col2-uniboard-default-width: $col3-uniboard-default-width;
 $col2-uniboard-table: $col3-uniboard-table;
 $col2-uniboard-controls: $col3-uniboard-controls;
 $col2-uniboard-max-width: calc(
-  100vw - #{$block-gap} - #{$col3-uniboard-table-min} - 2 * var(---main-margin, 0px) - #{$scrollbar-width}
+  100vw - var(---sidenav-w, 0px) - #{$block-gap} - #{$col3-uniboard-table-min} - 2 * var(---main-margin, 0px) -
+    #{$scrollbar-width}
 );
 $col2-uniboard-max-height: $col3-uniboard-max-height;
 $col2-uniboard-max-size: min(#{$col2-uniboard-max-width}, #{$col2-uniboard-max-height});

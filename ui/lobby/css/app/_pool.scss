@@ -2,13 +2,17 @@
   @extend %roboto;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-template-rows: repeat(4, 1fr);
-  gap: 9px;
-  padding-top: 9px;
-  background-color: transparent !important;
+  gap: 0.6rem;
+  padding: 0.6rem;
   box-shadow: none;
   overflow: visible !important; // for button shadows
+
+  // плитки лежат прямо на панели вкладок, без водяного знака
+  &.lobby__app__content {
+    background-image: none;
+  }
 
   @include fluid-size('font-size', 14px, 25px);
 
@@ -26,9 +30,16 @@
 
   .clock {
     display: block;
-    font-size: 1.5em;
-    line-height: 1.6em;
-    letter-spacing: 0.1em;
+    font-size: 1.6em;
+    font-weight: bold;
+    line-height: 1.4em;
+    letter-spacing: 0.04em;
+    color: $c-font-clear;
+  }
+
+  .perf {
+    font-size: 0.8em;
+    color: $c-font-dim;
   }
 
   @keyframes range-sweep {
@@ -52,29 +63,36 @@
   }
 }
 
+// плитка быстрой игры: тёмная карточка на панели, при наведении — обводка акцентом
 .lpool {
-  @extend %flex-column, %box-radius, %break-word;
+  @extend %flex-column, %break-word;
   @include transition;
   @include backdrop-blur-if-transparent;
+
+  ---lpool-bg: color-mix(in oklab, #{$c-font} 7%, #{$c-bg-box});
 
   justify-content: center;
   align-items: center;
   cursor: pointer;
   color: $c-font-dim;
-  background: $c-pool-button;
+  background: var(---lpool-bg);
+  border-radius: $lobby-radius;
+  box-shadow: inset 0 0 0 2px transparent;
 
-  @include if-light {
-    background: rgb(from $c-bg r g b / calc(alpha * 0.5));
-  }
-
-  &:hover {
+  &:hover,
+  &:focus-visible {
     color: $c-font;
-    background: $c-accent-glass !important;
+    background: color-mix(in oklab, $c-primary 14%, var(---lpool-bg));
+    box-shadow: inset 0 0 0 2px $c-primary;
     opacity: 1;
+    outline: none;
   }
 
   &.active {
-    @extend %popup-shadow;
+    box-shadow:
+      inset 0 0 0 2px $c-primary,
+      0 4px 14px rgb(0 0 0 / 0.3);
+    background: color-mix(in oklab, $c-primary 22%, var(---lpool-bg));
 
     .perf {
       display: none;

@@ -3,19 +3,33 @@
 @import 'hook-filters';
 @import 'hook-list';
 
+// вкладки и их содержимое — одна панель, как у chess.com
 .lobby__app {
   @extend %flex-column;
   @include lobby-app-size;
   @include prevent-select;
+  @include lobby-card;
 
   .lobby-nope & {
     display: none;
   }
 
+  > .tabs-horiz {
+    flex: 0 0 auto;
+    border-bottom: 1px solid color-mix(in oklab, $c-border 60%, transparent);
+
+    button {
+      padding-block: 0.8em;
+      font-weight: bold;
+    }
+  }
+
   &__content {
-    @extend %box-neat;
+    @include backdrop-blur-if-transparent;
 
     $logo-color: '383633';
+
+    border-radius: 0 0 $lobby-radius $lobby-radius;
 
     flex: 1 1 100%;
     position: relative;

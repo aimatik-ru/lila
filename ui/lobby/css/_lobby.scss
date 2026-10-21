@@ -45,10 +45,18 @@ body {
   .entries {
     @include backdrop-blur-if-transparent;
   }
+
+  // в узкой колонке справа список классов прокручивается, а не обрезается
+  .lobby__classes {
+    flex: 0 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+  }
 }
 
 .lobby__nope {
   @include lobby-app-size;
+  @include lobby-card;
 
   text-align: center;
 
@@ -77,9 +85,18 @@ body {
 }
 
 .about-side {
-  @extend %page-text-shadow !optional;
+  @include lobby-card;
 
-  margin-top: $block-gap;
+  padding: 0.8em 1em;
+  color: $c-font-dim;
+}
+
+// ТВ и задача дня — такие же карточки, как остальные блоки
+.lobby__tv:not(:empty),
+.lobby__puzzle:not(:empty) {
+  @include lobby-card;
+
+  padding: 0.6em 0.8em 0.8em;
 }
 
 .lobby__tv .mini-game {
@@ -91,12 +108,18 @@ body {
 }
 
 .lobby__puzzle .text {
-  @extend %page-text-shadow !optional;
-
   color: $c-font-dim;
   display: block;
   text-align: right;
   margin-inline-end: 1ch;
+
+  &:first-child {
+    color: $c-font-clear;
+    font-size: 1.15em;
+    font-weight: bold;
+    text-align: start;
+    margin-bottom: 0.4em;
+  }
 
   @include mq-at-least-col2 {
     min-height: 19px;

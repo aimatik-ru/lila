@@ -3,6 +3,9 @@
 @import '../../../lib/css/component/now-playing';
 @import '../../../lib/css/component/color-icon';
 @import '../../../lib/css/component/glowing';
+// активная вкладка лобби — акцентом темы, как основная кнопка
+$c-tabs-active: $c-primary;
+$c-tabs-hover: hsl(from $c-primary h s l / 0.5);
 @import '../../../lib/css/component/tabs-horiz';
 @import '../../../lib/css/component/markdown';
 @import '../../../lib/css/component/ublog-card';

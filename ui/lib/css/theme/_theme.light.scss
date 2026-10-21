@@ -1,17 +1,18 @@
 html.light {
   --c-bg: hsl(0 0% 100%);
-  --c-bg-page: hsl(var(---site-hue) 52% 88%);
-  --c-bg-low: hsl(0 0% 89%);
+  --c-bg-page: hsl(var(---site-hue) 12% 93.5%); // #f1f0ec
+  --c-bg-low: hsl(var(---site-hue) 6% 89%);
   --c-bg-mid: hsl(var(---site-hue) 7% 97%);
   --c-bg-zebra: hsl(var(---site-hue) 12% 96.5%);
   --c-bg-zebra2: hsl(var(---site-hue) 12% 92%);
   --c-bg-popup: hsl(0 0% 100%);
   --c-bg-opaque: hsl(0 0% 100%);
-  --c-body-gradient: hsl(var(---site-hue) 45% 82%);
-  --c-font: hsl(0 0% 30%);
+  --c-body-gradient: hsl(var(---site-hue) 10% 91%);
+  --c-font: hsl(var(---site-hue) 5% 25%);
   --c-font-dim: hsl(0 0% 47%);
-  --c-primary: hsl(209 77% 46%);
-  --c-brag: hsl(37deg 74% 48%);
+  --c-primary: hsl(90 42% 51%); // #81b64c, как в тёмной
+  --c-link: color-mix(in oklab, var(--c-clearer) 28%, var(--c-primary)); // темнее для текста на белом
+  --c-brag: hsl(37 74% 48%);
   --c-brag-hover: hsl(from var(--c-brag) h 100 30);
   --c-shade: hsl(0 0% 84%);
   --c-inaccuracy: hsl(202 78% 40%);
