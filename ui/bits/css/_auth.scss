@@ -43,14 +43,22 @@
 
     &__logo {
       display: block;
-      width: 64px;
-      height: 64px;
-      background: center no-repeat url('../logo/logik-favicon.svg');
-      background-size: contain;
+      width: 140px;
+      height: auto;
     }
 
-    &__name {
-      font-size: 1.5rem;
+    &__logo--light {
+      @include if-light {
+        display: none;
+      }
+    }
+
+    &__logo--dark {
+      display: none;
+
+      @include if-light {
+        display: block;
+      }
     }
   }
 

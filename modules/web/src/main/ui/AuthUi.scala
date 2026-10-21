@@ -18,8 +18,16 @@ final class AuthUi(helpers: Helpers):
   private def logoOrConnection(using custom: Option[AuthCustomUi]) = custom match
     case None =>
       div(cls := "auth__brand")(
-        span(cls := "auth__brand__logo", aria.hidden := "true"),
-        span(cls := "auth__brand__name")("Логик")
+        img(
+          cls := "auth__brand__logo auth__brand__logo--dark",
+          src := staticAssetUrl("logo/logik-lockup.png"),
+          alt := "Логик"
+        ),
+        img(
+          cls := "auth__brand__logo auth__brand__logo--light",
+          src := staticAssetUrl("logo/logik-lockup-light.png"),
+          alt := "Логик"
+        )
       )
     case Some(c) =>
       frag(customLogo(c), h2(cls := "oauth__connection__to-lichess")("Connect to play.kalugalogic.ru"))
