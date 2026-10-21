@@ -13,7 +13,7 @@ trait GameHelper:
 
   def gameOpening: (Game, Boolean) => Option[_root_.chess.opening.Opening]
 
-  private val speedNamesRu = Map(
+  private val speedNamesRu = Map[chess.Speed, String](
     chess.Speed.UltraBullet -> "Ультрапуля",
     chess.Speed.Bullet -> "Пуля",
     chess.Speed.Blitz -> "Блиц",
