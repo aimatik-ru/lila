@@ -46,7 +46,7 @@ function navButton(
 function scrollToMeButton(ctrl: PaginatedCtrl<unknown>): VNode | undefined {
   return ctrl.data.me && myPage(ctrl) !== ctrl.page
     ? h('button.fbt', {
-        attrs: { 'data-icon': licon.Target, title: 'Scroll to your player' },
+        attrs: { 'data-icon': licon.Target, title: 'Показать моё место' },
         hook: bind('mousedown', ctrl.toggleFocusOnMe, ctrl.redraw),
       })
     : undefined;
@@ -62,23 +62,29 @@ export function renderPager<A>(ctrl: PaginatedCtrl<A>, searchButton: VNode, sear
           ? [searchInput]
           : [
               navButton(
-                'First',
+                'Первая страница',
                 licon.JumpFirst,
                 () => ctrl.userSetPage(1),
                 enabled && ctrl.page > 1,
                 ctrl.redraw,
               ),
-              navButton('Prev', licon.JumpPrev, ctrl.userPrevPage, enabled && ctrl.page > 1, ctrl.redraw),
+              navButton(
+                'Предыдущая страница',
+                licon.JumpPrev,
+                ctrl.userPrevPage,
+                enabled && ctrl.page > 1,
+                ctrl.redraw,
+              ),
               h('span.page', (pag.nbResults ? pag.from + 1 : 0) + '-' + pag.to + ' / ' + pag.nbResults),
               navButton(
-                'Next',
+                'Следующая страница',
                 licon.JumpNext,
                 ctrl.userNextPage,
                 enabled && ctrl.page < pag.nbPages,
                 ctrl.redraw,
               ),
               navButton(
-                'Last',
+                'Последняя страница',
                 licon.JumpLast,
                 ctrl.userLastPage,
                 enabled && ctrl.page < pag.nbPages,
@@ -111,7 +117,7 @@ export function myPage(ctrl: PaginatedCtrl<unknown>): number | undefined {
 export function searchButton(ctrl: PaginatedCtrl<unknown>): VNode {
   return h('button.fbt', {
     class: { active: ctrl.searching },
-    attrs: { 'data-icon': ctrl.searching ? licon.X : licon.Search, title: 'Search tournament players' },
+    attrs: { 'data-icon': ctrl.searching ? licon.X : licon.Search, title: 'Поиск игроков турнира' },
     hook: bind('click', ctrl.toggleSearch, ctrl.redraw),
   });
 }

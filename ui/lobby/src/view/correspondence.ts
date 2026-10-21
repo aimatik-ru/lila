@@ -18,7 +18,9 @@ function renderSeek(ctrl: LobbyController, seek: Seek) {
     },
     [
       td(
-        seek.rating ? span('.ulpt', { 'data-href': profileUrl(seek.username) }, seek.username) : 'Anonymous',
+        seek.rating
+          ? span('.ulpt', { 'data-href': profileUrl(seek.username) }, seek.username)
+          : i18n.site.anonymous,
       ),
       td(seek.rating && ctrl.opts.showRatings ? seek.rating + (seek.provisional ? '?' : '') : ''),
       td(seek.days ? i18n.site.nbDays(seek.days) : '∞'),

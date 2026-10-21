@@ -96,7 +96,7 @@ export class BoardCtrl extends PaneCtrl {
     this.apply(t);
     const field = `theme${this.is3d ? '3d' : ''}`;
     xhrText(`/pref/${field}`, { body: xhrForm({ [field]: t }), method: 'post' }).catch(() =>
-      site.announce({ msg: 'Failed to save theme preference' }),
+      site.announce({ msg: 'Не удалось сохранить тему доски' }),
     );
     this.redraw();
   };
@@ -125,7 +125,7 @@ export class BoardCtrl extends PaneCtrl {
     if (this.is3d === v) return;
     this.data.is3d = v;
     xhrText('/pref/is3d', { body: xhrForm({ is3d: v }), method: 'post' }).catch(() =>
-      site.announce({ msg: 'Failed to save preference' }),
+      site.announce({ msg: 'Не удалось сохранить настройку' }),
     );
 
     if (v) await site.asset.loadCssPath('lib.board-3d');

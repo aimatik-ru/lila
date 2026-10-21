@@ -44,13 +44,13 @@ final class SimulShow(helpers: Helpers, gathering: GatheringUi):
                   div(
                     span(cls := "clock")(sim.clock.config.show),
                     div(cls := "setup")(
-                      sim.variants.map(_.name).mkString(", "),
+                      sim.variants.map(_.variantTrans.txt()).mkString(", "),
                       " • ",
                       trans.site.casual(),
                       (Granter.opt(_.ManageSimul) || userIsHost).option(
                         frag(
                           " • ",
-                          a(href := routes.Simul.edit(sim.id), title := "Edit simul")(iconTag(Icon.Gear))
+                          a(href := routes.Simul.edit(sim.id), title := "Изменить сеанс")(iconTag(Icon.Gear))
                         )
                       )
                     )
@@ -58,15 +58,15 @@ final class SimulShow(helpers: Helpers, gathering: GatheringUi):
                 ),
                 trans.site.extraClockTimeForHost(),
                 " ",
-                pluralize("minute", sim.clock.hostExtraMinutes.value),
+                lila.gathering.RuPlural.minutes(sim.clock.hostExtraMinutes.value),
                 br,
                 sim.clock.hostExtraTimePerPlayerForDisplay.map: time =>
                   frag(
                     trans.site.simulHostExtraTimePerPlayer(),
                     ": ",
                     time match
-                      case Left(minutes) => pluralize("minute", minutes.value)
-                      case Right(seconds) => pluralize("second", seconds.value)
+                      case Left(minutes) => lila.gathering.RuPlural.minutes(minutes.value)
+                      case Right(seconds) => lila.gathering.RuPlural.seconds(seconds.value)
                     ,
                     br
                   ),
@@ -85,7 +85,8 @@ final class SimulShow(helpers: Helpers, gathering: GatheringUi):
                   .orElse(sim.position.map { fen =>
                     frag(
                       br,
-                      "Custom position • ",
+                      trans.site.customPosition(),
+                      " • ",
                       lila.ui.bits.fenAnalysisLink(fen)
                     )
                   })

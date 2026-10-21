@@ -62,17 +62,19 @@ final class LoginToken(
           import Mailer.html.*
           sendEmail(user, email)(
             List(
-              "Enter this code to log in with your Логик account:",
+              "Введите этот код, чтобы войти в учётную запись «Логика»:",
               "",
               code,
               "",
-              "This code expires in 5 minutes. If you didn’t request it, you can safely ignore this email."
+              "Код действует 5 минут. Если вы его не запрашивали, " +
+                "просто не обращайте внимания на это письмо."
             ),
             emailMessage(
-              p("Enter this code to log in with your Логик account:"),
-              loginCode(metaName("Log in code"), code),
+              p("Введите этот код, чтобы войти в учётную запись «Логика»:"),
+              loginCode(metaName("Код для входа"), code),
               p(
-                "This code expires in 5 minutes. If you didn’t request it, you can safely ignore this email."
+                "Код действует 5 минут. Если вы его не запрашивали, " +
+                  "просто не обращайте внимания на это письмо."
               ),
               serviceNote
             )

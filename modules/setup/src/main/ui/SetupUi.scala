@@ -129,8 +129,8 @@ final class SetupUi(helpers: Helpers):
     (s.toString, s.toString, none)
   }
 
-  ("1", "One day", none) :: List(2, 3, 5, 7, 10, 14).map { d =>
-      (d.toString, s"$d days", none)
+  ("1", "1 день", none) :: List(2, 3, 5, 7, 10, 14).map { d =>
+      (d.toString, s"$d ${if d < 5 then "дня" else "дней"}", none)
     }
 
   private def translatedModeChoices(using Translate) =

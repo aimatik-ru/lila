@@ -23,7 +23,7 @@ final class ClasForm(
         "name" -> cleanText(minLength = 3, maxLength = 100),
         "desc" -> cleanText(minLength = 0, maxLength = 2000),
         "teachers" -> nonEmptyText.verifying(
-          "Invalid teacher list",
+          "Неверный список учителей",
           str =>
             val ids = readTeacherIds(str)
             ids.nonEmpty && ids.sizeIs <= 10 && ids.forall: id =>
@@ -65,8 +65,8 @@ final class ClasForm(
     def invite(c: Clas) = Form:
       mapping(
         "username" -> lila.common.Form.username.historicalField
-          .verifying("Unknown username", { blockingFetchUser(_).exists(!_.isBot) })
-          .verifying("This is a teacher", u => !c.teachers.contains(u.id)),
+          .verifying("Неизвестное имя пользователя", { blockingFetchUser(_).exists(!_.isBot) })
+          .verifying("Это учитель", u => !c.teachers.contains(u.id)),
         "realName" -> cleanNonEmptyText.into[RealName]
       )(InviteStudent.apply)(unapply)
 

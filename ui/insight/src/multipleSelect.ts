@@ -572,10 +572,10 @@ export const registerMultipleSelect = () => {
     addTitle: false,
     filterAcceptOnEnter: false,
     hideOptgroupCheckboxes: false,
-    selectAllText: 'Select all',
-    allSelected: 'All selected',
-    countSelected: '# of % selected',
-    noMatchesFound: 'No matches found',
+    selectAllText: 'Выбрать все',
+    allSelected: 'Выбрано всё',
+    countSelected: 'Выбрано # из %',
+    noMatchesFound: 'Ничего не найдено',
     styler() {
       return null;
     },

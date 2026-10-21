@@ -12,11 +12,11 @@ final class RacerUi(helpers: Helpers):
   import trans.storm as s
 
   def home(using Context) =
-    Page("Puzzle Racer")
+    Page("Гонка задач")
       .css("racer.home")
       .hrefLangs(LangPath(routes.Racer.home)):
         main(cls := "page page-small racer-home box box-pad")(
-          h1(cls := "box__top")("Puzzle Racer"),
+          h1(cls := "box__top")("Гонка задач"),
           div(cls := "racer-home__buttons")(
             postForm(cls := "racer-home__lobby", action := routes.Racer.lobby)(
               submitButton(cls := "button button-fat")(iconTag(cls := "car")(1), s.joinPublicRace())
@@ -26,12 +26,12 @@ final class RacerUi(helpers: Helpers):
             )
           ),
           div(cls := "racer-home__about")(
-            a(href := routes.Cms.lonePage(CmsPageKey("racer")))(trans.site.aboutX("Puzzle Racer"))
+            a(href := routes.Cms.lonePage(CmsPageKey("racer")))(trans.site.aboutX("Гонке задач"))
           )
         )
 
   def show(data: JsObject) =
-    Page("Puzzle Racer")
+    Page("Гонка задач")
       .css("racer")
       .i18n(_.storm)
       .js(PageModule("racer", data))

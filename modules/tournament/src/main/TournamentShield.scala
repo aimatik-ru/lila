@@ -131,13 +131,13 @@ object TournamentShield:
     def of(t: Tournament): Option[Category] = list.find(_.matches(t))
 
   def make(name: String)(t: Tournament) = t.copy(
-    name = s"$name Shield",
-    description = s"""This [Shield trophy](/tournament/shields) is unique.
-The winner keeps it for one month,
-then must defend it during the next $name Shield tournament!""".some,
+    name = s"Турнир за щит: $name",
+    description = s"""Этот [трофей-щит](/tournament/shields) существует в единственном экземпляре.
+Победитель хранит его один месяц,
+а затем должен защитить его в следующем турнире за щит ($name)!""".some,
     spotlight = Spotlight(
       iconFont = Icon.Shield.some,
-      headline = s"Battle for the $name Shield",
+      headline = s"Битва за щит: $name",
       homepageHours = 6.some
     ).some
   )

@@ -81,4 +81,8 @@
     <item quantity="many">%s лидеров на клуб</item>
     <item quantity="other">%s лидеров на клуб</item>
   </plurals>
+  <string name="hideMembersDesc" comment="Checkbox label: option to hide the team member list from non-members">Скрывать список участников команды от посторонних.</string>
+  <string name="forumLabel">Форум команды</string>
+  <string name="forumVisibilityHelp">Кто может видеть форум команды на странице команды?&lt;br&gt;Только участники команды могут оставлять сообщения на форуме команды.</string>
+  <string name="forumVisibilityNone">Скрыть форум</string>
 </resources>

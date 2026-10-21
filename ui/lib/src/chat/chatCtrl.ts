@@ -108,7 +108,7 @@ export class ChatCtrl {
     if (!text) return false;
     if (text === 'You too!' && !this.data.lines.some(l => l.u !== this.data.userId)) return false;
     if (text.length > 140) {
-      alert('Max length: 140 chars. ' + text.length + ' chars used.');
+      alert('Не больше 140 символов. Сейчас: ' + text.length + '.');
       return false;
     }
     pubsub.emit('socket.send', 'talk', text);

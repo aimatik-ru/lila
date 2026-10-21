@@ -9,8 +9,8 @@ final class RecapUi(helpers: Helpers):
   import helpers.*
 
   private def title(user: User)(using ctx: Context) =
-    if ctx.is(user) then "Your yearly recap"
-    else s"${user.username} yearly recap"
+    if ctx.is(user) then "Ваши итоги года"
+    else s"Итоги года: ${user.username}"
 
   def home(av: Availability, user: User)(using Context) =
     val data = av match
@@ -25,10 +25,10 @@ final class RecapUi(helpers: Helpers):
           div(id := "recap-swiper", cls := "swiper")
 
   def notAvailable(year: Int) =
-    Page("Recap not available yet"):
+    Page("Итоги года пока недоступны"):
       main(cls := "page-small box box-pad page")(
-        h1(cls := "box__top")(s"Your $year Логик Recap"),
+        h1(cls := "box__top")(s"Ваши итоги $year года на «Логике»"),
         div(
-          p("Your recap will be available at the end of the year. Check back then!")
+          p("Итоги появятся в конце года. Загляните тогда!")
         )
       )

@@ -158,8 +158,8 @@ export function make(send: RoundSocketSend, ctrl: RoundController): RoundSocket 
       domDialog({
         easyClose: 'clickOutside',
         htmlText:
-          '<div><p>Simul complete!</p><br /><br />' +
-          `<a class="button" href="/simul/${simul.id}">Back to ${simul.name} simul</a></div>`,
+          '<div><p>Сеанс завершён!</p><br /><br />' +
+          `<a class="button" href="/simul/${simul.id}">Вернуться к сеансу «${simul.name}»</a></div>`,
       });
     },
   };

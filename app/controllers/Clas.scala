@@ -544,7 +544,8 @@ final class Clas(env: Env, authC: Auth) extends LilaController(env):
                 env.security.emailChange
                   .send(s.user, newUserEmail.email)
                   .inject(Redirect(routes.Clas.studentShow(clas.id, s.user.username)).flashSuccess:
-                    s"A confirmation email was sent to ${email}. ${s.student.realName} must click the link in the email to release the account.")
+                    s"Письмо для подтверждения отправлено на ${email}. ${s.student.realName} " +
+                      "должен перейти по ссылке из письма, чтобы получить учётную запись.")
           )
   }
 

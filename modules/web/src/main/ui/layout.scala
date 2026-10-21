@@ -101,7 +101,7 @@ final class layout(helpers: Helpers, assetHelper: lila.web.ui.AssetFullHelper)(
 
   def botImage = img(
     src := staticAssetUrl("images/icons/bot.webp"),
-    title := "Robot chess",
+    title := "Шахматный робот",
     style := "display:inline;width:34px;height:34px;vertical-align:top;margin-right:5px;vertical-align:text-top"
   )
 
@@ -127,7 +127,8 @@ final class layout(helpers: Helpers, assetHelper: lila.web.ui.AssetFullHelper)(
       }"><input type="hidden" name="redirect" value="${ctx.req.path}"><button id="nvui-button" type="submit">$btnText</button>$tutorialLink</form>"""
 
   val assetsMissingTroubleshooting = raw:
-    """<h2 id="assets-missing"><a href="/page/network-administrators">Your network blocks the Логик assets!</a></h2>"""
+    """<h2 id="assets-missing"><a href="/page/network-administrators">""" +
+      """Ваша сеть блокирует файлы «Логика»!</a></h2>"""
 
   def zenZone(using Translate) = spaceless:
     s"""
@@ -205,7 +206,7 @@ final class layout(helpers: Helpers, assetHelper: lila.web.ui.AssetFullHelper)(
 
   val dailyNewsAtom = link(
     href := routes.Feed.atom,
-    st.title := "Логик Updates Feed",
+    st.title := "Новости «Логика»",
     tpe := "application/atom+xml",
     rel := "alternate"
   )
@@ -323,7 +324,7 @@ final class layout(helpers: Helpers, assetHelper: lila.web.ui.AssetFullHelper)(
             )
           ),
           (!isAppealUser).option(topnav),
-          ctx.blind.option(h2("Navigation"))
+          ctx.blind.option(h2("Навигация"))
         ),
         div(cls := "site-buttons")(
           warnNoAutoplay,

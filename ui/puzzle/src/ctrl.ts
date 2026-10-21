@@ -489,7 +489,7 @@ export default class PuzzleCtrl implements CevalHandler {
     }
     this.redraw();
     if (!next && !this.data.replay) {
-      await alert('No more puzzles available! Try another theme.');
+      await alert('Задачи на эту тему закончились! Выберите другую тему.');
       site.redirect('/training/themes');
     }
   };

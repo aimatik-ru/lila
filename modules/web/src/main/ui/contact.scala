@@ -205,8 +205,8 @@ object contact:
               "security",
               securityVulnerability(),
               p(
-                "Please refer to our ",
-                a(href := "https://github.com/lichess-org/lila/security/policy")("Security policy"),
+                "Читайте нашу ",
+                a(href := "https://github.com/lichess-org/lila/security/policy")("политику безопасности"),
                 "."
               )
             ),
@@ -259,19 +259,20 @@ object contact:
           List(
             Leaf(
               "gdpr",
-              "GDPR erasure",
+              "Удаление данных по GDPR",
               p(
-                "You may request the ",
-                a(href := routes.Account.delete)("complete deletion of your Логик account.")
+                "Вы можете запросить ",
+                a(href := routes.Account.delete)("полное удаление своей учётной записи на «Логике».")
               )
             ),
             Leaf(
               "dmca",
-              "DMCA / Intellectual Property Take Down Notice",
+              "DMCA / уведомление о нарушении авторских прав",
               p(
-                a(href := "/dmca")("Complete this form"),
+                a(href := "/dmca")("Заполните эту форму"),
                 " ",
-                "if you are the original copyright holder, or an agent acting on behalf of the copyright holder, and believe Логик is hosting work(s) you hold the copyright to."
+                "если вы правообладатель или его представитель и считаете, что на «Логике» " +
+                  "размещены материалы, права на которые принадлежат вам."
               )
             ),
             Leaf(
@@ -314,7 +315,7 @@ object contact:
             Leaf(
               "buy",
               buyingLichess(),
-              p("We are not selling, to anyone, for any price. Ever.")
+              p("Мы не продаёмся — никому, ни за какую цену. Никогда.")
             ),
             Leaf(
               "contact-other",

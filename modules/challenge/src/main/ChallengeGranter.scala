@@ -29,8 +29,9 @@ object ChallengeDenied:
         trans.yourXRatingIsTooFarFromY.txt(perf.trans, d.dest.titleUsername)
       case Reason.RatingIsProvisional(perf) => trans.cannotChallengeDueToProvisionalXRating.txt(perf.trans)
       case Reason.FriendsOnly => trans.xOnlyAcceptsChallengesFromFriends.txt(d.dest.titleUsername)
-      case Reason.BotUltraBullet => "Bots cannot play UltraBullet. Choose a slower time control."
-      case Reason.SelfChallenge => "You cannot challenge yourself."
+      case Reason.BotUltraBullet =>
+        "Боты не играют в ультрапуле. Выберите контроль времени помедленнее."
+      case Reason.SelfChallenge => "Нельзя вызвать на партию самого себя."
 
 final class ChallengeGranter(
     prefApi: lila.core.pref.PrefApi,

@@ -24,7 +24,7 @@ final class PuzzleUi(helpers: Helpers, val bits: PuzzleBits)(
       langPath: Option[lila.ui.LangPath] = None
   )(using ctx: Context) =
     val isStreak = data.value.contains("streak")
-    Page(if isStreak then "Puzzle Streak" else trans.site.puzzles.txt())
+    Page(if isStreak then "Серия задач" else trans.site.puzzles.txt())
       .css("puzzle")
       .css(ctx.pref.hasKeyboardMove.option("keyboardMove"))
       .css(ctx.pref.hasVoice.option("voice"))
@@ -54,8 +54,10 @@ final class PuzzleUi(helpers: Helpers, val bits: PuzzleBits)(
             routes.Export.puzzleThumbnail(puzzle.id, ctx.pref.theme.some, ctx.pref.pieceSet.some).url
           ).some,
           title =
-            if isStreak then "Puzzle Streak"
-            else s"Chess tactic #${puzzle.id} - ${puzzle.color.name.capitalize} to play",
+            if isStreak then "Серия задач"
+            else
+              val toPlay = puzzle.color.fold(trans.site.whitePlays.txt(), trans.site.blackPlays.txt())
+              s"Шахматная задача #${puzzle.id} — $toPlay",
           url = routeUrl(routes.Puzzle.show(puzzle.id.value)),
           description =
             if isStreak then trans.puzzle.streakDescription.txt()
@@ -64,7 +66,7 @@ final class PuzzleUi(helpers: Helpers, val bits: PuzzleBits)(
                 trans.puzzle.findTheBestMoveForWhite.txt(),
                 trans.puzzle.findTheBestMoveForBlack.txt()
               )
-              s"Логик tactic trainer: $findMove. Played by ${puzzle.plays} players."
+              s"Тактический тренажёр «Логик»: $findMove. Решали ${puzzle.plays} раз."
         )
       )
       .hrefLangs(langPath)

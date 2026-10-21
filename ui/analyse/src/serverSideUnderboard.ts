@@ -72,7 +72,8 @@ export default function (element: HTMLElement, ctrl: AnalyseCtrl) {
   }
 
   const chartLoader = () =>
-    `<div id="acpl-chart-container-loader"><span>${stockfishName}<br>server analysis</span>${spinnerHtml}</div>`;
+    `<div id="acpl-chart-container-loader"><span>${stockfishName}<br>анализ на сервере</span>` +
+    `${spinnerHtml}</div>`;
 
   function startAdvantageChart() {
     if (advChart || site.blindMode) return;
@@ -193,7 +194,8 @@ export default function (element: HTMLElement, ctrl: AnalyseCtrl) {
         '</pre><br />' +
         iframe +
         '<br /><br />' +
-        `<a class="text" data-icon="${licon.InfoCircle}" href="/developers#embed-game">Read more about embedding games</a></div>`,
+        `<a class="text" data-icon="${licon.InfoCircle}" href="/developers#embed-game">` +
+        'Подробнее о встраивании партий</a></div>',
     });
   });
 

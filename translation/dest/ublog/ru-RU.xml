@@ -67,4 +67,24 @@
   <string name="blogTips">Наши простые советы по написанию отличных записей в блоге</string>
   <string name="discussThisBlogPostInTheForum">Обсудить эту запись в блоге на форуме</string>
   <string name="youBlockedByBlogAuthor">Вы заблокированы автором блога.</string>
+  <string name="communityBlogs">Блоги сообщества</string>
+  <string name="best">Лучшие</string>
+  <string name="all">Все</string>
+  <string name="blogPostsByFriends">Записи в блогах друзей</string>
+  <string name="includesPromotedContent">Содержит рекламный/спонсорский контент или реферальные ссылки</string>
+  <string name="mandatoryForSponsoredContent">Обязательно для спонсорского контента, реферальных ссылок или коммерческой рекламы</string>
+  <string name="recentPosts">Свежие записи</string>
+  <string name="coverImage">Обложка</string>
+  <string name="topicChess">Игры</string>
+  <string name="topicPuzzle">Задачи</string>
+  <string name="topicTactics">Тактика</string>
+  <string name="topicStrategy">Стратегия</string>
+  <string name="topicChessEngine">Движок</string>
+  <string name="topicChessBot">Боты</string>
+  <string name="topicChessPersonalities">Личности</string>
+  <string name="topicOverTheBoard">Офлайн</string>
+  <string name="topicSoftwareDevelopment">Разработка</string>
+  <string name="topicOffTopic">Флуд</string>
+  <string name="topicPosts">Записей: %s</string>
+  <string name="etiquette">Этикет</string>
 </resources>

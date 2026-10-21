@@ -214,7 +214,7 @@ final class SimulApi(
       yield ()
 
   def idToName(id: SimulId): Fu[Option[String]] =
-    repo.coll.primitiveOne[String](bid(id), "name").dmap2(_ + " simul")
+    repo.coll.primitiveOne[String](bid(id), "name").dmap2(name => s"Сеанс $name")
 
   def teamOf(id: SimulId): Fu[Option[TeamId]] =
     repo.coll.primitiveOne[TeamId](bid(id), "team")

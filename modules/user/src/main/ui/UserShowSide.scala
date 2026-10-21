@@ -109,7 +109,7 @@ final class UserShowSide(helpers: Helpers):
       ),
       href := routes.Storm.dashboardOf(user.username),
       span(
-        h3("Puzzle Storm"),
+        h3("Штурм задач"),
         st.rating(
           strong(storm.score),
           storm.nonEmpty.option(
@@ -131,7 +131,7 @@ final class UserShowSide(helpers: Helpers):
       ),
       href := routes.Racer.home,
       span(
-        h3("Puzzle Racer"),
+        h3("Гонка задач"),
         st.rating(
           strong(racer.score),
           racer.nonEmpty.option(
@@ -153,7 +153,7 @@ final class UserShowSide(helpers: Helpers):
       ),
       href := routes.Puzzle.streak,
       span(
-        h3("Puzzle Streak"),
+        h3("Серия задач"),
         st.rating(
           strong(streak.score),
           streak.nonEmpty.option(

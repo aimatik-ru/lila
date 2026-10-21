@@ -103,7 +103,7 @@ export async function showSettingsDialog(ctrl: AnalyseCtrl): Promise<Dialog> {
   if (!isTouchDevice()) window.addEventListener('resize', flexTamer);
   return domDialog({
     class: 'analysis-settings-dialog',
-    htmlText: '<h2>Analysis settings</h2>',
+    htmlText: `<h2>${i18n.preferences.analysisSettings}</h2>`,
     insert: [{ nodes: settingsView(ctrl.settings) }],
     modal: !isTouchDevice(),
     easyClose: 'clickOutside',

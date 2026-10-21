@@ -15,7 +15,7 @@ final class FidePlayerUi(helpers: Helpers, fideUi: FideUi, picfitUrl: lila.memo.
   def index(players: Paginator[FidePlayer.WithFollow], query: String, order: FidePlayerOrder)(using
       Context
   ) =
-    fideUi.page("FIDE players", "players")(
+    fideUi.page(trb.fidePlayers.txt(), "players")(
       cls := "fide-players",
       boxTop(
         h1(trb.fidePlayers()),
@@ -31,7 +31,7 @@ final class FidePlayerUi(helpers: Helpers, fideUi: FideUi, picfitUrl: lila.memo.
     )
 
   def notFound(id: chess.FideId)(using Context) =
-    fideUi.page("FIDE player not found", "players")(
+    fideUi.page(trb.fidePlayerNotFound.txt(), "players")(
       cls := "fide-players",
       boxTop(
         h1(trb.fidePlayerNotFound()),
@@ -40,16 +40,17 @@ final class FidePlayerUi(helpers: Helpers, fideUi: FideUi, picfitUrl: lila.memo.
       ),
       div(cls := "box__pad")(
         p(
-          "We could not find anyone with the FIDE ID \"",
+          "Не нашли игрока с ID ФИДЕ «",
           strong(id),
-          "\", please make sure the number is correct."
+          "». Проверьте, правильно ли указан номер."
         ),
         p(
-          "If the player appears on the ",
-          a(href := "https://ratings.fide.com/", targetBlank)("official FIDE website"),
-          ", then the player was not included in the latest rating export from FIDE.",
+          "Если игрок есть на ",
+          a(href := "https://ratings.fide.com/", targetBlank)("официальном сайте ФИДЕ"),
+          ", значит, он не попал в последнюю выгрузку рейтингов ФИДЕ.",
           br,
-          "FIDE exports are provided once a month and includes players who have at least one official rating."
+          "ФИДЕ выгружает рейтинги раз в месяц, туда попадают игроки хотя бы с одним " +
+            "официальным рейтингом."
         )
       )
     )
@@ -154,7 +155,7 @@ final class FidePlayerUi(helpers: Helpers, fideUi: FideUi, picfitUrl: lila.memo.
       isFollowing: Boolean
   )(using ctx: Context) =
     fideUi.page(
-      s"${player.name} - FIDE player ${player.id}",
+      s"${player.name} — игрок ФИДЕ ${player.id}",
       "players",
       _.js(esmInit("fideRatingChart", ratings.toJson))
     )(

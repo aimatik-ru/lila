@@ -97,7 +97,7 @@ final class PuzzleBits(helpers: Helpers):
                 PuzzleTheme(key).name.txt(),
               "datasets" -> Json.arr(
                 Json.obj(
-                  "label" -> "Performance",
+                  "label" -> trans.site.performance.txt(),
                   "data" -> mostPlayed.map: (_, results) =>
                     results.performance
                 )

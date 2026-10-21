@@ -310,7 +310,7 @@ final class TeamApi(
           kicked.perms.isEmpty || myself.hasPerm(_.Admin)
       _ <- allowed.so:
         // create a request to set declined in order to prevent kicked use to rejoin
-        val request = TeamRequest.make(team.id, userId, "Kicked from team", declined = true)
+        val request = TeamRequest.make(team.id, userId, "Исключён из команды", declined = true)
         for
           _ <- requestRepo.coll.update.one(bid(request.id), request, upsert = true)
           _ <- doQuit(team, userId)

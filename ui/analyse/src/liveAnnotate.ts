@@ -3,9 +3,9 @@ import type { TreeWrapper } from 'lib/tree';
 import type { Glyph, TreeNode, TreePath } from 'lib/tree/types';
 
 const glyphs: Record<string, Glyph> = {
-  inaccuracy: { id: 6, symbol: '?!', name: 'Inaccuracy' },
-  mistake: { id: 2, symbol: '?', name: 'Mistake' },
-  blunder: { id: 4, symbol: '??', name: 'Blunder' },
+  inaccuracy: { id: 6, symbol: '?!', name: i18n.site.inaccuracy },
+  mistake: { id: 2, symbol: '?', name: i18n.site.mistake },
+  blunder: { id: 4, symbol: '??', name: i18n.site.blunder },
 };
 
 export default class LiveAnnotate {

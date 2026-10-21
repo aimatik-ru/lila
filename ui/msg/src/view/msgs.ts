@@ -23,11 +23,11 @@ export default function renderMsgs(ctrl: MsgCtrl, convo: Convo): VNode {
                 ctrl.getMore();
               }),
             },
-            'Load more',
+            'Загрузить ещё',
           )
         : null,
       ...contentMsgs(ctrl, convo.msgs),
-      h('div.msg-app__convo__msgs__typing', ctrl.typing ? `${convo.user.name} is typing...` : null),
+      h('div.msg-app__convo__msgs__typing', ctrl.typing ? `${convo.user.name} печатает...` : null),
     ]),
   ]);
 }
@@ -122,9 +122,9 @@ const setupMsgs = (insert: boolean) => (vnode: VNode) => {
 };
 
 const teamUnsub = async (form: HTMLFormElement) => {
-  if (await confirm('Unsubscribe?'))
+  if (await confirm(`${i18n.site.unsubscribe}?`))
     xhrJson(form.action, {
       method: 'post',
       body: xhrForm({ subscribe: false }),
-    }).then(() => alert('Done!'));
+    }).then(() => alert(`${i18n.site.done}!`));
 };

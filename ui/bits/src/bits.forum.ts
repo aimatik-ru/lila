@@ -63,7 +63,7 @@ site.load.then(() => {
             $rels.removeClass('loading');
           },
           _ => {
-            site.announce({ msg: 'Failed to send forum post reaction' });
+            site.announce({ msg: 'Не удалось отправить реакцию' });
           },
         );
       }

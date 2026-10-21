@@ -186,7 +186,7 @@ export default function (root: AnalyseCtrl): VNode | undefined {
       hl('span', `${Math.min(completion[0] + 1, completion[1])} / ${completion[1]}`),
       hl('button.fbt', {
         hook: bind('click', root.toggleRetro, root.redraw),
-        attrs: { 'data-icon': licon.X, 'aria-label': 'Close learn window' },
+        attrs: { 'data-icon': licon.X, 'aria-label': 'Закрыть окно разбора' },
       }),
     ]),
     hl('div.feedback.' + fb, renderFeedback(root, fb)),

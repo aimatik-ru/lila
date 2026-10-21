@@ -107,7 +107,7 @@ final class OpeningUi(helpers: Helpers, bits: OpeningBits, wiki: WikiUi):
                 )(
                   puzzleKey.map { key =>
                     a(cls := "button text", dataIcon := Icon.ArcheryTarget, href := routes.Puzzle.show(key))(
-                      "Train with puzzles"
+                      "Решать задачи"
                     )
                   },
                   a(
@@ -128,8 +128,8 @@ final class OpeningUi(helpers: Helpers, bits: OpeningBits, wiki: WikiUi):
           ),
           div(cls := "opening__panels")(
             lila.ui.bits.ariaTabList("opening", "next")(
-              ("next", "Popular continuations", whatsNext(page)),
-              ("games", "Example games", exampleGames(page))
+              ("next", "Популярные продолжения", whatsNext(page)),
+              ("games", "Примеры партий", exampleGames(page))
             )
           )
         )

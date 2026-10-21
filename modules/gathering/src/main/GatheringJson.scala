@@ -19,6 +19,6 @@ object GatheringJson:
       case None =>
         Json
           .obj(
-            "name" -> "Custom position",
+            "name" -> "Настраиваемая позиция",
             "fen" -> fen
           )

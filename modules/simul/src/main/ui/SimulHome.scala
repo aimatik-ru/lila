@@ -27,7 +27,7 @@ final class SimulHome(helpers: Helpers, ui: SimulUi):
         main(cls := "page-menu simul-list")(
           st.aside(cls := "page-menu__menu simul-list__help")(
             p(trans.site.aboutSimul()),
-            img(src := assetUrl("images/fischer-simul.jpg"), alt := "Simul IRL with Bobby Fischer")(
+            img(src := assetUrl("images/fischer-simul.jpg"), alt := "Сеанс Бобби Фишера")(
               em("[1964] ", trans.site.aboutSimulImage()),
               p(trans.site.aboutSimulRealLife()),
               p(trans.site.aboutSimulRules()),
@@ -127,7 +127,7 @@ final class SimulHome(helpers: Helpers, ui: SimulUi):
       )
     )
 
-  private def simTd(sim: Simul) =
+  private def simTd(sim: Simul)(using Translate) =
     td(cls := "header")(
       a(href := routes.Simul.show(sim.id))(
         span(cls := "name")(sim.fullName),
@@ -147,18 +147,18 @@ final class SimulHome(helpers: Helpers, ui: SimulUi):
     )
 
   def hosted(user: User, pager: Paginator[Simul])(using Context) =
-    Page(s"${user.username} hosted simuls")
+    Page(s"${user.username}: проведённые сеансы")
       .css("simul.user.list")
       .js(infiniteScrollEsmInit):
         main(cls := "page-small box simul-list")(
           if pager.nbResults == 0 then
-            div(cls := "box__top")(h1(userLink(user), " hasn't hosted any simuls yet!"))
+            div(cls := "box__top")(h1(userLink(user), " пока не проводил сеансов"))
           else
             table(cls := "slist slist-pad")(
               thead(
                 tr(
                   th(cls := "count")(pager.nbResults),
-                  th(colspan := 2)(h1(userLink(user, withOnline = true), " simuls")),
+                  th(colspan := 2)(h1(userLink(user, withOnline = true), " • сеансы")),
                   th(s"${trans.site.wins.txt()}/${trans.site.draws.txt()}/${trans.site.losses.txt()}")
                 )
               ),

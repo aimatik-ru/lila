@@ -93,7 +93,7 @@ function renderInput(ctrl: ChatCtrl): VNode | undefined {
     });
   let placeholder: string;
   if (ctrl.vm.timeout) placeholder = i18n.site.youHaveBeenTimedOut;
-  else if (ctrl.opts.blind) placeholder = 'Chat';
+  else if (ctrl.opts.blind) placeholder = 'Чат';
   else placeholder = i18n.site.talkInChat;
   return input('text')('.mchat__say', {
     placeholder,
@@ -101,7 +101,7 @@ function renderInput(ctrl: ChatCtrl): VNode | undefined {
     enterkeyhint: 'send',
     maxlength: 140,
     disabled: ctrl.vm.timeout || !ctrl.vm.writeable,
-    'aria-label': 'Chat input',
+    'aria-label': 'Сообщение в чат',
     hook: onInsert<HTMLInputElement>(el => setupHooks(ctrl, el)),
   });
 }
@@ -157,7 +157,7 @@ const setupHooks = (ctrl: ChatCtrl, chatEl: HTMLInputElement) => {
           });
         else {
           if (!ctrl.opts.kobold) spam.selfReport(txt);
-          if (pub && spam.hasTeamUrl(txt)) alert("Please don't advertise teams in the chat.");
+          if (pub && spam.hasTeamUrl(txt)) alert('Пожалуйста, не рекламируйте команды в чате.');
           else {
             scrollState.pinToBottom = true;
             ctrl.post(txt);
@@ -254,14 +254,14 @@ const actionIcons = (ctrl: ChatCtrl, line: Line): Array<VNode | null> => {
   if (ctrl.canPostArbitraryText() && !ctrl.data.resourceId.startsWith('game'))
     icons.push(
       snabH('action.reply', {
-        attrs: { 'data-icon': licon.Back, title: 'Reply' },
+        attrs: { 'data-icon': licon.Back, title: i18n.site.reply },
       }),
     );
   icons.push(
     ctrl.moderation
       ? modLineAction()
       : snabH('action.flag', {
-          attrs: { 'data-icon': licon.CautionTriangle, title: 'Report', 'data-text': line.t },
+          attrs: { 'data-icon': licon.CautionTriangle, title: 'Пожаловаться', 'data-text': line.t },
         }),
   );
   return icons;

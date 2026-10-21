@@ -50,12 +50,12 @@ object ClockPercent extends OpaqueDouble[ClockPercent]:
 
 enum Termination(val id: Int, val name: String):
 
-  case ClockFlag extends Termination(1, "Clock flag")
-  case Disconnect extends Termination(2, "Disconnect")
-  case Resignation extends Termination(3, "Resignation")
-  case Draw extends Termination(4, "Draw")
-  case Stalemate extends Termination(5, "Stalemate")
-  case Checkmate extends Termination(6, "Checkmate")
+  case ClockFlag extends Termination(1, "Время вышло")
+  case Disconnect extends Termination(2, "Отключение")
+  case Resignation extends Termination(3, "Сдача")
+  case Draw extends Termination(4, "Ничья")
+  case Stalemate extends Termination(5, "Пат")
+  case Checkmate extends Termination(6, "Мат")
 
 object Termination:
 
@@ -86,9 +86,9 @@ object Result:
   val idList = values.map(_.id)
 
 enum Phase(val id: Int, val name: String):
-  case Opening extends Phase(1, "Opening")
-  case Middle extends Phase(2, "Middlegame")
-  case End extends Phase(3, "Endgame")
+  case Opening extends Phase(1, "Дебют")
+  case Middle extends Phase(2, "Миттельшпиль")
+  case End extends Phase(3, "Эндшпиль")
 
 object Phase:
   val byId = values.mapBy(_.id)
@@ -101,9 +101,9 @@ object Phase:
           case _ => End
 
 enum Castling(val id: Int, val name: String):
-  case Kingside extends Castling(1, "Kingside castling")
-  case Queenside extends Castling(2, "Queenside castling")
-  case None extends Castling(3, "No castling")
+  case Kingside extends Castling(1, "Короткая рокировка")
+  case Queenside extends Castling(2, "Длинная рокировка")
+  case None extends Castling(3, "Без рокировки")
 object Castling:
   val byId = values.mapBy(_.id)
   def fromMoves(moves: Iterable[SanStr]) =
@@ -113,13 +113,13 @@ object Castling:
       case _ => None
 
 enum QueenTrade(val id: Boolean, val name: String):
-  case Yes extends QueenTrade(true, "Queen trade")
-  case No extends QueenTrade(false, "No queen trade")
+  case Yes extends QueenTrade(true, "Размен ферзей")
+  case No extends QueenTrade(false, "Без размена ферзей")
 object QueenTrade:
   def apply(v: Boolean): QueenTrade = if v then Yes else No
 
 enum Blur(val id: Boolean, val name: String):
-  case Yes extends Blur(true, "Blur")
-  case No extends Blur(false, "No blur")
+  case Yes extends Blur(true, "Уход из окна")
+  case No extends Blur(false, "Без ухода из окна")
 object Blur:
   def apply(v: Boolean): Blur = if v then Yes else No

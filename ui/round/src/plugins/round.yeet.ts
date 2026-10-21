@@ -146,7 +146,7 @@ function whenAllIsDone() {
   // insert a button to reload the page
   const button = document.createElement('button');
   button.classList.add('yeet-reload', 'button', 'button-red');
-  button.textContent = 'Yeet! Reload the page';
+  button.textContent = 'Ух! Обновите страницу';
   button.addEventListener('click', () => location.reload());
   document.body.appendChild(button);
 }

@@ -25,9 +25,9 @@ const renderPlayer = ({ data, study }: AnalyseCtrl, color: Color): VNode => {
     : h(
         'span',
         name ||
-          (ai && 'Stockfish level ' + ai) ||
+          (ai && i18n.site.aiNameLevelAiLevel('Stockfish', ai)) ||
           (study && findTag(study.data.chapter.tags, color)) ||
-          'Anonymous',
+          i18n.site.anonymous,
       );
 };
 
@@ -119,7 +119,7 @@ export function puzzleLink(ctrl: AnalyseCtrl): VNode | undefined {
           href: `/training/${puzzle.key}/${ctrl.bottomColor()}`,
         },
       },
-      ['Recommended puzzle training', h('br'), puzzle.name],
+      ['Рекомендуем задачи на тему', h('br'), puzzle.name],
     ),
   );
 }

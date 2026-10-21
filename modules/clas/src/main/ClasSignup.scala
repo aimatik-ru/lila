@@ -58,7 +58,8 @@ final class ClasSignup(
       single(
         "realNames" -> of(using formatter.stringTryFormatter[StudentLines](parseLines, _.text))
       ).verifying(
-        s"There can't be more than ${lila.clas.Clas.maxStudents} per class. Split the students into more classes.",
+        s"В классе не может быть больше ${lila.clas.Clas.maxStudents} учеников. " +
+          "Распределите учеников по нескольким классам.",
         _.lines.lengthIs <= max
       )
 
@@ -80,19 +81,22 @@ final class ClasSignup(
                 if line.startsWith("@") then
                   line.drop(1).trim.split(" ", 2) match
                     case Array(username, realName) =>
-                      UserStr.read(username).map(_.some -> realName).toRight(s"Invalid username: $username")
-                    case _ => Left(s"Invalid line: $line")
+                      UserStr
+                        .read(username)
+                        .map(_.some -> realName)
+                        .toRight(s"Неверное имя пользователя: $username")
+                    case _ => Left(s"Неверная строка: $line")
                 else Right(none -> line)
               name <-
                 if name.trim.nonEmpty
                 then Right(name.trim.take(realNameMaxSize))
-                else Left(s"Empty name in line: $line")
+                else Left(s"Пустое имя в строке: $line")
               _ <- usr
                 .filter(u => lines.exists(_._1.contains(u)))
-                .fold(Right(()))(u => Left(s"Duplicate username: $u"))
+                .fold(Right(()))(u => Left(s"Имя пользователя повторяется: $u"))
             yield (usr, RealName(name)) :: lines
         .flatMap:
-          case Nil => Left("Empty list")
+          case Nil => Left("Список пуст")
           case lines => Right(StudentLines(lines.reverse))
 
     def create(

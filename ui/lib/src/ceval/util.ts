@@ -41,19 +41,19 @@ export function showEngineError(engine: string, error: string): void {
     modal: true,
     easyClose: 'clickOutside',
     htmlText:
-      `<h2>${escapeHtml(engine)} <bad>error</bad></h2>` +
+      `<h2>${escapeHtml(engine)} <bad>ошибка</bad></h2>` +
       (error.includes('Status 503')
         ? $html`
-          <p>Your external engine does not appear to be connected.</p>
-          <p>Please check the network and restart your provider if possible.</p>`
+          <p>Похоже, внешний движок не подключён.</p>
+          <p>Проверьте сеть и, если можно, перезапустите провайдер движка.</p>`
         : $html`
           <pre>${escapeHtml(error)}</pre>
-          <h2>Things to try</h2>
+          <h2>Что можно попробовать</h2>
           <ul>
-            <li>Decrease memory slider in engine settings</li>
-            <li>Clear site data for this site</li>
-            <li>Select another engine</li>
-            <li>Update your browser</li>
+            <li>Уменьшить память в настройках движка</li>
+            <li>Очистить данные этого сайта в браузере</li>
+            <li>Выбрать другой движок</li>
+            <li>Обновить браузер</li>
           </ul>`),
   }).then(dlg => {
     const select = () =>

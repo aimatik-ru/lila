@@ -22,7 +22,7 @@ export const baseUrl = () => `${window.location.protocol}//${window.location.hos
 export const nodeFullName = (node: TreeNode): string =>
   node.san
     ? plyToTurn(node.ply) + (node.ply % 2 === 1 ? '.' : '...') + ' ' + fixCrazySan(node.san)
-    : 'Initial position';
+    : i18n.site.startPosition;
 
 export const plural = (noun: string, nb: number): string => nb + ' ' + (nb === 1 ? noun : noun + 's');
 
@@ -35,4 +35,4 @@ export const option = (value: string, current: string | undefined, name: string,
   opt({ attrs: { value, selected: value === current }, ...data }, name);
 
 export const playerFedFlag = (fed?: Federation) =>
-  fed && img(site.asset.fideFedSrc(fed.id), undefined, `Federation: ${fed.i18nName}`)('.mini-game__flag');
+  fed && img(site.asset.fideFedSrc(fed.id), undefined, `Федерация: ${fed.i18nName}`)('.mini-game__flag');

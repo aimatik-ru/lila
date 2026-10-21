@@ -69,7 +69,7 @@ final class SecurityApi(
             Invalid(Seq(ValidationError("blankedPassword")))
           case WeakPassword =>
             Invalid:
-              Seq(ValidationError("This password is too easy to guess. Request a password reset email."))
+              Seq(ValidationError("Этот пароль слишком легко угадать. Запросите письмо для сброса пароля."))
           case Must2fa =>
             Invalid(Seq(if isDangerousDevice.isDefined then must2faDevice else must2faNetwork))
           case err => Invalid(Seq(ValidationError(err.toString)))

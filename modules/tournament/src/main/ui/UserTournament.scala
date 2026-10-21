@@ -11,15 +11,15 @@ final class UserTournament(helpers: Helpers, ui: TournamentUi):
   import helpers.{ *, given }
 
   def best(u: User, pager: Paginator[LeaderboardApi.TourEntry])(using Context) =
-    page(u, s"${u.username} best tournaments", "best").js(infiniteScrollEsmInit):
-      list(u, "best", pager, "BEST")
+    page(u, s"${u.username}: лучшие турниры", "best").js(infiniteScrollEsmInit):
+      list(u, "best", pager, "ЛУЧШИЕ")
 
   def recent(u: User, pager: Paginator[LeaderboardApi.TourEntry])(using Context) =
-    page(u, s"${u.username} recent tournaments", "recent").js(infiniteScrollEsmInit):
+    page(u, s"${u.username}: недавние турниры", "recent").js(infiniteScrollEsmInit):
       list(u, "recent", pager, pager.nbResults.toString)
 
   def created(u: User, pager: Paginator[lila.tournament.Tournament])(using Context) =
-    page(u, s"${u.username} created tournaments", "created")
+    page(u, s"${u.username}: созданные турниры", "created")
       .js(infiniteScrollEsmInit):
         if pager.nbResults == 0 then div(cls := "box-pad")(trans.site.nothingToSeeHere())
         else
@@ -52,7 +52,7 @@ final class UserTournament(helpers: Helpers, ui: TournamentUi):
           )
 
   def upcoming(u: User, pager: Paginator[lila.tournament.Tournament])(using Context) =
-    page(u, s"${u.username} upcoming tournaments", "upcoming"):
+    page(u, s"${u.username}: предстоящие турниры", "upcoming"):
       if pager.nbResults == 0 then div(cls := "box-pad")(trans.site.nothingToSeeHere())
       else
         div(cls := "tournament-list")(

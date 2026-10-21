@@ -22,7 +22,7 @@ final class SwissHomeUi(helpers: Helpers):
               iconTag(Icon.InfoCircle),
               p:
                 trans.swiss.swissDescription:
-                  a(href := "https://en.wikipedia.org/wiki/Swiss-system_tournament")("(wiki)")
+                  a(href := "https://en.wikipedia.org/wiki/Swiss-system_tournament")("(вики)")
             ),
             div(cls := "box__pad main-point")(
               iconTag(Icon.Group),

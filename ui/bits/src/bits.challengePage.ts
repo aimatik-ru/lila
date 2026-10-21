@@ -80,7 +80,7 @@ export function initModule(opts: ChallengeOpts): void {
       instructions.onclick = () =>
         navigator
           .share({
-            title: `Fancy a game of chess?`,
+            title: `Сыграем в шахматы?`,
             url: inviteUrl.querySelector<HTMLInputElement>('input')?.value,
           })
           .catch(() => {});

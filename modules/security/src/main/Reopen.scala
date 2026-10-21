@@ -24,22 +24,22 @@ final class Reopen(
   ): FuRaise[(String, String), User] = for
     existing <- userRepo.byEmail(email.normalize)
     _ <- raiseIf(existing.exists(_.enabled.yes)):
-      "emailUsed" -> "This email address is already in use by an active account."
+      "emailUsed" -> "Этот адрес почты уже занят действующей учётной записью."
     user <- userRepo.byId(u)
-    user <- user.raiseIfNone("noUser" -> "No account found with this username.")
+    user <- user.raiseIfNone("noUser" -> "Учётная запись с таким именем не найдена.")
     _ <- raiseIf(user.enabled.yes):
-      "alreadyActive" -> "This account is already active."
+      "alreadyActive" -> "Эта учётная запись уже активна."
     userEmail <- userRepo.currentOrPrevEmail(user.id)
     userEmail <- userEmail.raiseIfNone:
-      "noEmail" -> "That account doesn't have any associated email, and cannot be reopened."
+      "noEmail" -> "У этой учётной записи нет адреса почты, её нельзя восстановить."
     _ <- raiseIf(!email.similarTo(userEmail)):
-      "differentEmail" -> "That account has a different email address."
+      "differentEmail" -> "У этой учётной записи другой адрес почты."
     modClosed <- closedByMod(user)
     _ <- raiseIf(modClosed):
-      "nope" -> "Sorry, that account can no longer be reopened."
+      "nope" -> "Извините, эту учётную запись больше нельзя восстановить."
     flags <- userRepo.closedFlags(user)
     _ <- raiseIf(flags.exists(_.forever)):
-      "nope" -> "Sorry, but you explicitly requested that your account could never be reopened."
+      "nope" -> "Извините, вы сами попросили, чтобы эту учётную запись нельзя было восстановить."
   yield user
 
   def send(user: User, email: EmailAddress)(using lang: Lang): Funit =
@@ -49,7 +49,7 @@ final class Reopen(
       mailer.sendOrFail:
         Mailer.Message(
           to = email,
-          subject = s"Reopen your play.kalugalogic.ru account: ${user.username}",
+          subject = s"Восстановление учётной записи на play.kalugalogic.ru: ${user.username}",
           text = Mailer.txt.addServiceNote(s"""
 ${trans.passwordReset_clickOrIgnore.txt()}
 

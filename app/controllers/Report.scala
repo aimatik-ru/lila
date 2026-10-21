@@ -162,7 +162,7 @@ final class Report(env: Env, userC: => User, modC: => Mod) extends LilaControlle
           json = jsonFormError(err)
         ),
       data =>
-        if me.is(data.user.id) then BadRequest("You cannot report yourself")
+        if me.is(data.user.id) then BadRequest("Нельзя пожаловаться на самого себя")
         else
           reportRateLimit(rateLimited):
             for

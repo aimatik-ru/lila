@@ -302,7 +302,7 @@ class LocalAnalysisDialog {
       this.separator(i18n.localAnalysis.willUse),
       <div class="analysis-settings">
         <div class="setting">
-          <label for="local-analysis-engine">Engine:</label>
+          <label for="local-analysis-engine">{i18n.site.engine}:</label>
           {engineSelect(
             ceval.engines.supporting({ rules: ceval.rules, nonStandardMaterial: ceval.nonStandardMaterial }),
             info.engine.id,
@@ -331,7 +331,7 @@ class LocalAnalysisDialog {
           info.hashSize,
           withEffect(this.hashSize, redraw),
           'local-analysis-hash',
-          'Hash',
+          i18n.site.memory,
         )}
       </div>,
       <hr class="separator" />,
@@ -349,7 +349,7 @@ class LocalAnalysisDialog {
     const [clearText, clearClick] = isLocal
       ? [i18n.study.clearLocal, this.clickClearLocal]
       : [i18n.study.clearPublished, this.clickClearPublished];
-    const provenance = isFishnet ? 'Fishnet' : isLocal ? i18n.localAnalysis.local : i18n.site.by(info.userId);
+    const provenance = isFishnet ? 'Сервер' : isLocal ? i18n.localAnalysis.local : i18n.site.by(info.userId);
     return [
       <label>{isPublished ? i18n.localAnalysis.published : i18n.localAnalysis.using}</label>,
       <p class="info-line">

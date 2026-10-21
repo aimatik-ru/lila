@@ -15,7 +15,7 @@ export interface CompleteOpts<Result> {
 
 export function complete<Result>(opts: CompleteOpts<Result>): void {
   const minLength = opts.minLength || 3;
-  const empty = opts.empty || (() => '<div class="complete-list__empty">No results.</div>');
+  const empty = opts.empty || (() => '<div class="complete-list__empty">Ничего не найдено.</div>');
   const cache = new Map<string, Result[]>();
   const fetchResults: Fetch<Result> = async term => {
     if (cache.has(term)) return new Promise(res => setTimeout(() => res(cache.get(term)!), 50));

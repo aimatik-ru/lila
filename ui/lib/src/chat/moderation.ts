@@ -84,7 +84,7 @@ export function flagReport(ctrl: ChatCtrl, flag: HTMLElement): void {
   if (text && userA) reportUserText(ctrl.data.resourceId, userA.href.split('/')[4], text);
 }
 async function reportUserText(resourceId: string, username: string, text: string) {
-  if (await confirm(`Report "${text}" to moderators?`)) flag(resourceId, username, text);
+  if (await confirm(`Пожаловаться модераторам на «${text}»?`)) flag(resourceId, username, text);
 }
 
 export const lineAction = (): VNode => snabH('action.mod', { attrs: dataIcon(licon.Agent) });

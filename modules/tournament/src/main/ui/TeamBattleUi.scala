@@ -83,7 +83,7 @@ final class TeamBattleUi(helpers: Helpers):
           ),
           table(cls := "slist slist-pad")(
             tbody(
-              tr(th("Players"), td(info.nbPlayers)),
+              tr(th(trans.site.players()), td(info.nbPlayers)),
               ctx.pref.showRatings.option(
                 frag(
                   tr(th(trans.site.averageElo()), td(info.avgRating)),

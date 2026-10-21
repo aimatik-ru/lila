@@ -29,7 +29,7 @@ final class TeamShowUi(helpers: Helpers, teamUi: TeamUi, requestUi: TeamRequestU
     teamUi
       .TeamPage(team.name)
       .graph(
-        title = s"${team.name} team",
+        title = s"Команда ${team.name}",
         url = routeUrl(routes.Team.show(team.id)),
         description = team.intro.so { shorten(_, 152) }
       )
@@ -49,7 +49,7 @@ final class TeamShowUi(helpers: Helpers, teamUi: TeamUi, requestUi: TeamRequestU
           boxTop(
             h1(cls := "text", dataIcon := Icon.Group)(team.name, teamFlair(team.light)),
             div:
-              if team.disabled then span(cls := "staff")("CLOSED")
+              if team.disabled then span(cls := "staff")("ЗАКРЫТА")
               else
                 canSeeMembers.option(a(href := routes.Team.members(team.slug)):
                   trt.nbMembers.plural(team.nbMembers, strong(team.nbMembers.localize)))
@@ -70,7 +70,7 @@ final class TeamShowUi(helpers: Helpers, teamUi: TeamUi, requestUi: TeamRequestU
                       dataIcon := Icon.InfoCircle,
                       href := routes.Cms.lonePage(lila.core.id.CmsPageKey("team-etiquette")),
                       cls := "text"
-                    )("Team Etiquette")
+                    )("Правила для команд")
                   )
                 )
               ),
@@ -83,7 +83,7 @@ final class TeamShowUi(helpers: Helpers, teamUi: TeamUi, requestUi: TeamRequestU
               (team.intro.isEmpty && havePerm(_.Settings)).option(
                 div(cls := "flash flash-warning")(
                   div(cls := "flash__content"):
-                    a(href := routes.Team.edit(team.id))("Give your team a short introduction text!")
+                    a(href := routes.Team.edit(team.id))("Добавьте команде короткое вступление!")
                 )
               ),
               modLog.nonEmpty.option:

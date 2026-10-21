@@ -17,13 +17,13 @@ trait FlashHelper:
   def warningFlash(using ctx: Context): Option[Tag] =
     ctx.flash("warning").map { msg =>
       flashMessage("warning"):
-        if msg.isEmpty then "Warning" else msg
+        if msg.isEmpty then "Внимание" else msg
     }
 
   def failureFlash(using ctx: Context): Option[Tag] =
     ctx.flash("failure").map { msg =>
       flashMessage("failure"):
-        if msg.isEmpty then "Failure" else msg
+        if msg.isEmpty then "Ошибка" else msg
     }
 
   def flashMessage(color: String)(content: Modifier*): Tag =

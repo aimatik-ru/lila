@@ -30,8 +30,8 @@ final class LearnUi(helpers: Helpers):
       .i18nOpt(ctx.speechSynthesis, _.nvui)
       .js(ctx.blind.option(Esm("learn.nvui")))
       .graph(
-        title = "Learn chess by playing",
-        description = "You don't know much about chess? Excellent! Let's have fun and learn to play chess!",
+        title = s"${trl.learnChess.txt()} - ${trl.byPlaying.txt()}",
+        description = "Почти ничего не знаете о шахматах? Отлично! Давайте весело учиться играть!",
         url = routeUrl(routes.Learn.index)
       )
       .hrefLangs(lila.ui.LangPath(routes.Learn.index))

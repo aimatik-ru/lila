@@ -43,7 +43,7 @@ export function render(ctrl: AnalyseCtrl): VNode {
       content = [
         h('div.legend.todo.clickable', { hook: commentHook, class: { done: isCommented } }, [
           icon(licon.BubbleSpeech)(),
-          h('p', 'Help the player find the initial move, with a comment.'),
+          h('p', 'Помогите ученику найти первый ход: напишите комментарий.'),
         ]),
         renderHint(ctrl),
       ];
@@ -51,11 +51,11 @@ export function render(ctrl: AnalyseCtrl): VNode {
       content = [
         h('div.legend.clickable', { hook: commentHook }, [
           icon(licon.BubbleSpeech)(),
-          h('p', 'Introduce the gamebook with a comment'),
+          h('p', 'Начните интерактивный урок с комментария'),
         ]),
         h('div.legend.todo', { class: { done: !!ctrl.node.children[0] } }, [
           icon(licon.PlayTriangle)(),
-          h('p', "Put the opponent's first move on the board."),
+          h('p', 'Сделайте на доске первый ход соперника.'),
         ]),
       ];
   } else if (ctrl.onMainline) {
@@ -63,7 +63,7 @@ export function render(ctrl: AnalyseCtrl): VNode {
       content = [
         h('div.legend.todo.clickable', { hook: commentHook, class: { done: isCommented } }, [
           icon(licon.BubbleSpeech)(),
-          h('p', 'Explain the opponent move, and help the player find the next move, with a comment.'),
+          h('p', 'Объясните ход соперника и помогите ученику найти следующий ход: напишите комментарий.'),
         ]),
         renderHint(ctrl),
       ];
@@ -73,14 +73,15 @@ export function render(ctrl: AnalyseCtrl): VNode {
           icon(licon.BubbleSpeech)(),
           h(
             'p',
-            "You may reflect on the player's correct move, with a comment; or leave empty to jump immediately to the next move.",
+            'Можно прокомментировать верный ход ученика или оставить поле пустым, ' +
+              'чтобы сразу перейти к следующему ходу.',
           ),
         ]),
         hasVariation
           ? null
           : h('div.legend.clickable', { hook: bind('click', ctrl.navigate.prev, ctrl.redraw) }, [
               icon(licon.PlayTriangle)(),
-              h('p', 'Add variation moves to explain why specific other moves are wrong.'),
+              h('p', 'Добавьте варианты, чтобы объяснить, почему другие ходы неверны.'),
             ]),
         renderDeviation(ctrl),
       ];
@@ -88,9 +89,9 @@ export function render(ctrl: AnalyseCtrl): VNode {
     content = [
       h('div.legend.todo.clickable', { hook: commentHook, class: { done: isCommented } }, [
         icon(licon.BubbleSpeech)(),
-        h('p', 'Explain why this move is wrong in a comment'),
+        h('p', 'Объясните в комментарии, почему этот ход неверен'),
       ]),
-      h('div.legend', [h('p', 'Or promote it as the mainline if it is the right move.')]),
+      h('div.legend', [h('p', 'Или сделайте его главной линией, если это верный ход.')]),
     ];
 
   return h(
@@ -105,10 +106,10 @@ function renderDeviation(ctrl: AnalyseCtrl): VNode {
   return h('div.deviation', [
     h('div.legend.todo', { class: { done: nodeGamebookValue(ctrl.node, field).length > 2 } }, [
       icon(licon.BubbleSpeech)(),
-      h('p', 'When any other wrong move is played:'),
+      h('p', 'Если сыгран любой другой неверный ход:'),
     ]),
     h('textarea', {
-      attrs: { placeholder: 'Explain why all other moves are wrong' },
+      attrs: { placeholder: 'Объясните, почему все остальные ходы неверны' },
       hook: textareaHook(ctrl, field),
     }),
   ]);
@@ -116,9 +117,9 @@ function renderDeviation(ctrl: AnalyseCtrl): VNode {
 
 const renderHint = (ctrl: AnalyseCtrl): VNode =>
   h('div.hint', [
-    h('div.legend', [icon(licon.InfoCircle)(), h('p', 'Optional, on-demand hint for the player:')]),
+    h('div.legend', [icon(licon.InfoCircle)(), h('p', 'Подсказка для ученика по запросу (необязательно):')]),
     h('textarea', {
-      attrs: { placeholder: 'Give the player a tip so they can find the right move' },
+      attrs: { placeholder: 'Дайте ученику подсказку, чтобы он нашёл верный ход' },
       hook: textareaHook(ctrl, 'hint'),
     }),
   ]);

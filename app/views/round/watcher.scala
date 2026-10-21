@@ -28,7 +28,8 @@ def watcher(
       opponentId = pov.opponent.userId
     )
 
-  ui.RoundPage(pov.game.variant, s"${gameVsText(pov.game, withRatings = ctx.pref.showRatings)} • spectator")
+  val vsText = gameVsText(pov.game, withRatings = ctx.pref.showRatings)
+  ui.RoundPage(pov.game.variant, s"$vsText • ${trans.study.spectator.txt()}")
     .js(roundNvuiTag)
     .js(
       PageModule(

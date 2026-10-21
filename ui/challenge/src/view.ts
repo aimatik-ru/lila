@@ -126,9 +126,9 @@ const outButtons = (ctrl: ChallengeCtrl, c: Challenge) => [
 function timeControl(c: TimeControl): string {
   switch (c.type) {
     case 'unlimited':
-      return 'Unlimited';
+      return i18n.site.unlimited;
     case 'correspondence':
-      return c.daysPerTurn + ' days';
+      return i18n.site.nbDays(c.daysPerTurn ?? 0, c.daysPerTurn ?? 0);
     case 'clock':
       return c.show || '-';
     default:
@@ -139,7 +139,7 @@ function timeControl(c: TimeControl): string {
 const renderUser = (u: ChallengeUser | undefined, showRating: boolean): VNode =>
   u
     ? userLink({ ...u, line: true, rating: showRating ? u.rating : undefined, attrs: { 'data-pt-pos': 'w' } })
-    : h('span', 'Open challenge');
+    : h('span', 'Открытый вызов');
 
 const renderLag = (u?: ChallengeUser) =>
   u &&

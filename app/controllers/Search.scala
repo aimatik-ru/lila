@@ -38,6 +38,6 @@ final class Search(env: Env) extends LilaController(env):
                         env.game.userGameApi.jsPaginator(pager).dmap(Ok(_))
                     )
                   .recoverWith: _ =>
-                    serverError("Sorry, we can't process that query at the moment")
+                    serverError("Извините, сейчас не получается выполнить этот запрос")
             )
   }

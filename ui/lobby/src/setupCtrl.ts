@@ -316,7 +316,7 @@ export default class SetupController {
     } catch (_) {
       this.loading = false;
       this.root.redraw();
-      await alert('Sorry, we encountered an error while creating your game. Please try again.');
+      await alert('Не удалось создать игру. Попробуйте ещё раз.');
       return;
     }
 
@@ -329,7 +329,7 @@ export default class SetupController {
           ? Object.keys(errs)
               .map(k => `${k}: ${errs[k]}`)
               .join('\n')
-          : 'Invalid setup',
+          : 'Неверные настройки игры',
       );
       if (response.status === 403) {
         // 403 FORBIDDEN closes this modal because challenges to the recipient

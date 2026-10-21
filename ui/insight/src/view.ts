@@ -47,12 +47,7 @@ const renderMain = (ctrl: Ctrl, _cacheKey: string | boolean) => {
   if (!ctrl.vm.answer) {
     return hl('div'); // returning undefined breaks snabbdom's thunks
   } else if (ctrl.vm.broken) {
-    return hl('div.broken', [
-      icon(licon.DiscBig)(),
-      'Insights are unavailable.',
-      hl('br'),
-      'Please try again later.',
-    ]);
+    return hl('div.broken', [icon(licon.DiscBig)(), 'Аналитика недоступна.', hl('br'), 'Попробуйте позже.']);
   }
   const sizer = widthStyle(mainW());
   return hl('div', sizer, [chart(ctrl), vert(ctrl, sizer), boards(ctrl, sizer)]);
@@ -72,10 +67,10 @@ const viewTabData = (ctrl: Ctrl, view: ViewTab) => ({
 function header(ctrl: Ctrl) {
   return hl('header', widthStyle(mainW()), [
     isAtLeastXSmall(mainW())
-      ? hl('h2.text', { attrs: dataIcon(licon.Target) }, 'Chess Insights')
+      ? hl('h2.text', { attrs: dataIcon(licon.Target) }, 'Шахматная аналитика')
       : isAtLeastXXSmall(mainW())
-        ? hl('h2.text', { attrs: dataIcon(licon.Target) }, 'Insights')
-        : mainW() >= 460 && hl('h2.text', 'Insights'),
+        ? hl('h2.text', { attrs: dataIcon(licon.Target) }, 'Аналитика')
+        : mainW() >= 460 && hl('h2.text', 'Аналитика'),
     axis(ctrl, mainW() < 460 ? { attrs: { style: 'justify-content: space-evenly;' } } : null),
   ]);
 }
@@ -87,8 +82,8 @@ function landscapeView(ctrl: Ctrl) {
         info(ctrl),
         tutor(),
         hl('div.panel-tabs', [
-          hl('a.tab.preset', panelTabData(ctrl, 'preset'), 'Presets'),
-          hl('a.tab.filter', panelTabData(ctrl, 'filter'), 'Filters'),
+          hl('a.tab.preset', panelTabData(ctrl, 'preset'), 'Готовые вопросы'),
+          hl('a.tab.filter', panelTabData(ctrl, 'filter'), 'Фильтры'),
           !!Object.keys(ctrl.vm.filters).length && clearBtn(ctrl),
         ]),
         ctrl.vm.panel === 'filter' && filters(ctrl),
@@ -107,9 +102,9 @@ function landscapeView(ctrl: Ctrl) {
 function portraitView(ctrl: Ctrl) {
   return hl('main#insight', containerStyle(), [
     hl('div.view-tabs', [
-      hl('div.tab', viewTabData(ctrl, 'presets'), 'Presets'),
-      hl('div.tab', viewTabData(ctrl, 'filters'), 'Filters'),
-      hl('div.tab', viewTabData(ctrl, 'insights'), 'Insights'),
+      hl('div.tab', viewTabData(ctrl, 'presets'), 'Готовые вопросы'),
+      hl('div.tab', viewTabData(ctrl, 'filters'), 'Фильтры'),
+      hl('div.tab', viewTabData(ctrl, 'insights'), 'Аналитика'),
     ]),
     hl(
       'div',
@@ -130,10 +125,10 @@ function clearBtn(ctrl: Ctrl) {
     hl(
       'a.clear',
       {
-        attrs: { title: 'Clear all filters', 'data-icon': licon.X },
+        attrs: { title: 'Сбросить все фильтры', 'data-icon': licon.X },
         hook: bind('click', ctrl.clearFilters.bind(ctrl)),
       },
-      isLandscapeLayout() ? 'CLEAR' : 'CLEAR FILTERS',
+      isLandscapeLayout() ? 'СБРОСИТЬ' : 'СБРОСИТЬ ФИЛЬТРЫ',
     );
   return isLandscapeLayout() ? btn() : hl('div.center-clear', btn());
 }

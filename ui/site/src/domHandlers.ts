@@ -53,7 +53,7 @@ export function addDomHandlers() {
       const [confirmText, cancelText] = this.classList.contains('yes-no-confirm')
         ? [i18n.site.yes, i18n.site.no]
         : [i18n.site.ok, i18n.site.cancel];
-      if (await confirm(this.title || 'Confirm this action?', confirmText, cancelText))
+      if (await confirm(this.title || 'Подтвердить действие?', confirmText, cancelText))
         (e.target as HTMLElement)?.click();
     })
     .on('click', 'a.bookmark', function (this: HTMLAnchorElement) {

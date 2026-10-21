@@ -22,7 +22,7 @@ final class ChallengeUi(helpers: Helpers):
       .graph(
         title = title,
         url = routeUrl(routes.Round.watcher(c.gameId, Color.white)),
-        description = "Join the challenge or watch the game here."
+        description = "Примите вызов или следите за партией здесь."
       )
       .js(Esm("bits.qrcode"))
       .js(
@@ -38,18 +38,18 @@ final class ChallengeUi(helpers: Helpers):
       .css("challenge.page")
 
   private def challengeTitle(c: Challenge)(using ctx: Context) =
-    val speed = c.clock.map(_.config).fold(chess.Speed.Correspondence.name) { clock =>
-      s"${chess.Speed(clock).name} (${clock.show})"
+    val perf = c.clock.map(_.config).fold(c.perfType.trans) { clock =>
+      s"${c.perfType.trans} (${clock.show})"
     }
-    val variant = c.variant.exotic.so(s" ${c.variant.name}")
     val challenger = c.challengerUser.fold(trans.site.anonymous.txt()): reg =>
       s"${titleNameOrId(reg.id)}${ctx.pref.showRatings.so(s" (${reg.rating.show})")}"
     val players =
-      if c.isOpen then "Open challenge"
+      if c.isOpen then "Открытый вызов"
       else
-        c.destUser.fold(s"Challenge from $challenger"): dest =>
-          s"$challenger challenges ${titleNameOrId(dest.id)}${ctx.pref.showRatings.so(s" (${dest.rating.show})")}"
-    s"$speed$variant ${c.rated.name} Chess • $players"
+        c.destUser.fold(s"Вызов от $challenger"): dest =>
+          val destRating = ctx.pref.showRatings.so(s" (${dest.rating.show})")
+          s"$challenger вызывает ${titleNameOrId(dest.id)}$destRating"
+    s"$perf • ${ratedName(c.rated)} • $players"
 
   private def details(c: Challenge, requestedColor: Option[Color])(using ctx: Context) =
     div(cls := "details-wrapper")(
@@ -77,7 +77,7 @@ final class ChallengeUi(helpers: Helpers):
       ),
       c.rules.nonEmpty.option(
         div(cls := "rules")(
-          h2("Custom rules:"),
+          h2("Особые правила:"),
           div(fragList(c.rules.toList.map(showRule), "/"))
         )
       )
@@ -92,11 +92,11 @@ final class ChallengeUi(helpers: Helpers):
 
   private def getRuleStyle(r: GameRule): (String, Flair) =
     r match
-      case GameRule.noAbort => ("No abort", Flair("symbols.cross-mark"));
-      case GameRule.noRematch => ("No rematch", Flair("symbols.recycling-symbol"));
-      case GameRule.noGiveTime => ("No giving of time", Flair("objects.alarm-clock"));
-      case GameRule.noClaimWin => ("No claiming of win", Flair("objects.hourglass-done"));
-      case GameRule.noEarlyDraw => ("No early draw", Flair("people.handshake-light-skin-tone"));
+      case GameRule.noAbort => ("Без отмены партии", Flair("symbols.cross-mark"));
+      case GameRule.noRematch => ("Без реванша", Flair("symbols.recycling-symbol"));
+      case GameRule.noGiveTime => ("Без добавления времени", Flair("objects.alarm-clock"));
+      case GameRule.noClaimWin => ("Без требования победы", Flair("objects.hourglass-done"));
+      case GameRule.noEarlyDraw => ("Без ранней ничьей", Flair("people.handshake-light-skin-tone"));
 
   def mine(
       c: Challenge,
@@ -117,7 +117,7 @@ final class ChallengeUi(helpers: Helpers):
           case Status.Created | Status.Offline =>
             div(id := "ping-challenge")(
               h1(cls := "box__top")(
-                if c.isOpen then c.name | "Open challenge" else trans.challenge.challengeToPlay.txt()
+                if c.isOpen then c.name | "Открытый вызов" else trans.challenge.challengeToPlay.txt()
               ),
               details(c, color),
               c.destUserId
@@ -126,7 +126,7 @@ final class ChallengeUi(helpers: Helpers):
                     userIdLink(destId.some, cssClass = "target".some),
                     if c.clock.isEmpty then
                       div(cls := "correspondence-waiting text", dataIcon := Icon.Checkmark):
-                        "Challenge sent"
+                        "Вызов отправлен"
                     else spinner,
                     p(trans.site.waitingForOpponent())
                   )
@@ -139,7 +139,7 @@ final class ChallengeUi(helpers: Helpers):
                     )
                   else
                     div(cls := "invite")(
-                      button(cls := "mobile-instructions button none")("Tap here to share"),
+                      button(cls := "mobile-instructions button none")("Нажмите, чтобы поделиться"),
                       div(cls := "invite__url")(
                         h2(cls := "ninja-title", trans.site.toInviteSomeoneToPlayGiveThisUrl()),
                         br,
@@ -235,9 +235,9 @@ final class ChallengeUi(helpers: Helpers):
             frag(
               boxTop:
                 h1:
-                  if c.isOpen then c.name | "Open challenge"
+                  if c.isOpen then c.name | "Открытый вызов"
                   else
-                    user.fold[Frag]("Anonymous"): u =>
+                    user.fold[Frag](trans.site.anonymous()): u =>
                       frag(
                         userLink(u.user),
                         ctx.pref.showRatings.option(frag(" (", u.perf.glicko.display, ")"))
@@ -246,17 +246,17 @@ final class ChallengeUi(helpers: Helpers):
               details(c, color),
               c.notableInitialFen.map: fen =>
                 div(cls := "board-preview", chessgroundMini(fen.board, !c.finalColor)(div)),
-              if relation.has(Relation.Block) then badTag("You have blocked this player.")
+              if relation.has(Relation.Block) then badTag("Вы заблокировали этого игрока.")
               else if c.open.exists(!_.canJoin) then
                 div(
-                  "Waiting for ",
-                  fragList((~c.open.flatMap(_.userIdList)).map(uid => userIdLink(uid.some)), " and "),
-                  " to start the game."
+                  "Ждём, когда ",
+                  fragList((~c.open.flatMap(_.userIdList)).map(uid => userIdLink(uid.some)), " и "),
+                  " начнут партию."
                 )
               else if color.map(Challenge.ColorChoice.apply).has(c.colorChoice) then
                 badTag(
-                  // very rare message, don't translate
-                  s"You have the wrong color link for this open challenge. The ${color.so(_.name)} player has already joined."
+                  s"Это ссылка не на тот цвет для открытого вызова: игрок за " +
+                    s"${color.so(_.fold("белых", "чёрных"))} уже присоединился."
                 )
               else if c.rated.no || ctx.isAuth then
                 frag(

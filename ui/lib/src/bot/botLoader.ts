@@ -118,7 +118,7 @@ export class BotLoader {
 
   nameOf(uid?: string): string {
     return !uid || uid === myUserId()
-      ? (myUsername() ?? 'Anonymous')
+      ? (myUsername() ?? i18n.site.anonymous)
       : (uid.startsWith('#') && this.bots.get(uid)?.name) || uid.charAt(0).toUpperCase() + uid.slice(1);
   }
 

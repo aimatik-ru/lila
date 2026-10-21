@@ -132,13 +132,13 @@ final class ChallengeApi(
     acceptQueue:
       def withPerf = me.map(_.value).traverse(userApi.withPerf(_, c.perfType))
       if c.canceled
-      then "The challenge has been canceled.".raise
+      then "Вызов отменён.".raise
       else if c.declined
-      then "The challenge has been declined.".raise
+      then "Вызов отклонён.".raise
       else if me.exists(_.isBot) && !c.clock.map(_.config).forall(lila.core.game.isBotCompatible)
-      then "Game incompatible with a BOT account".raise
+      then "Эта партия недоступна для аккаунта-бота".raise
       else if c.open.exists(!_.canJoin)
-      then "The challenge is not for you to accept.".raise
+      then "Этот вызов адресован не вам.".raise
       else
         val openFixedColor = for
           me <- me
@@ -153,7 +153,7 @@ final class ChallengeApi(
             _ <- repo.setChallenger(c.setChallenger(me, anonSecret), color)
           yield none
         else if color.map(Challenge.ColorChoice.apply).has(c.colorChoice)
-        then "This color has already been chosen".raise
+        then "Этот цвет уже выбран".raise
         else
           for
             me <- withPerf

@@ -105,7 +105,7 @@ final class TournamentList(helpers: Helpers, ui: TournamentUi)(
         )
 
   def history(freq: Freq, pager: Paginator[Tournament])(using Context) =
-    Page("Tournament history")
+    Page("История турниров")
       .js(infiniteScrollEsmInit)
       .css("tournament.history"):
         main(cls := "page-menu arena-history")(
@@ -116,7 +116,7 @@ final class TournamentList(helpers: Helpers, ui: TournamentUi)(
               )
           ),
           div(cls := "page-menu__content box")(
-            boxTop(h1(nameOf(freq), " tournaments")),
+            boxTop(h1("Турниры: ", nameOf(freq))),
             div(cls := "arena-list")(
               table(cls := "slist slist-pad")(
                 tbody(cls := "infinite-scroll")(
@@ -129,7 +129,7 @@ final class TournamentList(helpers: Helpers, ui: TournamentUi)(
         )
 
   def calendar(json: play.api.libs.json.JsObject)(using Context) =
-    Page("Tournament calendar")
+    Page(trans.site.tournamentCalendar.txt())
       .js(PageModule("tournament.calendar", Json.obj("data" -> json)))
       .css("tournament.calendar"):
         main(cls := "box")(
@@ -196,7 +196,18 @@ final class TournamentList(helpers: Helpers, ui: TournamentUi)(
         )
       )
 
-  private def nameOf(f: Freq) = if f == Freq.Weekend then "Elite" else f.name
+  private def nameOf(f: Freq) = f match
+    case Freq.Unique => "Особые"
+    case Freq.Marathon => "Марафоны"
+    case Freq.Shield => "Щиты"
+    case Freq.Yearly => "Ежегодные"
+    case Freq.Monthly => "Ежемесячные"
+    case Freq.Weekend => "Элитные"
+    case Freq.Weekly => "Еженедельные"
+    case Freq.Daily => "Ежедневные"
+    case Freq.Eastern => "Восточные"
+    case Freq.Hourly => "Ежечасные"
+    case other => other.name
 
   private val allFreqs = List(
     Freq.Unique,
@@ -226,19 +237,19 @@ final class TournamentList(helpers: Helpers, ui: TournamentUi)(
         h2(cls := "text", dataIcon := perfType.icon)(name),
         ul(
           fws.yearly.map: w =>
-            freqWinner(w, "Yearly"),
+            freqWinner(w, "Ежегодный"),
           fws.monthly.map: w =>
-            freqWinner(w, "Monthly"),
+            freqWinner(w, "Ежемесячный"),
           fws.weekly.map: w =>
-            freqWinner(w, "Weekly"),
+            freqWinner(w, "Еженедельный"),
           fws.daily.map: w =>
-            freqWinner(w, "Daily")
+            freqWinner(w, "Ежедневный")
         )
       )
 
     def apply(winners: AllWinners)(using Context) =
       def eliteWinners = section(
-        h2(cls := "text", dataIcon := Icon.CrownElite)("Elite Arena"),
+        h2(cls := "text", dataIcon := Icon.CrownElite)("Элитная арена"),
         ul(
           winners.elite.map: w =>
             li(
@@ -248,7 +259,7 @@ final class TournamentList(helpers: Helpers, ui: TournamentUi)(
         )
       )
       def marathonWinners = section(
-        h2(cls := "text", dataIcon := Icon.Globe)("Marathon"),
+        h2(cls := "text", dataIcon := Icon.Globe)("Марафон"),
         ul(
           winners.marathon.map { w =>
             li(
@@ -260,7 +271,7 @@ final class TournamentList(helpers: Helpers, ui: TournamentUi)(
           }
         )
       )
-      Page("Tournament leaderboard")
+      Page(trans.arena.tournamentWinners.txt())
         .css("tournament.leaderboard")
         .flag(_.fullScreen):
           main(cls := "page-menu")(
@@ -269,9 +280,9 @@ final class TournamentList(helpers: Helpers, ui: TournamentUi)(
               h1(cls := "box__top")(trans.arena.tournamentWinners()),
               div(cls := "tournament-leaderboards")(
                 eliteWinners,
-                freqWinners(winners.hyperbullet, PerfType.Bullet, "HyperBullet"),
+                freqWinners(winners.hyperbullet, PerfType.Bullet, "Гипербуллет"),
                 freqWinners(winners.bullet, PerfType.Bullet, trans.site.bullet.txt()),
-                freqWinners(winners.superblitz, PerfType.Blitz, "SuperBlitz"),
+                freqWinners(winners.superblitz, PerfType.Blitz, "Суперблиц"),
                 freqWinners(winners.blitz, PerfType.Blitz, trans.site.blitz.txt()),
                 freqWinners(winners.rapid, PerfType.Rapid, trans.site.rapid.txt()),
                 marathonWinners,

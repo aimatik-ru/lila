@@ -43,4 +43,5 @@
   <string name="toSeeConsoleMessage">Чтобы увидеть сообщения в консоли, нажмите Command + Option + C (Mac) или Control + Shift + C (Windows, Linux, Chrome OS)</string>
   <string name="playWithDgtBoard">Играть на доске DGT</string>
   <string name="configure">Настроить</string>
+  <string name="configureYourDgtBoard">Настройка Вашей электронной доски DGT</string>
 </resources>

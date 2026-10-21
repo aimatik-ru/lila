@@ -45,7 +45,7 @@ export const renderHistoryChart = (data: OpeningPage): void => {
         y: {
           title: {
             display: true,
-            text: 'Popularity in %',
+            text: 'Популярность, %',
           },
         },
       },

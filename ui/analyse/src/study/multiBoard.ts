@@ -337,7 +337,7 @@ export const verticalEvalGauge = (
         {
           attrs: {
             'data-id': chap.id,
-            title: 'Checkmate',
+            title: i18n.site.checkmate,
             style: `--multi-eval-percent: ${fenColor(chap.fen) === 'white' ? 100 : 0}%`,
           },
         },

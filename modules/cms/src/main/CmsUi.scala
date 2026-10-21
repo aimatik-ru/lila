@@ -28,7 +28,7 @@ final class CmsUi(helpers: Helpers)(menu: Context ?=> Frag):
 
   def render(page: CmsPage.Render)(using Context): Frag =
     if !page.live && !Granter.opt(_.Pages)
-    then p("Oops, looks like there will be something here soon... but not yet!")
+    then p("Скоро здесь что-то появится… но пока пусто!")
     else
       frag(
         editButton(page.id),

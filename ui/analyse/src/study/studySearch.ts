@@ -55,11 +55,11 @@ export function view(ctrl: SearchCtrl) {
     easyClose: 'clickOutside',
     modal: true,
     vnodes: [
-      h('h2', `Search chapters`),
+      h('h2', 'Поиск по главам'),
       h(
         'div.search-wrapper',
         h('input', {
-          attrs: { autofocus: 1, placeholder: `Search in ${ctrl.studyName}`, value: ctrl.query() },
+          attrs: { autofocus: 1, placeholder: `Поиск в «${ctrl.studyName}»`, value: ctrl.query() },
           hook: onInsert((el: HTMLInputElement) => {
             el.addEventListener('input', (e: KeyboardEvent) =>
               ctrl.query((e.target as HTMLInputElement).value.trim()),
@@ -90,7 +90,7 @@ export function view(ctrl: SearchCtrl) {
                   c.name,
                 ),
                 c.playing
-                  ? h('ongoing', { attrs: { ...dataIcon(licon.DiscBig), title: 'Ongoing' } })
+                  ? h('ongoing', { attrs: { ...dataIcon(licon.DiscBig), title: 'Идёт' } })
                   : c.status && h('res', c.status),
               ]),
             )

@@ -20,24 +20,24 @@ final class SiteMessage(helpers: Helpers):
         body
       )
 
-  def noBot = apply("No bot area"):
-    p("Sorry, bot accounts are not allowed here.")
+  def noBot = apply("Ботам сюда нельзя"):
+    p("Извините, учётным записям ботов сюда нельзя.")
 
-  def noEngine = apply("No engine area"):
-    p("Sorry, engine assisted players are not allowed here.")
+  def noEngine = apply("Доступ закрыт"):
+    p("Извините, игрокам, которые пользуются подсказками движка, сюда нельзя.")
 
-  def noBooster = apply("No booster area"):
-    p("Sorry, boosters and sandbaggers are not allowed here.")
+  def noBooster = apply("Доступ закрыт"):
+    p("Извините, игрокам, которые накручивают или занижают рейтинг, сюда нельзя.")
 
   def noLame(using me: Me) =
     if me.marks.boost then noBooster
     else if me.marks.engine then noEngine
     else // ?
-      apply("Restricted area"):
-        p("Sorry, the access to this resource is restricted.")
+      apply("Доступ ограничен"):
+        p("Извините, доступ к этой странице ограничен.")
 
   def blacklistedMessage(using ctx: Context) =
-    s"Sorry, your IP address ${ctx.ip} has been used to violate the ToS, and is now blacklisted."
+    s"Извините, с вашего IP-адреса ${ctx.ip} нарушали правила площадки, и теперь он заблокирован."
 
   def blacklistedSnippet(using Context) = lila.ui.Snippet(frag(blacklistedMessage))
 
@@ -55,33 +55,37 @@ final class SiteMessage(helpers: Helpers):
 
   def insightNoGames(u: User)(using Context) =
     apply(
-      title = s"${u.username} has not played a rated game yet!",
+      title = s"${u.username} ещё не сыграл ни одной рейтинговой партии!",
       back = routes.User.show(u.id).url.some
     ):
       p(
-        "Before using chess insights,",
+        "Чтобы открыть шахматную аналитику, игрок ",
         userLink(u),
-        " has to play at least one rated game."
+        " должен сыграть хотя бы одну рейтинговую партию."
       )
 
-  def teamCreateLimit = apply("Cannot create a team"):
-    p("You have already created a team this week.")
+  def teamCreateLimit = apply("Нельзя создать команду"):
+    p("На этой неделе вы уже создали команду.")
 
-  def teamJoinLimit = apply("Cannot join the team"):
-    p("You have already joined too many teams.")
+  def teamJoinLimit = apply("Нельзя вступить в команду"):
+    p("Вы уже вступили в слишком много команд.")
 
   def relayPrivate = apply("This tournament is private", routes.RelayTour.index().url.some):
     p("Sorry, this tournament is private, or maybe it doesn't exist.")
 
-  def authFailed = apply("403 - Access denied!"):
-    p("You tried to visit a page you're not authorized to access.")
+  def authFailed = apply("403 — доступ запрещён!"):
+    p("У вас нет доступа к этой странице.")
 
-  def serverError(msg: String) = apply("Something went wrong")(p(msg))
+  def serverError(msg: String) = apply("Что-то пошло не так")(p(msg))
 
-  def temporarilyDisabled = apply("Temporarily disabled"):
-    p("Sorry, this feature is temporarily disabled while we figure out a way to bring it back.")
+  def temporarilyDisabled = apply("Временно отключено"):
+    p("Извините, эта функция временно отключена. Мы ищем способ её вернуть.")
 
-  def rateLimited(msg: String = "Too many requests") = apply(msg):
-    p("Your device or network has sent too many requests in a short amount of time. Please try again later.")
+  def rateLimited(msg: String = "Слишком много запросов") =
+    apply(if msg.startsWith("Too many requests") then "Слишком много запросов" else msg):
+      p(
+        "С вашего устройства или из вашей сети пришло слишком много запросов " +
+          "за короткое время. Попробуйте позже."
+      )
 
-  def notYet(text: String) = apply("Not yet available")(p(text))
+  def notYet(text: String) = apply("Пока недоступно")(p(text))

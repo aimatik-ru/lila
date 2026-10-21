@@ -23,7 +23,7 @@ final class SwissForm(using mode: play.api.Mode):
           "limit" -> number.into[LimitSeconds].verifying(clockLimits.contains),
           "increment" -> number(min = 0, max = 120).into[IncrementSeconds]
         )(ClockConfig.apply)(unapply)
-          .verifying("Invalid clock", _.estimateTotalSeconds > 0),
+          .verifying("Неверный контроль времени", _.estimateTotalSeconds > 0),
         "startsAt" -> optional(inTheFuture(ISOInstantOrTimestamp.mapping)),
         "variant" -> optional(typeIn(Variant.list.all.map(_.key).toSet)),
         "rated" -> optional(boolean.into[Rated]),
@@ -37,23 +37,26 @@ final class SwissForm(using mode: play.api.Mode):
         "conditions" -> SwissCondition.form.all,
         "forbiddenPairings" -> optional(
           cleanNonEmptyText.verifying(
-            s"Maximum forbidden pairings: ${Swiss.maxForbiddenPairings}",
+            s"Запрещённых пар не больше ${Swiss.maxForbiddenPairings}",
             str => str.linesIterator.size <= Swiss.maxForbiddenPairings
           )
         ),
         "manualPairings" -> optional(
           cleanNonEmptyText
             .verifying(
-              s"Maximum manual pairings: ${Swiss.maxManualPairings}",
+              s"Ручных пар не больше ${Swiss.maxManualPairings}",
               str => str.linesIterator.size <= Swiss.maxManualPairings
             )
             .verifying(
-              "Invalid pairings, maybe a player is paired twice?",
+              "Неверные пары: возможно, игрок указан дважды?",
               SwissManualPairing.validate
             )
         )
       )(SwissData.apply)(unapply)
-        .verifying("15s and 0+1 variant games cannot be rated", _.validRatedVariant)
+        .verifying(
+          "Партии вариантов с контролем 15 с и 0+1 не могут быть рейтинговыми",
+          _.validRatedVariant
+        )
     )
 
   def create(using Me) =
@@ -113,9 +116,8 @@ object SwissForm:
   val clockLimitChoices = options(
     LimitSeconds.raw(clockLimits),
     l =>
-      s"${chess.Clock.Config(LimitSeconds(l), IncrementSeconds(0)).limitString}${
-          if l <= 1 then " minute" else " minutes"
-        }"
+      val limit = chess.Clock.Config(LimitSeconds(l), IncrementSeconds(0)).limitString
+      if l % 60 == 0 then lila.gathering.RuPlural.minutes(l / 60) else s"$limit минуты"
   )
 
   val roundIntervals: Seq[Int] =
@@ -145,19 +147,19 @@ object SwissForm:
   val roundIntervalChoices = options(
     roundIntervals,
     s =>
-      if s == Swiss.RoundInterval.auto then s"Automatic"
-      else if s == Swiss.RoundInterval.manual then s"Manually schedule each round"
-      else if s < 60 then s"$s seconds"
-      else if s < 3600 then s"${s / 60} minute(s)"
-      else if s < 24 * 3600 then s"${s / 3600} hour(s)"
-      else s"${s / 24 / 3600} days(s)"
+      if s == Swiss.RoundInterval.auto then "Автоматически"
+      else if s == Swiss.RoundInterval.manual then "Назначать каждый тур вручную"
+      else if s < 60 then lila.gathering.RuPlural.seconds(s)
+      else if s < 3600 then lila.gathering.RuPlural.minutes(s / 60)
+      else if s < 24 * 3600 then lila.gathering.RuPlural.hours(s / 3600)
+      else lila.gathering.RuPlural.days(s / 24 / 3600)
   )
 
   val chatForChoices = List(
-    Swiss.ChatFor.NONE -> "No chat",
-    Swiss.ChatFor.LEADERS -> "Team leaders only",
-    Swiss.ChatFor.MEMBERS -> "Team members only",
-    Swiss.ChatFor.ALL -> "All Логик players"
+    Swiss.ChatFor.NONE -> "Без чата",
+    Swiss.ChatFor.LEADERS -> "Только лидеры команды",
+    Swiss.ChatFor.MEMBERS -> "Только участники команды",
+    Swiss.ChatFor.ALL -> "Все игроки «Логика»"
   )
 
   case class SwissData(

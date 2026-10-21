@@ -9,7 +9,8 @@ import lila.rating.PerfType
 private object TournamentName:
 
   def apply(tour: Tournament, full: Boolean)(using Translate): String =
-    tour.scheduleData.fold(if full then s"${tour.name} Arena" else tour.name): (freq, speed) =>
+    def fallback = if full then I18nKey.tourname.xArena.txt(tour.name) else tour.name
+    tour.scheduleData.fold(fallback): (freq, speed) =>
       TournamentName(tour, freq, speed, full)
 
   def apply(tour: Tournament, freq: Schedule.Freq, speed: Schedule.Speed, full: Boolean)(using

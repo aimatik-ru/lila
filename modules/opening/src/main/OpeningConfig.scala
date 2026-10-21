@@ -34,12 +34,12 @@ case class OpeningConfig(ratings: Set[Int], speeds: Set[Speed]):
       stableId: A => String,
       label: A => String
   ): String = list match
-    case Nil => "All"
+    case Nil => "Все"
     case List(single) => label(single)
     case first :: rest =>
       val many = first :: rest
       val hash = many.map(stableId).mkString(",")
-      if reference == hash then "All"
+      if reference == hash then "Все"
       else if reference.contains(hash) then s"${label(first)} → ${label(rest.lastOption | first)}"
       else many.map(label).mkString(", ")
 

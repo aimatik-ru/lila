@@ -146,7 +146,7 @@ object Study:
     val owner = StudyMember(id = user.id, role = StudyMember.Role.Write)
     Study(
       id = id | makeId,
-      name = name | StudyName(s"${user.username}'s Study"),
+      name = name | StudyName(s"Студия ${user.username}"),
       members = StudyMembers(Map(user.id -> owner)),
       position = Position.Ref(StudyChapterId(""), UciPath.root),
       ownerId = user.id,

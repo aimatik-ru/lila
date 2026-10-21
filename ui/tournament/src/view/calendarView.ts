@@ -13,6 +13,9 @@ import { dataIcon } from 'lib/view';
 import type { Tournament } from '../interfaces';
 import type { Ctrl, Lanes } from '../tournament.calendar';
 
+const weekday = (d: Date): string => d.toLocaleDateString('ru-RU', { weekday: 'long' });
+const fullDate = (d: Date, fmt: string): string => `${weekday(d)}, ${format(d, fmt)}`;
+
 function tournamentClass(tour: Tournament, day: Date): Classes {
   const classes: Classes = {
     rated: tour.rated,
@@ -41,7 +44,7 @@ function renderTournament(tour: Tournament, day: Date) {
       attrs: {
         href: '/tournament/' + tour.id,
         style: 'width: ' + width + '%; ' + startDirection() + ': ' + left + '%',
-        title: `${tour.fullName} - ${format(tour.bounds.start, 'EEEE, dd/MM/yyyy HH:mm')}`,
+        title: `${tour.fullName} - ${fullDate(tour.bounds.start, 'dd/MM/yyyy HH:mm')}`,
       },
     },
     [h('span.icon', tour.perf ? { attrs: dataIcon(iconOf(tour)) } : {}), h('span.body', [tour.fullName])],
@@ -76,7 +79,7 @@ function renderDay(ctrl: Ctrl) {
     const dayEnd = addDays(day, 1);
     const tours = ctrl.data.tournaments.filter(t => t.bounds.start < dayEnd && t.bounds.end > day);
     return h('day', [
-      h('date', { attrs: { title: format(day, 'EEEE, dd/MM/yyyy') } }, [format(day, 'dd/MM')]),
+      h('date', { attrs: { title: fullDate(day, 'dd/MM/yyyy') } }, [format(day, 'dd/MM')]),
       h(
         'lanes',
         makeLanes(tours).map(l => renderLane(l, day)),

@@ -127,12 +127,13 @@ function view(ctrl: AnalyseCtrl, path: TreePath, coords: Coords): VNode {
       hl('p.title', nodeFullName(node)),
 
       idbTree.someCollapsedOf(false) && // with variation hiding enabled, collapse/expand all are most common
-        action(licon.MinusButton, 'Collapse all', () => idbTree.setCollapsedFrom('', true)),
+        action(licon.MinusButton, i18n.site.collapseVariations, () => idbTree.setCollapsedFrom('', true)),
 
       idbTree.someCollapsedOf(true) &&
-        action(licon.PlusButton, 'Expand all', () => idbTree.setCollapsedFrom('', false)),
+        action(licon.PlusButton, i18n.site.expandVariations, () => idbTree.setCollapsedFrom('', false)),
 
-      canPrune && action(licon.Prune, 'Prune to main line', () => ctrl.pruneToMainline(path)), // correspondence
+      canPrune && // correspondence
+        action(licon.Prune, 'Оставить только главную линию', () => ctrl.pruneToMainline(path)),
 
       canPromote && action(licon.UpTriangle, i18n.site.promoteVariation, () => ctrl.promote(path, false)),
       !onMainline && action(licon.Checkmark, i18n.site.makeMainLine, () => ctrl.promote(path, true)),

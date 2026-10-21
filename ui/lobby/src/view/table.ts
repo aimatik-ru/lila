@@ -19,17 +19,17 @@ export default function table(ctrl: LobbyController) {
       gameType: 'hook',
       label: i18n.site.createLobbyGame,
       disabled: hookDisabled,
-      title: 'Create a custom game that any online player can join.',
+      title: 'Создайте игру со своими настройками: к ней сможет присоединиться любой игрок онлайн.',
     },
     {
       gameType: 'friend',
       label: i18n.site.challengeAFriend,
       disabled: hasOngoingRealTimeGame,
       title: $trim`
-        Create a custom game and choose your opponent.
+        Создайте игру со своими настройками и выберите соперника.
 
-        You will receive a challenge link to share via email or text, as well as a QR code
-        that someone nearby can scan.`,
+        Вы получите ссылку-вызов, которую можно отправить по почте или в сообщении, и QR-код,
+        который можно отсканировать рядом.`,
     },
     {
       gameType: 'ai',
@@ -40,7 +40,7 @@ export default function table(ctrl: LobbyController) {
   if (opts.bots)
     lobbyButtons.push({
       gameType: 'bots',
-      label: 'play bot',
+      label: 'Играть с ботом',
     });
 
   return hl('div.lobby__table', [

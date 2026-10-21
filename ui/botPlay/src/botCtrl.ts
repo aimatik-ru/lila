@@ -59,7 +59,7 @@ export class BotCtrl {
   private readonly resumeGame = (game: Game) => {
     const bot = this.opts.bots.find(b => b.uid === game.data.botKey);
     if (!bot) {
-      alert(`Couldn't find your opponent ${game.data.botKey}`);
+      alert(`Не удалось найти соперника ${game.data.botKey}`);
       return;
     }
     try {
@@ -80,7 +80,7 @@ export class BotCtrl {
 
   private readonly onResumeFail = (e: unknown) => {
     console.error('Failed to resume game', e);
-    alert('Failed to resume game. Please start a new one.');
+    alert('Не удалось продолжить игру. Начните новую.');
     saveCurrentGame(null);
   };
 

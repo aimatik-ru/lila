@@ -182,7 +182,7 @@ function renderTournament(tour: Tournament) {
         h('span.infos', [
           h('span.text', [
             displayClock(tour.clock) + ' ',
-            tour.position ? 'Thematic ' : null,
+            tour.position ? i18n.site.thematic + ' ' : null,
             i18n.site[`${tour.rated ? 'rated' : 'casual'}Tournament`],
           ]),
           tour.nbPlayers ? h('span.nb-players', { attrs: dataIcon(licon.User) }, tour.nbPlayers) : null,

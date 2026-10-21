@@ -55,7 +55,7 @@ object page:
   )(using Context) =
     val u = info.user
     val filterName = userGameFilterTitleNoTag(u, info.nbs, filters.current)
-    val pageName = (games.currentPage > 1).so(s" - page ${games.currentPage}")
+    val pageName = (games.currentPage > 1).so(s" — страница ${games.currentPage}")
     Page(s"${u.username} $filterName$pageName")
       .js(pageModule(info))
       .js(esModules(filters.current.name == "search"))
@@ -84,12 +84,12 @@ object page:
       PageModule("chart.ratingHistory", SafeJsonStr(s"""{"data":$rc}"""))
 
   def deleted(canCreate: Boolean) =
-    Page("No such player"):
+    Page("Игрок не найден"):
       main(cls := "page-small box box-pad page")(
-        h1(cls := "box__top")("No such player"),
+        h1(cls := "box__top")("Игрок не найден"),
         div(
-          p("This username doesn't match any Логик player."),
-          canCreate.not.option(p("It cannot be used to create a new account."))
+          p("На «Логике» нет игрока с таким именем."),
+          canCreate.not.option(p("Это имя нельзя использовать для новой учётной записи."))
         )
       )
 

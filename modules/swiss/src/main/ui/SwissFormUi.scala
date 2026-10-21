@@ -57,7 +57,7 @@ final class SwissFormUi(helpers: Helpers)(
         val fields = SwissFields(form, swiss.some)
         main(cls := "page-small")(
           div(cls := "swiss__form box box-pad")(
-            h1(cls := "box__top")("Edit ", swiss.name),
+            h1(cls := "box__top")(trans.site.edit(), " ", swiss.name),
             postForm(cls := "form3", action := routes.Swiss.update(swiss.id))(
               fields.tournamentFields,
               fields.gameFields,
@@ -83,7 +83,7 @@ final class SwissFormUi(helpers: Helpers)(
     private def disabledAfterStart = swiss.exists(!_.isCreated)
 
     def tournamentFields =
-      form3.fieldset("Tournament", toggle = true.some)(
+      form3.fieldset(trans.site.tournament(), toggle = true.some)(
         name,
         form3.split(nbRounds, startsAt),
         form3.split(
@@ -93,7 +93,7 @@ final class SwissFormUi(helpers: Helpers)(
       )
 
     def gameFields =
-      form3.fieldset("Games", toggle = true.some)(
+      form3.fieldset(trans.site.games(), toggle = true.some)(
         clock,
         form3.split(variant, position)
       )
@@ -156,7 +156,7 @@ final class SwissFormUi(helpers: Helpers)(
       )(form3.flatpickr(_)(swiss.exists(!_.isCreated).option(disabled)))
 
     def conditionFields =
-      form3.fieldset("Entry conditions", toggle = swiss.exists(!_.settings.conditions.isDefault).some)(
+      form3.fieldset("Условия участия", toggle = swiss.exists(!_.settings.conditions.isDefault).some)(
         form3.split(
           nbRatedGame(form("conditions.nbRatedGame.nb")),
           accountAge(form("conditions.accountAge"))
@@ -182,7 +182,7 @@ final class SwissFormUi(helpers: Helpers)(
       )
 
     def featuresFields =
-      form3.fieldset("Features", toggle = false.some)(
+      form3.fieldset("Возможности", toggle = false.some)(
         form3.split(
           form3.group(form("chatFor"), trans.site.tournChat(), half = true) { f =>
             form3.select(
@@ -211,7 +211,7 @@ final class SwissFormUi(helpers: Helpers)(
       )
 
     def pairingsFields =
-      form3.fieldset("Custom pairings", toggle = false.some)(
+      form3.fieldset("Свои пары", toggle = false.some)(
         form3.split(forbiddenPairings, manualPairings)
       )
 

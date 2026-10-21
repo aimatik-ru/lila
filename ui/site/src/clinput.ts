@@ -92,7 +92,7 @@ function command(q: string) {
   } else if (is('stream') && parts[1]) location.href = '/streamer/' + parts[1];
   else if (is('blind') || is('nvui')) document.querySelector<HTMLFormElement>('#blind-mode')?.requestSubmit();
   else if (is('help')) help();
-  else alert(`Unknown command: "${q}". Type /help for the list of commands`);
+  else alert(`Неизвестная команда: «${q}». Наберите /help, чтобы увидеть список команд`);
 }
 
 function commandHelp(aliases: string, args: string, desc: string) {
@@ -114,17 +114,17 @@ function help() {
     easyClose: 'clickOutside',
     show: true,
     htmlText:
-      '<div><h3>Commands</h3>' +
-      commandHelp('/tv /follow', ' <user>', 'Watch someone play') +
-      commandHelp('/play /challenge /match', ' <user>', 'Challenge someone to play') +
-      commandHelp('/light /dark /transpLight /transpDark /system', '', 'Change the background theme') +
-      commandHelp('/stream', '<user>', 'Watch someone stream') +
-      commandHelp('/blind /nvui', '', 'Turn on blind mode (NVUI)') +
-      '<h3>Global hotkeys</h3>' +
-      commandHelp('s', '', 'Search for a user') +
-      commandHelp('/', '', 'Type a command') +
-      commandHelp('c', '', 'Focus the chat input') +
-      commandHelp('esc', '', 'Close modals like this one') +
+      '<div><h3>Команды</h3>' +
+      commandHelp('/tv /follow', ' <user>', 'Смотреть игру игрока') +
+      commandHelp('/play /challenge /match', ' <user>', 'Вызвать игрока на партию') +
+      commandHelp('/light /dark /transpLight /transpDark /system', '', 'Сменить тему фона') +
+      commandHelp('/stream', '<user>', 'Смотреть трансляцию стримера') +
+      commandHelp('/blind /nvui', '', 'Включить режим для незрячих (NVUI)') +
+      '<h3>Горячие клавиши</h3>' +
+      commandHelp('s', '', 'Найти игрока') +
+      commandHelp('/', '', 'Ввести команду') +
+      commandHelp('c', '', 'Перейти к полю чата') +
+      commandHelp('esc', '', 'Закрыть такие окна, как это') +
       '</div>',
   });
 }

@@ -131,7 +131,4 @@ export async function initModule(): Promise<void> {
   });
 }
 
-const makeTitle = (index: number, lat: number) => [
-  (index ? 'Ping' : 'Server latency') + ' in milliseconds',
-  `${lat}`,
-];
+const makeTitle = (index: number, lat: number) => [(index ? 'Пинг' : 'Задержка сервера') + ', мс', `${lat}`];

@@ -70,11 +70,11 @@ export async function initModule(o?: CropOpts): Promise<void> {
     modal: true,
     easyClose: 'clickOutside',
     htmlText: $html`
-      <h2>Crop image to desired shape</h2>
+      <h2>Обрежьте изображение</h2>
       <div class="crop-view"></div>
       <span class="dialog-actions">
-        <button class="button button-empty cancel">cancel</button>
-        <button class="button submit">submit</button>
+        <button class="button button-empty cancel">${i18n.site.cancel}</button>
+        <button class="button submit">${i18n.site.save}</button>
       </span>`,
     insert: [{ selector: '.crop-view', nodes: container }],
     actions: [

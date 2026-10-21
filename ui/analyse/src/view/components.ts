@@ -180,7 +180,7 @@ export function renderInputs(ctrl: AnalyseCtrl): VNode | undefined {
             });
             el.addEventListener('input', () => {
               ctrl.fenInput = el.value;
-              el.setCustomValidity(parseFen(el.value.trim()).isOk ? '' : 'Invalid FEN');
+              el.setCustomValidity(parseFen(el.value.trim()).isOk ? '' : i18n.site.invalidFen);
             });
           }),
           postpatch: (_, vnode) => {
@@ -300,10 +300,11 @@ export function renderMoveNodes(
 }
 
 function evalInfo(ev: ClientEval | ServerEval): string {
-  if ('knodes' in ev) return `Server eval · About ${(ev.knodes * 1000).toLocaleString()} nodes searched`;
-  if (!('nodes' in ev)) return 'Unknown strength';
-  const prelude = ev.cloud ? 'Cloud eval' : 'Local eval';
-  return `${prelude} · ${ev.nodes.toLocaleString()} nodes searched`;
+  if ('knodes' in ev)
+    return `Оценка сервера · просчитано около ${(ev.knodes * 1000).toLocaleString()} позиций`;
+  if (!('nodes' in ev)) return 'Глубина расчёта неизвестна';
+  const prelude = ev.cloud ? 'Облачная оценка' : 'Оценка на устройстве';
+  return `${prelude} · просчитано ${ev.nodes.toLocaleString()} позиций`;
 }
 
 export const addChapterId = (study: StudyCtrl | undefined, cssClass: string) =>

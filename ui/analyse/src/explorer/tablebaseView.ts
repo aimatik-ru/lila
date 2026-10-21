@@ -34,7 +34,7 @@ const showDtm = (fen: FEN, move: TablebaseMoveStats) =>
     ? h(
         'result.' + winnerOf(fen, move),
         {
-          attrs: { title: i18n.site.mateInXHalfMoves(Math.abs(move.dtm)) + ' (Depth To Mate)' },
+          attrs: { title: i18n.site.mateInXHalfMoves(Math.abs(move.dtm)) + ' (глубина до мата)' },
         },
         'DTM ' + Math.abs(move.dtm),
       )
@@ -44,7 +44,7 @@ const showDtw = (fen: FEN, move: TablebaseMoveStats) =>
   move.dtw
     ? h(
         'result.' + winnerOf(fen, move),
-        { attrs: { title: 'Half-moves to win (Depth To Win)' } },
+        { attrs: { title: 'Полуходов до выигрыша (глубина до выигрыша)' } },
         'DTW ' + Math.abs(move.dtw),
       )
     : undefined;
@@ -53,7 +53,7 @@ const showDtc = (fen: FEN, move: TablebaseMoveStats) =>
   move.dtc
     ? h(
         'result.' + winnerOf(fen, move),
-        { attrs: { title: 'Moves to capture, promotion, or checkmate (Depth To Conversion)' } },
+        { attrs: { title: 'Ходов до взятия, превращения или мата (глубина до размена)' } },
         'DTC ' + Math.abs(move.dtc),
       )
     : undefined;
@@ -74,7 +74,7 @@ function showDtz(fen: FEN, move: TablebaseMoveStats): VNode | undefined {
         'result.' + winnerOf(fen, move),
         {
           attrs: {
-            title: i18n.site.dtzWithRounding + ' (Distance To Zeroing)',
+            title: i18n.site.dtzWithRounding + ' (до обнуления счётчика 50 ходов)',
           },
         },
         'DTZ ' + Math.abs(move.dtz),

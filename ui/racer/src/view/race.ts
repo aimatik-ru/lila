@@ -66,7 +66,7 @@ const renderTrack = (
   );
 };
 
-const anonymous = makeExoticTag('anonymous', { title: 'Anonymous player' });
+const anonymous = makeExoticTag('anonymous', { title: 'Анонимный игрок' });
 
 export const playerLink = (player: PlayerWithScore, isMe: boolean) =>
   player.id ? userLink({ ...player, line: false }) : anonymous([player.name, isMe ? ' (you)' : undefined]);

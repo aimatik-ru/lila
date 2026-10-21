@@ -4,7 +4,7 @@ import type { StageNoID } from './list';
 
 const imgUrl = assetUrl + 'images/learn/crossed-swords.svg';
 
-const twoMoves = 'Threaten the opponent king<br>in two moves!';
+const twoMoves = i18n.learn.checkInTwoGoal;
 
 const common = {
   nbMoves: 2,
@@ -14,10 +14,10 @@ const common = {
 
 const stage: StageNoID = {
   key: 'check2',
-  title: 'Check in two',
-  subtitle: 'Two moves to give a check',
+  title: i18n.learn.checkInTwo,
+  subtitle: i18n.learn.twoMovesToGiveCheck,
   image: imgUrl,
-  intro: 'Find the right combination of two moves that checks the opponent king!',
+  intro: i18n.learn.checkInTwoIntro,
   illustration: roundSvg(imgUrl),
   levels: [
     {
@@ -42,6 +42,6 @@ const stage: StageNoID = {
       fen: '8/8/8/2k5/q7/4N3/3B4/8 w - -',
     },
   ].map((l, i) => toLevel({ ...common, ...l }, i)),
-  complete: 'Congratulations! You checked your opponent, forcing them to defend their king!',
+  complete: i18n.learn.checkInTwoComplete,
 };
 export default stage;

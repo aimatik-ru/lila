@@ -46,7 +46,7 @@ function loginStart() {
                 load();
               } else {
                 alert(
-                  (text || res.statusText).slice(0, 300) + '. Please wait some time before trying again.',
+                  (text || res.statusText).slice(0, 300) + '. Подождите немного и попробуйте снова.',
                 ).then(() => toggleSubmit($f.find('.submit'), true));
               }
             } catch (e) {
@@ -80,7 +80,7 @@ function signupStart() {
     if (res.ok) $exists.toggleClass('none', !body);
     else if (res.status === 400) {
       $exists.addClass('none');
-      $group.append(`<div class="error error-validation">${body.error || 'Invalid'}</div>`);
+      $group.append(`<div class="error error-validation">${body.error || 'Недопустимое значение'}</div>`);
     } else console.warn('Username check failed', res);
   }, 300);
 

@@ -17,10 +17,11 @@ final class CoordinateUi(helpers: Helpers):
       .js(pageModule(scoreOption))
       .csp(_.withWebAssembly)
       .graph(
-        title = "Chess board coordinates trainer",
+        title = "Тренажёр координат шахматной доски",
         url = routeUrl(routes.Coordinate.home),
         description =
-          "Knowing the chessboard coordinates is a very important chess skill. A square name appears on the board and you must click on the correct square."
+          "Знать координаты шахматной доски — очень важный навык. На доске появляется " +
+            "название поля, а вы должны нажать на нужное поле."
       )
       .hrefLangs(LangPath(routes.Coordinate.home))
       .flag(_.zoom)

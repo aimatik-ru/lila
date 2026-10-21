@@ -13,10 +13,20 @@ trait GameHelper:
 
   def gameOpening: (Game, Boolean) => Option[_root_.chess.opening.Opening]
 
+  private val speedNamesRu = Map(
+    chess.Speed.UltraBullet -> "Ультрапуля",
+    chess.Speed.Bullet -> "Пуля",
+    chess.Speed.Blitz -> "Блиц",
+    chess.Speed.Rapid -> "Рапид",
+    chess.Speed.Classical -> "Классика",
+    chess.Speed.Correspondence -> "Заочные"
+  )
+
   def titleGame(g: Game) =
-    val speed = chess.Speed(g.clock.map(_.config)).name
-    val variant = g.variant.exotic.so(s" ${g.variant.name}")
-    s"$speed$variant Chess • ${playerText(g.whitePlayer)} vs ${playerText(g.blackPlayer)}"
+    val speedKey = chess.Speed(g.clock.map(_.config))
+    val speed = speedNamesRu.getOrElse(speedKey, speedKey.name)
+    val variant = g.variant.exotic.so(s", ${g.variant.name}")
+    s"$speed$variant • ${playerText(g.whitePlayer)} — ${playerText(g.blackPlayer)}"
 
   def shortClockName(clock: Option[Clock.Config])(using t: Translate): Frag =
     clock.fold[Frag](trans.site.unlimited())(shortClockName)

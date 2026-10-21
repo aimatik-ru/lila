@@ -37,11 +37,11 @@ object page:
     ui.webmasters(lila.pref.PieceSet.all.map(_.name))
 
   def survey =
-    Page(title = "User Survey")
+    Page(title = "Опрос пользователей")
       .flag(_.noRobots)
       .js(Esm("bits.survey"))(
         main(cls := "survey-redirect")(
-          h1("Redirecting...")
+          h1("Перенаправление…")
         )
       )
 
@@ -65,11 +65,12 @@ object variant:
         )
 
   def home(using Context) =
-    page(title = "Логик variants", klass = "variants"):
+    page(title = s"${trans.site.variants.txt()} — «Логик»", klass = "variants"):
       frag(
         h1(cls := "box__top")(trans.site.variants()),
         div(cls := "body box__pad")(
-          "Chess variants introduce variations of or new mechanics in regular Chess that gives it a unique, compelling, or sophisticated gameplay. Are you ready to think outside the box?"
+          "Варианты шахмат меняют правила обычной игры или добавляют новые механики. " +
+            "Игра становится необычной, увлекательной и хитрой. Готовы мыслить нестандартно?"
         ),
         div(cls := "variants")(
           lila.rating.PerfType.variants.map: pk =>

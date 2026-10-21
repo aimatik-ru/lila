@@ -307,7 +307,7 @@ function controls(ctrl: EditorCtrl, state: EditorState): VNode {
               {
                 ...dataIcon(licon.Microscope),
                 rel: 'nofollow',
-                title: 'Hotkey: a',
+                title: 'Клавиша: a',
                 class: {
                   button: true,
                   'button-empty': true,
@@ -370,7 +370,7 @@ function inputs(ctrl: EditorCtrl, fen: FEN): MaybeVNode {
           input(e) {
             const el = e.target as HTMLInputElement;
             const valid = parseFen(el.value.trim()).isOk;
-            el.setCustomValidity(valid ? '' : 'Invalid FEN');
+            el.setCustomValidity(valid ? '' : 'Неверный FEN');
           },
           blur(e) {
             const el = e.target as HTMLInputElement;
@@ -560,6 +560,6 @@ function fromImageButton(ctrl: EditorCtrl, icon?: LiconValue): MaybeVNode {
         },
       },
     },
-    'From image',
+    'Из картинки',
   );
 }

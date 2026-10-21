@@ -32,7 +32,7 @@ final class JsonView:
 
     val dimensionCategs = List(
       Categ(
-        "Setup",
+        "Условия",
         List(
           dimWrites.writes(D.Date),
           dimWrites.writes(D.Period),
@@ -43,7 +43,7 @@ final class JsonView:
         )
       ),
       Categ(
-        "Game",
+        "Партия",
         List(
           openingFamilyJson,
           openingJson,
@@ -53,7 +53,7 @@ final class JsonView:
         )
       ),
       Categ(
-        "Move",
+        "Ход",
         asMod.so {
           List(
             dimWrites.writes(D.Blur),
@@ -72,7 +72,7 @@ final class JsonView:
         )
       ),
       Categ(
-        "Result",
+        "Результат",
         List(
           dimWrites.writes(D.Termination),
           dimWrites.writes(D.Result)
@@ -82,13 +82,13 @@ final class JsonView:
 
     val metricCategs = List(
       Categ(
-        "Setup",
+        "Условия",
         List(
           Json.toJson(M.OpponentRating: InsightMetric)
         )
       ),
       Categ(
-        "Move",
+        "Ход",
         asMod.so {
           List(
             Json.toJson(M.Blurs: InsightMetric),
@@ -103,7 +103,7 @@ final class JsonView:
         )
       ),
       Categ(
-        "Evaluation",
+        "Оценка",
         List(
           Json.toJson(M.MeanAccuracy: InsightMetric),
           Json.toJson(M.MeanCpl: InsightMetric),
@@ -113,7 +113,7 @@ final class JsonView:
         )
       ),
       Categ(
-        "Result",
+        "Результат",
         List(
           Json.toJson(M.Termination: InsightMetric),
           Json.toJson(M.Result: InsightMetric),

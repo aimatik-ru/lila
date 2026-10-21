@@ -183,16 +183,16 @@ export function underboard(ctrl: AnalyseCtrl): LooseVNodes {
         : commentForm.viewDisabled(
             ctrl,
             study.members.canContribute()
-              ? 'Press REC to comment moves'
-              : 'Only the study members can comment on moves',
+              ? 'Нажмите REC, чтобы комментировать ходы'
+              : 'Комментировать ходы могут только участники исследования',
           );
       break;
     case 'glyphs':
       panel = ctrl.path
         ? study.vm.mode.write
           ? glyphForm.view(study.glyphForm)
-          : glyphForm.viewDisabled('Press REC to annotate moves')
-        : glyphForm.viewDisabled('Select a move to annotate');
+          : glyphForm.viewDisabled('Нажмите REC, чтобы оценивать ходы')
+        : glyphForm.viewDisabled('Выберите ход, чтобы оценить его');
       break;
     case 'serverEval':
       panel = serverEvalView(study.serverEval);
@@ -310,7 +310,7 @@ function buttons(root: AnalyseCtrl): VNode {
       toolButton({
         ctrl,
         tab: 'multiBoard',
-        hint: 'Multiboard',
+        hint: 'Все доски',
         icon: icon(licon.Multiboard)(),
         shouldBlurIfPrimaryClick: true,
       }),

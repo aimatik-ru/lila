@@ -21,10 +21,10 @@ const viewOngoing = (ctrl: SetupCtrl) => {
           }),
         hl('div.bot-setup__ongoing__content', [
           hl('h2.bot-setup__ongoing__name', g.bot.name),
-          hl('p.bot-setup__ongoing__text', 'Should we resume our game?'),
+          hl('p.bot-setup__ongoing__text', 'Продолжим нашу партию?'),
         ]),
       ])
-    : hl('h1.bot-setup__title', ['Боты', hl('strong.beta', 'EARLY BETA')]);
+    : hl('h1.bot-setup__title', ['Боты', hl('strong.beta', 'БЕТА')]);
 };
 
 const viewBotList = (ctrl: SetupCtrl) => {
@@ -55,7 +55,7 @@ const viewBotCard = (ctrl: SetupCtrl, bot: Bot, ongoing: boolean) =>
           hl('h2.bot-card__name', bot.name),
           // hl('span.bot-card__rating', BotUtil.rating(bot, 'classical').toString()),
         ]),
-        hl('p.bot-card__description', bot.description || 'Short description here'),
+        hl('p.bot-card__description', bot.description || 'Описание пока не добавлено'),
       ]),
     ],
   );

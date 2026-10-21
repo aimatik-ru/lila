@@ -183,11 +183,11 @@ final class ReplayUi(helpers: Helpers)(analyseUi: AnalyseUi):
                         copyMeInput("")(cls := "analyse__underboard__fen")
                       ),
                       div(
-                        strong("Image"),
+                        strong("Картинка"),
                         imageLinks
                       ),
                       div(
-                        strong("Share"),
+                        strong("Поделиться"),
                         shareLinks
                       ),
                       div(

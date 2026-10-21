@@ -3,17 +3,17 @@ package views.base
 import lila.app.UiEnv.{ *, given }
 
 def notFound(msg: Option[String]) =
-  Page(msg | "Page not found").css("bits.not-found"):
+  Page(msg | "Страница не найдена").css("bits.not-found"):
     main(cls := "not-found page-small box box-pad")(
       header(
         h1("404"),
         div(
-          strong("Page not found!"),
+          strong("Страница не найдена!"),
           msg.map(em(_)),
           p(
-            "Return to ",
-            a(href := routes.Lobby.home)("the homepage"),
-            span(cls := "or-play")(", or play this mini-game")
+            "Вернитесь ",
+            a(href := routes.Lobby.home)("на главную"),
+            span(cls := "or-play")(" или сыграйте в эту мини-игру")
           )
         )
       ),
@@ -27,19 +27,19 @@ def notFound(msg: Option[String]) =
         ),
         p(cls := "credits")(
           a(href := "https://github.com/Saturnyn/ChessPursuit")("ChessPursuit"),
-          " courtesy of ",
+          " — автор ",
           a(href := "https://github.com/Saturnyn")("Saturnyn")
         )
       )
     )
 
 def notFoundEmbed(msg: Option[String])(using EmbedContext) =
-  views.base.embed.site(title = msg | "Page not found", cssKeys = List("bits.not-found-embed"))(
+  views.base.embed.site(title = msg | "Страница не найдена", cssKeys = List("bits.not-found-embed"))(
     main(cls := "not-found page-small box box-pad")(
       header(
         h1("404"),
         div(
-          strong("Page not found!"),
+          strong("Страница не найдена!"),
           msg.map(em(_))
         )
       )

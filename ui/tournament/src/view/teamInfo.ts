@@ -43,7 +43,7 @@ export default function (ctrl: TournamentController): VNode | undefined {
           : []),
       ]),
       data.joined
-        ? 'You are part of this team'
+        ? 'Вы состоите в этой команде'
         : h(
             'form',
             {

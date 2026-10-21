@@ -34,7 +34,7 @@ export default function (ctrl: Ctrl, attrs: VNodeData | null = null) {
   if (!ctrl.vm.answer || ctrl.vm.answer.games.length === 0) return undefined;
 
   return h('div.game-sample.box.hscroll', attrs, [
-    h('div.top', 'Some of the games used to generate this insight'),
+    h('div.top', 'Некоторые партии, по которым построена аналитика'),
     h('div.boards', ctrl.vm.answer.games.map(miniGame)),
   ]);
 }

@@ -68,10 +68,10 @@ export default function (showText: (ctrl: SimulCtrl) => VNode | false) {
       ]),
       showText(ctrl),
       ctrl.acceptedContainsMe()
-        ? hl('p.instructions', 'You have been selected! Hold still, the simul is about to begin.')
+        ? hl('p.instructions', 'Вас выбрали! Оставайтесь на странице, сеанс скоро начнётся.')
         : isHost &&
           ctrl.data.applicants.length < 6 &&
-          hl('p.instructions', 'Share this page URL to let people enter the simul!'),
+          hl('p.instructions', 'Поделитесь ссылкой на эту страницу, чтобы игроки могли войти в сеанс!'),
       hl(
         'div.halves',
         { hook: { postpatch: (_old, vnode) => site.powertip.manualUserIn(vnode.elm as HTMLElement) } },
@@ -86,7 +86,7 @@ export default function (showText: (ctrl: SimulCtrl) => VNode | false) {
                   'tr',
                   hl('th', { attrs: { colspan: 3 } }, [
                     hl('strong', candidates.length),
-                    ' candidate players',
+                    ' желающих сыграть',
                   ]),
                 ),
               ),
@@ -103,7 +103,7 @@ export default function (showText: (ctrl: SimulCtrl) => VNode | false) {
                         'td.action',
                         isHost &&
                           hl('a.button', {
-                            attrs: { ...dataIcon(licon.Checkmark), title: 'Accept' },
+                            attrs: { ...dataIcon(licon.Checkmark), title: i18n.site.accept },
                             hook: bind('click', () => xhr.accept(applicant.player.id)(ctrl.data.id)),
                           }),
                       ),
@@ -119,12 +119,12 @@ export default function (showText: (ctrl: SimulCtrl) => VNode | false) {
               hl('thead', [
                 hl(
                   'tr',
-                  hl('th', { attrs: { colspan: 3 } }, [hl('strong', accepted.length), ' accepted players']),
+                  hl('th', { attrs: { colspan: 3 } }, [hl('strong', accepted.length), ' принятых игроков']),
                 ),
                 isHost &&
                   candidates.length > 0 &&
                   !accepted.length &&
-                  hl('tr.help', hl('th', 'Now you get to accept some players, then start the simul')),
+                  hl('tr.help', hl('th', 'Теперь примите игроков, затем начните сеанс')),
               ]),
               hl(
                 'tbody',
@@ -177,7 +177,7 @@ const randomButton = (ctrl: SimulCtrl) =>
         xhr.accept(randomCandidate.player.id)(ctrl.data.id);
       }),
     },
-    'Accept random candidate',
+    'Принять случайного игрока',
   );
 
 const startOrCancel = (ctrl: SimulCtrl, accepted: Applicant[]) =>
@@ -185,14 +185,14 @@ const startOrCancel = (ctrl: SimulCtrl, accepted: Applicant[]) =>
     ? hl(
         'a.button.button-green.text',
         { attrs: dataIcon(licon.PlayTriangle), hook: bind('click', () => xhr.start(ctrl.data.id)) },
-        `Start (${accepted.length})`,
+        `Начать (${accepted.length})`,
       )
     : hl(
         'a.button.button-red.text',
         {
           attrs: dataIcon(licon.X),
           hook: bind('click', async () => {
-            if (await confirm('Delete this simul?')) xhr.abort(ctrl.data.id);
+            if (await confirm('Удалить этот сеанс?')) xhr.abort(ctrl.data.id);
           }),
         },
         i18n.site.cancel,

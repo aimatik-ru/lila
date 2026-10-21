@@ -14,7 +14,7 @@ function featuredPlayer(game: FeaturedGame, color: Color, opts: TournamentOpts) 
     hl('span.mini-game__user', [
       hl('strong', '#' + player.rank),
       renderPlayer(player, true, opts.showRatings, false),
-      player.berserk && icon(licon.Berserk)('.berserk', { title: 'Berserk' }),
+      player.berserk && icon(licon.Berserk)('.berserk', { title: i18n.arena.berserk }),
     ]),
     game.c
       ? hl(`span.mini-game__clock.mini-game__clock--${color}`, {

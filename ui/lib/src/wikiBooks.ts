@@ -21,7 +21,7 @@ const removeContributing = (html: string) =>
   html.replace('When contributing to this Wikibook, please follow the Conventions for organization.', '');
 
 const readMore = (title: string) =>
-  `<p><a target="_blank" href="${wikiBooksUrl}/wiki/${title}">Read more on WikiBooks</a></p>`;
+  `<p><a target="_blank" href="${wikiBooksUrl}/wiki/${title}">Подробнее на WikiBooks</a></p>`;
 
 export const transformWikiHtml = (html: string, title: string): string =>
   removeH1(

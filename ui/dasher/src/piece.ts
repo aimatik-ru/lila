@@ -76,7 +76,7 @@ export class PieceCtrl extends PaneCtrl {
     this.apply(t);
     const field = `pieceSet${this.is3d ? '3d' : ''}`;
     xhrText(`/pref/${field}`, { body: xhrForm({ [field]: t }), method: 'post' }).catch(() =>
-      site.announce({ msg: 'Failed to save piece set  preference' }),
+      site.announce({ msg: 'Не удалось сохранить набор фигур' }),
     );
     this.redraw();
   };

@@ -18,7 +18,7 @@ object TeamRequest:
   type ID = String
   def makeId(team: TeamId, user: UserId): ID = s"$user@$team"
 
-  val defaultMessage = "Hello, I would like to join the team!"
+  val defaultMessage = "Здравствуйте! Я хотел бы вступить в вашу команду."
 
   def make(team: TeamId, user: UserId, message: String, declined: Boolean = false): TeamRequest = TeamRequest(
     id = makeId(team, user),

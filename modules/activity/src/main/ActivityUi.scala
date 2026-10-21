@@ -177,8 +177,8 @@ final class ActivityUi(helpers: Helpers)(
         subTag(
           povs.map: pov =>
             frag(
-              a(cls := "glpt", href := routes.Round.watcher(pov.gameId, pov.color))("Game"),
-              " vs ",
+              a(cls := "glpt", href := routes.Round.watcher(pov.gameId, pov.color))("Партия"),
+              " — ",
               lightPlayerLink(pov.opponent),
               br
             )
@@ -213,9 +213,9 @@ final class ActivityUi(helpers: Helpers)(
                   pov.game.win.map(_ == pov.color) match
                     case Some(true) => trans.site.victory()
                     case Some(false) => trans.site.defeat()
-                    case _ => "Draw"
+                    case _ => trans.site.draw()
                 ),
-                " vs ",
+                " — ",
                 lightPlayerLink(pov.opponent),
                 br
               )
@@ -235,7 +235,7 @@ final class ActivityUi(helpers: Helpers)(
             subTag(
               fragList(f.ids.map(id => userIdLink(id.some))),
               f.nb.map { nb =>
-                frag(" and ", nb - maxSubEntries, " more")
+                frag(" и ещё ", nb - maxSubEntries)
               }
             )
           )
@@ -256,7 +256,7 @@ final class ActivityUi(helpers: Helpers)(
                 div(
                   a(href := routes.Simul.show(s.id))(
                     s.name,
-                    " simul by ",
+                    ", ведущий: ",
                     userIdLink(s.hostId.some)
                   ),
                   if isHost then scoreFrag(s.hostScore)

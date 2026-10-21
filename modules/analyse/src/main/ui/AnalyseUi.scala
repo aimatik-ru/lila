@@ -55,9 +55,9 @@ final class AnalyseUi(helpers: Helpers)(endpoints: AnalyseEndpoints):
       .i18nOpt(ctx.speechSynthesis, _.nvui)
       .i18nOpt(ctx.blind, _.keyboardMove)
       .graph(
-        title = "Chess analysis board",
+        title = trans.site.analysis.txt(),
         url = routeUrl(routes.UserAnalysis.index),
-        description = "Analyse chess positions and variations on an interactive chess board"
+        description = "Анализируйте позиции и варианты на интерактивной шахматной доске"
       )
       .flag(_.zoom):
         main(
@@ -123,7 +123,7 @@ final class AnalyseUi(helpers: Helpers)(endpoints: AnalyseEndpoints):
     val openingName = gameOpening(pov.game, ctx.isAuth).fold(trans.site.analysis.txt())(_.name)
     s"${titlePlayerVs(pov.game)} - $openingName"
 
-  def titlePlayerVs(g: Game) = s"${playerText(g.whitePlayer)} vs ${playerText(g.blackPlayer)}"
+  def titlePlayerVs(g: Game) = s"${playerText(g.whitePlayer)} — ${playerText(g.blackPlayer)}"
 
   object bits:
 

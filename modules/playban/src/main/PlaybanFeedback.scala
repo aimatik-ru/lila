@@ -5,21 +5,22 @@ final private class PlaybanFeedback(
     lightUser: lila.core.LightUser.Getter
 )(using Executor):
 
-  private val tempBan = "may lead to temporary playing restrictions."
+  private val tempBan = "может привести к временному запрету на игру."
 
-  def abort(pov: Pov): Unit = tell(pov, s"Warning, {user}. Aborting too many games $tempBan")
+  def abort(pov: Pov): Unit = tell(pov, s"Внимание, {user}! Слишком частая отмена партий $tempBan")
 
-  def noStart(pov: Pov): Unit = tell(pov, s"Warning, {user}. Failing to start games $tempBan")
+  def noStart(pov: Pov): Unit = tell(pov, s"Внимание, {user}! Если не начинать партии, это $tempBan")
 
-  def rageQuit(pov: Pov): Unit = tell(pov, s"Warning, {user}. Leaving games without resigning $tempBan")
+  def rageQuit(pov: Pov): Unit = tell(pov, s"Внимание, {user}! Уход из партии без сдачи $tempBan")
 
   def sitting(pov: Pov): Unit =
     tell(
       pov,
-      s"Reminder, {user}. Repeatedly letting time run out or delaying resignation in lost positions $tempBan"
+      s"Напоминаем, {user}: если раз за разом ждать, пока кончится время, " +
+        s"или тянуть со сдачей в проигранной позиции, это $tempBan"
     )
 
-  def quickResign(pov: Pov): Unit = tell(pov, s"Warning, {user}. Resigning games too quickly $tempBan")
+  def quickResign(pov: Pov): Unit = tell(pov, s"Внимание, {user}! Слишком быстрая сдача партий $tempBan")
 
   private def tell(pov: Pov, template: String): Unit =
     pov.player.userId.foreach { userId =>
@@ -34,7 +35,7 @@ object PlaybanFeedback:
   val sittingAutoPreset = lila.core.msg.MsgPreset(
     name = "Warning: leaving games / stalling on time",
     text =
-      """In your game history, you have several games where you have left the game or just let the time run out instead of playing or resigning.
-  This can be very annoying for your opponents. If this behavior continues to happen, we may be forced to terminate your account.""",
+      """В вашей истории есть несколько партий, где вы ушли из игры или просто ждали, пока кончится время, вместо того чтобы играть или сдаться.
+  Это очень неприятно для соперников. Если так будет продолжаться, нам придётся закрыть ваш аккаунт.""",
     mustRead = true
   )

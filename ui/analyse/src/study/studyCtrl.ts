@@ -754,7 +754,7 @@ export default class StudyCtrl {
       return this.redraw();
     },
     reload: d => {
-      if (d?.reason === 'overweight') alert('This chapter is too big to add moves.');
+      if (d?.reason === 'overweight') alert('Глава слишком большая, в неё нельзя добавить ходы.');
       this.xhrReload();
     },
     changeChapter: d => {

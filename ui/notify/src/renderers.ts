@@ -71,7 +71,7 @@ export default function makeRenderers(): Renderers {
           h('span', [h('strong', n.content.name)]),
           h('span', n.content.text),
         ]),
-      text: _ => 'New team update',
+      text: _ => 'Новости команды',
     },
     titledTourney: {
       html: n =>
@@ -84,10 +84,10 @@ export default function makeRenderers(): Renderers {
     reportedBanned: {
       html: n =>
         generic(n, undefined, licon.InfoCircle, [
-          h('span', [h('strong', 'Someone you reported was banned')]),
+          h('span', [h('strong', 'Игрок, на которого вы пожаловались, заблокирован')]),
           h('span', i18n.site.thankYou),
         ]),
-      text: _ => 'Someone you reported was banned',
+      text: _ => 'Игрок, на которого вы пожаловались, заблокирован',
     },
     gameEnd: {
       html: n => {
@@ -156,13 +156,13 @@ export default function makeRenderers(): Renderers {
     recap: {
       html: n => {
         site.asset.loadI18n('recap');
-        const title = i18n.recap?.recapReady?.(n.content.year) || `Your ${n.content.year} recap is ready!`;
-        const text = i18n.recap?.awaitQuestion || 'What have you been up to this year?';
+        const title = i18n.recap?.recapReady?.(n.content.year) || `Ваши итоги ${n.content.year} года готовы!`;
+        const text = i18n.recap?.awaitQuestion || 'Чем вы занимались в этом году?';
         return generic(n, '/recap', licon.Logo, [h('span', h('strong', title)), h('span', text)]);
       },
       text: n => {
         site.asset.loadI18n('recap');
-        return i18n.recap?.recapReady?.(n.content.year) || `Your ${n.content.year} recap is ready!`;
+        return i18n.recap?.recapReady?.(n.content.year) || `Ваши итоги ${n.content.year} года готовы!`;
       },
     },
   };
@@ -194,6 +194,6 @@ function drawTime(n: Notification) {
 }
 
 function userFullName(u?: LightUser) {
-  if (!u) return 'Anonymous';
+  if (!u) return i18n.site.anonymous;
   return u.title ? u.title + ' ' + u.name : u.name;
 }

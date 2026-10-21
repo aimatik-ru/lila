@@ -29,7 +29,7 @@ final class SitePages(helpers: Helpers):
 
   def webmasters(pieceNames: List[String])(using Context) =
     def parameters(extra: Modifier*) = frag(
-      p("Parameters:"),
+      p("Параметры:"),
       ul(
         // actual supported board theme list from lila-gif/src/assets.rs
         li(strong("theme"), ": ", List("blue", "brown", "green", "ic", "purple").mkString(", ")),
@@ -39,7 +39,7 @@ final class SitePages(helpers: Helpers):
       )
     )
     SitePage(
-      title = "Webmasters",
+      title = "Вебмастерам",
       active = "webmasters",
       contentCls = "page force-ltr"
     ).css("bits.page")
@@ -48,8 +48,8 @@ final class SitePages(helpers: Helpers):
           st.section(cls := "box box-pad developers")(
             h1(cls := "box__top")("HTTP API"),
             p(
-              "Логик exposes a RESTish HTTP/JSON API that you are welcome to use. Read the ",
-              a(href := "/api")("HTTP API documentation"),
+              "У «Логика» есть HTTP/JSON API в стиле REST, им можно пользоваться. Читайте ",
+              a(href := "/api")("документацию HTTP API"),
               "."
             )
           ),
@@ -59,17 +59,18 @@ final class SitePages(helpers: Helpers):
               """style="width: 400px; aspect-ratio: 10/11;" allowtransparency="true" frameborder="0""""
             frag(
               a(href := "#embed-tv")(
-                h1(cls := "box__top", id := "embed-tv")("Embed Логик TV in your site")
+                h1(cls := "box__top", id := "embed-tv")("ТВ «Логика» на вашем сайте")
               ),
               div(cls := "body")(
                 div(cls := "center")(raw(s"""<iframe src="/tv/frame?theme=brown&bg=dark" $args></iframe>""")),
-                p("Add the following HTML to your site:"),
+                p("Добавьте на свой сайт этот HTML-код:"),
                 copyMeInput(s"""<iframe src="$netBaseUrl/tv/frame?theme=brown&bg=dark" $args></iframe>"""),
                 parameters(),
                 p(
-                  "You can also show the channel for a specific variant or time control by adding the channel key to the URL, corresponding to the channels available at ",
+                  "Чтобы показать канал определённого варианта или контроля времени, добавьте " +
+                    "в адрес ключ канала. Список каналов: ",
                   a(href := "/tv")("play.kalugalogic.ru/tv"),
-                  ". If not included, the top rated game will be shown."
+                  ". Без ключа показывается партия с самым высоким рейтингом."
                 ),
                 copyMeInput(
                   s"""<iframe src="$netBaseUrl/tv/rapid/frame?theme=brown&bg=dark" $args></iframe>"""
@@ -83,18 +84,18 @@ final class SitePages(helpers: Helpers):
               """style="width: 400px; aspect-ratio: 10/11;" allowtransparency="true" frameborder="0""""
             frag(
               a(href := "#embed-puzzle")(
-                h1(cls := "box__top", id := "embed-puzzle")("Embed the daily puzzle in your site")
+                h1(cls := "box__top", id := "embed-puzzle")("Задача дня на вашем сайте")
               ),
               div(cls := "body")(
                 div(cls := "center")(
                   raw(s"""<iframe src="/training/frame?theme=brown&bg=dark" $args></iframe>""")
                 ),
-                p("Add the following HTML to your site:"),
+                p("Добавьте на свой сайт этот HTML-код:"),
                 copyMeInput(
                   s"""<iframe src="$netBaseUrl/training/frame?theme=brown&bg=dark" $args></iframe>"""
                 ),
                 parameters(),
-                p("The text is automatically translated to your visitor's language.")
+                p("Текст автоматически переводится на язык посетителя.")
               )
             )
           },
@@ -103,19 +104,19 @@ final class SitePages(helpers: Helpers):
             val args = """style="width: 100%; aspect-ratio: 3/2;" frameborder="0""""
             frag(
               a(href := "#embed-study")(
-                h1(cls := "box__top", id := "embed-study")("Embed a chess analysis in your site")
+                h1(cls := "box__top", id := "embed-study")("Шахматный анализ на вашем сайте")
               ),
               div(cls := "body")(
                 div(cls := "center"):
                   raw(s"""<iframe src="/study/embed/XtFCFYlM/GCUTf2Jk?bg=auto&theme=auto" $args></iframe>""")
                 ,
                 p(
-                  "Create ",
-                  a(href := routes.Study.allDefault())("a study"),
-                  ", then click the share button to get the HTML code for the current chapter."
+                  "Создайте ",
+                  a(href := routes.Study.allDefault())("студию"),
+                  " и нажмите кнопку «Поделиться», чтобы получить HTML-код текущей главы."
                 ),
                 parameters(),
-                p("The text is automatically translated to your visitor's language.")
+                p("Текст автоматически переводится на язык посетителя.")
               )
             )
           },
@@ -124,21 +125,21 @@ final class SitePages(helpers: Helpers):
             val args = """style="width: 100%; aspect-ratio: 3/2;" frameborder="0""""
             frag(
               a(href := "#embed-game")(
-                h1(cls := "box__top", id := "embed-game")("Embed a chess game in your site")
+                h1(cls := "box__top", id := "embed-game")("Шахматная партия на вашем сайте")
               ),
               div(cls := "body")(
                 div(cls := "center"):
                   raw(s"""<iframe src="/embed/game/MPJcy1JW?bg=auto&theme=auto" $args></iframe>""")
                 ,
                 p(
-                  "On a game analysis page, click the ",
+                  "На странице анализа партии откройте внизу вкладку ",
                   em("FEN & PGN"),
-                  " tab at the bottom, then ",
+                  ", затем ",
                   "\"",
                   em(trans.site.embedInYourWebsite(), "\".")
                 ),
                 parameters(),
-                p("The text is automatically translated to your visitor's language.")
+                p("Текст автоматически переводится на язык посетителя.")
               )
             )
           },
@@ -158,7 +159,7 @@ final class SitePages(helpers: Helpers):
                   "On a broadcast page, select the embed iframe code, then optionally add query parameters to customize the appearance."
                 ),
                 parameters(),
-                p("The text is automatically translated to your visitor's language.")
+                p("Текст автоматически переводится на язык посетителя.")
               )
             )
           },
@@ -169,26 +170,26 @@ final class SitePages(helpers: Helpers):
               s"""<iframe src="https://play.kalugalogic.ru/embed/analysis" $args></iframe>"""
             frag(
               a(href := "#embed-analysis")(
-                h1(cls := "box__top", id := "embed-analysis")("Embed an analysis board")
+                h1(cls := "box__top", id := "embed-analysis")("Доска анализа на вашем сайте")
               ),
               div(cls := "body")(
                 div(cls := "center")(raw(iframe)),
                 p(
-                  "Embeds the ",
-                  a(href := routes.UserAnalysis.index)("fully-featured Логик analysis board"),
-                  " with stockfish evaluation, opening explorer and tablebase."
+                  "Встраивает ",
+                  a(href := routes.UserAnalysis.index)("полноценную доску анализа «Логика»"),
+                  " с оценкой Stockfish, дебютной базой и эндшпильными таблицами."
                 ),
                 copyMeInput(iframe),
                 parameters(
-                  li(strong("fen"), ": custom initial position as a FEN with underscores instead of spaces"),
-                  li(strong("color"), ": initial orientation, either black or white")
+                  li(strong("fen"), ": своя начальная позиция в FEN, пробелы заменены подчёркиваниями"),
+                  li(strong("color"), ": начальная ориентация доски, black или white")
                 ),
                 div(
-                  "Example using a custom initial position:",
+                  "Пример со своей начальной позицией:",
                   copyMeInput:
                     s"""<iframe src="https://play.kalugalogic.ru/embed/analysis?fen=r1bqkb1r/pp2pppp/2np1n2/6B1/3NP3/2N5/PPP2PPP/R2QKB1R_b_KQkq_-_1_6&color=black" $args></iframe>"""
                 ),
-                p("The text is automatically translated to your visitor's language.")
+                p("Текст автоматически переводится на язык посетителя.")
               )
             )
           }
@@ -244,7 +245,7 @@ final class SitePages(helpers: Helpers):
 
   def lag(using Context) =
     import trans.lag as trl
-    SitePage(title = "Is Логик lagging?", active = "lag")
+    SitePage(title = trl.isLichessLagging.txt(), active = "lag")
       .css("bits.lag")
       .js(esmInit("chart.lag")):
         div(cls := "box box-pad lag")(
@@ -295,12 +296,12 @@ final class SitePages(helpers: Helpers):
           )(spinner)
 
   def errorPage =
-    Page("Internal server error"):
+    Page("Внутренняя ошибка сервера"):
       main(cls := "page-small box box-pad")(
-        h1(cls := "box__top")("Something went wrong on this page"),
+        h1(cls := "box__top")("На этой странице что-то пошло не так"),
         p(
-          "If the problem persists, please ",
-          a(href := s"${routes.Main.contact}#help-error-page")("report the bug"),
+          "Если ошибка повторяется, ",
+          a(href := s"${routes.Main.contact}#help-error-page")("сообщите о ней"),
           "."
         )
       )

@@ -25,13 +25,13 @@ export default function (ctrl: Ctrl) {
 
 const basePresets: Preset[] = [
   {
-    name: 'Do I gain more rating points against weaker or stronger opponents?',
+    name: 'Против кого я набираю больше рейтинга: слабых или сильных соперников?',
     dimension: 'opponentStrength',
     metric: 'ratingDiff',
     filters: {},
   },
   {
-    name: 'How quickly do I move each piece in bullet and blitz games?',
+    name: 'Как быстро я хожу каждой фигурой в пуле и блице?',
     dimension: 'piece',
     metric: 'movetime',
     filters: {
@@ -39,7 +39,7 @@ const basePresets: Preset[] = [
     },
   },
   {
-    name: 'What is the Win-Rate of my favourite openings as white?',
+    name: 'Как часто я выигрываю любимыми дебютами за белых?',
     dimension: 'openingVariation',
     metric: 'result',
     filters: {
@@ -48,13 +48,13 @@ const basePresets: Preset[] = [
     },
   },
   {
-    name: 'How often do I punish blunders made by my opponent during each game phase?',
+    name: 'Как часто я наказываю зевки соперника в каждой стадии партии?',
     dimension: 'phase',
     metric: 'awareness',
     filters: {},
   },
   {
-    name: "Do I gain rating when I don't castle kingside?",
+    name: 'Набираю ли я рейтинг, когда не делаю короткую рокировку?',
     dimension: 'myCastling',
     metric: 'ratingDiff',
     filters: {
@@ -62,7 +62,7 @@ const basePresets: Preset[] = [
     },
   },
   {
-    name: 'When I trade queens, how do games end?',
+    name: 'Чем заканчиваются партии, когда я меняю ферзей?',
     dimension: 'queenTrade',
     metric: 'result',
     filters: {
@@ -70,13 +70,13 @@ const basePresets: Preset[] = [
     },
   },
   {
-    name: 'What is the average rating of my opponents across each variant?',
+    name: 'Какой средний рейтинг у моих соперников в каждом виде шахмат?',
     dimension: 'variant',
     metric: 'opponentRating',
     filters: {},
   },
   {
-    name: 'How well do I move each piece in the opening?',
+    name: 'Насколько точно я хожу каждой фигурой в дебюте?',
     dimension: 'piece',
     metric: 'accuracy',
     filters: {

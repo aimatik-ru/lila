@@ -138,7 +138,7 @@ final class StudentFormUi(helpers: Helpers, clasUi: ClasUi, studentUi: StudentUi
         created.nonEmpty.option(
           frag(
             flashMessageWith(cls := "student-add-many__created")(
-              s"${created.size} students accounts have been created."
+              s"Создано учётных записей учеников: ${created.size}."
             ),
             div(cls := "student-add-many__list")(
               p(strong(trans.clas.makeSureToCopy())),
@@ -175,7 +175,8 @@ final class StudentFormUi(helpers: Helpers, clasUi: ClasUi, studentUi: StudentUi
                 help = frag(
                   trans.clas.privateWillNeverBeShown(),
                   p:
-                    "If a line starts with a @, then the first word is the username. Else a random username will be generated."
+                    "Если строка начинается с @, первое слово — имя пользователя. " +
+                      "Иначе имя пользователя будет создано случайно."
                 ).some
               )(form3.textarea(_)(autofocus, rows := 20)),
               form3.submit(trans.site.apply(), icon = none)

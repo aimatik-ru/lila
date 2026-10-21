@@ -102,7 +102,7 @@ export async function domDialog<Ctx = undefined>(o: DomDialogOpts<Ctx>): Promise
 
   if (!o.noCloseButton) {
     const anchor = frag<Element>('<div class="close-button-anchor">');
-    anchor.innerHTML = `<button class="close-button" aria-label="Close" data-icon="${licon.X}">`;
+    anchor.innerHTML = `<button class="close-button" aria-label="${i18n.site.close}" data-icon="${licon.X}">`;
     dialog.appendChild(anchor);
   }
 

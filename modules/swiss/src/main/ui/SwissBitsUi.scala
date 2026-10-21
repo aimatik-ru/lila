@@ -18,7 +18,7 @@ final class SwissBitsUi(helpers: Helpers, getName: GetSwissName):
     )(name)
 
   def idToName(id: SwissId)(using client: ClientName): String =
-    client.isHuman.so(getName.sync(id)).getOrElse(s"Swiss #$id")
+    client.isHuman.so(getName.sync(id)).getOrElse(s"Швейцарский турнир #$id")
 
   def notFound(using Context) =
     Page(trans.site.tournamentNotFound.txt()):
@@ -44,7 +44,7 @@ final class SwissBitsUi(helpers: Helpers, getName: GetSwissName):
     a(href := routes.Swiss.show(s.id), cls := "tour-spotlight little")(
       iconTag(s.perfType.icon)(cls := "img icon"),
       span(cls := "content")(
-        span(cls := "name")(s.name, " Swiss"),
+        span(cls := "name")(s.name, ", швейцарская система"),
         span(cls := "more")(
           trans.site.nbPlayers.plural(s.nbPlayers, s.nbPlayers.localize),
           " • ",

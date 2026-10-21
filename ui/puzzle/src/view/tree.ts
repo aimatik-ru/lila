@@ -106,7 +106,7 @@ function puzzleGlyph(node: TreeNode): MaybeVNode {
       return renderGlyph({ name: i18n.puzzle.bestMove, symbol: '✓' });
     case 'fail':
       return renderGlyph({
-        name: 'Puzzle failed', //puzzleFailed key never worked, it's in learn/*.xml
+        name: 'Задача не решена', //puzzleFailed key never worked, it's in learn/*.xml
         symbol: '✗',
       });
     case 'retry':

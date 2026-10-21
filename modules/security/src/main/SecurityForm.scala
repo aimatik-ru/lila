@@ -32,7 +32,7 @@ final class SecurityForm(
     LilaForm.cleanNonEmptyText(minLength = 2, maxLength = 30).into[UserStr]
 
   def myUsernameField(using me: Me) =
-    anyUserStrField.verifying("Username doesn't match the currently logged-in account.", _.is(me))
+    anyUserStrField.verifying("Имя пользователя не совпадает с текущей учётной записью.", _.is(me))
 
   private[security] val anyEmail: Mapping[EmailAddress] =
     LilaForm
@@ -248,7 +248,7 @@ final class SecurityForm(
         mapping(
           "username" -> myUsernameField,
           "passwd" -> passwordMapping(candidate),
-          "understand" -> boolean.verifying("It's an important point.", identity[Boolean])
+          "understand" -> boolean.verifying("Это важно, отметьте этот пункт.", identity[Boolean])
         )((_, _, _) => ())(_ => None)
 
   private def passwordMapping(candidate: LoginCandidate) =

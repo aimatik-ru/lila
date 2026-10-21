@@ -158,7 +158,7 @@ export const view = (ctrl: ExplorerConfigCtrl): VNode[] => [
   ),
 ];
 
-const selectText = 'Select a player';
+const selectText = 'Выберите игрока';
 
 const playerDb = (ctrl: ExplorerConfigCtrl) => {
   const name = ctrl.data.playerName.value();
@@ -241,15 +241,15 @@ const modeSection = (ctrl: ExplorerConfigCtrl) =>
 
 const monthInput = (prop: StoredProp<Month>, after: () => Month, redraw: Redraw) => {
   const validateRange = (input: HTMLInputElement) =>
-    input.setCustomValidity(!input.value || after() <= input.value ? '' : 'Invalid date range');
+    input.setCustomValidity(!input.value || after() <= input.value ? '' : 'Неверный диапазон дат');
   const max = new Date().toISOString().slice(0, 7);
   return h('input', {
     key: after() ? 'until-month' : 'since-month',
     attrs: {
       type: 'month',
-      title: `Insert year and month in YYYY-MM format starting from ${minYear}-01`,
+      title: `Введите год и месяц в формате ГГГГ-ММ, не раньше ${minYear}-01`,
       pattern: '^(19|20)[0-9]{2}-(0[1-9]|1[012])$',
-      placeholder: 'YYYY-MM',
+      placeholder: 'ГГГГ-ММ',
       min: `${minYear}-01`,
       max,
       value: prop() > max ? max : prop(),
@@ -274,13 +274,15 @@ const monthInput = (prop: StoredProp<Month>, after: () => Month, redraw: Redraw)
 
 const yearInput = (prop: StoredProp<Month>, after: () => Month, redraw: Redraw) => {
   const validateRange = (input: HTMLInputElement) =>
-    input.setCustomValidity(!input.value || after().split('-')[0] <= input.value ? '' : 'Invalid date range');
+    input.setCustomValidity(
+      !input.value || after().split('-')[0] <= input.value ? '' : 'Неверный диапазон дат',
+    );
   return h('input', {
     attrs: {
       key: after() ? 'until-year' : 'since-year',
       type: 'number',
-      title: `Insert year in YYYY format starting from ${minYear}`,
-      placeholder: 'YYYY',
+      title: `Введите год в формате ГГГГ, не раньше ${minYear}`,
+      placeholder: 'ГГГГ',
       min: minYear,
       max: new Date().toISOString().slice(0, 4),
       value: prop().split('-')[0],
@@ -334,7 +336,7 @@ const playerModal = (ctrl: ExplorerConfigCtrl) => {
     modal: true,
     easyClose: 'clickOutside',
     vnodes: [
-      h('h2', 'Personal opening explorer'),
+      h('h2', 'Личный дебютный справочник'),
       h('div.input-wrapper', [
         h('input', {
           attrs: {

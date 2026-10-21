@@ -63,8 +63,8 @@ final class OpeningApi(
         if loadStats then explorer.stats(query.uci, query.config)
         else
           val error =
-            if me.isDefined then "Please wait a bit before loading more opening pages."
-            else "Please log in to load more opening pages."
+            if me.isDefined then "Подождите немного, прежде чем открывать новые страницы дебютов."
+            else "Войдите, чтобы открыть больше страниц дебютов."
           fuccess(scala.util.Failure(WaitOrLogin(error)))
       statsOption = stats.toOption.flatten
       allHistory <- allGamesHistory.get(query.config)

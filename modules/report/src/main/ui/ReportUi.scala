@@ -43,7 +43,7 @@ final class ReportUi(helpers: Helpers)(menu: Context ?=> Frag):
             form3.group(form("username"), trans.site.user()): f =>
               frag(userLink(user), form3.hidden(f, user.id.value.some)),
             reasonFormGroup(form, "inbox".some),
-            form3.group(form("msgs"), "Messages to report", klass = "report-inbox-msgs"): f =>
+            form3.group(form("msgs"), "Сообщения для жалобы", klass = "report-inbox-msgs"): f =>
               ul:
                 msgs.map: msg =>
                   li(
@@ -84,8 +84,8 @@ final class ReportUi(helpers: Helpers)(menu: Context ?=> Frag):
                 .contains("postUrl")
                 .option(
                   p(
-                    "Here for DMCA or Intellectual Property Take Down Notice? ",
-                    a(href := "/dmca")("Complete this form instead"),
+                    "Вы хотите сообщить о нарушении авторских прав (DMCA)? ",
+                    a(href := "/dmca")("Заполните лучше эту форму"),
                     "."
                   )
                 )
@@ -137,7 +137,7 @@ final class ReportUi(helpers: Helpers)(menu: Context ?=> Frag):
           if reason == Cheat || reason == Boost then trans.report.reportCheatBoostHelp()
           else if reason == Username then trans.report.reportUsernameHelp()
           else
-            "Please provide as much information as possible, including relevant game links, posts, and messages."
+            "Расскажите как можно подробнее, приложите ссылки на партии, записи и сообщения."
           ,
           " ",
           trans.report.processReportFasterInEnglish(),
@@ -162,27 +162,27 @@ final class ReportUi(helpers: Helpers)(menu: Context ?=> Frag):
     )
 
   def thanks(userId: UserId, blocked: Boolean)(using ctx: Context) =
-    val title = "Thanks for the report"
+    val title = "Спасибо за жалобу"
     Page(title)
       .js(esmInitBit("thanksReport")):
         main(cls := "page-small box box-pad")(
           h1(cls := "box__top")(title),
-          p("The moderators will review it very soon, and take appropriate action."),
+          p("Модераторы скоро её рассмотрят и примут меры."),
           br,
           br,
           (!blocked).option(
             p(
-              "In the meantime, you can block this user: ",
+              "А пока вы можете заблокировать этого пользователя: ",
               submitButton(
                 attr("data-action") := s"${routes.Relation.block(userId)}?mini=1",
                 cls := "report-block button",
                 st.title := trans.site.block.txt()
-              )(span(cls := "text", dataIcon := Icon.NotAllowed)("Block ", titleNameOrId(userId)))
+              )(span(cls := "text", dataIcon := Icon.NotAllowed)("Заблокировать ", titleNameOrId(userId)))
             )
           ),
           br,
           br,
-          p(a(href := routes.Lobby.home)("Return to Логик homepage"))
+          p(a(href := routes.Lobby.home)("Вернуться на главную «Логика»"))
         )
 
   object list:

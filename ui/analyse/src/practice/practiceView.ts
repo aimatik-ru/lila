@@ -86,11 +86,11 @@ export function renderCustomPearl({ ceval }: AnalyseCtrl, hardMode: boolean): VN
     const time = i18n.site.nbSeconds(
       !isFinite(ceval.storedMovetime()) ? 300 : Math.round(ceval.storedMovetime() / 1000),
     );
-    return hl('div.practice-mode', [hl('p', 'Mastery'), hl('p.secondary', time)]);
+    return hl('div.practice-mode', [hl('p', 'Мастерство'), hl('p.secondary', time)]);
   }
   return hl('div.practice-mode', [
-    hl('p', 'Casual'),
-    hl('p.secondary', api.overrides.practiceStrengthLabel?.() ?? '600 kNodes'),
+    hl('p', 'Обычный режим'),
+    hl('p.secondary', api.overrides.practiceStrengthLabel?.() ?? '600 тыс. позиций'),
   ]);
 }
 
@@ -100,7 +100,7 @@ export const renderCustomStatus = ({ ceval }: AnalyseCtrl, hardMode: Prop<boolea
     : hl(
         'button.status.button-link',
         { hook: bind('click', () => hardMode(!hardMode())) },
-        'Toggle difficulty',
+        'Сменить сложность',
       );
 
 export default function (root: AnalyseCtrl): VNode | undefined {

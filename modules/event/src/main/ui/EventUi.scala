@@ -52,6 +52,9 @@ final class EventUi(helpers: Helpers)(modMenu: Context ?=> Frag):
       case Some(c) if c == EventForm.icon.broadcast => iconTag(Icon.RadioTower)(cls := "img")
       case Some(c) => img(cls := "img", src := assetUrl(s"images/$c"))
 
+  private val countdownUnits =
+    List("days" -> "Дни", "hours" -> "Часы", "minutes" -> "Минуты", "seconds" -> "Секунды")
+
   def show(e: Event, description: Option[Html])(using Context) =
     Page(e.title)
       .css("bits.event")
@@ -65,12 +68,12 @@ final class EventUi(helpers: Helpers)(modMenu: Context ?=> Frag):
             )
           ),
           description.map(div(cls := "desc")(_)),
-          if e.isFinished then p(cls := "desc")("The event is finished.")
+          if e.isFinished then p(cls := "desc")("Событие завершилось.")
           else if e.isNow then a(href := e.url, cls := "button button-fat")(trans.site.eventInProgress())
           else
             ul(cls := "countdown", dataSeconds := (~e.secondsToStart + 1)):
-              List("Days", "Hours", "Minutes", "Seconds").map: t =>
-                li(span(cls := t.toLowerCase), t)
+              countdownUnits.map: (key, label) =>
+                li(span(cls := key), label)
         )
 
   def manager(pager: Paginator[Event])(using Context) =

@@ -28,9 +28,9 @@ final class BoardEditorUi(helpers: Helpers):
       .csp(_.withWebAssembly)
       .flag(_.zoom)
       .graph(
-        title = "Chess board editor",
+        title = trans.site.boardEditor.txt(),
         url = routeUrl(routes.Editor.index),
-        description = "Load opening positions or create your own chess position on a chess board editor"
+        description = "Загрузите дебютную позицию или расставьте свою позицию на шахматной доске"
       ):
         main(id := "board-editor")(
           div(cls := "board-editor")(

@@ -71,7 +71,7 @@ export default class StudyChaptersCtrl {
   sort = (ids: string[]) => this.send('sortChapters', ids);
   toggleNewForm = () => {
     if (this.newForm.isOpen() || this.list.size() < 64) this.newForm.toggle();
-    else alert('You have reached the limit of 64 chapters per study. Please create a new study.');
+    else alert('В исследовании не может быть больше 64 глав. Создайте новое исследование.');
   };
   loadFromServer = (chapters: ChapterPreviewFromServer[]) =>
     this.store(

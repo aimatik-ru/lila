@@ -50,7 +50,7 @@ export function overrideButton(study: StudyCtrl): VNode | undefined {
             study.redraw,
           ),
         },
-        'Preview',
+        i18n.site.preview,
       );
     else {
       const isAnalyse = o === 'analyse';

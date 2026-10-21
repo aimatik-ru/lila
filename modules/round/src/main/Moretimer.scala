@@ -22,7 +22,7 @@ final class Moretimer(messenger: Messenger, prefApi: PrefApi):
         progress.some
       else if pov.game.correspondenceClock.exists(_.moretimeable(!pov.color))
       then
-        messenger.volatile(pov.game, s"${!pov.color} gets more time")
+        messenger.volatile(pov.game, s"${(!pov.color).fold("Белым", "Чёрным")} добавлено время")
         val p = Progress(pov.game, pov.game.copy(movedAt = nowInstant))
         p.game.correspondenceClock.map(Event.CorrespondenceClock.apply).foldLeft(p)(_ + _).some
       else none
@@ -47,7 +47,11 @@ final class Moretimer(messenger: Messenger, prefApi: PrefApi):
       val newClock = colors.foldLeft(clock): (c, color) =>
         c.giveTime(color, centis)
       colors.foreach: c =>
-        messenger.volatile(game, s"$c + ${duration.toSeconds} seconds", reboot = reboot)
+        messenger.volatile(
+          game,
+          s"${c.fold("Белым", "Чёрным")} добавлено ${duration.toSeconds} с",
+          reboot = reboot
+        )
       (game.withClock(newClock)) ++ colors.map { Event.ClockInc(_, centis, newClock) }
 
   private def tellTheBus(game: Game): Unit =

@@ -43,7 +43,7 @@ export default class ChallengeCtrl {
       if (c.id === id) {
         c.declined = true;
         xhrText(`/challenge/${id}/decline`, { method: 'post', body: xhrForm({ reason }) }).catch(() =>
-          site.announce({ msg: 'Failed to send challenge decline' }),
+          site.announce({ msg: 'Не удалось отклонить вызов' }),
         );
       }
     });
@@ -52,7 +52,7 @@ export default class ChallengeCtrl {
       if (c.id === id) {
         c.declined = true;
         xhrText(`/challenge/${id}/cancel`, { method: 'post' }).catch(() =>
-          site.announce({ msg: 'Failed to send challenge cancellation' }),
+          site.announce({ msg: 'Не удалось отменить вызов' }),
         );
       }
     });

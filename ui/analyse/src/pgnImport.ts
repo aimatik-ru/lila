@@ -18,7 +18,9 @@ const readNode = (
   withChildren = true,
 ): TreeNode => {
   const move = parseSan(pos, node.data.san);
-  if (!move) throw new Error(`Can't play ${node.data.san} at move ${Math.ceil(ply / 2)}, ply ${ply}`);
+  if (!move) throw new Error(
+      `Нельзя сыграть ${node.data.san} на ${Math.ceil(ply / 2)}-м ходу (полуход ${ply})`,
+    );
   return completeNode(variant)({
     ply,
     san: makeSanAndPlay(pos, move),
@@ -87,12 +89,12 @@ const rulesToVariantKey: Record<string, VariantKey> = {
 };
 
 export const renderPgnError = (error = '') =>
-  `PGN error: ${
+  `Ошибка PGN: ${
     {
-      [IllegalSetup.Empty]: 'empty board',
-      [IllegalSetup.OppositeCheck]: 'king in check',
-      [IllegalSetup.PawnsOnBackrank]: 'pawns on back rank',
-      [IllegalSetup.Kings]: 'king(s) missing',
-      [IllegalSetup.Variant]: 'invalid Variant header',
+      [IllegalSetup.Empty]: 'пустая доска',
+      [IllegalSetup.OppositeCheck]: 'король под шахом',
+      [IllegalSetup.PawnsOnBackrank]: 'пешки на крайней горизонтали',
+      [IllegalSetup.Kings]: 'нет короля',
+      [IllegalSetup.Variant]: 'неверный заголовок Variant',
     }[error] ?? error
   }`;

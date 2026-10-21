@@ -51,7 +51,7 @@ const autoScroll = throttle(100, (movesEl: HTMLElement, ctrl: RoundController) =
   }),
 );
 
-const renderDrawOffer = () => hl('draw', { attrs: { title: 'Draw offer' } }, '½?');
+const renderDrawOffer = () => hl('draw', { attrs: { title: 'Предложение ничьей' } }, '½?');
 
 const renderMove = (step: Step, curPly: number, orEmpty: boolean, drawOffers: Set<number>) =>
   step

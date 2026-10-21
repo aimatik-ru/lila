@@ -27,7 +27,7 @@ export abstract class PaneCtrl {
     parseInt(window.getComputedStyle(document.body).getPropertyValue(`---${prop}`));
 
   protected readonly postPref: (prop: string) => void = debounce((prop: string) => {
-    const failed = () => site.announce({ msg: `Failed to save ${prop}` });
+    const failed = () => site.announce({ msg: `Не удалось сохранить настройку ${prop}` });
     if (prop === 'zoom')
       return xhrText(`/pref/zoom?v=${this.getVar('zoom')}`, { method: 'post' }).catch(failed);
 

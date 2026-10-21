@@ -30,7 +30,7 @@ final class UserGamesDownload(helpers: Helpers):
               amount,
               user.enabled.yes.option:
                 tr(cls := "output")(
-                  th(label(`for` := "dl-api-url")("API URL")),
+                  th(label(`for` := "dl-api-url")("Адрес API")),
                   td(
                     copyMeInput("")(
                       id := "dl-api-url",
@@ -56,10 +56,10 @@ final class UserGamesDownload(helpers: Helpers):
               .is(user)
               .option:
                 p(style := "text-align: right")(
-                  "Or download imported games as PGN: ",
-                  a(href := importedGamesUrl)("original"),
+                  "Или скачайте загруженные партии в PGN: ",
+                  a(href := importedGamesUrl)("исходные"),
                   " / ",
-                  a(href := addQueryParam(importedGamesUrl.url, "annotated", "1"))("annotated")
+                  a(href := addQueryParam(importedGamesUrl.url, "annotated", "1"))("с пометками")
                 )
           )
         )
@@ -148,7 +148,7 @@ final class UserGamesDownload(helpers: Helpers):
         includeToggle("clocks", false, trans.site.moveTimes()),
         includeToggle("evals", false, trans.search.evaluation()),
         includeToggle("opening", false, trans.site.opening()),
-        includeToggle("literate", false, "Textual annotations")
+        includeToggle("literate", false, "Текстовые комментарии")
       )
     )
   )

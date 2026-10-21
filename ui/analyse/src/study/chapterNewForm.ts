@@ -121,9 +121,9 @@ export class StudyChapterNewForm {
     if (!dd.pgn) this.send('addChapter', dd);
     else
       importPgn(study.data.id, dd).catch(e => {
-        if (e.message === 'Too many requests') alert('Limit of 1000 pgn imports every 24 hours');
+        if (e.message === 'Too many requests') alert('Можно импортировать не больше 1000 PGN за 24 часа');
         if (e.message === 'Too many chapters')
-          alert('You have reached the maximum number of chapters (64). Some of the games were not imported.');
+          alert('Достигнуто максимальное число глав (64). Часть партий не импортирована.');
         throw e;
       });
     this.isOpen(false);
@@ -264,7 +264,7 @@ export function view(ctrl: StudyChapterNewForm): VNode {
             ),
           activeTab === 'game' &&
             div('.form-group', [
-              label('.form-label', { for: 'chapter-game' }, 'Load games'),
+              label('.form-label', { for: 'chapter-game' }, i18n.study.loadAGameByUrl),
               textarea()('#chapter-game.form-control', {
                 placeholder: i18n.study.urlOfTheGame,
                 hook: onInsert((el: HTMLTextAreaElement) => {
@@ -282,7 +282,7 @@ export function view(ctrl: StudyChapterNewForm): VNode {
                             ),
                           ),
                       );
-                    el.setCustomValidity(ok ? '' : 'Invalid game ID(s) or URL(s)');
+                    el.setCustomValidity(ok ? '' : 'Неверный ID или ссылка на партию');
                   });
                 }),
               }),
@@ -299,7 +299,7 @@ export function view(ctrl: StudyChapterNewForm): VNode {
                     if (parseFen(el.value.trim()).isOk) {
                       el.setCustomValidity('');
                       ctrl.root.node.fen = el.value;
-                    } else el.setCustomValidity('Invalid FEN');
+                    } else el.setCustomValidity(i18n.site.invalidFen);
                   });
                 }),
               }),

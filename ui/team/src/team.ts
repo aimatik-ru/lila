@@ -19,7 +19,7 @@ export function initModule(opts: TeamOpts): void {
 $('button.explain').on('click', async e => {
   if (!e.isTrusted) return;
   e.preventDefault();
-  const why = (await prompt('Please explain the reason for this action'))?.trim();
+  const why = (await prompt('Объясните причину этого действия'))?.trim();
   if (why && why.length > 3) {
     $(e.target).parents('form').find('input[name="explain"]').val(why);
     (e.target as HTMLElement).click();

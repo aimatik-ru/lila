@@ -171,7 +171,7 @@ object TeamForm:
     )
     def requestMessage(team: Team) =
       "message" -> optional(cleanText(minLength = 30, maxLength = 2000))
-        .verifying("Request message required", msg => msg.isDefined || team.open)
+        .verifying("Напишите сообщение к заявке", msg => msg.isDefined || team.open)
     val intro =
       "intro" -> optional(cleanText(minLength = 3, maxLength = 200))
     val description =

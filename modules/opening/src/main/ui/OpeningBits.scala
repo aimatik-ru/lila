@@ -28,9 +28,9 @@ final class OpeningBits(helpers: Helpers):
       case Failure(lila.opening.WaitOrLogin(message)) =>
         Left(p(cls := "opening__warning")(message))
       case Failure(_) =>
-        Left(p(cls := "opening__error")("Couldn't fetch the next moves, try again later."))
+        Left(p(cls := "opening__error")("Не удалось загрузить следующие ходы, попробуйте позже."))
       case Success(None) =>
-        Left(p(cls := "opening__warning")("This opening is not in our database."))
+        Left(p(cls := "opening__warning")("Этого дебюта нет в нашей базе."))
       case Success(Some(explored)) => Right(explored)
 
   def whatsNext(page: OpeningPage): Tag =
@@ -44,7 +44,7 @@ final class OpeningBits(helpers: Helpers):
               span(cls := "opening__next__popularity"):
                 span(
                   style := s"width:${percentNumber(Math.max(next.percent, 10))}%",
-                  title := "Popularity"
+                  title := "Популярность"
                 ):
                   s"${Math.round(next.percent)}%"
               ,
@@ -71,11 +71,11 @@ final class OpeningBits(helpers: Helpers):
           iconTag(Icon.Gear)
         ),
         div(cls := "opening__config__summary__large")(
-          "Speed: ",
+          "Контроль: ",
           span(cls := "opening__config__summary__speed")(config.showSpeeds),
           nbsp,
           nbsp,
-          "Rating: ",
+          "Рейтинг: ",
           span(cls := "opening__config__summary__rating")(config.showRatings)
         )
       ),
@@ -119,9 +119,9 @@ final class OpeningBits(helpers: Helpers):
     import result.*
     val (blackV, drawsV, whiteV) = exaggerateResults(result)
     frag(
-      resultSegment("black", "Black wins", blackPercent, blackV),
-      resultSegment("draws", "Draws", drawsPercent, drawsV),
-      resultSegment("white", "White wins", whitePercent, whiteV)
+      resultSegment("black", "победы чёрных", blackPercent, blackV),
+      resultSegment("draws", "ничьи", drawsPercent, drawsV),
+      resultSegment("white", "победы белых", whitePercent, whiteV)
     )
 
   def resultSegment(key: String, help: String, percent: Double, visualPercent: Double) =

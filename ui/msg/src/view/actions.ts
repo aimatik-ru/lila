@@ -65,5 +65,5 @@ export default function renderActions(ctrl: MsgCtrl, convo: Convo): VNode[] {
 }
 
 const withConfirm = (f: () => void) => (e: MouseEvent) => {
-  confirm(`${(e.target as HTMLElement).getAttribute('title') || 'Confirm'}?`).then(yes => yes && f());
+  confirm(`${(e.target as HTMLElement).getAttribute('title') || 'Подтвердить'}?`).then(yes => yes && f());
 };

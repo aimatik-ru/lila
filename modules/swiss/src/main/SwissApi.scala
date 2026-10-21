@@ -164,7 +164,7 @@ final class SwissApi(
         formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM, FormatStyle.SHORT)
         showDate = formatter.print(date)
       yield
-        systemChat(swiss.id, s"Round ${swiss.round.value + 1} scheduled at $showDate UTC")
+        systemChat(swiss.id, s"Тур ${swiss.round.value + 1} назначен на $showDate (UTC)")
         cache.swissCache.clear(swiss.id)
         socket.reload(swiss.id)
 
@@ -184,26 +184,26 @@ final class SwissApi(
   ): Fu[Option[String]] =
     Sequencing(id)(cache.swissCache.notFinishedById): swiss =>
       if me.marks.prizeban && swiss.looksLikePrize
-      then fuccess("You are not allowed to play in prized tournaments".some)
+      then fuccess("Вам запрещено играть в турнирах с призами".some)
       else if !isInTeam(swiss.teamId)
-      then fuccess("You are not in the team of this tournament".some)
+      then fuccess("Вы не состоите в команде этого турнира".some)
       else if !swiss.settings.password.forall: p =>
           MessageDigest.isEqual(p.getBytes(UTF_8), (~password).getBytes(UTF_8))
-      then fuccess("Wrong entry code".some)
+      then fuccess("Неверный код входа".some)
       else
         mongo.player // try a rejoin first
           .updateField(bid(SwissPlayer.makeId(swiss.id, me)), SwissPlayer.Fields.absent, false)
           .flatMap: rejoin =>
             if rejoin.n == 1 then fuccess(none) // if the match failed (not the update!), try a join
-            else if !initialJoin.hit(me.userId) then fuccess("You are joining too many tournaments".some)
+            else if !initialJoin.hit(me.userId) then fuccess("Вы вступаете в слишком много турниров".some)
             else
               for
                 user <- userApi.withPerf(me.value, swiss.perfType)
                 given Perf = user.perf
                 verified <- verify(swiss)
                 error =
-                  if !verified.accepted then "You don't satisfy the tournament requirements".some
-                  else if !swiss.isEnterable then "This tournament cannot be entered".some
+                  if !verified.accepted then "Вы не проходите по условиям турнира".some
+                  else if !swiss.isEnterable then "В этот турнир сейчас нельзя вступить".some
                   else none
                 _ <- error.isEmpty.so:
                   mongo.player.insert
@@ -467,7 +467,7 @@ final class SwissApi(
     if swiss.round.value == swiss.settings.nbRounds then doFinish(swiss)
     else if swiss.settings.manualRounds then
       fuccess:
-        systemChat(swiss.id, s"Round ${swiss.round.value + 1} needs to be scheduled.")
+        systemChat(swiss.id, s"Нужно назначить время тура ${swiss.round.value + 1}.")
     else
       for
         nextRoundAt <- swiss.settings.dailyInterval match
@@ -477,7 +477,7 @@ final class SwissApi(
               case None => lastRoundAt(swiss).map(_ | nowInstant)
           case None => fuccess(nowInstant.plusSeconds(swiss.settings.roundInterval.toSeconds.toInt))
         _ <- mongo.swiss.updateField(bid(swiss.id), "nextRoundAt", nextRoundAt)
-      yield systemChat(swiss.id, s"Round ${swiss.round.value + 1} will start soon.")
+      yield systemChat(swiss.id, s"Тур ${swiss.round.value + 1} скоро начнётся.")
 
   private def lastRoundAt(swiss: Swiss): Fu[Option[Instant]] =
     mongo.swiss.primitiveOne[Instant](bid(swiss.id), "lastRoundAt")
@@ -514,7 +514,7 @@ final class SwissApi(
   yield
     if pairingDelete.n > 0
     then logger.warn(s"Swiss ${swiss.id} finished with ${pairingDelete.n} ongoing pairings")
-    systemChat(swiss.id, s"Tournament completed!")
+    systemChat(swiss.id, "Турнир завершён!")
     cache.swissCache.clear(swiss.id)
     socket.reload(swiss.id)
     scheduler
@@ -535,7 +535,7 @@ final class SwissApi(
         for _ <- finish(swiss)
         yield
           logger.info(s"Tournament ${swiss.id} cancelled by its creator.")
-          systemChat(swiss.id, "Tournament cancelled by its creator.")
+          systemChat(swiss.id, "Создатель отменил турнир.")
       else if swiss.isCreated then destroy(swiss)
       else funit
   yield cache.featuredInTeam.invalidate(swiss.teamId)
@@ -605,20 +605,20 @@ final class SwissApi(
             else if swiss.nbPlayers >= 2 then
               countPresentPlayers(swiss).flatMap { nbPresent =>
                 if nbPresent < 2 then
-                  systemChat(swiss.id, "Not enough players left.")
+                  systemChat(swiss.id, "Осталось слишком мало игроков.")
                   doFinish(swiss)
                 else
                   for
                     next <- director.startRound(swiss)
                     _ <- next match
                       case None =>
-                        systemChat(swiss.id, "All possible pairings were played.")
+                        systemChat(swiss.id, "Все возможные пары уже сыграли.")
                         doFinish(swiss)
                       case Some(s) if s.nextRoundAt.isEmpty =>
-                        systemChat(s.id, s"Round ${s.round.value} started.")
+                        systemChat(s.id, s"Тур ${s.round.value} начался.")
                         funit
                       case Some(s) =>
-                        systemChat(s.id, s"Round ${s.round.value} failed.", volatile = true)
+                        systemChat(s.id, s"Не удалось провести тур ${s.round.value}.", volatile = true)
                         mongo.swiss.update
                           .one(bid(s.id), bset("nextRoundAt" -> nowInstant.plusSeconds(61)))
                           .void
@@ -626,7 +626,11 @@ final class SwissApi(
               }
             else if swiss.startsAt.isBefore(nowInstant.minusMinutes(60)) then destroy(swiss)
             else
-              systemChat(swiss.id, "Not enough players for first round; delaying start.", volatile = true)
+              systemChat(
+                swiss.id,
+                "Для первого тура не хватает игроков, начало откладывается.",
+                volatile = true
+              )
               for _ <- mongo.swiss.update.one(
                   bid(swiss.id),
                   bset("nextRoundAt" -> nowInstant.plusSeconds(121))

@@ -107,9 +107,10 @@ export class Mic implements Microphone {
       this.micTrack!.enabled = listen;
       this.busy = false;
       site.sound.listeners.add(this.soundListener);
-      this.broadcast(listen ? 'Listening...' : '', 'start');
+      this.broadcast(listen ? 'Слушаю...' : '', 'start');
     } catch (e: any) {
-      if (e instanceof DOMException && e.name === 'NotAllowedError') this.stop(['No permission', 'error']);
+      if (e instanceof DOMException && e.name === 'NotAllowedError')
+        this.stop(['Нет доступа к микрофону', 'error']);
       else this.stop([e.toString(), 'error']);
       if (e !== '') throw e;
     }
@@ -163,7 +164,7 @@ export class Mic implements Microphone {
       await this.initAudio();
       return;
     }
-    this.broadcast('Loading...');
+    this.broadcast('Загрузка...');
 
     const modelUrl = site.asset.url(models.get(this.lang)!);
     const downloadAsync = this.downloadModel(`/vosk/${modelUrl.replace(/[\W]/g, '_')}`);
@@ -227,8 +228,8 @@ export class Mic implements Microphone {
       this.download.onprogress = (e: ProgressEvent) => {
         this.broadcast(
           e.total <= 0
-            ? 'Downloading...'
-            : `Downloaded ${Math.round((100 * e.loaded) / e.total)}% of ${Math.round(e.total / 1000000)}MB`,
+            ? 'Скачивание...'
+            : `Скачано ${Math.round((100 * e.loaded) / e.total)}% из ${Math.round(e.total / 1000000)} МБ`,
         );
       };
 
@@ -238,7 +239,7 @@ export class Mic implements Microphone {
       };
       this.download.send();
     });
-    this.broadcast('Extracting...');
+    this.broadcast('Распаковка...');
     const now = new Date();
     await voskStore.put(emscriptenPath, { timestamp: now, mode: 16877 });
     await voskStore.put(`${emscriptenPath}/downloaded.ok`, {

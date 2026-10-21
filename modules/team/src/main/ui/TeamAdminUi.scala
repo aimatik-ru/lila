@@ -31,8 +31,8 @@ final class TeamAdminUi(helpers: Helpers, bits: TeamUi):
             )(
               errMsg(addLeaderForm),
               div(cls := "team-add-leader__input")(
-                st.input(name := "name", attrData("team-id") := t.id, placeholder := "Add a new leader"),
-                form3.submit("Add")
+                st.input(name := "name", attrData("team-id") := t.id, placeholder := "Добавить лидера"),
+                form3.submit("Добавить")
               )
             ),
             postForm(cls := "team-permissions form3", action := routes.Team.permissions(t.id))(
@@ -68,7 +68,7 @@ final class TeamAdminUi(helpers: Helpers, bits: TeamUi):
                       )
                 )
               ,
-              p(cls := "form-help box__pad")("To remove a leader, remove all permissions."),
+              p(cls := "form-help box__pad")("Чтобы убрать лидера, снимите с него все права."),
               form3.actions(cls := "box__pad")(
                 a(href := routes.Team.show(t.id))(trans.site.cancel()),
                 form3.submit(trans.site.save())
@@ -96,12 +96,12 @@ final class TeamAdminUi(helpers: Helpers, bits: TeamUi):
             ),
             br,
             div(cls := "box box-pad")(
-              adminTop(t, "User blocklist"),
+              adminTop(t, "Чёрный список"),
               postForm(action := routes.Team.blocklist(t.id))(
                 form3
                   .group(
                     blocklistForm("names"),
-                    frag("List of usernames who cannot join the team. One per line.")
+                    frag("Имена пользователей, которым нельзя вступить в команду. По одному на строку.")
                   )(
                     form3.textarea(_)(rows := 4)
                   ),
@@ -158,23 +158,23 @@ final class TeamAdminUi(helpers: Helpers, bits: TeamUi):
                   form3.textarea(field)(rows := 25)
               ,
               p(
-                pluralizeLocalize("member", unsubs),
-                " out of ",
+                "Отписались от рассылки: ",
+                unsubs.localize,
+                " из ",
                 t.nbMembers.localize,
                 " (",
                 f"${(unsubs * 100d) / t.nbMembers}%1.1f",
-                "%)",
-                " have unsubscribed from messages."
+                "%)."
               ),
               limiter match
                 case (remaining, until) =>
                   frag(
                     p(cls := (remaining <= 0).option("error"))(
-                      "You can send up to ",
+                      "В неделю можно отправить не больше ",
                       TeamUpdateApi.credits,
-                      " team updates per week. ",
+                      " новостей команды. Осталось: ",
                       strong(remaining),
-                      " updates remaining until ",
+                      ", счётчик обновится ",
                       momentFromNowOnce(until),
                       "."
                     ),

@@ -54,7 +54,7 @@ function setupTextarea(area: HTMLTextAreaElement, contact: string, ctrl: MsgCtrl
     prev = now;
     const txt = area.value;
     if (txt.length > 8000) {
-      alert('The message is too long.');
+      alert('Сообщение слишком длинное.');
       return;
     }
     if (txt) ctrl.post(txt);

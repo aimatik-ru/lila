@@ -122,9 +122,9 @@ final class UserShow(helpers: Helpers, bits: UserBits):
     import lila.rating.UserPerfsExt.bestRatedPerf
     val name = user.titleUsername
     val nbGames = user.count.game
-    val createdAt = showEnglishDate(user.createdAt)
+    val createdAt = showDate(user.createdAt)
     val currentRating = user.perfs.bestRatedPerf.so: p =>
-      s" Current ${p.key.perfTrans} rating: ${p.perf.intRating}."
-    s"$name played $nbGames games since $createdAt.$currentRating"
+      s" Текущий рейтинг (${p.key.perfTrans}): ${p.perf.intRating}."
+    s"$name — на площадке с $createdAt, сыграно партий: $nbGames.$currentRating"
 
   val dataUsername = attr("data-username")

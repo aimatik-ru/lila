@@ -88,7 +88,7 @@ function expandGames(games: Expandable[]): void {
   if (games.length < 3) games.forEach(expandGame);
   else
     games.forEach(game => {
-      game.element.title = 'Click to expand';
+      game.element.title = 'Нажмите, чтобы развернуть';
       game.element.classList.add('text');
       game.element.setAttribute('data-icon', licon.Expand);
       game.element.addEventListener('click', e => {

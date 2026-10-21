@@ -231,16 +231,16 @@ function titleRequest() {
 function thanksReport() {
   const $button = $('button.report-block');
   $button.one('click', function () {
-    $button.find('span').text('Blocking...');
+    $button.find('span').text('Блокируем...');
     fetch($button.data('action'), { method: 'post' }).then(async res =>
-      $button.find('span').text(res.ok ? 'Blocked!' : 'Block error'),
+      $button.find('span').text(res.ok ? 'Заблокирован!' : 'Ошибка блокировки'),
     );
   });
 }
 
 function validateEmail() {
   const email = document.getElementById('new-email') as HTMLInputElement;
-  const currentError = 'This is already your current email.';
+  const currentError = 'Это и так ваш текущий адрес почты.';
   email.setCustomValidity(currentError);
   email.addEventListener('input', function () {
     email.setCustomValidity(email.validity.patternMismatch ? currentError : '');
@@ -253,7 +253,9 @@ function emailErrorCheck() {
     if (error) {
       $('.email-confirm-banner')
         .addClass('error')
-        .html(`<a href="/signup/check-your-email">We sent the email, but it was rejected.</a><code></code>`);
+        .html(
+          `<a href="/signup/check-your-email">Письмо отправлено, но почтовый сервер его отклонил.</a><code></code>`,
+        );
       $('.email-confirm-banner code').text(error);
     } else setTimeout(() => fetchError(backoff * 1.5), backoff);
   };

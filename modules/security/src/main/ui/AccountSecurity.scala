@@ -90,14 +90,14 @@ final class AccountSecurity(helpers: Helpers)(
             p(cls := "ua")(
               if client.scopes.nonEmpty then
                 frag(
-                  "Third party application with permissions: ",
+                  "Стороннее приложение с правами: ",
                   client.scopes.map(_.name.txt()).mkString(", ")
                 )
-              else frag("Third party application using only public data.")
+              else frag("Стороннее приложение, которое видит только открытые данные.")
             ),
             client.usedAt.map { usedAt =>
               p(cls := "date")(
-                "Last used ",
+                "Последнее использование: ",
                 momentFromNow(usedAt)
               )
             }
@@ -105,7 +105,7 @@ final class AccountSecurity(helpers: Helpers)(
           td(
             postForm(action := routes.OAuth.revokeClient)(
               form3.hidden("origin", client.origin),
-              submitButton(cls := "button button-red", title := "Revoke", dataIcon := Icon.X)
+              submitButton(cls := "button button-red", title := "Отозвать", dataIcon := Icon.X)
             )
           )
         )
@@ -114,8 +114,8 @@ final class AccountSecurity(helpers: Helpers)(
         tr(
           td(cls := "icon")(span(cls := "is-green", dataIcon := Icon.Tools)),
           td(cls := "info")(
-            strong("Personal access tokens"),
-            " can be used to access your account. Revoke any that you do not recognize."
+            strong("Личные токены доступа"),
+            " дают доступ к вашей учётной записи. Отзовите те, которые вам незнакомы."
           ),
           td(
             a(

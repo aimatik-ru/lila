@@ -58,8 +58,8 @@ case class Swiss(
 
   def estimatedDurationString =
     val minutes = estimatedDuration.toMinutes
-    if minutes < 60 then s"${minutes}m"
-    else s"${minutes / 60}h" + (if minutes % 60 != 0 then s" ${minutes % 60}m" else "")
+    if minutes < 60 then s"$minutes мин"
+    else s"${minutes / 60} ч" + (if minutes % 60 != 0 then s" ${minutes % 60} мин" else "")
 
   def roundInfo = Swiss.RoundInfo(teamId, settings.chatFor)
 

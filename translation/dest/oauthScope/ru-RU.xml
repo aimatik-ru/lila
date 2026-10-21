@@ -49,4 +49,13 @@
   <string name="forExample">Например: %s</string>
   <string name="ticksTheScopes">отметка %1$s в области %2$s устанавливает описание токена.</string>
   <string name="givingPrefilledUrls">Предоставление этих предварительно заполненных URL вашим пользователям поможет им получить правильные области действия токенов.</string>
+  <string name="oauthCatUserAccount">Аккаунт пользователя</string>
+  <string name="oauthCatInteractions">Взаимодействия</string>
+  <string name="oauthCatPlayGames">Играть в партии</string>
+  <string name="oauthCatStudiesBroadcasts">Студии &amp; Трансляции</string>
+  <string name="oauthCatExternalPlay">Внешняя игра</string>
+  <string name="oauthCatExternalEngine">Внешний движок</string>
+  <string name="tournamentRead">Просмотр закрытых турниров</string>
+  <string name="puzzleWrite">Решать задачи</string>
+  <string name="readWriteNotesOnPlayers">Читать и делать заметки о других игроках</string>
 </resources>

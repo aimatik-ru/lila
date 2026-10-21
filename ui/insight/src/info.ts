@@ -7,7 +7,7 @@ import { userLink } from 'lib/view/userLink';
 import type Ctrl from './ctrl';
 import { registerFormHandler } from './insight.refresh';
 
-const shareStates = ['nobody', 'friends only', 'everybody'];
+const shareStates = ['никому', 'только друзьям', 'всем'];
 
 export function tutor() {
   return h(
@@ -19,17 +19,17 @@ export function tutor() {
       h('img', {
         attrs: { src: site.asset.flairSrc('nature.octopus-howard') },
       }),
-      h('span', [h('strong', 'Try out Tutor'), h('em', 'Compare to your peers!')]),
+      h('span', [h('strong', 'Попробуйте «Тьютора»'), h('em', 'Сравните себя с другими!')]),
     ],
   );
 }
 
 export function info(ctrl: Ctrl) {
-  const shareText = 'Shared with ' + shareStates[ctrl.user.shareId] + '.';
+  const shareText = 'Доступно: ' + shareStates[ctrl.user.shareId] + '.';
   return h('div.info.box', [
     h('div.top', userLink(ctrl.user)),
     h('div.content', [
-      h('p', ['Insights over ', h('strong', numberFormat(ctrl.user.nbGames)), ' rated games.']),
+      h('p', ['Аналитика по рейтинговым партиям: ', h('strong', numberFormat(ctrl.user.nbGames)), '.']),
       h(
         'p.share',
         ctrl.own
@@ -50,7 +50,7 @@ export function info(ctrl: Ctrl) {
       'div.refresh',
       ctrl.env.user.stale
         ? h('div.insight-stale', [
-            h('p', 'There are new games to learn from!'),
+            h('p', 'Появились новые партии для анализа!'),
             h(
               'form.insight-refresh',
               {
@@ -61,13 +61,13 @@ export function info(ctrl: Ctrl) {
                 hook: onInsert(registerFormHandler),
               },
               [
-                h('button.button.button-thin', 'Update insights'),
+                h('button.button.button-thin', 'Обновить аналитику'),
                 h(
                   'div.crunching.none',
                   {
                     hook: onInsert(el => el.insertAdjacentHTML('afterbegin', spinnerHtml)),
                   },
-                  [h('br'), h('p', h('strong', 'Now crunching data just for you!'))],
+                  [h('br'), h('p', h('strong', 'Обрабатываем данные специально для вас!'))],
                 ),
               ],
             ),

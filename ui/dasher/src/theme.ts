@@ -110,8 +110,7 @@ export class ThemeCtrl extends PaneCtrl {
     return this.root.data.background;
   }
 
-  private readonly announceFail = (err: string) =>
-    site.announce({ msg: `Failed to save background preference: ${err}` });
+  private readonly announceFail = (err: string) => site.announce({ msg: `Не удалось сохранить фон: ${err}` });
 
   private readonly reloadAllTheThings = () => {
     if ($('canvas').length) site.reload();

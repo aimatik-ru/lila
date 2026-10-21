@@ -80,7 +80,7 @@ const bigNumberFormatter =
   window.Intl && Intl.NumberFormat ? new Intl.NumberFormat(displayLocale, { notation: 'compact' }) : null;
 
 function moveStatsTooltip(ctrl: AnalyseCtrl, move: OpeningMoveStats): string {
-  if (!move.uci) return 'Total';
+  if (!move.uci) return 'Всего';
   if (move.game) {
     const g = move.game;
     const result = g.winner === 'white' ? '1-0' : g.winner === 'black' ? '0-1' : '½-½';
@@ -91,7 +91,7 @@ function moveStatsTooltip(ctrl: AnalyseCtrl, move: OpeningMoveStats): string {
   if (ctrl.explorer.opts.showRatings) {
     if (move.averageRating) return i18n.site.averageRatingX(move.averageRating);
     if (move.averageOpponentRating)
-      return `Performance rating: ${move.performance}, average opponent: ${move.averageOpponentRating}`;
+      return `Рейтинг по результату: ${move.performance}, средний соперник: ${move.averageOpponentRating}`;
   }
   return '';
 }
@@ -170,24 +170,24 @@ function gameActions(ctrl: AnalyseCtrl, game: OpeningGame): VNode {
         hl(
           'a.text',
           { attrs: dataIcon(licon.Eye), hook: bind('click', () => openGame(ctrl, game.id)) },
-          'View',
+          'Открыть',
         ),
         ctrl.study &&
           hl(
             'a.text',
             { attrs: dataIcon(licon.BubbleSpeech), hook: bind('click', () => send(false), ctrl.redraw) },
-            'Cite',
+            'Процитировать',
           ),
         ctrl.study &&
           hl(
             'a.text',
             { attrs: dataIcon(licon.PlusButton), hook: bind('click', () => send(true), ctrl.redraw) },
-            'Insert',
+            'Вставить',
           ),
         hl(
           'a.text',
           { attrs: dataIcon(licon.X), hook: bind('click', () => ctrl.explorer.gameMenu(null), ctrl.redraw) },
-          'Close',
+          i18n.site.close,
         ),
       ]),
     ]),
@@ -209,7 +209,7 @@ const showEmpty = (ctrl: AnalyseCtrl, data?: OpeningData): VNode => {
     hl('div.message', [
       hl('strong', isTooDeep ? i18n.site.maxDepthReached : i18n.site.noGameFound),
       data?.queuePosition
-        ? hl('p.explanation', `Indexing ${data.queuePosition} other players first ...`)
+        ? hl('p.explanation', `Индексация: перед вами ещё ${data.queuePosition} игроков…`)
         : !(ctrl.explorer.config.fullHouse() || isTooDeep) &&
           hl('p.explanation', i18n.site.maybeIncludeMoreGamesFromThePreferencesMenu),
     ]),
@@ -270,11 +270,11 @@ function show(ctrl: AnalyseCtrl): MaybeVNode {
         row('loss', i18n.site.winning),
         row('unknown', i18n.site.unknown),
         row('syzygy-loss', i18n.site.winOr50MovesByPriorMistake, i18n.site.unknownDueToRounding),
-        row('maybe-loss', 'Win or 50 moves'),
+        row('maybe-loss', 'Выигрыш или правило 50 ходов'),
         row('blessed-loss', i18n.site.winPreventedBy50MoveRule),
         row('draw', i18n.site.drawn),
         row('cursed-win', i18n.site.lossSavedBy50MoveRule),
-        row('maybe-win', 'Loss or 50 moves'),
+        row('maybe-win', 'Проигрыш или правило 50 ходов'),
         row('syzygy-win', i18n.site.lossOr50MovesByPriorMistake, i18n.site.unknownDueToRounding),
         row('win', i18n.site.losing),
       ]);
@@ -327,10 +327,10 @@ const explorerTitle = (ctrl: AnalyseCtrl) => {
 
   return hl('div.explorer-title', [
     db === 'masters'
-      ? active([hl('strong', 'Masters'), ' database'], masterDbExplanation, licon.Book)
-      : explorer.config.allDbs.includes('masters') && otherLink('Masters', masterDbExplanation),
+      ? active(['База ', hl('strong', 'мастеров')], masterDbExplanation, licon.Book)
+      : explorer.config.allDbs.includes('masters') && otherLink('Мастера', masterDbExplanation),
     db === 'lichess'
-      ? active([hl('strong', 'Логик'), ' database'], i18n.site.lichessDbExplanation, licon.Logo)
+      ? active(['База ', hl('strong', 'Логика')], i18n.site.lichessDbExplanation, licon.Logo)
       : otherLink('Логик', i18n.site.lichessDbExplanation),
     db === 'player'
       ? playerName
@@ -343,15 +343,15 @@ const explorerTitle = (ctrl: AnalyseCtrl) => {
                 hl('icon.ddloader', {
                   attrs: {
                     title: queuePosition
-                      ? `Indexing ${queuePosition} other players first ...`
-                      : 'Indexing ...',
+                      ? `Индексация: перед вами ещё ${queuePosition} игроков…`
+                      : 'Индексация…',
                   },
                 }),
             ],
             i18n.site.switchSides,
             licon.User,
           )
-        : active([hl('strong', 'Player'), ' database'], '', licon.User)
+        : active(['База ', hl('strong', 'игрока')], '', licon.User)
       : hl(
           'button.button-link.player',
           {
@@ -372,7 +372,7 @@ const explorerTitle = (ctrl: AnalyseCtrl) => {
         ),
     hl('button.fbt.toconf', {
       attrs: {
-        'aria-label': configOpened ? 'Close configuration' : 'Open configuration',
+        'aria-label': configOpened ? 'Закрыть настройки' : 'Открыть настройки',
         ...dataIcon(configOpened ? licon.X : licon.Gear),
       },
       hook: bind('click', () => config.toggleOpen(), ctrl.redraw),
@@ -392,7 +392,7 @@ const showFailing = (ctrl: AnalyseCtrl) =>
   hl('div.data.empty', [
     explorerTitle(ctrl),
     hl('div.message', [
-      hl('h3', 'Oops, sorry!'),
+      hl('h3', 'Ой, что-то пошло не так!'),
       hl('p.explanation', ctrl.explorer.failing()?.toString()),
       closeButton(ctrl),
     ]),

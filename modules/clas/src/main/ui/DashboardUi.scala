@@ -139,64 +139,64 @@ final class DashboardUi(helpers: Helpers, ui: ClasUi)(using NetDomain):
       val doubleHelp: Tag =
         div(cls := "clas-show__bulk__helps form-group")(
           div(cls := "clas-show__bulk__help")(
-            strong("Important! Make sure you understand how this works:"),
+            strong("Важно! Убедитесь, что понимаете, как это работает:"),
             p(
-              "Edit the list above to keep some students selected for a bulk action.",
+              "Отредактируйте список выше: оставьте в нём учеников для группового действия.",
               br,
-              "All the students remaining in the list will be affected by the action.",
+              "Действие применится ко всем ученикам, которые остались в списке.",
               br,
-              "The students you removed from the list will remain in the class, unchanged."
+              "Ученики, которых вы убрали из списка, останутся в классе без изменений."
             )
           ),
           div(cls := "clas-show__bulk__help")(
-            "Choose the action to perform on the students listed above:"
+            "Выберите действие для учеников из списка выше:"
           )
         )
       TeacherPage(c, all.filter(_.student.isActive), "students")():
         div(cls := "clas-show__body clas-show__bulk")(
           postForm(cls := "form3", action := routes.Clas.bulkActionsPost(c.id))(
-            form3.fieldset("Active students", toggle = true.some)(cls := "box-pad")(
+            form3.fieldset("Активные ученики", toggle = true.some)(cls := "box-pad")(
               form3.group(
                 form("activeStudents"),
-                frag("Active students")
+                frag("Активные ученики")
               )(form3.textarea(_)(rows := 12)),
               doubleHelp,
               div(cls := "form-group")(
-                form3.submit("Archive", icon = none, ("action", "archive").some)(
+                form3.submit("В архив", icon = none, ("action", "archive").some)(
                   cls := "yes-no-confirm button-blue button-empty"
                 ),
                 br,
                 classButtons
               )
             ),
-            form3.fieldset("Archived students", toggle = all.exists(_.student.isArchived).some)(
+            form3.fieldset("Ученики в архиве", toggle = all.exists(_.student.isArchived).some)(
               cls := "box-pad"
             )(
               form3.group(
                 form("archivedStudents"),
-                frag("Archived students")
+                frag("Ученики в архиве")
               )(form3.textarea(_)(rows := 7)),
               doubleHelp(
-                "BEWARE: removing a student with managed account will close the account permanently."
+                "ВНИМАНИЕ: удаление ученика с управляемой учётной записью навсегда закроет эту запись."
               ),
               div(cls := "form-group")(
-                form3.submit("Restore", icon = none, ("action", "restore").some)(
+                form3.submit("Восстановить", icon = none, ("action", "restore").some)(
                   cls := "yes-no-confirm button-blue button-empty"
                 ),
-                form3.submit("Remove", icon = Icon.Trash.some, ("action", "remove").some)(
+                form3.submit("Удалить", icon = Icon.Trash.some, ("action", "remove").some)(
                   cls := "yes-no-confirm button-red button-empty"
                 )
               )
             ),
-            form3.fieldset("Pending invites", toggle = form("invites").value.exists(_.nonEmpty).some)(
+            form3.fieldset("Ожидающие приглашения", toggle = form("invites").value.exists(_.nonEmpty).some)(
               cls := "box-pad"
             )(
               form3.group(
                 form("invites"),
-                frag("Invites")
+                frag("Приглашения")
               )(form3.textarea(_)(rows := 7)),
               div(cls := "form-group")(
-                form3.submit("Delete", icon = Icon.Trash.some, ("action", "delete-invites").some)(
+                form3.submit("Удалить", icon = Icon.Trash.some, ("action", "delete-invites").some)(
                   cls := "yes-no-confirm button-red button-empty"
                 )
               )
@@ -229,7 +229,7 @@ final class DashboardUi(helpers: Helpers, ui: ClasUi)(using NetDomain):
                   href := routes.Clas.bulkActions(c.id),
                   cls := "button button-clas text",
                   dataIcon := Icon.Tools
-                )("Bulk actions"),
+                )("Групповые действия"),
                 postForm(action := routes.Clas.loginCreate(c.id))(
                   submitButton(cls := "button button-clas text", dataIcon := Icon.Group)(
                     trans.clas.quickLoginCodes()
@@ -283,7 +283,7 @@ final class DashboardUi(helpers: Helpers, ui: ClasUi)(using NetDomain):
           yield div(cls := "clas-login__card")(
             h3(student.realName),
             userIdLink(student.userId.some, withOnline = false),
-            c.map(_.code).fold(iconTag(Icon.X, "not managed"))(code(_))
+            c.map(_.code).fold(iconTag(Icon.X, "не управляемая"))(code(_))
           )
       )
 
@@ -446,14 +446,14 @@ final class DashboardUi(helpers: Helpers, ui: ClasUi)(using NetDomain):
       TeacherPage(c, students, active)():
         div(cls := "box__pad students__empty")(
           p(
-            "This feature is only available for classes of ",
+            "Эта функция доступна только для классов, где ",
             lila.clas.Clas.maxStudents,
-            " or fewer students."
+            " учеников или меньше."
           ),
           p(
-            "This class has ",
+            "Учеников в этом классе: ",
             students.size,
-            " students. You could maybe create more classes to split the students."
+            ". Можно создать ещё классы и распределить учеников по ним."
           )
         )
 

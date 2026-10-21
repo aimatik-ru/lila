@@ -66,21 +66,21 @@ final class UserBits(helpers: Helpers):
         s"""<i${if v < b then " class=\"off\"" else ""}></i>"""
       .mkString("")
     val title = v match
-      case 1 => "Poor connection"
-      case 2 => "Decent connection"
-      case 3 => "Good connection"
-      case _ => "Excellent connection"
+      case 1 => "Плохое соединение"
+      case 2 => "Сносное соединение"
+      case 3 => "Хорошее соединение"
+      case _ => "Отличное соединение"
     s"""<signal title="$title" class="q$v">$bars</signal>"""
 
   def trophyMeta(perf: PerfType, rank: Int)(using Translate) =
     rank match
-      case 1 => Some(("trophy perf top1", s"${perf.trans} Champion!", "images/trophy/gold-cup-2.png"))
+      case 1 => Some(("trophy perf top1", s"${perf.trans}: чемпион!", "images/trophy/gold-cup-2.png"))
       case r if r <= 10 =>
-        Some(("trophy perf top10", s"${perf.trans} Top 10!", "images/trophy/silver-cup-2.png"))
+        Some(("trophy perf top10", s"${perf.trans}: топ-10!", "images/trophy/silver-cup-2.png"))
       case r if r <= 50 =>
-        Some(("trophy perf top50", s"${perf.trans} Top 50 player!", "images/trophy/Fancy-Gold.png"))
+        Some(("trophy perf top50", s"${perf.trans}: топ-50!", "images/trophy/Fancy-Gold.png"))
       case r if r <= 100 =>
-        Some(("trophy perf top100", s"${perf.trans} Top 100 player!", "images/trophy/Gold-Cup.png"))
+        Some(("trophy perf top100", s"${perf.trans}: топ-100!", "images/trophy/Gold-Cup.png"))
       case _ => None
 
   def perfTrophies(u: User, rankMap: lila.core.rating.UserRankMap)(using Translate) = u.lame.not.so:

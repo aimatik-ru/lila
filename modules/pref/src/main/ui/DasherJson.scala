@@ -9,12 +9,24 @@ import lila.ui.Context
 
 object DasherJson:
 
+  // названия наборов звуков для меню; одно слово — меню делит строку по пробелу
+  private val soundNames = Map(
+    "silent" -> "Тишина",
+    "standard" -> "Стандартный",
+    "piano" -> "Пианино",
+    "futuristic" -> "Футуристичный",
+    "woodland" -> "Лесной",
+    "robot" -> "Робот",
+    "music" -> "Пентатоника",
+    "speech" -> "Озвучка"
+  )
+
   def apply(pref: Pref, gallery: Option[JsValue])(using ctx: Context): JsObject =
     Json.obj(
       "user" -> ctx.me.map(_.light),
       "sound" -> Json.obj(
         "list" -> SoundSet.list.map { set =>
-          s"${set.key} ${set.name}"
+          s"${set.key} ${soundNames.getOrElse(set.key, set.name)}"
         }
       ),
       "background" -> Json

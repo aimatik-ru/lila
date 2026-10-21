@@ -177,8 +177,10 @@ final class ChatApi(
         .add(c, mod, user, reason, scope)
         .flatMap: isNew =>
           val lineText = scope match
-            case ChatTimeout.Scope.Global => s"${user.username} was timed out 15 minutes for ${reason.name}."
-            case _ => s"${user.username} was timed out 15 minutes by a page mod (not a Логик mod)"
+            case ChatTimeout.Scope.Global =>
+              s"${user.username}: чат заблокирован на 15 минут (${reason.name})."
+            case _ =>
+              s"${user.username}: модератор страницы (не «Логика») заблокировал чат на 15 минут."
           val line = (isNew && c.hasRecentLine(user)).option:
             UserLine(UserName.lichess, text = lineText, troll = false, deleted = false)
           val c2 = c.markDeleted(user)

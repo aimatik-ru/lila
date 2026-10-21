@@ -10,16 +10,16 @@ final class StudyUi(helpers: Helpers):
 
   def clone(s: Study)(using Context) =
     postForm(action := routes.Study.cloneApply(s.id))(
-      p("This will create a new private study with the same chapters."),
-      p("You will be the owner of that new study."),
-      p("The two studies can be updated separately."),
-      p("Deleting one study will ", strong("not"), " delete the other study."),
+      p("Будет создана новая закрытая студия с теми же главами."),
+      p("Вы станете владельцем новой студии."),
+      p("Обе студии можно менять независимо друг от друга."),
+      p("Удаление одной студии ", strong("не"), " удалит другую."),
       p(
         submitButton(
           cls := "submit button large text",
           dataIcon := Icon.StudyBoard,
           style := "margin: 30px auto; display: block; font-size: 2em;"
-        )("Clone the study")
+        )("Клонировать студию")
       ),
       p(
         a(href := routes.Study.show(s.id), cls := "text", dataIcon := Icon.LessThan)(trans.site.cancel())

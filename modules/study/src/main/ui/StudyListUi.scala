@@ -233,7 +233,7 @@ final class StudyListUi(helpers: Helpers, bits: StudyBits):
     ):
       button(
         cls := List("button" -> true, "active" -> format.compact, "button-empty" -> !format.compact),
-        title := (if format.compact then "Switch to card view" else "Switch to list view"),
+        title := (if format.compact then "Показать карточками" else "Показать списком"),
         tpe := "submit",
         dataIcon := Icon.List
       )

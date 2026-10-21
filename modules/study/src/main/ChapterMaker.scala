@@ -179,7 +179,7 @@ final private class ChapterMaker(
         chatApi.write(
           chatId = ChatId(chatId),
           userId = userId,
-          text = s"I'm studying this game on ${net.domain}/study/${study.id}",
+          text = s"Разбираю эту партию: ${net.domain}/study/${study.id}",
           publicSource = none,
           _.round,
           persist = false

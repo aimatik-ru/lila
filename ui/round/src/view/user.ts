@@ -42,11 +42,7 @@ export function userHtml(ctrl: RoundController, player: Player, position: TopOrB
               }
             : {},
           attrs: {
-            title: connecting
-              ? 'Connecting to the game'
-              : player.onGame
-                ? 'Joined the game'
-                : 'Left the game',
+            title: connecting ? 'Подключение к игре' : player.onGame ? 'В игре' : 'Вне игры',
           },
         }),
         userLink({
@@ -73,7 +69,7 @@ export function userHtml(ctrl: RoundController, player: Player, position: TopOrB
     [
       hl('icon.line', {
         attrs: {
-          title: connecting ? 'Connecting to the game' : player.onGame ? 'Joined the game' : 'Left the game',
+          title: connecting ? 'Подключение к игре' : player.onGame ? 'В игре' : 'Вне игры',
         },
       }),
       hl('name', player.name || i18n.site.anonymous),

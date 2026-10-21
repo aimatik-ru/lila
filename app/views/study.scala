@@ -101,7 +101,7 @@ def show(
       OpenGraph(
         title = s.name.value,
         url = routeUrl(routes.Study.show(s.id)),
-        description = s"A chess study by ${titleNameOrId(s.ownerId)}",
+        description = s"Шахматная студия, автор: ${titleNameOrId(s.ownerId)}",
         image = fenThumbnailUrl(
           chapter.root.fen.opening,
           chapter.setup.orientation.some,
@@ -118,11 +118,11 @@ def socketUrl(id: StudyId) = s"/study/$id/socket/v$apiVersion"
 
 def privateStudy(study: lila.study.Study)(using Context) =
   views.site.message(
-    title = s"${titleNameOrId(study.ownerId)}'s study",
+    title = s"Студия пользователя ${titleNameOrId(study.ownerId)}",
     back = routes.Study.allDefault().url.some
   ):
     frag(
-      "Sorry! This study is private, you cannot access it.",
+      "Извините, это закрытая студия, у вас нет к ней доступа.",
       isGranted(_.StudyAdmin).option(
         postForm(action := routes.Study.admin(study.id))(
           submitButton("View as admin")(cls := "button button-red")

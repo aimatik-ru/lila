@@ -188,7 +188,11 @@ final class StudyApi(
 
   def cloneWithChat(me: User, prev: Study, update: Study => Study = identity): Fu[Option[Study]] = for
     study <- justCloneNoChecks(me, prev, update)
-    _ <- chatApi.system(study.id.into(ChatId), s"Cloned from play.kalugalogic.ru/study/${prev.id}", _.study)
+    _ <- chatApi.system(
+      study.id.into(ChatId),
+      s"Скопировано из play.kalugalogic.ru/study/${prev.id}",
+      _.study
+    )
   yield study.some
 
   def justCloneNoChecks(
@@ -624,9 +628,9 @@ final class StudyApi(
   ): FuRaise[ErrorMsg, Option[Chapter]] =
     sequenceStudy(studyId): study =>
       for
-        _ <- raiseIf(!study.canContribute(who.u))(ErrorMsg("No permission to add chapter"))
+        _ <- raiseIf(!study.canContribute(who.u))(ErrorMsg("Нет прав на добавление главы"))
         count <- chapterRepo.countByStudyId(study.id)
-        _ <- raiseIf(Study.maxChapters <= count)(ErrorMsg("Too many chapters"))
+        _ <- raiseIf(Study.maxChapters <= count)(ErrorMsg("Слишком много глав"))
         _ <- data.initial.so:
           chapterRepo
             .firstByStudy(study.id)

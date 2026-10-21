@@ -93,7 +93,7 @@ export function view(ctrl: StudyForm): VNode {
   const formFields = [
     hl('div.form-split.flair-and-name' + (ctrl.relay ? '.none' : ''), [
       hl('div.form-group', [
-        hl('label.form-label', 'Flair'),
+        hl('label.form-label', i18n.site.flair),
         hl(
           'div.form-control.emoji-details',
           {
@@ -111,7 +111,7 @@ export function view(ctrl: StudyForm): VNode {
             hl(
               'div.flair-picker.none',
               data.admin || { attrs: { 'data-except-emojis': 'activity.lichess' } },
-              hl('button.button.button-metal.emoji-remove', { attrs: { type: 'button' } }, 'clear'),
+              hl('button.button.button-metal.emoji-remove', { attrs: { type: 'button' } }, 'убрать'),
             ),
           ],
         ),

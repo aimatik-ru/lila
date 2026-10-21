@@ -33,7 +33,7 @@ final class Importer(env: Env) extends LilaController(env):
             .flatMap: game =>
               ctx.me.so(env.game.cached.clearNbImportedByCache(_)).inject(Right(game))
             .recover { case _: Exception =>
-              Left("The PGN contains illegal and/or ambiguous moves.")
+              Left("В PGN есть недопустимые или неоднозначные ходы.")
             }
             .flatMap {
               case Right(game) =>

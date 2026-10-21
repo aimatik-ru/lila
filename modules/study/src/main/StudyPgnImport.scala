@@ -41,14 +41,14 @@ object StudyPgnImport:
       strict: Boolean = false,
       importer: Option[LightUser] = None
   ): Either[ErrorStr, Result] =
-    if pgn.value.sizeIs > 100_000 then Left(ErrorStr("PGN too large"))
+    if pgn.value.sizeIs > 100_000 then Left(ErrorStr("PGN слишком большой"))
     else
       for
         parsed <- ParseImport.full(pgn)
         full = result(parsed, contributors, importer)
         valid <-
           if full.root.children.countRecursive > Chapter.maxNodes
-          then Left(ErrorStr("PGN has too many moves/nodes"))
+          then Left(ErrorStr("В PGN слишком много ходов или вариантов"))
           else if strict then parsed.replayError.toLeft(full)
           else Right(full)
       yield valid

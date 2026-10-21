@@ -197,8 +197,8 @@ function chartHook(vnode: VNode, ctrl: Ctrl) {
 }
 
 export default function (ctrl: Ctrl) {
-  if (!ctrl.validCombinationCurrent()) return empty('Invalid dimension/metric combination');
-  if (!ctrl.vm.answer?.series.length) return empty('No data. Try widening or clearing the filters.');
+  if (!ctrl.validCombinationCurrent()) return empty('Такое сочетание параметра и показателя недоступно');
+  if (!ctrl.vm.answer?.series.length) return empty('Нет данных. Ослабьте или сбросьте фильтры.');
   return h(
     'div.chart',
     h('canvas.chart', {

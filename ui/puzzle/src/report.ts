@@ -85,11 +85,11 @@ export default class Report {
 
   private readonly reportDialog = (puzzleId: PuzzleId, reason: string) => {
     const switchButton =
-      `<div class="switch switch-report-puzzle" title="temporarily disable reporting puzzles">` +
+      `<div class="switch switch-report-puzzle" title="временно не предлагать жалобы на задачи">` +
       `<input id="puzzle-toggle-report" class="cmn-toggle" type="checkbox">` +
       `<label for="puzzle-toggle-report"></label></div>`;
 
-    const hideButtonDiv = `<div style="display:flex; flex-flow: row nowrap; align-items: center; justify-content: center">${switchButton}<span style="padding-left: 1em"> Hide this for a week</span></div>`;
+    const hideButtonDiv = `<div style="display:flex; flex-flow: row nowrap; align-items: center; justify-content: center">${switchButton}<span style="padding-left: 1em"> Не показывать неделю</span></div>`;
 
     const hideDialogInput = () => document.querySelector('.switch-report-puzzle input') as HTMLInputElement;
 
@@ -99,15 +99,15 @@ export default class Report {
       easyClose: 'clickOutside',
       htmlText:
         '<div><strong style="font-size:1.5em">' +
-        'Report multiple solutions' +
+        'Несколько решений' +
         '</strong><br /><br />' +
         '<p>' +
-        'You have found a puzzle with multiple solutions, report it?' +
+        'В этой задаче нашлось несколько решений. Сообщить об этом?' +
         '</p><br />' +
         hideButtonDiv +
         '<br /><br />' +
-        `<button type="reset" class="button button-empty button-red text reset" data-icon="${licon.X}">No</button>` +
-        `<button type="submit" class="button button-green text apply" data-icon="${licon.Checkmark}">Yes</button>`,
+        `<button type="reset" class="button button-empty button-red text reset" data-icon="${licon.X}">${i18n.site.no}</button>` +
+        `<button type="submit" class="button button-green text apply" data-icon="${licon.Checkmark}">${i18n.site.yes}</button>`,
     }).then(dlg => {
       $('.switch-report-puzzle', dlg.view).on('click', () => {
         const input = hideDialogInput();

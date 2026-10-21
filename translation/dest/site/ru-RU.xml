@@ -1126,4 +1126,25 @@
   <string name="verifyingYourDevice">Проверка устройства...</string>
   <string name="chessOpenings">Шахматные дебюты</string>
   <string name="boards">Доски</string>
+  <string name="engine">Движок</string>
+  <string name="friendsOnlineAndPlaying">Друзей в сети: %1$s
+Друзей в игре: %2$s</string>
+  <string name="aboutBotsOnLichess">О ботах на Логик</string>
+  <string name="featuredBots">Рекомендуемые боты</string>
+  <string name="tryPlayingTheseInnovativeChessEngines">Попробуйте сыграть с этими инновационными шахматными движками! Они наши фавориты.</string>
+  <string name="communityBots">Боты сообщества</string>
+  <string name="moreChessEnginesCreatedByTheLichessCommunity">Другие шахматные движки, созданные сообществом Логик. Они размещаются своими создателями и не всегда могут быть в сети.</string>
+  <string name="emailLoginInstructions">Мы отправим Вам на электронную почту письмо со ссылкой для входа.</string>
+  <string name="defeatOnly">Только поражения</string>
+  <string name="drawAndDefeat">Ничья и поражение</string>
+  <string name="lichessUpdates">Обновления Логик</string>
+  <string name="changelog">Список изменений</string>
+  <string name="blockAds">Блокировать рекламу</string>
+  <string name="downloadMyGames">Скачать мои партии</string>
+  <string name="downloadResults">Скачать результаты</string>
+  <string name="activeSessionsDescription">Ниже представлен список устройств и приложений, через которые выполнен вход в Вашу учетную запись. Если Вы заметите подозрительную активность, обязательно &lt;a href=\'%1$s\'&gt;проверьте адрес электронной почты для восстановления доступа&lt;/a&gt; и &lt;a href=\'%2$s\'&gt;смените пароль&lt;/a&gt;.</string>
+  <string name="browserNotificationsDenied">Всплывающие уведомления отключены в настройках браузера</string>
+  <string name="write">Написать</string>
+  <string name="preview">Предпросмотр</string>
+  <string name="done">Готово</string>
 </resources>

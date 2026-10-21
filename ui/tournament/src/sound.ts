@@ -25,7 +25,7 @@ function doCountDown(targetTime: number) {
 
     if (!started && bestTick <= 10) {
       started = true;
-      notify('The tournament is starting!');
+      notify('Турнир начинается!');
     }
   };
 }

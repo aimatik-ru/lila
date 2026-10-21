@@ -15,30 +15,34 @@ object SimulForm:
 
   type EitherForm = Either[Form[SimulForm.LockedSetup], Form[SimulForm.Setup]]
 
-  val clockTimeChoices = options((5 to 15 by 5) ++ (20 to 90 by 10) ++ (120 to 180 by 20), "%d minute{s}")
+  val clockTimeChoices = options(
+    (5 to 15 by 5) ++ (20 to 90 by 10) ++ (120 to 180 by 20),
+    format = lila.gathering.RuPlural.minutes
+  )
   val clockTimeDefault = LimitMinutes(20)
 
   val clockIncrementChoices = options(
     (0 to 2 by 1) ++ (3 to 7) ++ (10 to 30 by 5) ++ (40 to 60 by 10) ++ (90 to 180 by 30),
-    "%d second{s}"
+    format = lila.gathering.RuPlural.seconds
   )
   val clockIncrementDefault = IncrementSeconds(60)
 
   val clockExtrasPositive = (0 to 15 by 5) ++ (20 to 60 by 10) ++ (90 to 120 by 30)
   val clockExtras = clockExtrasPositive.tail.map(-_).reverse.concat(clockExtrasPositive)
-  val clockExtraChoices = options(clockExtras, "%d minute{s}").map:
+  val clockExtraChoices = options(clockExtras, format = lila.gathering.RuPlural.minutes).map:
     case (d, str) if d > 0 => (d, s"+$str")
     case pair => pair
   val clockExtraDefault = LimitMinutes(0)
 
-  val clockExtraPerPlayerChoices = options((0 to 60 by 10) ++ Seq(90, 120, 180, 240, 300), "%d second{s}")
+  val clockExtraPerPlayerChoices =
+    options((0 to 60 by 10) ++ Seq(90, 120, 180, 240, 300), format = lila.gathering.RuPlural.seconds)
   val clockExtraPerPlayerDefault = LimitSeconds(0)
 
   val colors = List("white", "random", "black")
   val colorChoices = List(
-    "white" -> "White",
-    "random" -> "Random",
-    "black" -> "Black"
+    "white" -> "Белые",
+    "random" -> "Случайно",
+    "black" -> "Чёрные"
   )
   val colorDefault = "white"
 
@@ -49,7 +53,7 @@ object SimulForm:
             chess.PlayerTitle.all.exists: (title, name) =>
               !host.title.contains(title) && (title.value == word || name.toUpperCase == word)
           }
-        then validation.Invalid(validation.ValidationError("Must not contain a title"))
+        then validation.Invalid(validation.ValidationError("Название не должно содержать звание"))
         else validation.Valid
     )
 
@@ -103,7 +107,7 @@ object SimulForm:
         "clockExtraPerPlayer" -> numberIn(clockExtraPerPlayerChoices).into[LimitSeconds],
         "variants" -> list {
           typeIn(Variant.list.all.filter(chess.variant.FromPosition != _).map(_.id).toSet)
-        }.verifying("At least one variant", _.nonEmpty),
+        }.verifying("Выберите хотя бы один вариант", _.nonEmpty),
         "position" -> optional(lila.common.Form.fen.playableStrict),
         "color" -> stringIn(colorChoices),
         "text" -> cleanText,
@@ -111,7 +115,7 @@ object SimulForm:
         "featured" -> optional(boolean),
         "conditions" -> SimulCondition.form.all(teams)
       )(Setup.apply)(unapply)
-        .verifying("Invalid host extra time.", _.clock.valid)
+        .verifying("Неверное дополнительное время ведущего.", _.clock.valid)
     )
 
   case class Setup(

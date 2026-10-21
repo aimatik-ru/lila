@@ -81,4 +81,8 @@
   <string name="ifYouWantToBroadcastClause1">Если вы хотите официально транслировать турнир на Логик, или у вас есть вопросы о наших трансляциях:</string>
   <string name="ifYouWantToBroadcastClause2" comment="string1 is Lichess email, string2 is value of key ourDiscordServer">Пожалуйста, свяжитесь с нашей службой трансляций по адресу %1$s или на %2$s.</string>
   <string name="ourDiscordServer">нашем Discord-сервере</string>
+  <string name="cantClearHistoryOrResetRatings">Невозможно очистить историю Ваших игр, историю задач или сбросить Ваши рейтинги.</string>
+  <string name="reportTheBug">Вы можете сообщить об этом:</string>
+  <string name="securityVulnerability">Уязвимость безопасности</string>
+  <string name="otherBug">Другая ошибка</string>
 </resources>

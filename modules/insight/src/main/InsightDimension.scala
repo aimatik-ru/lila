@@ -30,217 +30,220 @@ enum InsightDimension[A](
   case Period
       extends InsightDimension[Period](
         "period",
-        "Date",
+        "Дата",
         F.date,
         InsightPosition.Game,
-        "The date at which the game was played"
+        "Дата, когда сыграна партия"
       )
 
   case Date
       extends InsightDimension[lila.insight.DateRange](
         "date",
-        "Date",
+        "Дата",
         F.date,
         InsightPosition.Game,
-        "The date at which the game was played"
+        "Дата, когда сыграна партия"
       )
 
   case Perf
       extends InsightDimension[PerfType](
         "variant",
-        "Variant",
+        "Вариант",
         F.perf,
         InsightPosition.Game,
-        "The rating category of the game, like Bullet, Blitz, or Chess960."
+        "Рейтинговая категория партии: пуля, блиц, шахматы 960 и т. д."
       )
 
   case Phase
       extends InsightDimension[Phase](
         "phase",
-        "Game phase",
+        "Стадия партии",
         F.moves("p"),
         InsightPosition.Move,
-        "The portion of the game: Opening, Middlegame, or Endgame."
+        "Часть партии: дебют, миттельшпиль или эндшпиль."
       )
 
   case Result
       extends InsightDimension[Result](
         "result",
-        "Game result",
+        "Результат партии",
         F.result,
         InsightPosition.Game,
-        "Whether you won, lost, or drew the game."
+        "Выиграли вы, проиграли или сыграли вничью."
       )
 
   case Termination
       extends InsightDimension[Termination](
         "termination",
-        "Game termination",
+        "Окончание партии",
         F.termination,
         InsightPosition.Game,
-        "The way that the game ended, like Checkmate or Resignation."
+        "Как закончилась партия: мат, сдача и т. д."
       )
 
   case Color
       extends InsightDimension[Color](
         "color",
-        "Color",
+        "Цвет",
         F.color,
         InsightPosition.Game,
-        "The side you are playing: White or Black."
+        "За кого вы играете: белые или чёрные."
       )
 
   case OpeningFamily
       extends InsightDimension[LilaOpeningFamily](
         "openingFamily",
-        "Opening Family",
+        "Дебют",
         F.openingFamily,
         InsightPosition.Game,
-        "General opening, like 'Sicilian Defense'."
+        "Дебют в целом, например «Сицилианская защита»."
       )
 
   case OpeningVariation
       extends InsightDimension[SimpleOpening](
         "openingVariation",
-        "Opening Variation",
+        "Вариант дебюта",
         F.opening,
         InsightPosition.Game,
-        "Precise opening, like 'Sicilian Defense: Najdorf Variation'."
+        "Точный вариант дебюта, например «Сицилианская защита: вариант Найдорфа»."
       )
 
   case OpponentStrength
       extends InsightDimension[RelativeStrength](
         "opponentStrength",
-        "Opponent strength",
+        "Сила соперника",
         F.opponentStrength,
         InsightPosition.Game,
-        "Rating of your opponent compared to yours. Much weaker:-200, Weaker:-100, Stronger:+100, Much stronger:+200."
+        "Рейтинг соперника по сравнению с вашим. Намного слабее: −200, слабее: −100, " +
+          "сильнее: +100, намного сильнее: +200."
       )
 
   case PieceRole
       extends InsightDimension[Role](
         "piece",
-        "Piece moved",
+        "Фигура, которой сделан ход",
         F.moves("r"),
         InsightPosition.Move,
-        "The type of piece you move."
+        "Какой фигурой вы ходите."
       )
 
   case MovetimeRange
       extends InsightDimension[MovetimeRange](
         "movetime",
-        "Move time",
+        "Время на ход",
         F.moves("t"),
         InsightPosition.Move,
-        "The amount of time you spend thinking on each move, in seconds."
+        "Сколько секунд вы думаете над каждым ходом."
       )
 
   case MyCastling
       extends InsightDimension[Castling](
         "myCastling",
-        "My castling side",
+        "Моя рокировка",
         F.myCastling,
         InsightPosition.Game,
-        "The side you castled on during the game: kingside, queenside, or none."
+        "В какую сторону вы рокировали: короткая, длинная или без рокировки."
       )
 
   case OpCastling
       extends InsightDimension[Castling](
         "opCastling",
-        "Opponent castling side",
+        "Рокировка соперника",
         F.opponentCastling,
         InsightPosition.Game,
-        "The side your opponent castled on during the game: kingside, queenside, or none."
+        "В какую сторону рокировал соперник: короткая, длинная или без рокировки."
       )
 
   case QueenTrade
       extends InsightDimension[QueenTrade](
         "queenTrade",
-        "Queen trade",
+        "Размен ферзей",
         F.queenTrade,
         InsightPosition.Game,
-        "Whether queens were traded before the endgame or not."
+        "Разменялись ли ферзи до эндшпиля."
       )
 
   case MaterialRange
       extends InsightDimension[MaterialRange](
         "material",
-        "Material imbalance",
+        "Материальный перевес",
         F.moves("i"),
         InsightPosition.Move,
-        "Value of your pieces compared to your opponent's. Pawn=1, Bishop/Knight=3, Rook=5, Queen=9."
+        "Ценность ваших фигур по сравнению с фигурами соперника. Пешка = 1, слон/конь = 3, " +
+          "ладья = 5, ферзь = 9."
       )
 
   case Blur
       extends InsightDimension[Blur](
         "blur",
-        "Move blur",
+        "Уход из окна",
         F.moves("b"),
         InsightPosition.Move,
-        "Whether a window blur happened before that move or not."
+        "Уходили ли вы из окна игры перед этим ходом."
       )
 
   case TimeVariance
       extends InsightDimension[TimeVariance](
         "timeVariance",
-        "Time variance",
+        "Разброс времени",
         F.moves("v"),
         InsightPosition.Move,
-        "Move time variance. Very consistent: < 0.25, Consistent: < 0.4, Medium, Variable: > 0.6, Very variable > 0.75."
+        "Разброс времени на ход. Очень ровно: < 0.25, ровно: < 0.4, средне, " +
+          "неровно: > 0.6, очень неровно: > 0.75."
       )
 
   case CplRange
       extends InsightDimension[CplRange](
         "cpl",
-        "Centipawn loss",
+        "Потеря сантипешек",
         F.moves("c"),
         InsightPosition.Move,
-        "Centipawns lost by each move, according to Stockfish evaluation."
+        "Сколько сантипешек теряет каждый ход по оценке Stockfish."
       )
 
   case EvalRange
       extends InsightDimension[EvalRange](
         "eval",
-        "Evaluation",
+        "Оценка",
         F.moves("e"),
         InsightPosition.Move,
-        "Stockfish evaluation of the position, relative to the player, in centipawns."
+        "Оценка позиции Stockfish для игрока, в сантипешках."
       )
 
   case AccuracyPercentRange
       extends InsightDimension[AccuracyPercentRange](
         "accuracy",
-        "Accuracy",
+        "Точность",
         F.moves("a"),
         InsightPosition.Move,
-        """How accurate your moves are, based on Stockfish evaluation."""
+        """Насколько точны ваши ходы по оценке Stockfish."""
       )
 
   case WinPercentRange
       extends InsightDimension[WinPercentRange](
         "winPercent",
-        "Winning chances",
+        "Шансы на победу",
         F.moves("w"),
         InsightPosition.Move,
-        "Chances to win a position, based on Stockfish evaluation. A.k.a. Win%"
+        "Шансы выиграть позицию по оценке Stockfish, они же Win%."
       )
 
   case ClockPercentRange
       extends InsightDimension[ClockPercentRange](
         "clockPercent",
-        "Time pressure",
+        "Цейтнот",
         F.moves("s"),
         InsightPosition.Move,
-        "Time left on the player clock, accounting for increment. 100% = full clock, 0% = flagging."
+        "Сколько времени осталось на часах с учётом добавления. 100% — всё время, 0% — флажок упал."
       )
 
   case GameSource
       extends InsightDimension[Source](
         "source",
-        "Game source",
+        "Источник партии",
         F.source,
         InsightPosition.Game,
-        "How the game was created."
+        "Как была создана партия."
       )
 
 object InsightDimension:

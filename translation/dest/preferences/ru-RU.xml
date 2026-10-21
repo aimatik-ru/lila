@@ -89,4 +89,12 @@
   <string name="analysisSettings">Настройки анализа</string>
   <string name="maneuverArrowsHelp">Последовательность предлагаемых движком ходов для одной фигуры</string>
   <string name="hoverOverSettingLabelsForHelp">Наведите поверх метки настройки для подсказки</string>
+  <string name="multipleChoices">Несколько вариантов.</string>
+  <string name="showMainlineAnalysis">Показывать анализ основного варианта</string>
+  <string name="network">Сеть</string>
+  <string name="youAreCurrentlyUsingDirectRouting">В настоящее время Вы используете прямую маршрутизацию.</string>
+  <string name="youAreCurrentlyUsingCdnRouting">В настоящее время Вы используете маршрутизацию через сеть доставки контента (CDN).</string>
+  <string name="frequentDisconnectsAdvice">Если у Вы часто происходят обрывы соединения, попробуйте изменить маршрутизацию.</string>
+  <string name="useDirectRouting">Использовать прямую маршрутизацию</string>
+  <string name="useCdnRouting">Использовать маршрутизацию CDN</string>
 </resources>

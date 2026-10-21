@@ -115,7 +115,7 @@ final class Analyse(
                   views.analyse.embed.lpv(
                     pgn,
                     getPgn = true,
-                    title = "Логик PGN viewer",
+                    title = "Просмотр PGN — «Логик»",
                     Json.obj("orientation" -> color.name)
                   )
           case _ =>

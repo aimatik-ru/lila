@@ -222,10 +222,10 @@ function engineSelection(ctrl: CevalHandler) {
     external &&
       button('.button.button-red.button-empty', {
         ...dataIcon(licon.Trash),
-        title: 'Delete external engine',
+        title: 'Удалить внешний движок',
         hook: bind('click', async e => {
           (e.currentTarget as HTMLElement).blur();
-          if (await confirm('Remove external engine?'))
+          if (await confirm('Удалить внешний движок?'))
             ceval.engines.deleteExternal(external.id).then(ok => ok && ceval.opts.redraw());
         }),
       }),
@@ -262,7 +262,7 @@ export function engineSelect(
 function engineInfo(engines: EngineInfo[]) {
   if (document.querySelector('.engine-info')) return;
   const engineHtml = (e: EngineInfo) =>
-    `<li>${e.name} ${e.url ? `<a href="${e.url}" target="_blank">source</a>` : ''}</li>`;
+    `<li>${e.name} ${e.url ? `<a href="${e.url}" target="_blank">источник</a>` : ''}</li>`;
   domDialog({
     class: 'engine-info-popup',
     easyClose: 'clickOutside',

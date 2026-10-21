@@ -100,7 +100,7 @@ export function view(ctrl: AnalyseCtrl): VNode {
             ctrl.actionMenu.toggle();
             ctrl.redraw();
           }),
-          attrs: { 'data-icon': licon.ChasingArrows, title: 'Hotkey: f' },
+          attrs: { 'data-icon': licon.ChasingArrows, title: 'Горячая клавиша: f' },
         },
         i18n.site.flipBoard,
       ),
@@ -111,7 +111,7 @@ export function view(ctrl: AnalyseCtrl): VNode {
             attrs: {
               'data-icon': licon.Pencil,
               href: ctrl.boardEditorUrl(),
-              title: 'Hotkey: b',
+              title: 'Горячая клавиша: b',
               ...linkAttrs,
             },
           },

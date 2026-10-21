@@ -232,8 +232,8 @@ class WsSocket {
     clearTimeout(this.connectSchedule);
     this.connectSchedule = setTimeout(() => {
       this.onOnline(false);
-      if (isOnline()) $('#network-status').text(i18n?.site?.reconnecting ?? 'Reconnecting');
-      else $('#network-status').text(i18n?.site?.noNetwork ?? 'Offline');
+      if (isOnline()) $('#network-status').text(i18n?.site?.reconnecting ?? 'Переподключение');
+      else $('#network-status').text(i18n?.site?.noNetwork ?? 'Нет сети');
       this.tryOtherUrl = true;
       this.connect();
     }, delay);

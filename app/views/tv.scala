@@ -14,7 +14,7 @@ def index(
     cross: Option[lila.game.Crosstable.WithMatchup],
     history: List[Pov]
 )(using Context) =
-  val title = s"${channel.name} TV: ${playerText(pov.player)} vs ${playerText(pov.opponent)}"
+  val title = s"ТВ ${channel.name}: ${playerText(pov.player)} — ${playerText(pov.opponent)}"
   val page = views.round.ui.RoundPage(pov.game.variant, title)
   val roundApp = views.round.ui.roundAppPreload(pov)
   ui.index(channel, champions, pov, data, cross, history)(page)(roundApp)
@@ -22,12 +22,12 @@ def index(
 def embed(pov: Pov, channelKey: Option[String])(using EmbedContext) =
   val dataStreamUrl = channelKey.fold("/tv/feed?bc=1")(key => s"/tv/${key}/feed?bc=1")
   views.base.embed.minimal(
-    title = "play.kalugalogic.ru chess TV",
+    title = "Шахматное ТВ play.kalugalogic.ru",
     cssKeys = List("bits.tv.embed"),
     modules = Esm("site.tvEmbed")
   )(
     attr("data-stream-url") := dataStreamUrl,
-    div(id := "featured-game", cls := "embedded", title := "play.kalugalogic.ru TV")(
+    div(id := "featured-game", cls := "embedded", title := "ТВ play.kalugalogic.ru")(
       views.game.mini.noCtx(pov, tv = true, channelKey)(targetBlank)
     ),
     cashTag,

@@ -29,10 +29,8 @@ final class ClasPages(helpers: Helpers, clasUi: ClasUi, dashUi: DashboardUi):
         (closed || others.nonEmpty).option(
           div(cls := "clas-index__others")(
             a(href := s"${routes.Clas.index}?closed=${!closed}")(
-              others.size.localize,
-              " ",
-              if closed then "active" else "archived",
-              if others.size == 1 then " class" else " classes"
+              if closed then "Активные классы: " else "Классы в архиве: ",
+              others.size.localize
             )
           )
         )
@@ -125,9 +123,10 @@ final class ClasPages(helpers: Helpers, clasUi: ClasUi, dashUi: DashboardUi):
       ),
       form3.checkboxGroup(
         form("hasTeam"),
-        frag("Make a Логик team for this class"),
+        frag("Создать команду «Логик» для этого класса"),
         help = frag(
-          "Логик teams can organize tournaments. Your class students will automatically join the team and its tournaments."
+          "Команды «Логик» могут проводить турниры. Ученики класса автоматически " +
+            "вступят в команду и её турниры."
         ).some
       )(id := "clas-team")
     )

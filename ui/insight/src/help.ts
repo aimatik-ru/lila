@@ -4,7 +4,7 @@ import type Ctrl from './ctrl';
 
 export default function (ctrl: Ctrl) {
   return h('div.help.box', [
-    h('div.top', 'Definitions'),
+    h('div.top', 'Определения'),
     h(
       'div.content',
       ['metric', 'dimension'].map(type => {

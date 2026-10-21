@@ -26,7 +26,8 @@ export class DescriptionCtrl {
   }
 }
 
-export const descTitle = (chapter: boolean) => `Pinned ${chapter ? 'chapter' : 'study'} comment`;
+export const descTitle = (chapter: boolean) =>
+  chapter ? i18n.study.pinnedChapterComment : i18n.study.pinnedStudyComment;
 
 export function view(study: StudyCtrl, chapter: boolean): VNode | undefined {
   const desc = chapter ? study.chapterDesc : study.studyDesc;
@@ -41,13 +42,13 @@ export function view(study: StudyCtrl, chapter: boolean): VNode | undefined {
         hl('span', descTitle(chapter)),
         !isEmpty &&
           hl('a', {
-            attrs: { 'data-icon': licon.Pencil, title: 'Edit' },
+            attrs: { 'data-icon': licon.Pencil, title: i18n.site.edit },
             hook: bind('click', () => (desc.edit = true), desc.redraw),
           }),
         hl('a', {
-          attrs: { 'data-icon': licon.Trash, title: 'Delete' },
+          attrs: { 'data-icon': licon.Trash, title: i18n.site.delete },
           hook: bind('click', async () => {
-            if (await confirm('Delete permanent description?')) desc.save('');
+            if (await confirm('Удалить постоянное описание?')) desc.save('');
           }),
         }),
       ]),
@@ -66,7 +67,7 @@ const edit = (ctrl: DescriptionCtrl, id: string, chapter: boolean): VNode =>
     hl('div.title', [
       descTitle(chapter),
       hl('button.button.button-empty.button-green', {
-        attrs: { 'data-icon': licon.Checkmark, title: 'Save and close' },
+        attrs: { 'data-icon': licon.Checkmark, title: 'Сохранить и закрыть' },
         hook: bind('click', () => (ctrl.edit = false), ctrl.redraw),
       }),
     ]),

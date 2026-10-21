@@ -49,7 +49,7 @@ function renderFeedback(ctrl: GamebookPlayCtrl, state: State) {
   if (fb === 'good' && state.comment)
     return hl('button.feedback.act.good.com', { attrs: { type: 'button' }, hook: bind('click', ctrl.next) }, [
       hl('span.text', { attrs: dataIcon(licon.PlayTriangle) }, i18n.study.next),
-      hl('kbd', 'space'),
+      hl('kbd', 'пробел'),
     ]);
   if (fb === 'end') return renderEnd(ctrl);
   return hl(

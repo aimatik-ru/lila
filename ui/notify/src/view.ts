@@ -28,14 +28,14 @@ function renderContent(ctrl: Ctrl, d: NotifyData): LooseVNodes {
       attrs: {
         href: '/account/preferences/notification',
         'data-icon': licon.Gear,
-        title: 'Notification Settings',
+        title: 'Настройки уведомлений',
       },
     }),
     nb === 0
       ? empty()
       : [
           hl('button.delete.button.button-empty', {
-            attrs: { 'data-icon': licon.Trash, title: 'Clear' },
+            attrs: { 'data-icon': licon.Trash, title: 'Очистить' },
             hook: clickHook(ctrl.clear),
           }),
           recentNotifications(d, ctrl.scrolling()),
@@ -45,7 +45,7 @@ function renderContent(ctrl: Ctrl, d: NotifyData): LooseVNodes {
       hl('div.pager.next', { attrs: dataIcon(licon.DownTriangle), hook: clickHook(ctrl.nextPage) }),
 
     !('Notification' in window)
-      ? hl('div.browser-notification', 'Browser does not support notification popups')
+      ? hl('div.browser-notification', 'Браузер не поддерживает всплывающие уведомления')
       : Notification.permission === 'denied' && notificationDenied(),
   ];
 }

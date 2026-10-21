@@ -39,7 +39,7 @@ function wireMarkdownTextarea(markdown: HTMLElement) {
     ]);
     preview.replaceChildren(rendered);
     if (markdownPicfitRegex().test(textarea.value) && !localStorage.getItem('markdown.rtfm')) {
-      await info('Drag a side or bottom edge to resize an image.');
+      await info('Чтобы изменить размер картинки, потяните за боковой или нижний край.');
       localStorage.setItem('markdown.rtfm', '1');
     }
     await wireMarkdownImgResizers({
@@ -116,7 +116,7 @@ function wireMarkdownTextarea(markdown: HTMLElement) {
       if (count >= Number(markdown.dataset.imageCountMax)) {
         throw `You can only upload ${markdown.dataset.imageCountMax} images here.`;
       }
-      preview.innerHTML = `<div class="busy"><span>Uploading image...</span>${spinnerHtml}</div>`;
+      preview.innerHTML = `<div class="busy"><span>Загрузка картинки...</span>${spinnerHtml}</div>`;
       preview.classList.remove('none');
       const { width, height } = await naturalSize(image);
       const body = new FormData();
@@ -135,7 +135,7 @@ function wireMarkdownTextarea(markdown: HTMLElement) {
       textarea.value = `${before}${maybeNewline}![${image.name}](${imageUrl})\n${after}`;
       textarea.selectionStart = textarea.selectionEnd = textarea.value.length - after.length;
     } catch (e) {
-      alert(e instanceof ValidationError ? e.message : `Image upload failed: ${e}`);
+      alert(e instanceof ValidationError ? e.message : `Не удалось загрузить картинку: ${e}`);
     } finally {
       preview.classList.add('none');
       preview.innerHTML = '';

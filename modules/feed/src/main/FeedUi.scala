@@ -26,10 +26,10 @@ final class FeedUi(helpers: Helpers, atomUi: AtomUi, feedMarkdown: FeedMarkdown)
       .js(edit.option(esmInitBit("dailyFeed")))
 
   def index(ups: Paginator[Feed.Update])(using Context) =
-    page("Updates"):
+    page("Новости"):
       div(cls := "daily-feed box box-pad")(
         boxTop(
-          h1("Логик updates"),
+          h1("Новости «Логика»"),
           div(cls := "box__top__actions")(
             Granter
               .opt(_.Feed)
@@ -63,7 +63,7 @@ final class FeedUi(helpers: Helpers, atomUi: AtomUi, feedMarkdown: FeedMarkdown)
         marker(),
         div:
           a(cls := "daily-feed__update__day", href := routes.Feed.index(1)):
-            "All updates »"
+            "Все новости »"
       )
     )
 
@@ -104,7 +104,7 @@ final class FeedUi(helpers: Helpers, atomUi: AtomUi, feedMarkdown: FeedMarkdown)
       elems = ups,
       htmlCall = routes.Feed.index(1),
       atomCall = routes.Feed.atom,
-      title = "Логик updates feed",
+      title = "Новости «Логика»",
       updated = ups.headOption.map(_.at),
       language = _ => lila.core.i18n.defaultLanguage
     ): up =>

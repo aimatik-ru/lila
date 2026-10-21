@@ -107,7 +107,7 @@ function nextRound(ctrl: SwissCtrl): VNode | undefined {
     },
     [
       hl('input', {
-        attrs: { name: 'date', placeholder: 'Schedule the next round', value: ctrl.data.nextRound?.at || '' },
+        attrs: { name: 'date', placeholder: 'Назначить следующий тур', value: ctrl.data.nextRound?.at || '' },
         hook: onInsert((el: HTMLInputElement) =>
           flatpickr(el, {
             minDate: 'today',

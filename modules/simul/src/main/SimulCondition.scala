@@ -38,7 +38,7 @@ object SimulCondition:
         "minRating" -> minRating,
         "team" -> teamMember(leaderTeams),
         "accountAge" -> accountAge
-      )(All.apply)(unapply).verifying("Invalid ratings", _.validRatings)
+      )(All.apply)(unapply).verifying("Неверные ограничения по рейтингу", _.validRatings)
 
   import reactivemongo.api.bson.*
   given bsonHandler: BSONDocumentHandler[All] =

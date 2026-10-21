@@ -65,7 +65,6 @@ import type { AnaMove } from './study/interfaces';
 import type StudyCtrl from './study/studyCtrl';
 import { TreeView } from './treeView/treeView';
 import { treeReconstruct, addCrazyData, hasUserContent, replaceStaticEval } from './util';
-import { plural } from './view/util';
 import wikiTheory, { wikiClear, type WikiTheory } from './wiki';
 
 export default class AnalyseCtrl implements CevalHandler {
@@ -648,9 +647,8 @@ export default class AnalyseCtrl implements CevalHandler {
     if (
       (count.nodes >= 10 || count.comments > 0) &&
       !(await confirm(
-        'Delete ' +
-          plural('move', count.nodes) +
-          (count.comments ? ' and ' + plural('comment', count.comments) : '') +
+        `Удалить ходы (${count.nodes})` +
+          (count.comments ? ` и комментарии (${count.comments})` : '') +
           '?',
       ))
     )

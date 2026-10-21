@@ -17,7 +17,7 @@ export type AuthorObj = {
 export type Author = AuthorObj | string;
 
 function authorDom(author: Author): string | VNode {
-  if (!author) return 'Unknown';
+  if (!author) return i18n.site.unknown;
   if (typeof author === 'string') return author;
   return h('span.user-link.ulpt', { attrs: { 'data-href': profileUrl(author.id) } }, author.name);
 }
@@ -25,7 +25,7 @@ function authorDom(author: Author): string | VNode {
 export const isAuthorObj = (author: Author): author is AuthorObj => typeof author === 'object';
 
 export const authorText = (author?: Author): string =>
-  !author ? 'Unknown' : typeof author === 'string' ? author : author.name;
+  !author ? i18n.site.unknown : typeof author === 'string' ? author : author.name;
 
 export function currentComments(ctrl: AnalyseCtrl, includingMine: boolean): VNode | undefined {
   if (!ctrl.node.comments) return undefined;
@@ -43,9 +43,9 @@ export function currentComments(ctrl: AnalyseCtrl, includingMine: boolean): VNod
       return h('div.study__comment.' + comment.id, [
         study.members.canContribute() && study.vm.mode.write
           ? h('a.edit', {
-              attrs: { 'data-icon': licon.Trash, title: 'Delete' },
+              attrs: { 'data-icon': licon.Trash, title: i18n.site.delete },
               hook: bind('click', async () => {
-                if (await confirm('Delete ' + authorText(by) + "'s comment?")) {
+                if (await confirm(`Удалить комментарий ${authorText(by)}?`)) {
                   study.commentForm.delete(chapter.id, ctrl.path, comment.id);
                   ctrl.redraw();
                 }
@@ -53,7 +53,7 @@ export function currentComments(ctrl: AnalyseCtrl, includingMine: boolean): VNod
             })
           : null,
         authorDom(by),
-        ...(node.san ? [' on ', h('span.node', nodeFullName(node))] : []),
+        ...(node.san ? [' к ходу ', h('span.node', nodeFullName(node))] : []),
         ': ',
         h('div.text', { hook: richHTML(comment.text) }),
       ]);

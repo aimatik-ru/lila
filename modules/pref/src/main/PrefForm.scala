@@ -33,7 +33,7 @@ object PrefForm:
     val soundSet = "soundSet" -> text.verifying(SoundSet.contains(_))
     val bg = "bg" -> stringIn(Pref.Bg.fromString.keySet)
     val bgImg = "bgImg" -> text(maxLength = 400).verifying(
-      "URL must use https",
+      "Адрес должен начинаться с https",
       url => url.isBlank || url.startsWith("https://") || url.startsWith("//")
     )
     val is3d = "is3d" -> tolerantBoolean

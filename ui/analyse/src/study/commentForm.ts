@@ -54,7 +54,7 @@ export function view(root: AnalyseCtrl): VNode {
   const study = root.study!;
   const ctrl = study.commentForm;
   const current = ctrl.current();
-  if (!current) return viewDisabled(root, 'Select a move to comment');
+  if (!current) return viewDisabled(root, 'Выберите ход, чтобы прокомментировать');
 
   const setupTextarea = (vnode: VNode, old?: VNode) => {
     const el = vnode.elm as HTMLInputElement;

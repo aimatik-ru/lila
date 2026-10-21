@@ -36,7 +36,7 @@ export function join(ctrl: TournamentController): VNode {
       i18n.site.join,
     );
     return delay
-      ? h('div.delay-wrap', { attrs: { title: 'Waiting to be able to re-join the tournament' } }, [
+      ? h('div.delay-wrap', { attrs: { title: 'Ожидание возможности вернуться в турнир' } }, [
           h(
             'div.delay',
             {

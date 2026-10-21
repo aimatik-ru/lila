@@ -38,7 +38,7 @@ export default function makeCtrl(opts: NotifyOpts, redraw: Redraw): Ctrl {
   const loadPage = (page: number) =>
     xhrJson<NotifyData>(xhrUrl('/notify', { page: page || 1 })).then(
       d => update(d),
-      _ => site.announce({ msg: 'Failed to load notifications' }),
+      _ => site.announce({ msg: 'Не удалось загрузить уведомления' }),
     );
 
   function nextPage() {
@@ -94,7 +94,7 @@ export default function makeCtrl(opts: NotifyOpts, redraw: Redraw): Ctrl {
   function clear() {
     xhrText('/notify/clear', { method: 'post' }).then(
       _ => update(emptyNotifyData),
-      _ => site.announce({ msg: 'Failed to clear notifications' }),
+      _ => site.announce({ msg: 'Не удалось очистить уведомления' }),
     );
   }
 

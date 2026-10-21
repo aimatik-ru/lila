@@ -49,7 +49,7 @@ export class BoardMenu {
       'button.button.text',
       {
         class: { active },
-        attrs: { title: 'Hotkey: f', ...dataIcon(licon.ChasingArrows) },
+        attrs: { title: 'Клавиша: f', ...dataIcon(licon.ChasingArrows) },
         hook: onInsert(el => addPointerListeners(el, { click: onChange })),
       },
       name,
@@ -70,7 +70,7 @@ export class BoardMenu {
       id: 'voice',
       name: i18n.preferences.inputMovesWithVoice,
       prop: toggle,
-      title: this.anonymous ? 'Must be logged in' : '',
+      title: this.anonymous ? 'Нужно войти в аккаунт' : '',
       disabled: this.anonymous || !enabled,
       redraw: this.redraw,
     });
@@ -80,7 +80,7 @@ export class BoardMenu {
       id: 'keyboard',
       name: i18n.preferences.inputMovesWithTheKeyboard,
       prop: toggle,
-      title: this.anonymous ? 'Must be logged in' : '',
+      title: this.anonymous ? 'Нужно войти в аккаунт' : '',
       disabled: this.anonymous || !enabled,
       redraw: this.redraw,
     });

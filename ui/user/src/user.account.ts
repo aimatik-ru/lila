@@ -89,10 +89,7 @@ site.load.then(() => {
       clean = serialize();
     });
     window.addEventListener('beforeunload', e => {
-      if (
-        clean !== serialize() &&
-        !window.confirm('You have unsaved changes. Are you sure you want to leave?')
-      )
+      if (clean !== serialize() && !window.confirm('Есть несохранённые изменения. Точно уйти со страницы?'))
         e.preventDefault();
     });
   });

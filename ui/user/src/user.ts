@@ -29,7 +29,7 @@ export async function initModule(): Promise<void> {
             .formToXhr(form, this)
             .then(html => $zone.replaceWith(html))
             .then(() => loadNoteZone())
-            .catch(() => alert('Invalid note, is it too short or too long?')),
+            .catch(() => alert('Заметка не сохранена: возможно, она слишком короткая или длинная.')),
         );
       return false;
     });
@@ -94,7 +94,7 @@ function tmpRandomTutorLink() {
   const buttonHtml = `
   <a href="/tutor" class="tutor-link">
     <img src="${site.asset.flairSrc('nature.octopus-howard')}" />
-    <span><strong>Try out Tutor</strong><em>Compare to your peers!</em></span>
+    <span><strong>Попробуйте «Тьютора»</strong><em>Сравните себя с другими!</em></span>
   </a>`;
   $(buttonHtml).insertBefore('.profile-side .insight');
 }

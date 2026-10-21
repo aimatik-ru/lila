@@ -70,32 +70,40 @@ final class RoundUi(helpers: Helpers, gameUi: lila.game.ui.GameUi):
     import pov.*
     val p1 = playerText(game.whitePlayer, withRating = true)
     val p2 = playerText(game.blackPlayer, withRating = true)
-    val plays = if game.finishedOrAborted then "played" else "is playing"
+    val plays = if game.finishedOrAborted then "сыграли" else "играют"
+    def speedName(speed: chess.Speed) = speed match
+      case chess.Speed.UltraBullet => trans.site.ultraBullet.txt()
+      case chess.Speed.Bullet => trans.site.bullet.txt()
+      case chess.Speed.Blitz => trans.site.blitz.txt()
+      case chess.Speed.Rapid => trans.site.rapid.txt()
+      case chess.Speed.Classical => trans.site.classical.txt()
+      case chess.Speed.Correspondence => trans.site.correspondence.txt()
     val speedAndClock =
-      if game.sourceIs(_.Import) then "imported"
+      if game.sourceIs(_.Import) then "импорт"
       else
-        game.clock.fold(chess.Speed.Correspondence.name): c =>
-          s"${chess.Speed(c.config).name} (${c.config.show})"
+        game.clock.fold(trans.site.correspondence.txt()): c =>
+          s"${speedName(chess.Speed(c.config))} (${c.config.show})"
 
-    val rated = game.rated.name
+    val rated = if game.rated.yes then "рейтинговую" else "товарищескую"
     val variant =
       if game.variant == chess.variant.FromPosition
-      then "position setup chess"
+      then s", ${trans.variant.fromPosition.txt().toLowerCase}"
       else if game.variant.exotic
-      then game.variant.name
-      else "chess"
+      then s", ${game.variant.variantTrans.txt()}"
+      else ""
     import chess.Status.*
     val result = (game.winner, game.loser, game.status) match
-      case (Some(w), _, Mate) => s"${playerText(w)} won by checkmate"
-      case (_, _, Aborted | NoStart) => gameUi.abortReason(game).txt()
-      case (_, Some(l), Resign | Timeout | Cheat | NoStart) => s"${playerText(l)} resigned"
-      case (_, Some(l), Outoftime) => s"${playerText(l)} ran out of time"
-      case (Some(w), _, UnknownFinish | VariantEnd) => s"${playerText(w)} won"
-      case (_, _, Draw | Stalemate | UnknownFinish) => "Game is a draw"
-      case _ if game.finished => "Game ended"
-      case _ => "Game is still ongoing"
+      case (Some(w), _, Mate) => s"${playerText(w)} победил матом."
+      case (_, _, Aborted | NoStart) => s"${gameUi.abortReason(game).txt()}."
+      case (_, Some(l), Resign | Timeout | Cheat | NoStart) => s"${playerText(l)} сдался."
+      case (_, Some(l), Outoftime) => s"У игрока ${playerText(l)} кончилось время."
+      case (Some(w), _, UnknownFinish | VariantEnd) => s"${playerText(w)} победил."
+      case (_, _, Draw | Stalemate | UnknownFinish) => "Партия закончилась вничью."
+      case _ if game.finished => "Партия окончена."
+      case _ => "Партия ещё идёт."
     val moves = (game.ply.value - game.startedAtPly.value + 1) / 2
-    s"$p1 $plays $p2 in a $rated $speedAndClock game of $variant. $result after ${pluralize("move", moves)}. Click to replay, analyse, and discuss the game!"
+    s"$p1 и $p2 $plays $rated партию ($speedAndClock$variant). $result Ходов: $moves. " +
+      "Нажмите, чтобы посмотреть партию, разобрать её и обсудить!"
 
   def povChessground(pov: Pov)(using ctx: Context): Frag =
     val orient = pov.color

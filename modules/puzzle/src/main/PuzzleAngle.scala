@@ -27,7 +27,7 @@ object PuzzleAngle:
     def openingName = either.fold(
       k => LilaOpeningFamily(k).map(_.name.value),
       k => SimpleOpening(k).map(_.name.value)
-    ) | "Any"
+    ) | "Любой"
     def opening = either
       .fold(
         _.into(OpeningKey).some,
@@ -36,7 +36,7 @@ object PuzzleAngle:
       .flatMap(OpeningDb.shortestLines.get)
     def isAbstract = opening.isEmpty
     val name = I18nKey(openingName)
-    def description = I18nKey(s"From games with the opening: $openingName")
+    def description = I18nKey(s"Из партий с дебютом: $openingName")
     def asTheme = none
 
   // def apply(theme: PuzzleTheme.Key): PuzzleAngle = Theme(theme)

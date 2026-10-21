@@ -76,7 +76,7 @@ final private class StudyMaker(
       root <- chapterMaker.makeRoot(pov.game, data.form.pgnStr, initialFen)
       tags <- pgnDump.tags(pov.game, initialFen, none, gameOpening(pov.game, true), withRatings)
       name <- StudyChapterName.from(namer.gameVsText(pov.game, withRatings)(using lightUserApi.async))
-      study = Study.make(user, Study.From.Game(pov.gameId), data.id, StudyName("Game study").some, none)
+      study = Study.make(user, Study.From.Game(pov.gameId), data.id, StudyName("Разбор партии").some, none)
       chapter = Chapter.make(
         studyId = study.id,
         name = name,

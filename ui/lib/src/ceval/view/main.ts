@@ -44,7 +44,7 @@ function localEvalNodes(ctrl: CevalHandler, evs: NodeEvals): Array<VNode | strin
   const status = ceval.opts.custom?.statusNode?.();
   if (status) return [status];
   if (!evs.client) {
-    if (!ceval.analysable) return ['Engine cannot analyze this position'];
+    if (!ceval.analysable) return ['Движок не может анализировать эту позицию'];
     if (state === CevalState.Failed) return [i18n.site.engineFailed];
     const localEvalText = state === CevalState.Loading ? loadingText(ctrl) : i18n.site.calculatingMoves;
     return [evs.server && ctrl.nextNodeBest() ? i18n.site.usingServerAnalysis : localEvalText];
@@ -62,7 +62,7 @@ function localEvalNodes(ctrl: CevalHandler, evs: NodeEvals): Array<VNode | strin
 
   t.push(depthText);
   if (evs.client.cloud && !ceval.isComputing)
-    t.push(span('.cloud', { title: i18n.site.cloudAnalysis }, 'Cloud'));
+    t.push(span('.cloud', { title: i18n.site.cloudAnalysis }, 'Облако'));
   if (ceval.isInfinite) t.push(span('.infinite', { title: i18n.site.infiniteAnalysis }, '∞'));
   if (npsText) t.push(' · ' + npsText);
   return t;
@@ -115,16 +115,16 @@ function engineName(ctrl: CevalCtrl): VNode[] {
   if (!engine) return [];
   const [good, title] =
     engine.tech === 'EXTERNAL'
-      ? [true, 'Engine running outside of the browser']
+      ? [true, 'Движок работает вне браузера']
       : engine.requires.includes('relaxedSimd')
-        ? [true, 'Multi-threaded WebAssembly with relaxed SIMD']
+        ? [true, 'Многопоточный WebAssembly с relaxed SIMD']
         : engine.requires.includes('simd')
-          ? [true, 'Multi-threaded WebAssembly with SIMD']
+          ? [true, 'Многопоточный WebAssembly с SIMD']
           : engine.requires.includes('sharedMem')
-            ? [true, 'Multi-threaded WebAssembly']
+            ? [true, 'Многопоточный WebAssembly']
             : engine.requires.includes('wasm')
-              ? [false, 'Single-threaded WebAssembly']
-              : [false, 'Single-threaded JavaScript'];
+              ? [false, 'Однопоточный WebAssembly']
+              : [false, 'Однопоточный JavaScript'];
   return [
     span({ title: engine.name }, engine.short ?? engine.name),
     span('.technology', { class: { good }, title }, engine.tech),
@@ -489,6 +489,6 @@ function renderPvBoard(ctrl: CevalHandler): VNode | undefined {
 function loadingText(ctrl: CevalHandler): string {
   const d = ctrl.ceval.download;
   return d?.total
-    ? `Downloaded ${Math.round((d.bytes * 100) / d.total)}% of ${Math.round(d.total / 1000 / 1000)}MB`
+    ? `Загружено ${Math.round((d.bytes * 100) / d.total)}% из ${Math.round(d.total / 1000 / 1000)} МБ`
     : i18n.site.loadingEngine;
 }

@@ -16,9 +16,9 @@ final class GatheringUi(helpers: Helpers)(prizeTournamentMakers: () => UserIds):
   def userPrizeDisclaimer(ownerId: UserId): Option[Frag] =
     (!prizeTournamentMakers().value.contains(ownerId)).option:
       st.section(cls := "tour__prize")(
-        "This tournament is not organized by Логик.",
+        "Этот турнир организует не «Логик».",
         br,
-        "If it has prizes, Логик is not responsible for paying them."
+        "Если в нём есть призы, «Логик» не отвечает за их выплату."
       )
 
   def verdicts(vs: WithVerdicts, pk: PerfKey, relevant: Boolean = true)(using
@@ -56,7 +56,8 @@ final class GatheringUi(helpers: Helpers)(prizeTournamentMakers: () => UserIds):
                     v.verdict match
                       case Condition.RefusedUntil(until) =>
                         frag(
-                          "Because you missed your last Swiss game, you cannot enter a new Swiss tournament until ",
+                          "Вы пропустили последнюю партию швейцарского турнира, поэтому не можете " +
+                            "вступить в новый швейцарский турнир до ",
                           absClientInstant(until),
                           "."
                         )
@@ -66,7 +67,7 @@ final class GatheringUi(helpers: Helpers)(prizeTournamentMakers: () => UserIds):
   def payouts(txt: Payouts) =
     st.section(cls := "description"):
       p(
-        a(href := routes.Cms.lonePage(lila.core.id.CmsPageKey("lichess-prizes")))("Prizes: "),
+        a(href := routes.Cms.lonePage(lila.core.id.CmsPageKey("lichess-prizes")))("Призы: "),
         txt
       )
 
@@ -74,7 +75,7 @@ final class GatheringFormUi(helpers: Helpers):
   import helpers.*
   import play.api.data.Field
 
-  val titleBypass = frag("Titled players bypass this restriction.")
+  val titleBypass = frag("На титулованных игроков это ограничение не действует.")
 
   def nbRatedGame(field: Field)(using Translate) =
     form3.group(
@@ -96,7 +97,7 @@ final class GatheringFormUi(helpers: Helpers):
   def accountAge(field: Field)(using Translate) =
     form3.group(
       field,
-      "Minimum account age",
+      "Минимальный возраст аккаунта",
       help = titleBypass.some,
       half = true
     ):
@@ -121,11 +122,11 @@ final class GatheringFormUi(helpers: Helpers):
   def bots(field: Field, disabledAfterStart: Boolean) =
     form3.checkboxGroup(
       field,
-      "Allow bot accounts",
+      "Разрешить аккаунты ботов",
       help = frag(
-        "Let ",
-        a(href := "/@/lichess/blog/welcome-lichess-bots/WvDNticA")("bots"),
-        " join the tournament and play with their engines. This often repels human players."
+        "Разрешить ",
+        a(href := "/@/lichess/blog/welcome-lichess-bots/WvDNticA")("ботам"),
+        " участвовать в турнире и играть движком. Живых игроков это часто отпугивает."
       ).some,
       disabled = disabledAfterStart
     )

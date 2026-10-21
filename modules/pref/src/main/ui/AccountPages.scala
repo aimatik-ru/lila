@@ -81,30 +81,37 @@ final class AccountPages(helpers: Helpers, ui: AccountUi, flagApi: lila.core.use
             form3.errors(form("understand")),
             me.marks.dirty.option:
               div(cls := "form-group")(
-                h2("Note about GDPR erasure and TOS violations"),
+                h2("Об удалении данных по GDPR и нарушениях правил"),
                 p(
-                  "One of the rights GDPR grants to European citizens is the right to erasure of their personal information, also known as the \"right to be forgotten\"."
+                  "GDPR даёт гражданам Евросоюза право на удаление личных данных, " +
+                    "его ещё называют «правом на забвение»."
                 ),
                 p(
-                  "Логик generally complies with these requests from citizens of any country, because individuals should have control of their data against organisations. However, in certain cases where accounts broke our ",
-                  a(href := routes.Cms.tos)("Terms of Service"),
-                  ", we cannot comply with those requests."
+                  "«Логик» обычно выполняет такие запросы от жителей любой страны: человек должен " +
+                    "распоряжаться своими данными. Но если учётная запись нарушила наши ",
+                  a(href := routes.Cms.tos)("Условия использования"),
+                  ", выполнить такой запрос мы не можем."
                 ),
                 p(
-                  "That is because the GDPR allows for exceptions in certain cases, and one of those is where an organisation's overriding legitimate interests would be compromised by erasing the data. In short, by deleting your data, it would make it harder for us to keep Логик safe and secure from people who have broken our rules."
+                  "GDPR допускает исключения, например когда удаление данных вредит законным " +
+                    "интересам организации. Проще говоря, без этих данных нам труднее защищать " +
+                    "«Логик» от тех, кто нарушил правила."
                 ),
                 p(
-                  "When you delete your account, your personal data will be hidden from the public, and only accessible by admins."
+                  "После удаления учётной записи ваши личные данные будут скрыты от всех, " +
+                    "доступ к ним останется только у администраторов."
                 ),
                 p(
-                  "For more information on the data we process and how we use it, please refer to our ",
-                  a(href := routes.Cms.menuPage(lila.core.id.CmsPageKey("privacy")))("Privacy Policy"),
+                  "Какие данные мы обрабатываем и как их используем, читайте в ",
+                  a(href := routes.Cms.menuPage(lila.core.id.CmsPageKey("privacy")))(
+                    "Политике конфиденциальности"
+                  ),
                   "."
                 ),
                 p(
-                  "If you continue to disagree with our decision you have the right to make a complaint to ",
+                  "Если вы не согласны с нашим решением, вы вправе подать жалобу в ",
                   a(href := "https://www.cnil.fr/en/contact-cnil")("CNIL"),
-                  ". Your statutory rights are also unaffected by our decision."
+                  ". Наше решение не ограничивает ваши законные права."
                 )
               )
             ,
@@ -112,9 +119,9 @@ final class AccountPages(helpers: Helpers, ui: AccountUi, flagApi: lila.core.use
               frag(
                 a(href := routes.User.show(me.username))(trs.cancelKeepAccount()),
                 form3.submit(
-                  "Delete my account",
+                  trs.deleteYourAccount.txt(),
                   icon = Icon.CautionCircle.some,
-                  confirm = "Deleting is definitive, there is no going back. Are you sure?".some
+                  confirm = "Удаление окончательно, отменить его нельзя. Вы уверены?".some
                 )(cls := "button-red")
               )
             )
@@ -167,7 +174,7 @@ final class AccountPages(helpers: Helpers, ui: AccountUi, flagApi: lila.core.use
               form("realName"),
               trans.site.realName(),
               half = true,
-              help = fixedRealName.option("Publicly titled profiles cannot change their real name")
+              help = fixedRealName.option("В профиле с публичным званием нельзя изменить настоящее имя")
             ): field =>
               form3.input(field)(fixedRealName.option(inertAttr))
           ),
@@ -266,7 +273,7 @@ final class AccountPages(helpers: Helpers, ui: AccountUi, flagApi: lila.core.use
     AccountPage(trans.site.changeEmail.txt(), "email"):
       div(cls := "box box-pad")(
         h1(cls := "box__top")(trans.site.changeEmail()),
-        if managed then p("Your account is managed. Ask your teacher to graduate it.")
+        if managed then p("Вашей учётной записью управляет учитель. Попросите его передать её вам.")
         else
           frag(
             standardFlash | flashMessage("warning")(trans.site.emailSuggestion()),
@@ -279,11 +286,11 @@ final class AccountPages(helpers: Helpers, ui: AccountUi, flagApi: lila.core.use
       )
 
   def data(u: User)(using Context) =
-    AccountPage(s"${u.username} - personal data", "security"):
+    AccountPage(s"${u.username} - личные данные", "security"):
       div(cls := "security personal-data box box-pad")(
-        h1(cls := "box__top")("My personal data"),
+        h1(cls := "box__top")("Мои личные данные"),
         div(cls := "personal-data__header")(
-          p("Here is all personal information Логик has about ", userLink(u)),
+          p("Здесь все личные данные, которые есть у «Логика» о пользователе ", userLink(u)),
           a(cls := "button", href := s"${routes.Account.data}?user=${u.id}&text=1", downloadAttr):
             trans.site.download()
         )

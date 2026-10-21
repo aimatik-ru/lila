@@ -37,11 +37,11 @@ final class TeamFormUi(helpers: Helpers, bits: TeamUi)(
       )
 
   def edit(t: Team, form: Form[?], member: Option[TeamMember])(using Context, Me) =
-    TeamPage(s"Edit Team ${t.name}").markdownTextarea.js(Esm("team")):
+    TeamPage(s"Редактирование команды ${t.name}").markdownTextarea.js(Esm("team")):
       main(cls := "page-menu page-small team-edit")(
         menu(none),
         div(cls := "page-menu__content box box-pad")(
-          boxTop(h1("Edit team ", a(href := routes.Team.show(t.id))(t.name))),
+          boxTop(h1("Редактирование команды ", a(href := routes.Team.show(t.id))(t.name))),
           standardFlash,
           t.enabled.option(
             postForm(cls := "form3", action := routes.Team.update(t.id))(

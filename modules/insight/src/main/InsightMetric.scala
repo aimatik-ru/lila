@@ -19,18 +19,18 @@ enum InsightMetric(
   case MeanCpl
       extends InsightMetric(
         "acpl",
-        "Average centipawn loss",
+        "Средняя потеря сантипешек",
         F.moves("c"),
         Move,
         Move,
         Average,
-        """Precision of your moves. Lower is better."""
+        """Точность ваших ходов. Чем меньше, тем лучше."""
       )
 
   case CplBucket
       extends InsightMetric(
         "cplBucket",
-        "Centipawn loss bucket",
+        "Группы потерь сантипешек",
         F.moves("c"),
         Move,
         Move,
@@ -41,7 +41,7 @@ enum InsightMetric(
   case MeanAccuracy
       extends InsightMetric(
         "accuracy",
-        "Accuracy",
+        "Точность",
         F.moves("a"),
         Move,
         Move,
@@ -52,7 +52,7 @@ enum InsightMetric(
   case Movetime
       extends InsightMetric(
         "movetime",
-        "Move time",
+        "Время на ход",
         F.moves("t"),
         Move,
         Move,
@@ -63,7 +63,7 @@ enum InsightMetric(
   case Result
       extends InsightMetric(
         "result",
-        "Game result",
+        "Game result", // ui/insight/src/chart.ts сверяет это имя
         F.result,
         Game,
         Game,
@@ -74,7 +74,7 @@ enum InsightMetric(
   case Termination
       extends InsightMetric(
         "termination",
-        "Game termination",
+        "Окончание партии",
         F.termination,
         Game,
         Game,
@@ -85,51 +85,51 @@ enum InsightMetric(
   case Performance
       extends InsightMetric(
         "performance",
-        "Performance",
+        "Перформанс",
         F.opponentRating,
         Game,
         Game,
         Average,
-        "Estimated performance rating."
+        "Расчётный перформанс-рейтинг."
       )
 
   case RatingDiff
       extends InsightMetric(
         "ratingDiff",
-        "Rating gain",
+        "Изменение рейтинга",
         F.ratingDiff,
         Game,
         Game,
         Average,
-        "The amount of rating points you win or lose when the game ends."
+        "Сколько очков рейтинга вы получаете или теряете после партии."
       )
 
   case OpponentRating
       extends InsightMetric(
         "opponentRating",
-        "Opponent rating",
+        "Рейтинг соперника",
         F.opponentRating,
         Game,
         Game,
         Average,
-        "The average rating of your opponent for the relevant variant."
+        "Средний рейтинг соперника в этом виде игры."
       )
 
   case NbMoves
       extends InsightMetric(
         "nbMoves",
-        "Moves per game",
+        "Ходов за партию",
         F.moves("r"),
         Move,
         Game,
         Average,
-        "Number of moves you play in the game. Doesn't count the opponent moves."
+        "Сколько ходов вы делаете за партию, без ходов соперника."
       )
 
   case PieceRole
       extends InsightMetric(
         "piece",
-        "Piece moved",
+        "Фигура, которой сделан ход",
         F.moves("r"),
         Move,
         Move,
@@ -140,29 +140,29 @@ enum InsightMetric(
   case Awareness
       extends InsightMetric(
         "awareness",
-        "Tactical awareness",
+        "Тактическая зоркость",
         F.moves("o"),
         Move,
         Move,
         Percent,
-        "How often you take advantage of your opponent mistakes."
+        "Как часто вы пользуетесь ошибками соперника."
       )
 
   case Luck
       extends InsightMetric(
         "luck",
-        "Luck",
+        "Везение",
         F.moves("l"),
         Move,
         Move,
         Percent,
-        "How often your opponent fails to punish your mistakes."
+        "Как часто соперник не наказывает ваши ошибки."
       )
 
   case Material
       extends InsightMetric(
         "material",
-        "Material imbalance",
+        "Материальный перевес",
         F.moves("i"),
         Move,
         Move,
@@ -173,7 +173,7 @@ enum InsightMetric(
   case ClockPercent
       extends InsightMetric(
         "clockPercent",
-        "Time pressure",
+        "Цейтнот",
         F.moves("s"),
         Move,
         Move,
@@ -184,23 +184,23 @@ enum InsightMetric(
   case Blurs
       extends InsightMetric(
         "blurs",
-        "Blurs",
+        "Уходы из окна",
         F.moves("b"),
         Move,
         Move,
         Percent,
-        "How often moves are preceded by a window blur."
+        "Как часто вы уходите из окна игры перед ходом."
       )
 
   case TimeVariance
       extends InsightMetric(
         "timeVariance",
-        "Time variance",
+        "Разброс времени",
         F.moves("v"),
         Move,
         Move,
         Average,
-        "Low variance means consistent move times"
+        "Малый разброс значит, что вы тратите на ходы примерно одинаковое время"
       )
 
 object InsightMetric:

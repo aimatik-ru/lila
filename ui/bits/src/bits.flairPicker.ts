@@ -75,14 +75,14 @@ const makeEmojiData = async () => {
 };
 
 const CATEGORIES: [string, string][] = [
-  ['smileys', 'Smileys'],
-  ['people', 'People'],
-  ['nature', 'Animals & Nature'],
-  ['food-drink', 'Food & Drink'],
-  ['activity', 'Activity'],
-  ['travel-places', 'Travel & Places'],
-  ['objects', 'Objects'],
-  ['symbols', 'Symbols'],
+  ['smileys', 'Смайлики'],
+  ['people', 'Люди'],
+  ['nature', 'Животные и природа'],
+  ['food-drink', 'Еда и напитки'],
+  ['activity', 'Занятия'],
+  ['travel-places', 'Путешествия и места'],
+  ['objects', 'Предметы'],
+  ['symbols', 'Символы'],
 ];
 
 const categoryIcons = {

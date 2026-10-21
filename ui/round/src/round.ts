@@ -72,7 +72,7 @@ async function boot(
               ? [player.title, player.name, data.pref.ratings ? player.rating : '']
                   .filter(Boolean)
                   .join('&nbsp')
-              : 'Anonymous',
+              : i18n.site.anonymous,
           );
       },
       endData() {
@@ -153,7 +153,7 @@ async function boot(
   storage.make('reload-round-tabs').listen(site.reload);
 
   if (!data.player.spectator && location.hostname !== (document as any)['Location'.toLowerCase()].hostname) {
-    alert(`Games cannot be played through a web proxy. Please use ${location.hostname} instead.`);
+    alert(`Через веб-прокси играть нельзя. Откройте ${location.hostname}.`);
     wsDestroy();
   }
   return ctrl;

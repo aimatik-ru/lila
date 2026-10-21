@@ -82,7 +82,7 @@ trait ScalatagsSnippets:
   val utcLink = a(
     href := "https://time.is/UTC",
     targetBlank,
-    title := "Coordinated Universal Time"
+    title := "Всемирное координированное время"
   )("UTC")
 
 // basic imports from scalatags

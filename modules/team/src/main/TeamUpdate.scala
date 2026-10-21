@@ -95,7 +95,7 @@ final class TeamUpdateApi(
     if dedup(team.id, text) then
       Right:
         limiter.limit(team.id)(doSend(team, text).inject(LimitResult.Through))(LimitResult.Limited)
-    else Left("You already sent this message recently")
+    else Left("Вы недавно уже отправляли это сообщение")
 
   private def doSend(team: Team, text: Markdown)(using me: Me): Funit =
     val msg = TeamUpdate[TeamId, UserId](

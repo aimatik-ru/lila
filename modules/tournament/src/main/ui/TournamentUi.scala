@@ -103,7 +103,7 @@ final class TournamentUi(helpers: Helpers)(getTourName: GetTourName):
     )(tournamentIdToName(tourId))
 
   def tournamentIdToName(id: TourId)(using Lang)(using client: ClientName): String =
-    client.isHuman.so(getTourName.sync(id)).getOrElse(s"Tournament #$id")
+    client.isHuman.so(getTourName.sync(id)).getOrElse(s"Турнир #$id")
 
   def teamTournamentRow(t: Tournament)(using Translate) =
     tr(cls := List("enterable" -> t.isEnterable, "soon" -> t.isNowOrSoon))(

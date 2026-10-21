@@ -42,7 +42,7 @@ export const setupDialog = (ctrl: SetupCtrl) => {
           attrs: { disabled: !ctrl.timeControl.valid() },
           class: { disabled: !ctrl.timeControl.valid() },
         },
-        'Play now',
+        'Играть',
       ),
     ],
   });
@@ -51,5 +51,5 @@ export const setupDialog = (ctrl: SetupCtrl) => {
 const settingsPreview = (ctrl: SetupCtrl) => {
   const color = colors.find(c => c === ctrl.color()) ?? 'random';
   const colorName = colorChoiceName(color);
-  return [colorName, ctrl.timeControl.isRealTime() ? ctrl.timeControl.clockStr() : 'No clock'].join(' | ');
+  return [colorName, ctrl.timeControl.isRealTime() ? ctrl.timeControl.clockStr() : 'Без часов'].join(' | ');
 };

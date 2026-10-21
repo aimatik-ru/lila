@@ -38,7 +38,7 @@ final class StudentUi(helpers: Helpers, clasUi: ClasUi)(using NetDomain):
                 postForm(action := routes.Clas.studentClosePost(clas.id, s.user.username)):
                   form3.submit(trans.clas.removeStudent(), icon = none)(
                     cls := "yes-no-confirm button-red button-empty",
-                    title := "Fully erase the student from the class archives."
+                    title := "Полностью удалить ученика из архива класса."
                   )
               )
             ),
@@ -72,7 +72,7 @@ final class StudentUi(helpers: Helpers, clasUi: ClasUi)(using NetDomain):
               div(cls := "student-show__managed")(
                 p(trans.clas.thisStudentAccountIsManaged()),
                 a(href := routes.Clas.studentShow(managingClas.id, s.user.username))(
-                  "Class: ",
+                  "Класс: ",
                   managingClas.name
                 )
               )

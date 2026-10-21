@@ -108,7 +108,7 @@ object embed:
 
   def notFound(using EmbedContext) =
     views.base.embed.minimal(
-      title = "404 - Game not found",
+      title = "404 — партия не найдена",
       cssKeys = List("bits.lpv.embed")
     ):
-      div(cls := "not-found")(h1("Game not found"))
+      div(cls := "not-found")(h1("Партия не найдена"))

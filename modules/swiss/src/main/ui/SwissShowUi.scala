@@ -16,7 +16,7 @@ import lila.ui.ScalatagsTemplate.{ *, given }
 final class SwissShowUi(helpers: Helpers, ui: SwissBitsUi, gathering: GatheringUi)(using NetDomain):
   import helpers.{ *, given }
 
-  private def fullName(s: Swiss, t: LightTeam) = s"${s.name} by ${t.name}"
+  private def fullName(s: Swiss, t: LightTeam) = s"${s.name} — ${t.name}"
 
   def apply(
       s: Swiss,
@@ -69,31 +69,31 @@ final class SwissShowUi(helpers: Helpers, ui: SwissBitsUi, gathering: GatheringU
           )
       )
 
-  private def basePage(s: Swiss, team: LightTeam) =
+  private def basePage(s: Swiss, team: LightTeam)(using Context) =
     Page(fullName(s, team))
       .css("swiss.show")
       .i18n(_.swiss, _.team)
       .graph(
-        title = s"${fullName(s, team)}: ${s.variant.name} ${s.clock.show} #${s.id}",
+        title = s"${fullName(s, team)}: ${s.perfType.trans} ${s.clock.show} #${s.id}",
         url = routeUrl(routes.Swiss.show(s.id)),
         description =
-          s"${s.nbPlayers} players compete in the ${showEnglishDate(s.startsAt)} ${s.name} Swiss tournament " +
-            s"organized by ${team.name}. " +
-            s.winnerId.fold("Winner is not yet decided."): winnerId =>
-              s"${titleNameOrId(winnerId)} takes the prize home!"
+          s"Турнир по швейцарской системе ${s.name}, ${showDate(s.startsAt)}. " +
+            s"Организатор — команда ${team.name}. Игроков: ${s.nbPlayers}. " +
+            s.winnerId.fold("Победитель ещё не определён."): winnerId =>
+              s"Победитель — ${titleNameOrId(winnerId)}!"
       )
 
   def round(s: Swiss, r: SwissRoundNumber, team: LightTeam, pairings: Paginator[SwissPairing])(using
       Context
   ) =
-    Page(s"${fullName(s, team)} • Round $r/${s.round}")
+    Page(s"${fullName(s, team)} • Тур $r/${s.round}")
       .css("swiss.show"):
         val pager = pagination(p => routes.Swiss.round(s.id, p).url, r.value, s.round.value, showPost = true)
         main(cls := "box swiss__round")(
           boxTop(
             h1(
               a(href := routes.Swiss.show(s.id))(s.name),
-              s" • Round $r/${s.round}"
+              s" • Тур $r/${s.round}"
             )
           ),
           pager(cls := "pagination--top"),
@@ -135,7 +135,8 @@ final class SwissShowUi(helpers: Helpers, ui: SwissBitsUi, gathering: GatheringU
               (Granter.opt(_.ManageTournament) || (ctx.is(s.createdBy) && s.isNotFinished)).option:
                 frag(
                   " ",
-                  a(href := routes.Swiss.edit(s.id), title := "Edit tournament")(iconTag(Icon.Gear))
+                  a(href := routes.Swiss.edit(s.id), title := trans.arena.editTournament.txt()):
+                    iconTag(Icon.Gear)
                 )
             ),
             ui.showInterval(s)

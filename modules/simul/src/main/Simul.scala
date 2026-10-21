@@ -36,7 +36,7 @@ case class Simul(
     featurable: Option[Boolean],
     conditions: SimulCondition.All
 ) extends lila.core.simul.Simul:
-  def fullName = s"$name simul"
+  def fullName = s"Сеанс $name"
 
   def isCreated = !isStarted
 

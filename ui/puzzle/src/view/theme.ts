@@ -27,7 +27,7 @@ export default function theme(ctrl: PuzzleCtrl): MaybeVNode {
     backToTheme(backHref, ['« ', angle.name], { class: { long: angle.name.length > 20 } }),
     angle.opening
       ? hl('a', { attrs: { href: `/opening/${angle.opening.key}` } }, [
-          'Learn more about ',
+          'Подробнее о дебюте ',
           angle.opening.name,
         ])
       : hl('p', [angle.desc]),

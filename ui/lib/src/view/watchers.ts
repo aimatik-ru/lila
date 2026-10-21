@@ -19,7 +19,7 @@ export function watchers(element: HTMLElement, withUserList = true): void {
   element.dataset.watched = '1';
   const $innerElement = $('<div class="chat__members__inner">').appendTo(element);
   const $numberEl = $(
-    `<div class="chat__members__number" data-icon="${licon.User}" title="Spectators"></div>`,
+    `<div class="chat__members__number" data-icon="${licon.User}" title="Зрители"></div>`,
   ).appendTo($innerElement);
   const $listEl = $('<div>').appendTo($innerElement);
   const listEl = $listEl[0] as HTMLElement;

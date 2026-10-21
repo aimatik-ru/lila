@@ -12,7 +12,7 @@ import { stockfishName } from '../serverSideUnderboard';
 
 export const chartSpinner = (): VNode =>
   hl('div#acpl-chart-container-loader', [
-    hl('span', [stockfishName, hl('br'), 'Server analysis']),
+    hl('span', [stockfishName, hl('br'), 'Анализ на сервере']),
     spinnerVdom(),
   ]);
 

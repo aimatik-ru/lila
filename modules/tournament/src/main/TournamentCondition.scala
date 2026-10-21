@@ -86,7 +86,7 @@ object TournamentCondition:
         "accountAge" -> accountAge,
         "allowList" -> allowList,
         "bots" -> bots
-      )(All.apply)(unapply).verifying("Invalid ratings", _.validRatings)
+      )(All.apply)(unapply).verifying("Неверные ограничения по рейтингу", _.validRatings)
 
   final class Verify(historyApi: HistoryApi, userApi: UserApi)(using Executor):
 

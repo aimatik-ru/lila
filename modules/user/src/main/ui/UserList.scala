@@ -21,10 +21,10 @@ final class UserList(helpers: Helpers, bits: UserBits):
       .css("user.list")
       .flag(_.fullScreen)
       .graph(
-        title = "Chess players and leaderboards",
+        title = "Шахматисты и рейтинг-листы",
         url = routeUrl(routes.User.list),
         description =
-          "Best chess players in bullet, blitz, rapid, classical, Chess960 and more chess variants"
+          "Лучшие шахматисты в пуле, блице, рапиде, классике, шахматах 960 и других вариантах"
       ):
         main(cls := "page-menu")(
           bits.communityMenu("leaderboard"),
@@ -91,14 +91,14 @@ final class UserList(helpers: Helpers, bits: UserBits):
   def top(perf: PerfKey, pager: Paginator[LightPerf])(using ctx: Context) =
     import PerfType.given
     val from = (pager.currentPage - 1) * pager.maxPerPage.value + 1
-    val title = s"${perf.trans} top"
+    val title = s"${trans.site.leaderboard.txt()}: ${perf.trans}"
     Page(title)
       .css("bits.slist")
       .js(infiniteScrollEsmInit)
       .graph(
-        title = s"Leaderboard of ${perf.trans}",
+        title = s"${trans.site.leaderboard.txt()}: ${perf.trans}",
         url = routeUrl(routes.User.top(perf.key)),
-        description = s"The top rated players in ${perf.trans}, sorted by rating"
+        description = s"Игроки с самым высоким рейтингом: ${perf.trans}"
       ):
         main(cls := "page-small box")(
           boxTop(h1(a(href := routes.User.list, dataIcon := Icon.LessThan, cls := "text"), title)),
@@ -130,10 +130,10 @@ final class UserList(helpers: Helpers, bits: UserBits):
       .trophyMeta(perf, rank)
       .map: (css, titleText, imgPath) =>
         span(cls := s"$css lb__trophy trophy--small", title := titleText):
-          img(src := assetUrl(imgPath), alt := s"Trophy for $title")
+          img(src := assetUrl(imgPath), alt := s"Трофей: $title")
 
   def bots(users: List[UserWithPerfs], bestPerfs: UserPerfs => List[PerfKey])(using Context) =
-    val title = s"${users.size} Online bots"
+    val title = s"${trans.site.onlineBots.txt()}: ${users.size}"
     val aboutLink = a(href := "/blog/WvDNticAAMu_mHKP/welcome-lichess-bots")(trans.site.aboutBotsOnLichess())
     val (featured, community) = users.partition(_.isVerified)
     Page(title)

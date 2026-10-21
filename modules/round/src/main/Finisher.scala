@@ -70,7 +70,7 @@ final private class Finisher(
           game,
           _.Aborted,
           None,
-          Messenger.SystemMessage.Persistent("Game aborted by server").some,
+          Messenger.SystemMessage.Persistent("Сервер отменил партию").some,
           None
         )
 

@@ -21,13 +21,13 @@ final private class ReportForm(lightUserAsync: LightUser.Getter)(using domain: N
   def create(using me: MyId) = Form:
     mapping(
       "username" -> lila.common.Form.username.historicalField
-        .verifying("Unknown username", { blockingFetchUser(_).isDefined })
+        .verifying("Неизвестное имя пользователя", { blockingFetchUser(_).isDefined })
         .verifying(
-          "You cannot report yourself",
+          "Нельзя пожаловаться на самого себя",
           u => !me.is(u.id)
         )
         .verifying(
-          "Don't report Логик. Use play.kalugalogic.ru/contact instead.",
+          "Не жалуйтесь на «Логик», напишите нам: play.kalugalogic.ru/contact",
           u => !UserId.isOfficial(u)
         ),
       "reason" -> text.verifying("error.required", Reason.userSelectable.map(_.key).contains),
@@ -42,7 +42,7 @@ final private class ReportForm(lightUserAsync: LightUser.Getter)(using domain: N
       )
     }(_.values.some)
       .verifying(cheatLinkConstraint)
-      .verifying(s"Maximum report length is 3000 characters", _.text.length <= 3000)
+      .verifying(s"Жалоба не длиннее 3000 символов", _.text.length <= 3000)
 
   val flag = Form:
     mapping(

@@ -58,9 +58,9 @@ object TeamBattle:
       "teams" -> nonEmptyText,
       "nbLeaders" -> number(min = 1, max = 20)
     )(Setup.apply)(lila.common.unapply)
-      .verifying("We need at least 2 teams", s => s.potentialTeamIds.sizeIs > 1)
+      .verifying("Нужно хотя бы 2 команды", s => s.potentialTeamIds.sizeIs > 1)
       .verifying(
-        s"In this version of team battles, no more than $maxTeams teams can be allowed.",
+        s"В командном бою может быть не больше $maxTeams команд.",
         s => s.potentialTeamIds.sizeIs <= maxTeams
       )
 

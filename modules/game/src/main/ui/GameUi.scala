@@ -215,7 +215,7 @@ final class GameUi(helpers: Helpers):
         .css("bits.importer")
         .js(esmInitBit("importer"))
         .graph(
-          title = "Paste PGN chess game",
+          title = "Вставьте шахматную партию в PGN",
           url = routeUrl(routes.Importer.importGame),
           description = trans.site.importGameExplanation.txt()
         ):
@@ -280,7 +280,7 @@ final class GameUi(helpers: Helpers):
             div(cls := "metadata text", dataIcon := Icon.BarChart)(trans.site.computerAnalysisAvailable())
           ),
           g.pgnImport.flatMap(_.user).map { user =>
-            div(cls := "metadata")("PGN import by ", userIdLink(user.some))
+            div(cls := "metadata")("PGN импортировал ", userIdLink(user.some))
           }
         )
       )
@@ -298,7 +298,7 @@ final class GameUi(helpers: Helpers):
       strong(
         if g.sourceIs(_.Import) then
           frag(
-            span("IMPORT"),
+            span("ИМПОРТ"),
             g.pgnImport.flatMap(_.user).map { user =>
               frag(" ", trans.site.by(userIdLink(user.some, None, withOnline = false)))
             },
@@ -359,7 +359,7 @@ final class GameUi(helpers: Helpers):
               case (Vector(w), i) => s"${i + 1}. $w"
               case _ => ""
             .mkString(" "),
-          (g.ply > 6).option(s" ... ${1 + (g.ply.value - 1) / 2} moves ")
+          (g.ply > 6).option(s" ... ходов: ${1 + (g.ply.value - 1) / 2} ")
         )
       )
 

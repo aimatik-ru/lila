@@ -14,7 +14,7 @@ final class WikiUi(helpers: Helpers, bits: OpeningBits):
           .flatMap(_.markupForMove(page.query.sans.lastOption.so(_.value)))
           .fold(
             div(cls := "opening__wiki__markup__placeholder"):
-              "No description of the opening, yet."
+              "Описания дебюта пока нет."
           )(_.frag)
       ),
       (page.query.openingAndExtraMoves._1.isDefined && Granter.opt(_.OpeningWiki)).option {

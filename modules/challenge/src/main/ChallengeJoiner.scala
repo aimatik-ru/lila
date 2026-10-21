@@ -14,7 +14,7 @@ final private class ChallengeJoiner(
 
   def apply(c: Challenge, destUser: GameUser): FuRaise[String, Pov] = for
     exists <- gameRepo.exists(c.gameId)
-    _ <- raiseIf(exists)("The challenge has already been accepted")
+    _ <- raiseIf(exists)("Вызов уже принят")
     origUser <- c.challengerUserId.so(userApi.byIdWithPerf(_, c.perfType))
     game = ChallengeJoiner.createGame(c, origUser, destUser)
     _ <- gameRepo.insertDenormalized(game)

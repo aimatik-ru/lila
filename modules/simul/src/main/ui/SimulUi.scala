@@ -8,7 +8,7 @@ final class SimulUi(helpers: Helpers):
   import helpers.{ *, given }
 
   def link(simulId: SimulId): Tag =
-    a(href := routes.Simul.show(simulId))("Simultaneous exhibition")
+    a(href := routes.Simul.show(simulId))("Сеанс одновременной игры")
 
   def notFound(using Context) =
     Page(trans.site.noSimulFound.txt()):
@@ -22,7 +22,7 @@ final class SimulUi(helpers: Helpers):
     a(href := routes.Simul.show(s.id), cls := "tour-spotlight little")(
       img(cls := "img icon", src := assetUrl("images/fire-silhouette.svg")),
       span(cls := "content")(
-        span(cls := "name")(s.name, (!s.name.toLowerCase.endsWith(" simul")).so(" simul")),
+        span(cls := "name")(s.fullName),
         span(cls := "more")(
           trans.site.nbPlayers.plural(s.applicants.size, s.applicants.size.localize),
           " • ",
@@ -45,22 +45,22 @@ final class SimulUi(helpers: Helpers):
           td(cls := "text", dataIcon := Icon.User)(simul.applicants.size)
         )
 
-  def setup(sim: Simul) =
+  def setup(sim: Simul)(using Translate) =
     span(cls := List("setup" -> true, "rich" -> sim.variantRich))(
       sim.clock.config.show,
       " • ",
-      sim.variants.map(_.name).mkString(", ")
+      sim.variants.map(_.variantTrans.txt()).mkString(", ")
     )
 
   def roundOtherGames(s: Simul) =
     span(cls := "simul")(
-      a(href := routes.Simul.show(s.id))("SIMUL"),
-      span(cls := "win")(s.wins, " W"),
+      a(href := routes.Simul.show(s.id))("СЕАНС"),
+      span(cls := "win")(s.wins, " В"),
       " / ",
-      span(cls := "draw")(s.draws, " D"),
+      span(cls := "draw")(s.draws, " Н"),
       " / ",
-      span(cls := "loss")(s.losses, " L"),
+      span(cls := "loss")(s.losses, " П"),
       " / ",
       s.ongoing,
-      " ongoing"
+      " идёт"
     )

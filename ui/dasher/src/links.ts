@@ -21,7 +21,7 @@ export class LinksCtrl extends PaneCtrl {
             hl(
               'button.text',
               {
-                attrs: { 'data-icon': licon.DiscBigOutline, title: 'Keyboard: z', type: 'button' },
+                attrs: { 'data-icon': licon.DiscBigOutline, title: 'Клавиша: z', type: 'button' },
                 hook: bind('click', () => pubsub.emit('zen')),
               },
               i18n.preferences.zenMode,

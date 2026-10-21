@@ -204,7 +204,7 @@ final class AuthUi(helpers: Helpers):
       email: Option[EmailAddress],
       form: Option[Form[?]] = None
   )(using Context, Option[ValidReferrer]) =
-    Page("Check your email")
+    Page(trans.site.checkYourEmail.txt())
       .css("bits.email-confirm")
       .js(esmInitBit("validateEmail")):
         main(
@@ -214,12 +214,12 @@ final class AuthUi(helpers: Helpers):
         )(
           boxTop(h1(cls := "is-green text", dataIcon := Icon.Checkmark)(trans.site.checkYourEmail())),
           p(trans.site.weHaveSentYouAnEmailClickTheLink()),
-          h2("Not receiving it?"),
+          h2("Письмо не пришло?"),
           ol(
             li(h3(trans.site.ifYouDoNotSeeTheEmailCheckOtherPlaces())),
             email.map { email =>
               li(
-                h3("Make sure your email address is correct:"),
+                h3("Проверьте, правильно ли указан адрес почты:"),
                 br,
                 br,
                 postForm(action := addReferrer(routes.Auth.fixEmail.url))(
@@ -233,26 +233,26 @@ final class AuthUi(helpers: Helpers):
                     size := 40
                   ),
                   " ",
-                  submitButton(cls := "button")("Change it"),
+                  submitButton(cls := "button")("Изменить"),
                   form.map: f =>
                     errMsg(f("email"))
                 )
               )
             },
             li(
-              h3("Wait up to 5 minutes."),
+              h3("Подождите до 5 минут."),
               br,
-              "Depending on your email provider, it can take a while to arrive."
+              "У некоторых почтовых сервисов письма идут дольше."
             ),
             li(
-              h3("Still not getting it?"),
+              h3("Письма всё ещё нет?"),
               br,
-              "Did you make sure your email address is correct?",
+              "Вы проверили, что адрес почты указан правильно?",
               br,
-              "Did you wait 5 minutes?",
+              "Вы подождали 5 минут?",
               br,
-              "If so, ",
-              a(href := routes.Account.emailConfirmHelp)("proceed to this page to solve the issue"),
+              "Если да, ",
+              a(href := routes.Account.emailConfirmHelp)("перейдите на эту страницу, чтобы решить проблему"),
               "."
             )
           )
@@ -365,29 +365,32 @@ final class AuthUi(helpers: Helpers):
       )
 
   def tokenLoginConfirmation(user: User, token: String)(using Context, Option[ValidReferrer]) =
-    Page(s"Log in as ${user.username}").css("bits.form3"):
+    Page(s"Войти как ${user.username}").css("bits.form3"):
       main(cls := "page-small box box-pad")(
-        boxTop(h1("Log in as ", userLink(user))),
+        boxTop(h1("Войти как ", userLink(user))),
         postForm(action := addReferrer(routes.Auth.loginWithTokenPost(token).url))(
           form3.actions(
             a(href := routes.Lobby.home)(trans.site.cancel()),
-            submitButton(cls := "button")(s"${user.username} is my Логик username, log me in")
+            submitButton(cls := "button")(s"Да, моё имя на «Логике» — ${user.username}, войти")
           )
         )
       )
 
   def checkYourEmailBanner(user: UserName, email: EmailAddress) =
     div(cls := "email-confirm-banner")(
-      span(s"Almost there, ${user}! Now check your email (${email.conceal}) for signup confirmation."),
-      a(href := routes.Auth.checkYourEmail)("Need help?")
+      span(
+        s"Почти готово, ${user}! Проверьте почту (${email.conceal}): " +
+          "там письмо для подтверждения регистрации."
+      ),
+      a(href := routes.Auth.checkYourEmail)("Нужна помощь?")
     )
 
   def pubOrTor =
-    Page("Public proxy"):
+    Page("Публичный прокси"):
       main(cls := "page-small box box-pad")(
-        boxTop(h1(cls := "text")("Ooops")),
-        p("Sorry, you can't signup to Логик through Tor or public proxies!"),
-        p("You can play, train and use almost all Логик features as an anonymous user.")
+        boxTop(h1(cls := "text")("Ой")),
+        p("Извините, зарегистрироваться на «Логике» через Tor или публичный прокси нельзя!"),
+        p("Играть, тренироваться и пользоваться почти всеми функциями «Логика» можно и без входа.")
       )
 
   def logout(using Context) =
@@ -413,7 +416,7 @@ final class AuthUi(helpers: Helpers):
     div(cls := "form-group agreement")(
       error.option(p:
         strong(cls := "error"):
-          "You must agree to the Логик policies listed below:"),
+          "Нужно согласиться с правилами «Логика», перечисленными ниже:"),
       agreements.map: (field, text) =>
         form3.checkboxGroup(form(field), text)
     )

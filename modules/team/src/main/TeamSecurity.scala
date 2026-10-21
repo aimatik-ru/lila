@@ -9,14 +9,14 @@ import lila.mon.extensions.*
 
 object TeamSecurity:
   enum Permission(val name: String, val desc: String) derives Eq:
-    case Public extends Permission("Public", "Visible as leader on the team page")
-    case Settings extends Permission("Settings", "Change settings and descriptions")
-    case Tour extends Permission("Tournaments", "Create, manage and join team tournaments")
-    case Comm extends Permission("Moderation", "Moderate the forum and chats")
-    case Request extends Permission("Requests", "Accept and decline join requests")
-    case PmAll extends Permission("Updates", "Send team updates to members")
-    case Kick extends Permission("Kick", "Kick members of the team")
-    case Admin extends Permission("Admin", "Manage leader permissions")
+    case Public extends Permission("Публичный", "Виден как лидер на странице команды")
+    case Settings extends Permission("Настройки", "Меняет настройки и описание")
+    case Tour extends Permission("Турниры", "Создаёт командные турниры, управляет ими и вступает в них")
+    case Comm extends Permission("Модерация", "Модерирует форум и чаты")
+    case Request extends Permission("Заявки", "Принимает и отклоняет заявки на вступление")
+    case PmAll extends Permission("Рассылки", "Отправляет участникам новости команды")
+    case Kick extends Permission("Исключение", "Исключает участников из команды")
+    case Admin extends Permission("Админ", "Управляет правами лидеров")
     def key = toString.toLowerCase
   object Permission:
     type Selector = Permission.type => Permission
@@ -61,19 +61,19 @@ final class TeamSecurity(memberRepo: TeamMemberRepo, userApi: lila.core.user.Use
       single:
         "name" -> lila.common.Form.username.historicalField
           .verifying(
-            s"No more than ${Team.maxLeaders} leaders, please",
+            s"Лидеров может быть не больше ${Team.maxLeaders}",
             _ => t.leaders.sizeIs < Team.maxLeaders.value
           )
           .verifying(
-            "You can't make Логик a leader",
+            "Нельзя сделать «Логик» лидером",
             n => Granter(_.ManageTeam) || n.isnt(UserId.lichess)
           )
           .verifying(
-            "This user is already a team leader",
+            "Этот пользователь уже лидер команды",
             n => !t.leaders.exists(_.is(n))
           )
           .verifying(
-            "This user is not part of the team",
+            "Этот пользователь не состоит в команде",
             n => memberRepo.exists(t.id, n).await(1.second, "team member exists")
           )
 
@@ -89,35 +89,35 @@ final class TeamSecurity(memberRepo: TeamMemberRepo, userApi: lila.core.user.Use
     def permissions(t: Team.WithLeaders)(using me: Me): Form[List[LeaderData]] = Form(
       single("leaders" -> list(permissionsForm))
         .verifying(
-          "You can't make Логик a leader",
+          "Нельзя сделать «Логик» лидером",
           Granter(_.ManageTeam) ||
             !_.exists(_.name.is(UserId.lichess)) ||
             t.leaders.exists(_.is(UserId.lichess))
         )
         .verifying(
-          "There must be at least one leader able to manage permissions",
+          "Хотя бы один лидер должен управлять правами",
           _.exists(_.perms(Permission.Admin))
         )
         .verifying(
-          "Illegal adding/removing leaders through permissions form",
+          "Через форму прав нельзя добавлять или удалять лидеров",
           _.map(_.name.id).toSet == t.leaders.map(_.user).toSet
         )
         .verifying(
-          s"No more than ${Team.maxLeaders} leaders, please",
+          s"Лидеров может быть не больше ${Team.maxLeaders}",
           _.sizeIs <= Team.maxLeaders.value
         )
         .verifying(
-          "Duplicated leader name",
+          "Имя лидера указано дважды",
           d => d.map(_.name).distinct.sizeIs == d.size
         )
         .verifying(
-          "You cannot evict the team creator",
+          "Нельзя лишить прав создателя команды",
           d =>
             Granter(_.ManageTeam) || !t.hasAdminCreator || d.exists: l =>
               l.name.is(t.createdBy) && l.perms(Permission.Admin)
         )
         .verifying(
-          "Kid accounts cannot manage leader permissions",
+          "Детские аккаунты не могут управлять правами лидеров",
           d =>
             userApi
               .filterKid(d.filter(_.perms(Permission.Admin)).map(_.name))
@@ -125,7 +125,7 @@ final class TeamSecurity(memberRepo: TeamMemberRepo, userApi: lila.core.user.Use
               .isEmpty
         )
         .verifying(
-          "There can only be 3 admins",
+          "Админов может быть не больше 3",
           _.count(_.perms(Permission.Admin)) <= 3
         )
     ).fill(t.leaders.map(m => LeaderData(m.user.into(UserStr), m.perms)))

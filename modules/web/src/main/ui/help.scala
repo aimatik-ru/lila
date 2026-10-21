@@ -131,7 +131,7 @@ object help:
                 frag(kbd("ctrl"), kbd("shift"), (1 to 8).map(kbd(_))),
                 trans.site.toggleObservationAnnotations()
               ),
-              row(frag(kbd("ctrl"), kbd("z")), "Undo arrow changes"),
+              row(frag(kbd("ctrl"), kbd("z")), "Отменить изменения стрелок"),
               row(frag(kbd("shift"), kbd("S")), trans.site.search()),
               row(frag(kbd("shift"), kbd("H")), trans.study.editStudy()),
               row(frag(kbd("shift"), kbd("E")), trans.study.editChapter()),
@@ -189,7 +189,7 @@ object help:
                 li(
                   ifTheAboveMoveNotationIsUnfamiliar(),
                   a(targetBlank, href := "https://en.wikipedia.org/wiki/Algebraic_notation_(chess)")(
-                    "Algebraic notation"
+                    "Алгебраическая нотация"
                   )
                 ),
                 li(includingAXToIndicateACapture()),
@@ -224,15 +224,17 @@ object help:
                 li(instructions2()),
                 li(instructions3(voice("yes"), voice("no"))),
                 li(
-                  instructions4(strong("Push to Talk")),
+                  instructions4(strong("«Говорить с зажатой клавишей»")),
                   strong(" Shift"),
-                  " also cancels any ongoing speech."
+                  " также прерывает текущую озвучку."
                 ),
                 li(
-                  "Enable ",
-                  a(href := "/account/preferences/game-behavior#moveConfirmation")("Move Confirmation"),
-                  " in Settings, set timer off, and set clarity to clear if you are playing blindfolded",
-                  " with speech synthesis. This enables spoken move confirmation."
+                  "Если играете вслепую с озвучкой, включите ",
+                  a(href := "/account/preferences/game-behavior#moveConfirmation")(
+                    trans.preferences.moveConfirmation()
+                  ),
+                  " в настройках, выключите таймер и выберите чёткое распознавание.",
+                  " Тогда ходы будут подтверждаться голосом."
                 ),
                 li(instructions5(), phonetics)
               )
@@ -261,11 +263,11 @@ object help:
               header(trans.keyboardMove.otherCommands()),
               row(voice("no"), cancelTimerOrDenyARequest()),
               row(voice("yes"), playPreferredMoveOrConfirmSomething()),
-              row(voice("vocabulary"), "List all available commands"),
-              row(voice("blindfold"), "Toggle blindfold mode"),
-              row(voice("clock"), "Read out clocks"),
-              row(voice("pieces"), "Read out pieces"),
-              row(voice("white-pieces"), "Read out white pieces"),
+              row(voice("vocabulary"), "Показать все доступные команды"),
+              row(voice("blindfold"), "Включить или выключить игру вслепую"),
+              row(voice("clock"), "Зачитать время на часах"),
+              row(voice("pieces"), "Зачитать расстановку фигур"),
+              row(voice("white-pieces"), "Зачитать белые фигуры"),
               row(voice("next"), trans.puzzle.nextPuzzle()),
               row(voice("upvote"), trans.puzzle.upVote()),
               row(voice("solve"), showPuzzleSolution()),

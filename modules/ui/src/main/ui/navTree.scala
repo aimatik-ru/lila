@@ -54,6 +54,6 @@ object navTree:
           makeLink(p.id),
           cls := List("back text" -> true, "no-mirror" -> forceLtr),
           dataIcon := Icon.LessThan,
-          title := "Go back"
+          title := "Назад"
         )
       )

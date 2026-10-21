@@ -33,7 +33,7 @@ object SetupForm:
       "fen" -> fenField
     )(AiConfig.from)(_.>>)
       .verifying("invalidFen", _.validFen)
-      .verifying("Can't play that time control from a position", _.timeControlFromPosition)
+      .verifying("Из позиции нельзя играть с таким контролем времени", _.timeControlFromPosition)
 
   def friendFilled(fen: Option[Fen.Full])(using Option[Me]): Form[FriendConfig] =
     friend.fill(fen.foldLeft(FriendConfig.default): (config, f) =>
@@ -50,9 +50,9 @@ object SetupForm:
       "color" -> color,
       "fen" -> fenField
     )(FriendConfig.from)(_.>>)
-      .verifying("Invalid clock", _.validClock)
-      .verifying("Invalid speed", _.validSpeed(me.exists(_.isBot)))
-      .verifying("Can't create rated unlimited game", !_.isRatedUnlimited)
+      .verifying("Неверный контроль времени", _.validClock)
+      .verifying("Недопустимая скорость игры", _.validSpeed(me.exists(_.isBot)))
+      .verifying("Партия без контроля времени не может быть рейтинговой", !_.isRatedUnlimited)
       .verifying("invalidFen", _.validFen)
 
   def hookFilled(timeModeString: Option[String])(using me: Option[Me]): Form[HookConfig] =
@@ -69,8 +69,8 @@ object SetupForm:
       "ratingRange" -> optional(ratingRange),
       "color" -> lila.common.Form.empty
     )(HookConfig.from)(_.>>)
-      .verifying("Invalid clock", _.validClock)
-      .verifying("Can't create rated unlimited game", !_.isRatedUnlimited)
+      .verifying("Неверный контроль времени", _.validClock)
+      .verifying("Партия без контроля времени не может быть рейтинговой", !_.isRatedUnlimited)
 
   private lazy val boardApiHookBase: Mapping[HookConfig] =
     mapping(

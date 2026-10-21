@@ -12,43 +12,44 @@ object MsgPreset:
 
   def maxFollow(username: UserName, max: Max) =
     Msg(
-      name = "Follow limit reached!",
-      text = s"""Sorry, you can't follow more than $max players on Lichess.
-To follow new players, you must first unfollow some on $baseUrl/@/$username/following.
+      name = "Достигнут предел подписок!",
+      text = s"""К сожалению, на «Логике» нельзя подписаться больше чем на $max игроков.
+Чтобы подписаться на новых игроков, сначала отпишитесь от кого-нибудь здесь: $baseUrl/@/$username/following.
 
-Thank you for your understanding.""",
+Спасибо за понимание.""",
       mustRead = false
     )
 
   def forumRelocation(title: String, newUrl: String) =
-    s"""A moderator has moved your post "$title" to a different subforum. You can find it here: $baseUrl$newUrl."""
+    s"""Модератор перенёс ваше сообщение «$title» в другой раздел форума. Оно здесь: $baseUrl$newUrl."""
 
   object forumDeletion:
 
     val presets = List(
-      "public shaming",
-      "disrespecting other players",
-      "spamming",
-      "inappropriate behavior",
-      "incorrect subforum",
-      "LLM (AI) generated content"
+      "публичное унижение",
+      "неуважение к другим игрокам",
+      "спам",
+      "неподобающее поведение",
+      "не тот раздел форума",
+      "текст, созданный ИИ"
     )
 
-    def byModerator = compose("A moderator")
+    def byModerator = compose("Модератор")
 
-    def byTeamLeader(forumId: ForumCategId) = compose(s"A team leader of $baseUrl/forum/$forumId")
+    def byTeamLeader(forumId: ForumCategId) = compose(s"Руководитель команды $baseUrl/forum/$forumId")
 
-    def byBlogAuthor(user: UserName) = compose(by = s"The community blog author $user")
+    def byBlogAuthor(user: UserName) = compose(by = s"Автор блога $user")
 
     private def compose(by: String)(reason: String, forumPost: String) =
-      s"""$by deleted the following of your posts for this reason: $reason. Please read Lichess' Forum-Etiquette: $baseUrl/page/forum-etiquette
+      s"""$by удалил ваше сообщение по причине: $reason.
+Прочитайте правила форума: $baseUrl/page/forum-etiquette
 ----
 $forumPost
     """
 
   def newPermissions(by: LightUser, team: LightTeam, perms: Iterable[String], teamUrl: Url) =
-    s"""@${by.name} has changed your leader permissions in the team "${team.name}".
-Your new permissions are: ${perms.mkString(", ")}.
+    s"""@${by.name} изменил ваши права руководителя в команде «${team.name}».
+Ваши новые права: ${perms.mkString(", ")}.
 ${teamUrl}"""
 
   def payoutEligible(payoutsUrl: Url, msg: lila.core.msg.PayoutMessages) =

@@ -28,7 +28,7 @@ final class FaqUi(helpers: Helpers, sitePages: SitePages)(
   def apply(using Context) =
     sitePages
       .SitePage(
-        title = "Frequently Asked Questions",
+        title = trf.frequentlyAskedQuestions.txt(),
         active = "faq"
       )
       .css("bits.faq"):
@@ -173,7 +173,7 @@ final class FaqUi(helpers: Helpers, sitePages: SitePages)(
             p(
               trf.watchIMRosenCheckmate(
                 a(href := "https://www.reddit.com/r/AnarchyChess/comments/p9wuic/eric_rosen_ascending/")(
-                  "en passant"
+                  "взятие на проходе"
                 )
               )
             )
@@ -214,14 +214,14 @@ final class FaqUi(helpers: Helpers, sitePages: SitePages)(
               )
             ),
             ul(
-              li("Grandmaster (GM)"),
-              li("International Master (IM)"),
-              li("FIDE Master (FM)"),
-              li("Candidate Master (CM)"),
-              li("Woman Grandmaster (WGM)"),
-              li("Woman International Master (WIM)"),
-              li("Woman FIDE Master (WFM)"),
-              li("Woman Candidate Master (WCM)")
+              li("Гроссмейстер (GM)"),
+              li("Международный мастер (IM)"),
+              li("Мастер ФИДЕ (FM)"),
+              li("Кандидат в мастера ФИДЕ (CM)"),
+              li("Гроссмейстер среди женщин (WGM)"),
+              li("Международный мастер среди женщин (WIM)"),
+              li("Мастер ФИДЕ среди женщин (WFM)"),
+              li("Кандидат в мастера ФИДЕ среди женщин (WCM)")
             ),
             p(
               trf.showYourTitle(
@@ -253,7 +253,7 @@ final class FaqUi(helpers: Helpers, sitePages: SitePages)(
           question(
             "trophies",
             trf.uniqueTrophies.txt(),
-            h4("The Golden Zee"),
+            h4("Золотая Z"),
             p(
               trf.ownerUniqueTrophies(
                 a(href := "https://play.kalugalogic.ru/@/ZugAddict")("ZugAddict")

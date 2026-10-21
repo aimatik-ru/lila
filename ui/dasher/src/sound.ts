@@ -101,7 +101,7 @@ export class SoundCtrl extends PaneCtrl {
   private readonly setVoiceRate = (v: string) => {
     localStorage.setItem('speech.rate', v);
     if (this.rateInput) this.rateInput.value = v;
-    site.sound.say('Speech synthesis ready');
+    site.sound.say('Синтез речи готов');
   };
   private rateInput?: HTMLInputElement;
 
@@ -113,7 +113,7 @@ export class SoundCtrl extends PaneCtrl {
       ? false
       : [
           h('div.rate', [
-            'Speech rate',
+            'Скорость речи',
             h('input.rate', {
               attrs: { ...site.sound.voiceRateRange, step: 0.05, type: 'range', value: rate },
               hook: onInsert<HTMLInputElement>(el => {
@@ -137,7 +137,7 @@ export class SoundCtrl extends PaneCtrl {
                     hook: bind('click', event => {
                       const target = event.target as HTMLElement;
                       site.sound.setVoice(voiceMap.get(target.textContent)!);
-                      site.sound.say('Speech synthesis ready');
+                      site.sound.say('Синтез речи готов');
                       this.redraw();
                     }),
                     class: { active: name === selectedVoice?.name },
@@ -157,7 +157,7 @@ export class SoundCtrl extends PaneCtrl {
     () => 1000,
     (soundSet: string) =>
       xhrText('/pref/soundSet', { body: xhrForm({ soundSet }), method: 'post' }).catch(() =>
-        site.announce({ msg: 'Failed to save sound preference' }),
+        site.announce({ msg: 'Не удалось сохранить настройки звука' }),
       ),
   );
 
@@ -170,7 +170,7 @@ export class SoundCtrl extends PaneCtrl {
     site.sound.speech(k === 'speech');
     if (site.sound.speech()) {
       this.showVoiceSelection = true;
-      site.sound.say('Speech synthesis ready');
+      site.sound.say('Синтез речи готов');
       site.sound.changeSet('speech');
       this.postSet('speech');
     } else {

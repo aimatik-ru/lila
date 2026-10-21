@@ -60,16 +60,17 @@ const viewClock = (ctrl: PlayCtrl, position: TopOrBottom) =>
 
 const viewActions = (ctrl: PlayCtrl) =>
   hl('div.bot-game__actions', [
-    ctrl.game.end && hl('button.bot-game__rematch', { hook: bind('click', ctrl.opts.rematch) }, 'Rematch'),
+    ctrl.game.end &&
+      hl('button.bot-game__rematch', { hook: bind('click', ctrl.opts.rematch) }, i18n.site.rematch),
     hl(
       'button.bot-game__close.text',
       { attrs: dataIcon(licon.Back), hook: bind('click', ctrl.opts.close) },
-      'More opponents',
+      'Другие соперники',
     ),
     hl(
       'button.bot-game__restart.text',
       { attrs: dataIcon(licon.Reload), hook: bind('click', ctrl.opts.rematch) },
-      'New game',
+      'Новая игра',
     ),
   ]);
 

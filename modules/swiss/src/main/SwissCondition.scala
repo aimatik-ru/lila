@@ -73,7 +73,7 @@ object SwissCondition:
         "allowList" -> allowList,
         "playYourGames" -> optional(boolean)
           .transform(_.contains(true).option(PlayYourGames), _.isDefined.option(true))
-      )(All.apply)(unapply).verifying("Invalid ratings", _.validRatings)
+      )(All.apply)(unapply).verifying("Неверные ограничения по рейтингу", _.validRatings)
 
   import reactivemongo.api.bson.*
   given bsonHandler: BSONDocumentHandler[All] =

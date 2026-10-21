@@ -74,19 +74,19 @@ final class TournamentForm:
       prev.fold(m): tour =>
         m
           .verifying(
-            "Can't change variant after players have joined",
+            "Нельзя менять вариант, когда игроки уже вступили",
             _.realVariant == tour.variant || tour.nbPlayers == 0
           )
           .verifying(
-            "Can't change time control after players have joined",
+            "Нельзя менять контроль времени, когда игроки уже вступили",
             _.speed == tour.speed || tour.nbPlayers == 0
           )
           .verifying(
-            "Can't change bot entry condition after the tournament started",
+            "Нельзя менять допуск ботов после начала турнира",
             d => (d.conditions.allowsBots == tour.conditions.allowsBots) || tour.isCreated
           )
           .verifying(
-            "Can't change start date of a team battle after 10 players have joined",
+            "Нельзя менять дату начала командного боя, когда вступили 10 игроков",
             d =>
               d.startDate.isEmpty ||
                 d.startDate.contains(tour.startsAt) ||
@@ -120,11 +120,20 @@ final class TournamentForm:
       "payouts" -> (if manager then optional(cleanNonEmptyText.into[Payouts]) else ignored(none)),
       "hasChat" -> optional(boolean)
     )(TournamentSetup.apply)(unapply)
-      .verifying("Invalid clock", _.validClock(prev))
-      .verifying("Invalid clock for bot games", _.validClockForBots(prev))
-      .verifying("15s and 0+1 variant games cannot be rated", _.validRatedVariant(prev))
-      .verifying("Increase tournament duration, or decrease game clock", _.sufficientDuration(prev))
-      .verifying("Reduce tournament duration, or increase game clock", _.excessiveDuration(prev))
+      .verifying("Неверный контроль времени", _.validClock(prev))
+      .verifying("Неверный контроль времени для партий с ботами", _.validClockForBots(prev))
+      .verifying(
+        "Партии вариантов с контролем 15 с и 0+1 не могут быть рейтинговыми",
+        _.validRatedVariant(prev)
+      )
+      .verifying(
+        "Увеличьте длительность турнира или уменьшите время на партию",
+        _.sufficientDuration(prev)
+      )
+      .verifying(
+        "Уменьшите длительность турнира или увеличьте время на партию",
+        _.excessiveDuration(prev)
+      )
 
 object TournamentForm:
 
@@ -132,13 +141,13 @@ object TournamentForm:
 
   val minutes = (20 to 60 by 5) ++ (70 to 120 by 10) ++ (150 to 360 by 30) ++ (420 to 600 by 60) :+ 720
   val minuteDefault = 45
-  val minuteChoices = options(minutes, "%d minute{s}")
+  val minuteChoices = options(minutes, format = lila.gathering.RuPlural.minutes)
   def minuteChoicesKeepingCustom(prev: Option[Tournament]) = prev.fold(minuteChoices): tour =>
     if minuteChoices.exists(_._1 == tour.minutes) then minuteChoices
-    else minuteChoices ++ List(tour.minutes -> s"${tour.minutes} minutes")
+    else minuteChoices ++ List(tour.minutes -> lila.gathering.RuPlural.minutes(tour.minutes))
 
   val waitMinutes = Seq(1, 2, 3, 5, 10, 15, 20, 30, 45, 60)
-  val waitMinuteChoices = options(waitMinutes, "%d minute{s}")
+  val waitMinuteChoices = options(waitMinutes, format = lila.gathering.RuPlural.minutes)
   val waitMinuteDefault = 5
 
   val validVariants =

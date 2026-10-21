@@ -78,7 +78,7 @@ object tournaments:
   def page(t: lila.team.Team, tours: TeamInfo.PastAndNext)(using Context) =
     Page(s"${t.name} • ${trans.site.tournaments.txt()}")
       .graph(
-        title = s"${t.name} team tournaments",
+        title = s"Турниры команды ${t.name}",
         url = routeUrl(routes.Team.tournaments(t.id)),
         description = shorten(t.description.unlink, 152)
       )

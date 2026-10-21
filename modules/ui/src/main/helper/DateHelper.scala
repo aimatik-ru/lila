@@ -102,14 +102,14 @@ trait DateHelper:
     lazy val weeks = days / 7
     lazy val months = days / 30
     lazy val years = days / 365
-    val preposition = " ago"
-    if minutes == 0 then I18nKey.timeago.rightNow.txt()
-    else if hours == 0 then s"${pluralize("minute", minutes)}$preposition"
-    else if days < 2 then s"${pluralize("hour", hours)}$preposition"
-    else if weeks == 0 then s"${pluralize("day", days)}$preposition"
-    else if months == 0 then s"${pluralize("week", weeks)}$preposition"
-    else if years == 0 then s"${pluralize("month", months)}$preposition"
-    else s"${pluralize("year", years)}$preposition"
+    import I18nKey.timeago as ta
+    if minutes == 0 then ta.rightNow.txt()
+    else if hours == 0 then ta.nbMinutesAgo.pluralSameTxt(minutes)
+    else if days < 2 then ta.nbHoursAgo.pluralSameTxt(hours)
+    else if weeks == 0 then ta.nbDaysAgo.pluralSameTxt(days)
+    else if months == 0 then ta.nbWeeksAgo.pluralSameTxt(weeks)
+    else if years == 0 then ta.nbMonthsAgo.pluralSameTxt(months)
+    else ta.nbYearsAgo.pluralSameTxt(years)
 
   def daysAgo(date: LocalDate)(using Translate): String =
     val today = nowInstant.date

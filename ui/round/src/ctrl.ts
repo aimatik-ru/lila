@@ -391,8 +391,8 @@ export default class RoundController implements MoveRootCtrl {
   showYourMoveNotification = (): void => {
     if (this.data.local) return;
     const d = this.data;
-    const opponent = $('body').hasClass('zen') ? 'Your opponent' : userTxt(d.opponent);
-    const joined = `${opponent}\njoined the game.`;
+    const opponent = $('body').hasClass('zen') ? 'Ваш соперник' : userTxt(d.opponent);
+    const joined = `${opponent}\nуже в игре.`;
     if (game.isPlayerTurn(d))
       notify(() => {
         let txt = i18n.site.yourTurn;

@@ -100,7 +100,7 @@ const inputAttrs: Record<string, Attrs> = (() => {
         '(?:\\?\\?\\.\\?\\?)' +
         ')',
       // PGN specification allows for substition of any numeric value with '?'
-      title: 'yyyy.mm.dd or ????.??.??',
+      title: 'гггг.мм.дд или ????.??.??',
     },
     WhiteElo: elo,
     BlackElo: elo,

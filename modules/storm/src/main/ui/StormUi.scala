@@ -12,7 +12,7 @@ final class StormUi(helpers: Helpers):
   import helpers.{ *, given }
 
   def home(data: JsObject, high: Option[StormHigh])(using Context) =
-    Page("Puzzle Storm")
+    Page("Штурм задач")
       .css("storm")
       .i18n(_.storm)
       .js(PageModule("storm", data))
@@ -36,7 +36,7 @@ final class StormUi(helpers: Helpers):
             )
           },
           div(cls := "storm__about__link")(
-            a(href := routes.Cms.lonePage(CmsPageKey("storm")))(trans.site.aboutX("Puzzle Storm"))
+            a(href := routes.Cms.lonePage(CmsPageKey("storm")))(trans.site.aboutX("Штурме задач"))
           )
         )
 
@@ -57,7 +57,7 @@ final class StormUi(helpers: Helpers):
   private val numberTag = tag("number")
 
   def dashboard(user: User, history: Paginator[StormDay], high: StormHigh)(using ctx: Context) =
-    Page(s"${user.username} Puzzle Storm")
+    Page(s"${user.username} • Штурм задач")
       .css("storm.dashboard")
       .js(infiniteScrollEsmInit):
         main(cls := "storm-dashboard page-small")(
@@ -72,7 +72,7 @@ final class StormUi(helpers: Helpers):
                       " • "
                     )
                   ),
-                "Puzzle Storm • ",
+                "Штурм задач • ",
                 trans.storm.highscores()
               )
             ),

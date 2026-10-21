@@ -137,4 +137,6 @@ PlayerE 1
   <string name="byes">Автопобеды</string>
   <string name="absences">Отсутствие</string>
   <string name="tieBreak">Тай-брейк</string>
+  <string name="whyAreSwissTournamentsRestrictedToTeams">Почему швейцарские турниры доступны только для команд?</string>
+  <string name="canPlayRoundRobinTournaments" comment="roundRobinQ&#10;&#10;Round-robin is a simple tournament format with some similarities to Swiss. It is not supported by Логик.">Можно ли играть в круговые турниры на Логик?</string>
 </resources>

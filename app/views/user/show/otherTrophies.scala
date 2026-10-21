@@ -23,14 +23,14 @@ object otherTrophies:
       info.trophies.shields.map { shield =>
         a(
           cls := "shield-trophy combo-trophy",
-          ariaTitle(s"${shield.categ.name} Shield"),
+          ariaTitle(s"Щит: ${shield.categ.name}"),
           href := routes.Tournament.shields
         )(shield.categ.icon)
       },
       info.trophies.revolutions.map { revol =>
         a(
           cls := "revol_trophy combo-trophy",
-          ariaTitle(s"${revol.variant.name} Revolution"),
+          ariaTitle(s"Революция: ${revol.variant.name}"),
           href := routes.Tournament.show(revol.tourId)
         )(revol.iconChar.toString)
       },

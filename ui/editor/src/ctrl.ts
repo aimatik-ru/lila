@@ -439,7 +439,7 @@ export default class EditorCtrl implements CevalHandler {
   };
 
   loadNewFen(fen: FEN): void {
-    if (fen === 'prompt') prompt('Paste FEN position').then(fen => fen && this.setFen(fen.trim()));
+    if (fen === 'prompt') prompt('Вставьте FEN позиции').then(fen => fen && this.setFen(fen.trim()));
     else this.setFen(fen);
   }
 

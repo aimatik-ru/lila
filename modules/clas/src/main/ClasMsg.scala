@@ -27,9 +27,9 @@ ${clas.desc}""",
       .void
 
   private def autoArchiveMsg(clas: Clas) =
-    s"""The class "${clas.name}" has been automatically archived due to inactivity.
+    s"""Класс «${clas.name}» автоматически отправлен в архив из-за неактивности.
 
-You can re-open it at ${routeUrl(routes.Clas.show(clas.id))}"""
+Открыть его снова можно здесь: ${routeUrl(routes.Clas.show(clas.id))}"""
 
   def invitation(
       teacher: Me,

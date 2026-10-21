@@ -20,7 +20,7 @@ function playerTr(ctrl: SwissCtrl, player: Player) {
       h(
         'td.rank',
         player.absent && ctrl.data.status !== 'finished'
-          ? icon(licon.Pause)({ title: 'Absent' })
+          ? icon(licon.Pause)({ title: 'Отсутствует' })
           : player.rank,
       ),
       h('td.player', renderPlayer(player, false, ctrl.opts.showRatings)),
@@ -31,11 +31,11 @@ function playerTr(ctrl: SwissCtrl, player: Player) {
           player.sheet
             .map(p =>
               p === 'absent'
-                ? h(p, title('Absent'), '-')
+                ? h(p, title('Отсутствует'), '-')
                 : p === 'bye'
-                  ? h(p, title('Bye'), '1')
+                  ? h(p, title('Пропуск тура (1 очко)'), '1')
                   : p === 'late'
-                    ? h(p, title('Late'), '½')
+                    ? h(p, title('Опоздал к началу (½ очка)'), '½')
                     : h(
                         'a.glpt.' + (p.o ? 'ongoing' : p.w ? 'win' : p.w === false ? 'loss' : 'draw'),
                         { attrs: { key: p.g, href: `/${p.g}` }, hook: onInsert(site.powertip.manualGame) },
@@ -45,8 +45,8 @@ function playerTr(ctrl: SwissCtrl, player: Player) {
             .concat([...Array(Math.max(0, ctrl.data.nbRounds - player.sheet.length))].map(_ => h('r'))),
         ),
       ),
-      h('td.points', title('Points'), player.points),
-      h('td.tieBreak', title('Tie Break'), player.tieBreak),
+      h('td.points', title(i18n.site.points), player.points),
+      h('td.tieBreak', title(i18n.swiss.tieBreak), player.tieBreak),
     ],
   );
 }

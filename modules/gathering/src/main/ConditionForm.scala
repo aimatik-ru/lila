@@ -14,8 +14,8 @@ import lila.core.i18n.Translate
 object ConditionForm:
 
   val nbRatedGames = Seq(0, 5, 10, 15, 20, 30, 40, 50, 75, 100, 150, 200)
-  val nbRatedGameChoices = options(nbRatedGames, "%d rated game{s}").map:
-    case (0, _) => (0, "No restriction")
+  val nbRatedGameChoices = options(nbRatedGames, format = RuPlural.ratedGames).map:
+    case (0, _) => (0, "Без ограничений")
     case x => x
 
   val nbRatedGame: Mapping[Option[NbRatedGame]] = optional(
@@ -30,7 +30,7 @@ object ConditionForm:
   def maxRatingChoices(using Translate) =
     val choices = maxRatings.map: r =>
       (r.toString, trans.site.maxRatingX.txt(r))
-    ("", "No restriction") :: choices
+    ("", trans.site.noRestriction.txt()) :: choices
 
   val maxRating = optional:
     mapping("rating" -> numberIn(maxRatings).into[IntRating])(MaxRating.apply)(_.rating.some)
@@ -41,7 +41,7 @@ object ConditionForm:
   def minRatingChoices(using Translate) =
     val choices = minRatings.map: r =>
       (r.toString, trans.site.minRatingX.txt(r))
-    ("", "No restriction") :: choices
+    ("", trans.site.noRestriction.txt()) :: choices
 
   val minRating = optional:
     mapping("rating" -> numberIn(minRatings).into[IntRating])(MinRating.apply)(_.rating.some)
@@ -55,13 +55,12 @@ object ConditionForm:
   val accountAges = List(1, 3, 7, 14, 30, 60, 90, 180, 365, 365 * 2, 365 * 3)
 
   val accountAgeChoices =
-    def pluralize(s: String, n: Int) = s"$n $s${if n != 1 then "s" else ""}"
-    ("", "No restriction") :: options(
+    ("", "Без ограничений") :: options(
       accountAges,
       format = days =>
-        if days < 30 then pluralize("day", days)
-        else if days < 365 then pluralize("month", days / 30)
-        else pluralize("year", days / 365)
+        if days < 30 then RuPlural.days(days)
+        else if days < 365 then RuPlural.months(days / 30)
+        else RuPlural.years(days / 365)
     ).toList
 
   val accountAge: Mapping[Option[AccountAge]] = optional:
@@ -76,5 +75,5 @@ object ConditionForm:
     nonEmptyText(maxLength = 100_1000)
       .transform[String](_.replace(',', '\n'), identity)
       .transform[String](_.linesIterator.map(_.trim).filter(_.nonEmpty).distinct.mkString("\n"), identity)
-      .verifying("5000 usernames max", _.count('\n' == _) <= 5_000)
+      .verifying("Не больше 5000 имён пользователей", _.count('\n' == _) <= 5_000)
       .transform(AllowList(_), _.value)

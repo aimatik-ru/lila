@@ -32,7 +32,7 @@ final class TeamUi(helpers: Helpers, markdownCache: lila.memo.MarkdownCache):
       tab
         .contains("requests")
         .option:
-          a(cls := tab.active("requests"), href := routes.Team.requests)("Join requests")
+          a(cls := tab.active("requests"), href := routes.Team.requests)("Заявки на вступление")
       ,
       ctx.isAuth.option(
         a(cls := tab.active("mine"), href := routes.Team.mine)(trt.myTeams())
@@ -132,7 +132,8 @@ final class TeamUi(helpers: Helpers, markdownCache: lila.memo.MarkdownCache):
             standardFlash.map(div(cls := "box__pad")(_)),
             ctx.me.filter(me => Team.maxJoin(me) < teams.size).map { me =>
               flashMessage("failure"):
-                s"You have joined ${teams.size} out of ${Team.maxJoin(me)} teams. Leave some teams before you can join others."
+                s"Вы состоите в ${teams.size} командах при лимите ${Team.maxJoin(me)}. " +
+                  "Чтобы вступить в другие, выйдите из некоторых команд."
             },
             table(cls := "slist slist-pad slist-invert")(
               if teams.nonEmpty then tbody(teams.map(teamTr(_)))
@@ -161,7 +162,7 @@ final class TeamUi(helpers: Helpers, markdownCache: lila.memo.MarkdownCache):
         nextPageUrl: Int => String,
         search: String = ""
     )(using Context) =
-      TeamPage(s"$name - page ${teams.currentPage}"):
+      TeamPage(s"$name — страница ${teams.currentPage}"):
         main(cls := "team-list page-menu")(
           menu("all".some),
           div(cls := "page-menu__content box")(

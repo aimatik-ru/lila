@@ -36,7 +36,7 @@ object Condition:
   case class Titled(public: Boolean = false) extends Condition:
     def name(pt: PerfType)(using Translate) = name
     def name(using Translate) =
-      if public then "Public titled accounts"
+      if public then "Аккаунты с публичным званием"
       else trans.arena.onlyTitled.txt()
     def apply(using me: Me, getPublicTitle: PublicTitleOf)(using Executor) =
       if !me.title.exists(_.isFederation) then fuccess(Refused(name(using _)))
@@ -48,8 +48,8 @@ object Condition:
 
   case class Bots(allowed: Boolean) extends Condition with FlatCond:
     def name(pt: PerfType)(using Translate) =
-      if allowed then "Bot players are allowed"
-      else "Bot players are not allowed"
+      if allowed then "Боты допускаются"
+      else "Боты не допускаются"
     def apply(pt: PerfType)(using me: Me, perf: Perf) =
       if me.isBot && !allowed then Refused(name(pt)(using _)) else Accepted
 
@@ -68,15 +68,19 @@ object Condition:
   case class AccountAge(days: Days) extends Condition:
     def name(perf: PerfType)(using Translate): String =
       val d = days.value
-      if d < 30 then s"$d days old account"
-      else if d < 365 then s"${d / 30} months old account"
-      else s"${d / 365} years old account"
+      val age =
+        if d < 30 then RuPlural.days(d)
+        else if d < 365 then RuPlural.months(d / 30)
+        else RuPlural.years(d / 365)
+      s"Возраст аккаунта: $age или больше"
     def apply(using getAge: GetAge)(using Me, Executor): Fu[Verdict] =
       if summon[Me].title.isDefined then fuccess(Accepted)
       else
         getAge(summon[Me]).map:
           case age if age.value >= days.value => Accepted
-          case age => Refused(_ => s"Your account is too young, by ${days.value - age.value} days.")
+          case age =>
+            val wait = RuPlural.days(days.value - age.value)
+            Refused(_ => s"Ваш аккаунт слишком новый: подождите ещё $wait.")
 
   abstract trait RatingCondition:
     val rating: IntRating
@@ -141,9 +145,9 @@ object Condition:
     def apply(pt: PerfType)(using me: Me, perf: Perf): Condition.Verdict =
       if segments.contains(me.userId.value) then Accepted
       else if allowAnyTitledUser && me.title.isDefined then Accepted
-      else Refused { _ => "Your name is not in the tournament line-up." }
+      else Refused { _ => "Вашего имени нет в списке участников турнира." }
     def userIds: Set[UserId] = UserId.from(segments - titled)
-    def name(pt: PerfType)(using Translate) = "Fixed line-up"
+    def name(pt: PerfType)(using Translate) = "Закрытый список участников"
     def allows(u: LightUser): Boolean =
       userIds.contains(u.id) || (allowAnyTitledUser && u.title.isDefined)
 
