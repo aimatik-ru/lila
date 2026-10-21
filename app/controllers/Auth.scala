@@ -175,7 +175,9 @@ final class Auth(env: Env, accountC: => Account) extends LilaController(env):
                   BadRequest.page:
                     views.auth
                       .login(
-                        api.loginForm.fill(loginData).withGlobalError("Session timed out, please try again"),
+                        api.loginForm
+                          .fill(loginData)
+                          .withGlobalError("Время сессии истекло, попробуйте ещё раз"),
                         isRemember
                       )
           )
@@ -387,7 +389,7 @@ final class Auth(env: Env, accountC: => Account) extends LilaController(env):
       .flatMap: sessionId =>
         authenticateCookie(sessionId, remember = true):
           Redirect(referrerOr(routes.User.show(user.username)))
-            .flashSuccess("Welcome! Your account is now active.")
+            .flashSuccess("Добро пожаловать! Ваша учётная запись активирована.")
       .recoverWith(authRecovery)
 
   def setFingerPrint(fp: String, ms: Int) = Auth { ctx ?=> me ?=>
@@ -583,7 +585,7 @@ final class Auth(env: Env, accountC: => Account) extends LilaController(env):
         case None =>
           BadRequest.page:
             import scalatags.Text.all.stringFrag
-            views.site.message("This token has expired.")(stringFrag("Please go back and try again."))
+            views.site.message("Срок действия ссылки истёк.")(stringFrag("Вернитесь назад и попробуйте снова."))
         case Some(user) => f(user)
 
   private[controllers] object LoginRateLimit:
