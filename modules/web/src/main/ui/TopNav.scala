@@ -53,7 +53,6 @@ final class TopNav(helpers: Helpers):
           Option.when(ctx.noBot):
             frag(
               a(href := langHref(routes.Learn.index))(trans.site.chessBasics()),
-              a(href := langHref(routes.Practice.index))(trans.site.practice()),
               a(href := langHref(routes.Coordinate.home))(trans.coordinates.coordinates())
             )
           ,
