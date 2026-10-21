@@ -23,6 +23,8 @@ private final class TeamClasSync(
       team <- api.team(id)
       _ <- (team, ev.wantsTeam) match
         case (None, None) => funit
+        // id команды класса предсказуем (разрядные «Логика» — logic-u2): чужую команду не трогаем
+        case (Some(team), _) if !team.isClas => fuccess(logger.warn(s"team ${team.id} is not a class team"))
         case (None, Some(cfg)) => ev.teacher.soUse(create(ev.clasId, cfg))
         case (Some(team), Some(cfg)) => update(team, cfg)
         case (Some(team), None) => ev.teacher.soUse(disableTeam(team))

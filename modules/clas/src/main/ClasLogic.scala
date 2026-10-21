@@ -149,7 +149,7 @@ final class ClasLogic(
 
   private def tierTeamSync(t: Tier)(using me: Me): Funit =
     for
-      clasIds <- colls.logicGroup.distinctEasy[ClasId, List]("clasId", $empty)
+      clasIds <- colls.logicGroup.distinctEasy[ClasId, List]("clasId", emptyBdoc)
       teachers <- colls.clas.distinctEasy[UserId, List]("teachers", $inIds(clasIds))
     yield
       val leaders = NonEmptyList(me.userId, teachers.filterNot(_ == me.userId).distinct)
