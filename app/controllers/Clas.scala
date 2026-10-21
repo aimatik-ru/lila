@@ -257,6 +257,73 @@ final class Clas(env: Env, authC: Auth) extends LilaController(env):
       }
   }
 
+  // статистика ученика «Логика» для личного кабинета на kalugalogic.ru (подпись сайта, как у входа)
+  def logicStats(sid: Int, exp: Long, sig: String) = Anon:
+    if !env.clas.logic.statsSigned(sid, exp, sig) then notFoundJson().toFuccess
+    else
+      env.clas.logic
+        .userIdOf(sid)
+        .flatMap(_.so(env.user.repo.enabledById))
+        .flatMap:
+          case None => JsonOk(Json.obj("account" -> false)).toFuccess
+          case Some(user) =>
+            val ids = List(user.id)
+            for
+              perfs <- env.user.perfsRepo.byId(user.id)
+              week <- env.clas.progressApi.puzzleStats(user.id, Days(7))
+              month <- env.clas.progressApi.puzzleStats(user.id, Days(30))
+              povs <- env.game.gameRepo.recentPovsByUserFromSecondary(user, 5, lila.game.Query.finished)
+              names <- povs.sequentially:
+                _.opponent.userId.fold(fuccess(Option.empty[lila.core.LightUser])):
+                  env.user.lightUserApi.asyncFallback(_).dmap(Some(_))
+              basic <- env.learn.api.completionPercent(ids)
+              practice <- env.practice.api.progress.completionPercent(ids)
+            yield
+              def perf(p: lila.core.perf.Perf) =
+                Json.obj("rating" -> p.intRating, "provisional" -> p.provisional.yes, "games" -> p.nb)
+              val recent = povs.zip(names).map { (pov, opp) =>
+                Json
+                  .obj(
+                    "id" -> pov.game.id,
+                    "color" -> pov.color.name,
+                    "at" -> pov.game.createdAt,
+                    "speed" -> pov.game.speed.key,
+                    "rated" -> pov.game.rated.yes,
+                    "result" -> pov.win.fold("draw")(w => if w then "win" else "loss")
+                  )
+                  .add("opponent" -> opp.map(_.name))
+                  .add("aiLevel" -> pov.opponent.aiLevel)
+              }
+              JsonOk(
+                Json.obj(
+                  "account" -> true,
+                  "username" -> user.username,
+                  "ratings" -> Json.obj(
+                    "blitz" -> perf(perfs.blitz),
+                    "rapid" -> perf(perfs.rapid),
+                    "classical" -> perf(perfs.classical),
+                    "puzzle" -> perf(perfs.puzzle)
+                  ),
+                  "puzzles" -> Json.obj(
+                    "week" -> week.nb,
+                    "weekWins" -> week.wins,
+                    "month" -> month.nb,
+                    "monthWins" -> month.wins
+                  ),
+                  "games" -> Json.obj(
+                    "total" -> user.count.game,
+                    "win" -> user.count.win,
+                    "loss" -> user.count.loss,
+                    "draw" -> user.count.draw,
+                    "recent" -> recent
+                  ),
+                  "learn" -> Json.obj(
+                    "basics" -> basic.getOrElse(user.id, 0),
+                    "practice" -> practice.getOrElse(user.id, 0)
+                  )
+                ).add("seenAt" -> user.seenAt)
+              )
+
   def learn(id: ClasId) = Secure(_.Teacher) { ctx ?=> me ?=>
     WithClass(id): clas =>
       env.clas.api.student.activeWithUsers(clas).flatMap { students =>

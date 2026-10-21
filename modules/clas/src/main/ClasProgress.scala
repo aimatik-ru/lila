@@ -84,6 +84,9 @@ final class ClasProgressApi(
       )
     }
 
+  def puzzleStats(userId: UserId, days: Days): Fu[PlayStats] =
+    getPuzzleStats(List(userId), days).map(_.getOrElse(userId, PlayStats(0, 0, 0)))
+
   private def getPuzzleStats(userIds: List[UserId], days: Days): Fu[Map[UserId, PlayStats]] =
     puzzleColls.round:
       _.aggregateList(Int.MaxValue, _.sec): framework =>

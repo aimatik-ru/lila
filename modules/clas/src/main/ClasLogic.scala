@@ -76,6 +76,15 @@ final class ClasLogic(
       usedNonces.put(payload.n, true)
       payload
 
+  /* Запрос статистики для кабинета на сайте: hex HMAC-SHA256 строки "stats:<sid>:<exp>". */
+  def statsSigned(sid: Int, exp: Long, sig: String): Boolean =
+    signer.exists: s =>
+      val now = nowSeconds
+      sid > 0 && exp > now && exp <= now + maxLifetime.toSeconds && s.sha256(s"stats:$sid:$exp").hash_=(sig)
+
+  def userIdOf(sid: Int): Fu[Option[UserId]] =
+    colls.logicStudent.primitiveOne[UserId](bdoc("_id" -> sid), "userId")
+
   /* Аккаунт ученика: найденный по ученику сайта или новый. None — аккаунт закрыт. */
   def login(p: Payload): Fu[Option[User]] = sequencer(p.sid):
     userRepo
@@ -93,8 +102,7 @@ final class ClasLogic(
         yield user
 
   private def userOf(p: Payload, clases: List[Clas])(using Me): Fu[Option[User]] =
-    colls.logicStudent
-      .primitiveOne[UserId](bdoc("_id" -> p.sid), "userId")
+    userIdOf(p.sid)
       .flatMap:
         case Some(userId) => userRepo.enabledById(userId)
         case None => clases.headOption.so(createUser(p, _))

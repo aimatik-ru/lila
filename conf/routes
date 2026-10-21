@@ -573,6 +573,7 @@ GET   /login                           controllers.Auth.login
 POST  /login                           controllers.Auth.authenticate
 POST  /login/class                     controllers.Auth.clasLogin
 GET   /login/logic                     controllers.Auth.logicLogin(t: String)
+GET   /api/logic/stats                 controllers.Clas.logicStats(sid: Int, exp: Long, sig: String)
 GET   /$lang<\w\w\w?>/login            controllers.Auth.loginLang(lang: Language)
 GET   /logout                          controllers.Auth.logoutGet
 POST  /logout                          controllers.Auth.logout
