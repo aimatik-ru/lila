@@ -3,7 +3,8 @@ import flatpickr from 'flatpickr';
 import { use24h } from 'lib/i18n';
 
 site.load.then(() => {
-  const $variant = $('#form3-variant');
+  // the staff form (/tournament/manager) prefixes its fields with "setup."
+  const $variant = $('#form3-variant, #form3-setup_variant');
   const showPosition = () =>
     $('.form3 .position').toggleClass('none', !['1', 'standard'].includes($variant.val() as string));
 
