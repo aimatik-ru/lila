@@ -76,11 +76,10 @@ final class SwissShowUi(helpers: Helpers, ui: SwissBitsUi, gathering: GatheringU
       .graph(
         title = s"${fullName(s, team)}: ${s.perfType.trans} ${s.clock.show} #${s.id}",
         url = routeUrl(routes.Swiss.show(s.id)),
-        description =
-          s"Турнир по швейцарской системе ${s.name}, ${showDate(s.startsAt)}. " +
-            s"Организатор — команда ${team.name}. Игроков: ${s.nbPlayers}. " +
-            s.winnerId.fold("Победитель ещё не определён."): winnerId =>
-              s"Победитель — ${titleNameOrId(winnerId)}!"
+        description = s"Турнир по швейцарской системе ${s.name}, ${showDate(s.startsAt)}. " +
+          s"Организатор — команда ${team.name}. Игроков: ${s.nbPlayers}. " +
+          s.winnerId.fold("Победитель ещё не определён."): winnerId =>
+            s"Победитель — ${titleNameOrId(winnerId)}!"
       )
 
   def round(s: Swiss, r: SwissRoundNumber, team: LightTeam, pairings: Paginator[SwissPairing])(using

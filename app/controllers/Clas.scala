@@ -297,33 +297,35 @@ final class Clas(env: Env, authC: Auth) extends LilaController(env):
                   .add("aiLevel" -> pov.opponent.aiLevel)
               }
               JsonOk(
-                Json.obj(
-                  "account" -> true,
-                  "username" -> user.username,
-                  "ratings" -> Json.obj(
-                    "blitz" -> perf(perfs.blitz),
-                    "rapid" -> perf(perfs.rapid),
-                    "classical" -> perf(perfs.classical),
-                    "puzzle" -> perf(perfs.puzzle)
-                  ),
-                  "puzzles" -> Json.obj(
-                    "week" -> week.nb,
-                    "weekWins" -> week.wins,
-                    "month" -> month.nb,
-                    "monthWins" -> month.wins
-                  ),
-                  "games" -> Json.obj(
-                    "total" -> user.count.game,
-                    "win" -> user.count.win,
-                    "loss" -> user.count.loss,
-                    "draw" -> user.count.draw,
-                    "recent" -> recent
-                  ),
-                  "learn" -> Json.obj(
-                    "basics" -> basic.getOrElse(user.id, 0),
-                    "practice" -> practice.getOrElse(user.id, 0)
+                Json
+                  .obj(
+                    "account" -> true,
+                    "username" -> user.username,
+                    "ratings" -> Json.obj(
+                      "blitz" -> perf(perfs.blitz),
+                      "rapid" -> perf(perfs.rapid),
+                      "classical" -> perf(perfs.classical),
+                      "puzzle" -> perf(perfs.puzzle)
+                    ),
+                    "puzzles" -> Json.obj(
+                      "week" -> week.nb,
+                      "weekWins" -> week.wins,
+                      "month" -> month.nb,
+                      "monthWins" -> month.wins
+                    ),
+                    "games" -> Json.obj(
+                      "total" -> user.count.game,
+                      "win" -> user.count.win,
+                      "loss" -> user.count.loss,
+                      "draw" -> user.count.draw,
+                      "recent" -> recent
+                    ),
+                    "learn" -> Json.obj(
+                      "basics" -> basic.getOrElse(user.id, 0),
+                      "practice" -> practice.getOrElse(user.id, 0)
+                    )
                   )
-                ).add("seenAt" -> user.seenAt)
+                  .add("seenAt" -> user.seenAt)
               )
 
   def learn(id: ClasId) = Secure(_.Teacher) { ctx ?=> me ?=>

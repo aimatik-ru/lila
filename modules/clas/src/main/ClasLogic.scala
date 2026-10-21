@@ -25,11 +25,11 @@ import lila.db.dsl.{ *, given }
  * ФИО и данные с сайта (дата рождения, разряд, ФШР) лежат в карточке ученика в классе —
  * её видят только тренеры; в открытый профиль ребёнка идут только флаг, город и рейтинг ФШР.
  *
- * По разряду с сайта ученик попадает в одну из закрытых команд (Tier): «До 2 юн.» или
- * «1 юн. и выше». Плюс общая команда всех учеников (allTeam) — для швейцарок без разбивки.
- * Команды ведёт TeamClasSync, как команды классов: состав целиком пересобирается из
- * clas_logic_student, тренеры классов «Логика» — руководители команды и могут делать
- * турниры «только для команды».
+ * Все ученики — в одной закрытой команде клуба «ШК Логик» (clubTeam). Её ведёт TeamClasSync,
+ * как команды классов: состав целиком пересобирается из clas_logic_student, руководители —
+ * владелец, тренеры классов «Логика» и администраторы площадки; они делают турниры «только
+ * для команды». Разряд с сайта (Tier) только запоминается; разрядные команды logic-u2 и
+ * logic-1j упразднены 2026-10-21, syncTeams их выключает.
  */
 final class ClasLogic(
     secret: Option[Secret],
@@ -115,9 +115,20 @@ final class ClasLogic(
           user <- userOf(p, clases)
           _ <- user.so(u => clases.sequentiallyVoid(ensureStudent(u, p, _)))
           _ <- user.so(syncProfile(_, p))
-          _ <- user.so(_ => syncTier(p))
-          _ <- user.so(_ => teamSync(allTeam, emptyBdoc))
+          _ <- user.so(_ => saveTier(p))
+          _ <- user.so(_ => teamSync)
         yield user
+
+  /* При старте: команда клуба со всеми учениками и админами, разрядные команды выключены. */
+  def syncTeams(): Funit =
+    userRepo
+      .enabledById(ownerName)
+      .flatMap:
+        case None => fuccess(logger.warn(s"logic.login.owner $ownerName not found"))
+        case Some(owner) =>
+          given me: Me = Me(owner)
+          Tier.values.foreach(t => Bus.pub(ClasTeamUpdate(t.clasId, none)(using me.some)))
+          teamSync
 
   private def userOf(p: Payload, clases: List[Clas])(using Me): Fu[Option[User]] =
     userIdOf(p.sid)
@@ -154,8 +165,7 @@ final class ClasLogic(
     )
     (next != prof).so(userRepo.setProfile(user.id, next))
 
-  /* Разряд поменялся (или пропал) — пересобрать обе команды. */
-  private def syncTier(p: Payload)(using me: Me): Funit =
+  private def saveTier(p: Payload): Funit =
     val tier = p.tier.flatMap(Tier.byKey)
     colls.logicStudent
       .primitiveOne[String](bdoc("_id" -> p.sid), "tier")
@@ -163,18 +173,20 @@ final class ClasLogic(
         (prev != tier.map(_.key)).so:
           colls.logicStudent.update
             .one(bdoc("_id" -> p.sid), tier.fold(unset("tier"))(t => set("tier" -> t.key)))
-            .flatMap(_ => Tier.values.toList.sequentiallyVoid(t => teamSync(t.team, bdoc("tier" -> t.key))))
+            .void
 
-  private def teamSync(team: (ClasId, String), studentsQuery: Bdoc)(using me: Me): Funit =
+  private def teamSync(using me: Me): Funit =
+    import lila.core.perm.Permission
     for
       clasIds <- colls.logicGroup.distinctEasy[ClasId, List]("clasId", emptyBdoc)
       teachers <- colls.clas.distinctEasy[UserId, List]("teachers", inIds(clasIds))
+      admins <- userRepo.userIdsWithRoles(List(Permission.SuperAdmin.dbKey, Permission.Admin.dbKey))
+      staff <- userRepo.filterEnabled((teachers ++ admins).filterNot(_ == me.userId).distinct)
     yield
-      val leaders = NonEmptyList(me.userId, teachers.filterNot(_ == me.userId).distinct)
-      val students =
-        LazyFu(() => colls.logicStudent.distinctEasy[UserId, List]("userId", studentsQuery))
-      val config = ClasTeamConfig(team._2, leaders, students)
-      Bus.pub(ClasTeamUpdate(team._1, config.some)(using me.some))
+      val leaders = NonEmptyList(me.userId, staff.toList)
+      val students = LazyFu(() => colls.logicStudent.distinctEasy[UserId, List]("userId", emptyBdoc))
+      val config = ClasTeamConfig(clubTeam._2, leaders, students)
+      Bus.pub(ClasTeamUpdate(clubTeam._1, config.some)(using me.some))
 
   private def clasOf(g: Group)(using me: Me): Fu[Clas] =
     for
@@ -211,8 +223,7 @@ final class ClasLogic(
     if synced == clas then fuccess(clas)
     else
       newTeacher.foreach(clasApi.isTeacher.add)
-      colls.clas
-        .update
+      colls.clas.update
         .one(
           bid(clas.id),
           set("name" -> synced.name, "teachers" -> synced.teachers.toList) ++ unset("archived")
@@ -243,6 +254,8 @@ final class ClasLogic(
 
 object ClasLogic:
 
+  private val logger = lila.log("clas.logic")
+
   val maxLifetime = 30.minutes
   val inviteLifetime = 14.days
 
@@ -259,17 +272,16 @@ object ClasLogic:
       tier: Option[String] = None
   )
 
-  // разрядные команды: ключ приходит с сайта (kl_play_rank_tier)
+  // разряд с сайта (kl_play_rank_tier); команды logic-u2/logic-1j упразднены, их выключает syncTeams
   enum Tier(val key: String, val teamName: String):
     case Junior extends Tier("u2", "До 2 юн.")
     case Senior extends Tier("1j", "1 юн. и выше")
     def clasId = ClasId(s"logic-$key")
-    def team = (clasId, teamName)
   object Tier:
     def byKey(key: String) = values.find(_.key == key)
 
-  // общая команда: в неё попадает каждый, кто входил через бота
-  val allTeam = (ClasId("logic-all"), "Все ученики «Логика»")
+  // команда клуба: в неё попадает каждый, кто входил через бота
+  val clubTeam = (ClasId("logic-all"), "ШК Логик")
 
   private val validLogin = lila.user.nameRules.newUsernameRegex
 
@@ -277,11 +289,13 @@ object ClasLogic:
   private val notesMark = "———"
 
   private[clas] def mergeNotes(info: Option[String], current: String): String =
-    info.filter(_.trim.nonEmpty).fold(current): i =>
-      val teacher = current.indexOf(notesMark) match
-        case -1 => current.trim
-        case k => current.drop(k + notesMark.length).trim
-      s"${i.trim.take(5000)}\n$notesMark\n$teacher".trim
+    info
+      .filter(_.trim.nonEmpty)
+      .fold(current): i =>
+        val teacher = current.indexOf(notesMark) match
+          case -1 => current.trim
+          case k => current.drop(k + notesMark.length).trim
+        s"${i.trim.take(5000)}\n$notesMark\n$teacher".trim
 
   private val noGroup = Group(0, "Без группы", none)
 

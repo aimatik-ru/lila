@@ -212,7 +212,7 @@ final class StudyListUi(helpers: Helpers, bits: StudyBits):
         val group = StudyGroup.topic(topic.some)
         a(activeCls(group), href := routes.Study.byTopic(topic.value, newOrder(group)))(topic.value)
       ,
-      a(activeCls(StudyGroup.staffPicks), href := routes.Study.staffPicks)("Staff picks"),
+      a(activeCls(StudyGroup.staffPicks), href := routes.Study.staffPicks)("Рекомендуемые"),
       a(
         dataIcon := Icon.InfoCircle,
         href := "/@/lichess/blog/study-chess-the-lichess-way/V0KrLSkA"

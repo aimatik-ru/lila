@@ -19,9 +19,8 @@ final class CoordinateUi(helpers: Helpers):
       .graph(
         title = "Тренажёр координат шахматной доски",
         url = routeUrl(routes.Coordinate.home),
-        description =
-          "Знать координаты шахматной доски — очень важный навык. На доске появляется " +
-            "название поля, а вы должны нажать на нужное поле."
+        description = "Знать координаты шахматной доски — очень важный навык. На доске появляется " +
+          "название поля, а вы должны нажать на нужное поле."
       )
       .hrefLangs(LangPath(routes.Coordinate.home))
       .flag(_.zoom)

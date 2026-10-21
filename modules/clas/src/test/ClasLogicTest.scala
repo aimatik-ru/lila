@@ -33,7 +33,10 @@ class ClasLogicTest extends munit.FunSuite:
     assertEquals(mergeNotes(None, "старая заметка"), "старая заметка")
 
   test("old payload without card fields still parses"):
-    assertEquals(ClasLogic.parse(body).map(p => (p.login, p.info, p.rcf, p.tier)), Some((None, None, None, None)))
+    assertEquals(
+      ClasLogic.parse(body).map(p => (p.login, p.info, p.rcf, p.tier)),
+      Some((None, None, None, None))
+    )
 
   test("rank tiers from the site"):
     import ClasLogic.Tier
@@ -41,4 +44,4 @@ class ClasLogicTest extends munit.FunSuite:
     assertEquals(Tier.byKey("1j"), Some(Tier.Senior))
     assertEquals(Tier.byKey("other"), None)
     assertEquals(Tier.Junior.clasId.value, "logic-u2")
-    assertEquals(ClasLogic.allTeam._1.value, "logic-all")
+    assertEquals(ClasLogic.clubTeam._1.value, "logic-all")

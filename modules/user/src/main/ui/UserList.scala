@@ -23,8 +23,7 @@ final class UserList(helpers: Helpers, bits: UserBits):
       .graph(
         title = "Шахматисты и рейтинг-листы",
         url = routeUrl(routes.User.list),
-        description =
-          "Лучшие шахматисты в пуле, блице, рапиде, классике, шахматах 960 и других вариантах"
+        description = "Лучшие шахматисты в пуле, блице, рапиде, классике, шахматах 960 и других вариантах"
       ):
         main(cls := "page-menu")(
           bits.communityMenu("leaderboard"),

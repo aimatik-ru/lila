@@ -253,7 +253,8 @@ final class Auth(env: Env, accountC: => Account) extends LilaController(env):
       env.security.lilaCookie.ensureAndGet: sid =>
         t3Counter(_.signup.load(sid))
         val form = forms.signup.full(simpleSignup)
-        val filled = invite.fold(form.form)(i => form.form.copy(data = form.form.data + ("email" -> i._2.value)))
+        val filled =
+          invite.fold(form.form)(i => form.form.copy(data = form.form.data + ("email" -> i._2.value)))
         Ok.page(views.auth.signup(filled, form.simple, invite.map(_._1)))
 
   /* «Логик»: открытой регистрации нет. Ученики входят по ссылке из бота MAX (logicLogin),
@@ -624,7 +625,9 @@ final class Auth(env: Env, accountC: => Account) extends LilaController(env):
         case None =>
           BadRequest.page:
             import scalatags.Text.all.stringFrag
-            views.site.message("Срок действия ссылки истёк.")(stringFrag("Вернитесь назад и попробуйте снова."))
+            views.site.message("Срок действия ссылки истёк.")(
+              stringFrag("Вернитесь назад и попробуйте снова.")
+            )
         case Some(user) => f(user)
 
   private[controllers] object LoginRateLimit:
