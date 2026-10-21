@@ -184,7 +184,12 @@ final class ClasLogic(
       staff <- userRepo.filterEnabled((teachers ++ admins).filterNot(_ == me.userId).distinct)
     yield
       val leaders = NonEmptyList(me.userId, staff.toList)
-      val students = LazyFu(() => colls.logicStudent.distinctEasy[UserId, List]("userId", emptyBdoc))
+      // закрытый аккаунт (тестовый, ушедший ученик) уходит из команды при следующей сборке
+      val students = LazyFu: () =>
+        colls.logicStudent
+          .distinctEasy[UserId, List]("userId", emptyBdoc)
+          .flatMap(userRepo.filterEnabled)
+          .map(_.toList)
       val config = ClasTeamConfig(clubTeam._2, leaders, students)
       Bus.pub(ClasTeamUpdate(clubTeam._1, config.some)(using me.some))
 

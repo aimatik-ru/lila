@@ -51,12 +51,37 @@
     transition: opacity 0.6s;
   }
 
-  .info,
   .actions {
     width: 0;
 
     @media (max-width: $x-small) {
       display: none;
+    }
+  }
+
+  .info {
+    width: 0;
+
+    // на телефоне число участников — строкой под названием, а не скрыто
+    @media (max-width: $x-small) {
+      display: block;
+      width: auto;
+      padding-top: 0;
+
+      p {
+        text-align: start;
+      }
+    }
+  }
+
+  @media (max-width: $x-small) {
+    tr.paginated:has(> td.info) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .subject {
+      padding-bottom: 0.4rem;
     }
   }
 
