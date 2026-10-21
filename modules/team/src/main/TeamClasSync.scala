@@ -60,13 +60,21 @@ private final class TeamClasSync(
     val id = clasId.into(TeamId)
     // разрядные команды «Логика» (lila.clas.ClasLogic.Tier) — без класса за спиной
     val logic = clasId.value.startsWith("logic-")
-    val intro = if logic then s"Ученики «Логика»: ${cfg.name}" else s"Team of class ${cfg.name}"
+    val all = clasId.value == "logic-all"
+    val intro =
+      if all then "Все ученики шахматной школы «Логик»"
+      else if logic then s"Ученики «Логика»: ${cfg.name}"
+      else s"Команда класса ${cfg.name}"
     val desc =
-      if logic then
+      if all then
+        Markdown:
+          "Все ученики шахматной школы «Логик», без разбивки по разряду. " +
+            "Ученик попадает в команду сам при входе через бота."
+      else if logic then
         Markdown:
           s"Ученики шахматной школы «Логик» с разрядом ${cfg.name.toLowerCase}. " +
             "Состав обновляется сам по разряду с сайта."
-      else Markdown(s"""Team of class [${cfg.name}](${routes.Clas.show(clasId)})""")
+      else Markdown(s"""Команда класса [${cfg.name}](${routes.Clas.show(clasId)})""")
     val team = Team
       .make(
         id = id,

@@ -26,9 +26,10 @@ import lila.db.dsl.{ *, given }
  * её видят только тренеры; в открытый профиль ребёнка идут только флаг, город и рейтинг ФШР.
  *
  * По разряду с сайта ученик попадает в одну из закрытых команд (Tier): «До 2 юн.» или
- * «1 юн. и выше». Команды ведёт TeamClasSync, как команды классов: состав целиком
- * пересобирается из clas_logic_student, тренеры классов «Логика» — руководители команды
- * и могут делать турниры «только для команды».
+ * «1 юн. и выше». Плюс общая команда всех учеников (allTeam) — для швейцарок без разбивки.
+ * Команды ведёт TeamClasSync, как команды классов: состав целиком пересобирается из
+ * clas_logic_student, тренеры классов «Логика» — руководители команды и могут делать
+ * турниры «только для команды».
  */
 final class ClasLogic(
     secret: Option[Secret],
@@ -99,6 +100,7 @@ final class ClasLogic(
           _ <- user.so(u => clases.sequentiallyVoid(ensureStudent(u, p, _)))
           _ <- user.so(syncProfile(_, p))
           _ <- user.so(_ => syncTier(p))
+          _ <- user.so(_ => teamSync(allTeam, emptyBdoc))
         yield user
 
   private def userOf(p: Payload, clases: List[Clas])(using Me): Fu[Option[User]] =
@@ -145,18 +147,18 @@ final class ClasLogic(
         (prev != tier.map(_.key)).so:
           colls.logicStudent.update
             .one(bdoc("_id" -> p.sid), tier.fold(unset("tier"))(t => set("tier" -> t.key)))
-            .flatMap(_ => Tier.values.toList.sequentiallyVoid(tierTeamSync))
+            .flatMap(_ => Tier.values.toList.sequentiallyVoid(t => teamSync(t.team, bdoc("tier" -> t.key))))
 
-  private def tierTeamSync(t: Tier)(using me: Me): Funit =
+  private def teamSync(team: (ClasId, String), studentsQuery: Bdoc)(using me: Me): Funit =
     for
       clasIds <- colls.logicGroup.distinctEasy[ClasId, List]("clasId", emptyBdoc)
       teachers <- colls.clas.distinctEasy[UserId, List]("teachers", inIds(clasIds))
     yield
       val leaders = NonEmptyList(me.userId, teachers.filterNot(_ == me.userId).distinct)
       val students =
-        LazyFu(() => colls.logicStudent.distinctEasy[UserId, List]("userId", bdoc("tier" -> t.key)))
-      val config = ClasTeamConfig(t.teamName, leaders, students)
-      Bus.pub(ClasTeamUpdate(t.clasId, config.some)(using me.some))
+        LazyFu(() => colls.logicStudent.distinctEasy[UserId, List]("userId", studentsQuery))
+      val config = ClasTeamConfig(team._2, leaders, students)
+      Bus.pub(ClasTeamUpdate(team._1, config.some)(using me.some))
 
   private def clasOf(g: Group)(using me: Me): Fu[Clas] =
     for
@@ -245,8 +247,12 @@ object ClasLogic:
     case Junior extends Tier("u2", "До 2 юн.")
     case Senior extends Tier("1j", "1 юн. и выше")
     def clasId = ClasId(s"logic-$key")
+    def team = (clasId, teamName)
   object Tier:
     def byKey(key: String) = values.find(_.key == key)
+
+  // общая команда: в неё попадает каждый, кто входил через бота
+  val allTeam = (ClasId("logic-all"), "Все ученики «Логика»")
 
   private val validLogin = lila.user.nameRules.newUsernameRegex
 
