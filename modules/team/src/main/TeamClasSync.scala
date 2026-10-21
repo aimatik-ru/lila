@@ -23,7 +23,7 @@ private final class TeamClasSync(
       team <- api.team(id)
       _ <- (team, ev.wantsTeam) match
         case (None, None) => funit
-        // id команды класса предсказуем (разрядные «Логика» — logic-u2): чужую команду не трогаем
+        // id команды класса предсказуем (команда клуба «Логика» — logic-all): чужую команду не трогаем
         case (Some(team), _) if !team.isClas => fuccess(logger.warn(s"team ${team.id} is not a class team"))
         case (None, Some(cfg)) => ev.teacher.soUse(create(ev.clasId, cfg))
         case (Some(team), Some(cfg)) => update(team, cfg)
@@ -58,22 +58,21 @@ private final class TeamClasSync(
 
   private def create(clasId: ClasId, cfg: ClasTeamConfig)(using me: Me): Funit =
     val id = clasId.into(TeamId)
-    // разрядные команды «Логика» (lila.clas.ClasLogic.Tier) — без класса за спиной
-    val logic = clasId.value.startsWith("logic-")
-    val all = clasId.value == "logic-all"
+    // команда клуба «Логик» (lila.clas.ClasLogic.clubTeam) — без класса за спиной
+    val club = clasId.value == "logic-all"
     val intro =
-      if all then "Все ученики шахматной школы «Логик»"
-      else if logic then s"Ученики «Логика»: ${cfg.name}"
+      if club then "Ученики шахматного клуба «Логик», Калуга"
       else s"Команда класса ${cfg.name}"
     val desc =
-      if all then
+      if club then
         Markdown:
-          "Все ученики шахматной школы «Логик», без разбивки по разряду. " +
-            "Ученик попадает в команду сам при входе через бота."
-      else if logic then
-        Markdown:
-          s"Ученики шахматной школы «Логик» с разрядом ${cfg.name.toLowerCase}. " +
-            "Состав обновляется сам по разряду с сайта."
+          """Команда учеников шахматного клуба «Логик» (г. Калуга).
+            |
+            |Сюда попадает каждый ученик, который вошёл на площадку через бота клуба. Здесь проходят турниры только для своих.
+            |
+            |Сайт клуба: https://kalugalogic.ru
+            |
+            |Мы ВКонтакте: https://vk.com/kalugalogic""".stripMargin
       else Markdown(s"""Команда класса [${cfg.name}](${routes.Clas.show(clasId)})""")
     val team = Team
       .make(

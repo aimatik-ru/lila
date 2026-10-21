@@ -41,4 +41,4 @@ class ClasLogicTest extends munit.FunSuite:
     assertEquals(Tier.byKey("1j"), Some(Tier.Senior))
     assertEquals(Tier.byKey("other"), None)
     assertEquals(Tier.Junior.clasId.value, "logic-u2")
-    assertEquals(ClasLogic.allTeam._1.value, "logic-all")
+    assertEquals(ClasLogic.clubTeam._1.value, "logic-all")

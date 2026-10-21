@@ -69,6 +69,9 @@ final class Env(
 
   scheduler.scheduleWithFixedDelay(44.minutes, 1.hour)(() => api.clas.archiveAllInactive)
 
+  // команда клуба «Логик»: собрать состав после старта (ученики входят из бота)
+  if logic.enabled then scheduler.scheduleOnce(1.minute)(logic.syncTeams())
+
   lila.common.Bus.sub[lila.core.game.FinishGame]: finish =>
     progressApi.onFinishGame(finish.game)
 
