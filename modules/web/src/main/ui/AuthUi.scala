@@ -112,7 +112,8 @@ final class AuthUi(helpers: Helpers):
           )
         )
 
-  def signup(form: Form[?], simple: Boolean)(using
+  // invite — приглашение сотрудника «Логика» (регистрация без него закрыта, см. Auth.LogicInvite)
+  def signup(form: Form[?], simple: Boolean, invite: Option[String] = None)(using
       ctx: Context,
       custom: Option[AuthCustomUi]
   )(using TurnstilePublicConfig, Option[ValidReferrer]) =
@@ -134,7 +135,9 @@ final class AuthUi(helpers: Helpers):
           postForm(
             id := "signup-form",
             cls := "form3",
-            action := addReferrer(routes.Auth.signupPost.url),
+            action := addReferrer(
+              invite.fold(routes.Auth.signupPost.url)(addQueryParam(routes.Auth.signupPost.url, "invite", _))
+            ),
             autocomplete := "off"
           )(
             authGlobalError(form),
@@ -168,10 +171,10 @@ final class AuthUi(helpers: Helpers):
               trans.site.email(),
               help = simple.not.option(trans.site.signupEmailPromise())
             ): f =>
-              div(cls := "text-wrapper")(
-                form3.input(f, typ = "email")(required),
-                clearFieldButton
-              ),
+              div(cls := "text-wrapper"):
+                if invite.isDefined then form3.input(f, typ = "email")(required, readonly)
+                else frag(form3.input(f, typ = "email")(required), clearFieldButton)
+              ,
             input(id := "signup-fp-input", name := "fp", tpe := "hidden"),
             simple.not.option:
               div(cls := "form-group text", dataIcon := Icon.InfoCircle)(

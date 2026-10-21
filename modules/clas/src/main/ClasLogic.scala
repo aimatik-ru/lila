@@ -83,6 +83,22 @@ final class ClasLogic(
       val now = nowSeconds
       sid > 0 && exp > now && exp <= now + maxLifetime.toSeconds && s.sha256(s"stats:$sid:$exp").hash_=(sig)
 
+  /* Регистрация на площадке закрыта: ученики входят из бота, сотрудники — по приглашению
+   * с сайта на свою почту. Приглашение: "<почта base64url>.<exp>.<hex HMAC-SHA256 строки
+   * signup:<почта в нижнем регистре>:<exp>>". Возвращает почту, на которую оно выписано. */
+  def signupInvite(token: String): Option[EmailAddress] =
+    for
+      s <- signer
+      parts = token.split('.')
+      if parts.length == 3
+      raw <- scala.util.Try(String(java.util.Base64.getUrlDecoder.decode(parts(0)), "UTF-8")).toOption
+      email <- EmailAddress.from(raw.trim.toLowerCase)
+      exp <- parts(1).toLongOption
+      now = nowSeconds
+      if exp > now && exp <= now + inviteLifetime.toSeconds
+      if s.sha256(s"signup:${email.value}:$exp").hash_=(parts(2))
+    yield email
+
   def userIdOf(sid: Int): Fu[Option[UserId]] =
     colls.logicStudent.primitiveOne[UserId](bdoc("_id" -> sid), "userId")
 
@@ -228,6 +244,7 @@ final class ClasLogic(
 object ClasLogic:
 
   val maxLifetime = 30.minutes
+  val inviteLifetime = 14.days
 
   case class Group(id: Int, name: String, teacher: Option[String])
   case class Payload(

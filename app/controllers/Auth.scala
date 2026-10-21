@@ -249,10 +249,33 @@ final class Auth(env: Env, accountC: => Account) extends LilaController(env):
   def signupLang = LangPage(routes.Auth.signup)(serveSignup)
 
   private def serveSignup(using Context) = NoTor:
-    env.security.lilaCookie.ensureAndGet: sid =>
-      t3Counter(_.signup.load(sid))
-      val form = forms.signup.full(simpleSignup)
-      Ok.page(views.auth.signup(form.form, form.simple))
+    LogicInvite: invite =>
+      env.security.lilaCookie.ensureAndGet: sid =>
+        t3Counter(_.signup.load(sid))
+        val form = forms.signup.full(simpleSignup)
+        val filled = invite.fold(form.form)(i => form.form.copy(data = form.form.data + ("email" -> i._2.value)))
+        Ok.page(views.auth.signup(filled, form.simple, invite.map(_._1)))
+
+  /* «Логик»: открытой регистрации нет. Ученики входят по ссылке из бота MAX (logicLogin),
+   * сотрудники регистрируются по приглашению с сайта на свою почту (ClasLogic.signupInvite).
+   * Без ключа logic.login.secret (локальная разработка) регистрация открыта, как в upstream. */
+  private def LogicInvite(f: Option[(String, EmailAddress)] => Fu[Result])(using ctx: Context): Fu[Result] =
+    if !env.clas.logic.enabled then f(none)
+    else
+      val invite = for
+        t <- ctx.req.getQueryString("invite")
+        email <- env.clas.logic.signupInvite(t)
+      yield (t, email)
+      invite match
+        case Some(i) => f(i.some)
+        case None =>
+          import scalatags.Text.all.stringFrag
+          Forbidden.page:
+            views.site.message("Регистрация только для учеников клуба")(
+              stringFrag(
+                "Здесь занимаются ученики шахматной школы «Логик». Чтобы войти, нажмите «Шахматная площадка» в боте MAX: аккаунт появится сам при первом входе. Тренер получает ссылку на регистрацию у администратора клуба."
+              )
+            )
 
   private def simpleSignup(using ref: Option[ValidReferrer]) =
     ref.flatMap(env.oAuth.signedClients.simpleSignupFrom)
@@ -274,30 +297,46 @@ final class Auth(env: Env, accountC: => Account) extends LilaController(env):
               jsonError:
                 Json.obj("username" -> List("Please use our new mobile app! https://play.kalugalogic.ru/app"))
           else
-            limit.enumeration.signup(rateLimited):
-              import Signup.Result.*
-              env.security.signup
-                .website(ctx.blind, simpleSignup)
-                .flatMap:
-                  case RateLimited | ForbiddenNetwork | SimpleSignupDuplicate =>
-                    t3Counter(_.signup.fail("rateLimit"))
-                    rateLimited
-                  case TurnstileFail =>
-                    t3Counter(_.signup.fail("turnstile"))
-                    val f = forms.signup.full(simpleSignup)
-                    val form = f.form.withGlobalError("Invalid captcha")
-                    BadRequest.page(views.auth.signup(form, f.simple))
-                  case FormInvalid(err) =>
-                    t3Counter(_.signup.fail("form", err.some))
-                    val f = forms.signup.full(simpleSignup)
-                    BadRequest.page(views.auth.signup(err, f.simple))
-                  case ConfirmEmail(user, email) =>
-                    t3Counter(_.signup.step("emailConfirm"))
-                    redirectWithReferrer(routes.Auth.checkYourEmail).withCookies:
-                      EmailConfirm.cookie.newSession(env.security.lilaCookie, user, email)
-                  case AllSet(user, email) =>
-                    t3Counter(_.signup.success)
-                    welcome(user, email, sendWelcomeEmail = true) >> redirectNewUser(user)
+            LogicInvite: invite =>
+              import play.api.data.Forms
+              val formEmail = Form(Forms.single("email" -> Forms.text))
+                .bindFromRequest()
+                .value
+                .flatMap(e => EmailAddress.from(e.trim))
+              if invite.exists(i => !formEmail.exists(_.normalize == i._2.normalize)) then
+                import scalatags.Text.all.stringFrag
+                BadRequest.page:
+                  views.site.message("Почта не совпадает с приглашением")(
+                    stringFrag(
+                      s"Приглашение выписано на ${invite.so(_._2.value)}. Откройте ссылку из приглашения ещё раз и зарегистрируйтесь на эту почту."
+                    )
+                  )
+              else
+                val inviteToken = invite.map(_._1)
+                limit.enumeration.signup(rateLimited):
+                  import Signup.Result.*
+                  env.security.signup
+                    .website(ctx.blind, simpleSignup)
+                    .flatMap:
+                      case RateLimited | ForbiddenNetwork | SimpleSignupDuplicate =>
+                        t3Counter(_.signup.fail("rateLimit"))
+                        rateLimited
+                      case TurnstileFail =>
+                        t3Counter(_.signup.fail("turnstile"))
+                        val f = forms.signup.full(simpleSignup)
+                        val form = f.form.withGlobalError("Invalid captcha")
+                        BadRequest.page(views.auth.signup(form, f.simple, inviteToken))
+                      case FormInvalid(err) =>
+                        t3Counter(_.signup.fail("form", err.some))
+                        val f = forms.signup.full(simpleSignup)
+                        BadRequest.page(views.auth.signup(err, f.simple, inviteToken))
+                      case ConfirmEmail(user, email) =>
+                        t3Counter(_.signup.step("emailConfirm"))
+                        redirectWithReferrer(routes.Auth.checkYourEmail).withCookies:
+                          EmailConfirm.cookie.newSession(env.security.lilaCookie, user, email)
+                      case AllSet(user, email) =>
+                        t3Counter(_.signup.success)
+                        welcome(user, email, sendWelcomeEmail = true) >> redirectNewUser(user)
 
   private def welcome(user: UserModel, email: EmailAddress, sendWelcomeEmail: Boolean)(using
       ctx: Context
