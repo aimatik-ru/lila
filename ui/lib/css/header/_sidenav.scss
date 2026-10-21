@@ -163,11 +163,14 @@ $sidenav-width: 168px;
 
       a {
         padding: 0.65rem 1rem;
+        white-space: nowrap;
       }
     }
 
-    // открытие с клавиатуры: фокус на разделе или внутри его подменю
-    section:has(:focus-visible) {
+    // открытие с клавиатуры: фокус на разделе или внутри его подменю.
+    // :has(:focus-visible) Chromium не пересчитывает при переходе фокуса
+    // в подменю — ссылка прячется и фокус теряется; :focus-within надёжен.
+    section:focus-within {
       > a {
         background: $c-bg-header-dropdown;
         color: $c-header-dropdown;
@@ -183,7 +186,7 @@ $sidenav-width: 168px;
     &.hover section:hover,
     section:active,
     section.active,
-    section:has(:focus-visible) {
+    section:focus-within {
       > a::before {
         color: $c-primary;
       }
