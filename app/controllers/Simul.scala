@@ -90,7 +90,7 @@ final class Simul(env: Env) extends LilaController(env):
       env.simul.api.accept(simul.id, userId.id, v = false).inject(jsonOkResult)
 
   def form = Auth { ctx ?=> me ?=>
-    NoLameOrBot:
+    LogicAdminOnly:
       Ok.async:
         env.team.api
           .lightsOf(me)
@@ -99,7 +99,7 @@ final class Simul(env: Env) extends LilaController(env):
   }
 
   def create = AuthBody { ctx ?=> me ?=>
-    NoLameOrBot:
+    LogicAdminOnly:
       for
         teams <- env.team.api.lightsOf(me)
         res <- bindForm(forms.create(teams))(

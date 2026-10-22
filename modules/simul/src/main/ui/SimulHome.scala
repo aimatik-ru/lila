@@ -83,8 +83,9 @@ final class SimulHome(helpers: Helpers, ui: SimulUi):
             ),
           tr(cls := "create")(
             td(colspan := "4")(
-              if ctx.isAuth then
+              if Granter.opt(_.Admin) then
                 a(href := routes.Simul.form, cls := "action button text")(trans.site.hostANewSimul())
+              else if ctx.isAuth then emptyFrag
               else
                 a(href := routes.Auth.signup, cls := "action button text")(
                   trans.site.signUpToHostOrJoinASimul()

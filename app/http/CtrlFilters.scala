@@ -33,7 +33,7 @@ trait CtrlFilters(using Executor) extends ControllerHelpers with ResponseBuilder
     if isGrantedOpt(perm) then f
     else negotiate(authorizationFailed, authorizationFailed)
 
-  /* «Логик»: турниры и клубы (команды) на площадке заводят только администраторы.
+  /* «Логик»: турниры, сеансы и клубы (команды) на площадке заводят только администраторы.
    * Право Admin дают ROLE_ADMIN и ROLE_SUPER_ADMIN; без 2FA lila срезает его из сессии. */
   def LogicAdminOnly(a: => Fu[Result])(using ctx: Context): Fu[Result] =
     if isGrantedOpt(_.Admin) then a
@@ -42,10 +42,10 @@ trait CtrlFilters(using Executor) extends ControllerHelpers with ResponseBuilder
       negotiate(
         Forbidden.page:
           views.site.message("Только для администраторов")(
-            stringFrag("Турниры и клубы на площадке создают администраторы шахматной школы «Логик».")
+            stringFrag("Турниры, сеансы и клубы на площадке создают администраторы шахматной школы «Логик».")
           )
         ,
-        forbiddenJson("Only club administrators can create tournaments and teams.")
+        forbiddenJson("Only club administrators can create tournaments, simuls and teams.")
       )
 
   def Firewall(a: => Fu[Result])(using ctx: Context): Fu[Result] =
