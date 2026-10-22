@@ -29,6 +29,11 @@ final class TopNav(helpers: Helpers):
               a(href := langHref(routes.Tournament.home))(trans.arena.arenaTournaments()),
               a(href := langHref(routes.Swiss.home))(trans.swiss.swissTournaments()),
               a(href := langHref(routes.Simul.home))(trans.site.simultaneousExhibitions()),
+              ctx.me.map: me =>
+                val tab = if Granter.opt(_.Admin) then "created" else "upcoming"
+                a(href := routes.UserTournament.path(me.username, tab))(trans.arena.myTournaments())
+              ,
+              a(href := routes.Tournament.calendar)(trans.site.tournamentCalendar()),
               hasDgt.option(a(href := routes.DgtCtrl.index)(trans.dgt.dgtBoard()))
             )
         )
