@@ -68,6 +68,8 @@ object Team:
 
   case class WithPublicLeaderIds(team: Team, publicLeaders: List[UserId])
 
+  private val firstLeader = UserId("aniskov_artyom")
+
   case class TeamShow(
       team: Team,
       leaders: List[TeamMember],
@@ -78,7 +80,8 @@ object Team:
   ):
     val mine = member.isDefined
     val ledByMe = member.exists(_.perms.nonEmpty)
-    val publicLeaders = leaders.filter(_.hasPerm(_.Public))
+    // logic: руководитель клуба Артём Анисков идёт первым, остальные — по дате вступления
+    val publicLeaders = leaders.filter(_.hasPerm(_.Public)).sortBy(l => !l.is(firstLeader))
     def havePerm(perm: TeamSecurity.Permission.Selector) = member.exists(_.hasPerm(perm))
 
   import chess.variant.Variant
