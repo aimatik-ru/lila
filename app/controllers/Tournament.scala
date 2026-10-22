@@ -222,14 +222,14 @@ final class Tournament(env: Env, apiC: => Api)(using org.apache.pekko.stream.Mat
   }
 
   def form = Auth { ctx ?=> me ?=>
-    NoBot:
+    LogicAdminOnly:
       env.team.api.lightsByTourLeader(me).flatMap { teams =>
         Ok.page(views.tournament.form.create(forms.create(teams, forClas = getBool("clas")), teams))
       }
   }
 
   def teamBattleForm(teamId: TeamId) = Auth { _ ?=> me ?=>
-    NoBot:
+    LogicAdminOnly:
       env.team.api.lightsByTourLeader(me).flatMap { teams =>
         env.team.api
           .isGranted(teamId, _.Tour)
@@ -259,7 +259,7 @@ final class Tournament(env: Env, apiC: => Api)(using org.apache.pekko.stream.Mat
   def webCreate = AuthBody(_ ?=> _ ?=> create)
   def apiCreate = ScopedBody(_.Tournament.Write)(_ ?=> _ ?=> create)
 
-  private def create(using BodyContext[?])(using me: Me) = NoBot:
+  private def create(using BodyContext[?])(using me: Me) = LogicAdminOnly:
     def whenRateLimited = negotiate(Redirect(routes.Tournament.home), rateLimited)
     env.team.api
       .lightsByTourLeader(me)

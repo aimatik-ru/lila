@@ -116,13 +116,13 @@ final class Swiss(
     ctx.useMe(env.team.api.isGranted(teamId, _.Tour)).elseNotFound(f)
 
   def form(teamId: TeamId) = Auth { ctx ?=> me ?=>
-    NoLameOrBot:
+    LogicAdminOnly:
       CheckTeamLeader(teamId):
         Ok.page(views.swiss.form.create(env.swiss.forms.create, teamId))
   }
 
   def create(teamId: TeamId) = AuthBody { ctx ?=> me ?=>
-    NoLameOrBot:
+    LogicAdminOnly:
       CheckTeamLeader(teamId):
         bindForm(env.swiss.forms.create)(
           err => BadRequest.page(views.swiss.form.create(err, teamId)),
@@ -136,7 +136,7 @@ final class Swiss(
   }
 
   def apiCreate(teamId: TeamId) = ScopedBody(_.Tournament.Write) { ctx ?=> me ?=>
-    if me.isBot || me.lame then notFoundJson("This account cannot create tournaments")
+    if me.isBot || me.lame || !isGranted(_.Admin) then notFoundJson("This account cannot create tournaments")
     else
       env.team.api
         .isGranted(teamId, _.Tour)

@@ -247,8 +247,9 @@ final class Team(env: Env) extends LilaController(env):
     }
 
   def form = Auth { ctx ?=> me ?=>
-    LimitPerWeek:
-      Ok.page(views.team.form.create(forms.create, anyCaptcha))
+    LogicAdminOnly:
+      LimitPerWeek:
+        Ok.page(views.team.form.create(forms.create, anyCaptcha))
   }
 
   private val OneAtATime = lila.web.FutureConcurrencyLimit[UserId](
@@ -260,20 +261,21 @@ final class Team(env: Env) extends LilaController(env):
   private def ref(id: TeamId) = s"team:$id"
 
   def create = AuthBody { ctx ?=> me ?=>
-    OneAtATime(me, rateLimited):
-      LimitPerWeek:
-        JoinLimit(tooManyTeamsHtml):
-          bindForm(forms.create)(
-            err => BadRequest.page(views.team.form.create(err, anyCaptcha)),
-            data =>
-              for
-                team <- api.create(data)
-                url = routes.Team.show(team.id).url
-                _ <- env.memo.picfitApi.addRef(Markdown(team.automodText), ref(team.id), url.some)
-              yield
-                discard { env.report.api.automodComms(team.automodText, url) }
-                Redirect(url)
-          )
+    LogicAdminOnly:
+      OneAtATime(me, rateLimited):
+        LimitPerWeek:
+          JoinLimit(tooManyTeamsHtml):
+            bindForm(forms.create)(
+              err => BadRequest.page(views.team.form.create(err, anyCaptcha)),
+              data =>
+                for
+                  team <- api.create(data)
+                  url = routes.Team.show(team.id).url
+                  _ <- env.memo.picfitApi.addRef(Markdown(team.automodText), ref(team.id), url.some)
+                yield
+                  discard { env.report.api.automodComms(team.automodText, url) }
+                  Redirect(url)
+            )
   }
 
   def mine = Auth { ctx ?=> me ?=>

@@ -44,7 +44,7 @@ final class TeamUi(helpers: Helpers, markdownCache: lila.memo.MarkdownCache):
         a(cls := tab.active("leader"), href := routes.Team.leader)(trt.leaderTeams())
       ),
       a(cls := tab.active("all"), href := routes.Team.all())(trt.allTeams()),
-      ctx.isAuth.option(
+      Granter.opt(_.Admin).option(
         a(cls := tab.active("form"), href := routes.Team.form)(trt.newTeam())
       )
     )
@@ -231,7 +231,7 @@ final class TeamUi(helpers: Helpers, markdownCache: lila.memo.MarkdownCache):
           submitButton(cls := "button button-empty button-red yes-no-confirm")(trt.quitTeam.txt())
         )
       ),
-      (team.enabled && hasPerm(_.Tour)).option(
+      (team.enabled && hasPerm(_.Tour) && Granter.opt(_.Admin)).option(
         frag(
           team.isClas.not.option:
             a(
