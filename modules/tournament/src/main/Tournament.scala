@@ -178,6 +178,8 @@ object Tournament:
   val minPlayers = 2
 
   def fromSetup(setup: TournamentSetup)(using me: Me) =
+    val startsAt =
+      setup.startDate | nowInstant.plusMinutes(setup.waitMinutes | TournamentForm.waitMinuteDefault)
     Tournament(
       id = makeId,
       name = setup.name | setup.realPosition.match
@@ -198,9 +200,9 @@ object Tournament:
       teamBattle = setup.teamBattleByTeam.map(TeamBattle.init),
       noBerserk = !((setup.berserkable | true) && !setup.timeControlPreventsBerserk),
       noStreak = !(setup.streakable | true),
-      schedule = None,
-      startsAt =
-        setup.startDate | nowInstant.plusMinutes(setup.waitMinutes | TournamentForm.waitMinuteDefault),
+      // logic: турнир без пароля сразу попадает в планировщик /tournament, как из панели модератора
+      schedule = setup.password.isEmpty.option(Scheduled(Schedule.Freq.Unique, startsAt.dateTime)),
+      startsAt = startsAt,
       description = setup.description,
       payouts = setup.payouts,
       hasChat = setup.hasChat | true
