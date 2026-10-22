@@ -78,15 +78,17 @@ final class TournamentList(helpers: Helpers, ui: TournamentUi)(
           st.section(cls := "tour-home__schedule box")(
             boxTop(
               h1(trans.site.tournaments()),
-              Granter.opt(_.Admin).option(
-                div(cls := "box__top__actions")(
-                  a(
-                    href := routes.Tournament.form,
-                    cls := "button button-green text",
-                    dataIcon := Icon.PlusButton
-                  )(trans.site.createANewTournament())
+              Granter
+                .opt(_.Admin)
+                .option(
+                  div(cls := "box__top__actions")(
+                    a(
+                      href := routes.Tournament.form,
+                      cls := "button button-green text",
+                      dataIcon := Icon.PlusButton
+                    )(trans.site.createANewTournament())
+                  )
                 )
-              )
             ),
             div(cls := "tour-chart")
           ),
