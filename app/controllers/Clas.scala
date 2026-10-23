@@ -599,6 +599,8 @@ final class Clas(env: Env, authC: Auth) extends LilaController(env):
   private def couldBeTeacher(using ctx: Context): Fu[Boolean] = ctx.useMe: me ?=>
     if me.isBot then fuFalse
     else if ctx.kid.yes then fuFalse
+    // «Логик»: роль Teacher даёт место среди руководителей «ШК Логик», её выдаёт только приглашение
+    else if env.clas.logic.enabled then fuFalse
     else if env.clas.isActiveTeacher then fuTrue
     else env.mod.logApi.wasUnteachered(me).not
 
