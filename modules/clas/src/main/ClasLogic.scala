@@ -152,7 +152,11 @@ final class ClasLogic(
       case Nil => nameGenerator().orFail("no free username")
       case name :: rest =>
         userRepo.existsSec(UserName(name)).flatMap(if _ then free(rest) else fuccess(UserName(name)))
-    val base = login.map(_.trim.toLowerCase).filter(l => l.length <= 26 && validLogin.matches(l))
+    // Ник с сайта приходит строчным (ivan_torkin_2010); показываем с заглавных: Ivan_Torkin_2010.
+    val base = login
+      .map(_.trim.toLowerCase)
+      .filter(l => l.length <= 26 && validLogin.matches(l))
+      .map(_.split('_').map(_.capitalize).mkString("_"))
     free(base.toList.flatMap(b => b :: (2 to 9).map(i => s"$b-$i").toList))
 
   /* В открытый профиль ребёнка — только флаг, город и рейтинг ФШР; ФИО туда не кладём. */
