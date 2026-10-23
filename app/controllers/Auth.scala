@@ -333,10 +333,12 @@ final class Auth(env: Env, accountC: => Account) extends LilaController(env):
                         BadRequest.page(views.auth.signup(err, f.simple, inviteToken))
                       case ConfirmEmail(user, email) =>
                         t3Counter(_.signup.step("emailConfirm"))
+                        invite.foreach(_ => env.clas.logic.staffSignedUp(user.id))
                         redirectWithReferrer(routes.Auth.checkYourEmail).withCookies:
                           EmailConfirm.cookie.newSession(env.security.lilaCookie, user, email)
                       case AllSet(user, email) =>
                         t3Counter(_.signup.success)
+                        invite.foreach(_ => env.clas.logic.staffSignedUp(user.id))
                         welcome(user, email, sendWelcomeEmail = true) >> redirectNewUser(user)
 
   private def welcome(user: UserModel, email: EmailAddress, sendWelcomeEmail: Boolean)(using

@@ -27,7 +27,8 @@ import lila.db.dsl.{ *, given }
  *
  * Все ученики — в одной закрытой команде клуба «ШК Логик» (clubTeam). Её ведёт TeamClasSync,
  * как команды классов: состав целиком пересобирается из clas_logic_student, руководители —
- * владелец, тренеры классов «Логика» и администраторы площадки; они делают турниры «только
+ * владелец, тренеры классов «Логика», все с ролью Teacher (тренер, зарегистрированный по
+ * приглашению, получает её сразу) и администраторы площадки; они делают турниры «только
  * для команды». Разряд с сайта (Tier) только запоминается; разрядные команды logic-u2 и
  * logic-1j упразднены 2026-10-21, syncTeams их выключает.
  */
@@ -130,6 +131,16 @@ final class ClasLogic(
           Tier.values.foreach(t => Bus.pub(ClasTeamUpdate(t.clasId, none)(using me.some)))
           teamSync
 
+  /* Сотрудник зарегистрировался по приглашению: роль тренера и место среди руководителей команды. */
+  def staffSignedUp(userId: UserId): Funit =
+    import lila.core.perm.Permission
+    val perm = Permission.Teacher.dbKey
+    for
+      roles <- userRepo.getRoles(userId)
+      _ <- roles.has(perm).not.so(userRepo.setRoles(userId, perm :: roles))
+      _ <- syncTeams()
+    yield ()
+
   private def userOf(p: Payload, clases: List[Clas])(using Me): Fu[Option[User]] =
     userIdOf(p.sid)
       .flatMap:
@@ -184,7 +195,10 @@ final class ClasLogic(
     for
       clasIds <- colls.logicGroup.distinctEasy[ClasId, List]("clasId", emptyBdoc)
       teachers <- colls.clas.distinctEasy[UserId, List]("teachers", inIds(clasIds))
-      admins <- userRepo.userIdsWithRoles(List(Permission.SuperAdmin.dbKey, Permission.Admin.dbKey))
+      // тренеры с ролью Teacher (регистрация по приглашению) — даже без своих групп на площадке
+      admins <- userRepo.userIdsWithRoles(
+        List(Permission.SuperAdmin.dbKey, Permission.Admin.dbKey, Permission.Teacher.dbKey)
+      )
       staff <- userRepo.filterEnabled((teachers ++ admins).filterNot(_ == me.userId).distinct)
     yield
       val leaders = NonEmptyList(me.userId, staff.toList)
