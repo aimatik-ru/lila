@@ -3,9 +3,48 @@
 // фиксированной колонкой слева, #topnav — вертикальным списком разделов,
 // подменю (section > div) открывается панелью справа от колонки.
 // #top остаётся узкой полосой с кнопками сайта (.site-buttons) над контентом.
-// Ниже $topnav-visible работает прежний мобильный гамбургер.
+// Ниже $topnav-visible — гамбургер: та же разметка выезжает шторкой слева
+// одной колонкой, с теми же иконками разделов (как мобильный chess.com).
 
 $sidenav-width: 168px;
+
+@mixin sidenav-icon-base {
+  flex: 0 0 1.6rem;
+  font-family: lichess;
+  font-size: 1.5rem;
+  font-weight: normal;
+  line-height: 1;
+  text-align: center;
+  color: $c-font-dim;
+  speak: none;
+}
+
+// Порядок разделов задан в TopNav.scala; у ботов нет «Задач».
+@mixin sidenav-icons {
+  &:nth-child(1) > a::before {
+    content: $licon-Swords;
+  }
+
+  &:nth-child(2) > a::before {
+    content: $licon-ArcheryTarget;
+  }
+
+  &:nth-child(3) > a::before {
+    content: $licon-GraduateCap;
+  }
+
+  &:nth-child(4) > a::before {
+    content: $licon-AnalogTv;
+  }
+
+  &:nth-child(5) > a::before {
+    content: $licon-Group;
+  }
+
+  &:nth-child(6) > a::before {
+    content: $licon-Tools;
+  }
+}
 
 @include mq-topnav-visible {
   // Ширина колонки видна всем расчётам страницы (см. abstract/_uniboard.scss).
@@ -113,14 +152,7 @@ $sidenav-width: 168px;
         border-inline-start-width: 3px;
 
         &::before {
-          flex: 0 0 1.6rem;
-          font-family: lichess;
-          font-size: 1.5rem;
-          font-weight: normal;
-          line-height: 1;
-          text-align: center;
-          color: $c-font-dim;
-          speak: none;
+          @include sidenav-icon-base;
         }
 
         &:hover::before {
@@ -128,30 +160,7 @@ $sidenav-width: 168px;
         }
       }
 
-      // Порядок разделов задан в TopNav.scala; у ботов нет «Задач».
-      &:nth-child(1) > a::before {
-        content: $licon-Swords;
-      }
-
-      &:nth-child(2) > a::before {
-        content: $licon-ArcheryTarget;
-      }
-
-      &:nth-child(3) > a::before {
-        content: $licon-GraduateCap;
-      }
-
-      &:nth-child(4) > a::before {
-        content: $licon-AnalogTv;
-      }
-
-      &:nth-child(5) > a::before {
-        content: $licon-Group;
-      }
-
-      &:nth-child(6) > a::before {
-        content: $licon-Tools;
-      }
+      @include sidenav-icons;
     }
 
     // подменю — панель справа от колонки, верхним краем на уровне раздела
@@ -189,6 +198,97 @@ $sidenav-width: 168px;
     section:focus-within {
       > a::before {
         color: $c-primary;
+      }
+    }
+  }
+}
+
+@include mq-topnav-hidden {
+  // логотип клуба рядом с гамбургером и на телефоне (upstream прячет его ≤ $xx-small)
+  .site-title {
+    display: flex;
+    flex: 0 0 auto;
+    padding: 0 4px;
+    margin-inline-start: $site-header-height;
+    transform: none;
+
+    .site-logo {
+      height: min(40px, calc($site-header-height - 12px));
+      transform: none;
+    }
+  }
+
+  // «Войти» и «Регистрация» в одну строку рядом с логотипом
+  .site-buttons .signin-or-signup {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+
+  // на самых узких телефонах не помещается; регистрация на площадке закрыта
+  @media (max-width: at-most($xxx-small)) {
+    .site-buttons .signin-or-signup .signup {
+      display: none;
+    }
+  }
+
+  // шторка меню: одна колонка в тон левому меню десктопа
+  #topnav {
+    ---sidenav-bg: color-mix(in oklab, #{$c-bg-opaque} 88%, #{$c-dimmer});
+
+    @include if-light {
+      ---sidenav-bg: color-mix(in oklab, #{$c-bg-page} 94%, #000);
+    }
+
+    flex-flow: column nowrap;
+    width: min(300px, 85vw); // в px: корневой шрифт lila ~12px
+    max-width: none;
+    padding: 0.4rem 0 1.5rem;
+    background: var(---sidenav-bg);
+    border-inline-end: 1px solid $c-border;
+    border-radius: 0;
+
+    @media (min-width: at-least($xx-small)) {
+      max-width: none;
+    }
+
+    section {
+      flex: 0 0 auto;
+      margin: 0;
+      padding: 0.3rem 0 0.5rem;
+      border-bottom: 1px solid $c-border;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      > a {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        padding: 0.7rem 1rem;
+        font-size: 16px;
+        font-weight: 600;
+
+        &::before {
+          @include sidenav-icon-base;
+        }
+      }
+
+      @include sidenav-icons;
+
+      // логотип теперь виден, поэтому первый раздел — «Игра», как в колонке
+      .play {
+        display: inline;
+      }
+
+      .home {
+        display: none;
+      }
+
+      div a {
+        padding: 0.55rem 1rem 0.55rem 3.4rem;
+        font-size: 15px;
+        color: $c-font-dim;
       }
     }
   }
