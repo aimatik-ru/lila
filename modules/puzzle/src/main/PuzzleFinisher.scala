@@ -9,7 +9,7 @@ import lila.common.Bus
 import lila.core.perf.Perf
 import lila.db.dsl.{ *, given }
 import lila.puzzle.PuzzleForm.batch.Solution
-import lila.rating.GlickoExt.{ cap, sanityCheck }
+import lila.rating.GlickoExt.{ cap, floorPlayer, sanityCheck }
 import lila.rating.PerfExt.*
 import lila.rating.PerfType
 
@@ -134,7 +134,9 @@ final private[puzzle] class PuzzleFinisher(
                         val userPerf = perf
                           .addOrReset(lila.mon.puzzle.crazyGlicko, s"puzzle ${puzzle.id}")(userGlicko, now)
                           .pipe: p =>
-                            p.copy(glicko = ponder.player(angle, win, perf.glicko -> p.glicko, puzzle.glicko))
+                            p.copy(glicko =
+                              ponder.player(angle, win, perf.glicko -> p.glicko, puzzle.glicko).floorPlayer
+                            )
                         (round, newPuzzleGlicko, userPerf)
                 .flatMap: (round, newPuzzleGlicko, userPerf) =>
                   import lila.rating.Glicko.glickoHandler

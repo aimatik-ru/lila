@@ -20,7 +20,7 @@ object PerfExt:
           .atLeast(p.glicko.rating - lila.rating.Glicko.maxRatingDelta)
       )
       def append(g: Glicko): Perf =
-        val capped = g.cap
+        val capped = g.cap.floorPlayer
         p.copy(
           glicko = capped,
           nb = p.nb + 1,

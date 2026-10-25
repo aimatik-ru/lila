@@ -37,11 +37,18 @@ object GlickoExt:
         volatility = g.volatility.atMost(Glicko.maxVolatility)
       )
 
+    // logic: a player's rating never drops below playerMinRating (puzzles keep minRating)
+    def floorPlayer: Glicko =
+      g.copy(rating = g.rating.atLeast(Glicko.playerMinRating.value))
+
 object Glicko:
   export chess.rating.glicko.Glicko.*
 
   val minRating: IntRating = IntRating(400)
   val maxRating: IntRating = IntRating(4000)
+
+  // logic: club start rating and floor for players
+  val playerMinRating: IntRating = IntRating(1000)
 
   val minDeviation = 45
   val variantRankableDeviation = 65
@@ -52,15 +59,15 @@ object Glicko:
   val maxVolatility = 0.1d
   val defaultVolatility = 0.09d
 
-  val default = new Glicko(1500d, maxDeviation, defaultVolatility)
+  val default = new Glicko(1000d, maxDeviation, defaultVolatility)
 
   // Virtual rating for first pairing to make the expected score 50% without
   // actually changing the default rating
-  val pairingDefault = new Glicko(1450d, maxDeviation, defaultVolatility)
+  val pairingDefault = new Glicko(950d, maxDeviation, defaultVolatility)
 
   // managed is for students invited to a class
-  val defaultManaged = new Glicko(800d, 400d, defaultVolatility)
-  val defaultManagedPuzzle = new Glicko(800d, 400d, defaultVolatility)
+  val defaultManaged = new Glicko(1000d, 400d, defaultVolatility)
+  val defaultManagedPuzzle = new Glicko(1000d, 400d, defaultVolatility)
 
   // bot accounts (usually a stockfish instance)
   val defaultBot = new Glicko(3000d, maxDeviation, defaultVolatility)
