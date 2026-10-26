@@ -57,7 +57,8 @@ final class Env(
     clasApi = api,
     signup = signup,
     userRepo = userRepo,
-    nameGenerator = nameGenerator
+    nameGenerator = nameGenerator,
+    siteUrl = appConfig.getOptional[String]("logic.site").filter(_.nonEmpty) | "https://kalugalogic.ru"
   )
 
   def isAnyTeacher(using me: Me) = lila.core.perm.Granter(_.Teacher)
@@ -71,6 +72,8 @@ final class Env(
 
   // команда клуба «Логик»: собрать состав после старта (ученики входят из бота)
   if logic.enabled then scheduler.scheduleOnce(1.minute)(logic.syncTeams())
+  // значки турнирных групп A–E5: рейтинг ФШР на сайте меняется и без входа ученика
+  if logic.enabled then scheduler.scheduleWithFixedDelay(3.minutes, 6.hours)(() => logic.syncGroups())
 
   lila.common.Bus.sub[lila.core.game.FinishGame]: finish =>
     progressApi.onFinishGame(finish.game)

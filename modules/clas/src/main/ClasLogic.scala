@@ -8,7 +8,7 @@ import scalalib.data.LazyFu
 
 import lila.common.Bus
 import lila.core.config.Secret
-import lila.core.id.ClasId
+import lila.core.id.{ ClasId, Flair }
 import lila.core.misc.clas.{ ClasTeamConfig, ClasTeamUpdate }
 import lila.core.user.{ FlagCode, Profile }
 import lila.db.dsl.{ *, given }
@@ -31,6 +31,10 @@ import lila.db.dsl.{ *, given }
  * приглашению, получает её сразу) и администраторы площадки; они делают турниры «только
  * для команды». Разряд с сайта (Tier) только запоминается; разрядные команды logic-u2 и
  * logic-1j упразднены 2026-10-21, syncTeams их выключает.
+ *
+ * Турнирная группа A–E5 как во Дворце спорта (рейтинг ФШР + год рождения) — значок (flair)
+ * у ника: logic.group-d1 и т. п., картинки в public/flair/img. Сайт присылает его при входе
+ * и раз в 6 часов отдаёт значки всех учеников (syncGroups): рейтинг ФШР меняется без входа.
  */
 final class ClasLogic(
     secret: Option[Secret],
@@ -39,7 +43,8 @@ final class ClasLogic(
     clasApi: ClasApi,
     signup: ClasSignup,
     userRepo: lila.user.UserRepo,
-    nameGenerator: NameGenerator
+    nameGenerator: NameGenerator,
+    siteUrl: String
 )(using Executor, Scheduler):
 
   import ClasLogic.*
@@ -117,6 +122,7 @@ final class ClasLogic(
           _ <- user.so(u => clases.sequentiallyVoid(ensureStudent(u, p, _)))
           _ <- user.so(syncProfile(_, p))
           _ <- user.so(_ => saveTier(p))
+          _ <- user.so(setGroup(_, p.flair))
           _ <- user.so(_ => teamSync)
         yield user
 
@@ -179,6 +185,42 @@ final class ClasLogic(
       rcfRating = p.rcf.orElse(prof.rcfRating)
     )
     (next != prof).so(userRepo.setProfile(user.id, next))
+
+  /* Значок группы: только из нашего набора (logic.group-*); пусто — снять наш, чужой не трогать. */
+  private def setGroup(user: User, flair: Option[String]): Funit =
+    val next = flair.map(Flair(_)).filter(f => isGroupFlair(f) && lila.user.FlairApi.exists(f))
+    val keep = next.isEmpty && !user.flair.exists(isGroupFlair)
+    (!keep && user.flair != next).so(userRepo.setFlair(user, next))
+
+  /* Значки всех учеников с сайта: GET /wp-json/kl/v1/play-groups, подпись "groups:<exp>". */
+  def syncGroups(): Funit = signer.so: s =>
+    import java.net.URI
+    import java.net.http.{ HttpClient, HttpRequest, HttpResponse }
+    import scala.jdk.FutureConverters.*
+    val exp = nowSeconds + 10.minutes.toSeconds
+    val url =
+      s"${siteUrl.stripSuffix("/")}/wp-json/kl/v1/play-groups?exp=$exp&sig=${s.sha256(s"groups:$exp").hex}"
+    val req = HttpRequest.newBuilder(URI.create(url)).timeout(java.time.Duration.ofSeconds(60)).GET().build()
+    HttpClient
+      .newHttpClient()
+      .sendAsync(req, HttpResponse.BodyHandlers.ofString())
+      .asScala
+      .flatMap: res =>
+        val flairs = (res.statusCode == 200)
+          .so(scala.util.Try(Json.parse(res.body)).toOption)
+          .flatMap(js => (js \ "flairs").asOpt[Map[String, String]])
+        flairs match
+          case None => fuccess(logger.warn(s"syncGroups: site answered ${res.statusCode}"))
+          case Some(bySid) =>
+            for
+              docs <- colls.logicStudent.list[Bdoc](emptyBdoc)
+              links = docs.flatMap(d => (d.getAsOpt[Int]("_id"), d.getAsOpt[UserId]("userId")).tupled)
+              users <- userRepo.enabledByIds(links.map(_._2))
+              byId = users.mapBy(_.id)
+              _ <- links.sequentiallyVoid: (sid, userId) =>
+                byId.get(userId).so(setGroup(_, bySid.get(sid.toString)))
+            yield logger.info(s"syncGroups: ${bySid.size} flairs for ${links.size} students")
+      .recover { case e: Exception => logger.warn(s"syncGroups: ${e.getMessage}") }
 
   private def saveTier(p: Payload): Funit =
     val tier = p.tier.flatMap(Tier.byKey)
@@ -292,7 +334,8 @@ object ClasLogic:
       login: Option[String] = None,
       info: Option[String] = None,
       rcf: Option[Int] = None,
-      tier: Option[String] = None
+      tier: Option[String] = None,
+      flair: Option[String] = None
   )
 
   // разряд с сайта (kl_play_rank_tier); команды logic-u2/logic-1j упразднены, их выключает syncTeams
@@ -302,6 +345,8 @@ object ClasLogic:
     def clasId = ClasId(s"logic-$key")
   object Tier:
     def byKey(key: String) = values.find(_.key == key)
+
+  private[clas] def isGroupFlair(f: Flair) = f.value.startsWith("logic.group-")
 
   // команда клуба: в неё попадает каждый, кто входил через бота
   val clubTeam = (ClasId("logic-all"), "ШК Логик")
