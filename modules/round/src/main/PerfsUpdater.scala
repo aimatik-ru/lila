@@ -7,7 +7,7 @@ import chess.variant.Variant
 
 import lila.core.perf.{ UserPerfs, UserWithPerfs }
 import lila.rating.PerfExt.addOrReset
-import lila.rating.{ PerfType, RatingRegulator }
+import lila.rating.{ PerfType, RatingRegulator, RuRating }
 import lila.user.{ RankingApi, UserApi }
 import lila.rating.PerfExt.toGlickoPlayer
 
@@ -41,11 +41,15 @@ private final class PerfsUpdater(
     prevPlayers = prevPerfs.map(_(perfKey).toGlickoPlayer)
     computedPlayers <- computeGlicko(game, prevPlayers, outcome)
   yield
-    val newGlickos = RatingRegulator(
-      perfKey,
+    val newGlickos = RuRating(
       prevPlayers.map(_.glicko),
-      computedPlayers.map(_.glicko),
-      users.map(_.isBot)
+      RatingRegulator(
+        perfKey,
+        prevPlayers.map(_.glicko),
+        computedPlayers.map(_.glicko),
+        users.map(_.isBot)
+      ),
+      outcome
     )
     val newPerfs = prevPerfs.zip(newGlickos, (perfs, gl) => addToPerfs(game, perfs, perfKey, gl))
     val ratingDiffs =
