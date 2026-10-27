@@ -130,10 +130,10 @@ final class AuthUi(helpers: Helpers):
                     cls := "form-control",
                     attr("inputmode") := "numeric",
                     autocomplete := "one-time-code",
-                    maxlength := 7,
+                    maxlength := 9,
                     required
                   ),
-                  small(cls := "form-help")("Нажмите в боте «Шахматная площадка», он пришлёт 6 цифр.")
+                  small(cls := "form-help")("Нажмите в боте «Шахматная площадка», он пришлёт 8 цифр.")
                 ),
                 submitButton(cls := "button")("Войти по коду")
               )

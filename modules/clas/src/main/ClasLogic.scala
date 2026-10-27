@@ -83,13 +83,13 @@ final class ClasLogic(
       usedNonces.put(payload.n, true)
       payload
 
-  /* Код из бота MAX (6 цифр, 10 минут) — вход там, куда ссылку не открыть: значок площадки
+  /* Код из бота MAX (8 цифр, 10 минут) — вход там, куда ссылку не открыть: значок площадки
    * на экране телефона хранит вход отдельно от браузера. Сайт меняет код на свежую
    * подписанную ссылку: GET /wp-json/kl/v1/play-code, подпись "code:<код>:<exp>". */
   def exchangeCode(raw: String): Fu[Option[Payload]] =
     val code = raw.filter(_.isDigit)
     signer
-      .filter(_ => code.length == 6)
+      .filter(_ => code.length == 8)
       .so: s =>
         import java.net.URI
         import java.net.http.{ HttpClient, HttpRequest, HttpResponse }

@@ -207,11 +207,15 @@ final class Auth(env: Env, accountC: => Account) extends LilaController(env):
             yield res
       )
 
+  // код из 8 цифр перебирают: попыток с IP меньше, чем у ссылки; общий потолок промахов держит сайт
+  private val logicCodeRateLimit =
+    env.security.ipTrust.rateLimit(20, 1.hour, "clas.logic.code")
+
   // «Логик»: код из бота MAX вместо ссылки — для значка площадки на экране телефона
   private def logicCodeLogin(code: String)(using Context): Fu[Result] =
     val failRedir = Redirect(routes.Auth.login).flashFailure:
       "Код не подошёл или устарел. Нажмите в боте MAX «Шахматная площадка», и он пришлёт новый."
-    logicLoginRateLimit(rateLimited):
+    logicCodeRateLimit(rateLimited):
       env.clas.logic
         .exchangeCode(code)
         .flatMap:
