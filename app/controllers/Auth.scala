@@ -197,12 +197,32 @@ final class Auth(env: Env, accountC: => Account) extends LilaController(env):
           clasLoginRateLimit(rateLimited):
             for
               found <- env.clas.login.login(code)
-              res <- found.fold(failRedir.toFuccess): (user, clsId) =>
-                val redir = Redirect(routes.Clas.show(clsId)).flashSuccess:
-                  lila.core.i18n.I18nKey.emails.welcome_subject.txt(user.username)
-                authenticateUser(user, IsPwned.No, false, redir.some)
+              res <- found match
+                case Some((user, clsId)) =>
+                  val redir = Redirect(routes.Clas.show(clsId)).flashSuccess:
+                    lila.core.i18n.I18nKey.emails.welcome_subject.txt(user.username)
+                  authenticateUser(user, IsPwned.No, false, redir.some)
+                case None if env.clas.logic.enabled => logicCodeLogin(code)
+                case None => failRedir.toFuccess
             yield res
       )
+
+  // «Логик»: код из бота MAX вместо ссылки — для значка площадки на экране телефона
+  private def logicCodeLogin(code: String)(using Context): Fu[Result] =
+    val failRedir = Redirect(routes.Auth.login).flashFailure:
+      "Код не подошёл или устарел. Нажмите в боте MAX «Шахматная площадка», и он пришлёт новый."
+    logicLoginRateLimit(rateLimited):
+      env.clas.logic
+        .exchangeCode(code)
+        .flatMap:
+          case None => failRedir.toFuccess
+          case Some(payload) =>
+            env.clas.logic
+              .login(payload)
+              .flatMap:
+                case None => failRedir.toFuccess
+                case Some(user) =>
+                  authenticateUser(user, IsPwned.No, remember = true, Redirect(routes.Lobby.home).some)
 
   private val logicLoginRateLimit =
     env.security.ipTrust.rateLimit(100, 1.hour, "clas.logic.login")

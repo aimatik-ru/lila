@@ -114,6 +114,31 @@ final class AuthUi(helpers: Helpers):
             turnstile.widget(hidden = true),
             turnstile.submit(trans.site.signIn())(testId("login-submit"))
           ),
+          // «Логик»: ученики входят кодом из бота MAX (Auth.clasLogin → ClasLogic.exchangeCode).
+          // Нужен значку площадки на экране телефона: ссылка из бота открывается в браузере.
+          // Под формой пароля: bits.auth берёт первую форму страницы (.auth-login form).
+          custom.isEmpty.option(
+            frag(
+              div(cls := "or-separator")(span(trans.site.orSeparator())),
+              standardFlash,
+              postForm(cls := "form3 auth-login__code", action := routes.Auth.clasLogin)(
+                div(cls := "form-group")(
+                  label(cls := "form-label", `for` := "login-code")("Ученик клуба: код из бота MAX"),
+                  input(
+                    id := "login-code",
+                    name := "code",
+                    cls := "form-control",
+                    attr("inputmode") := "numeric",
+                    autocomplete := "one-time-code",
+                    maxlength := 7,
+                    required
+                  ),
+                  small(cls := "form-help")("Нажмите в боте «Шахматная площадка», он пришлёт 6 цифр.")
+                ),
+                submitButton(cls := "button")("Войти по коду")
+              )
+            )
+          ),
           div(cls := "or-separator")(span(trans.site.orSeparator())),
           a(href := addReferrer(routes.Auth.magicLink.url), cls := "button button-empty magic-link")(
             trans.site.logInByEmail()

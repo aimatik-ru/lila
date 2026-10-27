@@ -111,7 +111,10 @@ final class layout(helpers: Helpers, assetHelper: lila.web.ui.AssetFullHelper)(
   val favicons = raw:
     val path = s"$assetBaseUrl/assets/logo"
     s"""<link rel="alternate icon" type="image/png" href="$path/logik-favicon-64.png">""" +
-      s"""<link id="favicon" rel="icon" type="image/svg+xml" href="$path/logik-favicon.svg">"""
+      s"""<link id="favicon" rel="icon" type="image/svg+xml" href="$path/logik-favicon.svg">""" +
+      // значок на экране iPhone: без своей иконки iOS берёт снимок страницы, прозрачный фон чернеет
+      s"""<link rel="apple-touch-icon" href="$path/logik-touch-180.png">""" +
+      """<meta name="apple-mobile-web-app-title" content="Логик">"""
 
   def blindModeForm(using ctx: Context) = raw:
     val btnText =

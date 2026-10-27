@@ -83,6 +83,36 @@ final class ClasLogic(
       usedNonces.put(payload.n, true)
       payload
 
+  /* Код из бота MAX (6 цифр, 10 минут) — вход там, куда ссылку не открыть: значок площадки
+   * на экране телефона хранит вход отдельно от браузера. Сайт меняет код на свежую
+   * подписанную ссылку: GET /wp-json/kl/v1/play-code, подпись "code:<код>:<exp>". */
+  def exchangeCode(raw: String): Fu[Option[Payload]] =
+    val code = raw.filter(_.isDigit)
+    signer
+      .filter(_ => code.length == 6)
+      .so: s =>
+        import java.net.URI
+        import java.net.http.{ HttpClient, HttpRequest, HttpResponse }
+        import scala.jdk.FutureConverters.*
+        val exp = nowSeconds + 5.minutes.toSeconds
+        val sig = s.sha256(s"code:$code:$exp").hex
+        val url = s"${siteUrl.stripSuffix("/")}/wp-json/kl/v1/play-code?code=$code&exp=$exp&sig=$sig"
+        val req =
+          HttpRequest.newBuilder(URI.create(url)).timeout(java.time.Duration.ofSeconds(15)).GET().build()
+        HttpClient
+          .newHttpClient()
+          .sendAsync(req, HttpResponse.BodyHandlers.ofString())
+          .asScala
+          .map: res =>
+            (res.statusCode == 200)
+              .so(scala.util.Try(Json.parse(res.body)).toOption)
+              .flatMap(js => (js \ "t").asOpt[String])
+              .flatMap(consume)
+          .recover { case e: Exception =>
+            logger.warn(s"exchangeCode: ${e.getMessage}")
+            none
+          }
+
   /* Запрос статистики для кабинета на сайте: hex HMAC-SHA256 строки "stats:<sid>:<exp>". */
   def statsSigned(sid: Int, exp: Long, sig: String): Boolean =
     signer.exists: s =>
