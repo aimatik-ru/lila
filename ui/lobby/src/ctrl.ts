@@ -237,7 +237,13 @@ export default class LobbyController {
     if (this.tab !== 'real_time') this.redraw();
   };
 
+  // «Логик»: гость не играет — отправляем на вход
+  private loginToPlay = () => {
+    location.href = '/login?referrer=%2F';
+  };
+
   clickHook = async (id: string) => {
+    if (!this.me) return this.loginToPlay();
     const hook = hookRepo.find(this, id);
     if (!hook || hook.disabled || this.stepping || this.redirecting) return;
     if (hook.action === 'cancel' || (await variantConfirm(hook.variant)))
@@ -245,6 +251,7 @@ export default class LobbyController {
   };
 
   clickSeek = async (id: string) => {
+    if (!this.me) return this.loginToPlay();
     const seek = seekRepo.find(this, id);
     if (!seek || this.redirecting) return;
     if (seek.action === 'cancelSeek' || (await variantConfirm(seek.variant?.key)))
@@ -258,10 +265,8 @@ export default class LobbyController {
   };
 
   clickPool = (id: string) => {
-    if (!this.me) {
-      xhr.anonPoolSeek(this.pools.find(p => p.id === id)!);
-      this.setTab('real_time');
-    } else if (this.poolMember?.id === id) this.leavePool();
+    if (!this.me) return this.loginToPlay();
+    if (this.poolMember?.id === id) this.leavePool();
     else this.enterPool({ id });
     this.redraw();
   };

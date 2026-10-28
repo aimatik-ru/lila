@@ -175,6 +175,11 @@ export default class SetupController {
     forceOptions?: ForceSetupOptions,
     friendUser?: string,
   ) => {
+    // «Логик»: гость не играет — вместо настроек партии отправляем на вход
+    if (!this.root.me) {
+      location.href = '/login?referrer=%2F';
+      return;
+    }
     this.root.leavePool();
     this.gameType = gameType;
     this.loading = false;

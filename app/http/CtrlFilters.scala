@@ -33,6 +33,18 @@ trait CtrlFilters(using Executor) extends ControllerHelpers with ResponseBuilder
     if isGrantedOpt(perm) then f
     else negotiate(authorizationFailed, authorizationFailed)
 
+  /* «Логик»: играть (с компьютером, в лобби, по вызову) могут только вошедшие —
+   * ученики из бота MAX и сотрудники. Гостя отправляем на вход и возвращаем назад. */
+  def LogicAuthOnly(a: => Fu[Result])(using ctx: Context): Fu[Result] =
+    if ctx.isAuth then a
+    else
+      val back =
+        if HTTPRequest.isSynchronousHttp(ctx.req) && ctx.req.method == "GET" then ctx.req.uri else "/"
+      negotiate(
+        Redirect(s"${routes.Auth.login.url}?referrer=${java.net.URLEncoder.encode(back, "UTF-8")}"),
+        Unauthorized(jsonError("Играть на площадке могут только ученики клуба: войдите через бота MAX."))
+      )
+
   /* «Логик»: турниры, сеансы и клубы (команды) на площадке заводят только администраторы.
    * Право Admin дают ROLE_ADMIN и ROLE_SUPER_ADMIN; без 2FA lila срезает его из сессии. */
   def LogicAdminOnly(a: => Fu[Result])(using ctx: Context): Fu[Result] =

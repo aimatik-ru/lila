@@ -43,7 +43,8 @@ final class Challenge(env: Env) extends LilaController(env):
   }
 
   protected[controllers] def showId(id: ChallengeId)(using Context): Fu[Result] =
-    Found(api.byId(id))(showChallenge(_))
+    LogicAuthOnly:
+      Found(api.byId(id))(showChallenge(_))
 
   protected[controllers] def showChallenge(
       c: ChallengeModel,
@@ -95,23 +96,24 @@ final class Challenge(env: Env) extends LilaController(env):
 
   import cats.mtl.Handle.*
   def accept(id: ChallengeId, color: Option[Color]) = Open:
-    Found(api.byId(id)): c =>
-      isForMe(c).so:
-        allow:
-          api
-            .accept(c, ctx.req.sid.map(_.value), color)
-            .flatMap:
-              _.fold("The Challenge has already been accepted".raise): pov =>
-                negotiateApi(
-                  html = Redirect(routes.Round.watcher(pov.gameId, color | Color.white)),
-                  api = _ => env.api.roundApi.player(pov, scalalib.data.Preload.none, none).map { Ok(_) }
-                )
-            .flatMap(withChallengeAnonCookie(ctx.isAnon, c, owner = false))
-        .rescue: err =>
-          negotiate(
-            Redirect(routes.Round.watcher(c.gameId, color | Color.white)),
-            notFoundJson(err)
-          )
+    LogicAuthOnly:
+      Found(api.byId(id)): c =>
+        isForMe(c).so:
+          allow:
+            api
+              .accept(c, ctx.req.sid.map(_.value), color)
+              .flatMap:
+                _.fold("The Challenge has already been accepted".raise): pov =>
+                  negotiateApi(
+                    html = Redirect(routes.Round.watcher(pov.gameId, color | Color.white)),
+                    api = _ => env.api.roundApi.player(pov, scalalib.data.Preload.none, none).map { Ok(_) }
+                  )
+              .flatMap(withChallengeAnonCookie(ctx.isAnon, c, owner = false))
+          .rescue: err =>
+            negotiate(
+              Redirect(routes.Round.watcher(c.gameId, color | Color.white)),
+              notFoundJson(err)
+            )
 
   private def eitherBotLimitResponse(l: lila.bot.EitherBotLimit) = fuccess:
     l match
@@ -122,28 +124,29 @@ final class Challenge(env: Env) extends LilaController(env):
 
   def apiAccept(id: ChallengeId, color: Option[Color]) =
     AnonOrScoped(_.Challenge.Write, _.Bot.Play, _.Board.Play, _.Web.Mobile, _.Web.Takex3) { ctx ?=>
-      def tryRematch = ctx.useMe:
-        env.bot.player
-          .rematchAccept(id.into(GameId))
+      LogicAuthOnly:
+        def tryRematch = ctx.useMe:
+          env.bot.player
+            .rematchAccept(id.into(GameId))
+            .flatMap:
+              case l: lila.bot.EitherBotLimit => eitherBotLimitResponse(l)
+              case res: Boolean => if res then jsonOkResult else notFoundJson()
+        api
+          .byId(id)
           .flatMap:
-            case l: lila.bot.EitherBotLimit => eitherBotLimitResponse(l)
-            case res: Boolean => if res then jsonOkResult else notFoundJson()
-      api
-        .byId(id)
-        .flatMap:
-          _.filter(isForMe) match
-            case None => tryRematch
-            case Some(c) if c.accepted => tryRematch
-            case Some(c) =>
-              ctx
-                .useMe(c.challengerUserId.so(env.bot.limit.acceptLimitError))
-                .map(eitherBotLimitResponse)
-                .getOrElse:
-                  val sri = lila.security.Mobile.LichessMobileUa.sriFromUA
-                  allow:
-                    api.accept(c, sri.map(_.value), color).inject(jsonOkResult)
-                  .rescue: err =>
-                    fuccess(BadRequest(jsonError(err)))
+            _.filter(isForMe) match
+              case None => tryRematch
+              case Some(c) if c.accepted => tryRematch
+              case Some(c) =>
+                ctx
+                  .useMe(c.challengerUserId.so(env.bot.limit.acceptLimitError))
+                  .map(eitherBotLimitResponse)
+                  .getOrElse:
+                    val sri = lila.security.Mobile.LichessMobileUa.sriFromUA
+                    allow:
+                      api.accept(c, sri.map(_.value), color).inject(jsonOkResult)
+                    .rescue: err =>
+                      fuccess(BadRequest(jsonError(err)))
     }
 
   private def withChallengeAnonCookie(cond: Boolean, c: ChallengeModel, owner: Boolean)(
@@ -354,24 +357,25 @@ final class Challenge(env: Env) extends LilaController(env):
         )
 
   def openCreate = AnonOrScopedBody(parse.anyContent)(_.Challenge.Write, _.Web.Mobile, _.Web.Takex3): ctx ?=>
-    bindForm(
-      env.setup.forms.api.open(isAdmin = isGrantedOpt(_.ApiChallengeAdmin) || ctx.me.exists(_.isVerified))
-    )(
-      jsonFormError,
-      config =>
-        limit
-          .challenge(req.ipAddress, rateLimited):
-            env.challenge.api
-              .createOpen(config)
-              .map: challenge =>
-                JsonOk:
-                  val url = s"${env.net.baseUrl}/${challenge.id}"
-                  env.challenge.jsonView.apiAndMobile(challenge, none, none) ++ Json.obj(
-                    "urlWhite" -> s"$url?color=white",
-                    "urlBlack" -> s"$url?color=black"
-                  )
-          .dmap(_.as(JSON))
-    )
+    LogicAuthOnly:
+      bindForm(
+        env.setup.forms.api.open(isAdmin = isGrantedOpt(_.ApiChallengeAdmin) || ctx.me.exists(_.isVerified))
+      )(
+        jsonFormError,
+        config =>
+          limit
+            .challenge(req.ipAddress, rateLimited):
+              env.challenge.api
+                .createOpen(config)
+                .map: challenge =>
+                  JsonOk:
+                    val url = s"${env.net.baseUrl}/${challenge.id}"
+                    env.challenge.jsonView.apiAndMobile(challenge, none, none) ++ Json.obj(
+                      "urlWhite" -> s"$url?color=white",
+                      "urlBlack" -> s"$url?color=black"
+                    )
+            .dmap(_.as(JSON))
+      )
 
   def offerRematchForGame(gameId: GameId) = AuthOrScoped(_.Web.Mobile) { _ ?=> me ?=>
     NoBot:
