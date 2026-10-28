@@ -23,7 +23,7 @@ final class UserList(helpers: Helpers, bits: UserBits):
       .graph(
         title = "Шахматисты и рейтинг-листы",
         url = routeUrl(routes.User.list),
-        description = "Лучшие шахматисты в пуле, блице, рапиде, классике, шахматах 960 и других вариантах"
+        description = "Лучшие шахматисты в блице, рапиде, классике и шахматах Фишера"
       ):
         main(cls := "page-menu")(
           bits.communityMenu("leaderboard"),
@@ -40,11 +40,9 @@ final class UserList(helpers: Helpers, bits: UserBits):
             div(cls := "community__leaders")(
               h2(trans.site.leaderboard()),
               div(cls := "leaderboards")(
-                userTopPerf(leaderboards.bullet, PerfKey.bullet),
                 userTopPerf(leaderboards.blitz, PerfKey.blitz),
                 userTopPerf(leaderboards.rapid, PerfKey.rapid),
                 userTopPerf(leaderboards.classical, PerfKey.classical),
-                userTopPerf(leaderboards.ultraBullet, PerfKey.ultraBullet),
                 userTopActive(nbAllTime, trans.site.activePlayers(), icon = Icon.Swords.some),
                 st.section(cls := "user-top")(
                   h2(cls := "text", dataIcon := Icon.Trophy)(
@@ -52,14 +50,7 @@ final class UserList(helpers: Helpers, bits: UserBits):
                   ),
                   tournamentWinners
                 ),
-                userTopPerf(leaderboards.crazyhouse, PerfKey.crazyhouse),
-                userTopPerf(leaderboards.chess960, PerfKey.chess960),
-                userTopPerf(leaderboards.antichess, PerfKey.antichess),
-                userTopPerf(leaderboards.atomic, PerfKey.atomic),
-                userTopPerf(leaderboards.threeCheck, PerfKey.threeCheck),
-                userTopPerf(leaderboards.kingOfTheHill, PerfKey.kingOfTheHill),
-                userTopPerf(leaderboards.horde, PerfKey.horde),
-                userTopPerf(leaderboards.racingKings, PerfKey.racingKings)
+                userTopPerf(leaderboards.chess960, PerfKey.chess960)
               )
             )
           )
