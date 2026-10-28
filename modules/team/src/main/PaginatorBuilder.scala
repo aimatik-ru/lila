@@ -76,6 +76,8 @@ final private[team] class PaginatorBuilder(
         users <- lightUserApi.asyncManyFallback(userIds)
       yield users
 
+  // logic: участники по группам A → E (флейр logic.group-*), без группы — в конце,
+  // внутри группы — новые сверху. Команды площадки маленькие, поэтому сортируем в памяти.
   final private class TeamAdapterWithDate(val team: Team)
       extends AdapterLike[TeamMember.UserAndDate]
       with MembersAdapter:
@@ -85,13 +87,19 @@ final private[team] class PaginatorBuilder(
           memberRepo.coll
             .find(selector, bdoc("user" -> true, "date" -> true, "_id" -> false).some)
             .sort(sorting)
-            .skip(offset)
             .cursor[Bdoc]()
-            .list(length)
+            .list(5000)
         userIds = docs.flatMap(_.getAsOpt[UserId]("user"))
         dates = docs.flatMap(_.getAsOpt[Instant]("date"))
         users <- lightUserApi.asyncManyFallback(userIds)
-      yield users.zip(dates).map(TeamMember.UserAndDate.apply)
+      yield users
+        .zip(dates)
+        .map(TeamMember.UserAndDate.apply)
+        .sortBy(m => logicGroupKey(m.user))
+        .slice(offset, offset + length)
+
+  private def logicGroupKey(u: LightUser): String =
+    u.flair.map(_.value).filter(_.startsWith("logic.group-")).fold("~")(_.stripPrefix("logic.group-"))
 
   def declinedRequests(
       team: Team,
