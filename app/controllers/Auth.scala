@@ -250,7 +250,8 @@ final class Auth(env: Env, accountC: => Account) extends LilaController(env):
                 .flatMap:
                   case None => fail("Вход для этого ученика закрыт. Напишите администратору клуба.")
                   case Some(user) =>
-                    authenticateUser(user, IsPwned.No, remember = true, Redirect(routes.Lobby.home).some)
+                    val to = payload.redirectTo | routes.Lobby.home.url
+                    authenticateUser(user, IsPwned.No, remember = true, Redirect(to).some)
 
   def logout = Open:
     val sid = env.security.api.reqSessionId(ctx.req)

@@ -365,8 +365,11 @@ object ClasLogic:
       info: Option[String] = None,
       rcf: Option[Int] = None,
       tier: Option[String] = None,
-      flair: Option[String] = None
-  )
+      flair: Option[String] = None,
+      to: Option[String] = None // куда вести после входа: задание тренера → /training/<тема>
+  ):
+    // только задачи по теме на этой же площадке: открытый редирект по подписанной ссылке не нужен
+    def redirectTo: Option[String] = to.filter(_.matches("/training/[a-zA-Z0-9]{1,40}"))
 
   // разряд с сайта (kl_play_rank_tier); команды logic-u2/logic-1j упразднены, их выключает syncTeams
   enum Tier(val key: String, val teamName: String):
