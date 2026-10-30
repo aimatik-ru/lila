@@ -521,12 +521,18 @@ final class GameRepo(c: Coll)(using Executor) extends lila.core.game.GameRepo(c)
           obj.int("gs").map { id -> _ }
         })
 
+  // logic: только партии двух игроков — без импортированных (исходники задач) и игр с компьютером
   def random: Fu[Option[Game]] =
     coll
-      .find(Query.variantStandard)
+      .find(
+        Query.variantStandard ++
+          bdoc(F.source -> bdoc("$nin" -> List(Source.Ai.id, Source.Import.id))) ++
+          bdoc(s"${F.playerUids}.1" -> bdoc("$exists" -> true))
+      )
       .sort(Query.sortCreated)
-      .skip(ThreadLocalRandom.nextInt(1000))
-      .one[Game]
+      .cursor[Game]()
+      .list(20)
+      .map(games => games.lift(ThreadLocalRandom.nextInt(games.size.atLeast(1))))
 
   def getOptionPgn(id: GameId): Fu[Option[Vector[SanStr]]] = game(id).dmap2(_.sans)
 

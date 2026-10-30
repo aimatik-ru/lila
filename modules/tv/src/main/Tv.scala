@@ -18,10 +18,12 @@ final class Tv(
   import ChannelSyncActor.*
 
   def getGame(channel: Tv.Channel): Fu[Option[Game]] =
+    liveGame(channel).orElse(gameRepo.random)
+
+  private def liveGame(channel: Tv.Channel): Fu[Option[Game]] =
     actor
       .ask[Option[GameId]](TvSyncActor.GetGameId(channel, _))
       .flatMapz(gameProxy.game)
-      .orElse(gameRepo.random)
 
   def getReplacementGame(channel: Tv.Channel, oldId: GameId, exclude: List[GameId]): Fu[Option[Game]] =
     actor
@@ -50,7 +52,9 @@ final class Tv(
   def getGameIds(channel: Tv.Channel, max: Int): Fu[List[GameId]] =
     actor.ask[List[GameId]](TvSyncActor.GetGameIds(channel, max, _))
 
-  def getBestGame = getGame(Tv.Channel.Best).orElse(gameRepo.random)
+  // logic: на главной только идущая партия двух учеников, без подстановки случайной из базы
+  def getBestGame: Fu[Option[Game]] =
+    liveGame(Tv.Channel.Best).map(_.filter(Tv.Channel.Best.isFresh))
 
   def getBestAndHistory = getGameAndHistory(Tv.Channel.Best)
 
@@ -87,7 +91,7 @@ object Tv:
           name = "Лучшие",
           icon = Icon.CrownElite,
           secondsSinceLastMove = freshBlitz,
-          filters = Seq(rated(2150), standard, noBot)
+          filters = Seq(standard, noBot, humans)
         )
     case Bullet
         extends Channel(
@@ -220,6 +224,7 @@ object Tv:
   private def computerFromInitialPosition(c: Candidate) = c.game.hasAi && !c.game.fromPosition
   private def hasBot(c: Candidate) = c.hasBot
   private def noBot(c: Candidate) = !c.hasBot
+  private def humans(c: Candidate) = c.game.userIds.size == 2
 
   private def olderThan(g: Game, seconds: Int) = g.movedAt.isBefore(nowInstant.minusSeconds(seconds))
   private def fresh(seconds: Int, game: Game): Boolean =
