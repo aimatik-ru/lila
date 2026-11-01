@@ -112,8 +112,15 @@ final class TeamShowUi(helpers: Helpers, teamUi: TeamUi, requestUi: TeamRequestU
                         trans.site.tournaments()
                       )
                     ),
-                    div(cls := "team-show__list-wrapper"):
+                    div(cls := "team-show__list-wrapper")(
                       table(cls := "slist slist-resp")(toursFrag)
+                    ),
+                    // logic: заголовок не похож на ссылку — даём явный путь к завершённым турнирам
+                    a(
+                      cls := "more",
+                      style := "display:block;text-align:right;margin:10px 10px 0 0",
+                      href := routes.Team.tournaments(team.id)
+                    )("Все турниры, включая завершённые »")
                   )
                 ),
                 st.section(cls := "team-show__forum")(
