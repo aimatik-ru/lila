@@ -85,7 +85,8 @@ final class TopNav(helpers: Helpers):
         div(role := "group")(
           a(href := routes.UserAnalysis.index)(trans.site.analysis()),
           a(href := routes.Editor.index)(trans.site.boardEditor()),
-          a(href := routes.Importer.importGame)(trans.site.importGame())
+          a(href := routes.Importer.importGame)(trans.site.importGame()),
+          a(href := s"${routes.UserAnalysis.index.url}#explorer")(trans.site.openingExplorer())
         )
       )
     )
