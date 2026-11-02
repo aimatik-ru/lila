@@ -10,7 +10,8 @@ final class Share(
   def getPrefId(insighted: User) = prefApi.getInsightShare(insighted.id)
 
   def grant(insighted: User)(using to: Option[Me]): Fu[Boolean] =
-    if to.exists(Granter.of(_.SeeInsight)) then fuTrue
+    // Логик: тренеры клуба смотрят аналитику учеников
+    if to.exists(Granter.of(_.SeeInsight)) || to.exists(Granter.of(_.Teacher)) then fuTrue
     else if insighted.enabled.yes
     then
       getPrefId(insighted).flatMap:
