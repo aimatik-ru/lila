@@ -172,3 +172,38 @@ $puzzle-block-gap: 4px;
     }
   }
 }
+
+@include mq-at-least-col3 {
+  body:not(.blind-mode) {
+    #main-wrap:has(> .puzzle:not(.puzzle--nvui)) {
+      grid-template-columns: $main-margin minmax(0, 1fr) $main-margin;
+      grid-template-areas: '. main .';
+    }
+
+    .puzzle:not(.puzzle--nvui) {
+      // Ширина шкалы компенсируется шириной панели; справа остаются три зазора.
+      ---col3-uniboard-width: min(
+        #{$col3-uniboard-width},
+        calc(100vw - 2 * (#{$col3-uniboard-table-min} + #{$puzzle-block-gap * 3} + #{$main-margin}))
+      );
+
+      grid-template-columns:
+        max(
+          0px,
+          calc(
+            (100vw - var(---col3-uniboard-width)) / 2 - var(---sidenav-w, 0px) - #{$main-margin} -
+              #{$puzzle-block-gap * 3}
+          )
+        )
+        $puzzle-block-gap var(---col3-uniboard-width) var(---puzzle-gauge-col)
+        minmax(
+          calc(#{$col3-uniboard-table-min} - var(---puzzle-gauge-offset)),
+          calc(#{$col3-uniboard-table-max} - var(---puzzle-gauge-offset))
+        );
+
+      .puzzle__side {
+        min-width: 0;
+      }
+    }
+  }
+}
