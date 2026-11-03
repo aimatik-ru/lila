@@ -78,6 +78,9 @@ final class ClasUi(helpers: lila.ui.Helpers)(searchMenu: Context ?=> Frag):
       a(cls := active.toOption.map(_.active("classes")), href := routes.Clas.index)(
         trans.clas.lichessClasses()
       ),
+      a(cls := active.toOption.map(_.active("openings")), href := s"${routes.Clas.index}?openings=1")(
+        "Дебюты клуба"
+      ),
       active.left.toOption.map { clas =>
         frag(
           a(cls := "active", href := routes.Clas.show(clas.clas.id))(clas.clas.name),

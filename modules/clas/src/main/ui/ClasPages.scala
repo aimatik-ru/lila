@@ -43,6 +43,76 @@ final class ClasPages(helpers: Helpers, clasUi: ClasUi, dashUi: DashboardUi):
         renderClasses(classes)
       )
 
+  // Логик: дебюты учеников всех групп тренера или одной группы
+  def openings(classes: List[Clas], selected: Option[Clas], stats: ClasOpenings.Stats)(using Context) =
+    def insights(s: Student, color: Color, row: ClasOpenings.Row) =
+      routes.Insight.path(
+        s.userId.into(UserStr),
+        "result",
+        "openingVariation",
+        s"color:${color.name}/openingFamily:${row.family.key.value}"
+      )
+    def colorTable(color: Color, rows: List[ClasOpenings.Row]) =
+      st.section(cls := "clas-openings__color")(
+        h2(cls := "box__pad")(if color.white then "Белыми" else "Чёрными"),
+        if rows.isEmpty then p(cls := "box__pad")("Партий пока нет.")
+        else
+          table(cls := "slist slist-pad")(
+            thead(
+              tr(
+                th("Дебют"),
+                th("Партий"),
+                th(title := "Победы / ничьи / поражения")("+ / = / −"),
+                th("Очки"),
+                th("Кто играет (партий)")
+              )
+            ),
+            tbody(
+              rows.map: row =>
+                tr(
+                  td(row.family.name),
+                  td(row.games),
+                  td(s"${row.wins} / ${row.draws} / ${row.losses}"),
+                  td(s"${row.score}%"),
+                  td(
+                    row.players.zipWithIndex.map { case ((s, nb), i) =>
+                      frag(
+                        (i > 0).option(", "),
+                        a(href := insights(s, color, row))(s.realName),
+                        s" ($nb)"
+                      )
+                    }
+                  )
+                )
+            )
+          )
+      )
+    ClasPage("Дебюты клуба", Right("openings"))(cls := "clas-openings"):
+      frag(
+        boxTop(h1("Дебюты клуба")),
+        div(cls := "box__pad")(
+          p(
+            "По завершённым партиям учеников в обычные шахматы. Партий: ",
+            stats.nbGames.localize,
+            ", учеников с партиями: ",
+            stats.nbPlayers.localize,
+            ". Имя ученика открывает его варианты в этом дебюте."
+          ),
+          form(method := "get", action := routes.Clas.index)(
+            input(tpe := "hidden", name := "openings", value := "1"),
+            st.select(name := "clas")(
+              st.option(value := "")("Все группы"),
+              classes.map: c =>
+                st.option(value := c.id.value, selected.exists(_.id == c.id).option(st.selected))(c.name)
+            ),
+            " ",
+            submitButton(cls := "button button-empty")("Показать")
+          )
+        ),
+        colorTable(Color.white, stats.white),
+        colorTable(Color.black, stats.black)
+      )
+
   private def renderClasses(classes: List[Clas]) =
     div(cls := "classes")(
       classes.map { clas =>
