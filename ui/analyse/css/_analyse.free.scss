@@ -5,6 +5,50 @@
 
 $label-width: 5ch;
 
+// В свободном анализе слева нет ни игроков, ни чата: колонка не нужна.
+// Вариант остаётся над доской, справка о дебюте — под ней.
+@include mq-at-least-col2 {
+  body:has(> #top) .analyse {
+    ---free-board-width: calc(
+      min(#{$col2-uniboard-max-width}, calc(#{$col2-uniboard-max-height} - 3rem)) * var(---board-scale)
+    );
+
+    grid-template-columns:
+      var(---free-board-width) var(---analyse-gauge-col)
+      minmax(
+        calc(#{$col3-uniboard-table-min} - var(---analyse-gauge-offset)),
+        calc(#{$col3-uniboard-table-max} - var(---analyse-gauge-offset))
+      );
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+      'variant .     tools'
+      'board   gauge tools'
+      'kb-move .     controls'
+      'under   .     controls'
+      'wiki    .     round-training';
+    justify-content: center;
+
+    .analyse__side {
+      display: contents;
+
+      .mselect {
+        grid-area: variant;
+        margin-bottom: $block-gap;
+      }
+
+      .analyse__wiki {
+        grid-area: wiki;
+        max-height: 40vh;
+      }
+    }
+
+    .analyse__tools {
+      height: auto;
+      min-height: 0;
+    }
+  }
+}
+
 .copyables {
   .pair {
     @extend %flex-center;
