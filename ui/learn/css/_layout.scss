@@ -56,3 +56,43 @@
     }
   }
 }
+
+@include mq-at-least-col3 {
+  body:not(.blind-mode) {
+    #main-wrap:has(.learn--run) {
+      grid-template-columns: $main-margin minmax(0, 1fr) $main-margin;
+      grid-template-areas: '. main .';
+    }
+
+    .learn--run {
+      // Оставляем справа место для задания; между колонками сохраняем зазоры 2rem.
+      ---col3-uniboard-width: min(
+        #{$col3-uniboard-width},
+        calc(100vw - 2 * (#{$col3-uniboard-table-min} + 2rem + #{$main-margin}))
+      );
+
+      grid-template-columns:
+        max(
+          0px,
+          calc((100vw - var(---col3-uniboard-width)) / 2 - var(---sidenav-w, 0px) - #{$main-margin} - 2rem)
+        )
+        var(---col3-uniboard-width) $col3-uniboard-table;
+
+      .learn__side {
+        min-width: 0;
+      }
+
+      .learn__table .title {
+        .text {
+          min-width: 0;
+        }
+
+        h2,
+        h3 {
+          white-space: normal;
+          overflow-wrap: anywhere;
+        }
+      }
+    }
+  }
+}
