@@ -1,17 +1,35 @@
+$editor-board-width: calc((100vh - 4vmin) * var(---board-scale) * 0.8 - #{$site-header-outer-height});
+
 #main-wrap {
   ---main-max-width: auto;
 }
 
 .board-editor {
-  $board-width: calc((100vh - 4vmin) * var(---board-scale) * 0.8 - #{$site-header-outer-height});
-
   display: grid;
-  grid-template-columns: minmax(0, $board-width);
+  grid-template-columns: minmax(0, $editor-board-width);
   grid-template-areas: 'spare-top' 'board' 'spare-bottom' 'tools' 'copyables';
 
   @media (min-width: at-least($x-small)) {
-    grid-template-columns: minmax(30vmin, $board-width) 2vmin minmax(200px, 300px);
+    grid-template-columns: minmax(30vmin, $editor-board-width) 2vmin minmax(200px, 300px);
     grid-template-rows: min-content auto min-content;
     grid-template-areas: '.            . tools' 'spare-top    . tools' 'board        . tools' 'spare-bottom . tools' '.            . tools' 'copyables    . .    ';
+  }
+}
+
+@include mq-at-least-col3 {
+  body:not(.blind-mode):has(> #top) {
+    #main-wrap:has(> #board-editor) {
+      // Оставляем справа место для настроек и палитры, сохраняя центр доски.
+      ---editor-board-width: min(#{$editor-board-width}, calc(100vw - 2 * (200px + 2vmin + #{$main-margin})));
+
+      grid-template-columns:
+        max(#{$main-margin}, calc((100vw - var(---editor-board-width)) / 2 - var(---sidenav-w, 0px)))
+        minmax(0, 1fr) $main-margin;
+      grid-template-areas: '. main .';
+    }
+
+    #main-wrap > #board-editor > .board-editor {
+      grid-template-columns: var(---editor-board-width) 2vmin minmax(200px, 300px);
+    }
   }
 }
