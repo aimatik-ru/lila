@@ -3,3 +3,38 @@
 @import 'retro';
 @import 'round-training';
 @import 'round-underboard';
+
+@include mq-at-least-col3 {
+  body:not(.blind-mode) {
+    #main-wrap:has(> .analyse:not(.variant-crazyhouse)) {
+      grid-template-columns: $main-margin minmax(0, 1fr) $main-margin;
+      grid-template-areas: '. main .';
+    }
+
+    .analyse:not(.variant-crazyhouse) {
+      // Шкала оценки и панель ходов вместе оставляют постоянный зазор 4px.
+      ---col3-uniboard-width: min(
+        #{$col3-uniboard-width},
+        calc(100vw - 2 * (#{$col3-uniboard-table-min} + #{$analyse-gauge-gap} + #{$main-margin}))
+      );
+
+      grid-template-columns:
+        max(
+          0px,
+          calc(
+            (100vw - var(---col3-uniboard-width)) / 2 - var(---sidenav-w, 0px) - #{$main-margin} -
+              #{$analyse-block-gap}
+          )
+        )
+        $analyse-block-gap var(---col3-uniboard-width) var(---analyse-gauge-col)
+        minmax(
+          calc(#{$col3-uniboard-table-min} - var(---analyse-gauge-offset)),
+          calc(#{$col3-uniboard-table-max} - var(---analyse-gauge-offset))
+        );
+
+      .analyse__side {
+        min-width: 0;
+      }
+    }
+  }
+}
