@@ -67,3 +67,34 @@
     }
   }
 }
+
+@include mq-at-least-col3 {
+  body:not(.blind-mode) {
+    #main-wrap:has(> .round:not(.round--streamer)) {
+      grid-template-columns: $main-margin minmax(0, 1fr) $main-margin;
+      grid-template-areas: '. main .';
+    }
+
+    .round:not(.round--streamer) {
+      // Оставляем справа место для часов и ходов даже при максимальном размере доски.
+      ---col3-uniboard-width: min(
+        #{$col3-uniboard-width},
+        calc(100vw - 2 * (#{$col3-uniboard-table-min} + #{$block-gap} + #{$main-margin}))
+      );
+
+      grid-template-columns:
+        max(
+          0px,
+          calc(
+            (100vw - var(---col3-uniboard-width)) / 2 - var(---sidenav-w, 0px) - #{$main-margin} -
+              #{$block-gap}
+          )
+        )
+        var(---col3-uniboard-width) $col3-uniboard-table;
+
+      .round__side {
+        min-width: 0;
+      }
+    }
+  }
+}
