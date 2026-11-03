@@ -5,6 +5,77 @@
 
 $label-width: 5ch;
 
+// В свободном анализе слева нет ни игроков, ни чата: колонка не нужна.
+// Вариант остаётся над доской, справка о дебюте — под ней.
+@include mq-at-least-col2 {
+  body:not(.blind-mode):has(> #top) {
+    ---free-board-width: calc(
+      min(#{$col2-uniboard-max-width}, calc(#{$col2-uniboard-max-height} - 3rem)) * var(---board-scale)
+    );
+
+    .analyse {
+      grid-template-columns:
+        var(---free-board-width) var(---analyse-gauge-col)
+        minmax(
+          calc(#{$col3-uniboard-table-min} - var(---analyse-gauge-offset)),
+          calc(#{$col3-uniboard-table-max} - var(---analyse-gauge-offset))
+        );
+      grid-template-rows: auto auto auto auto auto;
+      grid-template-areas:
+        'variant .     tools'
+        'board   gauge tools'
+        'kb-move .     controls'
+        'under   .     controls'
+        'wiki    .     round-training';
+      justify-content: center;
+
+      .analyse__side {
+        display: contents;
+
+        .mselect {
+          grid-area: variant;
+          margin-bottom: $block-gap;
+        }
+
+        .analyse__wiki {
+          grid-area: wiki;
+          max-height: 40vh;
+        }
+      }
+
+      .analyse__tools {
+        height: auto;
+        min-height: 0;
+      }
+    }
+  }
+}
+
+@include mq-at-least-col3 {
+  body:not(.blind-mode):has(> #top) {
+    #main-wrap:has(> .analyse:is(.variant-standard, .variant-chess960)) {
+      // Для доски по центру должно хватать места для инструментов справа.
+      ---free-board-width: calc(
+        min(
+            #{$col2-uniboard-max-width},
+            calc(#{$col2-uniboard-max-height} - 3rem),
+            calc(100vw - 2 * (#{$col3-uniboard-table-min} + #{$block-gap} + 8px + #{$main-margin}))
+          ) *
+          var(---board-scale)
+      );
+
+      grid-template-columns:
+        max(#{$main-margin}, calc((100vw - var(---free-board-width)) / 2 - var(---sidenav-w, 0px)))
+        minmax(0, 1fr) $main-margin;
+      grid-template-areas: '. main .';
+    }
+
+    .analyse:is(.variant-standard, .variant-chess960) {
+      justify-content: start;
+    }
+  }
+}
+
 .copyables {
   .pair {
     @extend %flex-center;

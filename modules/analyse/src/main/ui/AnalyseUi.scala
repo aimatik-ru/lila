@@ -73,8 +73,7 @@ final class AnalyseUi(helpers: Helpers)(endpoints: AnalyseEndpoints):
                 span(cls := "text", dataIcon := iconByVariant(pov.game.variant))(
                   pov.game.variant.variantTrans()
                 ),
-                Variant.list.all
-                  .filter(FromPosition != _)
+                List(Standard, Chess960)
                   .map: v =>
                     a(
                       dataIcon := iconByVariant(v),
