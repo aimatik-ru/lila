@@ -67,6 +67,9 @@ export function button(ctrl: AnalyseCtrl): VNode | false {
   return hl(
     'button',
     {
+      // Ключ обязателен: кнопка появляется после загрузки, и без него snabbdom отдаёт ей элемент
+      // соседней кнопки «Редактор анализа» вместе с её обработчиком (bind вешается только на insert).
+      key: 'logic-traps',
       hook: bind('click', () => {
         ctrl.actionMenu(false);
         ctrl.redraw();
@@ -112,7 +115,6 @@ ${form}
 <p><a href="${api}">Все ловушки списком</a></p>
 </div>`,
     modal: true,
-    show: true,
   });
   const view = dlg.view;
   const error = (msg: string) => {
@@ -152,4 +154,6 @@ ${form}
       error(failText(err));
     }
   });
+  // show() раньше обработчиков: с show в опциях domDialog отдаёт окно только после закрытия.
+  dlg.show();
 }
