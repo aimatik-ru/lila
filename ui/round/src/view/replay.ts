@@ -254,6 +254,8 @@ export function render(ctrl: RoundController): LooseVNode {
               col1Button(ctrl, -1, licon.JumpPrev, ctrl.ply === util.firstPly(d)),
               renderMovesOrResult,
               col1Button(ctrl, 1, licon.JumpNext, ctrl.ply === util.lastPly(d)),
+              // Логик: на телефоне меню доски было только у игрока во время партии (рядом с «Сдаться»).
+              (d.player.spectator || !playable(d)) && boardMenuToggleButton(ctrl.menu, i18n.site.menu),
             ])
           : renderMovesOrResult),
     ])
