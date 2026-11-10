@@ -7,7 +7,7 @@ import { roleToChar } from 'chessops/util';
 import { ctrl as makeKeyboardMove, type KeyboardMove } from 'keyboard-move';
 import { makeVoiceMove, type VoiceMove } from 'voice';
 
-import { defined, type Toggle, type Prop, toggle, requestIdleCallbackSafe, memoize } from 'lib';
+import { defined, type Toggle, type Prop, toggle, requestIdleCallbackSafe, memoize, escapeHtml } from 'lib';
 import * as game from 'lib/game';
 import { plyOpponentColor } from 'lib/game';
 import { plyToTurn, plyColor } from 'lib/game/chess';
@@ -28,6 +28,8 @@ import { storage, once, storedBooleanProp, type LichessBooleanStorage } from 'li
 import type { NodeCrazy } from 'lib/tree/types';
 import type { QuestionOpts } from 'lib/types';
 import { toggleZenMode } from 'lib/view/zen';
+import { domDialog } from 'lib/view';
+import { json as xhrJson, text as xhrText } from 'lib/xhr';
 import * as wakeLock from 'lib/wakeLock';
 
 import * as atomic from './atomic';
@@ -119,6 +121,7 @@ export default class RoundController implements MoveRootCtrl {
     this.blindfoldStorage = storage.boolean(`blindfold.${this.data.player.user?.id ?? 'anon'}`);
 
     this.updateClockCtrl();
+    this.loadLogicTraps();
     this.promotion = new PromotionCtrl(
       f => f(this.chessground),
       () => {
@@ -355,12 +358,80 @@ export default class RoundController implements MoveRootCtrl {
     this.keyboardMove?.update({ fen, canMove: this.canMove() });
   };
 
+  // Логик: ловушки в дебюте. Перед опасным ходом показываем окно, время на раздумье сервер возвращает.
+  private logicTraps: { board: string; uci: string; hint: string; block?: boolean }[] = [];
+
+  private loadLogicTraps = (): void => {
+    const d = this.data;
+    // партия из позиции (кнопка «Продолжить отсюда») тоже обычные шахматы
+    if (d.player.spectator || !d.player.user || !game.playable(d)) return;
+    if (d.game.variant.key !== 'standard' && d.game.variant.key !== 'fromPosition') return;
+    xhrJson(`/${d.game.id}/note?logicTraps=1`).then(
+      traps => (this.logicTraps = Array.isArray(traps) ? traps : []),
+      () => {},
+    );
+  };
+
+  private logicTrapIndex = (uci: string): number => {
+    if (!this.logicTraps.length || !this.isPlaying()) return -1;
+    // в шагах живой партии FEN без очереди хода; ходит сам игрок
+    const board = `${this.stepAt(this.ply).fen.split(' ')[0]} ${this.data.player.color[0]}`;
+    return this.logicTraps.findIndex(t => t.board === board && t.uci === uci);
+  };
+
+  private askLogicTrap = async (index: number, proceed: () => void): Promise<void> => {
+    const started = performance.now();
+    const trap = this.logicTraps[index];
+    // текст по левому краю: запись ходов столбиком читается привычнее; «//» в подсказке — новая строка
+    const hint = trap.hint
+      ? `<div style="margin-top:1em;white-space:pre-line">${escapeHtml(trap.hint.replace(/\s*\/\/\s*/g, '\n'))}</div>`
+      : '';
+    const title = trap.block
+      ? 'Этот ход в школе запрещён, сыграй по-другому.'
+      : 'Точно делаешь этот ход? Время на раздумье тебе вернут.';
+    const buttons = trap.block
+      ? '<button class="button ok">Понятно</button>'
+      : '<button class="button button-empty cancel">Подумать ещё</button><button class="button ok">Сделать ход</button>';
+    const dlg = await domDialog({
+      htmlText: `<div style="text-align:left"><div><strong>${title}</strong></div>${hint}</div><span>${buttons}</span>`,
+      class: 'alert',
+      noCloseButton: true,
+      modal: true,
+      show: true,
+      focus: '.ok',
+      actions: [
+        { selector: '.cancel', result: 'cancel' },
+        { selector: '.ok', result: 'ok' },
+      ],
+    });
+    const ok = !trap.block && dlg.returnValue === 'ok';
+    const ms = Math.round(performance.now() - started);
+    await xhrText(`/${this.data.game.id}/note?logicTrap=${index}&ms=${ms}`, { method: 'post' }).catch(
+      () => {},
+    );
+    if (ok) proceed();
+    else {
+      this.jump(this.ply);
+      this.redraw();
+    }
+  };
+
   sendMove = (orig: Key, dest: Key, prom: Role | undefined, meta: MoveMetadata): void => {
     const move: SocketMove = { u: orig + dest };
     if (prom) move.u += prom === 'knight' ? 'n' : prom[0];
     if (blur.get()) move.b = 1;
     this.resign(false);
 
+    // запрет ловит и предход, предупреждение — только обычный ход
+    const trap = this.logicTrapIndex(move.u);
+    if (trap >= 0 && (!meta.premove || this.logicTraps[trap].block)) {
+      this.askLogicTrap(trap, () => this.sendCheckedMove(move, meta));
+      return;
+    }
+    this.sendCheckedMove(move, meta);
+  };
+
+  private sendCheckedMove = (move: SocketMove, meta: MoveMetadata): void => {
     if (!meta.preConfirmed && this.confirmMoveToggle() && !meta.premove) {
       if (site.sound.speech()) {
         const spoken = `${speakable(almostSanOf(readFen(this.stepAt(this.ply).fen), move.u))}. confirm?`;
