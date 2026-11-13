@@ -31,11 +31,35 @@ final class Team(env: Env) extends LilaController(env):
         else Redirect(routes.Team.all(page))
 
   def show(id: TeamId, page: Int, mod: Boolean) = Open:
-    Reasonable(page):
-      WithTeamOrClas(id): team =>
-        if !team.notable && req.client.isCrawler
-        then notFound
-        else renderTeam(team, page, mod && canEnterModView)
+    if id.value == "kubok" then // «Логик»: доска кубка + регламент из CMS-страницы kubok-rules
+      for
+        teams <- api.cupBoard
+        rules <- env.cms.renderKey("kubok-rules")
+        canEdit = lila.core.perm.Granter.opt(_.Pages)
+        shown = rules.filter(r => r.live || canEdit)
+        editUrl = canEdit.option:
+          rules.fold(routes.Cms.createForm(lila.core.id.CmsPageKey("kubok-rules").some).url)(r =>
+            routes.Cms.edit(r.id).url
+          )
+        bracket <- cupBracketState
+        dates <- api.cupBracketDates
+        page <- renderPage(
+          views.team.list.cup(
+            teams,
+            shown.map(_.html),
+            editUrl,
+            bracket.map((rounds, tours) => (rounds, tours.view.mapValues(cupTourView).toMap)),
+            dates.view.mapValues(d => cupMsk(d)).collect { case (k, Some(v)) => k -> v }.toMap,
+            dates
+          )
+        )
+      yield Ok(page)
+    else
+      Reasonable(page):
+        WithTeamOrClas(id): team =>
+          if !team.notable && req.client.isCrawler
+          then notFound
+          else renderTeam(team, page, mod && canEnterModView)
 
   private def CanSeeMembers(team: TeamModel)(f: => Fu[lila.ui.Page])(using ctx: Context): Fu[Result] =
     val canSee = fuccess(team.publicMembers || isGrantedOpt(_.ManageTeam)) >>|
@@ -110,24 +134,330 @@ final class Team(env: Env) extends LilaController(env):
   yield views.team.form.edit(team, form, member)
 
   def edit(id: TeamId) = Auth { ctx ?=> me ?=>
-    WithOwnedTeamEnabled(id, _.Settings): team =>
-      Ok.async(renderEdit(team, forms.edit(team)))
+    if id.value == "kubok" then
+      cupDraftPage(Nil, get("perf") | "rapid", getInt("size") | 5, getInt("teams") | -1, getBool("online"))
+    else
+      WithOwnedTeamEnabled(id, _.Settings): team =>
+        Ok.async(renderEdit(team, forms.edit(team)))
   }
 
   def update(id: TeamId) = AuthBody { ctx ?=> me ?=>
-    WithOwnedTeamEnabled(id, _.Settings): team =>
-      bindForm(forms.edit(team))(
-        err => BadRequest.async(renderEdit(team, err)),
-        data =>
-          for
-            automodText <- api.update(team, data)
-            url = routes.Team.show(team.id).url
-            _ <- env.memo.picfitApi.addRef(Markdown(automodText), ref(team.id), url.some)
-          yield
-            discard { env.report.api.automodComms(team.automodText, url) }
-            Redirect(url).flashSuccess
-      )
+    if id.value == "kubok" then cupDraftPost
+    else
+      WithOwnedTeamEnabled(id, _.Settings): team =>
+        // «Логик»: капитан кубковой команды переименовывает её коротким полем на странице команды
+        val rename = cupRenameForm.bindFromRequest().value.flatten.map(_.trim)
+        if team.isCup && rename.isDefined then
+          rename.filter(n => n.length >= 3 && n.length <= 40) match
+            case Some(name) =>
+              api.update(team.copy(name = name)).inject(Redirect(routes.Team.show(team.id)).flashSuccess)
+            case None =>
+              Redirect(routes.Team.show(team.id)).flashFailure("Название: от 3 до 40 знаков").toFuccess
+        else
+          bindForm(forms.edit(team))(
+            err => BadRequest.async(renderEdit(team, err)),
+            data =>
+              for
+                automodText <- api.update(team, data)
+                url = routes.Team.show(team.id).url
+                _ <- env.memo.picfitApi.addRef(Markdown(automodText), ref(team.id), url.some)
+              yield
+                discard { env.report.api.automodComms(team.automodText, url) }
+                Redirect(url).flashSuccess
+          )
   }
+
+  private val cupRenameForm =
+    import play.api.data.Forms.*
+    Form(single("cupRename" -> optional(text)))
+
+  // «Логик»: автосбор равных команд кубка из учеников школы, которые сейчас на площадке.
+  // GET /team/kubok/edit — список и составы, POST — показать составы (go=0) или создать (go=1).
+  private val cupDraftForm =
+    import play.api.data.Forms.*
+    Form(
+      tuple(
+        "perf" -> default(text, "rapid"),
+        "size" -> default(number(min = 0, max = TeamModel.cupMaxMembers), 3), // 0 = по группам A–E
+        "go" -> default(boolean, false),
+        "u" -> list(text),
+        "t" -> list(text),
+        "teams" -> default(number(min = -1, max = 64), -1), // -1 = сколько команд уже есть, 0 = по размеру
+        "online" -> default(boolean, false)
+      )
+    )
+
+  private def cupPerf(key: String) =
+    lila.rating
+      .PerfKey(key)
+      .filter(List("blitz", "rapid", "classical").contains)
+      .getOrElse(lila.rating.PerfKey.rapid)
+
+  private def cupPlayers(ids: List[UserId], perf: lila.rating.PerfKey) =
+    env.user.api
+      .listWithPerfs(ids, includeClosed = false)
+      .map(_.map: u =>
+        (
+          u.user.id,
+          u.perfs(perf).intRating.value,
+          u.user.roles.nonEmpty,
+          TeamModel.cupGroupOf(u.user.flair.map(_.value))
+        ))
+
+  private def cupDraftPage(
+      picked: List[UserId],
+      perfKey: String,
+      sizeArg: Int,
+      teamsArg: Int,
+      onlineOnly: Boolean,
+      preview: Option[List[List[(UserId, Int)]]] = none
+  )(using ctx: Context, me: Me): Fu[Result] =
+    if !isGranted(_.ManageTeam) then authorizationFailed
+    else
+      val perf = cupPerf(perfKey)
+      val size = if sizeArg == 0 then 0 else sizeArg.atLeast(2).atMost(TeamModel.cupMaxMembers)
+      for
+        school <- env.team.memberRepo.userIdsByTeam(TeamId("logic-all"))
+        current <- api.cupCurrentTeam
+        board <- api.cupBoard
+        teams = if teamsArg < 0 then board.size else teamsArg
+        isOn = (u: UserId) => env.socket.isOnline.exec(u)
+        shown = if onlineOnly then school.filter(u => isOn(u) || picked.contains(u)) else school
+        players <- cupPlayers(shown, perf)
+        page <- Ok.page(
+          views.team.list.cupDraft(
+            perf.value,
+            size,
+            teams,
+            board.size,
+            onlineOnly,
+            players.sortBy(p => (!isOn(p._1), -p._2)),
+            current,
+            isOn,
+            picked.toSet,
+            preview
+          )
+        )
+      yield page
+
+  // «Логик»: сетка плей-офф. Пара = свой «Командный бой» из двух команд; победитель боя
+  // сам проходит дальше. Ничья решается дополнительными показателями боя (порядок RankedTeam).
+  private def cupBracketState
+      : Fu[Option[(List[List[TeamModel.CupMatch]], Map[String, lila.tournament.Tournament])]] =
+    api.cupBracketGet.flatMap:
+      case None => fuccess(none)
+      case Some((slots, tourIds)) =>
+        for
+          found <- tourIds.toList.sequentially: (k, id) =>
+            env.tournament.tournamentRepo.byId(TourId(id)).map(k -> _)
+          tours = found.collect { case (k, Some(t)) => k -> t }.toMap
+          winners <- tours.toList.sequentially: (k, t) =>
+            if !t.isFinished then fuccess(k -> none)
+            else
+              env.tournament.cached.battle.teamStanding
+                .get(t.id)
+                .map(rs => k -> rs.headOption.filter(_.score > 0).map(_.teamId))
+          won = winners.toMap
+        yield (TeamModel.cupBracket(slots, k => won.get(k).flatten), tours).some
+
+  private def cupTourView(t: lila.tournament.Tournament) =
+    TeamModel.CupTour(t.id.value, t.startsAt, t.isStarted || t.isFinished, t.isFinished)
+
+  private val cupBracketForm =
+    import play.api.data.Forms.*
+    Form(
+      tuple(
+        "bracket" -> optional(text),
+        "perf" -> default(text, "rapid"),
+        "date" -> optional(text), // datetime-local, московское время
+        "minutes" -> default(number(min = 10, max = 360), 40),
+        "clock" -> default(text, "5"),
+        "inc" -> default(number(min = 0, max = 60), 3),
+        "leaders" -> default(number(min = 1, max = 5), 2),
+        "rated" -> boolean
+      )
+    )
+
+  private def cupMsk(d: String): Option[java.time.Instant] =
+    scala.util
+      .Try(java.time.LocalDateTime.parse(d).atZone(java.time.ZoneId.of("Europe/Moscow")).toInstant)
+      .toOption
+
+  private def cupName(raw: String) =
+    raw.filter(c => c.isLetterOrDigit || c.isWhitespace || ":.,;'+-".contains(c)).trim.replaceAll("\\s+", " ")
+
+  private def cupLeadersText(n: Int) = n match
+    case 1 => "В зачёт идёт лучший результат команды."
+    case 5 => "В зачёт идут результаты всех игроков команды."
+    case _ =>
+      val w = Map(2 -> "двух", 3 -> "трёх", 4 -> "четырёх").getOrElse(n, n.toString)
+      s"В зачёт идут результаты $w лучших игроков команды."
+
+  private def cupBracketPost(using ctx: BodyContext[?], me: Me): Fu[Result] =
+    val back = Redirect(routes.Team.show(TeamId("kubok")))
+    cupBracketForm.bindFromRequest().value match
+      case Some((Some("reset"), _, _, _, _, _, _, _)) =>
+        api.cupBracketReset.inject(back.flashSuccess("Сетка сброшена"))
+      case Some((Some("draw"), perfKey, _, _, _, _, _, _)) =>
+        for
+          teams <- api.cupBoard
+          players <- cupPlayers(teams.flatMap(_._2), cupPerf(perfKey))
+          rating = players.map(p => p._1 -> p._2).toMap
+          strength = (ids: List[UserId]) =>
+            val rs = ids.flatMap(rating.get)
+            if rs.isEmpty then 0 else rs.sum / rs.size
+          // если хоть в одной команде есть игроки, пустые в сетку не идут (лишние после пересборки);
+          // если пусты все — в сетке все, сила 0
+          inPlay = if teams.exists(_._2.nonEmpty) then teams.filter(_._2.nonEmpty) else teams
+          seeded = inPlay.sortBy(t => -strength(t._2)).map(_._1.id)
+          result <-
+            if seeded.sizeIs < 2 then fuccess(back.flashFailure("Для сетки нужны хотя бы две команды"))
+            else
+              api
+                .cupBracketDraw(TeamModel.cupSlots(seeded))
+                .inject(back.flashSuccess(s"Жеребьёвка: команд ${seeded.size}"))
+        yield result
+      case Some((Some("dates"), _, _, _, _, _, _, _)) =>
+        val data = cupBracketForm.bindFromRequest().data
+        val dates =
+          (0 until 8).flatMap(r => data.get(s"d$r").map(_.trim).filter(cupMsk(_).isDefined).map(r -> _)).toMap
+        api.cupBracketSetDates(dates).inject(back.flashSuccess(s"Даты кругов сохранены: ${dates.size}"))
+      case Some((Some("round"), _, date, minutes, clock, inc, leaders, rated)) =>
+        val now = java.time.Instant.now
+        val future = (i: java.time.Instant) => Option.when(i.isAfter(now.plusSeconds(60)))(i)
+        val start = date.flatMap(cupMsk).flatMap(future)
+        api.cupBracketDates
+          .zip(cupBracketState)
+          .flatMap: (planned, state) =>
+            state match
+              case None => fuccess(back.flashFailure("Сначала проведите жеребьёвку"))
+              case Some((rounds, tours)) =>
+                // пары, которые можно играть сейчас: обе команды известны, победителя нет,
+                // а боя нет вовсе или он закончился без победителя
+                val todo = rounds.flatten
+                  .filter(m => m.pair.isDefined && m.winner.isEmpty && tours.get(m.key).forall(_.isFinished))
+                for
+                  teams <- api.cupBoard
+                  names = teams.map((t, _, _) => t.id -> t.name).toMap
+                  made <- todo.sequentially: m =>
+                    val (x, y) = m.pair.get
+                    val roundName = TeamModel.cupRoundName(m.round, rounds.size)
+                    val (nx, ny) = (names.getOrElse(x, x.value), names.getOrElse(y, y.value))
+                    val full = cupName(s"$nx - $ny")
+                    val leaderTeams = List(lila.core.team.LightTeam(x, nx, none))
+                    val data = Map(
+                      "name" -> (if full.sizeIs <= 35 then full else "Кубок Логика"),
+                      "clockTime" -> clock,
+                      "clockIncrement" -> inc.toString,
+                      "minutes" -> minutes.toString,
+                      "rated" -> rated.toString,
+                      "teamBattleByTeam" -> x.value,
+                      "berserkable" -> "true",
+                      "streakable" -> "true",
+                      "hasChat" -> "true",
+                      "description" -> s"Кубок Логика, $roundName: $nx против $ny. ${cupLeadersText(leaders)}"
+                    ) ++ start
+                      .orElse(planned.get(m.round).flatMap(cupMsk).flatMap(future))
+                      .fold(Map("waitMinutes" -> "5"))(s => Map("startDate" -> s.toEpochMilli.toString))
+                    env.tournament.forms
+                      .create(leaderTeams)
+                      .bind(data)
+                      .fold(
+                        err => fuccess(Left(s"$nx - $ny: ${err.errors.flatMap(_.messages).mkString(", ")}")),
+                        setup =>
+                          for
+                            tour <- env.tournament.api.createTournament(setup, leaderTeams, andJoin = false)
+                            _ <- env.tournament.api.teamBattleUpdate(
+                              tour,
+                              lila.tournament.TeamBattle.DataForm.Setup(s"${x.value}\n${y.value}\n", leaders),
+                              env.team.api.filterExistingIdsNoClas
+                            )
+                            _ <- api.cupBracketSetTour(m.key, tour.id.value)
+                          yield Right(tour.id)
+                      )
+                  errs = made.collect { case Left(e) => e }
+                  ok = made.count(_.isRight)
+                yield
+                  if errs.nonEmpty then
+                    back.flashFailure(s"Создано боёв: $ok. Не получилось: ${errs.mkString("; ")}")
+                  else if ok == 0 then back.flashFailure("Нет пар, готовых к игре")
+                  else back.flashSuccess(s"Создано боёв: $ok")
+      // общая арена: все команды кубка с игроками в одном «Командном бою», сетку не трогает
+      case Some((Some("all"), _, date, minutes, clock, inc, leaders, rated)) =>
+        val start = date.flatMap(cupMsk).filter(_.isAfter(java.time.Instant.now.plusSeconds(60)))
+        api.cupBoard.flatMap: teams =>
+          val inPlay = teams.filter(_._2.nonEmpty).map((t, _, _) => t)
+          inPlay.headOption.filter(_ => inPlay.sizeIs >= 2) match
+            case None => fuccess(back.flashFailure("Для общего боя нужны хотя бы две команды с игроками"))
+            case Some(first) =>
+              val leaderTeams = List(lila.core.team.LightTeam(first.id, first.name, none))
+              val data = Map(
+                "name" -> "Кубок Логика - общий бой",
+                "clockTime" -> clock,
+                "clockIncrement" -> inc.toString,
+                "minutes" -> minutes.toString,
+                "rated" -> rated.toString,
+                "teamBattleByTeam" -> first.id.value,
+                "berserkable" -> "true",
+                "streakable" -> "true",
+                "hasChat" -> "true",
+                "description" -> s"Кубок Логика, общий бой: играют все команды (${inPlay.size}), соперник — из любой другой команды. ${cupLeadersText(leaders)}"
+              ) ++ start.fold(Map("waitMinutes" -> "5"))(s => Map("startDate" -> s.toEpochMilli.toString))
+              env.tournament.forms
+                .create(leaderTeams)
+                .bind(data)
+                .fold(
+                  err =>
+                    fuccess(
+                      back.flashFailure(s"Не получилось: ${err.errors.flatMap(_.messages).mkString(", ")}")
+                    ),
+                  setup =>
+                    for
+                      tour <- env.tournament.api.createTournament(setup, leaderTeams, andJoin = false)
+                      _ <- env.tournament.api.teamBattleUpdate(
+                        tour,
+                        lila.tournament.TeamBattle.DataForm
+                          .Setup(inPlay.map(_.id.value).mkString("", "\n", "\n"), leaders),
+                        env.team.api.filterExistingIdsNoClas
+                      )
+                    yield Redirect(s"/tournament/${tour.id}")
+                      .flashSuccess(s"Общий бой создан: команд ${inPlay.size}")
+                )
+      case _ => fuccess(back)
+
+  private def cupDraftPost(using ctx: BodyContext[?], me: Me): Fu[Result] =
+    if !isGranted(_.ManageTeam) then authorizationFailed
+    else if cupBracketForm.bindFromRequest().value.exists(_._1.isDefined) then cupBracketPost
+    else
+      bindForm(cupDraftForm)(
+        _ => Redirect(routes.Team.edit(TeamId("kubok"))),
+        (perfKey, size, go, us, ts, teams, onlineOnly) =>
+          env.team.memberRepo.userIdsByTeam(TeamId("logic-all")).flatMap { schoolList =>
+            val school = schoolList.toSet
+            def ids(xs: List[String]) = xs.flatMap(UserStr.read).map(_.id).filter(school).distinct
+            if go then
+              val rosters = ts.map(t => ids(t.split(',').toList)).filter(_.nonEmpty)
+              api
+                .refillCupTeams(rosters)
+                .map: (filled, created) =>
+                  Redirect(routes.Team.show(TeamId("kubok"))).flashSuccess(
+                    s"Составы обновлены: команд ${filled + created}" +
+                      (if created > 0 then s", из них новых $created" else "") +
+                      ". Проведите жеребьёвку заново, чтобы пары встали по силе."
+                  )
+            else
+              val picked = ids(us)
+              for
+                players <- cupPlayers(picked, cupPerf(perfKey))
+                draft =
+                  if size == 0 then
+                    TeamModel.cupDraftByGroups(players.map(p => (p._1, p._2, p._4)), teams.atLeast(0))
+                  else if teams > 0 then TeamModel.cupDraftInto(players.map(p => (p._1, p._2)), teams)
+                  else TeamModel.cupDraft(players.map(p => (p._1, p._2)), size)
+                page <- cupDraftPage(picked, perfKey, size, teams, onlineOnly, draft.some)
+              yield page
+          }
+      )
 
   def kickForm(id: TeamId) = Auth { ctx ?=> _ ?=>
     WithOwnedTeamEnabled(id, _.Kick): team =>
@@ -362,6 +692,11 @@ final class Team(env: Env) extends LilaController(env):
           Redirect(env.web.referrerRedirect.fromReq.fold(routes.Team.show(team.id).url)(_.value)).flashSuccess
         case Requesting.NeedRequest | Requesting.NeedPassword =>
           Redirect(routes.Team.requestForm(team.id)).flashSuccess
+        case Requesting.Closed if team.isCup =>
+          Redirect(routes.Team.show(team.id))
+            .flashFailure(
+              s"Команда уже набрана: ${lila.team.Team.cupMaxMembers} из ${lila.team.Team.cupMaxMembers}"
+            )
         case _ => Redirect(routes.Team.show(team.id)).flashFailure("You cannot join this team.")
 
   def requestProcess(requestId: String) = AuthBody { ctx ?=> me ?=>
