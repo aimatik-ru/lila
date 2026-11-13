@@ -250,7 +250,8 @@ final class UserRepo(c: Coll)(using Executor) extends lila.core.user.UserRepo(c)
   private[user] def userIdsLikeFilter(text: UserSearch, filter: Bdoc, max: Int): Fu[List[UserId]] =
     coll
       .find(
-        bdoc(F.id.regexStart(text.value)) ++ enabledSelect ++ filter,
+        // Logic: ники Имя_Фамилия_Год — ищем и по началу ника, и по любой части после «_»
+        bdoc(F.id.regex(s"^${text.value}|_${text.value}")) ++ enabledSelect ++ filter,
         bdoc(F.id -> true).some
       )
       .sort(bdoc("len" -> 1))
