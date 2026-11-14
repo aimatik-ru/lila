@@ -64,11 +64,12 @@ final class TeamApi(
   yield Team.TeamShow(team, leaders, member, myRequest, requests, update)
 
   def create(setup: TeamSetup)(using me: Me): Fu[Team] =
-    val bestId = Team.nameToId(setup.name)
+    val cupId = Team.cupIdOf(setup.name)
+    val bestId = cupId.getOrElse(Team.nameToId(setup.name))
     for
       exists <- chatApi.exists(bestId.into(ChatId))
-      id = if exists then Team.randomId() else bestId
-      team = Team
+      id = if exists && cupId.isEmpty then Team.randomId() else bestId
+      made = Team
         .make(
           id = id,
           name = setup.name,
@@ -80,8 +81,11 @@ final class TeamApi(
           createdBy = me
         )
         .copy(chat = setup.chat, forum = setup.forum)
+      // в кубковую команду админ не вступает: место — детям, капитаном станет первый вступивший
+      team = if made.isCup then made.copy(nbMembers = 0) else made
       _ <- teamRepo.coll.insert.one(team)
-      _ <- memberRepo.add(team.id, me.userId, TeamSecurity.Permission.values.toSet)
+      _ <- (!team.isCup).so:
+        memberRepo.add(team.id, me.userId, TeamSecurity.Permission.values.toSet).void
     yield
       cached.invalidateTeamIds(me.userId)
       Bus.pub(TeamCreate(team.data))
@@ -97,6 +101,7 @@ final class TeamApi(
 
   def update(old: Team, edit: TeamEdit)(using me: Me): Fu[String] = update:
     old.copy(
+      name = edit.name.filter(_ => old.isCup).fold(old.name)(_.trim),
       password = edit.password,
       intro = edit.intro,
       description = edit.description.map(spam.replace),
@@ -128,6 +133,190 @@ final class TeamApi(
 
   def hasJoinedTooManyTeams(using me: Me) =
     countTeamsOf(me).dmap(Team.maxJoin(me) < _)
+
+  // «Логик»: публичная доска кубка — команды kubok-N, их участники и капитаны
+  def cupBoard: Fu[List[(Team, List[UserId], Set[UserId])]] =
+    teamRepo.coll
+      .list[Team](bdoc("_id" -> bdoc("$regex" -> s"^${Team.cupIdPrefix}")) ++ teamRepo.enabledSelect, 200)
+      .map(_.sortBy(_.id.value.stripPrefix(Team.cupIdPrefix).toIntOption.getOrElse(Int.MaxValue)))
+      .flatMap:
+        _.sequentially: team =>
+          for
+            members <- memberRepo.userIdsByTeam(team.id)
+            leaders <- memberRepo.leaderIds(team.id)
+          yield (team, members, leaders)
+
+  // «Логик»: сетка плей-офф кубка — один документ: посев (slots, "" = пустое место)
+  // и бои пар (tours: "круг.пара:id турнира").
+  private lazy val cupBracketColl = teamRepo.coll.db.collection("kubok_bracket")
+
+  def cupBracketGet: Fu[Option[(List[Option[TeamId]], Map[String, String])]] =
+    cupBracketColl
+      .one[Bdoc](bdoc("_id" -> "kubok"))
+      .map(_.map: d =>
+        val slots =
+          d.getAsOpt[List[String]]("slots").getOrElse(Nil).map(s => Option.when(s.nonEmpty)(TeamId(s)))
+        val tours = d
+          .getAsOpt[List[String]]("tours")
+          .getOrElse(Nil)
+          .flatMap(_.split(':') match
+            case Array(k, v) => Some(k -> v)
+            case _ => None)
+          .toMap
+        slots -> tours)
+
+  // плановые даты кругов при повторной жеребьёвке сохраняются
+  def cupBracketDraw(slots: List[Option[TeamId]]): Funit =
+    cupBracketColl.update
+      .one(
+        bdoc("_id" -> "kubok"),
+        bdoc("$set" -> bdoc("slots" -> slots.map(_.fold("")(_.value)), "tours" -> List.empty[String])),
+        upsert = true
+      )
+      .void
+
+  // плановые даты кругов: "круг=yyyy-MM-ddTHH:mm" (московское время, как в datetime-local)
+  def cupBracketDates: Fu[Map[Int, String]] =
+    cupBracketColl
+      .one[Bdoc](bdoc("_id" -> "kubok"))
+      .map(
+        _.flatMap(_.getAsOpt[List[String]]("dates"))
+          .getOrElse(Nil)
+          .flatMap(_.split('=') match
+            case Array(k, v) => k.toIntOption.map(_ -> v)
+            case _ => None)
+          .toMap
+      )
+
+  def cupBracketSetDates(dates: Map[Int, String]): Funit =
+    cupBracketColl.update
+      .one(
+        bdoc("_id" -> "kubok"),
+        bdoc("$set" -> bdoc("dates" -> dates.toList.sortBy(_._1).map((k, v) => s"$k=$v"))),
+        upsert = true
+      )
+      .void
+
+  def cupBracketSetTour(key: String, tourId: String): Funit =
+    cupBracketGet.flatMap:
+      _.so: (_, tours) =>
+        cupBracketColl.update
+          .one(
+            bdoc("_id" -> "kubok"),
+            bdoc("$set" -> bdoc("tours" -> (tours + (key -> tourId)).map((k, v) => s"$k:$v").toList))
+          )
+          .void
+
+  def cupBracketReset: Funit = cupBracketColl.delete.one(bdoc("_id" -> "kubok")).void
+
+  // «Логик»: кто уже играет в открытых командах кубка — в автосбор их не берём
+  def cupMemberIds: Fu[Set[UserId]] = for
+    teams <- teamRepo.coll
+      .list[Team](bdoc("_id" -> bdoc("$regex" -> s"^${Team.cupIdPrefix}")) ++ teamRepo.enabledSelect, 500)
+    ids <- teams.nonEmpty.so:
+      memberRepo.coll.distinctEasy[UserId, Set]("user", bdoc("team" -> bdoc("$in" -> teams.map(_.id))))
+  yield ids
+
+  // «Логик»: автосбор = переигровка составов. Все участники снимаются со всех команд кубка,
+  // составы ложатся в существующие команды по номеру (1, 2, …), недостающие создаются
+  // со следующих номеров. Капитан — первый в составе (самый сильный). Лишние старые команды
+  // остаются пустыми. Возвращает (заполнено существующих, создано новых).
+  def refillCupTeams(rosters: List[List[UserId]])(using me: Me): Fu[(Int, Int)] =
+    val clean = rosters.map(_.distinct).filter(_.nonEmpty)
+    val seen = scala.collection.mutable.Set.empty[UserId]
+    val uniq = clean.map(_.filter(seen.add)).filter(_.nonEmpty) // игрок — только в одной команде
+    for
+      all <- teamRepo.coll.list[Team](bdoc("_id" -> bdoc("$regex" -> s"^${Team.cupIdPrefix}")), 1000)
+      num = (t: Team) => t.id.value.stripPrefix(Team.cupIdPrefix).toIntOption
+      existing = all.filter(_.enabled).filter(num(_).isDefined).sortBy(num(_).getOrElse(0))
+      _ <- existing.sequentiallyVoid: team =>
+        memberRepo.userIdsByTeam(team.id).flatMap(_.sequentiallyVoid(doQuit(team, _)))
+      next = all.flatMap(num).maxOption.fold(1)(_ + 1)
+      created <- uniq
+        .drop(existing.size)
+        .zipWithIndex
+        .sequentially: (_, i) =>
+          val team = Team
+            .make(
+              id = TeamId(s"${Team.cupIdPrefix}${next + i}"),
+              name = s"Команда ${next + i}",
+              password = none,
+              intro = none,
+              description = Markdown(Team.cupDescription),
+              descPrivate = none,
+              open = true,
+              createdBy = me
+            )
+            .copy(nbMembers = 0, chat = Access.Members)
+          teamRepo.coll.insert
+            .one(team)
+            .inject:
+              Bus.pub(TeamCreate(team.data))
+              team
+      targets = existing ++ created
+      _ <- uniq
+        .zip(targets)
+        .sequentiallyVoid: (roster, team) =>
+          for
+            _ <- roster.sequentiallyVoid(doJoin(team, _))
+            _ <- roster.headOption.so: captain =>
+              import TeamSecurity.Permission.*
+              memberRepo.setPerms(team.id, captain, Set(Public, Settings, Kick))
+          yield ()
+    yield (uniq.size.atMost(existing.size), created.size)
+
+  // «Логик»: номер, имя и состав каждой команды кубка — для страницы автосбора
+  def cupCurrentTeam: Fu[Map[UserId, String]] =
+    cupBoard.map(_.flatMap((t, ms, _) => ms.map(_ -> t.name)).toMap)
+
+  // «Логик»: опоздавшие без пересборки — нынешние составы не трогаем. into: игрок → команда со
+  // свободным местом; newRosters: новые команды со следующих номеров, капитан — первый в составе.
+  // Возвращает (добавлено в существующие, создано новых команд).
+  def addLateCupPlayers(into: List[(UserId, TeamId)], newRosters: List[List[UserId]])(using
+      me: Me
+  ): Fu[(Int, Int)] =
+    for
+      inCup <- cupMemberIds
+      added <- into
+        .filterNot((u, _) => inCup(u))
+        .sequentially: (u, id) =>
+          teamRepo
+            .byId(id)
+            .flatMap:
+              case Some(team) if team.enabled && !team.isCupFull =>
+                for
+                  _ <- doJoin(team, u)
+                  leaders <- memberRepo.leaders(team.id)
+                  _ <- leaders.isEmpty.so:
+                    import TeamSecurity.Permission.*
+                    memberRepo.setPerms(team.id, u, Set(Public, Settings, Kick))
+                yield 1
+              case _ => fuccess(0)
+      rosters = newRosters.map(_.filterNot(inCup).distinct).filter(_.nonEmpty)
+      all <- teamRepo.coll.list[Team](bdoc("_id" -> bdoc("$regex" -> s"^${Team.cupIdPrefix}")), 1000)
+      next = all.flatMap(_.id.value.stripPrefix(Team.cupIdPrefix).toIntOption).maxOption.fold(1)(_ + 1)
+      _ <- rosters.zipWithIndex.sequentiallyVoid: (roster, i) =>
+        val team = Team
+          .make(
+            id = TeamId(s"${Team.cupIdPrefix}${next + i}"),
+            name = s"Команда ${next + i}",
+            password = none,
+            intro = none,
+            description = Markdown(Team.cupDescription),
+            descPrivate = none,
+            open = true,
+            createdBy = me
+          )
+          .copy(nbMembers = 0, chat = Access.Members)
+        for
+          _ <- teamRepo.coll.insert.one(team)
+          _ = Bus.pub(TeamCreate(team.data))
+          _ <- roster.sequentiallyVoid(doJoin(team, _))
+          _ <- roster.headOption.so: captain =>
+            import TeamSecurity.Permission.*
+            memberRepo.setPerms(team.id, captain, Set(Public, Settings, Kick))
+        yield ()
+    yield (added.sum, rosters.size)
 
   def hasTeams(me: User): Fu[Boolean] = cached.teamIds(me.id).map(_.nonEmpty)
 
@@ -178,11 +367,29 @@ final class TeamApi(
           .has(team, me.userId)
           .flatMap:
             if _ then fuccess(Requesting.Blocklist)
+            else if team.isCup then joinCup(team, ~password)
             else if team.open then
               if team.passwordMatches(~password)
               then doJoin(team, me.userId).inject(Requesting.Joined)
               else fuccess(Requesting.NeedPassword)
             else motivateOrJoin(team, request)
+
+  // Кубковая команда: не больше 5 игроков, первый вступивший — капитан (меняет название и код входа)
+  private def joinCup(stale: Team, password: String)(using me: Me): Fu[Requesting] =
+    teamRepo
+      .byId(stale.id)
+      .flatMap:
+        case None => fuccess(Requesting.Closed)
+        case Some(team) if team.isCupFull => fuccess(Requesting.Closed)
+        case Some(team) if !team.passwordMatches(password) => fuccess(Requesting.NeedPassword)
+        case Some(team) =>
+          for
+            _ <- doJoin(team, me.userId)
+            leaders <- memberRepo.leaders(team.id)
+            _ <- leaders.isEmpty.so:
+              import TeamSecurity.Permission.*
+              memberRepo.setPerms(team.id, me.userId, Set(Public, Settings, Kick))
+          yield Requesting.Joined
 
   private def motivateOrJoin(team: Team, msg: Option[String])(using Me) =
     msg.fold(fuccess[Requesting](Requesting.NeedRequest)): txt =>

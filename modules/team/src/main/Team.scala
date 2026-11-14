@@ -53,6 +53,9 @@ case class Team(
 
   def isClas = ~ofClas
   def acceptsMembers = !isClas
+  // Кубковая команда «Команда N»: админ создаёт с номером, капитан даёт название
+  def isCup = id.value.startsWith(Team.cupIdPrefix)
+  def isCupFull = isCup && nbMembers >= Team.cupMaxMembers
   def doesTeamMessages = !isClas
 
 object Team:
@@ -148,6 +151,152 @@ object Team:
     hideMembers = none,
     flair = none
   )
+
+  val cupIdPrefix = "kubok-"
+  val cupMaxMembers = 5
+  private val cupNameRegex = """(?iu)^\s*команда\s*№?\s*(\d{1,3})\s*$""".r
+
+  def cupIdOf(name: String): Option[TeamId] = name match
+    case cupNameRegex(n) => TeamId(s"$cupIdPrefix${n.toInt}").some
+    case _ => none
+
+  def idFor(name: String): TeamId = cupIdOf(name).getOrElse(nameToId(name))
+
+  // «Логик»: описание обязательно (от 30 знаков) — текст кубка по умолчанию
+  val cupDescription =
+    "Команда Кубка Логика. Первый вступивший становится капитаном и вместе с командой придумывает название."
+
+  // «Логик»: равные по силе команды. Игроки идут от сильного к слабому, каждый — в самую
+  // малочисленную команду, а среди них в ту, где сумма рейтингов меньше. Команд столько, чтобы
+  // сели все (округление вверх): 57 игроков по 5 → 12 команд, 9 по 5 и 3 по 4.
+  def cupDraft[A](players: List[(A, Int)], size: Int): List[List[(A, Int)]] =
+    val s = size.atLeast(1)
+    cupDraftInto(players, (players.size + s - 1) / s)
+
+  // «Логик»: разложить игроков ровно на `teams` команд (до cupMaxMembers в каждой), лишние — запасные
+  def cupDraftInto[A](players: List[(A, Int)], teams: Int): List[List[(A, Int)]] =
+    if teams <= 0 || players.isEmpty then Nil
+    else
+      players
+        .sortBy(-_._2)
+        .take(teams * cupMaxMembers)
+        .foldLeft(Vector.fill(teams)(List.empty[(A, Int)])): (acc, p) =>
+          val i = acc.indices.minBy(i => (acc(i).size, acc(i).map(_._2).sum))
+          acc.updated(i, acc(i) :+ p)
+        .toList
+
+  // «Логик»: опоздавшие без пересборки. Каждый (от сильного к слабому) идёт на свободное место —
+  // в команду, где меньше всего игроков, а среди них в ту, где сумма рейтингов меньше.
+  // Кому места не хватило — новые команды по cupDraft. Возвращает (кто → в какую, новые составы).
+  def cupAddLate[K, A](
+      teams: List[(K, List[Int])],
+      late: List[(A, Int)]
+  ): (List[(A, K)], List[List[(A, Int)]]) =
+    val (placed, _, rest) = late
+      .sortBy(-_._2)
+      .foldLeft((List.empty[(A, K)], teams.toVector, List.empty[(A, Int)])):
+        case ((placed, ts, rest), p) =>
+          val free = ts.indices.filter(i => ts(i)._2.size < cupMaxMembers)
+          if free.isEmpty then (placed, ts, rest :+ p)
+          else
+            val i = free.minBy(i => (ts(i)._2.size, ts(i)._2.sum))
+            (placed :+ (p._1 -> ts(i)._1), ts.updated(i, ts(i)._1 -> (ts(i)._2 :+ p._2)), rest)
+    (placed, cupDraft(rest, cupMaxMembers))
+
+  // «Логик»: состав по одному игроку из каждой турнирной группы A–E (значок logic.group-*).
+  // Команд столько, сколько игроков в самой малочисленной непустой группе; в группе сильнейший
+  // идёт в команду с меньшей суммой. Капитан — сильнейший в команде.
+  val cupGroups = List("A", "B", "C", "D", "E")
+
+  def cupGroupOf(flair: Option[String]): Option[String] =
+    flair
+      .filter(_.startsWith("logic.group-"))
+      .flatMap(_.stripPrefix("logic.group-").headOption)
+      .map(_.toUpper.toString)
+      .filter(cupGroups.contains)
+
+  def cupDraftByGroups[A](players: List[(A, Int, Option[String])], fixed: Int = 0): List[List[(A, Int)]] =
+    val byGroup = cupGroups
+      .map(g => players.filter(_._3.contains(g)).map(p => (p._1, p._2)).sortBy(-_._2))
+      .filter(_.nonEmpty)
+    // fixed > 0: ровно столько команд; если в группе игроков меньше, часть команд будет без этой группы
+    val teams = if fixed > 0 then fixed else byGroup.map(_.size).minOption.getOrElse(0)
+    if teams == 0 then Nil
+    else
+      byGroup
+        .foldLeft(Vector.fill(teams)(List.empty[(A, Int)])): (acc, grp) =>
+          // из группы — не больше одного в команду: сначала в меньшие, среди них в слабейшую
+          grp
+            .take(teams)
+            .foldLeft((acc, Set.empty[Int])): (st, p) =>
+              val (a, used) = st
+              val i = a.indices.filterNot(used).minBy(i => (a(i).size, a(i).map(_._2).sum))
+              (a.updated(i, a(i) :+ p), used + i)
+            ._1
+        .toList
+        .map(_.sortBy(-_._2))
+
+  // «Логик»: сетка плей-офф кубка. slots — команды в порядке посева по сетке, None — пустое место
+  // (сильнейшие проходят круг без игры). Победителя пары берём из её «Командного боя».
+  enum CupSide:
+    case Waiting, Empty
+    case Of(id: TeamId)
+
+  case class CupMatch(round: Int, index: Int, a: CupSide, b: CupSide, winner: Option[TeamId]):
+    def key = s"$round.$index"
+    def pair: Option[(TeamId, TeamId)] = (a, b) match
+      case (CupSide.Of(x), CupSide.Of(y)) => Some(x -> y)
+      case _ => None
+
+  // [1] → [1,2] → [1,4,2,3] → [1,8,4,5,2,7,3,6]: первый встречает последнего, сильные не сходятся рано
+  def cupSeedOrder(n: Int): List[Int] =
+    Iterator
+      .iterate(List(1))(xs => xs.flatMap(s => List(s, xs.size * 2 + 1 - s)))
+      .dropWhile(_.size < n)
+      .next()
+
+  def cupSlots(seeded: List[TeamId]): List[Option[TeamId]] =
+    val n = Iterator.iterate(2)(_ * 2).dropWhile(_ < seeded.size).next()
+    cupSeedOrder(n).map(s => seeded.lift(s - 1))
+
+  def cupBracket(slots: List[Option[TeamId]], played: String => Option[TeamId]): List[List[CupMatch]] =
+    import CupSide.*
+    def mk(r: Int, i: Int, a: CupSide, b: CupSide) =
+      val winner = (a, b) match
+        case (Of(x), Empty) => Some(x)
+        case (Empty, Of(y)) => Some(y)
+        case (Of(x), Of(y)) => played(s"$r.$i").filter(w => w == x || w == y)
+        case _ => None
+      CupMatch(r, i, a, b, winner)
+    def side(m: CupMatch): CupSide =
+      m.winner.fold(if m.a == Empty && m.b == Empty then Empty else Waiting)(Of(_))
+    def next(prev: List[CupMatch]): List[List[CupMatch]] =
+      if prev.sizeIs <= 1 then List(prev)
+      else
+        prev :: next(
+          prev
+            .grouped(2)
+            .toList
+            .zipWithIndex
+            .map: (ms, i) =>
+              mk(prev.head.round + 1, i, side(ms.head), ms.lift(1).fold(Empty)(side))
+        )
+    val first = slots
+      .grouped(2)
+      .toList
+      .zipWithIndex
+      .map: (xs, i) =>
+        def s(o: Option[Option[TeamId]]) = o.flatten.fold(Empty)(Of(_))
+        mk(0, i, s(xs.headOption), s(xs.lift(1)))
+    if first.isEmpty then Nil else next(first)
+
+  // бой пары для показа в сетке (модуль команд не знает турниров)
+  case class CupTour(id: String, startsAt: Instant, started: Boolean, finished: Boolean)
+
+  def cupRoundName(round: Int, nbRounds: Int) = nbRounds - round match
+    case 1 => "Финал"
+    case 2 => "1/2 финала"
+    case k => s"1/${1 << (k - 1)} финала"
 
   def nameToId(name: String) =
     val slug = scalalib.StringOps.slug(name)
