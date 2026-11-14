@@ -15,25 +15,10 @@ final class MsgByLichess(
     lila.core.i18n.Translator
 ):
 
+  // «Логик»: напоминание о 2FA не шлём. Системного пользователя lichess на площадке нет,
+  // отправка падала «Missing convo contact» и роняла /team/X/edit и /class/X (500).
   object twoFactorReminder:
-    def apply(userId: UserId) = cache.get(userId)
-    private val cache = mongoCache[UserId, Boolean](1024, "security:2fa:reminder", 10.days, _.value):
-      loader =>
-        _.expireAfterWrite(3.hours)
-          .maximumSize(8 * 1024)
-          .buildAsyncFuture:
-            loader: userId =>
-              userApi
-                .enabledById(userId)
-                .dmap(_.filter(_.totpSecret.isEmpty))
-                .flatMap:
-                  case Some(user) =>
-                    given play.api.i18n.Lang = user.realLang | lila.core.i18n.defaultLang
-                    val msg =
-                      SystemMsg.standard(userId, lila.core.i18n.I18nKey.tfa.setupReminder.txt())
-                    for _ <- api.systemPost(msg)
-                    yield false
-                  case _ => fuccess(true)
+    def apply(userId: UserId): Fu[Boolean] = fuccess(true)
 
   def lichobileDeprecationMessage(user: lila.core.user.User) =
     given play.api.i18n.Lang = user.realLang | lila.core.i18n.defaultLang
