@@ -197,15 +197,25 @@ final class TeamUi(helpers: Helpers, markdownCache: lila.memo.MarkdownCache):
         planned: Map[Int, Instant],
         plannedRaw: Map[Int, String]
     )(using Context) =
-      TeamPage("Кубок Логика — команды"):
+      // у админа на доске формы плей-офф: meta refresh стирал введённые даты до нажатия кнопки,
+      // поэтому админу — перезагрузка скриптом, которая ждёт, пока поля панели не тронуты
+      val admin = Granter.opt(_.ManageTeam)
+      val reloadJs =
+        """var t=0,p='.kl-cup__bracket-admin',m=function(e){if(e.target.closest&&e.target.closest(p))t=1};""" +
+          """document.addEventListener('input',m,true);document.addEventListener('change',m,true);""" +
+          """setInterval(function(){var a=document.activeElement;""" +
+          """if(!t&&!(a&&a.closest&&a.closest(p)))location.reload()},30000)"""
+      val page = TeamPage("Кубок Логика — команды")
+      (if admin then page.js(Esm("bits", embedJsUnsafeLoadThen(reloadJs))) else page).apply:
         main(cls := "team-list page-menu")(
           menu("kubok".some),
           div(cls := "page-menu__content box box-pad")(
-            meta(httpEquiv := "refresh", content := "30"),
+            (!admin).option(meta(httpEquiv := "refresh", content := "30")),
             h1(cls := "box__top")("Кубок Логика — команды"),
             p(
               s"Команд: ${teams.size}, игроков: ${teams.map(_._2.size).sum}. ",
-              "Страница обновляется сама каждые 30 секунд."
+              "Страница обновляется сама каждые 30 секунд.",
+              admin.option(" Пока вы заполняете поля плей-офф, обновление ждёт.")
             ),
             rules.map(r =>
               st.section(cls := "kl-cup__rules", style := "margin:1em 0 2em")(h2("Регламент"), r)
