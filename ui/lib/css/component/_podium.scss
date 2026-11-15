@@ -12,8 +12,11 @@
 }
 
 .podium {
+  // Логик: на телефоне пьедестал не прячем (в upstream display: none), а ужимаем
   @media (max-width: at-most($xx-small)) {
-    display: none;
+    display: flex;
+    align-items: flex-end;
+    font-size: 0.75em;
   }
 
   > div {
@@ -73,12 +76,6 @@
     height: 7em;
     width: 7em;
     background-image: url('../images/trophy/lichess-bronze-2.svg');
-  }
-
-  @media (max-width: at-most($xx-small)) {
-    .trophy {
-      display: none;
-    }
   }
 
   .user-link {
