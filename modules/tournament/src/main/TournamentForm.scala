@@ -207,9 +207,8 @@ private[tournament] case class TournamentSetup(
   private def sameBots(prev: Option[Tournament]) =
     prev.exists(_.conditions.allowsBots == conditions.allowsBots)
 
-  def realRated: Rated =
-    if realPosition.isDefined && !thematicPosition then Rated.No
-    else rated | Rated.Yes
+  // Логик: свою позицию играют рейтингово (как в швейцарках)
+  def realRated: Rated = rated | Rated.Yes
 
   def realVariant = variant.flatMap(TournamentForm.guessVariant) | chess.variant.Standard
 
