@@ -150,6 +150,17 @@ final class TeamApi(
   // и бои пар (tours: "круг.пара:id турнира").
   private lazy val cupBracketColl = teamRepo.coll.db.collection("kubok_bracket")
 
+  // «Логик»: ответы на опрос в боте MAX «Играешь в бою кубка?» — ник → да/нет.
+  // Пишет scripts/play-connected.sh (logic-infra) из ответа сайта, документ _id "kubok".
+  private lazy val cupRsvpColl = teamRepo.coll.db.collection("kubok_rsvp")
+
+  def cupRsvp: Fu[Map[UserId, Boolean]] =
+    cupRsvpColl
+      .one[Bdoc](bdoc("_id" -> "kubok"))
+      .map(_.fold(Map.empty[UserId, Boolean]): d =>
+        def ids(k: String) = d.getAsOpt[List[String]](k).getOrElse(Nil).map(UserId(_))
+        ids("n").map(_ -> false).toMap ++ ids("y").map(_ -> true))
+
   def cupBracketGet: Fu[Option[(List[Option[TeamId]], Map[String, String])]] =
     cupBracketColl
       .one[Bdoc](bdoc("_id" -> "kubok"))
@@ -208,6 +219,167 @@ final class TeamApi(
           .void
 
   def cupBracketReset: Funit = cupBracketColl.delete.one(bdoc("_id" -> "kubok")).void
+
+  // «Логик»: настройки текущего кубка (один документ "current") и архив прошедших кубков
+  private lazy val cupSettingsColl = teamRepo.coll.db.collection("kubok_cup")
+  private lazy val cupArchiveColl = teamRepo.coll.db.collection("kubok_archive")
+
+  def cupSettings: Fu[Team.CupSettings] =
+    cupSettingsColl
+      .one[Bdoc](bdoc("_id" -> "current"))
+      .map(_.fold(Team.CupSettings()): d =>
+        val z = Team.CupSettings()
+        def int(k: String, v: Int) = d.getAsOpt[Int](k).getOrElse(v)
+        def str(k: String, v: String) = d.getAsOpt[String](k).getOrElse(v)
+        def bool(k: String, v: Boolean) = d.getAsOpt[Boolean](k).getOrElse(v)
+        Team.CupSettings(
+          n = int("n", z.n),
+          name = str("name", z.name),
+          start = d.getAsOpt[String]("start").filter(_.nonEmpty),
+          everyDays = int("everyDays", z.everyDays),
+          connectMin = int("connectMin", z.connectMin),
+          formMin = int("formMin", z.formMin),
+          auto = bool("auto", z.auto),
+          size = int("size", z.size),
+          teams = int("teams", z.teams),
+          perf = str("perf", z.perf),
+          clock = str("clock", z.clock),
+          inc = int("inc", z.inc),
+          minutes = int("minutes", z.minutes),
+          leaders = int("leaders", z.leaders),
+          rated = bool("rated", z.rated),
+          formed = bool("formed", z.formed),
+          since = d.getAsOpt[Instant]("since"),
+          by = d.getAsOpt[String]("by").filter(_.nonEmpty)
+        ))
+
+  def cupSettingsSet(s: Team.CupSettings): Funit =
+    cupSettingsColl.update
+      .one(
+        bdoc("_id" -> "current"),
+        bdoc(
+          "_id" -> "current",
+          "n" -> s.n,
+          "name" -> s.name,
+          "start" -> s.start.getOrElse(""),
+          "everyDays" -> s.everyDays,
+          "connectMin" -> s.connectMin,
+          "formMin" -> s.formMin,
+          "auto" -> s.auto,
+          "size" -> s.size,
+          "teams" -> s.teams,
+          "perf" -> s.perf,
+          "clock" -> s.clock,
+          "inc" -> s.inc,
+          "minutes" -> s.minutes,
+          "leaders" -> s.leaders,
+          "rated" -> s.rated,
+          "formed" -> s.formed,
+          "by" -> s.by.getOrElse("")
+        ) ++ s.since.fold(bdoc())(i => bdoc("since" -> i)),
+        upsert = true
+      )
+      .void
+
+  def cupArchiveAdd(c: Team.CupArchive): Funit =
+    cupArchiveColl.insert
+      .one(
+        bdoc(
+          "_id" -> s"cup-${c.n}-${c.closedAt.toEpochMilli}",
+          "n" -> c.n,
+          "name" -> c.name,
+          "closedAt" -> c.closedAt,
+          "dates" -> c.dates.toList.sortBy(_._1).map((k, v) => s"$k=$v"),
+          "teams" -> c.teams.map(t =>
+            bdoc("id" -> t.id, "name" -> t.name, "members" -> t.members, "captain" -> t.captain.getOrElse(""))
+          ),
+          "slots" -> c.slots.map(_.fold("")(_.value)),
+          "tours" -> c.tours.toList.map((k, v) => s"$k:$v"),
+          "winners" -> c.winners.toList.map((k, v) => s"$k:${v.value}"),
+          "battles" -> c.battles.map(b =>
+            bdoc(
+              "id" -> b.id,
+              "name" -> b.name,
+              "startsAt" -> b.startsAt,
+              "finished" -> b.finished,
+              "standing" -> b.standing.map((t, s) => s"$t:$s")
+            )
+          )
+        )
+      )
+      .void
+
+  def cupArchiveList: Fu[List[Team.CupArchive]] =
+    cupArchiveColl
+      .find(bdoc())
+      .sort(bdoc("closedAt" -> -1))
+      .cursor[Bdoc]()
+      .list(100)
+      .map(_.flatMap: d =>
+        def strs(k: String) = d.getAsOpt[List[String]](k).getOrElse(Nil)
+        def pairs(k: String) = strs(k).flatMap(_.split(':') match
+          case Array(a, b) => Some(a -> b)
+          case _ => None)
+        for
+          n <- d.getAsOpt[Int]("n")
+          closedAt <- d.getAsOpt[Instant]("closedAt")
+        yield Team.CupArchive(
+          n = n,
+          name = d.getAsOpt[String]("name").getOrElse("Кубок Логика"),
+          closedAt = closedAt,
+          dates = strs("dates")
+            .flatMap(_.split('=') match
+              case Array(k, v) => k.toIntOption.map(_ -> v)
+              case _ => None)
+            .toMap,
+          teams = d
+            .getAsOpt[List[Bdoc]]("teams")
+            .getOrElse(Nil)
+            .map: t =>
+              Team.CupArchiveTeam(
+                t.getAsOpt[String]("id").getOrElse(""),
+                t.getAsOpt[String]("name").getOrElse(""),
+                t.getAsOpt[List[String]]("members").getOrElse(Nil),
+                t.getAsOpt[String]("captain").filter(_.nonEmpty)
+              ),
+          slots = strs("slots").map(s => Option.when(s.nonEmpty)(TeamId(s))),
+          tours = pairs("tours").toMap,
+          winners = pairs("winners").map((k, v) => k -> TeamId(v)).toMap,
+          battles = d
+            .getAsOpt[List[Bdoc]]("battles")
+            .getOrElse(Nil)
+            .flatMap: b =>
+              for
+                id <- b.getAsOpt[String]("id")
+                startsAt <- b.getAsOpt[Instant]("startsAt")
+              yield Team.CupArchiveBattle(
+                id,
+                b.getAsOpt[String]("name").getOrElse(""),
+                startsAt,
+                b.getAsOpt[Boolean]("finished").getOrElse(false),
+                b.getAsOpt[List[String]]("standing")
+                  .getOrElse(Nil)
+                  .flatMap(_.split(':') match
+                    case Array(t, s) => s.toIntOption.map(t -> _)
+                    case _ => None)
+              )
+        ))
+
+  // «Логик»: новый кубок — команды пустеют и получают прежние названия «Команда N»
+  def cupRenameDefault: Funit =
+    teamRepo.coll
+      .list[Team](bdoc("_id" -> bdoc("$regex" -> s"^${Team.cupIdPrefix}")), 1000)
+      .flatMap:
+        _.sequentiallyVoid: t =>
+          t.id.value
+            .stripPrefix(Team.cupIdPrefix)
+            .toIntOption
+            .so: n =>
+              val name = s"Команда $n"
+              (t.name != name).so:
+                teamRepo.coll.update
+                  .one(bdoc("_id" -> t.id), bdoc("$set" -> bdoc("name" -> name)))
+                  .map(_ => cached.lightCache.invalidate(t.id))
 
   // «Логик»: кто уже играет в открытых командах кубка — в автосбор их не берём
   def cupMemberIds: Fu[Set[UserId]] = for
@@ -271,10 +443,10 @@ final class TeamApi(
 
   // «Логик»: опоздавшие без пересборки — нынешние составы не трогаем. into: игрок → команда со
   // свободным местом; newRosters: новые команды со следующих номеров, капитан — первый в составе.
-  // Возвращает (добавлено в существующие, создано новых команд).
+  // Возвращает (добавлено в существующие, id созданных команд).
   def addLateCupPlayers(into: List[(UserId, TeamId)], newRosters: List[List[UserId]])(using
       me: Me
-  ): Fu[(Int, Int)] =
+  ): Fu[(Int, List[TeamId])] =
     for
       inCup <- cupMemberIds
       added <- into
@@ -295,19 +467,8 @@ final class TeamApi(
       rosters = newRosters.map(_.filterNot(inCup).distinct).filter(_.nonEmpty)
       all <- teamRepo.coll.list[Team](bdoc("_id" -> bdoc("$regex" -> s"^${Team.cupIdPrefix}")), 1000)
       next = all.flatMap(_.id.value.stripPrefix(Team.cupIdPrefix).toIntOption).maxOption.fold(1)(_ + 1)
-      _ <- rosters.zipWithIndex.sequentiallyVoid: (roster, i) =>
-        val team = Team
-          .make(
-            id = TeamId(s"${Team.cupIdPrefix}${next + i}"),
-            name = s"Команда ${next + i}",
-            password = none,
-            intro = none,
-            description = Markdown(Team.cupDescription),
-            descPrivate = none,
-            open = true,
-            createdBy = me
-          )
-          .copy(nbMembers = 0, chat = Access.Members)
+      created <- rosters.zipWithIndex.sequentially: (roster, i) =>
+        val team = cupNewTeam(next + i)
         for
           _ <- teamRepo.coll.insert.one(team)
           _ = Bus.pub(TeamCreate(team.data))
@@ -315,8 +476,75 @@ final class TeamApi(
           _ <- roster.headOption.so: captain =>
             import TeamSecurity.Permission.*
             memberRepo.setPerms(team.id, captain, Set(Public, Settings, Kick))
-        yield ()
-    yield (added.sum, rosters.size)
+        yield team.id
+    yield (added.sum, created)
+
+  // «Логик»: ручная правка состава. Игрок уходит из своей команды кубка и встаёт в выбранную:
+  // Some(Some(id)) — в команду id, Some(None) — в новую команду, None — просто убрать.
+  // Ушёл последний капитан — капитаном станет оставшийся; в команду без капитана игрок встаёт капитаном.
+  // Right — (команда, куда встал игрок; создана ли она), Left — текст ошибки.
+  def cupMove(u: UserId, to: Option[Option[TeamId]])(using
+      me: Me
+  ): Fu[Either[String, Option[(Team, Boolean)]]] =
+    import TeamSecurity.Permission.*
+    def captain(id: TeamId, c: UserId) = memberRepo.setPerms(id, c, Set(Public, Settings, Kick))
+    for
+      board <- cupBoard
+      target = to.flatten.flatMap(id => board.find(_._1.id == id))
+      from = board.filter(_._2.contains(u))
+      res <-
+        if to.exists(_.isDefined) && target.isEmpty then fuccess(Left("Команда не найдена"))
+        else if target.exists(t => from.exists(_._1.id == t._1.id)) then
+          fuccess(Left("Ученик уже в этой команде"))
+        else if target.exists(_._2.sizeIs >= Team.cupMaxMembers) then
+          fuccess(Left(s"В команде уже ${Team.cupMaxMembers} игроков"))
+        else if to.isEmpty && from.isEmpty then fuccess(Left("Ученик и так не в команде"))
+        else
+          for
+            _ <- from.sequentiallyVoid: (team, members, leaders) =>
+              val rest = members.filterNot(_ == u)
+              for
+                _ <- doQuit(team, u)
+                _ <- (leaders.forall(_ == u) && rest.nonEmpty).so(captain(team.id, rest.head))
+              yield ()
+            joined <- to match
+              case None => fuccess(none)
+              case Some(Some(_)) =>
+                target.so: (team, _, leaders) =>
+                  for
+                    _ <- doJoin(team, u)
+                    _ <- leaders.isEmpty.so(captain(team.id, u))
+                  yield (team, false).some
+              case Some(None) =>
+                for
+                  all <- teamRepo.coll
+                    .list[Team](bdoc("_id" -> bdoc("$regex" -> s"^${Team.cupIdPrefix}")), 1000)
+                  next = all
+                    .flatMap(_.id.value.stripPrefix(Team.cupIdPrefix).toIntOption)
+                    .maxOption
+                    .fold(1)(_ + 1)
+                  team = cupNewTeam(next)
+                  _ <- teamRepo.coll.insert.one(team)
+                  _ = Bus.pub(TeamCreate(team.data))
+                  _ <- doJoin(team, u)
+                  _ <- captain(team.id, u)
+                yield (team, true).some
+          yield Right(joined)
+    yield res
+
+  private def cupNewTeam(n: Int)(using me: Me) =
+    Team
+      .make(
+        id = TeamId(s"${Team.cupIdPrefix}$n"),
+        name = s"Команда $n",
+        password = none,
+        intro = none,
+        description = Markdown(Team.cupDescription),
+        descPrivate = none,
+        open = true,
+        createdBy = me
+      )
+      .copy(nbMembers = 0, chat = Access.Members)
 
   def hasTeams(me: User): Fu[Boolean] = cached.teamIds(me.id).map(_.nonEmpty)
 

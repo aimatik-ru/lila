@@ -298,6 +298,54 @@ object Team:
     case 2 => "1/2 финала"
     case k => s"1/${1 << (k - 1)} финала"
 
+  // «Логик»: шаблон кубка. Кубок в каждый момент один; круги идут раз в everyDays дней от start.
+  // За connectMin минут до круга ученики подключаются, за formMin площадка (auto) сама собирает
+  // команды из тех, кто онлайн, проводит жеребьёвку и создаёт бои первого круга. Команды — на весь
+  // кубок; бои следующих кругов создаются сами, как только в паре известны обе команды.
+  case class CupSettings(
+      n: Int = 1,
+      name: String = "Кубок Логика",
+      start: Option[String] = None, // datetime-local, МСК — старт первого круга
+      everyDays: Int = 7,
+      connectMin: Int = 30,
+      formMin: Int = 20,
+      auto: Boolean = true,
+      size: Int = cupMaxMembers, // игроков в команде; 0 — по одному из каждой группы A–E
+      teams: Int = 0, // 0 — сколько получится
+      perf: String = "rapid",
+      clock: String = "5",
+      inc: Int = 3,
+      minutes: Int = 40,
+      leaders: Int = 2,
+      rated: Boolean = true,
+      formed: Boolean = false, // команды этого кубка уже собраны
+      since: Option[Instant] = None, // когда начат этот кубок (для поиска его боёв)
+      by: Option[String] = None // админ, от имени которого площадка создаёт бои
+  ):
+    def title = s"$name №$n"
+
+  // «Логик»: прошедший кубок в истории — снимок команд, сетки и всех боёв на момент закрытия
+  case class CupArchiveTeam(id: String, name: String, members: List[String], captain: Option[String])
+  case class CupArchiveBattle(
+      id: String,
+      name: String,
+      startsAt: Instant,
+      finished: Boolean,
+      standing: List[(String, Int)] // id команды → очки, по местам
+  )
+  case class CupArchive(
+      n: Int,
+      name: String,
+      closedAt: Instant,
+      dates: Map[Int, String],
+      teams: List[CupArchiveTeam],
+      slots: List[Option[TeamId]],
+      tours: Map[String, String],
+      winners: Map[String, TeamId],
+      battles: List[CupArchiveBattle]
+  ):
+    def title = s"$name №$n"
+
   def nameToId(name: String) =
     val slug = scalalib.StringOps.slug(name)
     // if most chars are not latin, go for random slug
