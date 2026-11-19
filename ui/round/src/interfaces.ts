@@ -125,6 +125,14 @@ export interface RoundData extends GameData {
   expiration?: Expiration;
   local?: RoundProxy;
   noab?: boolean;
+  logicTraps?: LogicTrap[]; // Логик: ловушки в дебюте, только игроку
+}
+
+export interface LogicTrap {
+  board: string;
+  uci: string;
+  hint: string;
+  block?: boolean;
 }
 
 export interface Expiration {

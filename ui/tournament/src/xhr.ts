@@ -102,3 +102,17 @@ export const teamInfo = (ctrl: TournamentController, teamId: string) =>
     ctrl.setTeamInfo(data);
     ctrl.redraw();
   }, onFail);
+
+// «Логик»: полный список клубов командного боя (сервер в данных турнира отдаёт только первую десятку).
+// reload приходит каждые несколько секунд; лишние вызовы отбрасываются, последний ждёт паузу,
+// поэтому список грузится сразу и затем не чаще раза в 30 с, а не вторым запросом на каждый цикл.
+export const allTeams = throttlePromiseDelay(
+  () => 30_000,
+  (ctrl: TournamentController) =>
+    xhr.json(`/api/tournament/${ctrl.data.id}/teams`).then(data => {
+      if (Array.isArray(data?.teams)) {
+        ctrl.allTeams = data.teams;
+        ctrl.redraw();
+      }
+    }),
+);

@@ -27,10 +27,10 @@ import { type SocketSendOpts } from 'lib/socket';
 import { storage, once, storedBooleanProp, type LichessBooleanStorage } from 'lib/storage';
 import type { NodeCrazy } from 'lib/tree/types';
 import type { QuestionOpts } from 'lib/types';
-import { toggleZenMode } from 'lib/view/zen';
 import { domDialog } from 'lib/view';
-import { json as xhrJson, text as xhrText } from 'lib/xhr';
+import { toggleZenMode } from 'lib/view/zen';
 import * as wakeLock from 'lib/wakeLock';
+import { text as xhrText } from 'lib/xhr';
 
 import * as atomic from './atomic';
 import * as blur from './blur';
@@ -50,8 +50,10 @@ import type {
   ApiMove,
   ApiEnd,
   EventsWithPayload,
+  LogicTrap,
 } from './interfaces';
 import { init as keyboardInit } from './keyboard';
+import { settleWithin, refundWaitMs } from './logicTrap';
 import MoveOn from './moveOn';
 import Server from './server';
 import { make as makeSocket, type RoundSocket } from './socket';
@@ -359,17 +361,14 @@ export default class RoundController implements MoveRootCtrl {
   };
 
   // Логик: ловушки в дебюте. Перед опасным ходом показываем окно, время на раздумье сервер возвращает.
-  private logicTraps: { board: string; uci: string; hint: string; block?: boolean }[] = [];
+  private logicTraps: LogicTrap[] = [];
 
-  private loadLogicTraps = (): void => {
+  // список приходит в данных партии (только игроку, только обычные шахматы и партия из позиции);
+  // отдельного запроса нет, поэтому сбой сети не отключает запрет хода
+  private readonly loadLogicTraps = (): void => {
     const d = this.data;
-    // партия из позиции (кнопка «Продолжить отсюда») тоже обычные шахматы
     if (d.player.spectator || !d.player.user || !game.playable(d)) return;
-    if (d.game.variant.key !== 'standard' && d.game.variant.key !== 'fromPosition') return;
-    xhrJson(`/${d.game.id}/note?logicTraps=1`).then(
-      traps => (this.logicTraps = Array.isArray(traps) ? traps : []),
-      () => {},
-    );
+    if (Array.isArray(d.logicTraps)) this.logicTraps = d.logicTraps;
   };
 
   private logicTrapIndex = (uci: string): number => {
@@ -406,11 +405,14 @@ export default class RoundController implements MoveRootCtrl {
     });
     const ok = !trap.block && dlg.returnValue === 'ok';
     const ms = Math.round(performance.now() - started);
-    await xhrText(`/${this.data.game.id}/note?logicTrap=${index}&ms=${ms}`, { method: 'post' }).catch(
-      () => {},
-    );
-    if (ok) proceed();
-    else {
+    const refund = xhrText(`/${this.data.game.id}/note?logicTrap=${index}&ms=${ms}`, { method: 'post' });
+    if (ok) {
+      // возврат времени сервер принимает до хода, поэтому ждём запрос, но не дольше refundWaitMs
+      await settleWithin(refund, refundWaitMs);
+      proceed();
+    } else {
+      // запрет и отмена: позицию возвращаем сразу, запрос уходит в фоне
+      refund.catch(() => {});
       this.jump(this.ply);
       this.redraw();
     }
