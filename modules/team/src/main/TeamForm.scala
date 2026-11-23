@@ -35,14 +35,17 @@ final private class TeamForm(teamRepo: TeamRepo, captcha: CaptchaApi, flairApi: 
       Fields.chat,
       Fields.forum,
       "flair" -> flairApi.formField(),
-      Fields.gameId,
-      Fields.move
+      // «Логик»: команды создают только админы (LogicAdminOnly), капча им не нужна
+      "gameId" -> ignored(GameId("")),
+      "move" -> ignored("")
     )(TeamSetup.apply)(unapply)
       .verifying("team:teamAlreadyExists", d => !teamExists(d).await(1.seconds, "teamExists"))
-      .verifying(lila.core.captcha.failMessage, captcha.validateSync)
 
-  def edit(team: Team)(using Me) = Form(
+  def edit(team: Team)(using me: Me) = Form(
     mapping(
+      "name" -> optional(
+        cleanText(minLength = 3, maxLength = 40).verifying(mustNotContainLichess(me.isVerified))
+      ),
       Fields.password,
       Fields.intro,
       Fields.description,
@@ -55,6 +58,7 @@ final private class TeamForm(teamRepo: TeamRepo, captcha: CaptchaApi, flairApi: 
     )(TeamEdit.apply)(unapply)
   ).fill:
     TeamEdit(
+      name = team.isCup.option(team.name),
       password = team.password,
       intro = team.intro,
       description = team.description,
@@ -119,7 +123,7 @@ final private class TeamForm(teamRepo: TeamRepo, captcha: CaptchaApi, flairApi: 
   val subscribe = Form(single("subscribe" -> optional(boolean)))
 
   private def teamExists(setup: TeamSetup) =
-    teamRepo.coll.exists(bid(Team.nameToId(setup.name)))
+    teamRepo.coll.exists(bid(Team.idFor(setup.name)))
 
 private case class TeamSetup(
     name: String,
@@ -137,6 +141,7 @@ private case class TeamSetup(
   def isOpen = !request
 
 private case class TeamEdit(
+    name: Option[String],
     password: Option[String],
     intro: Option[String],
     description: Markdown,

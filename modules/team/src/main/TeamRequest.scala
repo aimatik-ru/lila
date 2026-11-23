@@ -40,3 +40,5 @@ object RequestWithUser:
 
 enum Requesting:
   case Joined, NeedRequest, NeedPassword, Blocklist, Closed
+  // «Логик»: ученик уже состоит в другой команде кубка
+  case OtherCup(name: String)

@@ -24,10 +24,9 @@ final class TeamFormUi(helpers: Helpers, bits: TeamUi)(
           postForm(cls := "form3", action := routes.Team.create)(
             form3.globalError(form),
             form3.group(form("name"), trans.site.name())(form3.input(_)),
-            entryFields(form, none),
-            textFields(form, none),
+            entryFields(withDefaultDescription(form), none),
+            textFields(withDefaultDescription(form), none),
             accessFields(form, none),
-            renderCaptcha(form, captcha),
             form3.actions(
               a(href := routes.Team.home(1))(trans.site.cancel()),
               form3.submit(trt.newTeam())
@@ -35,6 +34,13 @@ final class TeamFormUi(helpers: Helpers, bits: TeamUi)(
           )
         )
       )
+
+  // «Логик»: описание обязательно (от 30 знаков) — подставляем текст кубка, админ может поправить
+  private val cupDescription = Team.cupDescription
+
+  private def withDefaultDescription(form: Form[?]): Form[?] =
+    if form.data.get("description").exists(_.trim.nonEmpty) then form
+    else form.copy(data = form.data + ("description" -> cupDescription))
 
   def edit(t: Team, form: Form[?], member: Option[TeamMember])(using Context, Me) =
     TeamPage(s"Редактирование команды ${t.name}").markdownTextarea.js(Esm("team")):
@@ -45,6 +51,15 @@ final class TeamFormUi(helpers: Helpers, bits: TeamUi)(
           standardFlash,
           t.enabled.option(
             postForm(cls := "form3", action := routes.Team.update(t.id))(
+              t.isCup.option(
+                form3.group(
+                  form("name"),
+                  "Название команды",
+                  help = frag(
+                    "Придумайте название всей командой. Без грубых слов: администратор его проверит."
+                  ).some
+                )(form3.input(_)(maxlength := 40))
+              ),
               flairField(form, t.some),
               entryFields(form, t.some),
               textFields(form, t.some),
