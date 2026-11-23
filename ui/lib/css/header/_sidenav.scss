@@ -7,6 +7,7 @@
 // одной колонкой, с теми же иконками разделов (как мобильный chess.com).
 
 $sidenav-width: 168px;
+$sidenav-compact-width: 64px;
 
 @mixin sidenav-icon-base {
   flex: 0 0 1.6rem;
@@ -50,10 +51,10 @@ $sidenav-width: 168px;
   // Ширина колонки видна всем расчётам страницы (см. abstract/_uniboard.scss).
   // В zen-режиме .site-title-nav скрыт страницей, поэтому отступа нет.
   body:not(.zen):has(> #top) {
-    ---sidenav-w: #{$sidenav-width};
+    ---sidenav-w: #{$sidenav-compact-width};
     ---site-header-sticky-padding: max(
       0px,
-      calc((100vw - #{$sidenav-width} - #{$site-header-sticky-max-width}) / 2)
+      calc((100vw - #{$sidenav-compact-width} - #{$site-header-sticky-max-width}) / 2)
     );
 
     padding-inline-start: var(---sidenav-w);
@@ -90,7 +91,7 @@ $sidenav-width: 168px;
     top: 0;
     bottom: 0;
     inset-inline-start: 0;
-    width: $sidenav-width;
+    width: $sidenav-compact-width;
     flex-flow: column nowrap;
     align-items: stretch;
     background: var(---sidenav-bg);
@@ -98,6 +99,25 @@ $sidenav-width: 168px;
 
     @include if-transp {
       @include back-blur;
+    }
+
+    // Раскрытие поверх страницы не меняет размер доски и положение фигур.
+    &:hover,
+    &:focus-within {
+      width: $sidenav-width;
+    }
+
+    &:not(:hover, :focus-within) {
+      .site-logo {
+        height: 44px;
+      }
+
+      #topnav section > a {
+        justify-content: center;
+        gap: 0;
+        font-size: 0;
+        overflow: hidden;
+      }
     }
   }
 
