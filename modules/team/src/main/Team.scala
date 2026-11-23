@@ -164,7 +164,7 @@ object Team:
 
   // «Логик»: описание обязательно (от 30 знаков) — текст кубка по умолчанию
   val cupDescription =
-    "Команда Кубка Логика. Первый вступивший становится капитаном и вместе с командой придумывает название."
+    "Команда Кубка Логика. Состав и капитана определит жеребьёвка перед стартом. Название капитан придумает вместе с командой."
 
   // «Логик»: равные по силе команды. Игроки идут от сильного к слабому, каждый — в самую
   // малочисленную команду, а среди них в ту, где сумма рейтингов меньше. Команд столько, чтобы
@@ -293,6 +293,31 @@ object Team:
   // бой пары для показа в сетке (модуль команд не знает турниров)
   case class CupTour(id: String, startsAt: Instant, started: Boolean, finished: Boolean)
 
+  // «Логик»: бой текущего круга для блока «Сейчас играют»: счёт команд по местам
+  case class CupLive(
+      key: String, // ключ сетки: "круг.пара" или "out<круг>" (товарищеский бой)
+      id: String,
+      startsAt: Instant,
+      finishesAt: Instant,
+      started: Boolean,
+      finished: Boolean,
+      scores: List[(TeamId, Int)],
+      playing: Int // партий идёт сейчас (по игрокам за доской / 2)
+  )
+
+  // «Логик»: пульт тура для администратора
+  case class CupPult(
+      phase: Cup.Phase,
+      nbRounds: Int,
+      auto: Boolean,
+      closeAt: Option[Instant], // когда составы закроются сами
+      missed: Boolean,
+      warnings: List[String],
+      undecided: List[CupMatch], // пары сыгранного круга без победителя
+      tours: Map[String, String], // ключ сетки → id боя текущего круга
+      log: List[(Instant, String, String)]
+  )
+
   def cupRoundName(round: Int, nbRounds: Int) = nbRounds - round match
     case 1 => "Финал"
     case 2 => "1/2 финала"
@@ -316,7 +341,7 @@ object Team:
       clock: String = "5",
       inc: Int = 3,
       minutes: Int = 40,
-      leaders: Int = 2,
+      leaders: Int = 5,
       rated: Boolean = true,
       formed: Boolean = false, // команды этого кубка уже собраны
       since: Option[Instant] = None, // когда начат этот кубок (для поиска его боёв)
@@ -342,9 +367,11 @@ object Team:
       slots: List[Option[TeamId]],
       tours: Map[String, String],
       winners: Map[String, TeamId],
-      battles: List[CupArchiveBattle]
+      battles: List[CupArchiveBattle],
+      label: Option[String] = None, // своя подпись вместо «Кубок Логика №N» (например, тестовый тур)
+      rules: Option[String] = None // регламент кубка (HTML страницы kubok-rules на момент закрытия)
   ):
-    def title = s"$name №$n"
+    def title = label.getOrElse(s"$name №$n")
 
   def nameToId(name: String) =
     val slug = scalalib.StringOps.slug(name)
