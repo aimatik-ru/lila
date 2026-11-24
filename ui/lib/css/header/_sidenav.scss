@@ -236,6 +236,19 @@ $sidenav-compact-width: 64px;
       height: min(40px, calc($site-header-height - 12px));
       transform: none;
     }
+
+    // как в upstream: там на телефоне скрыт весь .site-title вместе со смайликом
+    @media (max-width: at-most($xx-small)) {
+      .kiddo {
+        display: none;
+      }
+    }
+  }
+
+  // логотип занимает место: длинный ник сжимается, а не распирает страницу вбок
+  .site-buttons,
+  .site-buttons .dasher {
+    min-width: 0;
   }
 
   // «Войти» и «Регистрация» в одну строку рядом с логотипом
