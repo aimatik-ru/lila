@@ -70,3 +70,16 @@ class CupTest extends munit.FunSuite:
     assertEquals(keyRound("2.1"), Some(2))
     assertEquals(keyRound("out0"), Some(0))
     assertEquals(keyRound("x"), None)
+
+  test("move: all picked players must fit, those already in the team take no extra place"):
+    assertEquals(moveError(Set("x"), List("a", "b"), 5), None)
+    assertEquals(moveError(Set("x", "y", "z"), List("a", "b"), 5), None)
+    assertEquals(moveError(Set("a", "x"), List("a", "b", "c", "d"), 5), None)
+    assertEquals(moveError(Set("a", "b"), List("a", "b", "c", "d", "e"), 5), None)
+    assert(moveError(Set("x", "y"), List("a", "b", "c", "d"), 5).isDefined)
+    assert(moveError(Set("x"), List("a", "b", "c", "d", "e"), 5).isDefined)
+
+  test("move: nobody picked is an error, a new team takes up to max"):
+    assert(moveError(Set.empty[String], List("a"), 5).isDefined)
+    assertEquals(moveError((1 to 5).toSet, Nil, 5), None)
+    assert(moveError((1 to 6).toSet, Nil, 5).isDefined)

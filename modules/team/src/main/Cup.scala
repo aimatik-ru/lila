@@ -95,6 +95,16 @@ object Cup:
             (placed :+ (p._1 -> ts(i)._1), ts.updated(i, ts(i)._1 -> (ts(i)._2 :+ p._2)), rest)
     (placed, rest)
 
+  // Перенос отмеченных учеников в команду (members — её нынешний состав, у новой команды пусто):
+  // либо помещаются все, либо не переносим никого. Текст ошибки или None.
+  def moveError[U](picked: Set[U], members: List[U], max: Int): Option[String] =
+    val coming = picked -- members
+    val free = (max - members.distinct.size).max(0)
+    if picked.isEmpty then Some("Отметьте хотя бы одного ученика")
+    else if coming.sizeIs <= free then None
+    else if free == 0 then Some(s"В команде уже $max игроков. Сначала уберите кого-нибудь из неё.")
+    else Some(s"Отмечено учеников: ${coming.size}, а свободных мест в команде: $free. Никто не перенесён.")
+
   // Ученики, которые числятся в нескольких командах: ученик → команды
   def duplicates[K, U](rosters: List[(K, List[U])]): Map[U, List[K]] =
     rosters

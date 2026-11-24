@@ -230,17 +230,13 @@ final class Team(env: Env) extends LilaController(env):
       )
     )
 
-  // «Логик»: опоздавшие — без пересборки составов (l = отмеченные ученики).
-  private val cupLateForm =
-    import play.api.data.Forms.*
-    Form(tuple("late" -> default(boolean, false), "perf" -> default(text, "rapid"), "l" -> list(text)))
-
-  private def cupLatePost(perfKey: String, ls: List[String])(using ctx: BodyContext[?], me: Me): Fu[Result] =
+  // «Логик»: отмеченные ученики без команды — на свободные места, нынешние составы не меняются
+  private def cupLatePost(perfKey: String, picked: List[UserId])(using me: Me): Fu[Result] =
     val perf = cupPerf(perfKey)
     for
       school <- env.team.memberRepo.userIdsByTeam(TeamId("logic-all")).map(_.toSet)
       inCup <- api.cupMemberIds
-      wanted = ls.flatMap(UserStr.read).map(_.id).filter(u => school(u) && !inCup(u)).distinct
+      wanted = picked.filter(u => school(u) && !inCup(u))
       players <- cupPlayers(wanted, perf).map(_.filterNot(_._3))
       board <- api.cupBoard
       ratings <- cupPlayers(board.flatMap(_._2), perf).map(_.map(p => p._1 -> p._2).toMap)
@@ -252,43 +248,84 @@ final class Team(env: Env) extends LilaController(env):
       res <- api.addLateCupPlayers(into, Nil)
     yield
       val added = res._1
-      val back = Redirect(routes.Team.edit(TeamId("kubok")))
+      val back = cupEditBack("cup-pool")
       val noRoom =
         if rest.isEmpty then ""
-        else s" Не хватило мест: ${rest.size}. Создайте для них команду кнопкой «Новая команда»."
+        else s" Не хватило мест: ${rest.size}. Создайте для них команду кнопкой «В новую команду»."
       if added == 0 && rest.isEmpty then
-        back.flashFailure("Никого не добавлено: отметьте учеников, которых нет в командах.")
+        back.flashFailure("Никого не добавлено: отметьте учеников из списка «Без команды».")
       else if added == 0 then back.flashFailure("Никого не добавлено." + noRoom)
       else back.flashSuccess(s"Добавлено в команды: $added." + noRoom)
 
-  // «Логик»: ручная перестановка ученика (to: id команды, "new" — новая команда, "none" — убрать).
+  // «Логик»: редактор составов. m — отмеченные ученики; to — куда: id команды, "new" — новая команда,
+  // "none" — убрать, "spread" — на свободные места, "dest" — команда из списка dest.
   private val cupMoveForm =
     import play.api.data.Forms.*
-    Form(tuple("move" -> default(boolean, false), "u" -> default(text, ""), "to" -> default(text, "")))
+    Form(
+      tuple(
+        "move" -> default(boolean, false),
+        "m" -> list(text),
+        "to" -> default(text, ""),
+        "dest" -> default(text, ""),
+        "perf" -> default(text, "rapid")
+      )
+    )
 
-  private def cupMovePost(uStr: String, toStr: String)(using ctx: BodyContext[?], me: Me): Fu[Result] =
-    val back = Redirect(routes.Team.edit(TeamId("kubok")))
-    val to: Option[Option[TeamId]] = toStr match
-      case "none" => none
-      case "new" => some(none)
-      case id => some(TeamId(id).some)
-    UserStr.read(uStr).map(_.id) match
-      case None => fuccess(back.flashFailure("Выберите ученика"))
-      case Some(u) =>
-        for
-          school <- env.team.memberRepo.userIdsByTeam(TeamId("logic-all"))
-          res <-
-            if !school.contains(u) then fuccess(Left("Ученика нет в клубе «ШК Логик»"))
-            else if toStr.isEmpty then fuccess(Left("Выберите, куда поставить ученика"))
-            else api.cupMove(u, to)
-          battles <- res.toOption.flatten.filter(_._2).so((t, _) => cupAddToBattles(List(t.id)))
-          name <- env.user.lightUserApi.async(u).map(_.fold(u.value)(_.name.value))
-        yield res match
-          case Left(err) => back.flashFailure(err)
-          case Right(None) => back.flashSuccess(s"$name убран(а) из команды")
-          case Right(Some((t, false))) => back.flashSuccess(s"$name теперь в команде «${t.name}»")
-          case Right(Some((t, true))) =>
-            back.flashSuccess(s"$name теперь в новой команде «${t.name}». ${cupBattlesNote(battles)}")
+  // назад в редактор, к той карточке, с которой работали
+  private def cupEditBack(anchor: String) = Redirect(s"${routes.Team.edit(TeamId("kubok"))}#$anchor")
+
+  private def cupMovePost(ms: List[String], to: String, dest: String, perfKey: String)(using
+      me: Me
+  ): Fu[Result] =
+    val picked = ms.flatMap(UserStr.read).map(_.id).distinct
+    val where = if to == "dest" then dest else to
+    def fail(err: String) = fuccess(cupEditBack("cup-bar").flashFailure(err))
+    if where.isEmpty then fail("Выберите команду")
+    else if picked.isEmpty then fail("Отметьте хотя бы одного ученика")
+    else if where == "spread" then cupLatePost(perfKey, picked)
+    else
+      for
+        school <- env.team.memberRepo.userIdsByTeam(TeamId("logic-all")).map(_.toSet)
+        board <- api.cupBoard
+        inCup = board.flatMap(_._2).toSet
+        target = board.find(_._1.id.value == where)
+        err =
+          if picked.exists(u => !school(u) && !inCup(u)) then "Ученика нет в клубе «ШК Логик»".some
+          else if where == "none" then none
+          else if where != "new" && target.isEmpty then "Команда не найдена".some
+          else lila.team.Cup.moveError(picked.toSet, target.so(_._2), TeamModel.cupMaxMembers)
+        res <- err match
+          case Some(e) => fail(e)
+          case None => cupMoveAll(picked, where)
+      yield res
+
+  private def cupMoveAll(picked: List[UserId], where: String)(using me: Me): Fu[Result] =
+    def move(us: List[UserId], to: Option[Option[TeamId]]) =
+      us.sequentially(u => api.cupMove(u, to).map(u -> _))
+    for
+      done <- where match
+        case "none" => move(picked, none)
+        case "new" =>
+          // первый создаёт команду, остальные встают в неё
+          move(picked.take(1), some(none)).flatMap: first =>
+            first
+              .collectFirst { case (_, Right(Some((t, _)))) => t.id }
+              .so(id => move(picked.drop(1), some(id.some)))
+              .map(first ::: _)
+        case id => move(picked, some(TeamId(id).some))
+      moved = done.collect { case (u, Right(_)) => u }
+      team = done.collectFirst { case (_, Right(Some((t, created)))) => (t, created) }
+      battles <- team.filter(_._2).so((t, _) => cupAddToBattles(List(t.id)))
+      names <- env.user.lightUserApi.asyncManyFallback(moved).map(_.map(_.name.value).mkString(", "))
+    yield team match
+      case _ if moved.isEmpty =>
+        val errs = done.collect { case (_, Left(e)) => e }.distinct.mkString(". ")
+        cupEditBack("cup-bar").flashFailure(s"Никто не перенесён. $errs")
+      case Some((t, created)) =>
+        cupEditBack(s"cup-t-${t.id}").flashSuccess(
+          s"В команде «${t.name}»: $names." + (if created then s" ${cupBattlesNote(battles)}" else "")
+        )
+      case None => cupEditBack("cup-pool").flashSuccess(s"Теперь без команды: $names.")
 
   // «Логик»: новые команды сразу встают в ещё не закончившиеся общие бои кубка.
   // В сетку плей-офф и в бои пар их не ставим: там пары уже определены.
@@ -320,9 +357,8 @@ final class Team(env: Env) extends LilaController(env):
       yield done.sum
 
   private def cupBattlesNote(battles: Int) =
-    (if battles > 0 then s"Новые команды добавлены в общий бой кубка ($battles). "
-     else "Общего боя, который ещё не закончился, нет. ") +
-      "В сетку плей-офф новые команды не попадают: для этого проведите жеребьёвку заново."
+    (if battles > 0 then "Команда добавлена в общий бой кубка. " else "") +
+      "В сетку она попадёт при старте первого круга. Если первый круг уже сыгран, будет играть товарищеские бои."
 
   private def cupPerf(key: String) =
     lila.rating
@@ -359,8 +395,10 @@ final class Team(env: Env) extends LilaController(env):
         board <- api.cupBoard
         teams = if teamsArg < 0 then board.size else teamsArg
         isOn = (u: UserId) => env.socket.isOnline.exec(u)
-        shown = if onlineOnly then school.filter(u => isOn(u) || picked.contains(u)) else school
-        players <- cupPlayers(shown, perf)
+        shown = (if onlineOnly then school.filter(u => isOn(u) || picked.contains(u)) else school).toSet
+        all <- cupPlayers((school ::: board.flatMap(_._2)).distinct, perf)
+        inSchool = school.toSet
+        players = all.filter(p => shown(p._1))
         rsvp <- api.cupRsvp
         run <- api.cupRun
         yes = (u: UserId) => rsvp.get(u).contains(true)
@@ -370,7 +408,9 @@ final class Team(env: Env) extends LilaController(env):
             size,
             teams,
             board.size,
-            board.map((t, ms, _) => (t.id, t.name, ms.size)),
+            board,
+            all.map((u, r, _, g) => u -> (r, g)).toMap,
+            all.filter((u, _, staff, _) => !staff && inSchool(u) && !current.contains(u)),
             onlineOnly,
             players.sortBy(p => (!yes(p._1), !isOn(p._1), -p._2)),
             current,
@@ -1549,14 +1589,8 @@ final class Team(env: Env) extends LilaController(env):
       cupMoveForm
         .bindFromRequest()
         .value
-        .fold(fuccess(Redirect(routes.Team.edit(TeamId("kubok"))))): (_, u, to) =>
-          cupUnlocked(cupMovePost(u, to))
-    else if cupLateForm.bindFromRequest().value.exists(_._1) then
-      cupLateForm
-        .bindFromRequest()
-        .value
-        .fold(fuccess(Redirect(routes.Team.edit(TeamId("kubok"))))): (_, perfKey, ls) =>
-          cupUnlocked(cupLatePost(perfKey, ls))
+        .fold(fuccess(Redirect(routes.Team.edit(TeamId("kubok"))))): (_, ms, to, dest, perfKey) =>
+          cupUnlocked(cupMovePost(ms, to, dest, perfKey))
     else
       bindForm(cupDraftForm)(
         _ => Redirect(routes.Team.edit(TeamId("kubok"))),

@@ -207,7 +207,7 @@ final class TeamUi(helpers: Helpers, markdownCache: lila.memo.MarkdownCache):
         """var t=0,p='.kl-cup__bracket-admin',m=function(e){if(e.target.closest&&e.target.closest(p))t=1};""" +
           """document.addEventListener('input',m,true);document.addEventListener('change',m,true);""" +
           """setInterval(function(){var a=document.activeElement;""" +
-          """if(!t&&!(a&&a.closest&&a.closest(p)))location.reload()},30000)"""
+          """if(!t&&!(a&&a.closest&&a.closest(p))&&!document.querySelector('dialog[open]'))location.reload()},30000)"""
       val page = TeamPage(s"${settings.title}: команды")
       (if admin then page.js(Esm("bits", embedJsUnsafeLoadThen(reloadJs))) else page).apply:
         main(cls := "team-list page-menu")(
@@ -423,9 +423,11 @@ final class TeamUi(helpers: Helpers, markdownCache: lila.memo.MarkdownCache):
           input(tpe := "hidden", name := "bracket", value := what),
           extra,
           button(
-            cls := s"button${if red then " button-red" else ""}",
+            cls := s"button${
+                if red then " button-red" else ""
+              }${if confirmMsg.isDefined then " yes-no-confirm" else ""}",
             tpe := "submit",
-            confirmMsg.map(m => attr("onclick") := s"return confirm('$m')")
+            confirmMsg.map(m => title := m)
           )(label)
         )
       def hidden(n: String, v: String) = input(tpe := "hidden", name := n, value := v)
@@ -614,7 +616,6 @@ final class TeamUi(helpers: Helpers, markdownCache: lila.memo.MarkdownCache):
           max := hi.toString,
           style := s"width:$w"
         )
-      val safeTitle = s.title.replace("'", "")
       st.section(cls := "kl-cup__bracket-admin box", style := "margin:1em 0 2em;padding:1em")(
         h2(s"Настройки: ${s.title} (видно только администраторам)"),
         p(status),
@@ -708,11 +709,9 @@ final class TeamUi(helpers: Helpers, markdownCache: lila.memo.MarkdownCache):
             )
           ),
           button(
-            cls := "button button-empty",
+            cls := "button button-empty yes-no-confirm",
             tpe := "submit",
-            attr(
-              "onclick"
-            ) := s"return confirm('Отправить $safeTitle в историю? Бои, которые ещё не начались, отменятся. Вернуть кубок обратно будет нельзя.')"
+            title := s"Отправить ${s.title} в историю? Бои, которые ещё не начались, отменятся. Вернуть кубок обратно будет нельзя."
           )("Отправить в историю и начать новый")
         )
       )
@@ -907,7 +906,6 @@ final class TeamUi(helpers: Helpers, markdownCache: lila.memo.MarkdownCache):
           .orElse(firstDate.map(_.plusDays(r.toLong * settings.everyDays).toString))
           .getOrElse("")
       val url = routes.Team.edit(TeamId("kubok"))
-      val confirmJs = (msg: String) => s"return confirm('$msg')"
       st.section(cls := "kl-cup__bracket-admin box", style := "margin:1em 0 2em;padding:1em")(
         h2("Плей-офф (видно только администраторам)"),
         postForm(action := url, style := "margin:.5em 0")(
@@ -919,9 +917,9 @@ final class TeamUi(helpers: Helpers, markdownCache: lila.memo.MarkdownCache):
           ),
           " ",
           button(
-            cls := "button",
+            cls := "button yes-no-confirm",
             tpe := "submit",
-            attr("onclick") := confirmJs(
+            title := (
               if drawn then "Провести жеребьёвку заново? Текущая сетка и бои пропадут."
               else "Провести жеребьёвку?"
             )
@@ -991,9 +989,9 @@ final class TeamUi(helpers: Helpers, markdownCache: lila.memo.MarkdownCache):
             )
           ),
           button(
-            cls := "button",
+            cls := "button yes-no-confirm",
             tpe := "submit",
-            attr("onclick") := confirmJs("Создать бой? Кто играет — по полю «Кто играет».")
+            title := "Создать бой? Кто играет — по полю «Кто играет»."
           )("Создать общий бой")
         ),
         (datesRounds > 0).option(
@@ -1026,22 +1024,64 @@ final class TeamUi(helpers: Helpers, markdownCache: lila.memo.MarkdownCache):
             postForm(action := url)(
               input(tpe := "hidden", name := "bracket", value := "reset"),
               button(
-                cls := "button button-red button-empty",
+                cls := "button button-red button-empty yes-no-confirm",
                 tpe := "submit",
-                attr("onclick") := confirmJs("Сбросить сетку? Созданные бои останутся, но выпадут из сетки.")
+                title := "Сбросить сетку? Созданные бои останутся, но выпадут из сетки."
               )("Сбросить сетку")
             )
           )
         )
       )
 
-    // «Логик»: автосбор команд кубка из тех, кто сейчас на площадке (только админам).
+    // «Логик»: стили редактора составов. Встроены в страницу: сборка CSS площадки выкатывается отдельно.
+    private val editorCss = raw(
+      """<style>
+.kl-ed__cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,19rem),1fr));gap:1rem;margin:1rem 0}
+.page-menu__content:has(.kl-ed){overflow:visible}
+.kl-ed__card{display:flex;flex-direction:column;gap:.5rem;padding:.7rem .6rem;border:1px solid var(--c-border);border-radius:6px;background:var(--c-bg-zebra);scroll-margin-top:80px;min-width:0}
+.kl-ed__card:target{border-color:var(--c-primary);box-shadow:0 0 0 1px var(--c-primary)}
+.kl-ed__card header{display:flex;gap:.6em;align-items:baseline;font-variant-numeric:tabular-nums}
+.kl-ed__card header a{flex:1;min-width:0;font-weight:bold;overflow-wrap:anywhere}
+.kl-ed__card header span{white-space:nowrap;color:var(--c-font-dim);font-size:.9em}
+.kl-ed__list{flex:1}
+.kl-ed__cols{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,17rem),1fr));column-gap:1.5rem}
+.kl-ed__p{display:flex;align-items:center;gap:.4em;min-height:44px;padding:.2em .3em;border-radius:4px;cursor:pointer}
+.kl-ed__p[hidden]{display:none}
+.kl-ed__p:hover{background:var(--c-bg-zebra2)}
+.kl-ed__p:has(:checked){background:color-mix(in srgb,var(--c-primary) 22%,transparent)}
+.kl-ed__p input{width:20px;height:20px;flex:none;margin:0}
+.kl-ed__dot{width:.6em;height:.6em;border-radius:50%;flex:none;border:1px solid var(--c-font-dim)}
+.kl-ed__dot.on{background:var(--c-good);border-color:var(--c-good)}
+.kl-ed__name{flex:1;min-width:0;overflow-wrap:anywhere;font-size:.93em}
+.kl-ed__name em{display:block;font-size:.85em;color:var(--c-bad)}
+.kl-ed__tag{flex:none;min-width:1.5em;text-align:center;font-size:.85em;border:1px solid var(--c-border);border-radius:3px}
+.kl-ed__tag.yes{color:var(--c-good)}
+.kl-ed__tag.no{color:var(--c-bad)}
+.kl-ed__g{flex:none;width:1em;text-align:center;color:var(--c-font-dim)}
+.kl-ed__r{flex:none;width:2.8em;text-align:right;font-variant-numeric:tabular-nums}
+.kl-ed summary,.kl-ed__redraft summary{cursor:pointer;padding:.8em 0;font-weight:bold}
+.kl-ed__pool{margin-top:1.5rem;scroll-margin-top:80px}
+.kl-ed__q{width:100%;max-width:24rem;margin:.5rem 0}
+.kl-ed__bar{position:sticky;bottom:0;z-index:3;margin:1rem -.5rem 0;padding:.6rem .5rem;background:linear-gradient(var(--c-bg-opaque),var(--c-bg-opaque)),var(--c-bg-opaque);border-top:1px solid var(--c-border);scroll-margin-top:80px}
+.kl-ed__bar .flash{margin:0 0 .5rem}
+.kl-ed__acts{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.kl-ed__acts select{min-width:0;max-width:12rem}
+.kl-ed__acts .button{padding:.7em .8em}
+.kl-ed__picked{min-width:7.5em;font-variant-numeric:tabular-nums}
+.kl-ed__redraft{overflow-x:auto;margin-top:2rem;border-top:1px solid var(--c-border)}
+@media (max-width:600px){.kl-ed__acts{display:grid;grid-template-columns:1fr 1fr}.kl-ed__acts .button{padding:.7em .4em;font-size:.9em}.kl-ed__acts select{max-width:none;width:100%}}
+</style>"""
+    )
+
+    // «Логик»: редактор составов карточками и автосбор команд кубка (только админам).
     def cupDraft(
         perf: String,
         size: Int,
         teams: Int,
         existing: Int,
-        cupTeams: List[(TeamId, String, Int)],
+        board: List[(Team, List[UserId], Set[UserId])],
+        info: Map[UserId, (Int, Option[String])], // рейтинг и группа A–E
+        pool: List[(UserId, Int, Boolean, Option[String])], // ученики клуба без команды
         onlineOnly: Boolean,
         players: List[(UserId, Int, Boolean, Option[String])],
         current: Map[UserId, String],
@@ -1067,7 +1107,7 @@ final class TeamUi(helpers: Helpers, markdownCache: lila.memo.MarkdownCache):
               value := teams.toString,
               min := "0",
               max := "64",
-              style := "width:4em"
+              style := "width:5.5em"
             )
           ),
           label("Состав: ")(
@@ -1086,213 +1126,255 @@ final class TeamUi(helpers: Helpers, markdownCache: lila.memo.MarkdownCache):
           ),
           extra
         )
-      // «Логик»: опоздавшие — ученики не в командах, без пересборки нынешних составов.
-      val lateBlock: Frag =
-        players.filter(p => !p._3 && !current.contains(p._1)) match
-          case late if late.isEmpty || existing == 0 || preview.isDefined => emptyFrag
-          case late =>
-            postForm(
-              action := url,
-              style := "border:1px solid #c9a227;border-radius:6px;padding:1em;margin:1em 0",
-              attr(
-                "onsubmit"
-              ) := "return confirm('Добавить отмеченных в команды? Нынешние составы не изменятся.')"
-            )(
-              h2(s"Опоздавшие: не в команде ${late.size}"),
-              p(
-                "Кнопка добавит отмеченных, не трогая нынешние составы. Сначала они займут свободные места ",
-                s"(до ${Team.cupMaxMembers} в команде), остальные соберутся в новые команды. ",
-                "Новые команды сами встанут в общий бой кубка, если он ещё не закончился, но не в сетку плей-офф. ",
-                "Отмечены те, кто сейчас на площадке."
-              ),
-              input(tpe := "hidden", name := "late", value := "true"),
-              input(tpe := "hidden", name := "perf", value := perf),
-              table(cls := "slist")(
-                thead(tr(th(), th("Игрок"), th("Рейтинг"), th("Группа"), th("На площадке"))),
-                tbody(
-                  late.map: (u, r, _, g) =>
-                    tr(
-                      td(
-                        input(
-                          tpe := "checkbox",
-                          name := "l[]",
-                          value := u.value,
-                          id := s"cup-l-${u.value}",
-                          isOnline(u).option(checked)
-                        )
-                      ),
-                      td(label(`for` := s"cup-l-${u.value}")(userIdLink(u.some))),
-                      td(r.toString),
-                      td(g.fold("—")(x => s"гр. $x")),
-                      td(if isOnline(u) then "да" else "—")
-                    )
-                )
-              ),
-              p(style := "margin-top:1em")(
-                submitButton(cls := "button")("Добавить опоздавших")
+      val doubles = Cup.duplicates(board.map((t, ms, _) => t.name -> ms))
+      def player(u: UserId, captain: Boolean, elsewhere: List[String]): Frag =
+        label(cls := "kl-ed__p")(
+          input(tpe := "checkbox", name := "m[]", value := u.value, locked.option(disabled)),
+          span(
+            cls := s"kl-ed__dot${if isOnline(u) then " on" else ""}",
+            title := (if isOnline(u) then "На площадке" else "Не на площадке")
+          ),
+          span(cls := "kl-ed__name")(
+            usernameOrId(u),
+            elsewhere.nonEmpty.option(em(s"ещё и в «${elsewhere.mkString("», «")}»"))
+          ),
+          captain.option(span(cls := "kl-ed__tag", title := "Капитан")("К")),
+          rsvp
+            .get(u)
+            .map: yes =>
+              span(
+                cls := s"kl-ed__tag ${if yes then "yes" else "no"}",
+                title := (if yes then "Подтвердил участие в боте" else "Отказался в боте")
+              )(if yes then "✓" else "✗"),
+          span(cls := "kl-ed__g")(info.get(u).flatMap(_._2).getOrElse[String]("")),
+          span(cls := "kl-ed__r")(info.get(u).fold("—")(_._1.toString))
+        )
+      def card(t: Team, members: List[UserId], leaders: Set[UserId]): Frag =
+        val free = (Team.cupMaxMembers - members.size).atLeast(0)
+        val rs = members.flatMap(info.get).map(_._1)
+        st.section(cls := "kl-ed__card", id := s"cup-t-${t.id}")(
+          st.header(
+            a(href := routes.Team.show(t.id))(t.name),
+            span(s"${members.size} из ${Team.cupMaxMembers}"),
+            rs.nonEmpty.option(span(s"ср. ${rs.sum / rs.size}"))
+          ),
+          div(cls := "kl-ed__list")(
+            members
+              .sortBy(u => (!leaders(u), -info.get(u).fold(0)(_._1)))
+              .map(u => player(u, leaders(u), doubles.getOrElse(u, Nil).filter(_ != t.name)))
+          ),
+          (!locked).option(
+            button(
+              cls := "button button-empty",
+              tpe := "submit",
+              name := "to",
+              value := t.id.value,
+              (free == 0).option(disabled)
+            )(if free == 0 then "Мест нет" else s"Сюда (мест: $free)")
+          )
+        )
+      val editor: Frag =
+        val (filled, empty) = board.partition(_._2.nonEmpty)
+        val (near, far) = pool.partition(p => isOnline(p._1) || confirmed(p._1))
+        def poolList(ps: List[(UserId, Int, Boolean, Option[String])]) =
+          div(cls := "kl-ed__list kl-ed__cols")(ps.map(p => player(p._1, false, Nil)))
+        postForm(action := s"$url", cls := "kl-ed", id := "cup-ed")(
+          input(tpe := "hidden", name := "move", value := "true"),
+          input(tpe := "hidden", name := "perf", value := perf),
+          // Enter в форме не должен нажимать первую кнопку «Сюда»
+          button(tpe := "submit", disabled, st.style := "display:none"),
+          div(cls := "kl-ed__cards")(filled.map(card(_, _, _))),
+          empty.nonEmpty.option(
+            details(
+              summary(s"Пустые команды: ${empty.size}"),
+              div(cls := "kl-ed__cards")(empty.map(card(_, _, _)))
+            )
+          ),
+          st.section(cls := "kl-ed__pool", id := "cup-pool")(
+            h2(s"Без команды: ${pool.size}"),
+            input(
+              tpe := "search",
+              cls := "kl-ed__q",
+              placeholder := "Найти ученика",
+              attr("aria-label") := "Найти ученика",
+              attr("autocomplete") := "off"
+            ),
+            p(strong(s"На площадке или подтвердили: ${near.size}")),
+            poolList(near.sortBy(p => (!isOnline(p._1), -p._2))),
+            far.nonEmpty.option(
+              details(near.isEmpty.option(attr("open") := "open"))(
+                summary(s"Остальные: ${far.size}"),
+                poolList(far.sortBy(_._1.value))
               )
             )
-
-      // «Логик»: ручная перестановка одного ученика, остальные составы не меняются.
-      val moveBlock: Frag =
-        if existing == 0 || preview.isDefined then emptyFrag
-        else
-          postForm(
-            action := url,
-            style := "border:1px solid #888;border-radius:6px;padding:1em;margin:1em 0",
-            attr("onsubmit") := "return confirm('Переставить ученика? Остальные составы не изменятся.')"
-          )(
-            h2("Переставить ученика"),
-            p(
-              "Выберите ученика и команду. Он уйдёт из своей команды и встанет в выбранную ",
-              s"(в команде не больше ${Team.cupMaxMembers} игроков). Если уходит капитан, капитаном станет другой игрок. ",
-              "Новая команда попадёт в сетку при старте первого круга. ",
-              "Пока идёт круг, составы закрыты."
-            ),
-            input(tpe := "hidden", name := "move", value := "true"),
-            div(style := "display:flex;gap:1em;flex-wrap:wrap;align-items:center")(
-              label("Ученик: ")(
-                st.select(name := "u", required)(
-                  st.option(value := "")("— выберите —"),
-                  players
-                    .filterNot(_._3)
-                    .sortBy(_._1.value)
-                    .map: (u, r, _, _) =>
-                      st.option(value := u.value)(
-                        s"${usernameOrId(u)} ($r) — ${current.getOrElse(u, "без команды")}"
-                      )
+          ),
+          div(cls := "kl-ed__bar", id := "cup-bar")(
+            standardFlash,
+            (!locked).option(
+              div(cls := "kl-ed__acts")(
+                span(cls := "kl-ed__picked")("Отмечено: ", strong(cls := "kl-ed__n")("0")),
+                st.select(name := "dest", attr("aria-label") := "Команда")(
+                  st.option(value := "")("— команда —"),
+                  board.map: (t, ms, _) =>
+                    st.option(value := t.id.value, (ms.sizeIs >= Team.cupMaxMembers).option(disabled))(
+                      s"${t.name} (${ms.size} из ${Team.cupMaxMembers})"
+                    )
+                ),
+                button(cls := "button", tpe := "submit", name := "to", value := "dest")(
+                  "В выбранную команду"
+                ),
+                button(cls := "button button-empty", tpe := "submit", name := "to", value := "new")(
+                  "В новую команду"
+                ),
+                button(cls := "button button-empty", tpe := "submit", name := "to", value := "spread")(
+                  "На свободные места"
+                ),
+                button(
+                  cls := "button button-empty button-red",
+                  tpe := "submit",
+                  name := "to",
+                  value := "none"
+                )(
+                  "Убрать из команды"
                 )
-              ),
-              label("Куда: ")(
-                st.select(name := "to", required)(
-                  st.option(value := "")("— выберите —"),
-                  cupTeams.map: (id, name, n) =>
-                    st.option(value := id.value, (n >= Team.cupMaxMembers).option(disabled))(
-                      s"$name ($n из ${Team.cupMaxMembers})"
-                    ),
-                  st.option(value := "new")("Новая команда"),
-                  st.option(value := "none")("Убрать из команды")
-                )
-              ),
-              submitButton(cls := "button")("Переставить")
+              )
             )
           )
+        )
+      // без скрипта всё работает: он только считает отмеченных, ищет по списку и отмечает разом
+      val editorJs =
+        """var f=document.getElementById('cup-ed');if(f){var n=f.querySelector('.kl-ed__n'),""" +
+          """up=function(){if(n)n.textContent=new Set([].map.call(f.querySelectorAll('input[name="m[]"]:checked'),""" +
+          """function(c){return c.value})).size};f.addEventListener('change',up);window.addEventListener('pageshow',up);up();""" +
+          """var q=f.querySelector('.kl-ed__q'),d=f.querySelector('.kl-ed__pool details'),o=d&&d.open;""" +
+          """if(q)q.addEventListener('input',function(){var v=q.value.trim().toLowerCase();if(d)d.open=!!v||o;""" +
+          """f.querySelectorAll('.kl-ed__pool .kl-ed__p').forEach(function(e){""" +
+          """e.hidden=!!v&&e.querySelector('.kl-ed__name').textContent.toLowerCase().indexOf(v)<0})});""" +
+          """if(q)q.addEventListener('keydown',function(e){if(e.key==='Enter')e.preventDefault()})}""" +
+          """document.querySelectorAll('[data-cup-check]').forEach(function(b){b.addEventListener('click',function(){""" +
+          """var k=b.getAttribute('data-cup-check');document.querySelectorAll('.kl-cup-u').forEach(function(c){""" +
+          """c.checked=k==='all'||(k==='y'&&c.getAttribute('data-rsvp')==='y')})})})"""
 
-      TeamPage("Кубок Логика — составы команд"):
+      TeamPage("Кубок Логика — составы команд").js(Esm("bits", embedJsUnsafeLoadThen(editorJs))):
         main(cls := "team-list page-menu")(
           menu("kubok".some),
           div(cls := "page-menu__content box box-pad")(
             h1(cls := "box__top")("Составы команд кубка"),
+            editorCss,
             p(
-              "Здесь все ученики школы на площадке. Отметьте тех, кто играет, и нажмите «Показать составы». ",
-              "Сильнейший в каждой команде станет капитаном."
+              "Отметьте учеников и нажмите «Сюда» у нужной команды или выберите действие внизу экрана. ",
+              s"В команде не больше ${Team.cupMaxMembers} игроков. Ушёл капитан — капитаном станет другой игрок."
             ),
-            p(
-              strong("Важно: "),
-              s"при сохранении нынешние составы всех команд кубка заменятся новыми. Сейчас команд: $existing. ",
-              "Так можно переиграть составы до старта круга, например когда после анонса придут новые игроки. ",
-              "Пока идёт круг, составы закрыты."
-            ),
+            p(a(href := routes.Team.show(TeamId("kubok")))("Вернуться к кубку")),
             locked.option(
               p(cls := "flash flash-failure", style := "padding:.8em 1em;margin:1em 0")(
-                "Круг идёт, составы закрыты: изменения не сохранятся. Чтобы изменить составы, нажмите на пульте кубка «Остановить круг»."
+                "Круг идёт, составы закрыты. Чтобы изменить составы, нажмите на пульте кубка «Остановить круг»."
               )
             ),
-            moveBlock,
-            lateBlock,
-            p(
-              if onlineOnly then a(href := s"$url?perf=$perf")("Показать всех учеников")
-              else a(href := s"$url?perf=$perf&online=1")("Показать только тех, кто сейчас на площадке")
-            ),
-            postForm(action := url)(
-              input(tpe := "hidden", name := "online", value := onlineOnly.toString),
-              settings(emptyFrag),
-              p(
-                small(
-                  s"Команд 0 — столько, сколько нужно, чтобы сыграли все отмеченные (по ${Team.cupMaxMembers} в команде). Кто не поместился, станет запасным."
-                )
-              ),
-              if players.isEmpty then p("Учеников не найдено.")
-              else
-                frag(
+            if preview.isDefined then p(a(href := url)("Отменить и вернуться к нынешним составам"))
+            else editor,
+            (!locked).option(
+              details(cls := "kl-ed__redraft", preview.isDefined.option(attr("open") := "open"))(
+                summary("Распределить всех заново"),
+                p(
+                  strong("Важно: "),
+                  s"при сохранении нынешние составы всех команд кубка заменятся новыми. Сейчас команд: $existing. ",
+                  "Отметьте тех, кто играет, и нажмите «Показать составы». Сильнейший в каждой команде станет капитаном."
+                ),
+                p(
+                  if onlineOnly then a(href := s"$url?perf=$perf")("Показать всех учеников")
+                  else a(href := s"$url?perf=$perf&online=1")("Показать только тех, кто сейчас на площадке")
+                ),
+                postForm(action := url)(
+                  input(tpe := "hidden", name := "online", value := onlineOnly.toString),
+                  settings(emptyFrag),
                   p(
-                    s"Учеников: ${players.size}, сейчас на площадке: ${players.count(p => isOnline(p._1))}. По группам: ",
-                    (Team.cupGroups.map(g => s"$g — ${players.count(_._4.contains(g))}") :+
-                      s"без группы — ${players.count(_._4.isEmpty)}").mkString(", ")
-                  ),
-                  rsvp.nonEmpty.option(
-                    p(
-                      strong(s"Подтвердили в боте: ${players.count(p => confirmed(p._1))}"),
-                      s", отказались: ${players.count(p => rsvp.get(p._1).contains(false))}, ",
-                      s"не ответили: ${players.count(p => !rsvp.contains(p._1))}. ",
-                      "Подтвердившие стоят в начале списка и отмечены сразу."
+                    small(
+                      s"Команд 0 — столько, сколько нужно, чтобы сыграли все отмеченные (по ${Team.cupMaxMembers} в команде). Кто не поместился, станет запасным."
                     )
                   ),
-                  p(
-                    button(
-                      cls := "button button-empty",
-                      tpe := "button",
-                      attr("onclick") := "document.querySelectorAll('.kl-cup-u').forEach(c=>c.checked=true)"
-                    )("Отметить всех"),
-                    " ",
-                    button(
-                      cls := "button button-empty",
-                      tpe := "button",
-                      attr("onclick") := "document.querySelectorAll('.kl-cup-u').forEach(c=>c.checked=false)"
-                    )("Снять все"),
-                    rsvp.nonEmpty.option(
-                      frag(
+                  if players.isEmpty then p("Учеников не найдено.")
+                  else
+                    frag(
+                      p(
+                        s"Учеников: ${players.size}, сейчас на площадке: ${players.count(p => isOnline(p._1))}. По группам: ",
+                        (Team.cupGroups.map(g => s"$g — ${players.count(_._4.contains(g))}") :+
+                          s"без группы — ${players.count(_._4.isEmpty)}").mkString(", ")
+                      ),
+                      rsvp.nonEmpty.option(
+                        p(
+                          strong(s"Подтвердили в боте: ${players.count(p => confirmed(p._1))}"),
+                          s", отказались: ${players.count(p => rsvp.get(p._1).contains(false))}, ",
+                          s"не ответили: ${players.count(p => !rsvp.contains(p._1))}. ",
+                          "Подтвердившие стоят в начале списка и отмечены сразу."
+                        )
+                      ),
+                      p(
+                        button(
+                          cls := "button button-empty",
+                          tpe := "button",
+                          data("cup-check") := "all"
+                        )("Отметить всех"),
                         " ",
                         button(
                           cls := "button button-empty",
                           tpe := "button",
-                          attr("onclick") :=
-                            "document.querySelectorAll('.kl-cup-u').forEach(c=>c.checked=c.dataset.rsvp==='y')"
-                        )("Только подтвердившие")
-                      )
-                    )
-                  ),
-                  table(cls := "slist")(
-                    thead(
-                      tr(
-                        th(),
-                        th("Игрок"),
-                        th("Рейтинг"),
-                        th("Группа"),
-                        th("Подтвердил"),
-                        th("Сейчас в команде"),
-                        th()
-                      )
-                    ),
-                    tbody(
-                      players.map: (u, r, staff, g) =>
-                        tr(
-                          td(
-                            input(
-                              tpe := "checkbox",
-                              cls := "kl-cup-u",
-                              name := "u[]",
-                              value := u.value,
-                              id := s"cup-u-${u.value}",
-                              attr("data-rsvp") := rsvp.get(u).fold("")(b => if b then "y" else "n"),
-                              isChecked(u, staff).option(checked)
-                            )
-                          ),
-                          td(label(`for` := s"cup-u-${u.value}")(userIdLink(u.some))),
-                          td(r.toString),
-                          td(g.fold("—")(x => s"гр. $x")),
-                          td(rsvp.get(u).fold("—")(b => if b then "да" else "нет")),
-                          td(current.getOrElse(u, "—")),
-                          td(staff.option("тренер / админ"))
+                          data("cup-check") := "none"
+                        )("Снять все"),
+                        rsvp.nonEmpty.option(
+                          frag(
+                            " ",
+                            button(
+                              cls := "button button-empty",
+                              tpe := "button",
+                              data("cup-check") := "y"
+                            )("Только подтвердившие")
+                          )
                         )
+                      ),
+                      table(cls := "slist")(
+                        thead(
+                          tr(
+                            th(),
+                            th("Игрок"),
+                            th("Рейтинг"),
+                            th("Группа"),
+                            th("Подтвердил"),
+                            th("Сейчас в команде"),
+                            th()
+                          )
+                        ),
+                        tbody(
+                          players.map: (u, r, staff, g) =>
+                            tr(
+                              td(
+                                input(
+                                  tpe := "checkbox",
+                                  cls := "kl-cup-u",
+                                  name := "u[]",
+                                  value := u.value,
+                                  id := s"cup-u-${u.value}",
+                                  attr("data-rsvp") := rsvp.get(u).fold("")(b => if b then "y" else "n"),
+                                  isChecked(u, staff).option(checked)
+                                )
+                              ),
+                              td(label(`for` := s"cup-u-${u.value}")(userIdLink(u.some))),
+                              td(r.toString),
+                              td(g.fold("—")(x => s"гр. $x")),
+                              td(rsvp.get(u).fold("—")(b => if b then "да" else "нет")),
+                              td(current.getOrElse(u, "—")),
+                              td(staff.option("тренер / админ"))
+                            )
+                        )
+                      ),
+                      p(style := "margin-top:1em")(
+                        button(cls := "button", tpe := "submit", name := "go", value := "false")(
+                          "Показать составы"
+                        )
+                      )
                     )
-                  ),
-                  p(style := "margin-top:1em")(
-                    button(cls := "button", tpe := "submit", name := "go", value := "false")(
-                      "Показать составы"
-                    )
-                  )
                 )
+              )
             ),
             preview.map: draft =>
               val inTeams = draft.flatten.map(_._1).toSet
@@ -1339,12 +1421,12 @@ final class TeamUi(helpers: Helpers, markdownCache: lila.memo.MarkdownCache):
                       else if draft.size < existing then
                         s"Команд больше, чем составов: ${existing - draft.size} останутся пустыми и в сетку не попадут. "
                       else "",
-                      "Названия команд сохранятся. После этого проведите жеребьёвку заново."
+                      "Названия команд сохранятся. Жеребьёвка пройдёт сама при старте первого круга."
                     ),
                     button(
-                      cls := "button button-green",
+                      cls := "button button-green yes-no-confirm",
                       tpe := "submit",
-                      attr("onclick") := "return confirm('Заменить составы всех команд кубка?')"
+                      title := "Заменить составы всех команд кубка? Прежние составы не сохранятся."
                     )("Сохранить составы")
                   )
               )
