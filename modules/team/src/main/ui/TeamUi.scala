@@ -1062,16 +1062,137 @@ final class TeamUi(helpers: Helpers, markdownCache: lila.memo.MarkdownCache):
 .kl-ed summary,.kl-ed__redraft summary{cursor:pointer;padding:.8em 0;font-weight:bold}
 .kl-ed__pool{margin-top:1.5rem;scroll-margin-top:80px}
 .kl-ed__q{width:100%;max-width:24rem;margin:.5rem 0}
+.kl-ed__hint{display:none}
+.kl-ed__p--drag{opacity:.45}
+.kl-ed__p[draggable=true]{cursor:grab}
+.kl-ed__badge{position:fixed;top:-200px;left:0;padding:.5em .9em;border-radius:6px;background:var(--c-primary);color:#fff;font-weight:bold;white-space:nowrap}
+.kl-ed__drop{outline:3px solid var(--c-primary);outline-offset:-1px}
+.kl-ed__nodrop{outline:3px dashed var(--c-bad);outline-offset:-1px}
+.kl-ed--busy{opacity:.6;pointer-events:none}
+@media (hover:hover) and (pointer:fine){.kl-ed__hint{display:block}}
+@media (min-width:1260px){
+.kl-ed__work{display:grid;grid-template-columns:minmax(0,1fr) 20rem;gap:1.5rem;align-items:start}
+.kl-ed__pool{position:sticky;top:70px;margin-top:1rem;max-height:calc(100vh - 190px);min-height:16rem;display:flex;flex-direction:column;padding:.7rem .6rem;border:1px solid var(--c-border);border-radius:6px;background:var(--c-bg-zebra)}
+.kl-ed__pool h2{font-size:1.2em;margin:0}
+.kl-ed__pool p{margin:.5rem 0}
+.kl-ed__pool .kl-ed__p{gap:.3em}
+.kl-ed__pool .kl-ed__name{font-size:.86em}
+.kl-ed__scroll{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain}
+}
 .kl-ed__bar{position:sticky;bottom:0;z-index:3;margin:1rem -.5rem 0;padding:.6rem .5rem;background:linear-gradient(var(--c-bg-opaque),var(--c-bg-opaque)),var(--c-bg-opaque);border-top:1px solid var(--c-border);scroll-margin-top:80px}
 .kl-ed__bar .flash{margin:0 0 .5rem}
 .kl-ed__acts{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
-.kl-ed__acts select{min-width:0;max-width:12rem}
-.kl-ed__acts .button{padding:.7em .8em}
+.kl-ed__acts select{min-width:0;max-width:10rem}
+.kl-ed__acts .button{padding:.7em .65em}
 .kl-ed__picked{min-width:7.5em;font-variant-numeric:tabular-nums}
 .kl-ed__redraft{overflow-x:auto;margin-top:2rem;border-top:1px solid var(--c-border)}
 @media (max-width:600px){.kl-ed__acts{display:grid;grid-template-columns:1fr 1fr}.kl-ed__acts .button{padding:.7em .4em;font-size:.9em}.kl-ed__acts select{max-width:none;width:100%}}
 </style>"""
     )
+
+    // «Логик»: перетаскивание мышью. Отправляет ту же форму, что и кнопки: отмечает тех, кого тащат, и задаёт to.
+    // Куда можно бросить: карточка команды, список «Без команды», кнопки «В новую команду» и «Убрать из команды».
+    private val editorDragJs =
+      """
+(function(){
+var f=document.getElementById('cup-ed');
+if(!f||!f.querySelector('.kl-ed__acts')||!matchMedia('(hover: hover) and (pointer: fine)').matches)return;
+var key='kl-cup-drag',ids=null,zone=null,badge=null,
+all=function(q,el){return [].slice.call((el||f).querySelectorAll(q))},
+boxes=function(el){return all('input[name="m[]"]',el)},
+has=function(el,id){return boxes(el).some(function(c){return c.value===id})},
+q=f.querySelector('.kl-ed__q'),list=f.querySelector('.kl-ed__pool details'),empty=f.querySelector('.kl-ed__empty');
+all('.kl-ed__p').forEach(function(p){p.draggable=true});
+
+/* вернуться туда же, откуда тащили */
+try{
+var back=JSON.parse(sessionStorage.getItem(key)||'null');sessionStorage.removeItem(key);
+if(back&&Date.now()-back.at<30000){
+if(empty&&back.empty)empty.open=true;
+if(q&&back.q){q.value=back.q;q.dispatchEvent(new Event('input'))}
+if(list&&back.list)list.open=true;
+var go=function(){if(back.y!==null)scrollTo(0,back.y);var b=f.querySelector('.kl-ed__scroll');if(b)b.scrollTop=back.pool};
+go();requestAnimationFrame(go);
+if(document.readyState!=='complete')addEventListener('load',go);
+}
+}catch(e){}
+
+var target=function(el){
+if(!el||!el.closest)return null;
+var b=el.closest('.kl-ed__acts button[value=new],.kl-ed__acts button[value=none]');
+if(b&&f.contains(b))return {el:b,to:b.value};
+var c=el.closest('.kl-ed__card');
+if(c&&f.contains(c))return {el:c,to:c.dataset.team,free:+c.dataset.free};
+var p=el.closest('.kl-ed__pool');
+return p&&f.contains(p)?{el:p,to:'none'}:null;
+};
+/* 'ok' — бросить можно, 'full' — не хватает мест, '' — перенос ничего не изменит */
+var verdict=function(t){
+if(t.to==='new')return 'ok';
+var cards=all('.kl-ed__card');
+if(t.to==='none')return ids.some(function(id){return cards.some(function(c){return has(c,id)})})?'ok':'';
+var coming=ids.filter(function(id){return !has(t.el,id)}),
+twice=ids.some(function(id){return cards.some(function(c){return c!==t.el&&has(c,id)})});
+if(!coming.length&&!twice)return '';
+return coming.length<=t.free?'ok':'full';
+};
+var paint=function(el,c){
+if(zone&&zone!==el)zone.classList.remove('kl-ed__drop','kl-ed__nodrop');
+zone=el;
+if(el){el.classList.toggle('kl-ed__drop',c==='ok');el.classList.toggle('kl-ed__nodrop',c==='full')}
+};
+var stop=function(){
+paint(null);ids=null;
+all('.kl-ed__p--drag').forEach(function(p){p.classList.remove('kl-ed__p--drag')});
+if(badge){badge.remove();badge=null}
+};
+f.addEventListener('dragstart',function(e){
+var row=e.target.nodeType===1&&e.target.matches('.kl-ed__p')?e.target:null;
+if(!row)return;
+var c=row.querySelector('input');
+ids=c.checked?boxes().filter(function(x){return x.checked}).map(function(x){return x.value}):[c.value];
+ids=ids.filter(function(id,i){return ids.indexOf(id)===i});
+boxes().forEach(function(x){if(ids.indexOf(x.value)>=0)x.closest('.kl-ed__p').classList.add('kl-ed__p--drag')});
+badge=document.createElement('div');badge.className='kl-ed__badge';
+badge.textContent=ids.length>1?'Учеников: '+ids.length:row.querySelector('.kl-ed__name').firstChild.textContent;
+document.body.appendChild(badge);
+e.dataTransfer.effectAllowed='move';
+e.dataTransfer.setData('text/plain',ids.join(', '));
+e.dataTransfer.setDragImage(badge,-12,-8);
+});
+document.addEventListener('dragover',function(e){
+if(!ids)return;
+var t=target(e.target),v=t?verdict(t):'';
+paint(t&&t.el,v);
+if(v==='ok'){e.preventDefault();e.dataTransfer.dropEffect='move'}
+/* у края окна страница едет сама */
+var bar=f.querySelector('.kl-ed__bar').getBoundingClientRect().top;
+if(!(t&&t.el.matches('.kl-ed__pool'))){
+if(e.clientY<110)scrollBy(0,-16);
+else if(e.clientY>bar-60&&e.clientY<bar)scrollBy(0,16);
+}
+});
+document.addEventListener('dragend',function(){if(ids)stop()});
+document.addEventListener('drop',function(e){
+if(!ids)return;
+var t=target(e.target);
+if(!t||verdict(t)!=='ok')return;
+e.preventDefault();
+var inEmpty=!!t.el.closest('.kl-ed__empty'),scroll=f.querySelector('.kl-ed__scroll');
+try{sessionStorage.setItem(key,JSON.stringify({at:Date.now(),y:t.to==='new'||inEmpty?null:scrollY,
+pool:scroll?scroll.scrollTop:0,q:q?q.value:'',list:!!list&&list.open,empty:!!empty&&empty.open}))}catch(x){}
+boxes().forEach(function(c){c.checked=ids.indexOf(c.value)>=0});
+var h=document.createElement('input');h.type='hidden';h.name='to';h.value=t.to;h.className='kl-ed__to';
+f.appendChild(h);
+stop();
+f.classList.add('kl-ed--busy');
+f.submit();
+});
+addEventListener('pageshow',function(){
+f.classList.remove('kl-ed--busy');
+all('.kl-ed__to').forEach(function(h){h.remove()});
+});
+})()"""
 
     // «Логик»: редактор составов карточками и автосбор команд кубка (только админам).
     def cupDraft(
@@ -1152,7 +1273,7 @@ final class TeamUi(helpers: Helpers, markdownCache: lila.memo.MarkdownCache):
       def card(t: Team, members: List[UserId], leaders: Set[UserId]): Frag =
         val free = (Team.cupMaxMembers - members.size).atLeast(0)
         val rs = members.flatMap(info.get).map(_._1)
-        st.section(cls := "kl-ed__card", id := s"cup-t-${t.id}")(
+        st.section(cls := "kl-ed__card", id := s"cup-t-${t.id}", data("free") := free, data("team") := t.id)(
           st.header(
             a(href := routes.Team.show(t.id))(t.name),
             span(s"${members.size} из ${Team.cupMaxMembers}"),
@@ -1183,28 +1304,34 @@ final class TeamUi(helpers: Helpers, markdownCache: lila.memo.MarkdownCache):
           input(tpe := "hidden", name := "perf", value := perf),
           // Enter в форме не должен нажимать первую кнопку «Сюда»
           button(tpe := "submit", disabled, st.style := "display:none"),
-          div(cls := "kl-ed__cards")(filled.map(card(_, _, _))),
-          empty.nonEmpty.option(
-            details(
-              summary(s"Пустые команды: ${empty.size}"),
-              div(cls := "kl-ed__cards")(empty.map(card(_, _, _)))
-            )
-          ),
-          st.section(cls := "kl-ed__pool", id := "cup-pool")(
-            h2(s"Без команды: ${pool.size}"),
-            input(
-              tpe := "search",
-              cls := "kl-ed__q",
-              placeholder := "Найти ученика",
-              attr("aria-label") := "Найти ученика",
-              attr("autocomplete") := "off"
+          div(cls := "kl-ed__work")(
+            div(
+              div(cls := "kl-ed__cards")(filled.map(card(_, _, _))),
+              empty.nonEmpty.option(
+                details(cls := "kl-ed__empty")(
+                  summary(s"Пустые команды: ${empty.size}"),
+                  div(cls := "kl-ed__cards")(empty.map(card(_, _, _)))
+                )
+              )
             ),
-            p(strong(s"На площадке или подтвердили: ${near.size}")),
-            poolList(near.sortBy(p => (!isOnline(p._1), -p._2))),
-            far.nonEmpty.option(
-              details(near.isEmpty.option(attr("open") := "open"))(
-                summary(s"Остальные: ${far.size}"),
-                poolList(far.sortBy(_._1.value))
+            st.section(cls := "kl-ed__pool", id := "cup-pool")(
+              h2(s"Без команды: ${pool.size}"),
+              input(
+                tpe := "search",
+                cls := "kl-ed__q",
+                placeholder := "Найти ученика",
+                attr("aria-label") := "Найти ученика",
+                attr("autocomplete") := "off"
+              ),
+              div(cls := "kl-ed__scroll")(
+                p(strong(s"На площадке или подтвердили: ${near.size}")),
+                poolList(near.sortBy(p => (!isOnline(p._1), -p._2))),
+                far.nonEmpty.option(
+                  details(near.isEmpty.option(attr("open") := "open"))(
+                    summary(s"Остальные: ${far.size}"),
+                    poolList(far.sortBy(_._1.value))
+                  )
+                )
               )
             )
           ),
@@ -1253,7 +1380,8 @@ final class TeamUi(helpers: Helpers, markdownCache: lila.memo.MarkdownCache):
           """if(q)q.addEventListener('keydown',function(e){if(e.key==='Enter')e.preventDefault()})}""" +
           """document.querySelectorAll('[data-cup-check]').forEach(function(b){b.addEventListener('click',function(){""" +
           """var k=b.getAttribute('data-cup-check');document.querySelectorAll('.kl-cup-u').forEach(function(c){""" +
-          """c.checked=k==='all'||(k==='y'&&c.getAttribute('data-rsvp')==='y')})})})"""
+          """c.checked=k==='all'||(k==='y'&&c.getAttribute('data-rsvp')==='y')})})});""" +
+          editorDragJs
 
       TeamPage("Кубок Логика — составы команд").js(Esm("bits", embedJsUnsafeLoadThen(editorJs))):
         main(cls := "team-list page-menu")(
@@ -1264,6 +1392,11 @@ final class TeamUi(helpers: Helpers, markdownCache: lila.memo.MarkdownCache):
             p(
               "Отметьте учеников и нажмите «Сюда» у нужной команды или выберите действие внизу экрана. ",
               s"В команде не больше ${Team.cupMaxMembers} игроков. Ушёл капитан — капитаном станет другой игрок."
+            ),
+            (!locked && preview.isEmpty).option(
+              p(cls := "kl-ed__hint")(
+                "Мышью можно перетащить ученика на карточку команды, на список «Без команды» или на кнопки «В новую команду» и «Убрать из команды». Отмеченные переедут вместе."
+              )
             ),
             p(a(href := routes.Team.show(TeamId("kubok")))("Вернуться к кубку")),
             locked.option(
