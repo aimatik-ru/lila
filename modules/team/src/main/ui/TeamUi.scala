@@ -1044,21 +1044,30 @@ final class TeamUi(helpers: Helpers, markdownCache: lila.memo.MarkdownCache):
 .kl-ed__card header a{flex:1;min-width:0;font-weight:bold;overflow-wrap:anywhere}
 .kl-ed__card header span{white-space:nowrap;color:var(--c-font-dim);font-size:.9em}
 .kl-ed__list{flex:1}
-.kl-ed__cols{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,17rem),1fr));column-gap:1.5rem}
-.kl-ed__p{display:flex;align-items:center;gap:.4em;min-height:44px;padding:.2em .3em;border-radius:4px;cursor:pointer}
+.kl-ed__cols{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,19rem),1fr));column-gap:1.5rem}
+.kl-ed__p{container-type:inline-size;display:flex;align-items:center;gap:.3em;min-height:44px;padding:.2em .3em;border-radius:4px;cursor:pointer}
 .kl-ed__p[hidden]{display:none}
 .kl-ed__p:hover{background:var(--c-bg-zebra2)}
 .kl-ed__p:has(:checked){background:color-mix(in srgb,var(--c-primary) 22%,transparent)}
 .kl-ed__p input{width:20px;height:20px;flex:none;margin:0}
 .kl-ed__dot{width:.6em;height:.6em;border-radius:50%;flex:none;border:1px solid var(--c-font-dim)}
 .kl-ed__dot.on{background:var(--c-good);border-color:var(--c-good)}
+.kl-ed__who{flex:1;min-width:0;display:flex;align-items:center;gap:.3em}
 .kl-ed__name{flex:1;min-width:0;overflow-wrap:anywhere;font-size:.93em}
 .kl-ed__name em{display:block;font-size:.85em;color:var(--c-bad)}
 .kl-ed__tag{flex:none;min-width:1.5em;text-align:center;font-size:.85em;border:1px solid var(--c-border);border-radius:3px}
 .kl-ed__tag.yes{color:var(--c-good)}
 .kl-ed__tag.no{color:var(--c-bad)}
 .kl-ed__g{flex:none;width:1em;text-align:center;color:var(--c-font-dim)}
-.kl-ed__r{flex:none;width:2.8em;text-align:right;font-variant-numeric:tabular-nums}
+.kl-ed__meta{flex:none;display:flex;align-items:center;gap:.3em}
+.kl-ed__r{flex:none;width:2.5em;text-align:right;font-variant-numeric:tabular-nums}
+@container (max-width:22.4rem){
+.kl-ed__who{flex-direction:column;align-items:stretch;gap:0;line-height:1.3}
+.kl-ed__name{flex:none}
+.kl-ed__meta{font-size:.9em;color:var(--c-font-dim)}
+.kl-ed__tag{order:1}
+.kl-ed__g{text-align:left}
+}
 .kl-ed summary,.kl-ed__redraft summary{cursor:pointer;padding:.8em 0;font-weight:bold}
 .kl-ed__pool{margin-top:1.5rem;scroll-margin-top:80px}
 .kl-ed__q{width:100%;max-width:24rem;margin:.5rem 0}
@@ -1075,8 +1084,6 @@ final class TeamUi(helpers: Helpers, markdownCache: lila.memo.MarkdownCache):
 .kl-ed__pool{position:sticky;top:70px;margin-top:1rem;max-height:calc(100vh - 190px);min-height:16rem;display:flex;flex-direction:column;padding:.7rem .6rem;border:1px solid var(--c-border);border-radius:6px;background:var(--c-bg-zebra)}
 .kl-ed__pool h2{font-size:1.2em;margin:0}
 .kl-ed__pool p{margin:.5rem 0}
-.kl-ed__pool .kl-ed__p{gap:.3em}
-.kl-ed__pool .kl-ed__name{font-size:.86em}
 .kl-ed__scroll{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain}
 }
 .kl-ed__bar{position:sticky;bottom:0;z-index:3;margin:1rem -.5rem 0;padding:.6rem .5rem;background:linear-gradient(var(--c-bg-opaque),var(--c-bg-opaque)),var(--c-bg-opaque);border-top:1px solid var(--c-border);scroll-margin-top:80px}
@@ -1255,20 +1262,24 @@ all('.kl-ed__to').forEach(function(h){h.remove()});
             cls := s"kl-ed__dot${if isOnline(u) then " on" else ""}",
             title := (if isOnline(u) then "На площадке" else "Не на площадке")
           ),
-          span(cls := "kl-ed__name")(
-            usernameOrId(u),
-            elsewhere.nonEmpty.option(em(s"ещё и в «${elsewhere.mkString("», «")}»"))
-          ),
-          captain.option(span(cls := "kl-ed__tag", title := "Капитан")("К")),
-          rsvp
-            .get(u)
-            .map: yes =>
-              span(
-                cls := s"kl-ed__tag ${if yes then "yes" else "no"}",
-                title := (if yes then "Подтвердил участие в боте" else "Отказался в боте")
-              )(if yes then "✓" else "✗"),
-          span(cls := "kl-ed__g")(info.get(u).flatMap(_._2).getOrElse[String]("")),
-          span(cls := "kl-ed__r")(info.get(u).fold("—")(_._1.toString))
+          span(cls := "kl-ed__who")(
+            span(cls := "kl-ed__name")(
+              usernameOrId(u),
+              elsewhere.nonEmpty.option(em(s"ещё и в «${elsewhere.mkString("», «")}»"))
+            ),
+            span(cls := "kl-ed__meta")(
+              captain.option(span(cls := "kl-ed__tag", title := "Капитан")("К")),
+              rsvp
+                .get(u)
+                .map: yes =>
+                  span(
+                    cls := s"kl-ed__tag ${if yes then "yes" else "no"}",
+                    title := (if yes then "Подтвердил участие в боте" else "Отказался в боте")
+                  )(if yes then "✓" else "✗"),
+              span(cls := "kl-ed__g")(info.get(u).flatMap(_._2).getOrElse[String]("")),
+              span(cls := "kl-ed__r")(info.get(u).fold("—")(_._1.toString))
+            )
+          )
         )
       def card(t: Team, members: List[UserId], leaders: Set[UserId]): Frag =
         val free = (Team.cupMaxMembers - members.size).atLeast(0)
