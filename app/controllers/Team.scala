@@ -37,8 +37,10 @@ final class Team(env: Env) extends LilaController(env):
         s <- api.cupSettings
         st <- cupBracketState
         dates <- api.cupBracketDates
+        ready <- api.cupBoard.map(_.count(_._2.nonEmpty))
       yield
-        // до жеребьёвки: сколько дат админ сохранил, иначе по настройке «Команд»
+        // до жеребьёвки: сколько дат админ сохранил, иначе по командам с игроками (как на доске),
+        // иначе по настройке «Команд»
         val nb = st
           .map(_._1.size)
           .filter(_ > 0)
@@ -46,7 +48,8 @@ final class Team(env: Env) extends LilaController(env):
             dates.keys.maxOption
               .map(_ + 1)
               .getOrElse:
-                if s.teams >= 2 then 32 - Integer.numberOfLeadingZeros(s.teams - 1) else 0
+                val n = if ready >= 2 then ready else s.teams
+                if n >= 2 then 32 - Integer.numberOfLeadingZeros(n - 1) else 0
         val plan = cupRoundDates(s, nb) ++ dates.filter(_._1 < nb)
         JsonOk:
           Json.obj(
