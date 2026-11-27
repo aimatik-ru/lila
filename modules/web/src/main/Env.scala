@@ -87,6 +87,18 @@ final class Env(
       text = "Цвет кнопок и ссылок площадки (#rrggbb), пусто = из темы".some,
       perm = _.Settings
     )
+    val logicTraps = settingStore[String](
+      "logicTraps",
+      default = lila.web.LogicTraps.default,
+      text = "Ловушки площадки: строка «ходы | подсказка», последний ход опасный".some,
+      perm = _.Settings
+    )
+    val logicWeekly = settingStore[String](
+      "logicWeekly",
+      default = lila.web.LogicWeekly.default,
+      text = "Памятка «Турниры каждую неделю» на главной: строка на турнир".some,
+      perm = _.Settings
+    )
 
   object lichobileDisables:
     import lila.core.data.Strings

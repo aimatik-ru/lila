@@ -8,6 +8,30 @@ import lila.core.perf.UserWithPerfs
 
 object home:
 
+  // Памятка «Турниры каждую неделю» из «Настроек площадки» (/dev/logic-colors).
+  // Стиль inline: блок выкатывается подменой jar, без пересборки CSS лобби.
+  private val weeklyCss =
+    ".logic-weekly__title{display:block;padding:.6em .8em .3em;font-size:1em;font-weight:bold}" +
+      ".logic-weekly .tour-spotlight{white-space:normal}" +
+      ".logic-weekly .tour-spotlight .name{font-weight:bold;line-height:1.3}" +
+      ".logic-weekly .tour-spotlight .headline{line-height:1.3;margin:0}"
+
+  private def weekly: Option[Frag] =
+    val rows = lila.web.LogicWeekly.parse(env.web.settings.logicWeekly.get())
+    rows.nonEmpty.option:
+      div(cls := "lobby__spotlights logic-weekly")(
+        raw(s"<style>$weeklyCss</style>"),
+        h2(cls := "logic-weekly__title")("Турниры каждую неделю"),
+        rows.map: r =>
+          a(href := routes.Tournament.home, cls := "tour-spotlight little")(
+            iconTag(Icon.Trophy)(cls := "img"),
+            span(cls := "content")(
+              span(cls := "name")(r.when),
+              r.what.nonEmpty.option(span(cls := "headline")(r.what))
+            )
+          )
+      )
+
   def apply(homepage: Homepage)(using ctx: Context) =
     import homepage.*
     Page("")
@@ -44,6 +68,7 @@ object home:
           )
         )(
           div(cls := "lobby__side")(
+            weekly,
             ctx.blind.option(h2(trans.nvui.featuredEvents())),
             div(cls := "lobby__spotlights"):
               val eventTags = events.map(bits.spotlight)

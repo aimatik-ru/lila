@@ -31,7 +31,7 @@ final class Dev(env: Env) extends LilaController(env):
         Ok.page(views.dev.logicTraps(text, parsed, caught))
     else
       Ok.page:
-        views.dev.logicColors(s.logicBg.get(), s.logicPrimary.get())
+        views.dev.logicColors(s.logicBg.get(), s.logicPrimary.get(), s.logicWeekly.get())
   }
 
   // Сбой «Базы дебютов» не должен ронять страницу: тогда списки попавшихся просто пустые.
@@ -59,6 +59,21 @@ final class Dev(env: Env) extends LilaController(env):
   private val logicTrapsForm =
     import play.api.data.Forms.*
     play.api.data.Form(single("traps" -> text))
+
+  private val logicWeeklyForm =
+    import play.api.data.Forms.*
+    play.api.data.Form(single("weekly" -> text))
+
+  private def logicWeeklyPost(using ctx: BodyContext[?], me: Me): Fu[play.api.mvc.Result] =
+    bindForm(logicWeeklyForm)(
+      _ => Redirect(routes.Dev.logicColors),
+      text =>
+        val clean = lila.web.LogicWeekly.clean(text)
+        lila.log.system.info(
+          s"setting ${me.username} changes logic weekly to ${clean.linesIterator.size} lines"
+        )
+        env.web.settings.logicWeekly.set(clean).inject(Redirect(routes.Dev.logicColors).flashSuccess)
+    )
 
   // Список для редактора на доске анализа: номер строки нужен для удаления.
   private def logicTrapsJson(text: String) =
@@ -210,6 +225,7 @@ final class Dev(env: Env) extends LilaController(env):
 
   def logicColorsPost = SecureBody(_.Settings) { ctx ?=> me ?=>
     if getBool("marks") then logicMarksPost
+    else if getBool("weekly") then logicWeeklyPost
     else if getBool("traps") then get("op").fold(logicTrapsPost)(logicTrapsApi)
     else
       bindForm(logicColorsForm)(
